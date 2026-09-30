@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+envs/
+pip-cache/
+pip_cache/
+tmp/
+Assets/
+assets/
+asset_downloads/
+checkpoints/
+datasets/
+*.log
+.env
+.env.*
