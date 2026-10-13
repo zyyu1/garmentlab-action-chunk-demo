@@ -1,0 +1,47 @@
+diff --git a/Env/Config/SceneConfig.py b/Env/Config/SceneConfig.py
+index 146c454..a1fa7f9 100644
+--- a/Env/Config/SceneConfig.py
++++ b/Env/Config/SceneConfig.py
+@@ -2,7 +2,7 @@ import numpy as np
+ import torch
+ 
+ class SceneConfig:
+-    def __init__(self,room_usd_path="/home/user/GarmentLab/Assets/Scene/FlatGrid.usd",pos:np.ndarray=None,ori:np.ndarray=None,scale:np.ndarray=None):
++    def __init__(self,room_usd_path="/root/autodl-tmp/garmentlab_workspace/GarmentLab/Assets/Scene/FlatGrid.usd",pos:np.ndarray=None,ori:np.ndarray=None,scale:np.ndarray=None):
+         if pos is None:
+             self.pos=np.array([0,0,0])
+         else:
+diff --git a/Env/env/Control.py b/Env/env/Control.py
+index a16570a..c196e25 100644
+--- a/Env/env/Control.py
++++ b/Env/env/Control.py
+@@ -232,6 +232,7 @@ class Control:
+         cur_step=0
+         self.world.step()
+         while 1:
++            cur_step += 1
+             self.robot_step(pos,ori,flag)
+             self.next_pos_list=[]
+             for id in range(len(self.robot)):
+diff --git a/Env/env/FoldEnv.py b/Env/env/FoldEnv.py
+index 2b6f6a1..318d4d2 100644
+--- a/Env/env/FoldEnv.py
++++ b/Env/env/FoldEnv.py
+@@ -2,7 +2,7 @@ import numpy as np
+ from isaacsim import SimulationApp
+ import torch
+ 
+-simulation_app = SimulationApp({"headless": False,"muti_gpu":False})
++simulation_app = SimulationApp({"headless": True,"multi_gpu":False})
+ import numpy as np
+ from omni.isaac.core.utils.types import ArticulationAction
+ from omni.isaac.franka import Franka
+@@ -17,7 +17,7 @@ from omni.isaac.franka import KinematicsSolver
+ from omni.isaac.core.utils.types import ArticulationAction
+ import torch
+ import sys
+-sys.path.append("/home/user/GarmentLab/")
++sys.path.append("/root/autodl-tmp/garmentlab_workspace/GarmentLab/")
+ from Env.Utils.transforms import euler_angles_to_quat
+ from Env.Utils.transforms import quat_diff_rad
+ from Env.env.BaseEnv import BaseEnv
