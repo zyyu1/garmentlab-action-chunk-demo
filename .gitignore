@@ -1,13 +1,37 @@
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
 .venv/
 venv/
 envs/
+
+# Caches
+pip-cache/
+pip_cache/
+tmp/
+
+# Assets
+Assets/
+assets/
+asset_downloads/
+
+# Data & checkpoints
 checkpoints/
+datasets/
 *.pt
 *.pth
 *.ckpt
 *.hdf5
 *.h5
 *.pkl
+
+# Env
+.env
+.env.*
+
+# Logs
+*.log
+!runs/**/*.log
+
+# OS
 .DS_Store
