@@ -1,0 +1,595 @@
+{
+  "expert_version": "hem-v12-pitch-arc-probe",
+  "pipeline_completed": false,
+  "formal_day4_success": false,
+  "scope": "Pilot wrist pitch override outside XYZ+yaw action schema; diagnostic only, not policy demonstration",
+  "actions": [
+    {
+      "label": "approach",
+      "matrix": [
+        [
+          -0.00893973745405674,
+          -0.658693790435791,
+          0.1796121895313263,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 252,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": null
+    },
+    {
+      "label": "descend_0.12",
+      "matrix": [
+        [
+          -0.00844198651611805,
+          -0.6585918664932251,
+          0.11999999731779099,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 291,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": null
+    },
+    {
+      "label": "descend_0.08",
+      "matrix": [
+        [
+          -0.00844198651611805,
+          -0.6585918664932251,
+          0.07999999821186066,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 322,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": null
+    },
+    {
+      "label": "descend_0.05",
+      "matrix": [
+        [
+          -0.00844198651611805,
+          -0.6585918664932251,
+          0.05000000074505806,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 349,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": null
+    },
+    {
+      "label": "descend_0.03",
+      "matrix": [
+        [
+          -0.00844198651611805,
+          -0.6585918664932251,
+          0.029999999329447746,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 370,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": null
+    },
+    {
+      "label": "descend_0.02",
+      "matrix": [
+        [
+          -0.00844198651611805,
+          -0.6585918664932251,
+          0.019999999552965164,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 383,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": null
+    },
+    {
+      "label": "grasp",
+      "matrix": [
+        [
+          -0.00844198651611805,
+          -0.6585918664932251,
+          0.019999999552965164,
+          0.0,
+          1.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 478,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": null
+    },
+    {
+      "label": "fold_arc_1",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.6572308540344238,
+          0.0329950787127018,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 498,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": 0.10471975511965977
+    },
+    {
+      "label": "fold_arc_2",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.6533939838409424,
+          0.04573031887412071,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 514,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": 0.20943951023931953
+    },
+    {
+      "label": "fold_arc_3",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.6470459699630737,
+          0.05819220840930939,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 530,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": 0.3141592653589793
+    },
+    {
+      "label": "fold_arc_4",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.638256311416626,
+          0.0702478215098381,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 547,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": 0.41887902047863906
+    },
+    {
+      "label": "fold_arc_5",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.6271213293075562,
+          0.08176867663860321,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 565,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": 0.5235987755982988
+    },
+    {
+      "label": "fold_arc_6",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.6137630343437195,
+          0.09263215959072113,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 584,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      },
+      "pilot_fold_angle_rad": 0.6283185307179586
+    }
+  ],
+  "metric_threshold_status": "provisional; must freeze before formal acceptance/collection",
+  "fold_line_y": -0.42419276386499405,
+  "pick_index": 6174,
+  "stage_geometry": {
+    "01_grasp": {
+      "stationary_half_centroid_displacement_m": [
+        -0.000420532189309597,
+        -0.0021201102063059807,
+        -0.00032087156432680786
+      ],
+      "moving_half_crossed_fraction": 0.0
+    },
+    "99_failure": {
+      "stationary_half_centroid_displacement_m": [
+        0.0008195635746233165,
+        -0.007820078171789646,
+        -0.0003129050601273775
+      ],
+      "moving_half_crossed_fraction": 0.0
+    }
+  },
+  "arc_waypoints": [
+    [
+      -0.008440634427052104,
+      -0.6572308630137446,
+      0.03299507775877465
+    ],
+    [
+      -0.008440634427052104,
+      -0.6533940098340517,
+      0.04573031809352335
+    ],
+    [
+      -0.008440634427052104,
+      -0.6470459798400776,
+      0.05819220754912191
+    ],
+    [
+      -0.008440634427052104,
+      -0.6382563233768469,
+      0.07024781842196023
+    ],
+    [
+      -0.008440634427052104,
+      -0.6271213417599247,
+      0.0817686742816002
+    ],
+    [
+      -0.008440634427052104,
+      -0.6137630321780506,
+      0.09263215758543297
+    ],
+    [
+      -0.008440634427052104,
+      -0.5983277510664098,
+      0.10272285310213516
+    ],
+    [
+      -0.008440634427052104,
+      -0.5809846105949013,
+      0.11193381242509547
+    ],
+    [
+      -0.008440634427052104,
+      -0.5619236258398168,
+      0.12016772572153786
+    ],
+    [
+      -0.008440634427052104,
+      -0.5413536329389003,
+      0.12733798787941278
+    ],
+    [
+      -0.008440634427052104,
+      -0.5195000010389219,
+      0.13336964737112827
+    ],
+    [
+      -0.008440634427052104,
+      -0.4966021631041445,
+      0.13820022743817056
+    ],
+    [
+      -0.008440634427052104,
+      -0.472910992638662,
+      0.1417804105995448
+    ],
+    [
+      -0.008440634427052104,
+      -0.4486860550637904,
+      0.14407457898441692
+    ],
+    [
+      -0.008440634427052104,
+      -0.42419276386499405,
+      0.14506120456896013
+    ],
+    [
+      -0.008440634427052104,
+      -0.39969947266619776,
+      0.14473308504188892
+    ],
+    [
+      -0.008440634427052104,
+      -0.37547453509132617,
+      0.14309742271448878
+    ],
+    [
+      -0.008440634427052104,
+      -0.35178336462584364,
+      0.14017574561058654
+    ],
+    [
+      -0.008440634427052104,
+      -0.32888552669106624,
+      0.1360036716010162
+    ],
+    [
+      -0.008440634427052104,
+      -0.30703189479108794,
+      0.13063051816677274
+    ],
+    [
+      -0.008440634427052104,
+      -0.2864619018901714,
+      0.12411876206636976
+    ],
+    [
+      -0.008440634427052104,
+      -0.26740091713508685,
+      0.11654335482739939
+    ],
+    [
+      -0.008440634427052104,
+      -0.2500577766635784,
+      0.10799090156191106
+    ],
+    [
+      -0.008440634427052104,
+      -0.23462249555193748,
+      0.09855871210268083
+    ],
+    [
+      -0.008440634427052104,
+      -0.22126418597006342,
+      0.08835373485632009
+    ],
+    [
+      -0.008440634427052104,
+      -0.2101292043531412,
+      0.07749138505415208
+    ],
+    [
+      -0.008440634427052104,
+      -0.2013395478899105,
+      0.06609428023878572
+    ],
+    [
+      -0.008440634427052104,
+      -0.19499151789593638,
+      0.054290896840659186
+    ],
+    [
+      -0.008440634427052104,
+      -0.1911546647162435,
+      0.04221416256338245
+    ],
+    [
+      -0.008440634427052104,
+      -0.18987102571718173,
+      0.030000000000000013
+    ]
+  ],
+  "trajectory": "Low elliptical arc, 0.12 m lift component; nominal path, not exact material isometry",
+  "pending_action": {
+    "label": "fold_arc_7",
+    "matrix": [
+      [
+        -0.008440634235739708,
+        -0.5983277559280396,
+        0.10272285342216492,
+        0.0,
+        2.0
+      ]
+    ],
+    "pilot_fold_angle_rad": 0.7330382858376184
+  },
+  "error": "RuntimeError('Robot/block target timed out')",
+  "failure_ee_position": [
+    -0.009188241329292877,
+    -0.6195217176803393,
+    0.12268576651002853
+  ],
+  "failure_fold_metrics": {
+    "symmetric_xy_alignment_mean_m": 0.14171654500921071,
+    "particle_occupancy_iou": 0.0378567268491555,
+    "occupancy_cell_m": 0.01,
+    "occupancy_dilation_cells": 1,
+    "moving_half_crossed_fraction": 0.0,
+    "moving_material_reflected_target_mean_error_m": 0.2460414171218872,
+    "cloth_z_p95_m": 0.06591421067714683,
+    "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+  },
+  "video": {
+    "frames": 531,
+    "stage_images": 3,
+    "unavailable_frame_reads": 0,
+    "fps": 20,
+    "note": "Periodic frames plus stage snapshots; not exact real-time playback."
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "passed": true,
+  "scope": "single-process single-grasp ActionChunk integration; yaw=0 ignored by backend",
+  "action_audit": [
+    {
+      "horizon": 1,
+      "matrix": [
+        [
+          -0.38365766406059265,
+          -0.24959932267665863,
+          0.15990036725997925,
+          0.0,
+          2.0
+        ]
+      ],
+      "physics_steps": 164,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 294,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_actions": true,
+        "not_done": true,
+        "steps_advanced": true,
+        "holding": true,
+        "attachment_enabled": true,
+        "attachment_reference": true,
+        "gripper_state": true,
+        "phase": true
+      }
+    },
+    {
+      "horizon": 1,
+      "matrix": [
+        [
+          -0.38402488827705383,
+          -0.26433783769607544,
+          0.11999999731779099,
+          0.0,
+          2.0
+        ]
+      ],
+      "physics_steps": 33,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 327,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_actions": true,
+        "not_done": true,
+        "steps_advanced": true,
+        "holding": true,
+        "attachment_enabled": true,
+        "attachment_reference": true,
+        "gripper_state": true,
+        "phase": true
+      }
+    },
+    {
+      "horizon": 4,
+      "matrix": [
+        [
+          -0.38402488827705383,
+          -0.26433783769607544,
+          0.07999999821186066,
+          0.0,
+          2.0
+        ],
+        [
+          -0.38402488827705383,
+          -0.26433783769607544,
+          0.05000000074505806,
+          0.0,
+          2.0
+        ],
+        [
+          -0.38402488827705383,
+          -0.26433783769607544,
+          0.029999999329447746,
+          0.0,
+          2.0
+        ],
+        [
+          -0.38402488827705383,
+          -0.26433783769607544,
+          0.019999999552965164,
+          0.0,
+          2.0
+        ]
+      ],
+      "physics_steps": 92,
+      "response": {
+        "executed_steps": 4,
+        "done": false,
+        "info": {
+          "step_count": 419,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_actions": true,
+        "not_done": true,
+        "steps_advanced": true,
+        "holding": true,
+        "attachment_enabled": true,
+        "attachment_reference": true,
+        "gripper_state": true,
+        "phase": true
+      }
+    },
+    {
+      "horizon": 1,
+      "matrix": [
+        [
+          -0.38402488827705383,
+          -0.26433783769607544,
+          0.019999999552965164,
+          0.0,
+          1.0
+        ]
+      ],
+      "physics_steps": 79,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 498,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_actions": true,
+        "not_done": true,
+        "steps_advanced": true,
+        "holding": true,
+        "attachment_enabled": true,
+        "attachment_reference": true,
+        "gripper_state": true,
+        "phase": true
+      }
+    },
+    {
+      "horizon": 1,
+      "matrix": [
+        [
+          -0.3839954733848572,
+          -0.26429176330566406,
+          0.12013791501522064,
+          0.0,
+          2.0
+        ]
+      ],
+      "physics_steps": 49,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 557,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_actions": true,
+        "not_done": true,
+        "steps_advanced": true,
+        "holding": true,
+        "attachment_enabled": true,
+        "attachment_reference": true,
+        "gripper_state": true,
+        "phase": true
+      }
+    },
+    {
+      "horizon": 1,
+      "matrix": [
+        [
+          -0.38377845287323,
+          -0.2643372118473053,
+          0.11354805529117584,
+          0.0,
+          0.0
+        ]
+      ],
+      "physics_steps": 16,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 573,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_actions": true,
+        "not_done": true,
+        "steps_advanced": true,
+        "holding": true,
+        "attachment_enabled": true,
+        "attachment_reference": true,
+        "gripper_state": true,
+        "phase": true
+      }
+    }
+  ],
+  "settings": {
+    "overlap": 0.005,
+    "disabled_probe": "0",
+    "max_action_steps": 15000
+  },
+  "cloth_rise": 0.0928034856915474,
+  "follow_error": 0.0005314519531394432,
+  "cloth_drop": 0.10694028064608574,
+  "release_block_drift": 0.0
+}

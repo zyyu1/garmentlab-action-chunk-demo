@@ -1,0 +1,13 @@
+{
+  "minimum_fold_geometry.py": "86ef99d36f2288546dab8bbea290a87d52efd84d47d215ad8d916b04943faa03",
+  "multi_prepared_grasp_control.py": "3a18f36dd3567b9c43fefb29cf2a67ffc5d2ea09deb6057af3b1ff5374c8721b",
+  "multi_grasp_geometry.py": "b4acc72886a80cb0ac37eb62d2189a0a28755a79777778077cf34bdbe53d5656",
+  "hem_prepared_grasp_control.py": "46b6f7ac82a95df98bed3c91541ea7164552948b3e257a97dc303ce2aba38e63",
+  "hem_fold_geometry.py": "7d05f381e4e6e931422159ec722000c498e1efd910bf6903a61fa73f54c39156",
+  "l1_fold_geometry.py": "15275f27cda85f7b0b761b598394928c40bd0bf716fa6f007ab5b55bd1e421e9",
+  "room_collision_control.py": "023c3a93dd4fb21db312223056834d5849cf070d7aed157d42f491f20721888e",
+  "mass_experiment.py": "3be20e92e54fd08a805b38a9f866102db423ccf6c1ec0a2bfef8017519d46f70",
+  "early_descent_geometry.py": "996681a947f5b56340ef7e71d6608e2adaecd257031f503691edd204e0358d6b",
+  "single_anchor_hem_control.py": "0fba623e7c023499a787fac366d74ca6700017c0804a9fa367bd06e1cee92547",
+  "day4-minimum-half-fold-bend-pair.py": "ccee17a629eb4211a7f684a7886f37094714f94fac4f07f19f318dad6b75a222"
+}

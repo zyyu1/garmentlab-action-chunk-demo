@@ -1,0 +1,84 @@
+{
+  "script_hash_matches": true,
+  "source_hashes_match_baseline": true,
+  "arc_and_approach_targets_exact": true,
+  "adaptive_descent_max_target_difference_m": 1.6931272344479725e-08,
+  "initial_config_verified": {
+    "scope": "USD edit before first FoldEnv.reset / World.reset",
+    "timeline_stopped_before": true,
+    "time_before": 0.0,
+    "time_step_before": 0,
+    "position_iterations_before": 64,
+    "velocity_iterations_before": 64,
+    "velocity_iterations_after_edit": 0,
+    "position_iterations_after_edit": 64,
+    "velocity_iterations_after_reset": 0,
+    "position_iterations_after_reset": 64
+  },
+  "state_samples": 1086,
+  "state_continuity_verified": true,
+  "physics_dt_s": 0.016666666666666666,
+  "gain_and_dt_match_baseline": true,
+  "baseline_final_speed_rad_s": 4.7171196937561035,
+  "v9_final_speed_rad_s": 1.2745020389556885,
+  "final_speed_reduction_percent": 72.98135044903132,
+  "all_targets_reached": false,
+  "joints": [
+    {
+      "joint": "panda_joint1",
+      "last60_position_range_rad": 2.0815059542655945e-07,
+      "last60_reported_velocity_min_rad_s": -0.0015728541184216738,
+      "last60_reported_velocity_max_rad_s": -0.0015688795829191804,
+      "last60_difference_speed_max_rad_s": 9.499490261077881e-06,
+      "minimum_limit_margin_during_settle_rad": 2.8913503154197766
+    },
+    {
+      "joint": "panda_joint2",
+      "last60_position_range_rad": 6.556510925292969e-07,
+      "last60_reported_velocity_min_rad_s": -0.10858384519815445,
+      "last60_reported_velocity_max_rad_s": -0.10857199132442474,
+      "last60_difference_speed_max_rad_s": 3.218650817871094e-05,
+      "minimum_limit_margin_during_settle_rad": 0.9836041430923073
+    },
+    {
+      "joint": "panda_joint3",
+      "last60_position_range_rad": 1.2619420886039734e-07,
+      "last60_reported_velocity_min_rad_s": 0.016778308898210526,
+      "last60_reported_velocity_max_rad_s": 0.01678680069744587,
+      "last60_difference_speed_max_rad_s": 6.817281246185303e-06,
+      "minimum_limit_margin_during_settle_rad": 2.8897505160437955
+    },
+    {
+      "joint": "panda_joint4",
+      "last60_position_range_rad": 0.0,
+      "last60_reported_velocity_min_rad_s": 0.08608406037092209,
+      "last60_reported_velocity_max_rad_s": 0.08609265834093094,
+      "last60_difference_speed_max_rad_s": 0.0,
+      "minimum_limit_margin_during_settle_rad": 0.831362482221019
+    },
+    {
+      "joint": "panda_joint5",
+      "last60_position_range_rad": 4.7497451305389404e-07,
+      "last60_reported_velocity_min_rad_s": 0.13743022084236145,
+      "last60_reported_velocity_max_rad_s": 0.13748948276042938,
+      "last60_difference_speed_max_rad_s": 1.7881393432617188e-05,
+      "minimum_limit_margin_during_settle_rad": 2.8676408911140694
+    },
+    {
+      "joint": "panda_joint6",
+      "last60_position_range_rad": 7.748603820800781e-07,
+      "last60_reported_velocity_min_rad_s": 1.2745020389556885,
+      "last60_reported_velocity_max_rad_s": 1.2745808362960815,
+      "last60_difference_speed_max_rad_s": 3.218650817871094e-05,
+      "minimum_limit_margin_during_settle_rad": 0.6587776706484457
+    },
+    {
+      "joint": "panda_joint7",
+      "last60_position_range_rad": 5.960464477539063e-08,
+      "last60_reported_velocity_min_rad_s": 0.10792119055986404,
+      "last60_reported_velocity_max_rad_s": 0.10796494781970978,
+      "last60_difference_speed_max_rad_s": 3.5762786865234375e-06,
+      "minimum_limit_margin_during_settle_rad": 2.153633081355883
+    }
+  ]
+}

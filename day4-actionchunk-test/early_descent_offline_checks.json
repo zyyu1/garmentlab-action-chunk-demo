@@ -1,0 +1,8 @@
+{
+  "same_prefix_xy_endpoint": true,
+  "monotone_descent": true,
+  "max_segment_m": 0.024525534031975372,
+  "max_lowering_m": 0.02958843371408003,
+  "waypoint_count": 30,
+  "remote_run": false
+}

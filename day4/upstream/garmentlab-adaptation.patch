@@ -1,0 +1,341 @@
+diff --git a/Env/Robot/Franka/MyFranka.py b/Env/Robot/Franka/MyFranka.py
+index 940c424..22fb63d 100644
+--- a/Env/Robot/Franka/MyFranka.py
++++ b/Env/Robot/Franka/MyFranka.py
+@@ -17,6 +17,124 @@ import torch
+ from Env.Utils.transforms import quat_diff_rad
+ 
+ 
++
++def _cpu_numpy(value):
++    """Convert controller inputs to CPU NumPy; preserve optional None."""
++    if value is None:
++        return None
++    if isinstance(value, torch.Tensor):
++        return value.detach().cpu().numpy().copy()
++    return np.asarray(value).copy()
++
++
++class CpuPoseFranka(Franka):
++    """Expose base poses as NumPy for the existing Lula controllers."""
++
++    def __init__(self, *args, **kwargs):
++        super().__init__(*args, **kwargs)
++        original_initialize = self._gripper.initialize
++
++        def initialize_gripper_cpu(
++            articulation_apply_action_func,
++            get_joint_positions_func,
++            set_joint_positions_func,
++            dof_names,
++            physics_sim_view=None,
++        ):
++            def get_joint_positions_cpu(joint_indices=None):
++                positions = _cpu_numpy(get_joint_positions_func())
++                if positions is None:
++                    raise RuntimeError("Robot joint positions are unavailable")
++                if joint_indices is None:
++                    return positions
++                indices = _cpu_numpy(joint_indices).astype(np.int64).reshape(-1)
++                return positions[indices].copy()
++
++            def set_joint_positions_backend(positions, joint_indices=None):
++                reference = get_joint_positions_func()
++                if not isinstance(reference, torch.Tensor):
++                    raise TypeError("预期机器人关节状态为 Torch Tensor")
++                positions = torch.as_tensor(
++                    positions,
++                    dtype=reference.dtype,
++                    device=reference.device,
++                )
++                if joint_indices is not None:
++                    joint_indices = torch.as_tensor(
++                        joint_indices,
++                        dtype=torch.long,
++                        device=reference.device,
++                    )
++                return set_joint_positions_func(
++                    positions=positions,
++                    joint_indices=joint_indices,
++                )
++
++            def apply_gripper_action_backend(control_actions):
++                # This adapter handles the position commands used by open/close.
++                if (control_actions.joint_velocities is not None
++                        or control_actions.joint_efforts is not None):
++                    raise NotImplementedError(
++                        "Gripper adapter currently supports position commands only"
++                    )
++                if control_actions.joint_positions is None:
++                    return
++
++                values = _cpu_numpy(
++                    control_actions.joint_positions
++                ).reshape(-1)
++                if control_actions.joint_indices is None:
++                    indices = np.arange(len(values), dtype=np.int64)
++                else:
++                    indices = _cpu_numpy(
++                        control_actions.joint_indices
++                    ).astype(np.int64).reshape(-1)
++                if len(indices) != len(values):
++                    raise ValueError("Gripper indices and positions differ in length")
++
++                keep = [i for i, value in enumerate(values) if value is not None]
++                if not keep:
++                    return
++                positions = np.asarray(
++                    [values[i] for i in keep], dtype=np.float32
++                )
++                indices = indices[keep]
++                if not np.isfinite(positions).all():
++                    raise ValueError("Non-finite gripper position target")
++
++                allowed = set(int(i) for i in self._gripper.joint_dof_indicies)
++                if not set(indices.tolist()).issubset(allowed):
++                    raise ValueError("Gripper command includes non-gripper joints")
++
++                reference = get_joint_positions_func()
++                if not isinstance(reference, torch.Tensor):
++                    raise TypeError("Expected Torch joint state")
++                action = ArticulationAction(
++                    joint_positions=torch.as_tensor(
++                        positions, dtype=reference.dtype, device=reference.device
++                    ),
++                    joint_indices=torch.as_tensor(
++                        indices, dtype=torch.long, device=reference.device
++                    ),
++                )
++                return articulation_apply_action_func(action)
++
++            return original_initialize(
++                articulation_apply_action_func=apply_gripper_action_backend,
++                get_joint_positions_func=get_joint_positions_cpu,
++                set_joint_positions_func=set_joint_positions_backend,
++                dof_names=dof_names,
++                physics_sim_view=physics_sim_view,
++            )
++
++        # Only adapt this gripper instance's joint-reading callback.
++        self._gripper.initialize = initialize_gripper_cpu
++
++    def get_world_pose(self, *args, **kwargs):
++        position, orientation = super().get_world_pose(*args, **kwargs)
++        return _cpu_numpy(position), _cpu_numpy(orientation)
++
++
+ class MyFranka:
+     def __init__(self,world:World,pos=None,ori=None,prim_path:str=None,robot_name:str=None,):
+         self.world=world
+@@ -37,7 +155,7 @@ class MyFranka:
+         self.init_position=pos
+         self.init_ori=ori
+         self.default_ee_ori=torch.from_numpy(np.array([0,np.pi,0]))+ori
+-        self.world.scene.add(Franka(prim_path=self._franka_prim_path,name=self._franka_robot_name,position=pos,orientation=euler_angles_to_quat(ori)))
++        self.world.scene.add(CpuPoseFranka(prim_path=self._franka_prim_path,name=self._franka_robot_name,position=pos,orientation=euler_angles_to_quat(ori)))
+         self._robot:Franka=self.world.scene.get_object(self._franka_robot_name)
+         self._articulation_controller=self._robot.get_articulation_controller()
+         self._controller=RMPFlowController(name="rmpflow_controller",robot_articulation=self._robot)
+@@ -49,8 +167,42 @@ class MyFranka:
+     def get_prim_path(self):
+         return self._franka_prim_path
+     def get_cur_ee_pos(self):
+-        ee_pos, R = self._controller.get_motion_policy().get_end_effector_as_prim().get_world_pose()
+-        return ee_pos, R
++        """Read the live right_gripper pose from measured joint positions."""
++        from scipy.spatial.transform import Rotation
++
++        wrapper = self._kinematic_solover
++        solver = wrapper.get_kinematics_solver()
++        frame = wrapper.get_end_effector_frame()
++        expected = self._controller.rmp_flow_config["end_effector_frame_name"]
++        if frame != expected:
++            raise RuntimeError(f"FK/RMP frame mismatch: {frame} != {expected}")
++
++        positions = _cpu_numpy(self._robot.get_joint_positions())
++        if positions is None:
++            raise RuntimeError("Robot joint positions are unavailable")
++        positions = positions.reshape(-1)
++        dof_names = list(self._robot.dof_names)
++        indices = [dof_names.index(name) for name in solver.get_joint_names()]
++        joints = positions[indices]
++        if not np.isfinite(joints).all():
++            raise RuntimeError("Non-finite robot joint positions")
++
++        base_pos, base_quat = self._robot.get_world_pose()
++        solver.set_robot_base_pose(
++            _cpu_numpy(base_pos), _cpu_numpy(base_quat)
++        )
++        pos, matrix = solver.compute_forward_kinematics(
++            frame, joints, position_only=False
++        )
++        pos = _cpu_numpy(pos).reshape(3)
++        matrix = _cpu_numpy(matrix).reshape(3, 3)
++        if not np.isfinite(pos).all() or not np.isfinite(matrix).all():
++            raise RuntimeError("Non-finite forward kinematics result")
++
++        # SciPy returns xyzw; Isaac/GarmentLab uses wxyz.
++        xyzw = Rotation.from_matrix(matrix).as_quat()
++        quat = xyzw[[3, 0, 1, 2]]
++        return pos, quat
+ 
+ 
+     def pick_and_place(self,pick,place):
+@@ -61,7 +213,7 @@ class MyFranka:
+             actions=self._pick_place_controller.forward(
+                 picking_position=pick,
+                 placing_position=place,
+-                current_joint_positions=self._robot.get_joint_positions(),
++                current_joint_positions=_cpu_numpy(self._robot.get_joint_positions()),
+                 end_effector_offset=np.array([0,0.005,0]),
+             )
+             if self._pick_place_controller.is_done():
+@@ -89,26 +241,23 @@ class MyFranka:
+             chunks=1
+         return start_loc + np.outer(np.arange(chunks+1,dtype=float), (end_loc - start_loc) / chunks)
+     
+-    def position_reached(self, target,thres=0.03):
++    def position_reached(self, target, thres=0.03):
+         if target is None:
+             return True
+-        
+-        ee_pos, R = self._controller.get_motion_policy().get_end_effector_as_prim().get_world_pose()
+-        pos_diff = np.linalg.norm(ee_pos- target)
+-        #print(pos_diff)
+-        if pos_diff < thres:
+-            return True
+-        else:
+-            return False 
++        position, _ = self.get_cur_ee_pos()
++        return bool(np.linalg.norm(position - _cpu_numpy(target)) < thres)
+     def rotation_reached(self, target):
+         if target is None:
+             return True
+-        
+-        ee_pos, R = self._controller.get_motion_policy().get_end_effector_as_prim().get_world_pose()
+-        angle_diff = quat_diff_rad(R, target)[0]
+-        # print(f'angle diff: {angle_diff}')
+-        if angle_diff < 0.1:
+-            return True
++        _, actual = self.get_cur_ee_pos()
++        target = _cpu_numpy(target).reshape(4)
++        target_norm = float(np.linalg.norm(target))
++        if not np.isfinite(target).all() or target_norm < 1e-8:
++            raise ValueError("Invalid target quaternion")
++        actual = actual / np.linalg.norm(actual)
++        target = target / target_norm
++        angle = 2.0 * np.arccos(np.clip(abs(np.dot(actual, target)), 0.0, 1.0))
++        return bool(angle < 0.1)
+         
+     def move(self,end_loc,env_ori=None):
+         start_loc=self.get_cur_ee_pos()[0]
+@@ -119,7 +268,7 @@ class MyFranka:
+         else:
+             end_effector_orientation = None
+         target_joint_positions = self._controller.forward(
+-            target_end_effector_position=end_loc, target_end_effector_orientation=end_effector_orientation
++            target_end_effector_position=_cpu_numpy(end_loc), target_end_effector_orientation=_cpu_numpy(end_effector_orientation)
+         )
+         self._articulation_controller.apply_action(target_joint_positions)
+     
+@@ -148,7 +297,7 @@ class MyFranka:
+             self.world.step(render=True)
+             end_effector_orientation = euler_angles_to_quat(self.default_ee_ori)
+             target_joint_positions = self._controller.forward(
+-                target_end_effector_position=end_loc, target_end_effector_orientation=end_effector_orientation
++                target_end_effector_position=_cpu_numpy(end_loc), target_end_effector_orientation=_cpu_numpy(end_effector_orientation)
+             )
+             self._articulation_controller.apply_action(target_joint_positions)
+             cur_step+=1
+@@ -165,7 +314,7 @@ class MyFranka:
+                 env_ori=self.default_ee_ori
+             end_effector_orientation = euler_angles_to_quat(env_ori)
+             target_joint_positions = self._controller.forward(
+-                target_end_effector_position=end_loc, target_end_effector_orientation=end_effector_orientation
++                target_end_effector_position=_cpu_numpy(end_loc), target_end_effector_orientation=_cpu_numpy(end_effector_orientation)
+             )
+             self._articulation_controller.apply_action(target_joint_positions)
+             cur_step+=1
+diff --git a/Env/env/BaseEnv.py b/Env/env/BaseEnv.py
+index 8bf8067..4b2754a 100644
+--- a/Env/env/BaseEnv.py
++++ b/Env/env/BaseEnv.py
+@@ -40,7 +40,7 @@ class BaseEnv:
+         self.deformable=deformable
+         self.garment=garment
+         self.recording=False
+-        self.world=World()
++        self.world=World(backend="torch", device="cuda:0")
+         self.stage=self.world.scene.stage
+         self.scene=self.world.scene
+         self.context=SimulationContext()
+diff --git a/Env/env/Control.py b/Env/env/Control.py
+index c196e25..c000b01 100644
+--- a/Env/env/Control.py
++++ b/Env/env/Control.py
+@@ -51,22 +51,45 @@ class AttachmentBlock():
+         self.block_prim=prim
+         # self.world.scene.add(prim)
+         self.move_block_controller=self.block_prim._rigid_prim_view
+-        self.move_block_controller.disable_gravities()
++        # Author gravity explicitly before a physics view exists.
++        api = PhysxSchema.PhysxRigidBodyAPI.Apply(
++            self.stage.GetPrimAtPath(self.block_path)
++        )
++        api.CreateDisableGravityAttr().Set(True)
+         self.collision_group.CreateIncludesRel().AddTarget(self.block_path)
+         return self.move_block_controller
+ 
+ 
+-    def set_velocities(self,velocities):
+-        velocities=velocities.reshape(1,6)
+-        self.move_block_controller.set_velocities(velocities)
++
++    def initialize_physics(self):
++        import omni.timeline
++        if not omni.timeline.get_timeline_interface().is_playing():
++            raise RuntimeError("Attachment physics access requires a playing timeline")
++        view = self.move_block_controller
++        if view._physics_view is None:
++            view.initialize()
++            if view._physics_view is None or int(view.count) != 1:
++                raise RuntimeError("Expected one attachment rigid body")
++            view.disable_gravities()
++
++    def set_velocities(self, velocities):
++        self.initialize_physics()
++        positions, _ = self.move_block_controller.get_world_poses()
++        value = torch.as_tensor(
++            velocities, dtype=positions.dtype, device=positions.device
++        ).reshape(1, 6)
++        if not torch.isfinite(value).all().item():
++            raise ValueError("Non-finite attachment velocity")
++        self.move_block_controller.set_velocities(value)
+     def set_position(self,grasp_point):
+ 
+         self.block_prim.set_world_pose(position=grasp_point)
+ 
+     def get_position(self):
+-
+-        pose,_=self.block_prim.get_world_pose()
+-        return pose
++        self.initialize_physics()
++        positions, _ = self.move_block_controller.get_world_poses()
++        # Control.move performs its tracking arithmetic on CPU.
++        return positions[0].detach().cpu().clone()
+ 
+     def attach(self,garment:Garment):
+         attachment = PhysxSchema.PhysxPhysicsAttachment.Define(self.stage, self.attachment_path)
+@@ -78,8 +101,10 @@ class AttachmentBlock():
+         _=att.CreateDeformableVertexOverlapOffsetAttr(defaultValue=0.02)
+ 
+     def detach(self):
+-        print(self.block_path)
+-        delete_prim(self.block_path)
++        # Remove the attachment relation and its block together.
++        if self.move_block_controller._physics_view is not None:
++            self.set_velocities(torch.zeros(6))
++        delete_prim(self.attachment_path)
+ 
+ 
+ 

@@ -1,0 +1,47 @@
+{
+  "target_records_exact_match": true,
+  "target_count": 36,
+  "contact_report_body_count": 12,
+  "contact_events": 0,
+  "callback_errors": [],
+  "rows": [
+    {
+      "label": "opposite_delayed_pitch_25",
+      "samples": 37,
+      "reached": true,
+      "peak_error_rad": 0.0011413512073670251,
+      "final_error_rad": 1.1223808654703404e-05,
+      "peak_speed_rad_s": 0.11608484387397766,
+      "final_speed_rad_s": 0.0011194651015102863
+    },
+    {
+      "label": "opposite_delayed_pitch_26",
+      "samples": 33,
+      "reached": true,
+      "peak_error_rad": 0.0011382543615915397,
+      "final_error_rad": 9.075445689954442e-06,
+      "peak_speed_rad_s": 0.11553417891263962,
+      "final_speed_rad_s": 0.0009206417016685009
+    },
+    {
+      "label": "opposite_delayed_pitch_27",
+      "samples": 33,
+      "reached": true,
+      "peak_error_rad": 0.010441233389621885,
+      "final_error_rad": 0.010231901877170713,
+      "peak_speed_rad_s": 4.73651123046875,
+      "final_speed_rad_s": 4.716545581817627
+    },
+    {
+      "label": "opposite_delayed_pitch_28",
+      "samples": 20,
+      "reached": false,
+      "peak_error_rad": 0.22456481049127186,
+      "final_error_rad": 0.22456481049127186,
+      "peak_speed_rad_s": 50.684566497802734,
+      "final_speed_rad_s": 4.695156574249268
+    }
+  ],
+  "error": "RuntimeError('Joint tracking diverged: opposite_delayed_pitch_28')",
+  "limitation": "No known-contact positive control or runtime applied-script hash; zero events do not certify collision absence."
+}

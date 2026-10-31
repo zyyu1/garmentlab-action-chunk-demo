@@ -1,0 +1,30 @@
+{
+  "source_hashes_verified": true,
+  "runtime_source_hashes_verified": true,
+  "sampled_states_checked": 252,
+  "actions_checked": 18,
+  "mass_readbacks_verified": true,
+  "cycles_recomputed": [
+    {
+      "slot": "right_sleeve",
+      "rise_mm": 92.8027406334877,
+      "drop_mm": 94.25486624240875,
+      "follow_error_mm": 0.5296254446903953,
+      "activation_jump_mm": 2.7903877198696136,
+      "lift_to_post_release_block_drift_mm": 0.0,
+      "actual_anchor_count": 40,
+      "tracked_vertex_count": 28
+    },
+    {
+      "slot": "left_sleeve",
+      "rise_mm": 92.77403354644775,
+      "drop_mm": 94.44448351860046,
+      "follow_error_mm": 0.5278756482691501,
+      "activation_jump_mm": 2.3960887920111418,
+      "lift_to_post_release_block_drift_mm": 0.0,
+      "actual_anchor_count": 42,
+      "tracked_vertex_count": 30
+    }
+  ],
+  "limitation": "Independent used slots passed; no reused slot or full episode reset tested; no formal fold success."
+}

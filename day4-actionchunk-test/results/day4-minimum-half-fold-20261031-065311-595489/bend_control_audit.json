@@ -1,0 +1,12 @@
+{
+  "requested_bend": 100,
+  "all_common_snapshots_exact_to_v5": true,
+  "actions_exact_to_v5": true,
+  "spring_arrays_unchanged": true,
+  "spring_value_counts": {
+    "100.0": 34188,
+    "10000.0": 23972
+  },
+  "baseline_valid": true,
+  "fold_success": false
+}

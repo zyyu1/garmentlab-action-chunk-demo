@@ -1,0 +1,28 @@
+{
+  "probe_version": "franka-asset-provenance-v1b-usd-timecode",
+  "scope": "Configuration-only after initialization; no wrist trajectory, grasp or fold execution",
+  "all_targets_reached": false,
+  "formal_day4_success": false,
+  "targets": [],
+  "settle_velocity_limit_rad_s": 0.05,
+  "settle_consecutive_steps": 6,
+  "velocity_gate_scope": "IK tail only; RMP prefix unchanged",
+  "script_sha256": "6f4d1c644bd43e8f13f97a46a402a588fb9c499364435702d322b8754b7a5a14",
+  "pre_reset_solver_config": {
+    "scope": "USD edit before first FoldEnv.reset / World.reset",
+    "timeline_stopped_before": true,
+    "time_before": 0.0,
+    "time_step_before": 0,
+    "position_iterations_before": 64,
+    "velocity_iterations_before": 64,
+    "velocity_iterations_after_edit": 0,
+    "position_iterations_after_edit": 64,
+    "velocity_iterations_after_reset": 0,
+    "position_iterations_after_reset": 64
+  },
+  "runtime_config_file": "runtime_config.json",
+  "asset_audit_completed": true,
+  "asset_property_stack_errors": 0,
+  "asset_property_stack_successes": 135,
+  "wrist_path_executed": false
+}

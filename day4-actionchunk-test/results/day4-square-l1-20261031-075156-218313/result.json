@@ -1,0 +1,438 @@
+{
+  "probe_version": "square-l1-v1",
+  "passed": false,
+  "formal_day4_success": false,
+  "scope": "Procedural single-layer square, single Franka, development only; not Dress057 acceptance",
+  "actions": [
+    {
+      "label": "approach",
+      "matrix": [
+        [
+          -5.666015923111445e-08,
+          -0.6499999761581421,
+          0.1598999947309494,
+          0.0,
+          0.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 420,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 230,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 210,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 10,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "descend",
+      "matrix": [
+        [
+          -5.6721599861475624e-08,
+          -0.6499999761581421,
+          0.019999999552965164,
+          0.0,
+          0.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 560,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 230,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 210,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 10,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    }
+  ],
+  "cycles": [],
+  "errors": [
+    "RuntimeError('Grasp is outside the preselected cloth region')"
+  ],
+  "yaw": 0.0,
+  "physics_profile": "Original robot asset; no v9-v11 robot overrides; cloth mass .0001/friction .3/particle friction scale 0; room collisions isolated; constructor bend intervention recorded separately",
+  "requested_bend": 100.0,
+  "constructor_bend_applied": 100.0,
+  "spring_readback": {
+    "after_start": {
+      "bend_usd": 100.0,
+      "shape": [
+        1,
+        3160
+      ],
+      "min": 100.0,
+      "max": 10000.0,
+      "scope": "SDK get_stretch_stiffnesses reads runtime get_spring_stiffness; entries are not labeled by spring type"
+    }
+  },
+  "material_readback": {
+    "friction": 0.30000001192092896,
+    "particle_friction_scale": 0.0
+  },
+  "robot_config": {
+    "kp": [
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      10000.0,
+      0.0
+    ],
+    "kd": [
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      1000.0,
+      0.0
+    ],
+    "solver_position_iterations_usd": 64,
+    "solver_velocity_iterations_usd": 64
+  },
+  "runtime_source_hashes": {
+    "backend": {
+      "path": "/root/autodl-tmp/garmentlab-action-chunk-demo/backends/garmentlab_backend.py",
+      "sha256": "af2445c67aebf01bbb9bdc5b32fc62df98c44ee791e0f5c555ee0e9df3de0537"
+    },
+    "environment": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/FoldEnv.py",
+      "sha256": "e0aff36e6b25d724cd8c7f2ffd4dd7c53ffd95693f4e502457eaecf63ebcbe24"
+    },
+    "robot": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py",
+      "sha256": "adc6abc5b8721a0730fe7281d6cc1d89a6b7e1abad0d7b5da167369f0371428a"
+    },
+    "original_control": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/Control.py",
+      "sha256": "2b51b9956c5b296b43c2e85509678984061ca716273c33e84cffbb0706f93547"
+    }
+  },
+  "slots_precreated": [
+    {
+      "label": "right_sleeve",
+      "block": "/World/Attachment/attach/block",
+      "constraint": "/World/AttachmentConstraints/multi_right_sleeve",
+      "pick_index": 230,
+      "anchor_ids": [
+        229,
+        230
+      ]
+    },
+    {
+      "label": "left_sleeve",
+      "block": "/World/Attachment/attach_1/block",
+      "constraint": "/World/AttachmentConstraints/multi_left_sleeve",
+      "pick_index": 210,
+      "anchor_ids": [
+        210,
+        211
+      ]
+    },
+    {
+      "label": "hem",
+      "block": "/World/Attachment/attach_2/block",
+      "constraint": "/World/AttachmentConstraints/multi_hem",
+      "pick_index": 10,
+      "anchor_ids": [
+        10
+      ]
+    }
+  ],
+  "metric_threshold_status": "provisional only; no success threshold frozen",
+  "stage_metrics": {},
+  "grasp_model": "Single-point attachment proxy; no physical pinch validation",
+  "interpolation": "Linear segments <=25mm per public target, no hidden fold path",
+  "arrival_rule": "EE<10mm, held block<5mm, arm speed<0.1rad/s for six steps; max120 convergence steps",
+  "physics_dt": 0.016666666666666666,
+  "pending_action": {
+    "label": "close",
+    "matrix": [
+      [
+        -5.6721599861475624e-08,
+        -0.6499999761581421,
+        0.019999999552965164,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "postcross_trace_frames": 0,
+  "video_frames": 196,
+  "stage_images": 3,
+  "frame_errors": 0,
+  "public_action_count": 2,
+  "public_action_count_within_12": true,
+  "formal_12_action_budget_passed": false,
+  "slot_status_final": [
+    {
+      "slot": "right_sleeve",
+      "pick_index": 230,
+      "used": false,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    },
+    {
+      "slot": "left_sleeve",
+      "pick_index": 210,
+      "used": false,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    },
+    {
+      "slot": "hem",
+      "pick_index": 10,
+      "used": false,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    }
+  ],
+  "slot_events": [
+    {
+      "event": "grasp_attempt",
+      "slot": "hem",
+      "status": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 230,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 210,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 10,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ],
+      "alignment": {
+        "slot": "hem",
+        "step": 592,
+        "anchor_count": 1,
+        "anchor_ids": [
+          10
+        ],
+        "points1_readback": [
+          [
+            -4.412132693687454e-05,
+            -0.04023114964365959,
+            -0.7022463083267212
+          ]
+        ]
+      },
+      "activation": null
+    }
+  ],
+  "linear_motion_records": [
+    {
+      "start": [
+        0.005530224349022515,
+        -0.46081547315781285,
+        0.3883201813095618
+      ],
+      "target": [
+        -5.666015923111445e-08,
+        -0.6499999761581421,
+        0.1598999947309494
+      ],
+      "linear_subtargets": [
+        [
+          0.00506936759825737,
+          -0.47658084840784026,
+          0.3692851657613441
+        ],
+        [
+          0.004608510847492224,
+          -0.49234622365786773,
+          0.3502501502131264
+        ],
+        [
+          0.004147654096727078,
+          -0.5081115989078951,
+          0.3312151346649087
+        ],
+        [
+          0.003686797345961933,
+          -0.5238769741579226,
+          0.312180119116691
+        ],
+        [
+          0.0032259405951967873,
+          -0.5396423494079501,
+          0.2931451035684733
+        ],
+        [
+          0.002765083844431642,
+          -0.5554077246579775,
+          0.2741100880202556
+        ],
+        [
+          0.0023042270936664963,
+          -0.5711730999080049,
+          0.25507507247203787
+        ],
+        [
+          0.001843370342901351,
+          -0.5869384751580323,
+          0.2360400569238202
+        ],
+        [
+          0.0013825135921362057,
+          -0.6027038504080597,
+          0.2170050413756025
+        ],
+        [
+          0.0009216568413710595,
+          -0.6184692256580873,
+          0.1979700258273848
+        ],
+        [
+          0.0004608000906059142,
+          -0.6342346009081147,
+          0.1789350102791671
+        ],
+        [
+          -5.666015923111445e-08,
+          -0.6499999761581421,
+          0.1598999947309494
+        ]
+      ],
+      "holding": false,
+      "converged": true
+    },
+    {
+      "start": [
+        7.277562470520893e-05,
+        -0.6472935892661592,
+        0.16310310347125853
+      ],
+      "target": [
+        -5.6721599861475624e-08,
+        -0.6499999761581421,
+        0.019999999552965164
+      ],
+      "linear_subtargets": [
+        [
+          6.063690032103053e-05,
+          -0.6477446537481564,
+          0.13925258615154296
+        ],
+        [
+          4.849817593685213e-05,
+          -0.6481957182301535,
+          0.11540206883182741
+        ],
+        [
+          3.635945155267373e-05,
+          -0.6486467827121507,
+          0.09155155151211185
+        ],
+        [
+          2.4220727168495328e-05,
+          -0.6490978471941478,
+          0.06770103419239629
+        ],
+        [
+          1.208200278431693e-05,
+          -0.6495489116761449,
+          0.043850516872680725
+        ],
+        [
+          -5.6721599861475624e-08,
+          -0.6499999761581421,
+          0.019999999552965164
+        ]
+      ],
+      "holding": false,
+      "converged": true
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# IK执行v2：接口错误
+
+首次提交位置和零速度目标时，ArticulationController.apply_action在joint_indices=None分支对转换后的CUDA速度标量调用np.isnan，引发TypeError。位置目标分支已有backend_utils.to_numpy，速度分支没有。已导出的源码足以确认本次接口错误；不能推断显式零速度目标对跟踪问题的效果。
+
+v3保留v2，新增显式完整关节索引，并将目标/索引转换为同设备Torch张量；路径、插值步长、判定阈值不变。使用真实导出函数和设备标量桩复现无索引失败，并验证显式索引转发位置与零速度目标。实际Isaac/GPU运行待用户执行。

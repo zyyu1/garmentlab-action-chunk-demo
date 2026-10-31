@@ -1,0 +1,135 @@
+{
+  "script_hash_matches": true,
+  "runtime_source_hashes_match_v9": true,
+  "mass_gain_dt_unchanged": true,
+  "state_samples": 1086,
+  "actual_inertia_eigenvalues": [
+    [
+      0.01160849590950973,
+      0.019263613920900986,
+      0.02213813595470641
+    ],
+    [
+      0.007234804243110171,
+      0.02366061846338231,
+      0.027328669531158867
+    ],
+    [
+      0.007285394962877025,
+      0.024344018672218085,
+      0.028032493508795747
+    ],
+    [
+      0.010245963184785609,
+      0.015736913507381132,
+      0.021498868789324343
+    ],
+    [
+      0.006899031098799199,
+      0.01872389313506505,
+      0.02118738796274811
+    ],
+    [
+      0.009755821812529698,
+      0.05988043552342446,
+      0.06548708493966535
+    ],
+    [
+      0.0017504691958788949,
+      0.005678392985218264,
+      0.006236843272507303
+    ],
+    [
+      0.0005777541535489119,
+      0.0029060880327512143,
+      0.0031196820189747522
+    ],
+    [
+      0.00039999998989515007,
+      0.00039999998989515007,
+      0.00039999998989515007
+    ],
+    [
+      0.0006863044714844631,
+      0.0016817560548409364,
+      0.0021772613945612363
+    ],
+    [
+      2.4143716918847514e-06,
+      1.4636717255271232e-05,
+      1.605411620072042e-05
+    ],
+    [
+      2.3816261949558967e-06,
+      1.4134242302545125e-05,
+      1.5515378021680852e-05
+    ]
+  ],
+  "inertia_trace_ratios_to_original": [
+    10632.801783894622,
+    13818.956261045636,
+    13913.911587303663,
+    11244.221020713863,
+    10780.98179579544,
+    18998.021793840882,
+    12093.717868036414,
+    28409.646764498662,
+    1.0,
+    9002.861139454228,
+    35063.44059955584,
+    33925.95528824592
+  ],
+  "final_speed_reduction_from_v9_percent": 28.03865816854043,
+  "joints": [
+    {
+      "joint": "panda_joint1",
+      "last60_position_range_rad": 2.3096799850463867e-07,
+      "last60_velocity_min_rad_s": 3.9406659197993577e-05,
+      "last60_velocity_max_rad_s": 4.23205565311946e-05,
+      "last60_difference_speed_max_rad_s": 1.0784715414047241e-05
+    },
+    {
+      "joint": "panda_joint2",
+      "last60_position_range_rad": 5.364418029785156e-07,
+      "last60_velocity_min_rad_s": -0.06461332738399506,
+      "last60_velocity_max_rad_s": -0.06460297852754593,
+      "last60_difference_speed_max_rad_s": 1.7881393432617188e-05
+    },
+    {
+      "joint": "panda_joint3",
+      "last60_position_range_rad": 1.6577541828155518e-07,
+      "last60_velocity_min_rad_s": 0.013012748211622238,
+      "last60_velocity_max_rad_s": 0.01301935687661171,
+      "last60_difference_speed_max_rad_s": 8.298084139823914e-06
+    },
+    {
+      "joint": "panda_joint4",
+      "last60_position_range_rad": 4.76837158203125e-07,
+      "last60_velocity_min_rad_s": 0.0959048867225647,
+      "last60_velocity_max_rad_s": 0.09591995179653168,
+      "last60_difference_speed_max_rad_s": 2.86102294921875e-05
+    },
+    {
+      "joint": "panda_joint5",
+      "last60_position_range_rad": 6.426125764846802e-07,
+      "last60_velocity_min_rad_s": 0.042565613985061646,
+      "last60_velocity_max_rad_s": 0.04262330010533333,
+      "last60_difference_speed_max_rad_s": 2.86102294921875e-05
+    },
+    {
+      "joint": "panda_joint6",
+      "last60_position_range_rad": 1.430511474609375e-06,
+      "last60_velocity_min_rad_s": 0.9171386361122131,
+      "last60_velocity_max_rad_s": 0.9171980619430542,
+      "last60_difference_speed_max_rad_s": 6.437301635742188e-05
+    },
+    {
+      "joint": "panda_joint7",
+      "last60_position_range_rad": 0.0,
+      "last60_velocity_min_rad_s": 0.22259685397148132,
+      "last60_velocity_max_rad_s": 0.22263996303081512,
+      "last60_difference_speed_max_rad_s": 0.0
+    }
+  ],
+  "all_targets_reached": false
+}

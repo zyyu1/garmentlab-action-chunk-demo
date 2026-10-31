@@ -1,0 +1,231 @@
+{
+  "stages": {
+    "04_cross_line": {
+      "all": {
+        "count": 3797,
+        "crossed_fraction": 0.0005267316302343956,
+        "dy_mean_mm": 32.41433948278427,
+        "z_median_mm": 29.710162431001663,
+        "reflected_xy_error_mean_mm": 216.47439897060394
+      },
+      "left": {
+        "count": 1023,
+        "crossed_fraction": 0.0,
+        "dy_mean_mm": 32.29411318898201,
+        "z_median_mm": 36.38285771012306,
+        "reflected_xy_error_mean_mm": 216.6246920824051
+      },
+      "middle": {
+        "count": 1902,
+        "crossed_fraction": 0.0010515247108307045,
+        "dy_mean_mm": 33.858560025691986,
+        "z_median_mm": 29.530514031648636,
+        "reflected_xy_error_mean_mm": 214.50291574001312
+      },
+      "right": {
+        "count": 872,
+        "crossed_fraction": 0.0,
+        "dy_mean_mm": 29.405243694782257,
+        "z_median_mm": 32.37473964691162,
+        "reflected_xy_error_mean_mm": 220.59831023216248
+      },
+      "initial_upper_z_gt_20mm": {
+        "count": 1942,
+        "crossed_fraction": 0.0010298661174047373,
+        "dy_mean_mm": 52.111294120550156,
+        "z_median_mm": 51.94605886936188,
+        "reflected_xy_error_mean_mm": 196.969136595726
+      },
+      "initial_lower_z_le_20mm": {
+        "count": 1855,
+        "crossed_fraction": 0.0,
+        "dy_mean_mm": 11.793587356805801,
+        "z_median_mm": 11.410150676965714,
+        "reflected_xy_error_mean_mm": 236.89445853233337
+      }
+    },
+    "04b_arrived_before_hold": {
+      "all": {
+        "count": 3797,
+        "crossed_fraction": 0.6626283908348697,
+        "dy_mean_mm": 164.24697637557983,
+        "z_median_mm": 68.63750517368317,
+        "reflected_xy_error_mean_mm": 89.61737155914307
+      },
+      "left": {
+        "count": 1023,
+        "crossed_fraction": 0.7086999022482894,
+        "dy_mean_mm": 165.08100926876068,
+        "z_median_mm": 70.53416967391968,
+        "reflected_xy_error_mean_mm": 95.10128945112228
+      },
+      "middle": {
+        "count": 1902,
+        "crossed_fraction": 0.6077812828601472,
+        "dy_mean_mm": 162.69688308238983,
+        "z_median_mm": 51.74293741583824,
+        "reflected_xy_error_mean_mm": 86.32009476423264
+      },
+      "right": {
+        "count": 872,
+        "crossed_fraction": 0.7282110091743119,
+        "dy_mean_mm": 166.64958000183105,
+        "z_median_mm": 71.95468991994858,
+        "reflected_xy_error_mean_mm": 90.37581831216812
+      },
+      "initial_upper_z_gt_20mm": {
+        "count": 1942,
+        "crossed_fraction": 0.8244078269824923,
+        "dy_mean_mm": 195.8521604537964,
+        "z_median_mm": 55.37615716457367,
+        "reflected_xy_error_mean_mm": 58.6349181830883
+      },
+      "initial_lower_z_le_20mm": {
+        "count": 1855,
+        "crossed_fraction": 0.49326145552560646,
+        "dy_mean_mm": 131.1594545841217,
+        "z_median_mm": 79.48789745569229,
+        "reflected_xy_error_mean_mm": 122.05290794372559
+      }
+    },
+    "06_supported_place": {
+      "all": {
+        "count": 3797,
+        "crossed_fraction": 0.7558598893863576,
+        "dy_mean_mm": 182.57172405719757,
+        "z_median_mm": 68.6657503247261,
+        "reflected_xy_error_mean_mm": 73.26403260231018
+      },
+      "left": {
+        "count": 1023,
+        "crossed_fraction": 0.8005865102639296,
+        "dy_mean_mm": 183.26856195926666,
+        "z_median_mm": 70.3175887465477,
+        "reflected_xy_error_mean_mm": 83.4214836359024
+      },
+      "middle": {
+        "count": 1902,
+        "crossed_fraction": 0.7113564668769716,
+        "dy_mean_mm": 180.86279928684235,
+        "z_median_mm": 52.591513842344284,
+        "reflected_xy_error_mean_mm": 68.86762380599976
+      },
+      "right": {
+        "count": 872,
+        "crossed_fraction": 0.8004587155963303,
+        "dy_mean_mm": 185.4817420244217,
+        "z_median_mm": 70.37609070539474,
+        "reflected_xy_error_mean_mm": 70.93707472085953
+      },
+      "initial_upper_z_gt_20mm": {
+        "count": 1942,
+        "crossed_fraction": 0.888259526261586,
+        "dy_mean_mm": 211.98923885822296,
+        "z_median_mm": 52.60944366455078,
+        "reflected_xy_error_mean_mm": 44.166792184114456
+      },
+      "initial_lower_z_le_20mm": {
+        "count": 1855,
+        "crossed_fraction": 0.6172506738544474,
+        "dy_mean_mm": 151.77452564239502,
+        "z_median_mm": 83.55210721492767,
+        "reflected_xy_error_mean_mm": 103.72593998908997
+      }
+    },
+    "07_released": {
+      "all": {
+        "count": 3797,
+        "crossed_fraction": 0.02528311825125099,
+        "dy_mean_mm": 34.14472937583923,
+        "z_median_mm": 49.299828708171844,
+        "reflected_xy_error_mean_mm": 215.86841344833374
+      },
+      "left": {
+        "count": 1023,
+        "crossed_fraction": 0.0,
+        "dy_mean_mm": 38.406550884246826,
+        "z_median_mm": 60.12675166130066,
+        "reflected_xy_error_mean_mm": 214.14659917354584
+      },
+      "middle": {
+        "count": 1902,
+        "crossed_fraction": 0.050473186119873815,
+        "dy_mean_mm": 35.103123635053635,
+        "z_median_mm": 48.01729694008827,
+        "reflected_xy_error_mean_mm": 214.08742666244507
+      },
+      "right": {
+        "count": 872,
+        "crossed_fraction": 0.0,
+        "dy_mean_mm": 27.054468169808388,
+        "z_median_mm": 56.34020268917084,
+        "reflected_xy_error_mean_mm": 221.77298367023468
+      },
+      "initial_upper_z_gt_20mm": {
+        "count": 1942,
+        "crossed_fraction": 0.04943357363542739,
+        "dy_mean_mm": 60.6917105615139,
+        "z_median_mm": 52.63127386569977,
+        "reflected_xy_error_mean_mm": 189.5119547843933
+      },
+      "initial_lower_z_le_20mm": {
+        "count": 1855,
+        "crossed_fraction": 0.0,
+        "dy_mean_mm": 6.352690514177084,
+        "z_median_mm": 37.423186004161835,
+        "reflected_xy_error_mean_mm": 243.46096813678741
+      }
+    },
+    "08_release_stationary": {
+      "all": {
+        "count": 3797,
+        "crossed_fraction": 0.0,
+        "dy_mean_mm": -41.16304591298103,
+        "z_median_mm": 23.475756868720055,
+        "reflected_xy_error_mean_mm": 289.30026292800903
+      },
+      "left": {
+        "count": 1023,
+        "crossed_fraction": 0.0,
+        "dy_mean_mm": -46.90472409129143,
+        "z_median_mm": 23.620914667844772,
+        "reflected_xy_error_mean_mm": 293.5711741447449
+      },
+      "middle": {
+        "count": 1902,
+        "crossed_fraction": 0.0,
+        "dy_mean_mm": -40.86211323738098,
+        "z_median_mm": 29.28374335169792,
+        "reflected_xy_error_mean_mm": 289.5925045013428
+      },
+      "right": {
+        "count": 872,
+        "crossed_fraction": 0.0,
+        "dy_mean_mm": -35.08348762989044,
+        "z_median_mm": 22.288162261247635,
+        "reflected_xy_error_mean_mm": 283.6524248123169
+      },
+      "initial_upper_z_gt_20mm": {
+        "count": 1942,
+        "crossed_fraction": 0.0,
+        "dy_mean_mm": -41.07280075550079,
+        "z_median_mm": 29.589883983135223,
+        "reflected_xy_error_mean_mm": 289.31885957717896
+      },
+      "initial_lower_z_le_20mm": {
+        "count": 1855,
+        "crossed_fraction": 0.0,
+        "dy_mean_mm": -41.25751927495003,
+        "z_median_mm": 9.900019504129887,
+        "reflected_xy_error_mean_mm": 289.28083181381226
+      }
+    }
+  },
+  "mesh_connected_components": 1,
+  "pick_id": 6174,
+  "nearby_lower_id": 2355,
+  "nearby_lower_xy_gap_mm": 1.8627882236614823,
+  "nearby_lower_z_gap_mm": 19.712183624505997,
+  "mesh_edge_hops_between_points": 34.0,
+  "limits": "Initial-height material groups, not verified garment front/back labels or contact-force evidence; topology connectivity does not imply a local hem seam."
+}

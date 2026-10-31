@@ -1,0 +1,1108 @@
+{
+  "expert_version": "hem-v6-room-isolation",
+  "pipeline_completed": false,
+  "formal_day4_success": false,
+  "scope": "Room-collision isolation pilot; not formal difficulty acceptance",
+  "actions": [
+    {
+      "label": "approach",
+      "matrix": [
+        [
+          -0.009824649430811405,
+          -0.6566075682640076,
+          0.17960630357265472,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 252,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "descend_0.12",
+      "matrix": [
+        [
+          -0.009849388152360916,
+          -0.6573226451873779,
+          0.11999999731779099,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 291,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "descend_0.08",
+      "matrix": [
+        [
+          -0.009849388152360916,
+          -0.6573226451873779,
+          0.07999999821186066,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 322,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "descend_0.05",
+      "matrix": [
+        [
+          -0.009849388152360916,
+          -0.6573226451873779,
+          0.05000000074505806,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 349,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "descend_0.03",
+      "matrix": [
+        [
+          -0.009849388152360916,
+          -0.6573226451873779,
+          0.029999999329447746,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 370,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "descend_0.02",
+      "matrix": [
+        [
+          -0.009849388152360916,
+          -0.6573226451873779,
+          0.019999999552965164,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 383,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "grasp",
+      "matrix": [
+        [
+          -0.009849388152360916,
+          -0.6573226451873779,
+          0.019999999552965164,
+          0.0,
+          1.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 478,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "lift_0",
+      "matrix": [
+        [
+          -0.00984789989888668,
+          -0.657245397567749,
+          0.04512212797999382,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 508,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "lift_1",
+      "matrix": [
+        [
+          -0.00984789989888668,
+          -0.657245397567749,
+          0.070122130215168,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 531,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "lift_2",
+      "matrix": [
+        [
+          -0.00984789989888668,
+          -0.657245397567749,
+          0.09512212872505188,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 555,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "lift_3",
+      "matrix": [
+        [
+          -0.00984789989888668,
+          -0.657245397567749,
+          0.12012212723493576,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 578,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "lift_4",
+      "matrix": [
+        [
+          -0.00984789989888668,
+          -0.657245397567749,
+          0.14512212574481964,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 602,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "lift_5",
+      "matrix": [
+        [
+          -0.00984789989888668,
+          -0.657245397567749,
+          0.17012213170528412,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 625,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "cross_fold_line_0",
+      "matrix": [
+        [
+          -0.009844527579843998,
+          -0.6337421536445618,
+          0.16404259204864502,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 644,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "cross_fold_line_1",
+      "matrix": [
+        [
+          -0.00984231848269701,
+          -0.6103783845901489,
+          0.16471809148788452,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 666,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "cross_fold_line_2",
+      "matrix": [
+        [
+          -0.009840110316872597,
+          -0.5870146155357361,
+          0.16539359092712402,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 689,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "cross_fold_line_3",
+      "matrix": [
+        [
+          -0.009837901219725609,
+          -0.5636508464813232,
+          0.16606910526752472,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 711,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "cross_fold_line_4",
+      "matrix": [
+        [
+          -0.009835693053901196,
+          -0.5402870178222656,
+          0.16674460470676422,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 734,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "cross_fold_line_5",
+      "matrix": [
+        [
+          -0.009833483956754208,
+          -0.5169232487678528,
+          0.16742010414600372,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 756,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "cross_fold_line_6",
+      "matrix": [
+        [
+          -0.009831275790929794,
+          -0.49355947971343994,
+          0.16809561848640442,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 779,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "cross_fold_line_7",
+      "matrix": [
+        [
+          -0.009829066693782806,
+          -0.4701956808567047,
+          0.16877111792564392,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 802,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "cross_fold_line_8",
+      "matrix": [
+        [
+          -0.009826858527958393,
+          -0.44683191180229187,
+          0.16944661736488342,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 824,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "cross_fold_line_9",
+      "matrix": [
+        [
+          -0.009824649430811405,
+          -0.42346811294555664,
+          0.17012213170528412,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 847,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "transfer_to_mirror_0",
+      "matrix": [
+        [
+          -0.009667826816439629,
+          -0.4081557095050812,
+          0.16188348829746246,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 865,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "transfer_to_mirror_1",
+      "matrix": [
+        [
+          -0.009683509357273579,
+          -0.38637298345565796,
+          0.15369513630867004,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 888,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "transfer_to_mirror_2",
+      "matrix": [
+        [
+          -0.009699190966784954,
+          -0.36459028720855713,
+          0.14550678431987762,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 911,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "transfer_to_mirror_3",
+      "matrix": [
+        [
+          -0.009714873507618904,
+          -0.3428075909614563,
+          0.1373184323310852,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 934,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "transfer_to_mirror_4",
+      "matrix": [
+        [
+          -0.009730556048452854,
+          -0.32102489471435547,
+          0.12913009524345398,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 957,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "transfer_to_mirror_5",
+      "matrix": [
+        [
+          -0.00974623765796423,
+          -0.29924216866493225,
+          0.12094174325466156,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 980,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "transfer_to_mirror_6",
+      "matrix": [
+        [
+          -0.00976192019879818,
+          -0.2774594724178314,
+          0.11275339126586914,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1003,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "transfer_to_mirror_7",
+      "matrix": [
+        [
+          -0.00977760273963213,
+          -0.2556767761707306,
+          0.10456504672765732,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1026,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "transfer_to_mirror_8",
+      "matrix": [
+        [
+          -0.00979328528046608,
+          -0.23389406502246857,
+          0.0963766947388649,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1049,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "transfer_to_mirror_9",
+      "matrix": [
+        [
+          -0.009808966889977455,
+          -0.21211136877536774,
+          0.08818835020065308,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1072,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "transfer_to_mirror_10",
+      "matrix": [
+        [
+          -0.009824649430811405,
+          -0.1903286576271057,
+          0.07999999821186066,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1095,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "place_0",
+      "matrix": [
+        [
+          -0.00985226035118103,
+          -0.19441775977611542,
+          0.06501137465238571,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1109,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "place_1",
+      "matrix": [
+        [
+          -0.009838455356657505,
+          -0.19237321615219116,
+          0.047505687922239304,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1129,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "place_2",
+      "matrix": [
+        [
+          -0.009824649430811405,
+          -0.1903286576271057,
+          0.029999999329447746,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1149,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "release",
+      "matrix": [
+        [
+          -0.009817097336053848,
+          -0.19106008112430573,
+          0.03661919757723808,
+          0.0,
+          0.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1225,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    }
+  ],
+  "metric_threshold_status": "provisional; must freeze before formal acceptance/collection",
+  "fold_line_y": -0.42346811294555664,
+  "pick_index": 6174,
+  "release_fold_metrics": {
+    "symmetric_xy_alignment_mean_m": 0.07275490321871678,
+    "particle_occupancy_iou": 0.1728024042073629,
+    "occupancy_cell_m": 0.01,
+    "occupancy_dilation_cells": 1,
+    "moving_half_crossed_fraction": 0.856841550224097,
+    "moving_material_reflected_target_mean_error_m": 0.08545108884572983,
+    "cloth_z_p95_m": 0.09956275075674054,
+    "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+  },
+  "error": "RuntimeError('Cloth escaped 2 m diagnostic bound during released_stationary')",
+  "failure_ee_position": [
+    -0.009807774892825343,
+    -0.19108966380183226,
+    0.036856662191965504
+  ],
+  "failure_fold_metrics": {
+    "symmetric_xy_alignment_mean_m": 0.08943498220924971,
+    "particle_occupancy_iou": 0.13934426229508196,
+    "occupancy_cell_m": 0.01,
+    "occupancy_dilation_cells": 1,
+    "moving_half_crossed_fraction": 0.0,
+    "moving_material_reflected_target_mean_error_m": 1.6547728776931763,
+    "cloth_z_p95_m": 0.09904197454452512,
+    "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+  },
+  "video": {
+    "frames": 435,
+    "stage_images": 8,
+    "unavailable_frame_reads": 0,
+    "fps": 20,
+    "note": "Periodic frames plus stage snapshots; not exact real-time playback."
+  }
+}

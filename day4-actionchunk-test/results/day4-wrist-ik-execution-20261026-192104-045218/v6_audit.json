@@ -1,0 +1,66 @@
+{
+  "script_hash_matches": true,
+  "recorded_common_prefix_equal": true,
+  "settling_samples": 240,
+  "constant_settling_command": true,
+  "physics_dt_verified": false,
+  "note": "60 Hz finite differences are nominal only; v6 did not export runtime physics dt. Sample differences cannot resolve intra-step solver motion.",
+  "joints": [
+    {
+      "joint": "panda_joint1",
+      "last60_position_range_rad": 0.00014808960258960724,
+      "last60_reported_speed_min_rad_s": 0.218427836894989,
+      "last60_reported_speed_max_rad_s": 0.6188379526138306,
+      "last60_max_position_difference_rad": 0.000148081686347723,
+      "nominal_60Hz_max_difference_speed_rad_s": 0.00888490118086338
+    },
+    {
+      "joint": "panda_joint2",
+      "last60_position_range_rad": 6.973743438720703e-05,
+      "last60_reported_speed_min_rad_s": -0.19072650372982025,
+      "last60_reported_speed_max_rad_s": 0.010479261167347431,
+      "last60_max_position_difference_rad": 6.955862045288086e-05,
+      "nominal_60Hz_max_difference_speed_rad_s": 0.0041735172271728516
+    },
+    {
+      "joint": "panda_joint3",
+      "last60_position_range_rad": 0.0002760416828095913,
+      "last60_reported_speed_min_rad_s": -0.7950969338417053,
+      "last60_reported_speed_max_rad_s": -0.6474819779396057,
+      "last60_max_position_difference_rad": 0.00027603376656770706,
+      "nominal_60Hz_max_difference_speed_rad_s": 0.016562025994062424
+    },
+    {
+      "joint": "panda_joint4",
+      "last60_position_range_rad": 4.363059997558594e-05,
+      "last60_reported_speed_min_rad_s": 0.1556936353445053,
+      "last60_reported_speed_max_rad_s": 0.47893598675727844,
+      "last60_max_position_difference_rad": 4.3392181396484375e-05,
+      "nominal_60Hz_max_difference_speed_rad_s": 0.0026035308837890625
+    },
+    {
+      "joint": "panda_joint5",
+      "last60_position_range_rad": 0.000445609912276268,
+      "last60_reported_speed_min_rad_s": 4.082676410675049,
+      "last60_reported_speed_max_rad_s": 4.7171196937561035,
+      "last60_max_position_difference_rad": 0.0004455205053091049,
+      "nominal_60Hz_max_difference_speed_rad_s": 0.026731230318546295
+    },
+    {
+      "joint": "panda_joint6",
+      "last60_position_range_rad": 0.00025963783264160156,
+      "last60_reported_speed_min_rad_s": 0.8911908268928528,
+      "last60_reported_speed_max_rad_s": 1.8630977869033813,
+      "last60_max_position_difference_rad": 0.0002594590187072754,
+      "nominal_60Hz_max_difference_speed_rad_s": 0.015567541122436523
+    },
+    {
+      "joint": "panda_joint7",
+      "last60_position_range_rad": 2.384185791015625e-07,
+      "last60_reported_speed_min_rad_s": 2.8117377758026123,
+      "last60_reported_speed_max_rad_s": 3.6307997703552246,
+      "last60_max_position_difference_rad": 2.384185791015625e-07,
+      "nominal_60Hz_max_difference_speed_rad_s": 1.430511474609375e-05
+    }
+  ]
+}

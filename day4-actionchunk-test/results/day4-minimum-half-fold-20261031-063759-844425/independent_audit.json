@@ -1,0 +1,74 @@
+{
+  "version": "minimum-half-fold-slow-block-v7",
+  "source_hash_checks": {
+    "day4-minimum-half-fold-v7.py": true,
+    "multi_prepared_grasp_control.py": true,
+    "multi_grasp_geometry.py": true,
+    "hem_prepared_grasp_control.py": true,
+    "hem_fold_geometry.py": true,
+    "l1_fold_geometry.py": true,
+    "room_collision_control.py": true,
+    "mass_experiment.py": true,
+    "minimum_fold_geometry.py": true,
+    "early_descent_geometry.py": true,
+    "single_anchor_hem_control.py": true,
+    "side_hem_control.py": true
+  },
+  "trace_frames": 133,
+  "trace_first_last_step": [
+    801,
+    933
+  ],
+  "last_phase": "hem_low_arc_25",
+  "decoded_video_frames": 314,
+  "completed_actions": 31,
+  "pending_action": {
+    "label": "hem_low_arc_25",
+    "matrix": [
+      [
+        0.1094546839594841,
+        -0.283956915140152,
+        0.10721062868833542,
+        0.0,
+        2.0
+      ]
+    ]
+  },
+  "errors": [
+    "RuntimeError('Manual single anchor did not follow within 10mm diagnostic bound')"
+  ],
+  "failure_gap_mm": 10.450686728092744,
+  "gap_reconstruction": "activation points1, failure block pose, archived block scale .03; same constraint frame; no further steps after exception",
+  "anchor_ids": [
+    1547
+  ],
+  "failure_status": [
+    {
+      "slot": "right_sleeve",
+      "pick_index": 141,
+      "used": false,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    },
+    {
+      "slot": "left_sleeve",
+      "pick_index": 8625,
+      "used": false,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    },
+    {
+      "slot": "hem",
+      "pick_index": 1547,
+      "used": true,
+      "holding": true,
+      "enabled": true,
+      "constraint_exists": true
+    }
+  ],
+  "source_crossed_fraction_at_failure": 0.23623913616012643,
+  "release_completed": false,
+  "formal_success": false
+}

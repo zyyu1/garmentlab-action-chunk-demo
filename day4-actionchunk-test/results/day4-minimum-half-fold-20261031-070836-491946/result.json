@@ -1,0 +1,3893 @@
+{
+  "probe_version": "minimum-half-fold-bend-pair-v1",
+  "passed": true,
+  "formal_day4_success": false,
+  "scope": "One hem half-fold development candidate; same v4 path with single hem anchor; no formal acceptance",
+  "actions": [
+    {
+      "label": "hem_approach",
+      "matrix": [
+        [
+          -0.006493192631751299,
+          -0.6590521335601807,
+          0.1796179562807083,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 252,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_descend_0.12",
+      "matrix": [
+        [
+          -0.005576739553362131,
+          -0.6587861180305481,
+          0.11999999731779099,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 291,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_descend_0.08",
+      "matrix": [
+        [
+          -0.005576739553362131,
+          -0.6587861180305481,
+          0.07999999821186066,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 322,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_descend_0.05",
+      "matrix": [
+        [
+          -0.005576739553362131,
+          -0.6587861180305481,
+          0.05000000074505806,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 349,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_descend_0.03",
+      "matrix": [
+        [
+          -0.005576739553362131,
+          -0.6587861180305481,
+          0.029999999329447746,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 370,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_descend_0.02",
+      "matrix": [
+        [
+          -0.005576739553362131,
+          -0.6587861180305481,
+          0.019999999552965164,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 383,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_close",
+      "matrix": [
+        [
+          -0.005576739553362131,
+          -0.6587861180305481,
+          0.019999999552965164,
+          0.0,
+          1.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 478,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_1",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.6574228405952454,
+          0.032995130866765976,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 498,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_2",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.6535791158676147,
+          0.04573037102818489,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 514,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_3",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.647219717502594,
+          0.05819225683808327,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 530,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_4",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.6384143233299255,
+          0.07024786621332169,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 547,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_5",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.6272594332695007,
+          0.08176872134208679,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 565,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_6",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.6138772368431091,
+          0.09263220429420471,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 584,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_7",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.5984143614768982,
+          0.1027228981256485,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 603,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_8",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.5810402035713196,
+          0.11193384975194931,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 623,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_9",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.5619451403617859,
+          0.12016776204109192,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 644,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_10",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.5413383841514587,
+          0.12733802199363708,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 666,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_11",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.5194456577301025,
+          0.13336968421936035,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 688,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_12",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.49650686979293823,
+          0.13820025324821472,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 711,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_13",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.47277334332466125,
+          0.14178043603897095,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 734,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_14",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.44850507378578186,
+          0.14407460391521454,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 757,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_15",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.42396798729896545,
+          0.14506122469902039,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 780,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_16",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.39943090081214905,
+          0.14380404353141785,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 803,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_17",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.37516263127326965,
+          0.14008745551109314,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 826,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_18",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.3514291048049927,
+          0.134073868393898,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 849,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_19",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.32849031686782837,
+          0.12602610886096954,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 872,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_20",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.30659762024879456,
+          0.11629592627286911,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 895,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_21",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.285990834236145,
+          0.10530855506658554,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 918,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_22",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.26689577102661133,
+          0.09354420006275177,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 940,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_23",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.24952161312103271,
+          0.08151702582836151,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 962,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_24",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.23405872285366058,
+          0.06975267827510834,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 982,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_25",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.22067652642726898,
+          0.05876530706882477,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1001,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_26",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.20952163636684418,
+          0.049035120755434036,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1018,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_27",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.20071625709533691,
+          0.040987368673086166,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1033,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_28",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.19435687363147736,
+          0.03497378155589104,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1045,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_29",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.19051316380500793,
+          0.031257182359695435,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1054,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_low_arc_30",
+      "matrix": [
+        [
+          -0.005575662013143301,
+          -0.18922722339630127,
+          0.029999999329447746,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1060,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "supported_place_0",
+      "matrix": [
+        [
+          -0.008770770393311977,
+          -0.18510515987873077,
+          0.019028808921575546,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1134,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "hem_release",
+      "matrix": [
+        [
+          -0.008765135891735554,
+          -0.18518570065498352,
+          0.01924602873623371,
+          0.0,
+          0.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1210,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_clear_0",
+      "matrix": [
+        [
+          -0.008768945932388306,
+          -0.18523985147476196,
+          0.03960689529776573,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1286,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_clear_1",
+      "matrix": [
+        [
+          -0.008767979219555855,
+          -0.1852269023656845,
+          0.059737928211688995,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1307,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_clear_2",
+      "matrix": [
+        [
+          -0.008767012506723404,
+          -0.18521396815776825,
+          0.07986896485090256,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1328,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_clear_3",
+      "matrix": [
+        [
+          -0.008766045793890953,
+          -0.185201033949852,
+          0.10000000149011612,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1349,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_outward_0",
+      "matrix": [
+        [
+          -0.008801843039691448,
+          -0.2070712298154831,
+          0.10146228224039078,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1367,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_outward_1",
+      "matrix": [
+        [
+          -0.008798263967037201,
+          -0.22876091301441193,
+          0.10931605100631714,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1390,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_outward_2",
+      "matrix": [
+        [
+          -0.008794683963060379,
+          -0.25045058131217957,
+          0.1171698197722435,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1412,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_outward_3",
+      "matrix": [
+        [
+          -0.008791103959083557,
+          -0.2721402645111084,
+          0.12502358853816986,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1435,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_outward_4",
+      "matrix": [
+        [
+          -0.008787523955106735,
+          -0.29382994771003723,
+          0.13287736475467682,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1457,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_outward_5",
+      "matrix": [
+        [
+          -0.008783944882452488,
+          -0.3155196011066437,
+          0.14073114097118378,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1480,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_outward_6",
+      "matrix": [
+        [
+          -0.008780364878475666,
+          -0.3372092843055725,
+          0.14858491718769073,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1503,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_outward_7",
+      "matrix": [
+        [
+          -0.008776784874498844,
+          -0.35889896750450134,
+          0.1564386785030365,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1525,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_outward_8",
+      "matrix": [
+        [
+          -0.008773205801844597,
+          -0.3805886507034302,
+          0.16429245471954346,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1548,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_outward_9",
+      "matrix": [
+        [
+          -0.008769625797867775,
+          -0.4022783041000366,
+          0.17214623093605042,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1571,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_outward_10",
+      "matrix": [
+        [
+          -0.008766045793890953,
+          -0.42396798729896545,
+          0.18000000715255737,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1594,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_raise_0",
+      "matrix": [
+        [
+          -0.00877413246780634,
+          -0.4198884069919586,
+          0.2020375281572342,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1613,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_raise_1",
+      "matrix": [
+        [
+          -0.008770088665187359,
+          -0.42192819714546204,
+          0.2260187566280365,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1636,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "retreat_raise_2",
+      "matrix": [
+        [
+          -0.008766045793890953,
+          -0.42396798729896545,
+          0.25,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1659,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    }
+  ],
+  "cycles": [],
+  "errors": [],
+  "yaw": 0.0,
+  "physics_profile": "Original robot asset; no v9-v11 robot overrides; cloth mass .0001/friction .3/particle friction scale 0; room collisions isolated; constructor bend intervention recorded separately",
+  "requested_bend": 10.0,
+  "constructor_bend_applied": 10.0,
+  "spring_readback": {
+    "after_start": {
+      "bend_usd": 10.0,
+      "shape": [
+        1,
+        58160
+      ],
+      "min": 10.0,
+      "max": 10000.0,
+      "scope": "SDK get_stretch_stiffnesses reads runtime get_spring_stiffness; entries are not labeled by spring type"
+    },
+    "after_half_fold": {
+      "bend_usd": 10.0,
+      "shape": [
+        1,
+        58160
+      ],
+      "min": 10.0,
+      "max": 10000.0,
+      "scope": "SDK get_stretch_stiffnesses reads runtime get_spring_stiffness; entries are not labeled by spring type"
+    }
+  },
+  "material_readback": {
+    "friction": 0.30000001192092896,
+    "particle_friction_scale": 0.0
+  },
+  "robot_config": {
+    "kp": [
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      10000.0,
+      0.0
+    ],
+    "kd": [
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      1000.0,
+      0.0
+    ],
+    "solver_position_iterations_usd": 64,
+    "solver_velocity_iterations_usd": 64
+  },
+  "runtime_source_hashes": {
+    "backend": {
+      "path": "/root/autodl-tmp/garmentlab-action-chunk-demo/backends/garmentlab_backend.py",
+      "sha256": "af2445c67aebf01bbb9bdc5b32fc62df98c44ee791e0f5c555ee0e9df3de0537"
+    },
+    "environment": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/FoldEnv.py",
+      "sha256": "e0aff36e6b25d724cd8c7f2ffd4dd7c53ffd95693f4e502457eaecf63ebcbe24"
+    },
+    "robot": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py",
+      "sha256": "adc6abc5b8721a0730fe7281d6cc1d89a6b7e1abad0d7b5da167369f0371428a"
+    },
+    "original_control": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/Control.py",
+      "sha256": "2b51b9956c5b296b43c2e85509678984061ca716273c33e84cffbb0706f93547"
+    }
+  },
+  "slots_precreated": [
+    {
+      "label": "right_sleeve",
+      "block": "/World/Attachment/attach/block",
+      "constraint": "/World/AttachmentConstraints/multi_right_sleeve",
+      "pick_index": 141,
+      "anchor_ids": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        81,
+        83,
+        88,
+        89,
+        107,
+        108,
+        109,
+        139,
+        140,
+        141,
+        142,
+        143,
+        172,
+        173,
+        204,
+        209,
+        210,
+        211,
+        212,
+        213,
+        215,
+        252,
+        253,
+        258,
+        259,
+        281,
+        287,
+        288,
+        289,
+        290,
+        291,
+        590,
+        610
+      ]
+    },
+    {
+      "label": "left_sleeve",
+      "block": "/World/Attachment/attach_1/block",
+      "constraint": "/World/AttachmentConstraints/multi_left_sleeve",
+      "pick_index": 8625,
+      "anchor_ids": [
+        8623,
+        8624,
+        8625,
+        8626,
+        8627,
+        8628,
+        8637,
+        8638,
+        8639,
+        8640,
+        8643,
+        8648,
+        8649,
+        8650,
+        8651,
+        8658,
+        8659,
+        8660,
+        8679,
+        8680,
+        8681,
+        8682,
+        8696,
+        8698,
+        8699,
+        8700,
+        8702,
+        8718,
+        8719,
+        8720,
+        8747,
+        8751,
+        8752,
+        8753,
+        8783,
+        8867,
+        8961,
+        8962,
+        8963,
+        8971,
+        9032,
+        9033
+      ]
+    },
+    {
+      "label": "hem",
+      "block": "/World/Attachment/attach_2/block",
+      "constraint": "/World/AttachmentConstraints/multi_hem",
+      "pick_index": 6174,
+      "anchor_ids": [
+        6174
+      ]
+    }
+  ],
+  "metric_threshold_status": "provisional only; no success threshold frozen",
+  "stage_metrics": {},
+  "single_changed_path_problem": "Same central single-point v5 policy; only constructor bend is assigned 100 or 10",
+  "reference_path": "hem-v11 low arc: lift component .12m, same grasp/descent and original hold prefix",
+  "support_evidence_scope": "Geometric proximity and cloth motion only; no direct particle contact normal force measurement",
+  "reference_arc_waypoints_xyz": [
+    [
+      -0.005575662217737892,
+      -0.6574228111865295,
+      0.03299513101479534
+    ],
+    [
+      -0.005575662217737892,
+      -0.6535790968470305,
+      0.04573036951312953
+    ],
+    [
+      -0.005575662217737892,
+      -0.6472197151421092,
+      0.05819225713231359
+    ],
+    [
+      -0.005575662217737892,
+      -0.6384143407885109,
+      0.0702478661687374
+    ],
+    [
+      -0.005575662217737892,
+      -0.6272594473102967,
+      0.08176872019196287
+    ],
+    [
+      -0.005575662217737892,
+      -0.6138772500547254,
+      0.09263220165938113
+    ],
+    [
+      -0.005575662217737892,
+      -0.5984143671753337,
+      0.10272289533966882
+    ],
+    [
+      -0.005575662217737892,
+      -0.5810402132527648,
+      0.11193385282621461
+    ],
+    [
+      -0.005575662217737892,
+      -0.5619451431531696,
+      0.12016776428624251
+    ],
+    [
+      -0.005575662217737892,
+      -0.5413383664604596,
+      0.1273380246077029
+    ],
+    [
+      -0.005575662217737892,
+      -0.5194456553323255,
+      0.13336968226300389
+    ],
+    [
+      -0.005575662217737892,
+      -0.4965068708932312,
+      0.13820026049363168
+    ],
+    [
+      -0.005575662217737892,
+      -0.472773335265741,
+      0.14178044181859142
+    ],
+    [
+      -0.005575662217737892,
+      -0.4485050780327511,
+      0.14407460836704902
+    ],
+    [
+      -0.005575662217737892,
+      -0.42396798729896545,
+      0.1450612321151777
+    ],
+    [
+      -0.005575662217737892,
+      -0.3994308965651799,
+      0.144733110751692
+    ],
+    [
+      -0.005575662217737892,
+      -0.37516263933219,
+      0.14309744658787737
+    ],
+    [
+      -0.005575662217737892,
+      -0.3514291037046997,
+      0.14017576764756062
+    ],
+    [
+      -0.005575662217737892,
+      -0.32849031926560557,
+      0.1360036918015758
+    ],
+    [
+      -0.005575662217737892,
+      -0.3065976081374714,
+      0.13063053653091777
+    ],
+    [
+      -0.005575662217737892,
+      -0.28599083144476134,
+      0.12411877859410032
+    ],
+    [
+      -0.005575662217737892,
+      -0.26689576134516624,
+      0.11654336951871544
+    ],
+    [
+      -0.005575662217737892,
+      -0.24952160742259724,
+      0.1079909144168126
+    ],
+    [
+      -0.005575662217737892,
+      -0.23405872454320562,
+      0.09855872312116787
+    ],
+    [
+      -0.005575662217737892,
+      -0.22067652728763426,
+      0.0883537440383926
+    ],
+    [
+      -0.005575662217737892,
+      -0.20952163380942002,
+      0.07749139239981011
+    ],
+    [
+      -0.005575662217737892,
+      -0.2007162594558217,
+      0.06609428574802925
+    ],
+    [
+      -0.005575662217737892,
+      -0.1943568777509004,
+      0.05429090051348819
+    ],
+    [
+      -0.005575662217737892,
+      -0.19051316341140143,
+      0.04221416439979696
+    ],
+    [
+      -0.005575662217737892,
+      -0.1892272289759772,
+      0.030000000000000013
+    ]
+  ],
+  "grasp_model": "Development single-point attachment proxy for hem only; no physical pinch validation",
+  "low_arc_waypoints_xyz": [
+    [
+      -0.005575662217737892,
+      -0.6574228111865295,
+      0.03299513101479534
+    ],
+    [
+      -0.005575662217737892,
+      -0.6535790968470305,
+      0.04573036951312953
+    ],
+    [
+      -0.005575662217737892,
+      -0.6472197151421092,
+      0.05819225713231359
+    ],
+    [
+      -0.005575662217737892,
+      -0.6384143407885109,
+      0.0702478661687374
+    ],
+    [
+      -0.005575662217737892,
+      -0.6272594473102967,
+      0.08176872019196287
+    ],
+    [
+      -0.005575662217737892,
+      -0.6138772500547254,
+      0.09263220165938113
+    ],
+    [
+      -0.005575662217737892,
+      -0.5984143671753337,
+      0.10272289533966882
+    ],
+    [
+      -0.005575662217737892,
+      -0.5810402132527648,
+      0.11193385282621461
+    ],
+    [
+      -0.005575662217737892,
+      -0.5619451431531696,
+      0.12016776428624251
+    ],
+    [
+      -0.005575662217737892,
+      -0.5413383664604596,
+      0.1273380246077029
+    ],
+    [
+      -0.005575662217737892,
+      -0.5194456553323255,
+      0.13336968226300389
+    ],
+    [
+      -0.005575662217737892,
+      -0.4965068708932312,
+      0.13820026049363168
+    ],
+    [
+      -0.005575662217737892,
+      -0.472773335265741,
+      0.14178044181859142
+    ],
+    [
+      -0.005575662217737892,
+      -0.4485050780327511,
+      0.14407460836704902
+    ],
+    [
+      -0.005575662217737892,
+      -0.42396798729896545,
+      0.1450612321151777
+    ],
+    [
+      -0.005575662217737892,
+      -0.3994308965651799,
+      0.14380405012305714
+    ],
+    [
+      -0.005575662217737892,
+      -0.37516263933219,
+      0.14008744903237963
+    ],
+    [
+      -0.005575662217737892,
+      -0.3514291037046997,
+      0.13407386214503847
+    ],
+    [
+      -0.005575662217737892,
+      -0.32849031926560557,
+      0.12602611206440195
+    ],
+    [
+      -0.005575662217737892,
+      -0.3065976081374714,
+      0.1162959240863833
+    ],
+    [
+      -0.005575662217737892,
+      -0.28599083144476134,
+      0.10530855411624405
+    ],
+    [
+      -0.005575662217737892,
+      -0.26689576134516624,
+      0.09354420294493002
+    ],
+    [
+      -0.005575662217737892,
+      -0.24952160742259724,
+      0.08151702917024772
+    ],
+    [
+      -0.005575662217737892,
+      -0.23405872454320562,
+      0.06975267799893367
+    ],
+    [
+      -0.005575662217737892,
+      -0.22067652728763426,
+      0.058765308028794455
+    ],
+    [
+      -0.005575662217737892,
+      -0.20952163380942002,
+      0.04903512005077579
+    ],
+    [
+      -0.005575662217737892,
+      -0.2007162594558217,
+      0.04098736997013924
+    ],
+    [
+      -0.005575662217737892,
+      -0.1943568777509004,
+      0.03497378308279809
+    ],
+    [
+      -0.005575662217737892,
+      -0.19051316341140143,
+      0.031257181992120575
+    ],
+    [
+      -0.005575662217737892,
+      -0.1892272289759772,
+      0.030000000000000013
+    ]
+  ],
+  "original_place_metrics": {
+    "symmetric_xy_alignment_mean_m": 0.054308263902952424,
+    "particle_occupancy_iou": 0.31082180634662326,
+    "occupancy_cell_m": 0.01,
+    "occupancy_dilation_cells": 1,
+    "moving_half_crossed_fraction": 0.6808734543541174,
+    "moving_material_reflected_target_mean_error_m": 0.0886131003499031,
+    "cloth_z_p95_m": 0.11295095086097716,
+    "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+  },
+  "original_place_support": {
+    "source_z_p10_p50_p90_m": [
+      0.041289106011390686,
+      0.07023578882217407,
+      0.11814967542886734
+    ],
+    "source_to_fixed_nearest_xy_p10_p50_p90_m": [
+      0.0008141130802529513,
+      0.002035456263179926,
+      0.01659443904270046
+    ],
+    "source_to_fixed_vertical_gap_p10_p50_p90_m": [
+      0.01979774236679077,
+      0.0519750090315938,
+      0.10110518336296082
+    ],
+    "source_near_fixed_xy_10mm_fraction": 0.8550381478558274,
+    "source_near_layer_xy10mm_z0to30mm_fraction": 0.1402262562483557,
+    "pick_nearest_fixed_xy_m": 0.002674953014404087,
+    "pick_nearest_fixed_z_m": 0.009899995289742947,
+    "pick_vertical_gap_to_nearest_fixed_m": 0.03496773261576891,
+    "evidence_scope": "Geometric layer proximity only; no direct normal force/contact measurement"
+  },
+  "geometric_tension_proxies": {
+    "original_place": {
+      "ratio_to_initial_p50_p95_p99_max": [
+        1.0031408071517944,
+        1.085529887676239,
+        1.1863156867027282,
+        2.6027512550354004
+      ],
+      "fraction_over_1p1": 0.038312628354038314,
+      "anchor_incident_max": 2.6027512550354004,
+      "scope": "Geometric edge lengths relative to settled initial mesh; not measured tension or stress"
+    },
+    "supported_place": {
+      "ratio_to_initial_p50_p95_p99_max": [
+        1.0034347772598267,
+        1.086270546913147,
+        1.1928205275535582,
+        2.556321620941162
+      ],
+      "fraction_over_1p1": 0.03925529407803926,
+      "anchor_incident_max": 2.556321620941162,
+      "scope": "Geometric edge lengths relative to settled initial mesh; not measured tension or stress"
+    },
+    "final": {
+      "ratio_to_initial_p50_p95_p99_max": [
+        1.0000296831130981,
+        1.011070466041565,
+        1.02839852809906,
+        1.2698630094528198
+      ],
+      "fraction_over_1p1": 0.0005723327610005723,
+      "anchor_incident_max": 1.0007498264312744,
+      "scope": "Geometric edge lengths relative to settled initial mesh; not measured tension or stress"
+    }
+  },
+  "terminal_placement": {
+    "material_target_xyz": [
+      -0.006493192631751299,
+      -0.19656603038311005,
+      0.029900035336613656
+    ],
+    "nominal_material_target_xyz": [
+      -0.006493192631751299,
+      -0.18888384103775024,
+      0.029617954045534134
+    ],
+    "selected_support_z_p75_m": 0.009900035336613655,
+    "support_neighborhood_count": 13,
+    "support_nearest_xy_m": 0.003473955419188633,
+    "xy_target_correction_m": 0.007682189345359802,
+    "geometric_center_clearance_m": 0.02,
+    "max_xy_correction_m": 0.06,
+    "pick_before_xyz": [
+      -0.00329261994920671,
+      -0.20451460778713226,
+      0.044867727905511856
+    ],
+    "scope": "Terminal supported placement hypothesis; not confirmed contact force or material calibration",
+    "requested_ee_target_xyz": [
+      -0.008770770547292236,
+      -0.18510515244138864,
+      0.019028809230375383
+    ]
+  },
+  "supported_place_metrics": {
+    "symmetric_xy_alignment_mean_m": 0.047070447257210685,
+    "particle_occupancy_iou": 0.3782211138819618,
+    "occupancy_cell_m": 0.01,
+    "occupancy_dilation_cells": 1,
+    "moving_half_crossed_fraction": 0.7666403578005788,
+    "moving_material_reflected_target_mean_error_m": 0.07619992643594742,
+    "cloth_z_p95_m": 0.10483630895614623,
+    "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+  },
+  "supported_place_support": {
+    "source_z_p10_p50_p90_m": [
+      0.04623643308877945,
+      0.06928332895040512,
+      0.11261200904846191
+    ],
+    "source_to_fixed_nearest_xy_p10_p50_p90_m": [
+      0.0008175590490093379,
+      0.0019383125696661434,
+      0.006835920281164765
+    ],
+    "source_to_fixed_vertical_gap_p10_p50_p90_m": [
+      0.019786955788731575,
+      0.049687884747982025,
+      0.09103750810027122
+    ],
+    "source_near_fixed_xy_10mm_fraction": 0.9218626677190213,
+    "source_near_layer_xy10mm_z0to30mm_fraction": 0.15522230991844252,
+    "pick_nearest_fixed_xy_m": 0.004808360229348564,
+    "pick_nearest_fixed_z_m": 0.009899997152388096,
+    "pick_vertical_gap_to_nearest_fixed_m": 0.02175800409168005,
+    "evidence_scope": "Geometric layer proximity only; no direct normal force/contact measurement"
+  },
+  "material_goal_error_m": 0.002695394706708224,
+  "pre_release_last30_source_max_step_speed_m_s": 1.6684240102767944,
+  "fold_metrics": {
+    "symmetric_xy_alignment_mean_m": 0.14349845646643983,
+    "particle_occupancy_iou": 0.036954087346024636,
+    "occupancy_cell_m": 0.01,
+    "occupancy_dilation_cells": 1,
+    "moving_half_crossed_fraction": 0.0,
+    "moving_material_reflected_target_mean_error_m": 0.2772732377052307,
+    "cloth_z_p95_m": 0.03391191139817237,
+    "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+  },
+  "final_support_geometry": {
+    "source_z_p10_p50_p90_m": [
+      0.009899836033582687,
+      0.02333279699087143,
+      0.029695287346839905
+    ],
+    "source_to_fixed_nearest_xy_p10_p50_p90_m": [
+      0.025624653040576918,
+      0.12520816423369582,
+      0.22419171709635197
+    ],
+    "source_to_fixed_vertical_gap_p10_p50_p90_m": [
+      -0.019773446023464203,
+      -1.4036893844604492e-05,
+      0.019633744843304157
+    ],
+    "source_near_fixed_xy_10mm_fraction": 0.03393843725335438,
+    "source_near_layer_xy10mm_z0to30mm_fraction": 0.01762694027887398,
+    "pick_nearest_fixed_xy_m": 0.2355944422331747,
+    "pick_nearest_fixed_z_m": 0.009899280965328217,
+    "pick_vertical_gap_to_nearest_fixed_m": 0.019796006381511688,
+    "evidence_scope": "Geometric layer proximity only; no direct normal force/contact measurement"
+  },
+  "fixed_half_centroid_displacement_m": [
+    0.0018964988412335515,
+    -0.032020632177591324,
+    -5.615779446088709e-05
+  ],
+  "retention_metrics": {
+    "symmetric_xy_alignment_mean_m": 0.14342323856981534,
+    "particle_occupancy_iou": 0.03633314700950251,
+    "occupancy_cell_m": 0.01,
+    "occupancy_dilation_cells": 1,
+    "moving_half_crossed_fraction": 0.0,
+    "moving_material_reflected_target_mean_error_m": 0.2771646976470947,
+    "cloth_z_p95_m": 0.03402592316269874,
+    "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+  },
+  "retention_source_mean_displacement_from_3s_m": 0.00020797665638383478,
+  "release_block_drift_m": 0.0,
+  "lifecycle_checks": {
+    "only_hem_used": true,
+    "all_disabled": true,
+    "not_holding": true,
+    "paths_preserved": true,
+    "block_stopped": true
+  },
+  "fold_success_accepted": false,
+  "development_review_required": true,
+  "development_repeat_required_if_adopted": true,
+  "hem_single_anchor_max_gap_m": 0.008926811402242519,
+  "pipeline_completed": true,
+  "postcross_trace_frames": 340,
+  "video_frames": 643,
+  "stage_images": 13,
+  "frame_errors": 0,
+  "public_action_count": 57,
+  "public_action_count_within_12": false,
+  "formal_12_action_budget_passed": false,
+  "slot_status_final": [
+    {
+      "slot": "right_sleeve",
+      "pick_index": 141,
+      "used": false,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    },
+    {
+      "slot": "left_sleeve",
+      "pick_index": 8625,
+      "used": false,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    },
+    {
+      "slot": "hem",
+      "pick_index": 6174,
+      "used": true,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    }
+  ],
+  "slot_events": [
+    {
+      "event": "grasp_attempt",
+      "slot": "hem",
+      "status": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ],
+      "alignment": {
+        "slot": "hem",
+        "step": 473,
+        "anchor_count": 1,
+        "anchor_ids": [
+          6174
+        ],
+        "points1_readback": [
+          [
+            0.049589402973651886,
+            -0.04197359085083008,
+            -0.012326426804065704
+          ]
+        ]
+      },
+      "activation": {
+        "slot": "hem",
+        "step_before": 473,
+        "step_after": 474,
+        "max_displacement_m": 0.002420166041702032,
+        "tracked_mean_displacement_m": 0.00023379553749691695,
+        "count_over_5mm": 0
+      }
+    },
+    {
+      "event": "release",
+      "slot": "hem",
+      "status": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    }
+  ]
+}

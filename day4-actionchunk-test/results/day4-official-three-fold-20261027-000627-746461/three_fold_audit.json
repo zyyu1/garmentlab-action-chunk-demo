@@ -1,0 +1,260 @@
+{
+  "source_hashes_verified": true,
+  "runtime_source_hashes_verified": true,
+  "public_actions": 102,
+  "video_frames_decoded_metadata": 1199,
+  "fps": 20.0,
+  "sampled_states": 709,
+  "core_material_points": 999,
+  "stage_geometry": [
+    {
+      "stage": "00_initial",
+      "edge_ratio_to_initial_p95_p99_max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "core_centroid_displacement_m": [
+        0.0,
+        0.0
+      ],
+      "core_rigid_yaw_deg": -6.631225568654031e-10,
+      "core_fit_p95_residual_m": 0.0,
+      "full_xy_material_error_after_core_registration_p95_m": 0.0,
+      "hem_proxy_metrics": {
+        "symmetric_xy_alignment_mean_m": 0.1567042929032755,
+        "particle_occupancy_iou": 0.04070096099491238,
+        "occupancy_cell_m": 0.01,
+        "occupancy_dilation_cells": 1,
+        "moving_half_crossed_fraction": 0.0,
+        "moving_material_reflected_target_mean_error_m": 0.20394304394721985,
+        "cloth_z_p95_m": 0.03451433777809143,
+        "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+      }
+    },
+    {
+      "stage": "1_right_sleeve_move_2",
+      "edge_ratio_to_initial_p95_p99_max": [
+        1.0772581696510315,
+        1.165512113571167,
+        1.6210072040557861
+      ],
+      "core_centroid_displacement_m": [
+        0.010242201387882233,
+        -0.007067292928695679
+      ],
+      "core_rigid_yaw_deg": -18.942411422729492,
+      "core_fit_p95_residual_m": 0.035289011895656586,
+      "full_xy_material_error_after_core_registration_p95_m": 0.38972142338752747,
+      "hem_proxy_metrics": {
+        "symmetric_xy_alignment_mean_m": 0.12245566759121326,
+        "particle_occupancy_iou": 0.05903790087463557,
+        "occupancy_cell_m": 0.01,
+        "occupancy_dilation_cells": 1,
+        "moving_half_crossed_fraction": 0.04748247291268324,
+        "moving_material_reflected_target_mean_error_m": 0.20050959289073944,
+        "cloth_z_p95_m": 0.0876237079501152,
+        "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+      }
+    },
+    {
+      "stage": "1_right_sleeve_released",
+      "edge_ratio_to_initial_p95_p99_max": [
+        1.0152156352996826,
+        1.0422398471832275,
+        1.285060167312622
+      ],
+      "core_centroid_displacement_m": [
+        0.05863882228732109,
+        -0.014263421297073364
+      ],
+      "core_rigid_yaw_deg": -19.978269577026367,
+      "core_fit_p95_residual_m": 0.0006819248665124178,
+      "full_xy_material_error_after_core_registration_p95_m": 0.04744325205683708,
+      "hem_proxy_metrics": {
+        "symmetric_xy_alignment_mean_m": 0.15219128139432972,
+        "particle_occupancy_iou": 0.03655793025871766,
+        "occupancy_cell_m": 0.01,
+        "occupancy_dilation_cells": 1,
+        "moving_half_crossed_fraction": 0.032823454429572976,
+        "moving_material_reflected_target_mean_error_m": 0.20944710075855255,
+        "cloth_z_p95_m": 0.03453529253602028,
+        "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+      }
+    },
+    {
+      "stage": "2_left_sleeve_move_2",
+      "edge_ratio_to_initial_p95_p99_max": [
+        1.0648855328559874,
+        1.1421109533309937,
+        1.929818034172058
+      ],
+      "core_centroid_displacement_m": [
+        0.033768802881240845,
+        0.020586878061294556
+      ],
+      "core_rigid_yaw_deg": -5.336930751800537,
+      "core_fit_p95_residual_m": 0.02417943812906742,
+      "full_xy_material_error_after_core_registration_p95_m": 0.34026405215263367,
+      "hem_proxy_metrics": {
+        "symmetric_xy_alignment_mean_m": 0.14373257863616795,
+        "particle_occupancy_iou": 0.04735376044568245,
+        "occupancy_cell_m": 0.01,
+        "occupancy_dilation_cells": 1,
+        "moving_half_crossed_fraction": 0.10930528999362651,
+        "moving_material_reflected_target_mean_error_m": 0.18640358746051788,
+        "cloth_z_p95_m": 0.07904671877622604,
+        "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+      }
+    },
+    {
+      "stage": "2_left_sleeve_released",
+      "edge_ratio_to_initial_p95_p99_max": [
+        1.0361675381660462,
+        1.0846156120300292,
+        1.4587270021438599
+      ],
+      "core_centroid_displacement_m": [
+        -0.025875171646475792,
+        0.03735634684562683
+      ],
+      "core_rigid_yaw_deg": 7.599380016326904,
+      "core_fit_p95_residual_m": 0.0033864667639136314,
+      "full_xy_material_error_after_core_registration_p95_m": 0.13592155277729034,
+      "hem_proxy_metrics": {
+        "symmetric_xy_alignment_mean_m": 0.13735600041218154,
+        "particle_occupancy_iou": 0.03765932792584009,
+        "occupancy_cell_m": 0.01,
+        "occupancy_dilation_cells": 1,
+        "moving_half_crossed_fraction": 0.1861057998725303,
+        "moving_material_reflected_target_mean_error_m": 0.17053738236427307,
+        "cloth_z_p95_m": 0.045412223786115646,
+        "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+      }
+    },
+    {
+      "stage": "3_hem_move_2",
+      "edge_ratio_to_initial_p95_p99_max": [
+        1.0950731754302978,
+        1.1986486554145812,
+        2.287998676300049
+      ],
+      "core_centroid_displacement_m": [
+        -0.014676859602332115,
+        0.05410930514335632
+      ],
+      "core_rigid_yaw_deg": 14.919923782348633,
+      "core_fit_p95_residual_m": 0.009543096646666527,
+      "full_xy_material_error_after_core_registration_p95_m": 0.2804585099220276,
+      "hem_proxy_metrics": {
+        "symmetric_xy_alignment_mean_m": 0.060930968516855616,
+        "particle_occupancy_iou": 0.26157407407407407,
+        "occupancy_cell_m": 0.01,
+        "occupancy_dilation_cells": 1,
+        "moving_half_crossed_fraction": 1.0,
+        "moving_material_reflected_target_mean_error_m": 0.06642701476812363,
+        "cloth_z_p95_m": 0.11055935174226761,
+        "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+      }
+    },
+    {
+      "stage": "3_hem_released",
+      "edge_ratio_to_initial_p95_p99_max": [
+        1.0162901878356934,
+        1.040556492805481,
+        1.2510226964950562
+      ],
+      "core_centroid_displacement_m": [
+        -0.00944075733423233,
+        0.04270058870315552
+      ],
+      "core_rigid_yaw_deg": 19.05466079711914,
+      "core_fit_p95_residual_m": 0.0007807450019754469,
+      "full_xy_material_error_after_core_registration_p95_m": 0.060301173478364944,
+      "hem_proxy_metrics": {
+        "symmetric_xy_alignment_mean_m": 0.1503146629124724,
+        "particle_occupancy_iou": 0.03774647887323944,
+        "occupancy_cell_m": 0.01,
+        "occupancy_dilation_cells": 1,
+        "moving_half_crossed_fraction": 0.23581899298916506,
+        "moving_material_reflected_target_mean_error_m": 0.16846218705177307,
+        "cloth_z_p95_m": 0.03523584455251694,
+        "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+      }
+    },
+    {
+      "stage": "04_final",
+      "edge_ratio_to_initial_p95_p99_max": [
+        1.0152161359786986,
+        1.0384979915618897,
+        1.2394847869873047
+      ],
+      "core_centroid_displacement_m": [
+        -0.009420848451554775,
+        0.04298481345176697
+      ],
+      "core_rigid_yaw_deg": 18.92923927307129,
+      "core_fit_p95_residual_m": 0.0015573230339214206,
+      "full_xy_material_error_after_core_registration_p95_m": 0.054724667221307755,
+      "hem_proxy_metrics": {
+        "symmetric_xy_alignment_mean_m": 0.15034284515003762,
+        "particle_occupancy_iou": 0.03609701071630006,
+        "occupancy_cell_m": 0.01,
+        "occupancy_dilation_cells": 1,
+        "moving_half_crossed_fraction": 0.2374123645634162,
+        "moving_material_reflected_target_mean_error_m": 0.16811668872833252,
+        "cloth_z_p95_m": 0.03514346480369568,
+        "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+      }
+    }
+  ],
+  "release_material_motion": [
+    {
+      "slot": "right_sleeve",
+      "pick_index": 141,
+      "held_pick_xyz": [
+        -0.11521978676319122,
+        -0.2970818281173706,
+        0.09561308473348618
+      ],
+      "released_pick_xyz": [
+        0.4295005798339844,
+        -0.4460145831108093,
+        0.010910545475780964
+      ],
+      "pick_release_xy_displacement_m": 0.5647134184837341
+    },
+    {
+      "slot": "left_sleeve",
+      "pick_index": 8625,
+      "held_pick_xyz": [
+        0.18877141177654266,
+        -0.27919328212738037,
+        0.04189791902899742
+      ],
+      "released_pick_xyz": [
+        -0.21972163021564484,
+        -0.4822655916213989,
+        0.02179083600640297
+      ],
+      "pick_release_xy_displacement_m": 0.4561851918697357
+    },
+    {
+      "slot": "hem",
+      "pick_index": 6174,
+      "held_pick_xyz": [
+        0.008317348547279835,
+        -0.24190518260002136,
+        0.06388935446739197
+      ],
+      "released_pick_xyz": [
+        0.07018129527568817,
+        -0.6041598320007324,
+        0.02954365685582161
+      ],
+      "pick_release_xy_displacement_m": 0.36749908328056335
+    }
+  ],
+  "formal_fold_success": false,
+  "conclusion": "All three slots execute, but transfer stretches/reorients garment and release returns toward unfolded shape. Attachment torque hypothesis not proven."
+}

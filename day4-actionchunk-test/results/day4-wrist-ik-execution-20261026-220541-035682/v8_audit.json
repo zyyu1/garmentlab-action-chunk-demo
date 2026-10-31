@@ -1,0 +1,11 @@
+{
+  "target_records_exact": true,
+  "state_file_bytes_exact": true,
+  "script_hash_matches": true,
+  "state_unchanged_during_config": true,
+  "intervention_step": 846,
+  "getter_before": 64,
+  "getter_after": 0,
+  "effective_solver_change_proven": false,
+  "new_instance": "connect.nmb1.seetacloud.com:22895"
+}

@@ -1,0 +1,18 @@
+{
+  "target_ee_m": [
+    -1.515156588327515e-06,
+    -0.6523416195417973,
+    0.00017802534191841725
+  ],
+  "final_ee_m": [
+    0.001295303035854532,
+    -0.6597060021287284,
+    0.014017294434449917
+  ],
+  "position_error_mm": 15.730265011322711,
+  "orientation_change_deg": 50.921230279479936,
+  "last_sample_max_arm_speed_rad_s": 0.5774067044258118,
+  "last_12_sample_peak_arm_speed_rad_s": 3.340402126312256,
+  "attachment_ever_enabled": false,
+  "archive_sha256": "3b2d4aa548b424cb2c320dc1fc573960a41a5878ad584e401fba0f06111aa4f3"
+}

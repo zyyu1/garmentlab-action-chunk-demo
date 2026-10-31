@@ -1,0 +1,54 @@
+{
+  "script_hash_matches": true,
+  "effective_gain_profile_verified": true,
+  "only_approach_executed": true,
+  "sample_count": 240,
+  "actual_dt": 0.016666666666666666,
+  "final_position_error_m": 0.45027791523739824,
+  "candidate_rejected": true,
+  "joint_stats": [
+    {
+      "joint": "panda_joint1",
+      "peak_abs_velocity_rad_s": 2.991541862487793,
+      "minimum_limit_margin_deg": -3.6231922729272946e-05,
+      "first_within_1_degree_of_limit_step": 113
+    },
+    {
+      "joint": "panda_joint2",
+      "peak_abs_velocity_rad_s": 4.302418231964111,
+      "minimum_limit_margin_deg": -0.00014286312398253942,
+      "first_within_1_degree_of_limit_step": 91
+    },
+    {
+      "joint": "panda_joint3",
+      "peak_abs_velocity_rad_s": 1.6700372695922852,
+      "minimum_limit_margin_deg": 121.74771006315021,
+      "first_within_1_degree_of_limit_step": null
+    },
+    {
+      "joint": "panda_joint4",
+      "peak_abs_velocity_rad_s": 1.8885186910629272,
+      "minimum_limit_margin_deg": -0.0003827005596954548,
+      "first_within_1_degree_of_limit_step": 13
+    },
+    {
+      "joint": "panda_joint5",
+      "peak_abs_velocity_rad_s": 5.350003242492676,
+      "minimum_limit_margin_deg": 100.68599530452632,
+      "first_within_1_degree_of_limit_step": null
+    },
+    {
+      "joint": "panda_joint6",
+      "peak_abs_velocity_rad_s": 9.738258361816406,
+      "minimum_limit_margin_deg": -0.006753239560304778,
+      "first_within_1_degree_of_limit_step": 36
+    },
+    {
+      "joint": "panda_joint7",
+      "peak_abs_velocity_rad_s": 3.0532660484313965,
+      "minimum_limit_margin_deg": 101.77010342015825,
+      "first_within_1_degree_of_limit_step": null
+    }
+  ],
+  "cause_not_proven": "No per-step RMP targets, efforts or EE poses in this record; gain insufficiency versus other control dynamics not separated."
+}

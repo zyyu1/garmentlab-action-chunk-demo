@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "audit_version": 2,
+  "scope": "normal backend startup followed by read-only parameter capture; no grasp",
+  "baseline_source_checks": {
+    "backend.py": true,
+    "prepared_grasp_control.py": true,
+    "MyFranka.py": true,
+    "BaseEnv.py": true,
+    "Control.py": true
+  },
+  "physics_dt": 0.016666666666666666,
+  "stage_meters_per_unit": 1.0,
+  "garment_usd": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Assets/Garments/Tops/NoCollar_LSleeve_FrontClose/TNLC_Dress057/TNLC_Dress057_obj.usd",
+  "garment_usd_sha256": "7db83ba3e67d543c806f39679907063ecf578beadddab3fee885f67bffcaea1f",
+  "physics_prim_count": 97,
+  "array_count": 16,
+  "no_steps_during_capture": true,
+  "attachment_disabled": true,
+  "nonfinite_encoding": "JSON uses tagged objects: nonfinite_float = +Infinity, -Infinity or NaN; NPZ arrays preserve original values.",
+  "note": "Composed USD properties include schema fallbacks; these are not direct internal solver reads. Startup includes normal reset.",
+  "stage_kilograms_per_unit": 1.0,
+  "stage_authored_kilograms_per_unit": 1.0
+}

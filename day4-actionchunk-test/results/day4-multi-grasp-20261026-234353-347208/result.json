@@ -1,0 +1,2415 @@
+{
+  "probe_version": "multi-prepared-two-region-v1",
+  "passed": true,
+  "formal_day4_success": false,
+  "scope": "Two distinct prepared regions in one rollout; no fold, used-slot reuse, or episode reset acceptance",
+  "actions": [
+    {
+      "label": "1_right_sleeve_approach",
+      "matrix": [
+        [
+          0.3625386357307434,
+          -0.28809890151023865,
+          0.15000000596046448,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 286,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "1_right_sleeve_descend_0.12",
+      "matrix": [
+        [
+          0.36168569326400757,
+          -0.29411301016807556,
+          0.11999999731779099,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 312,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "1_right_sleeve_descend_0.08",
+      "matrix": [
+        [
+          0.3615773320198059,
+          -0.2947288453578949,
+          0.07999999821186066,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 344,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "1_right_sleeve_descend_0.05",
+      "matrix": [
+        [
+          0.3614869713783264,
+          -0.2953619658946991,
+          0.05000000074505806,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 371,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "1_right_sleeve_descend_0.03",
+      "matrix": [
+        [
+          0.36132556200027466,
+          -0.29614707827568054,
+          0.029999999329447746,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 392,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "1_right_sleeve_descend_0.02",
+      "matrix": [
+        [
+          0.36131179332733154,
+          -0.2964586019515991,
+          0.019999999552965164,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 405,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "1_right_sleeve_close",
+      "matrix": [
+        [
+          0.3611716628074646,
+          -0.2967349886894226,
+          0.019999999552965164,
+          0.0,
+          1.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 485,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "1_right_sleeve_lift",
+      "matrix": [
+        [
+          0.3611491620540619,
+          -0.2966844141483307,
+          0.12013697624206543,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 534,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "1_right_sleeve_release",
+      "matrix": [
+        [
+          0.3609262704849243,
+          -0.29670289158821106,
+          0.1135648563504219,
+          0.0,
+          0.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 550,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "2_left_sleeve_approach",
+      "matrix": [
+        [
+          -0.37414348125457764,
+          -0.3107503056526184,
+          0.15000000596046448,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 883,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "2_left_sleeve_descend_0.12",
+      "matrix": [
+        [
+          -0.3735092878341675,
+          -0.3134364187717438,
+          0.11999999731779099,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 909,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "2_left_sleeve_descend_0.08",
+      "matrix": [
+        [
+          -0.3733959496021271,
+          -0.3141607344150543,
+          0.07999999821186066,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 941,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "2_left_sleeve_descend_0.05",
+      "matrix": [
+        [
+          -0.3733416795730591,
+          -0.31462162733078003,
+          0.05000000074505806,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 968,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "2_left_sleeve_descend_0.03",
+      "matrix": [
+        [
+          -0.3731268644332886,
+          -0.31530797481536865,
+          0.029999999329447746,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 989,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "2_left_sleeve_descend_0.02",
+      "matrix": [
+        [
+          -0.3729459047317505,
+          -0.31573113799095154,
+          0.019999999552965164,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1002,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "2_left_sleeve_close",
+      "matrix": [
+        [
+          -0.37314364314079285,
+          -0.315472811460495,
+          0.019999999552965164,
+          0.0,
+          1.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1086,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "2_left_sleeve_lift",
+      "matrix": [
+        [
+          -0.37311550974845886,
+          -0.31542274355888367,
+          0.12012894451618195,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1135,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "2_left_sleeve_release",
+      "matrix": [
+        [
+          -0.37290331721305847,
+          -0.31536754965782166,
+          0.11359090358018875,
+          0.0,
+          0.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1151,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    }
+  ],
+  "cycles": [
+    {
+      "slot": "right_sleeve",
+      "cloth_rise_m": 0.0928027406334877,
+      "follow_error_m": 0.0005296252245136434,
+      "cloth_drop_m": 0.09425486624240875,
+      "release_block_drift_m": 0.0,
+      "checks": {
+        "lifted": true,
+        "followed": true,
+        "released_drop": true,
+        "block_stopped": true,
+        "all_disabled": true,
+        "not_holding": true,
+        "paths_preserved": true
+      },
+      "alignment": {
+        "slot": "right_sleeve",
+        "step": 480,
+        "anchor_count": 40,
+        "anchor_ids": [
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          81,
+          83,
+          88,
+          89,
+          107,
+          108,
+          109,
+          139,
+          140,
+          141,
+          142,
+          143,
+          172,
+          173,
+          204,
+          209,
+          210,
+          211,
+          212,
+          213,
+          215,
+          252,
+          253,
+          258,
+          259,
+          281,
+          287,
+          288,
+          289,
+          290,
+          291,
+          590,
+          610
+        ],
+        "points1_readback": [
+          [
+            -0.45270025730133057,
+            -0.07445812225341797,
+            -0.2818402051925659
+          ],
+          [
+            -0.2061605453491211,
+            -0.08276700973510742,
+            -0.28760215640068054
+          ],
+          [
+            0.039449334144592285,
+            -0.11094312369823456,
+            -0.2982807755470276
+          ],
+          [
+            0.04972616955637932,
+            -0.05467236042022705,
+            -0.5403611660003662
+          ],
+          [
+            0.09603699296712875,
+            0.15568535029888153,
+            -0.6637636423110962
+          ],
+          [
+            0.14283955097198486,
+            0.40174227952957153,
+            -0.6639108061790466
+          ],
+          [
+            0.19012987613677979,
+            0.6473432183265686,
+            -0.6638279557228088
+          ],
+          [
+            0.06842713057994843,
+            0.007810195442289114,
+            -0.08079931139945984
+          ],
+          [
+            -0.07312198728322983,
+            -0.06556212902069092,
+            -0.164114311337471
+          ],
+          [
+            -0.5406588315963745,
+            0.39769214391708374,
+            -0.6640757322311401
+          ],
+          [
+            -0.08373360335826874,
+            -0.04209180921316147,
+            -0.4166260361671448
+          ],
+          [
+            -0.19955039024353027,
+            0.3407607674598694,
+            -0.6650682687759399
+          ],
+          [
+            -0.16038715839385986,
+            0.0747094601392746,
+            -0.6391233801841736
+          ],
+          [
+            -0.5715588927268982,
+            0.08106331527233124,
+            -0.5645450353622437
+          ],
+          [
+            -0.016239285469055176,
+            0.3038138151168823,
+            -0.6638273596763611
+          ],
+          [
+            -0.0631282776594162,
+            0.5674412250518799,
+            -0.6638328433036804
+          ],
+          [
+            -0.009704629890620708,
+            0.04983047768473625,
+            -0.6327823996543884
+          ],
+          [
+            -0.3345291018486023,
+            -0.03026525303721428,
+            -0.48858699202537537
+          ],
+          [
+            -0.5791058540344238,
+            -0.009992718696594238,
+            -0.4018253982067108
+          ],
+          [
+            -0.4928897023200989,
+            0.08927881717681885,
+            0.01055977027863264
+          ],
+          [
+            -0.29359757900238037,
+            -0.0062366328202188015,
+            -0.08009467273950577
+          ],
+          [
+            -0.009078781120479107,
+            0.8166829943656921,
+            -0.6638330817222595
+          ],
+          [
+            0.08447468280792236,
+            0.53902667760849,
+            -0.6638328433036804
+          ],
+          [
+            -0.3309885859489441,
+            0.5683223605155945,
+            -0.6638330817222595
+          ],
+          [
+            -0.18802385032176971,
+            -0.008055567741394043,
+            -0.5164035558700562
+          ],
+          [
+            -0.37075281143188477,
+            0.12723705172538757,
+            -0.6362062692642212
+          ],
+          [
+            -0.5195210576057434,
+            0.2208987921476364,
+            -0.6611347198486328
+          ],
+          [
+            -0.37594836950302124,
+            0.3291477859020233,
+            -0.6648139357566833
+          ],
+          [
+            -0.5966832637786865,
+            0.007604559417814016,
+            -0.13513831794261932
+          ],
+          [
+            -0.4387190043926239,
+            0.0028590362053364515,
+            -0.14465494453907013
+          ],
+          [
+            -0.31057894229888916,
+            0.14130771160125732,
+            0.03862350061535835
+          ],
+          [
+            -0.11112093925476074,
+            0.06280045211315155,
+            0.017797699198126793
+          ],
+          [
+            0.13395845890045166,
+            0.7853409051895142,
+            -0.6638277173042297
+          ],
+          [
+            -0.19860069453716278,
+            0.4923572242259979,
+            -0.6638221740722656
+          ],
+          [
+            -0.19628207385540009,
+            0.7257511615753174,
+            -0.6638344526290894
+          ],
+          [
+            -0.48546990752220154,
+            0.83579421043396,
+            -0.6638324856758118
+          ],
+          [
+            -0.167239710688591,
+            0.9108355045318604,
+            -0.6638249158859253
+          ],
+          [
+            -0.31846365332603455,
+            0.8390387296676636,
+            -0.6638269424438477
+          ],
+          [
+            -0.5678524971008301,
+            0.6224155426025391,
+            -0.6638309955596924
+          ],
+          [
+            -0.4259765148162842,
+            0.6913264989852905,
+            -0.6638326048851013
+          ]
+        ]
+      },
+      "activation": {
+        "slot": "right_sleeve",
+        "step_before": 480,
+        "step_after": 481,
+        "max_displacement_m": 0.0027903877198696136,
+        "tracked_mean_displacement_m": 0.0011788104893639684,
+        "count_over_5mm": 0
+      }
+    },
+    {
+      "slot": "left_sleeve",
+      "cloth_rise_m": 0.09277403354644775,
+      "follow_error_m": 0.0005278754276685079,
+      "cloth_drop_m": 0.09444448351860046,
+      "release_block_drift_m": 0.0,
+      "checks": {
+        "lifted": true,
+        "followed": true,
+        "released_drop": true,
+        "block_stopped": true,
+        "all_disabled": true,
+        "not_holding": true,
+        "paths_preserved": true
+      },
+      "alignment": {
+        "slot": "left_sleeve",
+        "step": 1081,
+        "anchor_count": 42,
+        "anchor_ids": [
+          8623,
+          8624,
+          8625,
+          8626,
+          8627,
+          8628,
+          8637,
+          8638,
+          8639,
+          8640,
+          8643,
+          8648,
+          8649,
+          8650,
+          8651,
+          8658,
+          8659,
+          8660,
+          8679,
+          8680,
+          8681,
+          8682,
+          8696,
+          8698,
+          8699,
+          8700,
+          8702,
+          8718,
+          8719,
+          8720,
+          8747,
+          8751,
+          8752,
+          8753,
+          8783,
+          8867,
+          8961,
+          8962,
+          8963,
+          8971,
+          9032,
+          9033
+        ],
+        "points1_readback": [
+          [
+            0.4919598698616028,
+            0.1021752804517746,
+            -0.252110093832016
+          ],
+          [
+            0.24114251136779785,
+            0.13097426295280457,
+            -0.24859309196472168
+          ],
+          [
+            0.013086199760437012,
+            0.024875998497009277,
+            -0.23560692369937897
+          ],
+          [
+            -0.025159120559692383,
+            0.10910134017467499,
+            -0.4746019244194031
+          ],
+          [
+            -0.08282065391540527,
+            0.3020574748516083,
+            -0.6329692006111145
+          ],
+          [
+            -0.15465418994426727,
+            0.5481233596801758,
+            -0.665046751499176
+          ],
+          [
+            -0.19362470507621765,
+            0.732933521270752,
+            0.07560191303491592
+          ],
+          [
+            -0.11775493621826172,
+            0.47317248582839966,
+            0.1042431890964508
+          ],
+          [
+            -0.01551409624516964,
+            0.243456169962883,
+            0.22378812730312347
+          ],
+          [
+            0.025572380051016808,
+            0.036008160561323166,
+            0.034235481172800064
+          ],
+          [
+            0.12740890681743622,
+            0.07585982978343964,
+            -0.3774884045124054
+          ],
+          [
+            0.36254823207855225,
+            0.24656951427459717,
+            0.09404806047677994
+          ],
+          [
+            0.14471113681793213,
+            0.04443824291229248,
+            -0.11551051586866379
+          ],
+          [
+            0.3256797790527344,
+            0.12593171000480652,
+            -0.0660770907998085
+          ],
+          [
+            0.18636982142925262,
+            0.14774104952812195,
+            0.08442054688930511
+          ],
+          [
+            0.5888035297393799,
+            0.2873152494430542,
+            -0.5326882004737854
+          ],
+          [
+            0.3555029630661011,
+            0.1699785441160202,
+            -0.477007120847702
+          ],
+          [
+            0.19190213084220886,
+            0.5113492608070374,
+            -0.6598300337791443
+          ],
+          [
+            0.15785694122314453,
+            0.44110915064811707,
+            0.11296980082988739
+          ],
+          [
+            0.2183675765991211,
+            0.29582679271698,
+            0.11280005425214767
+          ],
+          [
+            0.6087313294410706,
+            0.2141704261302948,
+            -0.015288716182112694
+          ],
+          [
+            0.46301186084747314,
+            0.1602649688720703,
+            0.004919370170682669
+          ],
+          [
+            0.6058722734451294,
+            0.17893116176128387,
+            -0.37651875615119934
+          ],
+          [
+            0.3651946783065796,
+            0.10683238506317139,
+            -0.3374877870082855
+          ],
+          [
+            0.14660856127738953,
+            0.24739503860473633,
+            -0.5787969827651978
+          ],
+          [
+            0.012762348167598248,
+            0.4611462354660034,
+            -0.6644561886787415
+          ],
+          [
+            0.37947893142700195,
+            0.36738914251327515,
+            -0.6150960922241211
+          ],
+          [
+            0.048542022705078125,
+            0.6679883003234863,
+            0.0658084973692894
+          ],
+          [
+            0.01373291015625,
+            0.3829061985015869,
+            0.1327746957540512
+          ],
+          [
+            0.6108701229095459,
+            0.171545147895813,
+            -0.17216472327709198
+          ],
+          [
+            0.21009942889213562,
+            0.14284054934978485,
+            -0.48848727345466614
+          ],
+          [
+            0.22945702075958252,
+            0.36659738421440125,
+            -0.6236044764518738
+          ],
+          [
+            0.3643145263195038,
+            0.5361348390579224,
+            -0.6636627912521362
+          ],
+          [
+            0.5431523323059082,
+            0.4268467426300049,
+            -0.6331607699394226
+          ],
+          [
+            -0.087033711373806,
+            0.6240755319595337,
+            0.07812108099460602
+          ],
+          [
+            0.29638609290122986,
+            0.6471207141876221,
+            0.09672816097736359
+          ],
+          [
+            0.16597411036491394,
+            0.5855779051780701,
+            0.08395016193389893
+          ],
+          [
+            0.3636856973171234,
+            0.45162540674209595,
+            0.11912944912910461
+          ],
+          [
+            0.5301535129547119,
+            0.33980411291122437,
+            0.12056741118431091
+          ],
+          [
+            0.5111913084983826,
+            0.5622586011886597,
+            0.09144892543554306
+          ],
+          [
+            0.151412695646286,
+            0.8298705220222473,
+            0.10603927075862885
+          ],
+          [
+            0.36286017298698425,
+            0.8038550615310669,
+            0.08676747977733612
+          ]
+        ]
+      },
+      "activation": {
+        "slot": "left_sleeve",
+        "step_before": 1081,
+        "step_after": 1082,
+        "max_displacement_m": 0.0023960887920111418,
+        "tracked_mean_displacement_m": 0.0009312651818618178,
+        "count_over_5mm": 0
+      }
+    }
+  ],
+  "errors": [],
+  "yaw": 0.0,
+  "physics_profile": "Original robot asset; no v9-v11 robot overrides; cloth mass .0001/friction .3/particle friction scale 0; room collisions isolated",
+  "material_readback": {
+    "friction": 0.30000001192092896,
+    "particle_friction_scale": 0.0
+  },
+  "robot_config": {
+    "kp": [
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      10000.0,
+      0.0
+    ],
+    "kd": [
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      1000.0,
+      0.0
+    ],
+    "solver_position_iterations_usd": 64,
+    "solver_velocity_iterations_usd": 64
+  },
+  "runtime_source_hashes": {
+    "backend": {
+      "path": "/root/autodl-tmp/garmentlab-action-chunk-demo/backends/garmentlab_backend.py",
+      "sha256": "af2445c67aebf01bbb9bdc5b32fc62df98c44ee791e0f5c555ee0e9df3de0537"
+    },
+    "environment": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/FoldEnv.py",
+      "sha256": "e0aff36e6b25d724cd8c7f2ffd4dd7c53ffd95693f4e502457eaecf63ebcbe24"
+    },
+    "robot": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py",
+      "sha256": "adc6abc5b8721a0730fe7281d6cc1d89a6b7e1abad0d7b5da167369f0371428a"
+    },
+    "original_control": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/Control.py",
+      "sha256": "2b51b9956c5b296b43c2e85509678984061ca716273c33e84cffbb0706f93547"
+    }
+  },
+  "slots_precreated": [
+    {
+      "label": "right_sleeve",
+      "block": "/World/Attachment/attach/block",
+      "constraint": "/World/AttachmentConstraints/multi_right_sleeve",
+      "pick_index": 141,
+      "anchor_ids": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        81,
+        83,
+        88,
+        89,
+        107,
+        108,
+        109,
+        139,
+        140,
+        141,
+        142,
+        143,
+        172,
+        173,
+        204,
+        209,
+        210,
+        211,
+        212,
+        213,
+        215,
+        252,
+        253,
+        258,
+        259,
+        281,
+        287,
+        288,
+        289,
+        290,
+        291,
+        590,
+        610
+      ]
+    },
+    {
+      "label": "left_sleeve",
+      "block": "/World/Attachment/attach_1/block",
+      "constraint": "/World/AttachmentConstraints/multi_left_sleeve",
+      "pick_index": 8625,
+      "anchor_ids": [
+        8623,
+        8624,
+        8625,
+        8626,
+        8627,
+        8628,
+        8637,
+        8638,
+        8639,
+        8640,
+        8643,
+        8648,
+        8649,
+        8650,
+        8651,
+        8658,
+        8659,
+        8660,
+        8679,
+        8680,
+        8681,
+        8682,
+        8696,
+        8698,
+        8699,
+        8700,
+        8702,
+        8718,
+        8719,
+        8720,
+        8747,
+        8751,
+        8752,
+        8753,
+        8783,
+        8867,
+        8961,
+        8962,
+        8963,
+        8971,
+        9032,
+        9033
+      ]
+    },
+    {
+      "label": "hem",
+      "block": "/World/Attachment/attach_2/block",
+      "constraint": "/World/AttachmentConstraints/multi_hem",
+      "pick_index": 6174,
+      "anchor_ids": [
+        5271,
+        5272,
+        5273,
+        5274,
+        5275,
+        5423,
+        5531,
+        5570,
+        5657,
+        5658,
+        5659,
+        5684,
+        5781,
+        5784,
+        5785,
+        5786,
+        5856,
+        6019,
+        6052,
+        6053,
+        6171,
+        6172,
+        6173,
+        6174,
+        6175,
+        6176,
+        6177,
+        6178,
+        6179,
+        6180,
+        6181,
+        6182,
+        6197,
+        6278,
+        6279,
+        6280,
+        6281,
+        6296,
+        6330,
+        6331,
+        6332,
+        6334
+      ]
+    }
+  ],
+  "slot_status_final": [
+    {
+      "slot": "right_sleeve",
+      "pick_index": 141,
+      "used": true,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    },
+    {
+      "slot": "left_sleeve",
+      "pick_index": 8625,
+      "used": true,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    },
+    {
+      "slot": "hem",
+      "pick_index": 6174,
+      "used": false,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    }
+  ],
+  "slot_events": [
+    {
+      "event": "grasp_attempt",
+      "slot": "right_sleeve",
+      "status": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ],
+      "alignment": {
+        "slot": "right_sleeve",
+        "step": 480,
+        "anchor_count": 40,
+        "anchor_ids": [
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          81,
+          83,
+          88,
+          89,
+          107,
+          108,
+          109,
+          139,
+          140,
+          141,
+          142,
+          143,
+          172,
+          173,
+          204,
+          209,
+          210,
+          211,
+          212,
+          213,
+          215,
+          252,
+          253,
+          258,
+          259,
+          281,
+          287,
+          288,
+          289,
+          290,
+          291,
+          590,
+          610
+        ],
+        "points1_readback": [
+          [
+            -0.45270025730133057,
+            -0.07445812225341797,
+            -0.2818402051925659
+          ],
+          [
+            -0.2061605453491211,
+            -0.08276700973510742,
+            -0.28760215640068054
+          ],
+          [
+            0.039449334144592285,
+            -0.11094312369823456,
+            -0.2982807755470276
+          ],
+          [
+            0.04972616955637932,
+            -0.05467236042022705,
+            -0.5403611660003662
+          ],
+          [
+            0.09603699296712875,
+            0.15568535029888153,
+            -0.6637636423110962
+          ],
+          [
+            0.14283955097198486,
+            0.40174227952957153,
+            -0.6639108061790466
+          ],
+          [
+            0.19012987613677979,
+            0.6473432183265686,
+            -0.6638279557228088
+          ],
+          [
+            0.06842713057994843,
+            0.007810195442289114,
+            -0.08079931139945984
+          ],
+          [
+            -0.07312198728322983,
+            -0.06556212902069092,
+            -0.164114311337471
+          ],
+          [
+            -0.5406588315963745,
+            0.39769214391708374,
+            -0.6640757322311401
+          ],
+          [
+            -0.08373360335826874,
+            -0.04209180921316147,
+            -0.4166260361671448
+          ],
+          [
+            -0.19955039024353027,
+            0.3407607674598694,
+            -0.6650682687759399
+          ],
+          [
+            -0.16038715839385986,
+            0.0747094601392746,
+            -0.6391233801841736
+          ],
+          [
+            -0.5715588927268982,
+            0.08106331527233124,
+            -0.5645450353622437
+          ],
+          [
+            -0.016239285469055176,
+            0.3038138151168823,
+            -0.6638273596763611
+          ],
+          [
+            -0.0631282776594162,
+            0.5674412250518799,
+            -0.6638328433036804
+          ],
+          [
+            -0.009704629890620708,
+            0.04983047768473625,
+            -0.6327823996543884
+          ],
+          [
+            -0.3345291018486023,
+            -0.03026525303721428,
+            -0.48858699202537537
+          ],
+          [
+            -0.5791058540344238,
+            -0.009992718696594238,
+            -0.4018253982067108
+          ],
+          [
+            -0.4928897023200989,
+            0.08927881717681885,
+            0.01055977027863264
+          ],
+          [
+            -0.29359757900238037,
+            -0.0062366328202188015,
+            -0.08009467273950577
+          ],
+          [
+            -0.009078781120479107,
+            0.8166829943656921,
+            -0.6638330817222595
+          ],
+          [
+            0.08447468280792236,
+            0.53902667760849,
+            -0.6638328433036804
+          ],
+          [
+            -0.3309885859489441,
+            0.5683223605155945,
+            -0.6638330817222595
+          ],
+          [
+            -0.18802385032176971,
+            -0.008055567741394043,
+            -0.5164035558700562
+          ],
+          [
+            -0.37075281143188477,
+            0.12723705172538757,
+            -0.6362062692642212
+          ],
+          [
+            -0.5195210576057434,
+            0.2208987921476364,
+            -0.6611347198486328
+          ],
+          [
+            -0.37594836950302124,
+            0.3291477859020233,
+            -0.6648139357566833
+          ],
+          [
+            -0.5966832637786865,
+            0.007604559417814016,
+            -0.13513831794261932
+          ],
+          [
+            -0.4387190043926239,
+            0.0028590362053364515,
+            -0.14465494453907013
+          ],
+          [
+            -0.31057894229888916,
+            0.14130771160125732,
+            0.03862350061535835
+          ],
+          [
+            -0.11112093925476074,
+            0.06280045211315155,
+            0.017797699198126793
+          ],
+          [
+            0.13395845890045166,
+            0.7853409051895142,
+            -0.6638277173042297
+          ],
+          [
+            -0.19860069453716278,
+            0.4923572242259979,
+            -0.6638221740722656
+          ],
+          [
+            -0.19628207385540009,
+            0.7257511615753174,
+            -0.6638344526290894
+          ],
+          [
+            -0.48546990752220154,
+            0.83579421043396,
+            -0.6638324856758118
+          ],
+          [
+            -0.167239710688591,
+            0.9108355045318604,
+            -0.6638249158859253
+          ],
+          [
+            -0.31846365332603455,
+            0.8390387296676636,
+            -0.6638269424438477
+          ],
+          [
+            -0.5678524971008301,
+            0.6224155426025391,
+            -0.6638309955596924
+          ],
+          [
+            -0.4259765148162842,
+            0.6913264989852905,
+            -0.6638326048851013
+          ]
+        ]
+      },
+      "activation": {
+        "slot": "right_sleeve",
+        "step_before": 480,
+        "step_after": 481,
+        "max_displacement_m": 0.0027903877198696136,
+        "tracked_mean_displacement_m": 0.0011788104893639684,
+        "count_over_5mm": 0
+      }
+    },
+    {
+      "event": "release",
+      "slot": "right_sleeve",
+      "status": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "event": "grasp_attempt",
+      "slot": "left_sleeve",
+      "status": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ],
+      "alignment": {
+        "slot": "left_sleeve",
+        "step": 1081,
+        "anchor_count": 42,
+        "anchor_ids": [
+          8623,
+          8624,
+          8625,
+          8626,
+          8627,
+          8628,
+          8637,
+          8638,
+          8639,
+          8640,
+          8643,
+          8648,
+          8649,
+          8650,
+          8651,
+          8658,
+          8659,
+          8660,
+          8679,
+          8680,
+          8681,
+          8682,
+          8696,
+          8698,
+          8699,
+          8700,
+          8702,
+          8718,
+          8719,
+          8720,
+          8747,
+          8751,
+          8752,
+          8753,
+          8783,
+          8867,
+          8961,
+          8962,
+          8963,
+          8971,
+          9032,
+          9033
+        ],
+        "points1_readback": [
+          [
+            0.4919598698616028,
+            0.1021752804517746,
+            -0.252110093832016
+          ],
+          [
+            0.24114251136779785,
+            0.13097426295280457,
+            -0.24859309196472168
+          ],
+          [
+            0.013086199760437012,
+            0.024875998497009277,
+            -0.23560692369937897
+          ],
+          [
+            -0.025159120559692383,
+            0.10910134017467499,
+            -0.4746019244194031
+          ],
+          [
+            -0.08282065391540527,
+            0.3020574748516083,
+            -0.6329692006111145
+          ],
+          [
+            -0.15465418994426727,
+            0.5481233596801758,
+            -0.665046751499176
+          ],
+          [
+            -0.19362470507621765,
+            0.732933521270752,
+            0.07560191303491592
+          ],
+          [
+            -0.11775493621826172,
+            0.47317248582839966,
+            0.1042431890964508
+          ],
+          [
+            -0.01551409624516964,
+            0.243456169962883,
+            0.22378812730312347
+          ],
+          [
+            0.025572380051016808,
+            0.036008160561323166,
+            0.034235481172800064
+          ],
+          [
+            0.12740890681743622,
+            0.07585982978343964,
+            -0.3774884045124054
+          ],
+          [
+            0.36254823207855225,
+            0.24656951427459717,
+            0.09404806047677994
+          ],
+          [
+            0.14471113681793213,
+            0.04443824291229248,
+            -0.11551051586866379
+          ],
+          [
+            0.3256797790527344,
+            0.12593171000480652,
+            -0.0660770907998085
+          ],
+          [
+            0.18636982142925262,
+            0.14774104952812195,
+            0.08442054688930511
+          ],
+          [
+            0.5888035297393799,
+            0.2873152494430542,
+            -0.5326882004737854
+          ],
+          [
+            0.3555029630661011,
+            0.1699785441160202,
+            -0.477007120847702
+          ],
+          [
+            0.19190213084220886,
+            0.5113492608070374,
+            -0.6598300337791443
+          ],
+          [
+            0.15785694122314453,
+            0.44110915064811707,
+            0.11296980082988739
+          ],
+          [
+            0.2183675765991211,
+            0.29582679271698,
+            0.11280005425214767
+          ],
+          [
+            0.6087313294410706,
+            0.2141704261302948,
+            -0.015288716182112694
+          ],
+          [
+            0.46301186084747314,
+            0.1602649688720703,
+            0.004919370170682669
+          ],
+          [
+            0.6058722734451294,
+            0.17893116176128387,
+            -0.37651875615119934
+          ],
+          [
+            0.3651946783065796,
+            0.10683238506317139,
+            -0.3374877870082855
+          ],
+          [
+            0.14660856127738953,
+            0.24739503860473633,
+            -0.5787969827651978
+          ],
+          [
+            0.012762348167598248,
+            0.4611462354660034,
+            -0.6644561886787415
+          ],
+          [
+            0.37947893142700195,
+            0.36738914251327515,
+            -0.6150960922241211
+          ],
+          [
+            0.048542022705078125,
+            0.6679883003234863,
+            0.0658084973692894
+          ],
+          [
+            0.01373291015625,
+            0.3829061985015869,
+            0.1327746957540512
+          ],
+          [
+            0.6108701229095459,
+            0.171545147895813,
+            -0.17216472327709198
+          ],
+          [
+            0.21009942889213562,
+            0.14284054934978485,
+            -0.48848727345466614
+          ],
+          [
+            0.22945702075958252,
+            0.36659738421440125,
+            -0.6236044764518738
+          ],
+          [
+            0.3643145263195038,
+            0.5361348390579224,
+            -0.6636627912521362
+          ],
+          [
+            0.5431523323059082,
+            0.4268467426300049,
+            -0.6331607699394226
+          ],
+          [
+            -0.087033711373806,
+            0.6240755319595337,
+            0.07812108099460602
+          ],
+          [
+            0.29638609290122986,
+            0.6471207141876221,
+            0.09672816097736359
+          ],
+          [
+            0.16597411036491394,
+            0.5855779051780701,
+            0.08395016193389893
+          ],
+          [
+            0.3636856973171234,
+            0.45162540674209595,
+            0.11912944912910461
+          ],
+          [
+            0.5301535129547119,
+            0.33980411291122437,
+            0.12056741118431091
+          ],
+          [
+            0.5111913084983826,
+            0.5622586011886597,
+            0.09144892543554306
+          ],
+          [
+            0.151412695646286,
+            0.8298705220222473,
+            0.10603927075862885
+          ],
+          [
+            0.36286017298698425,
+            0.8038550615310669,
+            0.08676747977733612
+          ]
+        ]
+      },
+      "activation": {
+        "slot": "left_sleeve",
+        "step_before": 1081,
+        "step_after": 1082,
+        "max_displacement_m": 0.0023960887920111418,
+        "tracked_mean_displacement_m": 0.0009312651818618178,
+        "count_over_5mm": 0
+      }
+    },
+    {
+      "event": "release",
+      "slot": "left_sleeve",
+      "status": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 141,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 8625,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 6174,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    }
+  ]
+}

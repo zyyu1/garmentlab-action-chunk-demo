@@ -1,0 +1,14 @@
+{
+  "script_hash_matches": true,
+  "runtime_source_hashes_match": true,
+  "targets_exactly_match_v6": true,
+  "state_samples": 1086,
+  "all_pre_post_times_match_dt": true,
+  "adjacent_states_exactly_continuous": true,
+  "physics_dt_seconds": 0.016666666666666666,
+  "position_iterations": 64,
+  "velocity_iterations": 64,
+  "joint5_last60_max_difference_speed_rad_s": 0.026731230318546295,
+  "joint7_last60_max_difference_speed_rad_s": 1.430511474609375e-05,
+  "reported_velocity_absence_of_rotation_not_proven": true
+}

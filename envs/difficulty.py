@@ -188,16 +188,38 @@ def sample_initial_offset(
 def apply(backend, config: DifficultyConfig, rng: np.random.Generator) -> None:
     """Mutate the backend's garment state according to config.
 
-    Day 3:
-        - FLAT: only records offset/yaw; Day 4 wires the actual reset.
-        - PERTURBED / CRUMPLED: not implemented yet.
+    Contract with the backend (see backends/garmentlab_backend.py):
+        _apply_flat_perturbation(rng, config)  : translate + yaw all particles
+        _lift_drop_once(rng, config)           : one grasp-lift-drop cycle
+        _settle(steps)                          : advance physics
 
-    Day 4 will implement the lift-drop loop here.
+    All three difficulty levels start from the same flat perturbation so
+    that the only difference is how many lift-drop cycles are added.
+
+    Backends that do not implement these helpers (e.g. MockBackend used
+    in unit tests) are treated as FLAT regardless of config.
     """
-    if config.name == DifficultyLevel.FLAT:
-        # Backend will call sample_initial_offset() itself.
+    has_flat = hasattr(backend, "_apply_flat_perturbation")
+    has_lift = hasattr(backend, "_lift_drop_once")
+
+    if not has_flat:
+        # Pure test backend; nothing to do.
         return
-    raise NotImplementedError(
-        f"difficulty={config.name.value!r} perturbation is Day 4 work. "
-        "Only 'flat' is wired on Day 3."
-    )
+
+    # Step 1: flat perturbation (translation + yaw).
+    backend._apply_flat_perturbation(rng, config)
+
+    # Step 2: lift-drop cycles for perturbed / crumpled.
+    n_lift = int(config.num_lift_drops)
+    if n_lift <= 0:
+        return
+
+    if not has_lift:
+        raise NotImplementedError(
+            f"backend {type(backend).__name__} does not implement "
+            f"_lift_drop_once, required for difficulty "
+            f"{config.name.value!r}"
+        )
+
+    for i in range(n_lift):
+        backend._lift_drop_once(rng, config)

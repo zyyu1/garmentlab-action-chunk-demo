@@ -1,0 +1,63 @@
+{
+  "old_episode_gate": {
+    "values": {
+      "material_error_m": 0.0004557641791866796,
+      "nearest_xy_m": 0.04855987663085436,
+      "layer_fraction": 0.14616802739004478,
+      "speed_p95_m_s": 0.3450525358319282,
+      "patch_drift_m": 0.008702164515852928,
+      "edge_max": 1.993842
+    },
+    "checks": {
+      "material_error_m": true,
+      "nearest_xy_m": false,
+      "speed_p95_m_s": false,
+      "patch_drift_m": false,
+      "layer_fraction": false,
+      "edge_growth": true
+    },
+    "ready": false,
+    "support": {
+      "source_z_p10_p50_p90_m": [
+        0.03607509583234787,
+        0.06762023270130157,
+        0.09907785207033157
+      ],
+      "source_to_fixed_nearest_xy_p10_p50_p90_m": [
+        0.0009249893144145928,
+        0.002215644222574366,
+        0.0428776637935192
+      ],
+      "source_to_fixed_vertical_gap_p10_p50_p90_m": [
+        0.019525938481092454,
+        0.04360547289252281,
+        0.08333887923508883
+      ],
+      "source_near_fixed_xy_10mm_fraction": 0.7250460890176456,
+      "source_near_layer_xy10mm_z0to30mm_fraction": 0.14616802739004478,
+      "pick_nearest_fixed_xy_m": 0.04855987663085436,
+      "pick_nearest_fixed_z_m": 0.009861109778285027,
+      "pick_vertical_gap_to_nearest_fixed_m": 0.020249010995030403,
+      "evidence_scope": "Geometric layer proximity only; no direct normal force/contact measurement"
+    }
+  },
+  "initial_spent_m": 0.017941323957433267,
+  "first_correction_ee": [
+    -0.00935107546352973,
+    -0.21792584829887307,
+    0.020459248748853957
+  ],
+  "first_current_patch_goal": [
+    -0.009072941524209455,
+    -0.253219835460186,
+    0.029963239601347596
+  ],
+  "first_step_m": 0.02,
+  "checks": [
+    "old unstable placement rejected",
+    "20mm step and 60mm cumulative budget",
+    "exhausted budget rejected",
+    "excessive patch drift rejected"
+  ],
+  "scope": "Offline checks only; no new simulation"
+}

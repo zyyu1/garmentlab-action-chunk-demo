@@ -1,0 +1,563 @@
+{
+  "scope": "IK/FK only; no solution applied, no collision validation, no formal Day4 success",
+  "completed": true,
+  "targets": [
+    {
+      "waypoint": 25,
+      "target_position": [
+        -0.008440634427052104,
+        -0.22126418597006342,
+        0.08835373485632009
+      ],
+      "target_quaternion_wxyz": [
+        -0.5833849722447123,
+        0.3836633940197969,
+        0.39579664574246826,
+        0.5964976022309373
+      ],
+      "any_verified_solution": true,
+      "attempts": [
+        {
+          "seed": "last_pass",
+          "solver_success": true,
+          "solution": [
+            -0.005646352201644109,
+            0.9360121140198633,
+            -0.008104137543879054,
+            -2.0449530232373196,
+            -0.020407691353970234,
+            1.0072631133162708,
+            0.7474145028156994
+          ],
+          "position_error_m": 8.555978574883634e-07,
+          "orientation_error_rad": 0.0010169612429701573,
+          "min_limit_margin_rad": 0.8267878741995497,
+          "max_joint_change_from_seed_rad": 0.1983455071167871,
+          "verified": true
+        },
+        {
+          "seed": "failure",
+          "solver_success": true,
+          "solution": [
+            0.02240931060036409,
+            0.9367063174454718,
+            -0.03153871899594055,
+            -2.044867773696818,
+            -0.013716897568692248,
+            1.007292929714216,
+            0.7287483516855596
+          ],
+          "position_error_m": 1.0414974745839153e-06,
+          "orientation_error_rad": 0.0010930121605992732,
+          "min_limit_margin_rad": 0.8260936707739411,
+          "max_joint_change_from_seed_rad": 0.14851502174388184,
+          "verified": true
+        },
+        {
+          "seed": "initial",
+          "solver_success": true,
+          "solution": [
+            0.024900888645606804,
+            0.936426015946842,
+            -0.033912179343731634,
+            -2.0450991352357875,
+            -0.012690011549618649,
+            1.0077368320921518,
+            0.726305299590088
+          ],
+          "position_error_m": 9.916486475949881e-08,
+          "orientation_error_rad": 0.0005618037464496694,
+          "min_limit_margin_rad": 0.8263739722725709,
+          "max_joint_change_from_seed_rad": 2.0292631087800403,
+          "verified": true
+        }
+      ]
+    },
+    {
+      "waypoint": 26,
+      "target_position": [
+        -0.008440634427052104,
+        -0.2101292043531412,
+        0.07749138505415208
+      ],
+      "target_quaternion_wxyz": [
+        -0.6202928733151205,
+        0.3205813111618107,
+        0.3312774526001648,
+        0.6346019410992941
+      ],
+      "any_verified_solution": true,
+      "attempts": [
+        {
+          "seed": "previous_solution",
+          "solver_success": true,
+          "solution": [
+            0.02004036330054534,
+            1.087844510327525,
+            -0.02748650824909201,
+            -1.9768542389816395,
+            -0.017372920036178217,
+            0.8808214294446378,
+            0.7251371109637055
+          ],
+          "position_error_m": 2.3599556462207656e-07,
+          "orientation_error_rad": 0.0013811106406052603,
+          "min_limit_margin_rad": 0.674955477891888,
+          "max_joint_change_from_seed_rad": 0.1511381928820531,
+          "verified": true
+        },
+        {
+          "seed": "last_pass",
+          "solver_success": true,
+          "solution": [
+            -0.005313478732911334,
+            1.0870720958432738,
+            -0.00839376668410884,
+            -1.9769697462956408,
+            -0.021357150171967338,
+            0.8809133658708165,
+            0.7456119844269955
+          ],
+          "position_error_m": 1.1708115417616367e-06,
+          "orientation_error_rad": 0.0007461247916271054,
+          "min_limit_margin_rad": 0.6757278923761392,
+          "max_joint_change_from_seed_rad": 0.34940548894019763,
+          "verified": true
+        },
+        {
+          "seed": "failure",
+          "solver_success": true,
+          "solution": [
+            0.02591978893266178,
+            1.0874240091726204,
+            -0.03232451507175229,
+            -1.9772113872770183,
+            -0.015822171906891284,
+            0.8816129574884803,
+            0.7204659145116189
+          ],
+          "position_error_m": 3.344497086155811e-07,
+          "orientation_error_rad": 0.0007527276364914026,
+          "min_limit_margin_rad": 0.6753759790467926,
+          "max_joint_change_from_seed_rad": 0.28562483104914627,
+          "verified": true
+        },
+        {
+          "seed": "initial",
+          "solver_success": true,
+          "solution": [
+            0.018081313432497473,
+            1.0871072531305608,
+            -0.02633603294954181,
+            -1.9772518848850666,
+            -0.01718221313217348,
+            0.8816588011427453,
+            0.7264322031124752
+          ],
+          "position_error_m": 4.902222464278742e-07,
+          "orientation_error_rad": 0.0010539316869672283,
+          "min_limit_margin_rad": 0.6756927350888522,
+          "max_joint_change_from_seed_rad": 2.155341139729447,
+          "verified": true
+        }
+      ]
+    },
+    {
+      "waypoint": 27,
+      "target_position": [
+        -0.008440634427052104,
+        -0.2013395478899105,
+        0.06609428023878572
+      ],
+      "target_quaternion_wxyz": [
+        -0.6504047158608592,
+        0.2539868723727834,
+        0.26312871436291,
+        0.6657534483019735
+      ],
+      "any_verified_solution": true,
+      "attempts": [
+        {
+          "seed": "previous_solution",
+          "solver_success": true,
+          "solution": [
+            0.017100169425296494,
+            1.2370724883751052,
+            -0.02346176119095922,
+            -1.9084491308599763,
+            -0.02146875946139331,
+            0.7529659454449279,
+            0.7220546463485676
+          ],
+          "position_error_m": 4.726218572047364e-08,
+          "orientation_error_rad": 0.0010772359988346525,
+          "min_limit_margin_rad": 0.5257274998443078,
+          "max_joint_change_from_seed_rad": 0.14922797804758026,
+          "verified": true
+        },
+        {
+          "seed": "last_pass",
+          "solver_success": true,
+          "solution": [
+            -0.004671884915401867,
+            1.2367670088283718,
+            -0.00850316039465795,
+            -1.9083219037630421,
+            -0.023307941636081964,
+            0.7525485402999013,
+            0.7430009295875528
+          ],
+          "position_error_m": 3.250739100370343e-07,
+          "orientation_error_rad": 0.000985391525053802,
+          "min_limit_margin_rad": 0.5260329793910412,
+          "max_joint_change_from_seed_rad": 0.4991004019252956,
+          "verified": true
+        },
+        {
+          "seed": "failure",
+          "solver_success": true,
+          "solution": [
+            0.031165495071576482,
+            1.2369174803040084,
+            -0.033246478767184506,
+            -1.9087858283595038,
+            -0.020073406449665394,
+            0.7538830309554595,
+            0.7092782445866375
+          ],
+          "position_error_m": 8.470301657143161e-07,
+          "orientation_error_rad": 0.0011836225064499346,
+          "min_limit_margin_rad": 0.5258825079154046,
+          "max_joint_change_from_seed_rad": 0.43511830218053427,
+          "verified": true
+        },
+        {
+          "seed": "initial",
+          "solver_success": true,
+          "solution": [
+            0.060449018040509166,
+            1.238588995778941,
+            -0.053321211258731106,
+            -1.9086782925581263,
+            -0.01763024857765247,
+            0.7537120348622933,
+            0.6807230609440247
+          ],
+          "position_error_m": 1.030209129607379e-06,
+          "orientation_error_rad": 0.0011188842795986096,
+          "min_limit_margin_rad": 0.5242109924404719,
+          "max_joint_change_from_seed_rad": 2.283287906009899,
+          "verified": true
+        }
+      ]
+    },
+    {
+      "waypoint": 28,
+      "target_position": [
+        -0.008440634427052104,
+        -0.19499151789593638,
+        0.054290896840659186
+      ],
+      "target_quaternion_wxyz": [
+        -0.6733905882336897,
+        0.18460970025986972,
+        0.19209708286787175,
+        0.6896108214071908
+      ],
+      "any_verified_solution": true,
+      "attempts": [
+        {
+          "seed": "previous_solution",
+          "solver_success": true,
+          "solution": [
+            0.013557356486044043,
+            1.381847655260676,
+            -0.018930913087441346,
+            -1.8414940975090992,
+            -0.027110142823635382,
+            0.6218779287785787,
+            0.7197207988021526
+          ],
+          "position_error_m": 1.1239838163301515e-06,
+          "orientation_error_rad": 0.0011873986279719048,
+          "min_limit_margin_rad": 0.380952332958737,
+          "max_joint_change_from_seed_rad": 0.1447751668855708,
+          "verified": true
+        },
+        {
+          "seed": "last_pass",
+          "solver_success": true,
+          "solution": [
+            -0.00414945521139546,
+            1.3819333168606662,
+            -0.008662101429131092,
+            -1.841226430235704,
+            -0.02574544644990701,
+            0.6210548417910399,
+            0.7396311351207675
+          ],
+          "position_error_m": 8.040245047466346e-07,
+          "orientation_error_rad": 0.0007850700199502964,
+          "min_limit_margin_rad": 0.38086667135874674,
+          "max_joint_change_from_seed_rad": 0.6442667099575901,
+          "verified": true
+        },
+        {
+          "seed": "failure",
+          "solver_success": true,
+          "solution": [
+            0.03803466176354311,
+            1.382907365983175,
+            -0.03306119972273807,
+            -1.841535575736796,
+            -0.029100772948640576,
+            0.6218516552201472,
+            0.6921644286808053
+          ],
+          "position_error_m": 1.0906962377826324e-06,
+          "orientation_error_rad": 0.0015337689456823651,
+          "min_limit_margin_rad": 0.379892622236238,
+          "max_joint_change_from_seed_rad": 0.5811081878597009,
+          "verified": true
+        },
+        {
+          "seed": "initial",
+          "solver_success": true,
+          "solution": [
+            0.026052425925467332,
+            1.3825237110975168,
+            -0.026024830501824373,
+            -1.841449698487274,
+            -0.028325469194702864,
+            0.6216197320792723,
+            0.7057188367814569
+          ],
+          "position_error_m": 2.22489236369159e-07,
+          "orientation_error_rad": 0.001430382068467748,
+          "min_limit_margin_rad": 0.38027627712189616,
+          "max_joint_change_from_seed_rad": 2.41538020879292,
+          "verified": true
+        }
+      ]
+    },
+    {
+      "waypoint": 29,
+      "target_position": [
+        -0.008440634427052104,
+        -0.1911546647162435,
+        0.04221416256338245
+      ],
+      "target_quaternion_wxyz": [
+        -0.688998652405792,
+        0.11320990563884573,
+        0.11896079553403426,
+        0.7059126740427288
+      ],
+      "any_verified_solution": true,
+      "attempts": [
+        {
+          "seed": "previous_solution",
+          "solver_success": true,
+          "solution": [
+            0.009582584753902574,
+            1.5190112761288819,
+            -0.014496469079002742,
+            -1.7795789177935781,
+            -0.033898536611633084,
+            0.48694970670005894,
+            0.7180631147031397
+          ],
+          "position_error_m": 8.95583222747943e-07,
+          "orientation_error_rad": 0.001134573005268562,
+          "min_limit_margin_rad": 0.2437887120905311,
+          "max_joint_change_from_seed_rad": 0.13716362086820588,
+          "verified": true
+        },
+        {
+          "seed": "last_pass",
+          "solver_success": true,
+          "solution": [
+            -0.004324194269697146,
+            1.518709426207098,
+            -0.008036772028335432,
+            -1.7794382902391799,
+            -0.029778517093040895,
+            0.48680450439159373,
+            0.7356481907396564
+          ],
+          "position_error_m": 1.0491203497431461e-06,
+          "orientation_error_rad": 0.0008163826753305897,
+          "min_limit_margin_rad": 0.24409056201231505,
+          "max_joint_change_from_seed_rad": 0.7810428193040218,
+          "verified": true
+        },
+        {
+          "seed": "failure",
+          "solver_success": true,
+          "solution": [
+            0.0449473490019986,
+            1.5195305066869647,
+            -0.031117040098863655,
+            -1.7801484319150391,
+            -0.04390524075886347,
+            0.48848572199996376,
+            0.6695390714515858
+          ],
+          "position_error_m": 4.794228199663993e-07,
+          "orientation_error_rad": 0.0015784168888285123,
+          "min_limit_margin_rad": 0.24326948153244832,
+          "max_joint_change_from_seed_rad": 0.7177313285634905,
+          "verified": true
+        },
+        {
+          "seed": "initial",
+          "solver_success": true,
+          "solution": [
+            0.012218973272701671,
+            1.5188780038167191,
+            -0.015733578481567763,
+            -1.7796473524156715,
+            -0.03464119933794912,
+            0.4872752489405416,
+            0.7133583823127588
+          ],
+          "position_error_m": 3.1635275354617365e-07,
+          "orientation_error_rad": 0.001140337862056784,
+          "min_limit_margin_rad": 0.24392198440269386,
+          "max_joint_change_from_seed_rad": 2.549724691931651,
+          "verified": true
+        }
+      ]
+    },
+    {
+      "waypoint": 30,
+      "target_position": [
+        -0.008440634427052104,
+        -0.18987102571718173,
+        0.030000000000000013
+      ],
+      "target_quaternion_wxyz": [
+        -0.6970579031598989,
+        0.04056975960094673,
+        0.044521148830179,
+        0.714480399699731
+      ],
+      "any_verified_solution": true,
+      "attempts": [
+        {
+          "seed": "previous_solution",
+          "solver_success": true,
+          "solution": [
+            0.0045586033102384925,
+            1.6434091323441777,
+            -0.010506509371946204,
+            -1.7279395441406298,
+            -0.04081438229541084,
+            0.35085703778250704,
+            0.7162662547382848
+          ],
+          "position_error_m": 4.731680292513315e-07,
+          "orientation_error_rad": 0.0007697137832542361,
+          "min_limit_margin_rad": 0.11939085587523524,
+          "max_joint_change_from_seed_rad": 0.1360926689175519,
+          "verified": true
+        },
+        {
+          "seed": "last_pass",
+          "solver_success": true,
+          "solution": [
+            -0.005530426978144665,
+            1.6436665621848672,
+            -0.006831230434281249,
+            -1.727795788095282,
+            -0.03528729576048662,
+            0.34999314261685627,
+            0.731718281307341
+          ],
+          "position_error_m": 1.9236266640041862e-07,
+          "orientation_error_rad": 0.0008564746278875385,
+          "min_limit_margin_rad": 0.1191334260345458,
+          "max_joint_change_from_seed_rad": 0.905999955281791,
+          "verified": true
+        },
+        {
+          "seed": "failure",
+          "solver_success": true,
+          "solution": [
+            0.046951887766053066,
+            1.6439201795680118,
+            -0.0239850013927438,
+            -1.729099210651608,
+            -0.06767058571322175,
+            0.3529992921249437,
+            0.6454307921148923
+          ],
+          "position_error_m": 4.2361547474485375e-07,
+          "orientation_error_rad": 0.001445076252000097,
+          "min_limit_margin_rad": 0.11887980865140113,
+          "max_joint_change_from_seed_rad": 0.8421210014445377,
+          "verified": true
+        },
+        {
+          "seed": "initial",
+          "solver_success": true,
+          "solution": [
+            -0.0039044107289671975,
+            1.6437369548830776,
+            -0.007330974837117265,
+            -1.7278228541221172,
+            -0.036363623997137585,
+            0.3499480813213952,
+            0.7289827839915718
+          ],
+          "position_error_m": 1.5789931664744753e-06,
+          "orientation_error_rad": 0.001012482441921016,
+          "min_limit_margin_rad": 0.11906303333633539,
+          "max_joint_change_from_seed_rad": 2.687051859550797,
+          "verified": true
+        }
+      ]
+    }
+  ],
+  "frame": "right_gripper",
+  "joint_names": [
+    "panda_joint1",
+    "panda_joint2",
+    "panda_joint3",
+    "panda_joint4",
+    "panda_joint5",
+    "panda_joint6",
+    "panda_joint7"
+  ],
+  "ik_signature": "(frame_name: str, target_position: <built-in function array>, target_orientation: <built-in function array> = None, warm_start: <built-in function array> = None, position_tolerance: float = None, orientation_tolerance: float = None) -> Tuple[<built-in function array>, bool]",
+  "joint_limits_radians": [
+    [
+      -2.897300087848498,
+      2.897300087848498
+    ],
+    [
+      -1.762799988219413,
+      1.762799988219413
+    ],
+    [
+      -2.897300087848498,
+      2.897300087848498
+    ],
+    [
+      -3.0717999898504136,
+      -0.06979999575475569
+    ],
+    [
+      -2.897300087848498,
+      2.897300087848498
+    ],
+    [
+      -0.01749999978815516,
+      3.752499969733032
+    ],
+    [
+      -2.897300087848498,
+      2.897300087848498
+    ]
+  ]
+}

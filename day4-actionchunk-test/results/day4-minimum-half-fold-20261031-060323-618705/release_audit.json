@@ -1,0 +1,224 @@
+{
+  "stages": {
+    "00_initial": {
+      "anchor_ids": [
+        6174
+      ],
+      "pick": [
+        -0.00893973745405674,
+        -0.658693790435791,
+        0.029612191021442413
+      ],
+      "support": {
+        "source_z_p10_p50_p90_m": [
+          0.009899865090847015,
+          0.02333563193678856,
+          0.029699341952800752
+        ],
+        "source_to_fixed_nearest_xy_p10_p50_p90_m": [
+          0.025824353871545438,
+          0.1247194293788347,
+          0.2235438274523228
+        ],
+        "source_to_fixed_vertical_gap_p10_p50_p90_m": [
+          -0.01970138531178236,
+          8.195638656616211e-07,
+          0.019733341597020625
+        ],
+        "source_near_fixed_xy_10mm_fraction": 0.03344745851988412,
+        "source_near_layer_xy10mm_z0to30mm_fraction": 0.01896233868843824,
+        "pick_nearest_fixed_xy_m": 0.2349536952326834,
+        "pick_nearest_fixed_z_m": 0.029601462185382843,
+        "pick_vertical_gap_to_nearest_fixed_m": 1.0728836059570312e-05,
+        "evidence_scope": "Geometric layer proximity only; no direct normal force/contact measurement"
+      }
+    },
+    "02_grasp": {
+      "anchor_ids": [
+        6174
+      ],
+      "pick": [
+        -0.007884029299020767,
+        -0.6587120890617371,
+        0.031054191291332245
+      ],
+      "support": {
+        "source_z_p10_p50_p90_m": [
+          0.009899870119988918,
+          0.023845070973038673,
+          0.02971659265458584
+        ],
+        "source_to_fixed_nearest_xy_p10_p50_p90_m": [
+          0.02584646566450645,
+          0.1248135177503093,
+          0.22359236559505466
+        ],
+        "source_to_fixed_vertical_gap_p10_p50_p90_m": [
+          -0.019714978337287904,
+          6.7148357629776e-07,
+          0.019722647592425348
+        ],
+        "source_near_fixed_xy_10mm_fraction": 0.03344745851988412,
+        "source_near_layer_xy10mm_z0to30mm_fraction": 0.01896233868843824,
+        "pick_nearest_fixed_xy_m": 0.23505342555213024,
+        "pick_nearest_fixed_z_m": 0.02961502969264984,
+        "pick_vertical_gap_to_nearest_fixed_m": 0.0014391615986824036,
+        "evidence_scope": "Geometric layer proximity only; no direct normal force/contact measurement"
+      }
+    },
+    "06_supported_place": {
+      "anchor_ids": [
+        6174
+      ],
+      "pick": [
+        -0.007560966536402702,
+        -0.19863846898078918,
+        0.029848963022232056
+      ],
+      "support": {
+        "source_z_p10_p50_p90_m": [
+          0.04612876027822495,
+          0.0686657503247261,
+          0.10974594056606293
+        ],
+        "source_to_fixed_nearest_xy_p10_p50_p90_m": [
+          0.0007915044443324913,
+          0.0019008743709540373,
+          0.005312778596571314
+        ],
+        "source_to_fixed_vertical_gap_p10_p50_p90_m": [
+          0.01973695196211338,
+          0.046230386942625046,
+          0.08864601515233517
+        ],
+        "source_near_fixed_xy_10mm_fraction": 0.9317882538846458,
+        "source_near_layer_xy10mm_z0to30mm_fraction": 0.18277587569133527,
+        "pick_nearest_fixed_xy_m": 0.006629830964572765,
+        "pick_nearest_fixed_z_m": 0.009899997152388096,
+        "pick_vertical_gap_to_nearest_fixed_m": 0.01994896586984396,
+        "evidence_scope": "Geometric layer proximity only; no direct normal force/contact measurement"
+      }
+    },
+    "07_released": {
+      "anchor_ids": [
+        6174
+      ],
+      "pick": [
+        0.03295815363526344,
+        -0.4085768163204193,
+        0.09710711985826492
+      ],
+      "support": {
+        "source_z_p10_p50_p90_m": [
+          0.009901878610253333,
+          0.049299828708171844,
+          0.0993705615401268
+        ],
+        "source_to_fixed_nearest_xy_p10_p50_p90_m": [
+          0.003847136597545787,
+          0.056123639134915825,
+          0.11859532794958472
+        ],
+        "source_to_fixed_vertical_gap_p10_p50_p90_m": [
+          -0.002986302226781842,
+          0.028578171506524086,
+          0.0805847067385912
+        ],
+        "source_near_fixed_xy_10mm_fraction": 0.14774822228074797,
+        "source_near_layer_xy10mm_z0to30mm_fraction": 0.033184092704766924,
+        "pick_nearest_fixed_xy_m": 0.0005770250726438526,
+        "pick_nearest_fixed_z_m": 0.009899983182549477,
+        "pick_vertical_gap_to_nearest_fixed_m": 0.08720713667571545,
+        "evidence_scope": "Geometric layer proximity only; no direct normal force/contact measurement"
+      }
+    },
+    "08_release_stationary": {
+      "anchor_ids": [
+        6174
+      ],
+      "pick": [
+        0.015317477285861969,
+        -0.6998748779296875,
+        0.02965342439711094
+      ],
+      "support": {
+        "source_z_p10_p50_p90_m": [
+          0.009899858385324478,
+          0.023475756868720055,
+          0.029713868349790572
+        ],
+        "source_to_fixed_nearest_xy_p10_p50_p90_m": [
+          0.02594584062436932,
+          0.12479254378577442,
+          0.22382437015590842
+        ],
+        "source_to_fixed_vertical_gap_p10_p50_p90_m": [
+          -0.01970005836337805,
+          1.041218638420105e-06,
+          0.01976568978279829
+        ],
+        "source_near_fixed_xy_10mm_fraction": 0.033184092704766924,
+        "source_near_layer_xy10mm_z0to30mm_fraction": 0.01922570450355544,
+        "pick_nearest_fixed_xy_m": 0.23517720381928908,
+        "pick_nearest_fixed_z_m": 0.029611321166157722,
+        "pick_vertical_gap_to_nearest_fixed_m": 4.210323095321655e-05,
+        "evidence_scope": "Geometric layer proximity only; no direct normal force/contact measurement"
+      }
+    },
+    "11_retention_4s": {
+      "anchor_ids": [
+        6174
+      ],
+      "pick": [
+        0.015518966130912304,
+        -0.699928343296051,
+        0.029641298577189445
+      ],
+      "support": {
+        "source_z_p10_p50_p90_m": [
+          0.009899876080453396,
+          0.023511849343776703,
+          0.029698547348380087
+        ],
+        "source_to_fixed_nearest_xy_p10_p50_p90_m": [
+          0.025890678905432517,
+          0.1247657767039933,
+          0.2235937898552735
+        ],
+        "source_to_fixed_vertical_gap_p10_p50_p90_m": [
+          -0.019695901684463023,
+          5.746260285377502e-07,
+          0.019719634763896467
+        ],
+        "source_near_fixed_xy_10mm_fraction": 0.03344745851988412,
+        "source_near_layer_xy10mm_z0to30mm_fraction": 0.01922570450355544,
+        "pick_nearest_fixed_xy_m": 0.2350753810550189,
+        "pick_nearest_fixed_z_m": 0.029595905914902687,
+        "pick_vertical_gap_to_nearest_fixed_m": 4.539266228675842e-05,
+        "evidence_scope": "Geometric layer proximity only; no direct normal force/contact measurement"
+      }
+    }
+  },
+  "source_speed_p95_m_s": 0.37515623420476907,
+  "material_goal_error_m": 0.002384002176692271,
+  "max_anchor_gap_m": 0.009196190863974116,
+  "lifecycle_checks": {
+    "only_hem_used": true,
+    "all_disabled": true,
+    "not_holding": true,
+    "paths_preserved": true,
+    "block_stopped": true
+  },
+  "errors": [],
+  "retention_metrics": {
+    "symmetric_xy_alignment_mean_m": 0.1442853163477967,
+    "particle_occupancy_iou": 0.03637381085618355,
+    "occupancy_cell_m": 0.01,
+    "occupancy_dilation_cells": 1,
+    "moving_half_crossed_fraction": 0.0,
+    "moving_material_reflected_target_mean_error_m": 0.28923681378364563,
+    "cloth_z_p95_m": 0.03425509259104728,
+    "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+  },
+  "recoil_mm": 501.7582693366556
+}

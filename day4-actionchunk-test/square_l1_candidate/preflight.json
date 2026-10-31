@@ -1,0 +1,33 @@
+{
+  "asset": "procedural_square_40cm",
+  "pick_index_offline": 10,
+  "particle_count": 441,
+  "particle_mass_kg": 0.0001,
+  "expected_total_mass_kg": 0.0441,
+  "targets_material_xyz": [
+    [
+      0.0,
+      -0.5914213562373095,
+      0.15642135623730952
+    ],
+    [
+      0.0,
+      -0.45,
+      0.22
+    ],
+    [
+      0.0,
+      -0.3085786437626905,
+      0.16642135623730953
+    ],
+    [
+      0.0,
+      -0.25,
+      0.030000000000000023
+    ]
+  ],
+  "expected_public_action_count": 9,
+  "linear_interpolation_max_step_m": 0.025,
+  "syntax_pass": true,
+  "gpu_tested": false
+}

@@ -1,0 +1,160 @@
+{
+  "pick": 6174,
+  "other": 2355,
+  "graph_hops": 34.0,
+  "mesh_edges": 29703,
+  "boundary_edges": 138,
+  "nonmanifold_edges": 0,
+  "pick_on_boundary": false,
+  "nearest_boundary_hops": 2.0,
+  "rows": {
+    "00_initial": {
+      "upper_pick": [
+        -0.00893973745405674,
+        -0.658693790435791,
+        0.029612191021442413
+      ],
+      "lower_nearest_initial": [
+        -0.007246520835906267,
+        -0.6579172611236572,
+        0.009900008328258991
+      ],
+      "paired_distance_mm": 19.800003618001938,
+      "paired_dy_mm": -0.7765293121337891,
+      "edge_length_ratio_p50_p95_p99_max_vs_settled": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "edges_over_1_2_fraction": 0.0
+    },
+    "02_grasp": {
+      "upper_pick": [
+        -0.007884029299020767,
+        -0.6587120890617371,
+        0.031054191291332245
+      ],
+      "lower_nearest_initial": [
+        -0.007231016643345356,
+        -0.6578949689865112,
+        0.009900005534291267
+      ],
+      "paired_distance_mm": 21.180029958486557,
+      "paired_dy_mm": -0.8171200752258301,
+      "edge_length_ratio_p50_p95_p99_max_vs_settled": [
+        1.0000038146972656,
+        1.0073024034500122,
+        1.0193953919410705,
+        1.2089108228683472
+      ],
+      "edges_over_1_2_fraction": 6.733326600006734e-05
+    },
+    "04_cross_line": {
+      "upper_pick": [
+        -0.0068509397096931934,
+        -0.4387699067592621,
+        0.15054766833782196
+      ],
+      "lower_nearest_initial": [
+        -0.004047240596264601,
+        -0.6512807011604309,
+        0.030484143644571304
+      ],
+      "paired_distance_mm": 244.0982311964035,
+      "paired_dy_mm": 212.51079440116882,
+      "edge_length_ratio_p50_p95_p99_max_vs_settled": [
+        1.0007604360580444,
+        1.0431578636169434,
+        1.113971917629242,
+        2.9268195629119873
+      ],
+      "edges_over_1_2_fraction": 0.0029963303370029964
+    },
+    "06_supported_place": {
+      "upper_pick": [
+        -0.007560966536402702,
+        -0.19863846898078918,
+        0.029848963022232056
+      ],
+      "lower_nearest_initial": [
+        0.015494583174586296,
+        -0.32221725583076477,
+        0.10702026635408401
+      ],
+      "paired_distance_mm": 147.50826358795166,
+      "paired_dy_mm": 123.57878684997559,
+      "edge_length_ratio_p50_p95_p99_max_vs_settled": [
+        1.0024590492248535,
+        1.073785412311554,
+        1.1635391163825988,
+        2.5644748210906982
+      ],
+      "edges_over_1_2_fraction": 0.005958994041005959
+    },
+    "07_released": {
+      "upper_pick": [
+        0.03295815363526344,
+        -0.4085768163204193,
+        0.09710711985826492
+      ],
+      "lower_nearest_initial": [
+        0.04465367645025253,
+        -0.5621581673622131,
+        0.1101357638835907
+      ],
+      "paired_distance_mm": 154.57606315612793,
+      "paired_dy_mm": 153.58135104179382,
+      "edge_length_ratio_p50_p95_p99_max_vs_settled": [
+        1.0019135475158691,
+        1.0509453058242797,
+        1.1222359776496886,
+        1.7395093441009521
+      ],
+      "edges_over_1_2_fraction": 0.002221997778002222
+    },
+    "08_release_stationary": {
+      "upper_pick": [
+        0.015317477285861969,
+        -0.6998748779296875,
+        0.02965342439711094
+      ],
+      "lower_nearest_initial": [
+        0.016539985314011574,
+        -0.6992833018302917,
+        0.009900026023387909
+      ],
+      "paired_distance_mm": 19.800031557679176,
+      "paired_dy_mm": -0.591576099395752,
+      "edge_length_ratio_p50_p95_p99_max_vs_settled": [
+        1.000163197517395,
+        1.008653950691223,
+        1.0226172924041748,
+        1.246772050857544
+      ],
+      "edges_over_1_2_fraction": 6.733326600006734e-05
+    },
+    "11_retention_4s": {
+      "upper_pick": [
+        0.015518966130912304,
+        -0.699928343296051,
+        0.029641298577189445
+      ],
+      "lower_nearest_initial": [
+        0.016674773767590523,
+        -0.6989389061927795,
+        0.009899947792291641
+      ],
+      "paired_distance_mm": 19.799893721938133,
+      "paired_dy_mm": -0.9894371032714844,
+      "edge_length_ratio_p50_p95_p99_max_vs_settled": [
+        0.9999601244926453,
+        1.0086066365242004,
+        1.0211255192756652,
+        1.2254635095596313
+      ],
+      "edges_over_1_2_fraction": 3.366663300003367e-05
+    }
+  },
+  "limitations": "Upper/lower are initial height groups. Edge ratios relative to settled shape, not solver rest spring strain. Paired vertices are nearest XY, not certified sewn correspondence."
+}

@@ -1,0 +1,12 @@
+{
+  "vertices": 441,
+  "triangles": 800,
+  "boundary_edges": 80,
+  "single_plane": true,
+  "consistent_positive_z_winding": true,
+  "size_m": 0.4,
+  "spacing_m": 0.02,
+  "usd_sha256": "471f3fdbe19d349256f48e56f40d8ca65a6bca7e754ec37b4af606ae21aba9dd",
+  "usd_runtime_loaded": false,
+  "simulation_run": false
+}

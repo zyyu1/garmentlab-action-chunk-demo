@@ -1,0 +1,7 @@
+{
+  "scene_code_exact": true,
+  "simulation_loop_exact": true,
+  "syntax_pass": true,
+  "assessment_positive_below_threshold_mass_mismatch_fixtures_pass": true,
+  "gpu_tested": false
+}

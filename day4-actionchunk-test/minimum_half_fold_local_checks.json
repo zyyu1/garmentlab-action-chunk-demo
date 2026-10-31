@@ -1,0 +1,44 @@
+{
+  "syntax_python310": true,
+  "real_snapshot_support_checks": [
+    {
+      "reference": "day4-l1-hem-fold-20261026-052424-872450",
+      "bounded_selection_rejected": "RuntimeError('No nearby fixed-half support patch; do not invent a release target')"
+    },
+    {
+      "reference": "day4-l1-hem-fold-20261026-055645-888101",
+      "support_goal": {
+        "material_target_xyz": [
+          -0.00893973745405674,
+          -0.22217343747615814,
+          0.02990009354427457
+        ],
+        "nominal_material_target_xyz": [
+          -0.00893973745405674,
+          -0.18969173729419708,
+          0.029612191021442413
+        ],
+        "selected_support_z_p75_m": 0.009900093544274569,
+        "support_neighborhood_count": 15,
+        "support_nearest_xy_m": 0.0030017380372817375,
+        "xy_target_correction_m": 0.03248170018196106,
+        "geometric_center_clearance_m": 0.02,
+        "max_xy_correction_m": 0.06,
+        "pick_before_xyz": [
+          -0.00821986235678196,
+          -0.1981692612171173,
+          0.04640365019440651
+        ],
+        "scope": "Terminal supported placement hypothesis; not confirmed contact force or material calibration"
+      },
+      "ee_goal": [
+        -0.009173672257754189,
+        -0.21520504344923555,
+        0.020408134764608902
+      ]
+    }
+  ],
+  "unsupported_target_rejected": true,
+  "gpu_validation": false,
+  "formal_acceptance": false
+}

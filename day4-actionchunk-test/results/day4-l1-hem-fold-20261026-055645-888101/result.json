@@ -1,0 +1,2017 @@
+{
+  "expert_version": "hem-v11-low-arc-fold",
+  "pipeline_completed": true,
+  "formal_day4_success": false,
+  "scope": "Fixed particle friction scale zero from construction; development candidate, not formal acceptance",
+  "actions": [
+    {
+      "label": "approach",
+      "matrix": [
+        [
+          -0.00893973745405674,
+          -0.658693790435791,
+          0.1796121895313263,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 252,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "descend_0.12",
+      "matrix": [
+        [
+          -0.00844198651611805,
+          -0.6585918664932251,
+          0.11999999731779099,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 291,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "descend_0.08",
+      "matrix": [
+        [
+          -0.00844198651611805,
+          -0.6585918664932251,
+          0.07999999821186066,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 322,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "descend_0.05",
+      "matrix": [
+        [
+          -0.00844198651611805,
+          -0.6585918664932251,
+          0.05000000074505806,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 349,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "descend_0.03",
+      "matrix": [
+        [
+          -0.00844198651611805,
+          -0.6585918664932251,
+          0.029999999329447746,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 370,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "descend_0.02",
+      "matrix": [
+        [
+          -0.00844198651611805,
+          -0.6585918664932251,
+          0.019999999552965164,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 383,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "grasp",
+      "matrix": [
+        [
+          -0.00844198651611805,
+          -0.6585918664932251,
+          0.019999999552965164,
+          0.0,
+          1.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 478,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_1",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.6572308540344238,
+          0.0329950787127018,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 498,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_2",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.6533939838409424,
+          0.04573031887412071,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 514,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_3",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.6470459699630737,
+          0.05819220840930939,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 530,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_4",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.638256311416626,
+          0.0702478215098381,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 547,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_5",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.6271213293075562,
+          0.08176867663860321,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 565,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_6",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.6137630343437195,
+          0.09263215959072113,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 584,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_7",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.5983277559280396,
+          0.10272285342216492,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 603,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_8",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.5809845924377441,
+          0.11193381249904633,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 623,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_9",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.561923623085022,
+          0.12016772478818893,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 644,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_10",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.5413536429405212,
+          0.1273379921913147,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 666,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_11",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.5195000171661377,
+          0.13336965441703796,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 688,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_12",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.4966021776199341,
+          0.13820022344589233,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 711,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_13",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.47291100025177,
+          0.14178040623664856,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 734,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_14",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.44868606328964233,
+          0.14407457411289215,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 757,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_15",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.42419275641441345,
+          0.1450612097978592,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 780,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_16",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.39969947934150696,
+          0.14473308622837067,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 803,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_17",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.3754745423793793,
+          0.1430974155664444,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 826,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_18",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.3517833650112152,
+          0.1401757448911667,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 849,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_19",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.3288855254650116,
+          0.13600367307662964,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 872,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_20",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.30703189969062805,
+          0.1306305229663849,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 894,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_21",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.28646188974380493,
+          0.12411876022815704,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 916,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_22",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.26740092039108276,
+          0.11654335260391235,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 937,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_23",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.25005778670310974,
+          0.10799089819192886,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 957,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_24",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.23462249338626862,
+          0.098558709025383,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 977,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_25",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.22126418352127075,
+          0.08835373818874359,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 996,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_26",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.21012920141220093,
+          0.0774913877248764,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1014,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_27",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.20133954286575317,
+          0.0660942792892456,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1031,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_28",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.19499151408672333,
+          0.05429089814424515,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1047,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_29",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.19115465879440308,
+          0.04221416264772415,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1063,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "fold_arc_30",
+      "matrix": [
+        [
+          -0.008440634235739708,
+          -0.18987102806568146,
+          0.029999999329447746,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1078,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "release",
+      "matrix": [
+        [
+          -0.008453797549009323,
+          -0.1912008672952652,
+          0.03691169247031212,
+          0.0,
+          0.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1154,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_clear_0",
+      "matrix": [
+        [
+          -0.008447125554084778,
+          -0.19122417271137238,
+          0.05809870734810829,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1231,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_clear_1",
+      "matrix": [
+        [
+          -0.008449041284620762,
+          -0.19121518731117249,
+          0.07904935628175735,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1252,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_clear_2",
+      "matrix": [
+        [
+          -0.00845095794647932,
+          -0.1912061870098114,
+          0.10000000149011612,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1273,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_outward_0",
+      "matrix": [
+        [
+          -0.008474405854940414,
+          -0.21462000906467438,
+          0.10194692015647888,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1293,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_outward_1",
+      "matrix": [
+        [
+          -0.008471800945699215,
+          -0.23790587484836578,
+          0.11061948537826538,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1316,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_outward_2",
+      "matrix": [
+        [
+          -0.00846919510513544,
+          -0.261191725730896,
+          0.11929205060005188,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1340,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_outward_3",
+      "matrix": [
+        [
+          -0.008466590195894241,
+          -0.2844775915145874,
+          0.12796461582183838,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1363,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_outward_4",
+      "matrix": [
+        [
+          -0.008463984355330467,
+          -0.3077634572982788,
+          0.13663718104362488,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1387,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_outward_5",
+      "matrix": [
+        [
+          -0.008461379446089268,
+          -0.3310493230819702,
+          0.14530974626541138,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1411,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_outward_6",
+      "matrix": [
+        [
+          -0.008458773605525494,
+          -0.3543351888656616,
+          0.15398231148719788,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1435,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_outward_7",
+      "matrix": [
+        [
+          -0.008456168696284294,
+          -0.377621054649353,
+          0.16265487670898438,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1459,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_outward_8",
+      "matrix": [
+        [
+          -0.00845356285572052,
+          -0.40090689063072205,
+          0.17132744193077087,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1483,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_outward_9",
+      "matrix": [
+        [
+          -0.00845095794647932,
+          -0.42419275641441345,
+          0.18000000715255737,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1507,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_raise_0",
+      "matrix": [
+        [
+          -0.008458422496914864,
+          -0.42011821269989014,
+          0.20200511813163757,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1526,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_raise_1",
+      "matrix": [
+        [
+          -0.008454689756035805,
+          -0.4221554696559906,
+          0.2260025590658188,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1549,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    },
+    {
+      "label": "retreat_raise_2",
+      "matrix": [
+        [
+          -0.00845095794647932,
+          -0.42419275641441345,
+          0.25,
+          0.0,
+          2.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1572,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_consistent": true
+      }
+    }
+  ],
+  "metric_threshold_status": "provisional; must freeze before formal acceptance/collection",
+  "fold_line_y": -0.42419276386499405,
+  "pick_index": 6174,
+  "stage_geometry": {
+    "01_grasp": {
+      "stationary_half_centroid_displacement_m": [
+        -0.000420532189309597,
+        -0.0021201102063059807,
+        -0.00032087156432680786
+      ],
+      "moving_half_crossed_fraction": 0.0
+    },
+    "02_lift": {
+      "stationary_half_centroid_displacement_m": [
+        -0.00010041367204394192,
+        -0.002805664436891675,
+        -0.0003531034162733704
+      ],
+      "moving_half_crossed_fraction": 0.0
+    },
+    "03_cross_line": {
+      "stationary_half_centroid_displacement_m": [
+        0.000221398237044923,
+        -0.004494311287999153,
+        -0.00032072432804852724
+      ],
+      "moving_half_crossed_fraction": 0.023176191730313406
+    },
+    "04_transfer": {
+      "stationary_half_centroid_displacement_m": [
+        0.0001846870145527646,
+        -0.022114835679531097,
+        0.0003033317916560918
+      ],
+      "moving_half_crossed_fraction": 0.8106399789307348
+    },
+    "05_place": {
+      "stationary_half_centroid_displacement_m": [
+        0.00016144552500918508,
+        -0.03615707904100418,
+        0.0018961918540298939
+      ],
+      "moving_half_crossed_fraction": 0.974716881748749
+    },
+    "05b_released": {
+      "stationary_half_centroid_displacement_m": [
+        0.0010402838233858347,
+        -0.051104262471199036,
+        -0.0003386690223123878
+      ],
+      "moving_half_crossed_fraction": 0.49381090334474587
+    },
+    "05b_stationary": {
+      "stationary_half_centroid_displacement_m": [
+        0.002691446803510189,
+        -0.07035119086503983,
+        -0.0002240510657429695
+      ],
+      "moving_half_crossed_fraction": 0.0
+    },
+    "05c_retreated": {
+      "stationary_half_centroid_displacement_m": [
+        0.0027850274927914143,
+        -0.07398337870836258,
+        -0.00030720565700903535
+      ],
+      "moving_half_crossed_fraction": 0.0
+    },
+    "06_final": {
+      "stationary_half_centroid_displacement_m": [
+        0.0026835394091904163,
+        -0.07456038892269135,
+        -0.0003497504803817719
+      ],
+      "moving_half_crossed_fraction": 0.0
+    }
+  },
+  "arc_waypoints": [
+    [
+      -0.008440634427052104,
+      -0.6572308630137446,
+      0.03299507775877465
+    ],
+    [
+      -0.008440634427052104,
+      -0.6533940098340517,
+      0.04573031809352335
+    ],
+    [
+      -0.008440634427052104,
+      -0.6470459798400776,
+      0.05819220754912191
+    ],
+    [
+      -0.008440634427052104,
+      -0.6382563233768469,
+      0.07024781842196023
+    ],
+    [
+      -0.008440634427052104,
+      -0.6271213417599247,
+      0.0817686742816002
+    ],
+    [
+      -0.008440634427052104,
+      -0.6137630321780506,
+      0.09263215758543297
+    ],
+    [
+      -0.008440634427052104,
+      -0.5983277510664098,
+      0.10272285310213516
+    ],
+    [
+      -0.008440634427052104,
+      -0.5809846105949013,
+      0.11193381242509547
+    ],
+    [
+      -0.008440634427052104,
+      -0.5619236258398168,
+      0.12016772572153786
+    ],
+    [
+      -0.008440634427052104,
+      -0.5413536329389003,
+      0.12733798787941278
+    ],
+    [
+      -0.008440634427052104,
+      -0.5195000010389219,
+      0.13336964737112827
+    ],
+    [
+      -0.008440634427052104,
+      -0.4966021631041445,
+      0.13820022743817056
+    ],
+    [
+      -0.008440634427052104,
+      -0.472910992638662,
+      0.1417804105995448
+    ],
+    [
+      -0.008440634427052104,
+      -0.4486860550637904,
+      0.14407457898441692
+    ],
+    [
+      -0.008440634427052104,
+      -0.42419276386499405,
+      0.14506120456896013
+    ],
+    [
+      -0.008440634427052104,
+      -0.39969947266619776,
+      0.14473308504188892
+    ],
+    [
+      -0.008440634427052104,
+      -0.37547453509132617,
+      0.14309742271448878
+    ],
+    [
+      -0.008440634427052104,
+      -0.35178336462584364,
+      0.14017574561058654
+    ],
+    [
+      -0.008440634427052104,
+      -0.32888552669106624,
+      0.1360036716010162
+    ],
+    [
+      -0.008440634427052104,
+      -0.30703189479108794,
+      0.13063051816677274
+    ],
+    [
+      -0.008440634427052104,
+      -0.2864619018901714,
+      0.12411876206636976
+    ],
+    [
+      -0.008440634427052104,
+      -0.26740091713508685,
+      0.11654335482739939
+    ],
+    [
+      -0.008440634427052104,
+      -0.2500577766635784,
+      0.10799090156191106
+    ],
+    [
+      -0.008440634427052104,
+      -0.23462249555193748,
+      0.09855871210268083
+    ],
+    [
+      -0.008440634427052104,
+      -0.22126418597006342,
+      0.08835373485632009
+    ],
+    [
+      -0.008440634427052104,
+      -0.2101292043531412,
+      0.07749138505415208
+    ],
+    [
+      -0.008440634427052104,
+      -0.2013395478899105,
+      0.06609428023878572
+    ],
+    [
+      -0.008440634427052104,
+      -0.19499151789593638,
+      0.054290896840659186
+    ],
+    [
+      -0.008440634427052104,
+      -0.1911546647162435,
+      0.04221416256338245
+    ],
+    [
+      -0.008440634427052104,
+      -0.18987102571718173,
+      0.030000000000000013
+    ]
+  ],
+  "trajectory": "Low elliptical arc, 0.12 m lift component; nominal path, not exact material isometry",
+  "fixed_material_readback": {
+    "friction": 0.30000001192092896,
+    "particle_friction_scale": 0.0,
+    "applied_at": "material construction before first reset",
+    "changed_at_release": false
+  },
+  "release_fold_metrics": {
+    "symmetric_xy_alignment_mean_m": 0.052538667586315035,
+    "particle_occupancy_iou": 0.3330585325638912,
+    "occupancy_cell_m": 0.01,
+    "occupancy_dilation_cells": 1,
+    "moving_half_crossed_fraction": 0.49381090334474587,
+    "moving_material_reflected_target_mean_error_m": 0.12456610053777695,
+    "cloth_z_p95_m": 0.09829438328742979,
+    "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+  },
+  "mass_audit": {
+    "constructor": {
+      "particle_mass_requested_kg": 0.0001,
+      "usd_mass_before_reset_kg": 0.9944999814033508,
+      "vertex_count": 9945,
+      "supplied_argument": "particle_mass"
+    },
+    "particle_system": {
+      "solverPositionIterationCount": 16,
+      "particleContactOffset": 0.009999999776482582,
+      "enableCCD": true,
+      "globalSelfCollisionEnabled": true
+    },
+    "stage_kilograms_per_unit": 1.0,
+    "physics_dt": 0.016666666666666666,
+    "reads": {
+      "after_start": {
+        "shape": [
+          1,
+          9945
+        ],
+        "min_kg": 0.00010000912880059332,
+        "max_kg": 0.00010000912880059332,
+        "total_kg": 0.9945907859219005,
+        "max_relative_error": 9.128800593316555e-05,
+        "relative_tolerance": 0.001,
+        "checks": {
+          "shape": true,
+          "finite": true,
+          "positive": true,
+          "uniform": true,
+          "requested_mass_agreement": true
+        }
+      },
+      "after_release": {
+        "shape": [
+          1,
+          9945
+        ],
+        "min_kg": 0.00010000912880059332,
+        "max_kg": 0.00010000912880059332,
+        "total_kg": 0.9945907859219005,
+        "max_relative_error": 9.128800593316555e-05,
+        "relative_tolerance": 0.001,
+        "checks": {
+          "shape": true,
+          "finite": true,
+          "positive": true,
+          "uniform": true,
+          "requested_mass_agreement": true
+        }
+      }
+    }
+  },
+  "alignment_metrics": {
+    "mode": "aligned",
+    "intervention_attempted": true,
+    "usd_points1_written": true,
+    "note": "Pipeline success is not proof of improvement or internal solver adoption.",
+    "anchor_vertex_indices": [
+      5271,
+      5272,
+      5273,
+      5274,
+      5275,
+      5423,
+      5531,
+      5570,
+      5657,
+      5658,
+      5659,
+      5684,
+      5781,
+      5784,
+      5785,
+      5786,
+      5856,
+      6019,
+      6052,
+      6053,
+      6171,
+      6172,
+      6173,
+      6174,
+      6175,
+      6176,
+      6177,
+      6178,
+      6179,
+      6180,
+      6181,
+      6182,
+      6197,
+      6278,
+      6279,
+      6280,
+      6281,
+      6296,
+      6330,
+      6331,
+      6332,
+      6334
+    ],
+    "original": {
+      "paired_gap_mean_mm": 1.5914187969558335,
+      "paired_gap_max_mm": 1.9224978979026137,
+      "all_edge_ratio_to_initial_p95_p99_max": [
+        1.0184379939886932,
+        1.039682367792615,
+        1.2642893250854896
+      ],
+      "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+        0.9978335244858186,
+        0.9999174891875393,
+        1.0006476108604463,
+        1.00177767269533
+      ]
+    },
+    "usd_readback_ok": true,
+    "after_operation": {
+      "paired_gap_mean_mm": 2.9813099264700885e-07,
+      "paired_gap_max_mm": 1.103076613218139e-06,
+      "all_edge_ratio_to_initial_p95_p99_max": [
+        1.0184379939886932,
+        1.039682367792615,
+        1.2642893250854896
+      ],
+      "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+        0.9978335244858186,
+        0.9999174891875393,
+        1.0006476108604463,
+        1.00177767269533
+      ]
+    },
+    "stages": {
+      "aligned_disabled": {
+        "paired_gap_mean_mm": 2.9813099264700885e-07,
+        "paired_gap_max_mm": 1.103076613218139e-06,
+        "all_edge_ratio_to_initial_p95_p99_max": [
+          1.0184379939886932,
+          1.039682367792615,
+          1.2642893250854896
+        ],
+        "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+          0.9978335244858186,
+          0.9999174891875393,
+          1.0006476108604463,
+          1.00177767269533
+        ]
+      },
+      "enabled_before_first_step": {
+        "paired_gap_mean_mm": 2.9813099264700885e-07,
+        "paired_gap_max_mm": 1.103076613218139e-06,
+        "all_edge_ratio_to_initial_p95_p99_max": [
+          1.0184379939886932,
+          1.039682367792615,
+          1.2642893250854896
+        ],
+        "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+          0.9978335244858186,
+          0.9999174891875393,
+          1.0006476108604463,
+          1.00177767269533
+        ]
+      }
+    },
+    "arrays_at_aligned_disabled": {
+      "points0_unchanged": true,
+      "points1_preserved": true
+    },
+    "arrays_at_enabled_before_first_step": {
+      "points0_unchanged": true,
+      "points1_preserved": true
+    },
+    "activation": {
+      "step_before": 471,
+      "step_after": 472,
+      "max_vertex_displacement_mm": 2.4964122772216797,
+      "tracked_mean_displacement_mm": 1.485150933265686,
+      "count_over_5_mm": 0,
+      "block_motion_mm": 0.0012687731167509838,
+      "paired_gap_mean_mm": 1.4868373684701264,
+      "paired_gap_max_mm": 1.513555034228112,
+      "all_edge_ratio_to_initial_p95_p99_max": [
+        1.0182347293582288,
+        1.039032232975768,
+        1.266335398953383
+      ],
+      "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+        0.992304912493932,
+        1.0001365944503875,
+        1.0052998782537643,
+        1.0115527012116474
+      ]
+    },
+    "arrays_after_first_step": {
+      "points0_unchanged": true,
+      "points1_preserved": true
+    }
+  },
+  "fold_metrics": {
+    "symmetric_xy_alignment_mean_m": 0.14475421445887923,
+    "particle_occupancy_iou": 0.03830985915492958,
+    "occupancy_cell_m": 0.01,
+    "occupancy_dilation_cells": 1,
+    "moving_half_crossed_fraction": 0.0,
+    "moving_material_reflected_target_mean_error_m": 0.32038721442222595,
+    "cloth_z_p95_m": 0.03397625386714934,
+    "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+  },
+  "initial_fold_metrics": {
+    "symmetric_xy_alignment_mean_m": 0.1454323312583325,
+    "particle_occupancy_iou": 0.041266252119841716,
+    "occupancy_cell_m": 0.01,
+    "occupancy_dilation_cells": 1,
+    "moving_half_crossed_fraction": 0.0,
+    "moving_material_reflected_target_mean_error_m": 0.24761176109313965,
+    "cloth_z_p95_m": 0.03451433926820755,
+    "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+  },
+  "cloth_lift_m": 0.10486200451850891,
+  "provisional_criteria": {
+    "alignment_mean_m_max": 0.04,
+    "occupancy_iou_min": 0.5,
+    "crossed_fraction_min": 0.8,
+    "z_p95_m_max": 0.06
+  },
+  "provisional_checks": {
+    "alignment": false,
+    "occupancy": false,
+    "crossed": false,
+    "height": true
+  },
+  "provisional_fold_success": false,
+  "release_motion_summary": {
+    "last_60_centroid_speed_mean_m_s": 0.0007711610602454284,
+    "last_60_centroid_speed_max_m_s": 0.0016452450702256337,
+    "last_60_centroid_range_m": [
+      0.00020465906709432602,
+      0.00011661648750305176,
+      2.5428831577301025e-05
+    ],
+    "note": "Centroid stability is not full particle equilibrium or fold success"
+  },
+  "video": {
+    "frames": 594,
+    "stage_images": 10,
+    "unavailable_frame_reads": 0,
+    "fps": 20,
+    "note": "Periodic frames plus stage snapshots; not exact real-time playback."
+  }
+}

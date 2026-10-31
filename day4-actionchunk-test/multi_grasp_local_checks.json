@@ -1,0 +1,14 @@
+{
+  "python310_syntax": true,
+  "synthetic_region_selection": true,
+  "live_geometry_selection": true,
+  "three_slot_state_machine_stub": true,
+  "double_close_and_exhaustion_rejected": true,
+  "multiple_attachment_guard": true,
+  "real_geometry_snapshots_checked": [
+    "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-l1-hem-fold-20261026-054216-686820\\00_initial.npz",
+    "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-l1-hem-fold-20261026-055645-888101\\00_initial.npz",
+    "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-l1-hem-fold-20261026-061530-144501\\00_initial.npz"
+  ],
+  "isaac_gpu_validation": false
+}

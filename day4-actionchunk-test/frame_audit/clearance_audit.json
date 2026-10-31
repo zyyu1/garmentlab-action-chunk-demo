@@ -1,0 +1,90 @@
+{
+  "scope": "Installed URDF hand/finger triangle meshes only; not live USD collision shapes, contact offsets, self-collision or full arm certification",
+  "rows": [
+    {
+      "label": "approach",
+      "subtarget": 0,
+      "lowest_mesh_z_m": {
+        "panda_hand_0.0": 0.1939378490692755,
+        "panda_hand_0.04": 0.1939378490692755,
+        "panda_leftfinger_0.0": 0.1476208879234235,
+        "panda_leftfinger_0.04": 0.14762088783596236,
+        "panda_rightfinger_0.0": 0.14762088795960937,
+        "panda_rightfinger_0.04": 0.14762088804707052
+      }
+    },
+    {
+      "label": "descend",
+      "subtarget": 0,
+      "lowest_mesh_z_m": {
+        "panda_hand_0.0": 0.16947584219257122,
+        "panda_hand_0.04": 0.16947584219257122,
+        "panda_leftfinger_0.0": 0.12320157974875921,
+        "panda_leftfinger_0.04": 0.12322410533719348,
+        "panda_rightfinger_0.0": 0.12319224791683875,
+        "panda_rightfinger_0.04": 0.12316972232840448
+      }
+    },
+    {
+      "label": "descend",
+      "subtarget": 1,
+      "lowest_mesh_z_m": {
+        "panda_hand_0.0": 0.14504047904926226,
+        "panda_hand_0.04": 0.14504047904926226,
+        "panda_leftfinger_0.0": 0.09876646160852048,
+        "panda_leftfinger_0.04": 0.09878911817408689,
+        "panda_rightfinger_0.0": 0.09875707418607109,
+        "panda_rightfinger_0.04": 0.09873441762050468
+      }
+    },
+    {
+      "label": "descend",
+      "subtarget": 2,
+      "lowest_mesh_z_m": {
+        "panda_hand_0.0": 0.12060806354799009,
+        "panda_hand_0.04": 0.12060806354799009,
+        "panda_leftfinger_0.0": 0.07433055300877504,
+        "panda_leftfinger_0.04": 0.07435170272207832,
+        "panda_rightfinger_0.0": 0.07432178909852509,
+        "panda_rightfinger_0.04": 0.07430063938522181
+      }
+    },
+    {
+      "label": "descend",
+      "subtarget": 3,
+      "lowest_mesh_z_m": {
+        "panda_hand_0.0": 0.09617749881101256,
+        "panda_hand_0.04": 0.09617749881101256,
+        "panda_leftfinger_0.0": 0.04989455070375305,
+        "panda_leftfinger_0.04": 0.04991333558023947,
+        "panda_rightfinger_0.0": 0.049886766380663104,
+        "panda_rightfinger_0.04": 0.049867981504176685
+      }
+    },
+    {
+      "label": "descend",
+      "subtarget": 4,
+      "lowest_mesh_z_m": {
+        "panda_hand_0.0": 0.07174909983253981,
+        "panda_hand_0.04": 0.07174909983253981,
+        "panda_leftfinger_0.0": 0.025458662474065044,
+        "panda_leftfinger_0.04": 0.02547418423635986,
+        "panda_rightfinger_0.0": 0.025452230152580753,
+        "panda_rightfinger_0.04": 0.025436708390285938
+      }
+    },
+    {
+      "label": "descend",
+      "subtarget": 5,
+      "lowest_mesh_z_m": {
+        "panda_hand_0.0": 0.04732345589878126,
+        "panda_hand_0.04": 0.04732345589878126,
+        "panda_leftfinger_0.0": 0.0010230962398182428,
+        "panda_leftfinger_0.04": 0.0010342964857887257,
+        "panda_rightfinger_0.0": 0.0010184543420253822,
+        "panda_rightfinger_0.04": 0.0010072540960548992
+      }
+    }
+  ],
+  "min_mesh_z_m": 0.0010072540960548992
+}

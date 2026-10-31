@@ -1,0 +1,54 @@
+{
+  "constructor": {
+    "particle_mass_requested_kg": 0.0001,
+    "usd_mass_before_reset_kg": 0.9944999814033508,
+    "vertex_count": 9945,
+    "supplied_argument": "particle_mass"
+  },
+  "particle_system": {
+    "solverPositionIterationCount": 16,
+    "particleContactOffset": 0.009999999776482582,
+    "enableCCD": true,
+    "globalSelfCollisionEnabled": true
+  },
+  "stage_kilograms_per_unit": 1.0,
+  "physics_dt": 0.016666666666666666,
+  "reads": {
+    "after_start": {
+      "shape": [
+        1,
+        9945
+      ],
+      "min_kg": 0.00010000912880059332,
+      "max_kg": 0.00010000912880059332,
+      "total_kg": 0.9945907859219005,
+      "max_relative_error": 9.128800593316555e-05,
+      "relative_tolerance": 0.001,
+      "checks": {
+        "shape": true,
+        "finite": true,
+        "positive": true,
+        "uniform": true,
+        "requested_mass_agreement": true
+      }
+    },
+    "after_two_releases": {
+      "shape": [
+        1,
+        9945
+      ],
+      "min_kg": 0.00010000912880059332,
+      "max_kg": 0.00010000912880059332,
+      "total_kg": 0.9945907859219005,
+      "max_relative_error": 9.128800593316555e-05,
+      "relative_tolerance": 0.001,
+      "checks": {
+        "shape": true,
+        "finite": true,
+        "positive": true,
+        "uniform": true,
+        "requested_mass_agreement": true
+      }
+    }
+  }
+}
