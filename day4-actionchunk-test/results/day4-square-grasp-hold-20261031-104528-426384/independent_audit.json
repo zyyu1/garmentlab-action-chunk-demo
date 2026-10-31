@@ -1,0 +1,239 @@
+{
+  "version": "square-grasp-hold-v4-joint-hold",
+  "source_hash": {
+    "day4-square-grasp-hold.py": true,
+    "multi_prepared_grasp_control.py": true,
+    "multi_grasp_geometry.py": true,
+    "hem_prepared_grasp_control.py": true,
+    "hem_fold_geometry.py": true,
+    "l1_fold_geometry.py": true,
+    "room_collision_control.py": true,
+    "square_start.py": true,
+    "square_probe_control.py": true,
+    "square_control_trace.py": true,
+    "square_pose_backend.py": true,
+    "square_pose_contract.py": true,
+    "square_geometry.py": true,
+    "square_cloth_40cm.usda": true,
+    "minimum_fold_geometry.py": true,
+    "early_descent_geometry.py": true,
+    "single_anchor_hem_control.py": true,
+    "square_stable_hold.py": true,
+    "square_block_contact_recorder.py": true
+  },
+  "upload_hash": {
+    "day4-square-grasp-hold.py": true,
+    "multi_prepared_grasp_control.py": true,
+    "multi_grasp_geometry.py": true,
+    "hem_prepared_grasp_control.py": true,
+    "hem_fold_geometry.py": true,
+    "l1_fold_geometry.py": true,
+    "room_collision_control.py": true,
+    "square_start.py": true,
+    "square_probe_control.py": true,
+    "square_control_trace.py": true,
+    "square_pose_backend.py": true,
+    "square_pose_contract.py": true,
+    "square_geometry.py": true,
+    "square_cloth_40cm.usda": true,
+    "minimum_fold_geometry.py": true,
+    "early_descent_geometry.py": true,
+    "single_anchor_hem_control.py": true,
+    "square_stable_hold.py": true,
+    "square_block_contact_recorder.py": true,
+    "run-square-grasp-hold.sh": true
+  },
+  "runtime_hash": {
+    "backend": true,
+    "environment": true,
+    "robot": true,
+    "original_control": true
+  },
+  "video_frames": 255,
+  "video_size": [
+    640,
+    480
+  ],
+  "frame_errors": 0,
+  "stage_images": 5,
+  "hold": {
+    "steps": 60,
+    "physics_steps": [
+      652,
+      711
+    ],
+    "ee_error_first_mm": 0.47356410847401587,
+    "ee_error_max_mm": 0.47356410847401587,
+    "ee_error_last_mm": 0.47329577941748163,
+    "ee_drift_first_last_mm": 0.003391807270845196,
+    "ee_range_mm": [
+      0.000594974140401802,
+      0.0022550282167133062,
+      0.0028732970776684796
+    ],
+    "max_arm_speed_rad_s": 0.009125012904405594,
+    "orientation_drift_deg": 0.000502201822167465,
+    "anchor_gap_max_mm": 1.3609420382048076,
+    "holding_all": true,
+    "attachment_enabled_all": true,
+    "joint_target_max_diff_rad": 1.519918441772461e-05,
+    "block_position_mean_mm": [
+      -0.033920631661506676,
+      -649.8113125562668,
+      14.999993052333593
+    ],
+    "block_target_mean_mm": [
+      -0.009927183736593334,
+      -649.6333949431657,
+      10.206580247540032
+    ],
+    "block_z_shortfall_mm": -4.793412804793558,
+    "block_position_range_mm": [
+      7.254129741340876e-06,
+      5.9604644775390625e-05,
+      4.656612873077393e-06
+    ]
+  },
+  "v3_hold": {
+    "ee_error_first_mm": 0.46106673518794894,
+    "ee_error_max_mm": 35.04324575334842,
+    "ee_error_last_mm": 19.187678613738722,
+    "ee_drift_first_last_mm": 19.120388936197514,
+    "max_arm_speed_rad_s": 4.399694442749023
+  },
+  "hold_calls": {
+    "apply_action": 60,
+    "controller_forward": 0
+  },
+  "forbidden_setter_calls": 0,
+  "common_snapshots": {
+    "00_initial": {
+      "exact": true,
+      "max_vertex_diff_mm": 0.0,
+      "mean_vertex_diff_mm": 0.0,
+      "ee_diff_mm": 0.0
+    },
+    "01_before_close": {
+      "exact": true,
+      "max_vertex_diff_mm": 0.0,
+      "mean_vertex_diff_mm": 0.0,
+      "ee_diff_mm": 0.0
+    },
+    "02_grasp": {
+      "exact": true,
+      "max_vertex_diff_mm": 0.0,
+      "mean_vertex_diff_mm": 0.0,
+      "ee_diff_mm": 0.0
+    },
+    "03_held": {
+      "exact": false,
+      "max_vertex_diff_mm": 31.812793731689453,
+      "mean_vertex_diff_mm": 15.879531860351562,
+      "ee_diff_mm": 19.11986413246297
+    },
+    "04_released": {
+      "exact": false,
+      "max_vertex_diff_mm": 31.396432876586914,
+      "mean_vertex_diff_mm": 15.479188919067383,
+      "ee_diff_mm": 19.100931541714534
+    }
+  },
+  "action_steps": [
+    462,
+    608,
+    649,
+    731
+  ],
+  "through_close_exact": true,
+  "release_steps_v3": 753,
+  "release_state_ok": true,
+  "contact_valid": false,
+  "contact": {
+    "robot_bodies": [
+      "/World/Franka/panda_link0",
+      "/World/Franka/panda_link1",
+      "/World/Franka/panda_link2",
+      "/World/Franka/panda_link3",
+      "/World/Franka/panda_link4",
+      "/World/Franka/panda_link5",
+      "/World/Franka/panda_link6",
+      "/World/Franka/panda_link7",
+      "/World/Franka/panda_link8",
+      "/World/Franka/panda_hand",
+      "/World/Franka/panda_leftfinger",
+      "/World/Franka/panda_rightfinger"
+    ],
+    "attachment_bodies": [
+      "/World/Attachment/attach/block",
+      "/World/Attachment/attach_1/block",
+      "/World/Attachment/attach_2/block"
+    ],
+    "callback_count": 0,
+    "event_count": 0,
+    "counts": {},
+    "errors": [],
+    "subscription_created": true,
+    "scope": "Rigid contacts for robot links and attachment blocks; cloth particle contacts not certified",
+    "diagnosis": "configured_no_events_channel_not_independently_validated",
+    "unexpected_robot_block_contacts": 0,
+    "positive_control_block_ground_events": 0
+  },
+  "collision_groups": {
+    "/World/Collision/robot_group": {
+      "exists": true,
+      "filtered_groups": [
+        "/World/Collision/Garment_group",
+        "/World/Collision/Rigid_group",
+        "/World/attach_group"
+      ],
+      "collider_includes": [
+        "/World/Franka"
+      ],
+      "collider_excludes": []
+    },
+    "/World/Collision/Garment_group": {
+      "exists": true,
+      "filtered_groups": [
+        "/World/Collision/robot_group",
+        "/World/attach_group"
+      ],
+      "collider_includes": [
+        "/World/Garment",
+        "/World/Garment/garment/mesh",
+        "/World/Garment/garment",
+        "/World/Garment/particleSystem"
+      ],
+      "collider_excludes": []
+    },
+    "/World/Collision/Rigid_group": {
+      "exists": true,
+      "filtered_groups": [
+        "/World/Collision/robot_group",
+        "/World/attach_group"
+      ],
+      "collider_includes": [
+        "/World/Avatar"
+      ],
+      "collider_excludes": []
+    },
+    "/World/attach_group": {
+      "exists": true,
+      "filtered_groups": [
+        "/World/Collision/robot_group",
+        "/World/Collision/Garment_group",
+        "/World/Collision/Rigid_group"
+      ],
+      "collider_includes": [
+        "/World/Attachment",
+        "/World/Attachment/attach/block",
+        "/World/Attachment/attach_1/block",
+        "/World/Attachment/attach_2/block"
+      ],
+      "collider_excludes": []
+    }
+  },
+  "passed": true,
+  "fold_success_accepted": false,
+  "formal_day4_success": false,
+  "errors": []
+}

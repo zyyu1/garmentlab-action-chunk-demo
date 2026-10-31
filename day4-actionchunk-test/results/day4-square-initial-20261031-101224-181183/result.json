@@ -1,0 +1,129 @@
+{
+  "probe_version": "square-initial-v1",
+  "passed": true,
+  "formal_day4_success": false,
+  "scope": "L1 initial-state generation only; no robot grasp, fold, or reset reliability claim",
+  "actions": [],
+  "cycles": [],
+  "errors": [],
+  "yaw": 0.0,
+  "physics_profile": "Original robot asset; no v9-v11 robot overrides; cloth mass .0001/friction .3/particle friction scale 0; room collisions isolated; constructor bend intervention recorded separately",
+  "requested_bend": 100.0,
+  "constructor_bend_applied": 100.0,
+  "spring_readback": {
+    "after_start": {
+      "bend_usd": 100.0,
+      "shape": [
+        1,
+        3160
+      ],
+      "min": 100.0,
+      "max": 10000.0,
+      "scope": "SDK get_stretch_stiffnesses reads runtime get_spring_stiffness; entries are not labeled by spring type"
+    }
+  },
+  "material_readback": {
+    "friction": 0.30000001192092896,
+    "particle_friction_scale": 0.0
+  },
+  "robot_config": {
+    "kp": [
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      10000.0,
+      0.0
+    ],
+    "kd": [
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      1000.0,
+      0.0
+    ],
+    "solver_position_iterations_usd": 64,
+    "solver_velocity_iterations_usd": 64
+  },
+  "runtime_source_hashes": {
+    "backend": {
+      "path": "/root/autodl-tmp/square_pose_backend.py",
+      "sha256": "f78261623a4c48ef5de2db2bb951f68d626d437e2504c7b233c883af7f868b24"
+    },
+    "environment": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/FoldEnv.py",
+      "sha256": "e0aff36e6b25d724cd8c7f2ffd4dd7c53ffd95693f4e502457eaecf63ebcbe24"
+    },
+    "robot": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py",
+      "sha256": "adc6abc5b8721a0730fe7281d6cc1d89a6b7e1abad0d7b5da167369f0371428a"
+    },
+    "original_control": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/Control.py",
+      "sha256": "2b51b9956c5b296b43c2e85509678984061ca716273c33e84cffbb0706f93547"
+    }
+  },
+  "slots_precreated": [
+    {
+      "label": "right_sleeve",
+      "block": "/World/Attachment/attach/block",
+      "constraint": "/World/AttachmentConstraints/multi_right_sleeve",
+      "pick_index": 230,
+      "anchor_ids": [
+        229,
+        230
+      ]
+    },
+    {
+      "label": "left_sleeve",
+      "block": "/World/Attachment/attach_1/block",
+      "constraint": "/World/AttachmentConstraints/multi_left_sleeve",
+      "pick_index": 210,
+      "anchor_ids": [
+        210,
+        211
+      ]
+    },
+    {
+      "label": "hem",
+      "block": "/World/Attachment/attach_2/block",
+      "constraint": "/World/AttachmentConstraints/multi_hem",
+      "pick_index": 10,
+      "anchor_ids": [
+        10
+      ]
+    }
+  ],
+  "initial_case": {
+    "level": "flat",
+    "seed": 4107,
+    "translation_xy_m": [
+      0.01211277719742286,
+      0.013083401307232446
+    ],
+    "yaw_rad": -0.1488146393791384,
+    "lift_drop_cycles": [],
+    "settle_steps": 120,
+    "status": "ready_for_initial_state_pilot"
+  },
+  "geometry": {
+    "center": [
+      0.012112747877836227,
+      -0.4369165897369385,
+      0.00990002416074276
+    ],
+    "extent": [
+      0.4548855423927307,
+      0.4548853933811188,
+      6.239861249923706e-08
+    ],
+    "transform_error_max_m": 2.9760974573633803e-08
+  }
+}

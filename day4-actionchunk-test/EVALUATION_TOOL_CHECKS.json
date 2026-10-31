@@ -1,0 +1,83 @@
+{
+  "synthetic_only": true,
+  "cases": {
+    "ideal_fold": {
+      "symmetric_alignment_m": 9.714451465470119e-18,
+      "particle_grid_iou": 0.6666666666666666,
+      "grid_cell_m": 0.01,
+      "reflected_material_error_m": 0.0,
+      "stationary_material_drift_m": 0.0,
+      "crossed_fraction": 1.0,
+      "height_p95_m": 0.01,
+      "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+      "success": null,
+      "threshold_status": "unfrozen"
+    },
+    "unfolded": {
+      "symmetric_alignment_m": 0.11000000000000001,
+      "particle_grid_iou": 0.0,
+      "grid_cell_m": 0.01,
+      "reflected_material_error_m": 0.2,
+      "stationary_material_drift_m": 0.0,
+      "crossed_fraction": 0.0,
+      "height_p95_m": 0.01,
+      "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+      "success": null,
+      "threshold_status": "unfrozen"
+    },
+    "whole_translation": {
+      "symmetric_alignment_m": 0.11000000000000001,
+      "particle_grid_iou": 0.0,
+      "grid_cell_m": 0.01,
+      "reflected_material_error_m": 0.12399999999999997,
+      "stationary_material_drift_m": 0.29999999999999993,
+      "crossed_fraction": 1.0,
+      "height_p95_m": 0.01,
+      "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+      "success": null,
+      "threshold_status": "unfrozen"
+    },
+    "translated_fold": {
+      "symmetric_alignment_m": 5.551115123125783e-18,
+      "particle_grid_iou": 1.0,
+      "grid_cell_m": 0.01,
+      "reflected_material_error_m": 0.1414213562373095,
+      "stationary_material_drift_m": 0.1414213562373095,
+      "crossed_fraction": 1.0,
+      "height_p95_m": 0.01,
+      "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+      "success": null,
+      "threshold_status": "unfrozen"
+    }
+  },
+  "release_then_rebound": {
+    "release": {
+      "symmetric_alignment_m": 9.714451465470119e-18,
+      "particle_grid_iou": 0.6666666666666666,
+      "grid_cell_m": 0.01,
+      "reflected_material_error_m": 0.0,
+      "stationary_material_drift_m": 0.0,
+      "crossed_fraction": 1.0,
+      "height_p95_m": 0.01,
+      "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+      "success": null,
+      "threshold_status": "unfrozen"
+    },
+    "settled": {
+      "symmetric_alignment_m": 0.11000000000000001,
+      "particle_grid_iou": 0.0,
+      "grid_cell_m": 0.01,
+      "reflected_material_error_m": 0.2,
+      "stationary_material_drift_m": 0.0,
+      "crossed_fraction": 0.0,
+      "height_p95_m": 0.01,
+      "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+      "success": null,
+      "threshold_status": "unfrozen"
+    },
+    "post_release_displacement_mean_m": 0.1,
+    "success": null
+  },
+  "journal_checks": "passed: pending rate null, errors counted, terminal immutable, retry separate, unfrozen success rejected",
+  "formal_successes": 0
+}

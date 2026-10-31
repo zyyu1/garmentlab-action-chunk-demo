@@ -1,0 +1,757 @@
+{
+  "probe_version": "square-grasp-hold-v4-joint-hold",
+  "passed": true,
+  "formal_day4_success": false,
+  "scope": "Procedural single-layer square, single Franka, development only; not Dress057 acceptance",
+  "actions": [
+    {
+      "label": "approach",
+      "matrix": [
+        [
+          -5.666015923111445e-08,
+          -0.6499999761581421,
+          0.1598999947309494,
+          0.0,
+          0.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 462,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 230,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 210,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 10,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "descend",
+      "matrix": [
+        [
+          -5.676772829588117e-08,
+          -0.6499999761581421,
+          0.013299995101988316,
+          0.0,
+          0.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 608,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 230,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 210,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 10,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "close",
+      "matrix": [
+        [
+          -5.676772829588117e-08,
+          -0.6499999761581421,
+          0.013299995101988316,
+          0.0,
+          1.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 649,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 230,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 210,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 10,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ]
+    },
+    {
+      "label": "release",
+      "matrix": [
+        [
+          -1.0735920113802422e-05,
+          -0.6496394872665405,
+          0.01360649336129427,
+          0.0,
+          0.0
+        ]
+      ],
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 731,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "slots": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 230,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 210,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 10,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    }
+  ],
+  "cycles": [],
+  "errors": [],
+  "yaw": 0.0,
+  "physics_profile": "Original robot asset; no v9-v11 robot overrides; cloth mass .0001/friction .3/particle friction scale 0; room collisions isolated; constructor bend intervention recorded separately",
+  "requested_bend": 100.0,
+  "constructor_bend_applied": 100.0,
+  "spring_readback": {
+    "after_start": {
+      "bend_usd": 100.0,
+      "shape": [
+        1,
+        3160
+      ],
+      "min": 100.0,
+      "max": 10000.0,
+      "scope": "SDK get_stretch_stiffnesses reads runtime get_spring_stiffness; entries are not labeled by spring type"
+    }
+  },
+  "material_readback": {
+    "friction": 0.30000001192092896,
+    "particle_friction_scale": 0.0
+  },
+  "robot_config": {
+    "kp": [
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      572957824.0,
+      10000.0,
+      0.0
+    ],
+    "kd": [
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      5729578.0,
+      1000.0,
+      0.0
+    ],
+    "solver_position_iterations_usd": 64,
+    "solver_velocity_iterations_usd": 64
+  },
+  "runtime_source_hashes": {
+    "backend": {
+      "path": "/root/autodl-tmp/square_pose_backend.py",
+      "sha256": "f78261623a4c48ef5de2db2bb951f68d626d437e2504c7b233c883af7f868b24"
+    },
+    "environment": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/FoldEnv.py",
+      "sha256": "e0aff36e6b25d724cd8c7f2ffd4dd7c53ffd95693f4e502457eaecf63ebcbe24"
+    },
+    "robot": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py",
+      "sha256": "adc6abc5b8721a0730fe7281d6cc1d89a6b7e1abad0d7b5da167369f0371428a"
+    },
+    "original_control": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/Control.py",
+      "sha256": "2b51b9956c5b296b43c2e85509678984061ca716273c33e84cffbb0706f93547"
+    }
+  },
+  "slots_precreated": [
+    {
+      "label": "right_sleeve",
+      "block": "/World/Attachment/attach/block",
+      "constraint": "/World/AttachmentConstraints/multi_right_sleeve",
+      "pick_index": 230,
+      "anchor_ids": [
+        229,
+        230
+      ]
+    },
+    {
+      "label": "left_sleeve",
+      "block": "/World/Attachment/attach_1/block",
+      "constraint": "/World/AttachmentConstraints/multi_left_sleeve",
+      "pick_index": 210,
+      "anchor_ids": [
+        210,
+        211
+      ]
+    },
+    {
+      "label": "hem",
+      "block": "/World/Attachment/attach_2/block",
+      "constraint": "/World/AttachmentConstraints/multi_hem",
+      "pick_index": 10,
+      "anchor_ids": [
+        10
+      ]
+    }
+  ],
+  "diagnostic_scope": "Fixed downward Backend pose, public yaw wired, URDF fingertip midpoint proxy; approach/descend/CLOSE/OPEN only; no lift/fold",
+  "hold_control": "joint_space_position_hold_at_converged_config; RMP not called during 60-step stationary hold",
+  "collision_filter_audit": {
+    "groups": {
+      "/World/Collision/robot_group": {
+        "exists": true,
+        "filtered_groups": [
+          "/World/Collision/Garment_group",
+          "/World/Collision/Rigid_group",
+          "/World/attach_group"
+        ],
+        "collider_includes": [
+          "/World/Franka"
+        ],
+        "collider_excludes": []
+      },
+      "/World/Collision/Garment_group": {
+        "exists": true,
+        "filtered_groups": [
+          "/World/Collision/robot_group",
+          "/World/attach_group"
+        ],
+        "collider_includes": [
+          "/World/Garment",
+          "/World/Garment/garment/mesh",
+          "/World/Garment/garment",
+          "/World/Garment/particleSystem"
+        ],
+        "collider_excludes": []
+      },
+      "/World/Collision/Rigid_group": {
+        "exists": true,
+        "filtered_groups": [
+          "/World/Collision/robot_group",
+          "/World/attach_group"
+        ],
+        "collider_includes": [
+          "/World/Avatar"
+        ],
+        "collider_excludes": []
+      },
+      "/World/attach_group": {
+        "exists": true,
+        "filtered_groups": [
+          "/World/Collision/robot_group",
+          "/World/Collision/Garment_group",
+          "/World/Collision/Rigid_group"
+        ],
+        "collider_includes": [
+          "/World/Attachment",
+          "/World/Attachment/attach/block",
+          "/World/Attachment/attach_1/block",
+          "/World/Attachment/attach_2/block"
+        ],
+        "collider_excludes": []
+      }
+    },
+    "attachment_bodies": [
+      {
+        "path": "/World/Attachment/attach/block",
+        "collision_enabled": true
+      },
+      {
+        "path": "/World/Attachment/attach_1/block",
+        "collision_enabled": true
+      },
+      {
+        "path": "/World/Attachment/attach_2/block",
+        "collision_enabled": true
+      }
+    ],
+    "scope": "Read-only USD collision-group dump; contact recorder is the runtime check"
+  },
+  "per_segment_step_limit": 240,
+  "metric_threshold_status": "provisional only; no success threshold frozen",
+  "stage_metrics": {},
+  "grasp_model": "Single-point attachment proxy; no physical pinch validation",
+  "interpolation": "Linear segments <=25mm per public target, no hidden fold path",
+  "arrival_rule": "EE<10mm, held block<5mm, arm speed<0.1rad/s for six steps; max120 convergence steps",
+  "physics_dt": 0.016666666666666666,
+  "pose_contract": {
+    "xyz_frame": "world right_gripper",
+    "yaw_rad": 0.0,
+    "fixed_euler_roll_pitch": [
+      3.141592653589793,
+      0.0
+    ],
+    "local_grasp_reference": [
+      0.0,
+      0.0,
+      0.0034
+    ],
+    "reference_scope": "URDF named fingertip midpoint, not physical pinch calibration",
+    "material_pick": [
+      -5.676772829588117e-08,
+      -0.6499999761581421,
+      0.009899995289742947
+    ],
+    "ee_target": [
+      -5.676772829588117e-08,
+      -0.6499999761581421,
+      0.013299995289742947
+    ]
+  },
+  "descent_completed": true,
+  "hold_target_joint_positions": [
+    0.15126734972000122,
+    0.7993649840354919,
+    -0.15612788498401642,
+    -1.767726182937622,
+    0.20171982049942017,
+    2.5497210025787354,
+    2.230388641357422
+  ],
+  "hold_summary": {
+    "steps": 60,
+    "control": "joint_position_hold; RMP not called at fixed target",
+    "target_joint_positions": [
+      0.15126734972000122,
+      0.7993649840354919,
+      -0.15612788498401642,
+      -1.767726182937622,
+      0.20171982049942017,
+      2.5497210025787354,
+      2.230388641357422
+    ],
+    "arm_joint_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "held_check": {
+    "position_error_m": 0.00047329577941748166,
+    "arm_speed_rad_s": 0.008601854555308819,
+    "orientation_reached": true,
+    "anchor_gap_max_m": 0.0013609420382048076
+  },
+  "fold_success_accepted": false,
+  "block_contact_report": {
+    "robot_bodies": [
+      "/World/Franka/panda_link0",
+      "/World/Franka/panda_link1",
+      "/World/Franka/panda_link2",
+      "/World/Franka/panda_link3",
+      "/World/Franka/panda_link4",
+      "/World/Franka/panda_link5",
+      "/World/Franka/panda_link6",
+      "/World/Franka/panda_link7",
+      "/World/Franka/panda_link8",
+      "/World/Franka/panda_hand",
+      "/World/Franka/panda_leftfinger",
+      "/World/Franka/panda_rightfinger"
+    ],
+    "attachment_bodies": [
+      "/World/Attachment/attach/block",
+      "/World/Attachment/attach_1/block",
+      "/World/Attachment/attach_2/block"
+    ],
+    "callback_count": 0,
+    "event_count": 0,
+    "counts": {},
+    "errors": [],
+    "subscription_created": true,
+    "scope": "Rigid contacts for robot links and attachment blocks; cloth particle contacts not certified",
+    "diagnosis": "configured_no_events_channel_not_independently_validated",
+    "unexpected_robot_block_contacts": 0,
+    "positive_control_block_ground_events": 0
+  },
+  "postcross_trace_frames": 0,
+  "video_frames": 255,
+  "stage_images": 5,
+  "frame_errors": 0,
+  "public_action_count": 4,
+  "public_action_count_within_12": true,
+  "formal_12_action_budget_passed": false,
+  "slot_status_final": [
+    {
+      "slot": "right_sleeve",
+      "pick_index": 230,
+      "used": false,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    },
+    {
+      "slot": "left_sleeve",
+      "pick_index": 210,
+      "used": false,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    },
+    {
+      "slot": "hem",
+      "pick_index": 10,
+      "used": true,
+      "holding": false,
+      "enabled": false,
+      "constraint_exists": true
+    }
+  ],
+  "slot_events": [
+    {
+      "event": "grasp_attempt",
+      "slot": "hem",
+      "status": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 230,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 210,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 10,
+          "used": true,
+          "holding": true,
+          "enabled": true,
+          "constraint_exists": true
+        }
+      ],
+      "alignment": {
+        "slot": "hem",
+        "step": 644,
+        "anchor_count": 1,
+        "anchor_ids": [
+          10
+        ],
+        "points1_readback": [
+          [
+            0.0011302103521302342,
+            -0.006284130737185478,
+            -0.16999994218349457
+          ]
+        ]
+      },
+      "activation": {
+        "slot": "hem",
+        "step_before": 644,
+        "step_after": 645,
+        "max_displacement_m": 0.0013607025612145662,
+        "tracked_mean_displacement_m": 0.0003560638288035989,
+        "count_over_5mm": 0
+      }
+    },
+    {
+      "event": "release",
+      "slot": "hem",
+      "status": [
+        {
+          "slot": "right_sleeve",
+          "pick_index": 230,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "left_sleeve",
+          "pick_index": 210,
+          "used": false,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        },
+        {
+          "slot": "hem",
+          "pick_index": 10,
+          "used": true,
+          "holding": false,
+          "enabled": false,
+          "constraint_exists": true
+        }
+      ]
+    }
+  ],
+  "linear_motion_records": [
+    {
+      "start": [
+        0.005530224349022515,
+        -0.46081547315781285,
+        0.3883201813095618
+      ],
+      "target": [
+        -5.666015923111445e-08,
+        -0.6499999761581421,
+        0.1598999947309494
+      ],
+      "linear_subtargets": [
+        [
+          0.00506936759825737,
+          -0.47658084840784026,
+          0.3692851657613441
+        ],
+        [
+          0.004608510847492224,
+          -0.49234622365786773,
+          0.3502501502131264
+        ],
+        [
+          0.004147654096727078,
+          -0.5081115989078951,
+          0.3312151346649087
+        ],
+        [
+          0.003686797345961933,
+          -0.5238769741579226,
+          0.312180119116691
+        ],
+        [
+          0.0032259405951967873,
+          -0.5396423494079501,
+          0.2931451035684733
+        ],
+        [
+          0.002765083844431642,
+          -0.5554077246579775,
+          0.2741100880202556
+        ],
+        [
+          0.0023042270936664963,
+          -0.5711730999080049,
+          0.25507507247203787
+        ],
+        [
+          0.001843370342901351,
+          -0.5869384751580323,
+          0.2360400569238202
+        ],
+        [
+          0.0013825135921362057,
+          -0.6027038504080597,
+          0.2170050413756025
+        ],
+        [
+          0.0009216568413710595,
+          -0.6184692256580873,
+          0.1979700258273848
+        ],
+        [
+          0.0004608000906059142,
+          -0.6342346009081147,
+          0.1789350102791671
+        ],
+        [
+          -5.666015923111445e-08,
+          -0.6499999761581421,
+          0.1598999947309494
+        ]
+      ],
+      "holding": false,
+      "converged": true
+    },
+    {
+      "start": [
+        2.5984038020106575e-05,
+        -0.6472841435943233,
+        0.16305296177727555
+      ],
+      "target": [
+        -5.676772829588117e-08,
+        -0.6499999761581421,
+        0.013299995101988316
+      ],
+      "linear_subtargets": [
+        [
+          2.1643903728706164e-05,
+          -0.6477367823549598,
+          0.138094133998061
+        ],
+        [
+          1.7303769437305754e-05,
+          -0.6481894211155962,
+          0.11313530621884646
+        ],
+        [
+          1.2963635145905345e-05,
+          -0.6486420598762327,
+          0.08817647843963193
+        ],
+        [
+          8.623500854504936e-06,
+          -0.6490946986368692,
+          0.06321765066041739
+        ],
+        [
+          4.283366563104529e-06,
+          -0.6495473373975056,
+          0.038258822881202845
+        ],
+        [
+          -5.676772829588456e-08,
+          -0.6499999761581421,
+          0.013299995101988316
+        ]
+      ],
+      "holding": false,
+      "converged": true
+    },
+    {
+      "start": [
+        -1.1479986124437844e-05,
+        -0.6496410228188111,
+        0.013606878598969276
+      ],
+      "target": [
+        -1.0735920113802422e-05,
+        -0.6496394872665405,
+        0.01360649336129427
+      ],
+      "linear_subtargets": [
+        [
+          -1.0735920113802422e-05,
+          -0.6496394872665405,
+          0.01360649336129427
+        ]
+      ],
+      "holding": false,
+      "converged": true
+    }
+  ]
+}

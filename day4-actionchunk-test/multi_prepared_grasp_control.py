@@ -3,6 +3,7 @@
 Import after SimulationApp. No USD paths or particle indices enter public actions.
 No episode reset or reuse of a previously released slot is claimed.
 """
+import json
 import os
 from pathlib import Path
 import numpy as np
@@ -11,6 +12,8 @@ from pxr import UsdGeom, Gf, PhysxSchema, Vt
 from Env.env.Control import AttachmentBlock
 from hem_prepared_grasp_control import HemPreparedGraspControl
 from multi_grasp_geometry import select_regions, choose_unused_region
+from square_contact_reporting import (setup_early_contact_reporting,
+    verify_early_contact_reporting, create_block_contact_force_view)
 
 class SlotBlock(AttachmentBlock):
     def __init__(self,*args,slot_name,**kwargs):
@@ -119,6 +122,7 @@ class PreparedRegion(HemPreparedGraspControl):
         self.robot.open()
 
 class MultiPreparedGraspControl:
+    enable_early_contact_reporting=False
     def __init__(self,env):
         if len(env.robots)!=1 or len(env.garment)!=1:raise ValueError('One robot and garment required')
         self.original=env.control;self.env=env;self.world=env.world;self.robot=env.robots[0]
@@ -133,6 +137,22 @@ class MultiPreparedGraspControl:
         paths=[s.block.attachment_path for s in self.slots]+[s.block.block_path for s in self.slots]
         if len(set(paths))!=6:raise RuntimeError('Slot scene paths are not distinct')
         self.rest_world=world
+        self.contact_report_early=None;self.contact_report_after_reset=None;self.contact_force_view=None
+        if getattr(type(self),'enable_early_contact_reporting',False):
+            stage=self.world.stage
+            try:
+                self.contact_report_early=setup_early_contact_reporting(
+                    stage,[s.block.block_path for s in self.slots])
+            except Exception as exc:
+                self.contact_report_early={'error':repr(exc),'blocks':[],'robot_bodies':[],
+                                           'ground_colliders':[],'applied_before_reset':False}
+            view_info=create_block_contact_force_view(self.world)
+            self.contact_force_view=view_info.pop('view',None)
+            self.contact_report_early['force_view']=view_info
+            output=getattr(type(self),'output_directory',None)
+            if output is not None:
+                (Path(output)/'contact_report_setup_early.json').write_text(
+                    json.dumps(self.contact_report_early,indent=2,default=str),encoding='utf-8')
 
     def __getattr__(self,name):return getattr(self.original,name)
     @property
@@ -161,12 +181,38 @@ class MultiPreparedGraspControl:
             if s.alignment_record is not None and not np.array_equal(
                     np.asarray(prim.GetAttribute('points1').Get()),np.asarray(s.alignment_record['points1_readback'])):
                 raise RuntimeError('Aligned slot points1 changed')
+    def verify_contact_reporting(self):
+        if getattr(type(self),'enable_early_contact_reporting',False):
+            self.contact_report_after_reset=verify_early_contact_reporting(
+                self.world.stage,self.contact_report_early)
+            view_info={'valid':False,'error':'no force view'}
+            if self.contact_force_view is not None:
+                try:
+                    valid=bool(self.contact_force_view.is_physics_handle_valid())
+                    if not valid:self.contact_force_view.initialize()
+                    valid=bool(self.contact_force_view.is_physics_handle_valid())
+                    view_info={'valid':valid,'prim_paths':list(self.contact_force_view.prim_paths),
+                               'count':int(self.contact_force_view.count),'error':None}
+                except Exception as exc:
+                    view_info={'valid':False,'error':repr(exc)}
+            self.contact_report_after_reset['force_view']=view_info
+            output=getattr(type(self),'output_directory',None)
+            if output is not None:
+                (Path(output)/'contact_report_after_reset.json').write_text(
+                    json.dumps(self.contact_report_after_reset,indent=2,default=str),encoding='utf-8')
+            print('CONTACT_REPORT_SETUP_AFTER_RESET',
+                  json.dumps({'blocks_ok':self.contact_report_after_reset.get('blocks_ok'),
+                              'robot_ok':self.contact_report_after_reset.get('robot_ok'),
+                              'force_view':view_info},default=str),flush=True)
+        return self.contact_report_after_reset
+
     def initialize(self):
         for s in self.slots:
             s.initialize()
             if np.min(np.linalg.norm(self.rest_world[s.anchor_ids]-self.rest_world[s.pick_index],axis=1))>.03:
                 raise RuntimeError('Generated anchors outside selected region')
         self.assert_exclusive()
+        self.verify_contact_reporting()
     def robot_goto_position(self,pos,ori,flag,max_limit=1000):
         self.assert_exclusive();self.active.robot_goto_position(pos,ori,flag,max_limit);self.assert_exclusive()
     def move(self,pos,ori,flag,max_limit=1000):self.robot_goto_position(pos,ori,flag,max_limit)

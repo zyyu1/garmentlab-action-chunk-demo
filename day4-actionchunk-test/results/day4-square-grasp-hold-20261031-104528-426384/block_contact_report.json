@@ -1,0 +1,30 @@
+{
+  "robot_bodies": [
+    "/World/Franka/panda_link0",
+    "/World/Franka/panda_link1",
+    "/World/Franka/panda_link2",
+    "/World/Franka/panda_link3",
+    "/World/Franka/panda_link4",
+    "/World/Franka/panda_link5",
+    "/World/Franka/panda_link6",
+    "/World/Franka/panda_link7",
+    "/World/Franka/panda_link8",
+    "/World/Franka/panda_hand",
+    "/World/Franka/panda_leftfinger",
+    "/World/Franka/panda_rightfinger"
+  ],
+  "attachment_bodies": [
+    "/World/Attachment/attach/block",
+    "/World/Attachment/attach_1/block",
+    "/World/Attachment/attach_2/block"
+  ],
+  "callback_count": 0,
+  "event_count": 0,
+  "counts": {},
+  "errors": [],
+  "subscription_created": true,
+  "scope": "Rigid contacts for robot links and attachment blocks; cloth particle contacts not certified",
+  "diagnosis": "configured_no_events_channel_not_independently_validated",
+  "unexpected_robot_block_contacts": 0,
+  "positive_control_block_ground_events": 0
+}

@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "scope": "pre-first-reset geometry capture only; no physics/grasp validation",
+  "capture_phases": {
+    "mesh_before_prepared": {
+      "mesh_path": "/World/Garment/garment/mesh",
+      "point_count": 9945,
+      "face_count": 19756,
+      "face_vertex_index_count": 59268,
+      "timeline_playing": false,
+      "simulation_clock": {
+        "current_time": 0,
+        "current_time_step_index": 0
+      }
+    },
+    "mesh_after_prepared": {
+      "mesh_path": "/World/Garment/garment/mesh",
+      "point_count": 9945,
+      "face_count": 19756,
+      "face_vertex_index_count": 59268,
+      "timeline_playing": false,
+      "simulation_clock": {
+        "current_time": 0,
+        "current_time_step_index": 0
+      }
+    },
+    "mesh_before_first_reset": {
+      "mesh_path": "/World/Garment/garment/mesh",
+      "point_count": 9945,
+      "face_count": 19756,
+      "face_vertex_index_count": 59268,
+      "timeline_playing": false,
+      "simulation_clock": {
+        "current_time": 0,
+        "current_time_step_index": 0
+      }
+    }
+  },
+  "world_reset_intercepted": true,
+  "blocked_step_calls": 0,
+  "unexpected_reset_calls": 0,
+  "reference_anchor_file": {
+    "source": "/root/autodl-tmp/day4-anchor-diagnostic-20261024-210929-786774/anchors/after_start.json",
+    "sha256": "d118116dc2e1a43886289c2cc73b6ee5ee8396c2731a0de14b7cc272fa271bdd"
+  },
+  "pre_reset_meshes_equal": true
+}

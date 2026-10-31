@@ -1,0 +1,407 @@
+{
+  "evaluation_status": "development_unfrozen",
+  "evaluator_sha256": "61affa119b8b27407370d67021df80fbf78ccdbc15287a4e2d9a017298399a40",
+  "count": 12,
+  "rows": [
+    {
+      "label": "flat_seed_4100",
+      "directory": "day4-square-initial-20261031-094446-203825",
+      "initial_file": "initial_geometry.npz",
+      "final_file": "initial_geometry.npz",
+      "source_count": 210,
+      "line_origin_xy": [
+        0.0038591139018535614,
+        -0.42318740487098694
+      ],
+      "line_normal_xy": [
+        -0.03279558446534719,
+        0.9994620801409008
+      ],
+      "metrics": {
+        "symmetric_alignment_m": 0.11523810101984475,
+        "particle_grid_iou": 0.0,
+        "grid_cell_m": 0.01,
+        "reflected_material_error_m": 0.21999722806842428,
+        "stationary_material_drift_m": 0.0,
+        "crossed_fraction": 0.0,
+        "height_p95_m": 0.009900019504129887,
+        "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+        "success": null,
+        "threshold_status": "unfrozen"
+      },
+      "files_sha256": {
+        "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+        "initial_geometry.npz": "dd5783038cd7ae95c17525574ca9c76d0df2399261a6df6a0c8f09a5b351bcb3"
+      },
+      "known_label": "not_a_successful_fold",
+      "label_source": "initial-only or failed grasp-only run; no fold commanded"
+    },
+    {
+      "label": "flat_seed_4101",
+      "directory": "day4-square-initial-20261031-095254-316552",
+      "initial_file": "initial_geometry.npz",
+      "final_file": "initial_geometry.npz",
+      "source_count": 210,
+      "line_origin_xy": [
+        0.014985804446041584,
+        -0.43216758966445923
+      ],
+      "line_normal_xy": [
+        0.13058851958357878,
+        0.9914366538276509
+      ],
+      "metrics": {
+        "symmetric_alignment_m": 0.11523810088141188,
+        "particle_grid_iou": 0.0,
+        "grid_cell_m": 0.01,
+        "reflected_material_error_m": 0.2199994124095938,
+        "stationary_material_drift_m": 0.0,
+        "crossed_fraction": 0.0,
+        "height_p95_m": 0.009900018572807312,
+        "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+        "success": null,
+        "threshold_status": "unfrozen"
+      },
+      "files_sha256": {
+        "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+        "initial_geometry.npz": "b7b379ad5409a3bff4c0cf46df820abd701d71f0af38697d698bdd70833d52c7"
+      },
+      "known_label": "not_a_successful_fold",
+      "label_source": "initial-only or failed grasp-only run; no fold commanded"
+    },
+    {
+      "label": "flat_seed_4102",
+      "directory": "day4-square-initial-20261031-095611-471489",
+      "initial_file": "initial_geometry.npz",
+      "final_file": "initial_geometry.npz",
+      "source_count": 210,
+      "line_origin_xy": [
+        0.011672433465719223,
+        -0.43352118134498596
+      ],
+      "line_normal_xy": [
+        0.06077149927331315,
+        0.9981517043396128
+      ],
+      "metrics": {
+        "symmetric_alignment_m": 0.11523810129281384,
+        "particle_grid_iou": 0.0,
+        "grid_cell_m": 0.01,
+        "reflected_material_error_m": 0.21999992065352014,
+        "stationary_material_drift_m": 0.0,
+        "crossed_fraction": 0.0,
+        "height_p95_m": 0.009900019504129887,
+        "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+        "success": null,
+        "threshold_status": "unfrozen"
+      },
+      "files_sha256": {
+        "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+        "initial_geometry.npz": "6139e662569fcc6501cff7323d8f3dbfe112d9afd5ceafb1ca25790829de3bbf"
+      },
+      "known_label": "not_a_successful_fold",
+      "label_source": "initial-only or failed grasp-only run; no fold commanded"
+    },
+    {
+      "label": "flat_seed_4103",
+      "directory": "day4-square-initial-20261031-095925-799656",
+      "initial_file": "initial_geometry.npz",
+      "final_file": "initial_geometry.npz",
+      "source_count": 210,
+      "line_origin_xy": [
+        0.02554127387702465,
+        -0.44111618399620056
+      ],
+      "line_normal_xy": [
+        0.07505301526033073,
+        0.9971795449668693
+      ],
+      "metrics": {
+        "symmetric_alignment_m": 0.11523810102698556,
+        "particle_grid_iou": 0.0,
+        "grid_cell_m": 0.01,
+        "reflected_material_error_m": 0.2199998738606853,
+        "stationary_material_drift_m": 0.0,
+        "crossed_fraction": 0.0,
+        "height_p95_m": 0.009900016710162163,
+        "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+        "success": null,
+        "threshold_status": "unfrozen"
+      },
+      "files_sha256": {
+        "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+        "initial_geometry.npz": "d28ff2f2b50bf6d531dae86116e7270dcb551e7114124b9f0884b3c38d8a850e"
+      },
+      "known_label": "not_a_successful_fold",
+      "label_source": "initial-only or failed grasp-only run; no fold commanded"
+    },
+    {
+      "label": "flat_seed_4104",
+      "directory": "day4-square-initial-20261031-100246-659222",
+      "initial_file": "initial_geometry.npz",
+      "final_file": "initial_geometry.npz",
+      "source_count": 210,
+      "line_origin_xy": [
+        0.023871470242738724,
+        -0.44822460412979126
+      ],
+      "line_normal_xy": [
+        0.07297153217550116,
+        0.9973340240320491
+      ],
+      "metrics": {
+        "symmetric_alignment_m": 0.11523810118579499,
+        "particle_grid_iou": 0.0,
+        "grid_cell_m": 0.01,
+        "reflected_material_error_m": 0.2200000393681536,
+        "stationary_material_drift_m": 0.0,
+        "crossed_fraction": 0.0,
+        "height_p95_m": 0.009900016710162163,
+        "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+        "success": null,
+        "threshold_status": "unfrozen"
+      },
+      "files_sha256": {
+        "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+        "initial_geometry.npz": "b52903aa342cf191968b46a270f413990d166899d373ad84987a019c300d51c9"
+      },
+      "known_label": "not_a_successful_fold",
+      "label_source": "initial-only or failed grasp-only run; no fold commanded"
+    },
+    {
+      "label": "flat_seed_4105",
+      "directory": "day4-square-initial-20261031-100558-317616",
+      "initial_file": "initial_geometry.npz",
+      "final_file": "initial_geometry.npz",
+      "source_count": 210,
+      "line_origin_xy": [
+        0.005274496972560883,
+        -0.4408585727214813
+      ],
+      "line_normal_xy": [
+        -0.006861507051047629,
+        0.9999764595834186
+      ],
+      "metrics": {
+        "symmetric_alignment_m": 0.11523809941360644,
+        "particle_grid_iou": 0.0,
+        "grid_cell_m": 0.01,
+        "reflected_material_error_m": 0.21999987828500578,
+        "stationary_material_drift_m": 0.0,
+        "crossed_fraction": 0.0,
+        "height_p95_m": 0.009900019504129887,
+        "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+        "success": null,
+        "threshold_status": "unfrozen"
+      },
+      "files_sha256": {
+        "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+        "initial_geometry.npz": "11d2ccdebbb431480c1056e99c2e505b60253090810896ff2d8a5a80a6222adb"
+      },
+      "known_label": "not_a_successful_fold",
+      "label_source": "initial-only or failed grasp-only run; no fold commanded"
+    },
+    {
+      "label": "flat_seed_4106",
+      "directory": "day4-square-initial-20261031-100909-165817",
+      "initial_file": "initial_geometry.npz",
+      "final_file": "initial_geometry.npz",
+      "source_count": 210,
+      "line_origin_xy": [
+        0.02368381805717945,
+        -0.4229934811592102
+      ],
+      "line_normal_xy": [
+        -0.10269836686883102,
+        0.9947125441264301
+      ],
+      "metrics": {
+        "symmetric_alignment_m": 0.11523809980662546,
+        "particle_grid_iou": 0.0,
+        "grid_cell_m": 0.01,
+        "reflected_material_error_m": 0.22000003293072695,
+        "stationary_material_drift_m": 0.0,
+        "crossed_fraction": 0.0,
+        "height_p95_m": 0.009900017641484737,
+        "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+        "success": null,
+        "threshold_status": "unfrozen"
+      },
+      "files_sha256": {
+        "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+        "initial_geometry.npz": "a1f1beb5dc501e22580c714cb1b6ef39ad30ef5debfdf03016f84243b841e231"
+      },
+      "known_label": "not_a_successful_fold",
+      "label_source": "initial-only or failed grasp-only run; no fold commanded"
+    },
+    {
+      "label": "flat_seed_4107",
+      "directory": "day4-square-initial-20261031-101224-181183",
+      "initial_file": "initial_geometry.npz",
+      "final_file": "initial_geometry.npz",
+      "source_count": 210,
+      "line_origin_xy": [
+        0.012112747877836227,
+        -0.4369165897369385
+      ],
+      "line_normal_xy": [
+        0.1482659774629992,
+        0.9889475213209958
+      ],
+      "metrics": {
+        "symmetric_alignment_m": 0.11523810146501949,
+        "particle_grid_iou": 0.0,
+        "grid_cell_m": 0.01,
+        "reflected_material_error_m": 0.2199999931613918,
+        "stationary_material_drift_m": 0.0,
+        "crossed_fraction": 0.0,
+        "height_p95_m": 0.009900019504129887,
+        "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+        "success": null,
+        "threshold_status": "unfrozen"
+      },
+      "files_sha256": {
+        "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+        "initial_geometry.npz": "879c8837a9c7e70e925eac30aa7e0a54d763675d304c95b9d47f1de0a4d816bb"
+      },
+      "known_label": "not_a_successful_fold",
+      "label_source": "initial-only or failed grasp-only run; no fold commanded"
+    },
+    {
+      "label": "flat_seed_4108",
+      "directory": "day4-square-initial-20261031-101541-103282",
+      "initial_file": "initial_geometry.npz",
+      "final_file": "initial_geometry.npz",
+      "source_count": 210,
+      "line_origin_xy": [
+        0.008001372218132019,
+        -0.425005704164505
+      ],
+      "line_normal_xy": [
+        -0.13768763917409965,
+        0.9904757008723954
+      ],
+      "metrics": {
+        "symmetric_alignment_m": 0.11523810165803146,
+        "particle_grid_iou": 0.0,
+        "grid_cell_m": 0.01,
+        "reflected_material_error_m": 0.21999969605985048,
+        "stationary_material_drift_m": 0.0,
+        "crossed_fraction": 0.0,
+        "height_p95_m": 0.009900019504129887,
+        "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+        "success": null,
+        "threshold_status": "unfrozen"
+      },
+      "files_sha256": {
+        "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+        "initial_geometry.npz": "76422f8b02bac7d669faacba1ab55ed53809c098178fa7be5b46db2eab56232a"
+      },
+      "known_label": "not_a_successful_fold",
+      "label_source": "initial-only or failed grasp-only run; no fold commanded"
+    },
+    {
+      "label": "flat_seed_4109",
+      "directory": "day4-square-initial-20261031-101853-191858",
+      "initial_file": "initial_geometry.npz",
+      "final_file": "initial_geometry.npz",
+      "source_count": 210,
+      "line_origin_xy": [
+        0.026343196630477905,
+        -0.43836161494255066
+      ],
+      "line_normal_xy": [
+        -0.00884519802161549,
+        0.9999608804708104
+      ],
+      "metrics": {
+        "symmetric_alignment_m": 0.11523810135338627,
+        "particle_grid_iou": 0.0,
+        "grid_cell_m": 0.01,
+        "reflected_material_error_m": 0.22000021309685855,
+        "stationary_material_drift_m": 0.0,
+        "crossed_fraction": 0.0,
+        "height_p95_m": 0.009900013916194439,
+        "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+        "success": null,
+        "threshold_status": "unfrozen"
+      },
+      "files_sha256": {
+        "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+        "initial_geometry.npz": "696354653af86dd43dd841d415ac636b3351983db1ef2fda3fdd90969707c5af"
+      },
+      "known_label": "not_a_successful_fold",
+      "label_source": "initial-only or failed grasp-only run; no fold commanded"
+    },
+    {
+      "label": "held_before_release",
+      "directory": "day4-square-grasp-pose-20261031-091703-655195",
+      "initial_file": "00_initial.npz",
+      "final_file": "03_held.npz",
+      "source_count": 210,
+      "line_origin_xy": [
+        4.696737665454975e-09,
+        -0.44999974966049194
+      ],
+      "line_normal_xy": [
+        -0.0,
+        1.0
+      ],
+      "metrics": {
+        "symmetric_alignment_m": 0.11523477845740486,
+        "particle_grid_iou": 0.0,
+        "grid_cell_m": 0.01,
+        "reflected_material_error_m": 0.2173146650874526,
+        "stationary_material_drift_m": 0.010570927226459808,
+        "crossed_fraction": 0.0,
+        "height_p95_m": 0.009900023229420185,
+        "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+        "success": null,
+        "threshold_status": "unfrozen"
+      },
+      "files_sha256": {
+        "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+        "03_held.npz": "f12b3517727ed73b6da6f12db5b9dd4d39aebf99808acfcfd46644b9c60db9e9",
+        "00_initial.npz": "cc28f4b5e8ffdfe7d83e1ef5044b6198873fe517e1f7a5bda9300d728130ac41"
+      },
+      "known_label": "not_a_successful_fold",
+      "label_source": "initial-only or failed grasp-only run; no fold commanded"
+    },
+    {
+      "label": "after_release_and_30_steps",
+      "directory": "day4-square-grasp-pose-20261031-091703-655195",
+      "initial_file": "00_initial.npz",
+      "final_file": "04_released.npz",
+      "source_count": 210,
+      "line_origin_xy": [
+        4.696737665454975e-09,
+        -0.44999974966049194
+      ],
+      "line_normal_xy": [
+        -0.0,
+        1.0
+      ],
+      "metrics": {
+        "symmetric_alignment_m": 0.1152383861818028,
+        "particle_grid_iou": 0.0,
+        "grid_cell_m": 0.01,
+        "reflected_material_error_m": 0.2172787763292305,
+        "stationary_material_drift_m": 0.010169835227054672,
+        "crossed_fraction": 0.0,
+        "height_p95_m": 0.00990002229809761,
+        "scope": "Particle projection proxies, not triangle-area overlap or self-intersection certification",
+        "success": null,
+        "threshold_status": "unfrozen"
+      },
+      "files_sha256": {
+        "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+        "04_released.npz": "571929e213caee59a3800956521482fd19ea4282485877c9210b29f10481d3e7",
+        "00_initial.npz": "cc28f4b5e8ffdfe7d83e1ef5044b6198873fe517e1f7a5bda9300d728130ac41"
+      },
+      "known_label": "not_a_successful_fold",
+      "label_source": "initial-only or failed grasp-only run; no fold commanded"
+    }
+  ],
+  "formal_attempts_added": 0,
+  "limits": "No real positive folds; no estimated classifier accuracy or frozen thresholds. Centerline numerical tolerance 1um."
+}

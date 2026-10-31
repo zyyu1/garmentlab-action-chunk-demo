@@ -1,0 +1,354 @@
+{
+  "scope": "Rigid contacts for robot links and attachment blocks; cloth particle contacts not certified",
+  "pre_reset_setup": {
+    "scope": "authored before env.reset(); v4 authored after reset and saw zero events",
+    "threshold": 0.0,
+    "blocks": [
+      {
+        "path": "/World/Attachment/attach/block",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Attachment/attach_1/block",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Attachment/attach_2/block",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      }
+    ],
+    "robot_bodies": [
+      {
+        "path": "/World/Franka/panda_link0",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link1",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link2",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link3",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link4",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link5",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link6",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link7",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link8",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_hand",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_leftfinger",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_rightfinger",
+        "prim_valid": true,
+        "api": true,
+        "threshold": 0.0
+      }
+    ],
+    "ground_colliders": [
+      "/World/defaultGroundPlane/GroundPlane/CollisionPlane"
+    ],
+    "errors": [],
+    "applied_before_reset": true,
+    "force_view": {
+      "created": true,
+      "prim_paths": [
+        "/World/Attachment/attach/block",
+        "/World/Attachment/attach_1/block",
+        "/World/Attachment/attach_2/block"
+      ],
+      "count": 3,
+      "error": null,
+      "added_to_scene": false
+    }
+  },
+  "after_reset_verify": {
+    "blocks": [
+      {
+        "path": "/World/Attachment/attach/block",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Attachment/attach_1/block",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Attachment/attach_2/block",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      }
+    ],
+    "robot_bodies": [
+      {
+        "path": "/World/Franka/panda_link0",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Franka/panda_link1",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Franka/panda_link2",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Franka/panda_link3",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Franka/panda_link4",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Franka/panda_link5",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Franka/panda_link6",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Franka/panda_link7",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Franka/panda_link8",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Franka/panda_hand",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Franka/panda_leftfinger",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      },
+      {
+        "path": "/World/Franka/panda_rightfinger",
+        "api": true,
+        "threshold": 0.0,
+        "ok": true
+      }
+    ],
+    "ground_colliders": [
+      "/World/defaultGroundPlane/GroundPlane/CollisionPlane"
+    ],
+    "all_ok": true,
+    "blocks_ok": true,
+    "robot_ok": true,
+    "force_view": {
+      "valid": true,
+      "prim_paths": [
+        "/World/Attachment/attach/block",
+        "/World/Attachment/attach_1/block",
+        "/World/Attachment/attach_2/block"
+      ],
+      "count": 3,
+      "error": null
+    }
+  },
+  "robot_bodies": [
+    "/World/Franka/panda_link0",
+    "/World/Franka/panda_link1",
+    "/World/Franka/panda_link2",
+    "/World/Franka/panda_link3",
+    "/World/Franka/panda_link4",
+    "/World/Franka/panda_link5",
+    "/World/Franka/panda_link6",
+    "/World/Franka/panda_link7",
+    "/World/Franka/panda_link8",
+    "/World/Franka/panda_hand",
+    "/World/Franka/panda_leftfinger",
+    "/World/Franka/panda_rightfinger"
+  ],
+  "attachment_bodies": [
+    "/World/Attachment/attach/block",
+    "/World/Attachment/attach_1/block",
+    "/World/Attachment/attach_2/block"
+  ],
+  "callback_count": 751,
+  "event_count": 2609,
+  "counts": {
+    "block_ground": 2253,
+    "robot_ground": 356
+  },
+  "type_counts": {
+    "ContactEventType.CONTACT_PERSIST": 2607,
+    "ContactEventType.CONTACT_FOUND": 2
+  },
+  "errors": [],
+  "subscription_created": true,
+  "api_verified": {
+    "blocks": [
+      {
+        "path": "/World/Attachment/attach/block",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Attachment/attach_1/block",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Attachment/attach_2/block",
+        "api": true,
+        "threshold": 0.0
+      }
+    ],
+    "robot_bodies": [
+      {
+        "path": "/World/Franka/panda_link0",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link1",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link2",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link3",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link4",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link5",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link6",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link7",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_link8",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_hand",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_leftfinger",
+        "api": true,
+        "threshold": 0.0
+      },
+      {
+        "path": "/World/Franka/panda_rightfinger",
+        "api": true,
+        "threshold": 0.0
+      }
+    ]
+  },
+  "force_samples": 150,
+  "force_positive_samples": 14,
+  "force_max_norm": 287.58010864258074,
+  "force_view_error": null,
+  "force_rows": 150,
+  "event_positive_control": true,
+  "force_positive_control": true,
+  "event_channel_valid": true,
+  "force_channel_valid": true,
+  "positive_control_valid": true,
+  "independent_force_positive_control": true,
+  "unexpected_robot_block_contacts": 0,
+  "diagnosis": "block_ground_events_recorded"
+}

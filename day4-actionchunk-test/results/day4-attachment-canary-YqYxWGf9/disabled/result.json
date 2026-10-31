@@ -1,0 +1,28 @@
+{
+  "case": "disabled",
+  "completed": true,
+  "formal_day4_success": false,
+  "dt": 0.008333333333333333,
+  "pre_release_steps": 120,
+  "post_release_steps": 60,
+  "errors": [],
+  "source_sha256": "9aa9a8a27476be13a638bb20909ca68870898ecf7d5de058021f428d08373474",
+  "runtime_mass": [
+    [
+      0.019999999552965164
+    ]
+  ],
+  "runtime_inertia": [
+    [
+      9.999999747378752e-05,
+      0.0,
+      0.0,
+      0.0,
+      9.999999747378752e-05,
+      0.0,
+      0.0,
+      0.0,
+      9.999999747378752e-05
+    ]
+  ]
+}

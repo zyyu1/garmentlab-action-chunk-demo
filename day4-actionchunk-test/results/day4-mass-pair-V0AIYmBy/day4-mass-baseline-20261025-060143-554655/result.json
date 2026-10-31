@@ -1,0 +1,999 @@
+{
+  "passed": true,
+  "experiment_mode": "aligned",
+  "scope": "aligned lift plus 180 measured-position-target hold steps; read-only World.step trace",
+  "action_audit": [
+    {
+      "horizon": 1,
+      "matrix": [
+        [
+          -0.38365766406059265,
+          -0.24959932267665863,
+          0.15990036725997925,
+          0.0,
+          2.0
+        ]
+      ],
+      "physics_steps": 164,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 294,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_actions": true,
+        "not_done": true,
+        "steps_advanced": true,
+        "holding": true,
+        "attachment_enabled": true,
+        "attachment_reference": true,
+        "gripper_state": true,
+        "phase": true
+      }
+    },
+    {
+      "horizon": 1,
+      "matrix": [
+        [
+          -0.38402488827705383,
+          -0.26433783769607544,
+          0.11999999731779099,
+          0.0,
+          2.0
+        ]
+      ],
+      "physics_steps": 33,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 327,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_actions": true,
+        "not_done": true,
+        "steps_advanced": true,
+        "holding": true,
+        "attachment_enabled": true,
+        "attachment_reference": true,
+        "gripper_state": true,
+        "phase": true
+      }
+    },
+    {
+      "horizon": 4,
+      "matrix": [
+        [
+          -0.38402488827705383,
+          -0.26433783769607544,
+          0.07999999821186066,
+          0.0,
+          2.0
+        ],
+        [
+          -0.38402488827705383,
+          -0.26433783769607544,
+          0.05000000074505806,
+          0.0,
+          2.0
+        ],
+        [
+          -0.38402488827705383,
+          -0.26433783769607544,
+          0.029999999329447746,
+          0.0,
+          2.0
+        ],
+        [
+          -0.38402488827705383,
+          -0.26433783769607544,
+          0.019999999552965164,
+          0.0,
+          2.0
+        ]
+      ],
+      "physics_steps": 92,
+      "response": {
+        "executed_steps": 4,
+        "done": false,
+        "info": {
+          "step_count": 419,
+          "phase": 3,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_actions": true,
+        "not_done": true,
+        "steps_advanced": true,
+        "holding": true,
+        "attachment_enabled": true,
+        "attachment_reference": true,
+        "gripper_state": true,
+        "phase": true
+      }
+    },
+    {
+      "horizon": 1,
+      "matrix": [
+        [
+          -0.38402488827705383,
+          -0.26433783769607544,
+          0.019999999552965164,
+          0.0,
+          1.0
+        ]
+      ],
+      "physics_steps": 79,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 498,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_actions": true,
+        "not_done": true,
+        "steps_advanced": true,
+        "holding": true,
+        "attachment_enabled": true,
+        "attachment_reference": true,
+        "gripper_state": true,
+        "phase": true
+      }
+    },
+    {
+      "horizon": 1,
+      "matrix": [
+        [
+          -0.3839954733848572,
+          -0.26429176330566406,
+          0.12013791501522064,
+          0.0,
+          2.0
+        ]
+      ],
+      "physics_steps": 49,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 557,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_actions": true,
+        "not_done": true,
+        "steps_advanced": true,
+        "holding": true,
+        "attachment_enabled": true,
+        "attachment_reference": true,
+        "gripper_state": true,
+        "phase": true
+      }
+    },
+    {
+      "horizon": 1,
+      "matrix": [
+        [
+          -0.3836168646812439,
+          -0.26443806290626526,
+          0.1136464774608612,
+          0.0,
+          0.0
+        ]
+      ],
+      "physics_steps": 16,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 753,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_actions": true,
+        "not_done": true,
+        "steps_advanced": true,
+        "holding": true,
+        "attachment_enabled": true,
+        "attachment_reference": true,
+        "gripper_state": true,
+        "phase": true
+      }
+    }
+  ],
+  "mass_mode": "baseline",
+  "particle_mass_requested_kg": 0.01,
+  "reference_replay_required": true,
+  "settings": {
+    "overlap": 0.005,
+    "disabled_probe": "0",
+    "max_action_steps": 15000
+  },
+  "mass_audit": {
+    "constructor": {
+      "particle_mass_requested_kg": 0.01,
+      "usd_mass_before_reset_kg": 99.44999694824219,
+      "vertex_count": 9945,
+      "supplied_argument": "particle_mass"
+    },
+    "particle_system": {
+      "solverPositionIterationCount": 16,
+      "particleContactOffset": 0.009999999776482582,
+      "enableCCD": true,
+      "globalSelfCollisionEnabled": true
+    },
+    "stage_kilograms_per_unit": 1.0,
+    "physics_dt": 0.016666666666666666,
+    "reads": {
+      "after_start": {
+        "shape": [
+          1,
+          9945
+        ],
+        "min_kg": 0.010000912472605705,
+        "max_kg": 0.010000912472605705,
+        "total_kg": 99.45907454006374,
+        "max_relative_error": 9.124726057052612e-05,
+        "relative_tolerance": 0.001,
+        "checks": {
+          "shape": true,
+          "finite": true,
+          "positive": true,
+          "uniform": true,
+          "requested_mass_agreement": true
+        }
+      },
+      "before_actions": {
+        "shape": [
+          1,
+          9945
+        ],
+        "min_kg": 0.010000912472605705,
+        "max_kg": 0.010000912472605705,
+        "total_kg": 99.45907454006374,
+        "max_relative_error": 9.124726057052612e-05,
+        "relative_tolerance": 0.001,
+        "checks": {
+          "shape": true,
+          "finite": true,
+          "positive": true,
+          "uniform": true,
+          "requested_mass_agreement": true
+        }
+      },
+      "after_release": {
+        "shape": [
+          1,
+          9945
+        ],
+        "min_kg": 0.010000912472605705,
+        "max_kg": 0.010000912472605705,
+        "total_kg": 99.45907454006374,
+        "max_relative_error": 9.124726057052612e-05,
+        "relative_tolerance": 0.001,
+        "checks": {
+          "shape": true,
+          "finite": true,
+          "positive": true,
+          "uniform": true,
+          "requested_mass_agreement": true
+        }
+      }
+    }
+  },
+  "original_lift_trace_exact_checks": {
+    "vertices": true,
+    "block_position": true,
+    "block_quaternion": true,
+    "block_scale": true,
+    "ee_position": true,
+    "ee_quaternion": true,
+    "anchor_targets": true,
+    "physics_steps": true
+  },
+  "hold": {
+    "steps": 180,
+    "seconds": 3.0,
+    "fixed_ee_target": [
+      -0.38377846046567987,
+      -0.2643372032872849,
+      0.11354805838218143
+    ],
+    "original_lift_target": [
+      -0.38399546474502777,
+      -0.26429175025011076,
+      0.12013791839847184
+    ],
+    "orientation_policy": "unchanged: ori=None; measured quaternion recorded, not commanded",
+    "ee_before": [
+      -0.38377846046567987,
+      -0.2643372032872849,
+      0.11354805838218143
+    ],
+    "ee_after": [
+      -0.38361685730213146,
+      -0.26443805208872967,
+      0.11364648011126416
+    ],
+    "tracked_z_change_m": 0.0009240657091140747,
+    "follow_error_after_m": 7.42921229673992e-05,
+    "target_policy": "measured EE xyz at lift completion; braking and drift remain possible"
+  },
+  "lift_hold_trace": {
+    "capture_complete": true,
+    "scope": "explicit World.step samples during lift and fixed-target hold; not internal substeps",
+    "phase_counts": {
+      "lift": 50,
+      "hold": 180
+    },
+    "hold_start_shared_frame": 49,
+    "expected_hold_steps": 180,
+    "hold_target_policy": "measured EE xyz at lift completion; ori=None unchanged",
+    "sample_count": 230,
+    "physics_dt": 0.016666666666666666,
+    "first_step": 508,
+    "last_step": 737,
+    "captured_world_steps": 229,
+    "global_peak": {
+      "frame": 187,
+      "phase": "hold",
+      "physics_step": 695,
+      "elapsed_sim_seconds": 3.1166666666666667,
+      "world_sim_time": 11.616667272523046,
+      "tracked_mean_z_mm": 110.89865863323212,
+      "ee_x": -0.38362101760167555,
+      "ee_y": -0.2644391606535428,
+      "ee_z": 0.1136481412518462,
+      "ee_target_error_mm": 0.2126032472952046,
+      "block_follow_error_mm": 0.05298521080779666,
+      "paired_gap_mean_mm": 1.362611897206735,
+      "paired_gap_max_mm": 1.4450167564691117,
+      "all_edge_ratio_p95": 1.0646738183449318,
+      "all_edge_ratio_p99": 1.1585383425088849,
+      "all_edge_ratio_max": 1.7266320712039993,
+      "all_worst_edge_index": 27059,
+      "all_worst_edge_u": 8958,
+      "all_worst_edge_v": 9025,
+      "all_worst_edge_anchor_endpoints": 1,
+      "anchor_edge_ratio_p95": 1.471477875390967,
+      "anchor_edge_ratio_max": 1.7266320712039993,
+      "anchor_worst_edge_index": 27059,
+      "anchor_worst_edge_u": 8958,
+      "anchor_worst_edge_v": 9025,
+      "all_edge_ratio_to_lift_start_max": 1.7039098739624023,
+      "anchor_edge_ratio_to_lift_start_max": 1.7039098739624023,
+      "outside_edge_ratio_max": 1.634398536437562,
+      "boundary_edge_ratio_max": 1.7266320712039993,
+      "internal_edge_ratio_max": 1.1692169413835178,
+      "max_vertex_displacement_mm": 2.0279152393341064,
+      "worst_displacement_vertex": 5457,
+      "ee_speed_m_s": 8.391330094555584e-05,
+      "block_speed_m_s": 0.0
+    },
+    "anchor_peak": {
+      "frame": 187,
+      "phase": "hold",
+      "physics_step": 695,
+      "elapsed_sim_seconds": 3.1166666666666667,
+      "world_sim_time": 11.616667272523046,
+      "tracked_mean_z_mm": 110.89865863323212,
+      "ee_x": -0.38362101760167555,
+      "ee_y": -0.2644391606535428,
+      "ee_z": 0.1136481412518462,
+      "ee_target_error_mm": 0.2126032472952046,
+      "block_follow_error_mm": 0.05298521080779666,
+      "paired_gap_mean_mm": 1.362611897206735,
+      "paired_gap_max_mm": 1.4450167564691117,
+      "all_edge_ratio_p95": 1.0646738183449318,
+      "all_edge_ratio_p99": 1.1585383425088849,
+      "all_edge_ratio_max": 1.7266320712039993,
+      "all_worst_edge_index": 27059,
+      "all_worst_edge_u": 8958,
+      "all_worst_edge_v": 9025,
+      "all_worst_edge_anchor_endpoints": 1,
+      "anchor_edge_ratio_p95": 1.471477875390967,
+      "anchor_edge_ratio_max": 1.7266320712039993,
+      "anchor_worst_edge_index": 27059,
+      "anchor_worst_edge_u": 8958,
+      "anchor_worst_edge_v": 9025,
+      "all_edge_ratio_to_lift_start_max": 1.7039098739624023,
+      "anchor_edge_ratio_to_lift_start_max": 1.7039098739624023,
+      "outside_edge_ratio_max": 1.634398536437562,
+      "boundary_edge_ratio_max": 1.7266320712039993,
+      "internal_edge_ratio_max": 1.1692169413835178,
+      "max_vertex_displacement_mm": 2.0279152393341064,
+      "worst_displacement_vertex": 5457,
+      "ee_speed_m_s": 8.391330094555584e-05,
+      "block_speed_m_s": 0.0
+    },
+    "edge_class_counts": {
+      "0": 29610,
+      "1": 30,
+      "2": 63
+    },
+    "path": "/root/autodl-tmp/day4-mass-pair-V0AIYmBy/day4-mass-baseline-20261025-060143-554655/lift_hold_trace",
+    "note": "Geometric ratios only; no stress or self-intersection certification.",
+    "last_hold_window": {
+      "sample_count": 30,
+      "nominal_duration_seconds": 0.5,
+      "ee_speed_max_m_s": 0.000136609119409292,
+      "block_speed_max_m_s": 0.0,
+      "global_edge_ratio_min_of_maxima": 1.7185108957110369,
+      "global_edge_ratio_max_of_maxima": 1.7250219367842563,
+      "note": "Diagnostics only; no equilibrium or material-quality acceptance threshold."
+    },
+    "hold_ee_target": [
+      -0.38377846046567987,
+      -0.2643372032872849,
+      0.11354805838218143
+    ]
+  },
+  "reference_replay_exact_checks": {
+    "00_settled": true,
+    "01_approach": true,
+    "01b_before_close": true,
+    "02_grasp": true,
+    "03_lift": true,
+    "pre_hold_action_matrices": true,
+    "pre_hold_execute_step_counts": true
+  },
+  "baseline_full_trace_checks": {
+    "vertices": true,
+    "block_position": true,
+    "block_quaternion": true,
+    "block_scale": true,
+    "ee_position": true,
+    "ee_quaternion": true,
+    "anchor_targets": true,
+    "phase_code": true,
+    "hold_start_frame": true,
+    "expected_hold_steps": true,
+    "physics_steps": true,
+    "elapsed_sim_seconds": true,
+    "anchor_indices": true,
+    "edges": true,
+    "edge_anchor_endpoint_count": true,
+    "rest_edge_lengths": true,
+    "lift_start_edge_lengths": true,
+    "lift_ee_target": true,
+    "tracked_indices": true,
+    "points0": true,
+    "points1": true,
+    "hold_ee_target": true
+  },
+  "anchor_diagnostic": {
+    "captured": true,
+    "path": "/root/autodl-tmp/day4-mass-pair-V0AIYmBy/day4-mass-baseline-20261025-060143-554655/anchors",
+    "phases": {
+      "after_start": {
+        "visible_point_array_counts": {
+          "points0": 28,
+          "points1": 28
+        },
+        "read_errors": []
+      },
+      "00_settled": {
+        "visible_point_array_counts": {
+          "points0": 28,
+          "points1": 28
+        },
+        "read_errors": []
+      },
+      "01_approach": {
+        "visible_point_array_counts": {
+          "points0": 28,
+          "points1": 28
+        },
+        "read_errors": []
+      },
+      "01b_before_close": {
+        "visible_point_array_counts": {
+          "points0": 28,
+          "points1": 28
+        },
+        "read_errors": []
+      },
+      "aligned_original": {
+        "visible_point_array_counts": {
+          "points0": 28,
+          "points1": 28
+        },
+        "read_errors": []
+      },
+      "aligned_disabled": {
+        "visible_point_array_counts": {
+          "points0": 28,
+          "points1": 28
+        },
+        "read_errors": []
+      },
+      "enabled_before_first_step": {
+        "visible_point_array_counts": {
+          "points0": 28,
+          "points1": 28
+        },
+        "read_errors": []
+      },
+      "enabled_after_first_step": {
+        "visible_point_array_counts": {
+          "points0": 28,
+          "points1": 28
+        },
+        "read_errors": []
+      },
+      "02_grasp": {
+        "visible_point_array_counts": {
+          "points0": 28,
+          "points1": 28
+        },
+        "read_errors": []
+      },
+      "03_lift": {
+        "visible_point_array_counts": {
+          "points0": 28,
+          "points1": 28
+        },
+        "read_errors": []
+      },
+      "03b_hold": {
+        "visible_point_array_counts": {
+          "points0": 28,
+          "points1": 28
+        },
+        "read_errors": []
+      },
+      "04_release": {
+        "visible_point_array_counts": {
+          "points0": 28,
+          "points1": 28
+        },
+        "read_errors": []
+      }
+    },
+    "anchors_exposed": "Inspect raw point arrays; capture success does not establish anchor visibility.",
+    "alignment_metrics": {
+      "mode": "aligned",
+      "intervention_attempted": true,
+      "usd_points1_written": true,
+      "note": "Pipeline success is not proof of improvement or internal solver adoption.",
+      "anchor_vertex_indices": [
+        8629,
+        8630,
+        8631,
+        8632,
+        8633,
+        8634,
+        8661,
+        8703,
+        8748,
+        8749,
+        8754,
+        8755,
+        8779,
+        8819,
+        8820,
+        8822,
+        8823,
+        8861,
+        8862,
+        9004,
+        9025,
+        9059,
+        9074,
+        9119,
+        9120,
+        9154,
+        9155,
+        9156
+      ],
+      "original": {
+        "paired_gap_mean_mm": 15.582874435047671,
+        "paired_gap_max_mm": 21.374461587410874,
+        "all_edge_ratio_to_initial_p95_p99_max": [
+          1.0382057311920951,
+          1.0745382047141931,
+          1.2740987540971913
+        ],
+        "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+          0.9493875154762338,
+          1.0173291739258392,
+          1.0914637714695692,
+          1.1593671149958829
+        ]
+      },
+      "usd_readback_ok": true,
+      "after_operation": {
+        "paired_gap_mean_mm": 4.778566301424916e-07,
+        "paired_gap_max_mm": 1.0196281141610437e-06,
+        "all_edge_ratio_to_initial_p95_p99_max": [
+          1.0382057311920951,
+          1.0745382047141931,
+          1.2740987540971913
+        ],
+        "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+          0.9493875154762338,
+          1.0173291739258392,
+          1.0914637714695692,
+          1.1593671149958829
+        ]
+      },
+      "stages": {
+        "aligned_disabled": {
+          "paired_gap_mean_mm": 4.778566301424916e-07,
+          "paired_gap_max_mm": 1.0196281141610437e-06,
+          "all_edge_ratio_to_initial_p95_p99_max": [
+            1.0382057311920951,
+            1.0745382047141931,
+            1.2740987540971913
+          ],
+          "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+            0.9493875154762338,
+            1.0173291739258392,
+            1.0914637714695692,
+            1.1593671149958829
+          ]
+        },
+        "enabled_before_first_step": {
+          "paired_gap_mean_mm": 4.778566301424916e-07,
+          "paired_gap_max_mm": 1.0196281141610437e-06,
+          "all_edge_ratio_to_initial_p95_p99_max": [
+            1.0382057311920951,
+            1.0745382047141931,
+            1.2740987540971913
+          ],
+          "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+            0.9493875154762338,
+            1.0173291739258392,
+            1.0914637714695692,
+            1.1593671149958829
+          ]
+        },
+        "02_grasp": {
+          "paired_gap_mean_mm": 1.3615478592750283,
+          "paired_gap_max_mm": 1.4135275621084,
+          "all_edge_ratio_to_initial_p95_p99_max": [
+            1.0381129482064473,
+            1.0739733387037247,
+            1.2711182505296919
+          ],
+          "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+            0.9546469092025647,
+            1.0187438766387422,
+            1.0849525867448475,
+            1.1608873125564363
+          ]
+        },
+        "03_lift": {
+          "paired_gap_mean_mm": 1.0896764647313018,
+          "paired_gap_max_mm": 1.3747715620045036,
+          "all_edge_ratio_to_initial_p95_p99_max": [
+            1.0642585307419916,
+            1.1666665433121481,
+            1.6453496813439437
+          ],
+          "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+            0.9263487919351046,
+            1.034887484344124,
+            1.3994533979663752,
+            1.6453496813439437
+          ]
+        },
+        "03b_hold": {
+          "paired_gap_mean_mm": 1.3455356146573438,
+          "paired_gap_max_mm": 1.4359896546173225,
+          "all_edge_ratio_to_initial_p95_p99_max": [
+            1.0650221361301793,
+            1.157264113515674,
+            1.7199646336088392
+          ],
+          "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+            0.9613494757901238,
+            1.0335345059576844,
+            1.4754492921337607,
+            1.7199646336088392
+          ]
+        },
+        "04_release": {
+          "paired_gap_mean_mm": 92.73395718791203,
+          "paired_gap_max_mm": 94.63340332996275,
+          "all_edge_ratio_to_initial_p95_p99_max": [
+            1.0410232868108404,
+            1.076631238794103,
+            1.2376405895238107
+          ],
+          "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+            0.9543418387314858,
+            1.012892509666627,
+            1.0702273938317328,
+            1.1634367635122511
+          ]
+        }
+      },
+      "arrays_at_aligned_disabled": {
+        "points0_unchanged": true,
+        "points1_preserved": true
+      },
+      "arrays_at_enabled_before_first_step": {
+        "points0_unchanged": true,
+        "points1_preserved": true
+      },
+      "activation": {
+        "step_before": 491,
+        "step_after": 492,
+        "max_vertex_displacement_mm": 4.295316219329834,
+        "tracked_mean_displacement_mm": 1.3533076047897339,
+        "count_over_5_mm": 0,
+        "block_motion_mm": 0.004895322038877709,
+        "paired_gap_mean_mm": 1.369482178466672,
+        "paired_gap_max_mm": 1.5170581571560278,
+        "all_edge_ratio_to_initial_p95_p99_max": [
+          1.0383552923159252,
+          1.07560684407155,
+          1.2721022179037127
+        ],
+        "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+          0.932883374222379,
+          1.0191682953519539,
+          1.1183376901312707,
+          1.24228716567991
+        ]
+      },
+      "arrays_after_first_step": {
+        "points0_unchanged": true,
+        "points1_preserved": true
+      },
+      "arrays_at_02_grasp": {
+        "points0_unchanged": true,
+        "points1_preserved": true
+      },
+      "arrays_at_03_lift": {
+        "points0_unchanged": true,
+        "points1_preserved": true
+      },
+      "arrays_at_03b_hold": {
+        "points0_unchanged": true,
+        "points1_preserved": true
+      },
+      "arrays_at_04_release": {
+        "points0_unchanged": true,
+        "points1_preserved": true
+      },
+      "grasp_lift_release_checks_reached_end": true
+    }
+  },
+  "cloth_rise": 0.0928323045372963,
+  "follow_error": 0.0005314519531394432,
+  "cloth_drop": 0.09291939996182919,
+  "release_block_drift": 0.0,
+  "alignment_metrics": {
+    "mode": "aligned",
+    "intervention_attempted": true,
+    "usd_points1_written": true,
+    "note": "Pipeline success is not proof of improvement or internal solver adoption.",
+    "anchor_vertex_indices": [
+      8629,
+      8630,
+      8631,
+      8632,
+      8633,
+      8634,
+      8661,
+      8703,
+      8748,
+      8749,
+      8754,
+      8755,
+      8779,
+      8819,
+      8820,
+      8822,
+      8823,
+      8861,
+      8862,
+      9004,
+      9025,
+      9059,
+      9074,
+      9119,
+      9120,
+      9154,
+      9155,
+      9156
+    ],
+    "original": {
+      "paired_gap_mean_mm": 15.582874435047671,
+      "paired_gap_max_mm": 21.374461587410874,
+      "all_edge_ratio_to_initial_p95_p99_max": [
+        1.0382057311920951,
+        1.0745382047141931,
+        1.2740987540971913
+      ],
+      "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+        0.9493875154762338,
+        1.0173291739258392,
+        1.0914637714695692,
+        1.1593671149958829
+      ]
+    },
+    "usd_readback_ok": true,
+    "after_operation": {
+      "paired_gap_mean_mm": 4.778566301424916e-07,
+      "paired_gap_max_mm": 1.0196281141610437e-06,
+      "all_edge_ratio_to_initial_p95_p99_max": [
+        1.0382057311920951,
+        1.0745382047141931,
+        1.2740987540971913
+      ],
+      "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+        0.9493875154762338,
+        1.0173291739258392,
+        1.0914637714695692,
+        1.1593671149958829
+      ]
+    },
+    "stages": {
+      "aligned_disabled": {
+        "paired_gap_mean_mm": 4.778566301424916e-07,
+        "paired_gap_max_mm": 1.0196281141610437e-06,
+        "all_edge_ratio_to_initial_p95_p99_max": [
+          1.0382057311920951,
+          1.0745382047141931,
+          1.2740987540971913
+        ],
+        "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+          0.9493875154762338,
+          1.0173291739258392,
+          1.0914637714695692,
+          1.1593671149958829
+        ]
+      },
+      "enabled_before_first_step": {
+        "paired_gap_mean_mm": 4.778566301424916e-07,
+        "paired_gap_max_mm": 1.0196281141610437e-06,
+        "all_edge_ratio_to_initial_p95_p99_max": [
+          1.0382057311920951,
+          1.0745382047141931,
+          1.2740987540971913
+        ],
+        "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+          0.9493875154762338,
+          1.0173291739258392,
+          1.0914637714695692,
+          1.1593671149958829
+        ]
+      },
+      "02_grasp": {
+        "paired_gap_mean_mm": 1.3615478592750283,
+        "paired_gap_max_mm": 1.4135275621084,
+        "all_edge_ratio_to_initial_p95_p99_max": [
+          1.0381129482064473,
+          1.0739733387037247,
+          1.2711182505296919
+        ],
+        "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+          0.9546469092025647,
+          1.0187438766387422,
+          1.0849525867448475,
+          1.1608873125564363
+        ]
+      },
+      "03_lift": {
+        "paired_gap_mean_mm": 1.0896764647313018,
+        "paired_gap_max_mm": 1.3747715620045036,
+        "all_edge_ratio_to_initial_p95_p99_max": [
+          1.0642585307419916,
+          1.1666665433121481,
+          1.6453496813439437
+        ],
+        "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+          0.9263487919351046,
+          1.034887484344124,
+          1.3994533979663752,
+          1.6453496813439437
+        ]
+      },
+      "03b_hold": {
+        "paired_gap_mean_mm": 1.3455356146573438,
+        "paired_gap_max_mm": 1.4359896546173225,
+        "all_edge_ratio_to_initial_p95_p99_max": [
+          1.0650221361301793,
+          1.157264113515674,
+          1.7199646336088392
+        ],
+        "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+          0.9613494757901238,
+          1.0335345059576844,
+          1.4754492921337607,
+          1.7199646336088392
+        ]
+      },
+      "04_release": {
+        "paired_gap_mean_mm": 92.73395718791203,
+        "paired_gap_max_mm": 94.63340332996275,
+        "all_edge_ratio_to_initial_p95_p99_max": [
+          1.0410232868108404,
+          1.076631238794103,
+          1.2376405895238107
+        ],
+        "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+          0.9543418387314858,
+          1.012892509666627,
+          1.0702273938317328,
+          1.1634367635122511
+        ]
+      }
+    },
+    "arrays_at_aligned_disabled": {
+      "points0_unchanged": true,
+      "points1_preserved": true
+    },
+    "arrays_at_enabled_before_first_step": {
+      "points0_unchanged": true,
+      "points1_preserved": true
+    },
+    "activation": {
+      "step_before": 491,
+      "step_after": 492,
+      "max_vertex_displacement_mm": 4.295316219329834,
+      "tracked_mean_displacement_mm": 1.3533076047897339,
+      "count_over_5_mm": 0,
+      "block_motion_mm": 0.004895322038877709,
+      "paired_gap_mean_mm": 1.369482178466672,
+      "paired_gap_max_mm": 1.5170581571560278,
+      "all_edge_ratio_to_initial_p95_p99_max": [
+        1.0383552923159252,
+        1.07560684407155,
+        1.2721022179037127
+      ],
+      "anchor_incident_edge_ratio_to_initial_min_median_p95_max": [
+        0.932883374222379,
+        1.0191682953519539,
+        1.1183376901312707,
+        1.24228716567991
+      ]
+    },
+    "arrays_after_first_step": {
+      "points0_unchanged": true,
+      "points1_preserved": true
+    },
+    "arrays_at_02_grasp": {
+      "points0_unchanged": true,
+      "points1_preserved": true
+    },
+    "arrays_at_03_lift": {
+      "points0_unchanged": true,
+      "points1_preserved": true
+    },
+    "arrays_at_03b_hold": {
+      "points0_unchanged": true,
+      "points1_preserved": true
+    },
+    "arrays_at_04_release": {
+      "points0_unchanged": true,
+      "points1_preserved": true
+    },
+    "grasp_lift_release_checks_reached_end": true
+  }
+}

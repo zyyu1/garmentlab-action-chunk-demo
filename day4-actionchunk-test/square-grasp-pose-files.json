@@ -1,5 +1,5 @@
 {
-  "day4-square-grasp-pose.py": "6f03066ab2c2755930c05b6f910f7fb1758676991d6f9b7aae2e6cc6198e5730",
+  "day4-square-grasp-pose.py": "975ea7e9b940d10c57e26d13d951a2a7a374b3e16af9d3d4b5590dac308dd8af",
   "multi_prepared_grasp_control.py": "3a18f36dd3567b9c43fefb29cf2a67ffc5d2ea09deb6057af3b1ff5374c8721b",
   "multi_grasp_geometry.py": "b4acc72886a80cb0ac37eb62d2189a0a28755a79777778077cf34bdbe53d5656",
   "hem_prepared_grasp_control.py": "46b6f7ac82a95df98bed3c91541ea7164552948b3e257a97dc303ce2aba38e63",
@@ -16,5 +16,6 @@
   "minimum_fold_geometry.py": "86ef99d36f2288546dab8bbea290a87d52efd84d47d215ad8d916b04943faa03",
   "early_descent_geometry.py": "8911934112870121df8fb5b373da7f67575f6ef138af30bbca51f694777d5d0d",
   "single_anchor_hem_control.py": "0fba623e7c023499a787fac366d74ca6700017c0804a9fa367bd06e1cee92547",
-  "run-square-grasp-pose.sh": "e13421e9b9213465643773c31813a9f0b0502c3f95c61a1c619427ab481c0c20"
+  "run-square-grasp-pose.sh": "e13421e9b9213465643773c31813a9f0b0502c3f95c61a1c619427ab481c0c20",
+  "square_control_trace.py": "2b8fae48be4276fcc2aedb253b54b0a4e5c507aad1495927a83b01f145c9387d"
 }

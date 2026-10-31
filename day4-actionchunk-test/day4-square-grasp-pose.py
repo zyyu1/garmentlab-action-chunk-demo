@@ -18,7 +18,7 @@ sys.path.insert(0,'/root/autodl-tmp/garmentlab-action-chunk-demo')
 from backends.garmentlab_backend import GarmentLabBackend, _import_garmentlab
 from schemas.action import ActionChunk, CartesianAction, GripperCommand
 from square_pose_backend import SquarePoseBackend
-from square_pose_contract import grasp_to_ee,orientation_matrix
+from square_pose_contract import grasp_to_ee,orientation_matrix,orientation_euler
 from square_start import start_with_square as start_with_mass
 from square_geometry import square_targets, material_grasp_to_ee
 from hem_fold_geometry import hem_plan, hem_arc
@@ -28,7 +28,7 @@ from hem_fold_geometry import short_segments, hem_metrics
 
 out=Path('/root/autodl-tmp')/('day4-square-grasp-pose-'+datetime.now().strftime('%Y%m%d-%H%M%S-%f'))
 out.mkdir()
-result={'probe_version':'square-grasp-pose-v1','passed':False,'formal_day4_success':False,
+result={'probe_version':'square-grasp-pose-v3-control-trace','passed':False,'formal_day4_success':False,
         'scope':'Procedural square cloth, single-arm 4-action grasp diagnostic; no formal acceptance',
         'actions':[],'cycles':[],'errors':[],'yaw':0.,'physics_profile':'Original robot asset; no v9-v11 robot overrides; cloth mass .0001/friction .3/particle friction scale 0; room collisions isolated'}
 requested_bend=100.
@@ -38,8 +38,14 @@ result['physics_profile']+='; constructor bend intervention recorded separately'
 b=SquarePoseBackend(garment_usd=str(Path(__file__).with_name('square_cloth_40cm.usda')),prepared_grasp=True)
 postcross_trace=[];postcross_labels=[];record_postcross=False
 contact_recorder=None
+control_trace=None
 original_step=None;capture_mass=None;state_trace=[];phase='startup';writer=None;frame_count=0;image_count=0;frame_errors=0
 
+
+def json_default(value):
+    if isinstance(value,np.ndarray):return value.tolist()
+    if isinstance(value,np.generic):return value.item()
+    raise TypeError(f'Unsupported JSON type: {type(value).__name__}')
 
 def setup_video():
     global writer,cv2
@@ -76,7 +82,7 @@ def snapshot(label):
         data['block_position_'+str(i)]=pos.detach().cpu().numpy()
         data['block_quaternion_'+str(i)]=quat.detach().cpu().numpy()
     np.savez_compressed(out/(label+'.npz'),**data)
-    (out/(label+'.json')).write_text(json.dumps({'status':c.status(),'events':c.events},indent=2),encoding='utf-8')
+    (out/(label+'.json')).write_text(json.dumps({'status':c.status(),'events':c.events},indent=2,default=json_default),encoding='utf-8')
     if writer is not None:record_frame(label)
     return vertices,np.asarray(ee).copy()
 
@@ -102,12 +108,12 @@ try:
     source=out/'source';source.mkdir()
     dependencies=['day4-square-grasp-pose.py','multi_prepared_grasp_control.py','multi_grasp_geometry.py',
                   'hem_prepared_grasp_control.py','hem_fold_geometry.py','l1_fold_geometry.py',
-                  'room_collision_control.py','square_start.py','square_probe_control.py','square_contact_recorder.py','square_pose_backend.py','square_pose_contract.py','square_geometry.py','square_cloth_40cm.usda','minimum_fold_geometry.py','early_descent_geometry.py','single_anchor_hem_control.py']
+                  'room_collision_control.py','square_start.py','square_probe_control.py','square_contact_recorder.py','square_control_trace.py','square_pose_backend.py','square_pose_contract.py','square_geometry.py','square_cloth_40cm.usda','minimum_fold_geometry.py','early_descent_geometry.py','single_anchor_hem_control.py']
     manifest={}
     for name in dependencies:
         p=Path(__file__).with_name(name);shutil.copy2(p,source/name)
         manifest[name]=hashlib.sha256(p.read_bytes()).hexdigest()
-    (source/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
+    (source/'manifest.json').write_text(json.dumps(manifest,indent=2,default=json_default),encoding='utf-8')
     _import_garmentlab()
     import backends.prepared_grasp_control as prepared
     from square_probe_control import SquareProbeControl as MultiPreparedGraspControl
@@ -171,6 +177,8 @@ try:
         result.setdefault('runtime_source_hashes',{})[label]={'path':str(p),'sha256':hashlib.sha256(raw).hexdigest()}
     result['slots_precreated']=[{'label':s.label,'block':s.block.block_path,'constraint':s.block.attachment_path,
                                  'pick_index':s.pick_index,'anchor_ids':s.anchor_ids.tolist()} for s in c.slots]
+    from square_control_trace import ControlTrace
+    control_trace=ControlTrace(robot,b._env.world,out,lambda:phase)
     setup_video()
     from square_contact_recorder import ContactRecorder
     contact_recorder=ContactRecorder(b._env.world,out,lambda:phase)
@@ -178,7 +186,9 @@ try:
     result['per_segment_step_limit']=240
     original_step=b._env.world.step
     def checked_step(*args,**kwargs):
+        control_trace.state('before',b._step_count['n'])
         value=original_step(*args,**kwargs);c.assert_exclusive()
+        control_trace.state('after',b._step_count['n'])
         if int(b._step_count['n'])%3==0:record_frame()
         vertices=b._garment_world_positions()
         if record_postcross:
@@ -201,7 +211,7 @@ try:
     initial,_=snapshot('00_initial')
     plan=hem_plan(initial,c.slots[2].pick_index)
     np.savez_compressed(out/'fold_definition.npz',initial_vertices=initial,**plan)
-    (out/'expert_plan.json').write_text(json.dumps({k:(v.tolist() if hasattr(v,'tolist') else v) for k,v in plan.items() if k!='source_mask'},indent=2),encoding='utf-8')
+    (out/'expert_plan.json').write_text(json.dumps({k:(v.tolist() if hasattr(v,'tolist') else v) for k,v in plan.items() if k!='source_mask'},indent=2,default=json_default),encoding='utf-8')
     result['metric_threshold_status']='provisional only; no success threshold frozen'
     result['stage_metrics']={}
     initial_paths=[(s.block.block_path,s.block.attachment_path) for s in c.slots]
@@ -227,7 +237,7 @@ try:
     action(grasp_target,GripperCommand.CLOSE,'close')
     snapshot('02_grasp')
     phase='held_stationary'
-    for _ in range(60):slot._tick(grasp_target,[np.pi,0.,0.],follow=True)
+    for _ in range(60):slot._tick(grasp_target,orientation_euler(0.),follow=True)
     snapshot('03_held')
     ee,q=robot.get_cur_ee_pos()
     result['held_check']={'position_error_m':float(np.linalg.norm(np.asarray(ee)-grasp_target)),
@@ -238,7 +248,7 @@ try:
     held_ok=h['position_error_m']<.01 and h['arm_speed_rad_s']<.1 and h['orientation_reached'] and h['anchor_gap_max_m']<=.01
     action(np.asarray(ee),GripperCommand.OPEN,'release')
     phase='released_stationary'
-    for _ in range(30):slot._tick(np.asarray(ee),[np.pi,0.,0.],follow=False)
+    for _ in range(30):slot._tick(np.asarray(ee),orientation_euler(0.),follow=False)
     snapshot('04_released')
     if not held_ok:raise RuntimeError('Held pose/velocity gate failed; released and saved')
     if c.holding or c.attachment_enabled():raise RuntimeError('Release failed')
@@ -251,25 +261,29 @@ except BaseException as exc:
         try:snapshot('99_failure')
         except Exception as snapshot_error:result['failure_snapshot_error']=repr(snapshot_error)
 finally:
-    if contact_recorder is not None:result['contact_report']=contact_recorder.save()
-    if postcross_trace:
-        np.savez_compressed(out/'postcross_trace.npz',vertices=np.asarray(postcross_trace))
-        (out/'postcross_trace_labels.json').write_text(json.dumps(postcross_labels,indent=2),encoding='utf-8')
-    result['postcross_trace_frames']=len(postcross_trace)
-    if writer is not None:writer.release()
-    result['video_frames']=frame_count;result['stage_images']=image_count;result['frame_errors']=frame_errors
-    result['public_action_count']=len(result['actions'])
-    result['public_action_count_within_12']=len(result['actions'])<=12
-    result['formal_12_action_budget_passed']=False
-    if b._env is not None:
+    try:
+        if contact_recorder is not None:result['contact_report']=contact_recorder.save()
+        if postcross_trace:
+            np.savez_compressed(out/'postcross_trace.npz',vertices=np.asarray(postcross_trace))
+            (out/'postcross_trace_labels.json').write_text(json.dumps(postcross_labels,indent=2,default=json_default),encoding='utf-8')
+        result['postcross_trace_frames']=len(postcross_trace)
+        if writer is not None:writer.release()
+        result['video_frames']=frame_count;result['stage_images']=image_count;result['frame_errors']=frame_errors
+        result['public_action_count']=len(result['actions'])
+        result['public_action_count_within_12']=len(result['actions'])<=12
+        result['formal_12_action_budget_passed']=False
+        if b._env is not None:
+            try:
+                result['slot_status_final']=b._env.control.status();result['slot_events']=b._env.control.events
+                result['linear_motion_records']=b._env.control.motion_records
+            except Exception as exc:result['final_status_error']=repr(exc)
+        (out/'state_trace.json').write_text(json.dumps(state_trace,indent=2,default=json_default),encoding='utf-8')
+        (out/'result.json').write_text(json.dumps(result,indent=2,default=json_default),encoding='utf-8')
+        print('MINIMUM_HALF_FOLD_PIPELINE_PASSED',result['passed'],flush=True)
+        print('RESULT_FILE',out/'result.json',flush=True)
+        print('DOWNLOAD_DIR',out,flush=True)
+    finally:
+        if original_step is not None:b._env.world.step=original_step
         try:
-            result['slot_status_final']=b._env.control.status();result['slot_events']=b._env.control.events
-            result['linear_motion_records']=b._env.control.motion_records
-        except Exception as exc:result['final_status_error']=repr(exc)
-    (out/'state_trace.json').write_text(json.dumps(state_trace,indent=2),encoding='utf-8')
-    (out/'result.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
-    print('MINIMUM_HALF_FOLD_PIPELINE_PASSED',result['passed'],flush=True)
-    print('RESULT_FILE',out/'result.json',flush=True)
-    print('DOWNLOAD_DIR',out,flush=True)
-    if original_step is not None:b._env.world.step=original_step
-    b.stop()
+            if control_trace is not None:control_trace.close()
+        finally:b.stop()

@@ -12,7 +12,8 @@
 | 物理配置与诊断 | 已完成配置读取、质量/迭代数对照及抓取、释放、控制诊断；历史结果和失败记录已保留。 |
 | 原服装折叠 | 多次动作流程完成，但未得到已验收的释放后保持折叠；旧服装与被动载体探索分支已冻结。 |
 | 单层方巾 L1 | 转向原计划范围内的 40 cm 单层方巾、单 Franka；441 顶点、800 三角形。先打通一个符合公共接口的 L1，再扩展三档。 |
-| 最新姿态候选 | `SquarePoseBackend` 已准备并通过静态检查；抓取段离线 IK/FK 已检查，**尚未运行该候选的仿真**。 |
+| 最新短程验证 | v5 保持/释放与接触正控通过；双指触地证据及接触明细全零仍需审查。不是 L1 折叠成功。 |
+| 初态与离线工具 | L1 开发初态 10/10，L2/L3 各 0/10；接口预算、评价及尝试记录工具已有离线版本，尚未完成正式整合。 |
 | 正式验收与学习 | 三档正式成功轨迹、Day5 demonstrations、BC 训练及正式评估均未完成。 |
 
 当前进度以 [Day4 下一步](DAY4_NEXT_STEPS.md) 和 [验收记录](DAY4_ACCEPTANCE_TRACKER.md) 为准。历史日报和旧脚本用于追溯，不应作为当前运行入口。
@@ -28,34 +29,26 @@
 - Backend 统一使用 `Rz(yaw) Rx(pi)`，固定局部 Z 轴向下，不由 expert 额外传入俯仰指令。
 - 抓取代理参考点采用 URDF 命名指尖中点，相对 `right_gripper` 的局部偏移为 `+3.4 mm`；这不是经过真实夹持校准的接触模型。
 
-该候选尚未替换共享 Backend。离线运动学解不代表动态执行成功：完整折叠末段仍出现关节解跳变；抓取段的 URDF 手指网格对地余量约 1 mm，不能据此认证实际 USD 碰撞或稳定性。接触诊断的零事件记录尚无独立正控验证，不能解释为无碰撞。
+该候选尚未替换共享 Backend。离线运动学解不代表动态执行成功：完整折叠末段仍出现关节解跳变；抓取段的 URDF 手指网格对地余量约 1 mm，不能据此认证实际 USD 碰撞或稳定性。v5 接触正控已验证，但发现双指触地 356 条事件；接触明细位置、法向和冲量均为零，不能解释为零接触力。机器人与附件组已有过滤，robot_block=0 不能证明无碰撞。
 
 详见 [末端接口审查](DAY4_SQUARE_FRAME_AUDIT.md)、[离线运动学结果](day4-actionchunk-test/frame_audit/pose_audit.json) 和 [网格间隙检查](day4-actionchunk-test/frame_audit/clearance_audit.json)。
 
-## 下一次运行：短程抓取与释放
+## 最新交接与下一步
 
-只验证 **approach → descend → CLOSE → OPEN**，包含抓住后的静止检查和释放检查；不执行完整折叠，不计入正式成功批次。
+最新 v5 运行 `day4-square-grasp-hold-v5-20261031-113930-047613` 的短程保持/释放通过：位置误差 0.4733 mm、末臂速 0.00860 rad/s、锚点间隙 1.361 mm；事件和辅助块净力正控有效。首次 v5 因 `KeyError('attachment_bodies')` 失败，两个结果均保留。
 
-在已配置好的 AutoDL 实例中，确认 [文件清单](day4-actionchunk-test/square-grasp-pose-files.json) 列出的文件及该清单本身均放在 `/root/autodl-tmp/` 后运行：
+目前停工，不自动启动实验。下次先核对抓取坐标偏移、手指碰撞几何、地面间隙及辅助块实际/目标高度，再决定修正与短程复验；随后解决完整 L1 末段路径连续性。旧服装、翻腕和参数扫描分支冻结。
 
-```bash
-bash /root/autodl-tmp/run-square-grasp-pose.sh
-```
+详见 [最新交接日报](2026-10-31-GarmentLab日报%20Day4%20v5保持与接触审查交接.md) 和 [v5 预登记](day4-actionchunk-test/SQUARE_GRASP_HOLD_V5.md)。后续下载由用户手动执行。
 
-入口：[run-square-grasp-pose.sh](day4-actionchunk-test/run-square-grasp-pose.sh)。脚本先核验文件哈希，再启动仿真。依赖现有环境：
-
-- Isaac Sim 4.0 与 `/root/autodl-tmp/envs/isaac40/bin/python`；
-- 项目 Backend 位于 `/root/autodl-tmp/garmentlab-action-chunk-demo`；
-- 已适配的 GarmentLab 位于 `/root/autodl-tmp/garmentlab_workspace/GarmentLab`。
-
-仓库是代码与证据归档，**不是克隆后即可直接运行的完整环境镜像**。下载源码时须保持文件字节与清单一致，避免换行转换导致哈希失败。查看输出中的 `RESULT_FILE` 和 `DOWNLOAD_DIR`，保留完整结果目录，包括失败结果；审查实际位置、姿态、关节速度、附件及释放状态后，再决定是否接回 L1。
+仓库是代码与精简证据归档，不是完整环境镜像。实验依赖 Isaac Sim 4.0、现有 GarmentLab/Backend 环境及对应文件清单；历史入口不代表当前应运行的实验。
 
 ## Day4 剩余验收
 
 1. 得到完整释放、退让和静置后仍保持重叠的 L1 候选，并独立重复确认。
 2. 将有效控制整合到正式 Backend，验证 `reset(seed, difficulty)`、episode 内重抓取及连续 10 次 reset/rollout；折叠与 recovery 合计不超过 12 个高层动作。
 3. 固定 L1/L2/L3 初态协议和 seeds，每档保存 10 张可复现、肉眼可区分的初态截图，共 30 张。
-4. 实现每回合最多两次、有明确触发与停止条件的 recovery；在开发回合上冻结指标、测量时刻和阈值。
+4. 实现有明确触发与停止条件的 recovery：全局最多两次，但当前 7+5 动作模板在 12 步预算内仅能执行一次；在开发回合上冻结指标、测量时刻和阈值。
 5. 正式批次每档至少取得 5 条成功 expert episodes，共至少 15 条。保留全部尝试、失败原因、动作/状态/视频，并报告 `rejection rate = 被拒绝的尝试数 / 总尝试数`。
 6. 完成公共接口隔离检查及验收材料后，再进入 Day5 demonstrations 批量生成。
 

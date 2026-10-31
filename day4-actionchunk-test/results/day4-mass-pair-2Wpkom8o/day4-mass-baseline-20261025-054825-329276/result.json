@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "experiment_mode": "aligned",
+  "scope": "aligned lift plus 180 measured-position-target hold steps; read-only World.step trace",
+  "action_audit": [],
+  "mass_mode": "baseline",
+  "particle_mass_requested_kg": 0.01,
+  "reference_replay_required": true,
+  "settings": {
+    "overlap": 0.005,
+    "disabled_probe": "0",
+    "max_action_steps": 15000
+  },
+  "error": "RuntimeError('Physics particle masses do not match requested uniform mass')"
+}
