@@ -4,7 +4,7 @@
 
 - 第 1–5 步已完成：L1 x 向半折两次开发运行通过；正式 Backend 的 yaw/抓取/保持/重抓取/reset 10 循环通过。
 - **第 6a 步完成**：L1/L2/L3 各 10 张、共 30 张初态图全部 `passed=true`；三档初态肉眼可区分（L1 平铺、L2 宽短折带、L3 窄高半折）。
-- **第 6b 步刚开始**：5 动作 recovery 冒烟脚本已写好、**尚未运行**；7 动作折叠压缩尚未实现。当前折叠 9 + recovery 5 = 14 > 12，必须把折叠压到 7。
+- **第 6b 步进行中**：5 动作 recovery 已在 L2/L3 验证（刚性残差 8–9 µm）；7 动作折叠 v2 已验证（crossed 1.0、对齐/高度/保持与 9 动作一致，IoU 0.607）；**L2 的 recovery+fold 组合 12 动作通过**；**L3 组合的 fold 未保持**（crossed 0、释放后摊平），已改为用恢复后布料实际 yaw，待重跑。
 - 正式 Day4 成功仍为 **0**。
 
 ## 环境与连接
@@ -80,7 +80,13 @@ L3 的 yaml 已改为 `num_lift_drops: 1`、`max_recovery_moves: 1`；L3 的平�
 - 动作（5 个）：approach（折叠后 pick 上方 12 cm）→ pick（CLOSE，到折叠后 pick）→ lift（+8 cm）→ spread_place（折叠前 pick +3 cm）→ release。
 - 输出：`recovered.npz`、`recovered.png`、`result.json` 里的 `recovery_metrics`（刚性残差 vs flat、pick 位移、extent、z_p95、action_count）。
 
-**尚未运行。** 两个冒烟命令：
+**2026-11-02 09:50 L3 4300 recovery 已通过**（`day4-strip-recovery-20261102-095042-400051`，`passed=true`）：
+
+- 5 个动作全部成功，块跟随 ≤1.04 mm、锚点 ≤2.32 mm；
+- 相对 `flat_settled` 的刚性拟合残差最大 **8.0e-6 m**，左半折完全展开（形状与折叠前一致，仅差刚性旋转/平移）；
+- pick 位移 19.3 mm、recovered extent `0.4583×0.4583`、z extent ~6e-8；`recovered.png` 为完整平铺方巾；`action_count=5`。
+
+**L2 4200 recovery 也通过**（`day4-strip-recovery-20261102-095917-466741`）：5 个动作、块 ≤1.05 mm、锚点 ≤1.96 mm、相对 flat 的刚性残差 **8.6e-6 m**、pick 位移 4.2 mm、extent `0.4426×0.4425`、`recovered.png` 为平铺方巾。**L2/L3 的 5 动作 recovery 均验证通过。** 两个冒烟命令：
 
 ```bash
 bash /root/autodl-tmp/run-strip-recovery-smoke.sh /root/autodl-tmp/day4-square-initial-stripfold-20261102-023311-548690   # L2 4200
@@ -107,6 +113,19 @@ bash /root/autodl-tmp/run-strip-recovery-smoke.sh /root/autodl-tmp/day4-square-i
 - L3 的 recovery 展开的是左半折，随后 fold 再次折左半——同一方向的“展开再折”，需要确认 recovery 后的抓取点/折线与 fold 的 left slot 兼容。
 - L2 的 recovery 展开 bottom 折条，fold 折左半；两者正交，兼容性较好。
 
+## 6b 进展（2026-11-02 10:00 后）
+
+- **5 动作 recovery 已验证**：L3 4300（`095042-400051`）与 L2 4200（`095917-466741`）均 `passed=true`，相对 `flat_settled` 的刚性残差分别为 8.0 µm / 8.6 µm，布料完全展平；块/锚点跟随 <2.4 mm。
+- **7 动作折叠已验证（v2）**：`day4-l1-xfold-7actions-20261102-102118-812499`，labels `approach/close/arc45/arc90/arc135/place/release`。
+  - 压缩方式：保留 approach（+15 cm），把 descend 合并进 close（`Control.grasp` 内部先 drive 到抓取点再闭爪），去掉 retreat。
+  - crossed 1.0、对齐 6.357 mm（9 动作 6.358）、z_p95 68.60 mm（68.66）、held gate 0.505 mm/0.000916 rad/s/1.960 mm（与 9 动作一致）。
+  - `particle_occupancy_iou=0.607`（9 动作 0.652–0.662）、反射目标误差 7.63 mm（9 动作 5.7 mm）。原因：去掉单独 descend 后，close 在 `_drive` 结束时立即闭爪，抓取点没有 descend 的末速 settle；折叠仍有效。
+  - v1（把 approach 也合并成从 home 直接到抓取点）的 IoU 只有 0.570，已放弃。
+- **组合 episode（5+7=12）已实现**：`day4-recovery-fold-episode.py`。L2 4200（`103502-594762`）通过：recovery 残差 8.6 µm、fold crossed 1.0、extent `0.232×0.421`、z 0.0595、held 通过、12 动作。
+- **L3 4300 组合失败**（`104603-419951`）：recovery 正常（8.0 µm），fold 7 个动作执行、锚点跟随 ≤2.15 mm，但释放后布料完全摊平（crossed 0.0、extent 回到 0.458）。原因尚未定论：怀疑 ① 恢复与折叠共用左槽位（同一单点锚点先展开再折）；② 折叠用了初始 yaw，恢复后布料实际旋转约 1.3°，折线错位。
+- **已实现未验证的修正**：组合脚本改为用 recovered vs flat 的刚性拟合 yaw（`fold_yaw = case_yaw + Δ`）构造折叠弧线和动作姿态；script `88be0966…`，待重跑 L2/L3。
+- 7 动作 runner 仍是 world x / yaw=0；L1 正式批（yaw ≠ 0）也需要局部轴版本。
+
 ## 文件与哈希（当前有效）
 
 | 文件 | 哈希（LF） |
@@ -120,6 +139,12 @@ bash /root/autodl-tmp/run-strip-recovery-smoke.sh /root/autodl-tmp/day4-square-i
 | `day4-strip-recovery-smoke.py` | `68781cf2316ed103…` |
 | `run-strip-recovery-smoke.sh` | `57bdfd6848d185a0…` |
 | `square-strip-recovery-files.json` | 20 项，见文件 |
+| `day4-l1-xfold-7actions.py` | `baaba5cde14b416d…` |
+| `run-l1-xfold-7actions.sh` | `a65820c0e67b…` |
+| `square-l1-xfold-7actions-files.json` | 23 项，见文件 |
+| `day4-recovery-fold-episode.py` | `88be0966c8da36c0…` |
+| `run-recovery-fold-episode.sh` | `caa98ad3280b…` |
+| `square-recovery-fold-files.json` | 21 项，见文件 |
 
 共享 prepared 依赖（`multi_prepared_grasp_control.py`、`square_probe_control.py`、`single_anchor_hem_control.py`、`hem_prepared_grasp_control.py`、`hem_fold_geometry.py`、`multi_grasp_geometry.py`、`square_contact_reporting.py`、`square_proxy_ground_control.py`、`square_stable_hold.py` 等）沿用服务器已验证哈希，本轮未修改。
 
@@ -135,7 +160,7 @@ scp -P 23636 -r root@connect.nmb2.seetacloud.com:/root/autodl-tmp/day4-strip-rec
 
 ## 下一步顺序
 
-1. 上传 recovery 3 文件，跑 L2 4200 与 L3 4300 两个 recovery 冒烟。
+1. ~~上传 recovery 3 文件，跑 L2 4200 与 L3 4300 两个 recovery 冒烟。~~ **均通过**：L3 4300 残差 8.0 µm、L2 4200 残差 8.6 µm，5 动作展平。
 2. 检查 `recovery_metrics`：刚性残差 vs flat、pick 位移、extent 是否回到平铺量级；检查 `recovered.png`。若 5 动作展不平，先调 spread 目标高度/抬升高度/settle（不增加动作数）。
 3. 实现 7 动作折叠 runner（合并 approach+descend、去 retreat），在 L1 上重新验证折叠指标。
 4. 组合 initial_state → recovery(5) → fold(7)，在 L1/L2/L3 上各跑一遍，统计动作数并验证三档可完成折叠。

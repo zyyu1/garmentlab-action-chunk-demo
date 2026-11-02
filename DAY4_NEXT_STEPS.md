@@ -28,7 +28,15 @@
 - plan `e2cfaebe…`（version square-initial-v3）、yaml `a42fec8a…`、stripfold script `178ab10c…`、strip control `49075fb4…`、run script `33a4e142…`；30 张对比图本地 `results/initial30_sheet_v2.png`。
 - 已排除：lift→原高度释放（平铺）、原始动态 Control（3 cm reach 空抓）、角点折角（release 弹平）、left 0.165 / bottom 0.11（展开）、L3 top 第二折（近基座不可达）。
 
-**6b 暂停点**：5 动作 recovery 冒烟脚本已写好、未运行（`day4-strip-recovery-smoke.py` `68781cf2…`、`run-strip-recovery-smoke.sh` `57bdfd68…`、`square-strip-recovery-files.json`）。7 动作折叠压缩未实现；当前 9+5=14>12。下一步：上传 recovery 3 文件 → 跑 L2 4200 与 L3 4300 recovery 冒烟 → 实现 7 动作 fold 并复验 → 组合 recovery(5)+fold(7)=12。完整交接见 [2026-11-02 日报](2026-11-02-GarmentLab日报%20Day4%20L2L3初态与6b交接.md)。正式成功仍为 0。下方第 1/2 步及旧交接均为历史状态。
+**6b 进行中**：
+
+- 5 动作 recovery 已在 L2 4200（`095917-466741`）与 L3 4300（`095042-400051`）验证：刚性残差 8.0/8.6 µm、`action_count=5`。
+- 7 动作折叠 v2（`102118-812499`）通过：approach→close→arc45→arc90→arc135→place→release；crossed 1.0、对齐 6.357 mm、z_p95 68.60 mm、held 与 9 动作一致；IoU 0.607（9 动作 0.652–0.662）。
+- 组合 recovery+fold：L2 4200（`103502-594762`）**12 动作通过**（recovery 8.6 µm、fold crossed 1.0、extent 0.232×0.421、z 0.0595）。
+- L3 4300 组合（`104603-419951`）失败：recovery 正常，fold 动作执行且锚点跟随，但释放后折半摊平（crossed 0.0）。怀疑共用左槽位/初始 yaw 错位；已改为用 recovered vs flat 的刚性拟合 yaw（script `88be0966…`），待重跑。
+- 7 动作 fold runner 仍固定 yaw=0；L1 正式批需要 yaw-aware 版本。
+
+下一步：重跑 L2/L3 组合（recovered-yaw 版）；L3 若仍失败则改用未使用的 right 槽位镜像半折。之后 L1 7 动作 yaw-aware 复验，再进入第 7 步正式批次。完整交接见 [2026-11-02 日报](2026-11-02-GarmentLab日报%20Day4%20L2L3初态与6b交接.md)。正式成功仍为 0。下方第 1/2 步及旧交接均为历史状态。
 
 ## 第 1 步几何核对完成（历史记录）
 

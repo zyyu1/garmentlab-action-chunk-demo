@@ -1,0 +1,264 @@
+{
+  "probe_version": "strip-recovery-smoke-v1",
+  "passed": true,
+  "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261102-023311-548690",
+  "initial_case": {
+    "level": "perturbed",
+    "seed": 4200,
+    "translation_xy_m": [
+      0.016812008040814945,
+      0.003964959026106275
+    ],
+    "yaw_rad": -0.1154881356954241,
+    "settle_steps": 180,
+    "status": "blocked_unvalidated_corner_lift_drop",
+    "strips": [
+      {
+        "edge": "bottom",
+        "width_m": 0.174179
+      }
+    ]
+  },
+  "actions": [
+    {
+      "label": "approach",
+      "target_pose": [
+        0.033559128642082214,
+        -0.3002901077270508,
+        0.14699987776577472,
+        -0.1154881356954241
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 359,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "ee": [
+        0.033066214622039056,
+        -0.3025391302267938,
+        0.1505259421239122
+      ],
+      "step": 359
+    },
+    {
+      "label": "pick",
+      "target_pose": [
+        0.033559128642082214,
+        -0.3002901077270508,
+        0.030399877765774727,
+        -0.1154881356954241
+      ],
+      "command": 1,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 559,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "ee": [
+        0.03350840056580865,
+        -0.300330599093629,
+        0.03054616816465066
+      ],
+      "step": 559,
+      "block_error_m": 8.890885740073203e-07,
+      "max_single_anchor_gap_m": 0.0013619450067602658
+    },
+    {
+      "label": "lift",
+      "target_pose": [
+        0.033559128642082214,
+        -0.3002901077270508,
+        0.11039987776577473,
+        -0.1154881356954241
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 605,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "ee": [
+        0.03226358849804825,
+        -0.30156908740714455,
+        0.09535800348294873
+      ],
+      "step": 605,
+      "block_error_m": 0.001052891878555048,
+      "max_single_anchor_gap_m": 0.0013620146413036735
+    },
+    {
+      "label": "spread_place",
+      "target_pose": [
+        -0.006234391592442989,
+        -0.6447027325630188,
+        0.043299997152388095,
+        -0.1154881356954241
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 800,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "ee": [
+        -0.004903372859178959,
+        -0.6301015851904606,
+        0.045857511340133085
+      ],
+      "step": 800,
+      "block_error_m": 0.001032716900484568,
+      "max_single_anchor_gap_m": 0.0019602814750738083
+    },
+    {
+      "label": "release",
+      "target_pose": [
+        -0.006234391592442989,
+        -0.6447027325630188,
+        0.043299997152388095,
+        -0.1154881356954241
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 827,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "ee": [
+        -0.005897326540199809,
+        -0.6404693051708314,
+        0.044107768603803325
+      ],
+      "step": 827
+    }
+  ],
+  "errors": [],
+  "records": [
+    {
+      "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261102-023311-548690",
+      "n_strips": 1,
+      "edges": [
+        "bottom"
+      ],
+      "loaded_error_max_m": 0.000660233199596405,
+      "label": "state_loaded"
+    },
+    {
+      "strip": 0,
+      "edge": "bottom",
+      "width_m": 0.174179,
+      "pick_index": 10,
+      "folded_pick": [
+        0.033559128642082214,
+        -0.3002901077270508,
+        0.026999877765774727
+      ],
+      "flat_pick": [
+        -0.006234391592442989,
+        -0.6447027325630188,
+        0.009899997152388096
+      ],
+      "approach": [
+        0.033559128642082214,
+        -0.3002901077270508,
+        0.14699987776577472
+      ],
+      "pick": [
+        0.033559128642082214,
+        -0.3002901077270508,
+        0.030399877765774727
+      ],
+      "lift": [
+        0.033559128642082214,
+        -0.3002901077270508,
+        0.11039987776577473
+      ],
+      "spread": [
+        -0.006234391592442989,
+        -0.6447027325630188,
+        0.043299997152388095
+      ],
+      "label": "recovery_targets"
+    }
+  ],
+  "recovery_metrics": {
+    "rigid_residual_vs_flat_max_m": 8.608795931044205e-06,
+    "rigid_residual_vs_flat_p95_m": 6.219755028614304e-06,
+    "rigid_residual_start_max_m": 0.26552408633060703,
+    "pick_index": 10,
+    "pick_displacement_from_flat_m": 0.004155217093676071,
+    "recovered_extent": [
+      0.44255077838897705,
+      0.4425487518310547,
+      6.05359673500061e-08
+    ],
+    "recovered_z_p95": 0.009900017641484737,
+    "action_count": 5
+  },
+  "recovered_image": "/root/autodl-tmp/day4-strip-recovery-20261102-095917-466741/recovered.png"
+}
