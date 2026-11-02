@@ -1,0 +1,53 @@
+{
+  "variant_id": "b-right-dev-v1",
+  "registered_utc": "2026-11-02T18:35:48.693350+00:00",
+  "development_only": true,
+  "formal_stage4_success": false,
+  "base_manifest_sha256": "cb947b85c4d5acdaf2028cfcbde8eb3743158d3868e9ca082e85994beadb73b1",
+  "fold_edge": "right",
+  "fold_width_m": 0.2,
+  "overhang_m": 0.0,
+  "execution_modes": [
+    "single",
+    "arc4"
+  ],
+  "public_action_count": 12,
+  "development_cases": [
+    {
+      "seed": 4200,
+      "level": "perturbed",
+      "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261102-023311-548690"
+    },
+    {
+      "seed": 4300,
+      "level": "crumpled",
+      "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261102-074349-406408"
+    }
+  ],
+  "attempt_order": [
+    [
+      4200,
+      "single"
+    ],
+    [
+      4200,
+      "arc4"
+    ],
+    [
+      4300,
+      "single"
+    ],
+    [
+      4300,
+      "arc4"
+    ]
+  ],
+  "sampling": "OPEN + 30 release ticks + settle(180); final.npz only",
+  "development_gates": "unchanged base runner: held gate, crossed >= 0.5, exactly 12 actions, no residual attachment",
+  "limitations": [
+    "not a formal success threshold freeze",
+    "no independent retreat or second retention sample",
+    "held-out seeds are prohibited by this wrapper",
+    "each full negative outcome retained without retry replacement"
+  ]
+}

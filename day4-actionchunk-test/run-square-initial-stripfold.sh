@@ -7,13 +7,13 @@ seed=${1:-4200}
 import sys,json,hashlib
 from pathlib import Path
 seed=int(sys.argv[1])
-assert 4200<=seed<=4309, 'Only L2/L3 seeds 4200..4209 and 4300..4309 are enabled'
+assert 4200<=seed<=4229 or 4300<=seed<=4329, 'Only registered L2/L3 seeds 4200..4209+4210..4229 and 4300..4309+4310..4329 are enabled'
 for name,digest in json.loads(Path('square-initial-stripfold-files.json').read_text()).items():
     assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==digest,name
 plan=json.loads(Path('square-initial-plan.json').read_text())
 rows=[r for r in plan['episodes'] if r['seed']==seed]
 assert len(rows)==1, 'Seed not in square-initial-plan.json'
-expected='perturbed' if 4200<=seed<=4209 else 'crumpled'
+expected='perturbed' if 4200<=seed<=4229 else 'crumpled'
 assert rows[0]['level']==expected, 'Seed/level mismatch'
 assert rows[0].get('strips'), 'Missing strip definitions'
 assert hashlib.sha256(Path('square-difficulty.yaml').read_bytes()).hexdigest()==plan['config_sha256']

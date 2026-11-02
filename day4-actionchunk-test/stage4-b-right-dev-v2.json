@@ -1,0 +1,172 @@
+{
+  "variant_id": "b-right-dev-v2",
+  "registered_utc": "2026-11-02T20:11:02+00:00",
+  "development_only": true,
+  "formal_stage4_success": false,
+  "base_manifest_sha256": "cb947b85c4d5acdaf2028cfcbde8eb3743158d3868e9ca082e85994beadb73b1",
+  "fold_edge": "right",
+  "fold_width_m": 0.2,
+  "overhang_m": 0.0,
+  "execution_modes": [
+    "single"
+  ],
+  "public_action_count": 12,
+  "initial_registry": "stage4-b-right-dev-v2-initials.json",
+  "development_cases": [
+    {
+      "seed": 4201,
+      "level": "perturbed"
+    },
+    {
+      "seed": 4202,
+      "level": "perturbed"
+    },
+    {
+      "seed": 4203,
+      "level": "perturbed"
+    },
+    {
+      "seed": 4204,
+      "level": "perturbed"
+    },
+    {
+      "seed": 4205,
+      "level": "perturbed"
+    },
+    {
+      "seed": 4206,
+      "level": "perturbed"
+    },
+    {
+      "seed": 4207,
+      "level": "perturbed"
+    },
+    {
+      "seed": 4208,
+      "level": "perturbed"
+    },
+    {
+      "seed": 4209,
+      "level": "perturbed"
+    },
+    {
+      "seed": 4301,
+      "level": "crumpled"
+    },
+    {
+      "seed": 4302,
+      "level": "crumpled"
+    },
+    {
+      "seed": 4303,
+      "level": "crumpled"
+    },
+    {
+      "seed": 4304,
+      "level": "crumpled"
+    },
+    {
+      "seed": 4305,
+      "level": "crumpled"
+    },
+    {
+      "seed": 4306,
+      "level": "crumpled"
+    },
+    {
+      "seed": 4307,
+      "level": "crumpled"
+    },
+    {
+      "seed": 4308,
+      "level": "crumpled"
+    },
+    {
+      "seed": 4309,
+      "level": "crumpled"
+    }
+  ],
+  "attempt_order": [
+    [
+      4201,
+      "single"
+    ],
+    [
+      4202,
+      "single"
+    ],
+    [
+      4203,
+      "single"
+    ],
+    [
+      4204,
+      "single"
+    ],
+    [
+      4205,
+      "single"
+    ],
+    [
+      4206,
+      "single"
+    ],
+    [
+      4207,
+      "single"
+    ],
+    [
+      4208,
+      "single"
+    ],
+    [
+      4209,
+      "single"
+    ],
+    [
+      4301,
+      "single"
+    ],
+    [
+      4302,
+      "single"
+    ],
+    [
+      4303,
+      "single"
+    ],
+    [
+      4304,
+      "single"
+    ],
+    [
+      4305,
+      "single"
+    ],
+    [
+      4306,
+      "single"
+    ],
+    [
+      4307,
+      "single"
+    ],
+    [
+      4308,
+      "single"
+    ],
+    [
+      4309,
+      "single"
+    ]
+  ],
+  "sampling": "OPEN + 30 release ticks + settle(180 for perturbed, 240 for crumpled); final.npz only",
+  "development_gates": "unchanged base runner: held gate, crossed >= 0.5, exactly 12 actions, no residual attachment",
+  "limitations": [
+    "coverage expansion only; not a formal success threshold freeze",
+    "single representation only; arc4 equivalence is established on seeds 4200/4300 and not re-tested per seed",
+    "no independent retreat or second retention sample",
+    "held-out seeds are prohibited by this wrapper",
+    "each full negative outcome retained without retry replacement"
+  ]
+}

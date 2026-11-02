@@ -1,0 +1,4 @@
+UPLOADED square-initial-files.json bccf3e157d96a53c4afba154194ddb652880f7634bedca912b9b5e4127ec5940 LF_ONLY True
+MANIFEST square-initial-files.json all-entries-bad []
+UPLOADED square-initial-stripfold-files.json 70b1793b5a87f69e9a4cbde5f6b40b047120eed798bdd895dee27e33072477f0 LF_ONLY True
+MANIFEST square-initial-stripfold-files.json all-entries-bad []

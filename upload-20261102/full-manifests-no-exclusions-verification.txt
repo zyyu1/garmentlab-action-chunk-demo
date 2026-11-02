@@ -1,0 +1,3 @@
+MANIFEST square-initial-files.json bad []
+MANIFEST square-initial-stripfold-files.json bad []
+EXPECT_MANIFEST_SHA256 bccf3e157d96a53c4afba154194ddb652880f7634bedca912b9b5e4127ec5940 70b1793b5a87f69e9a4cbde5f6b40b047120eed798bdd895dee27e33072477f0

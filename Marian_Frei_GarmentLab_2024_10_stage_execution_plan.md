@@ -9,7 +9,7 @@
 
 ---
 
-> 命名约定：Stage 表示按验收推进的工作阶段，每个阶段可跨多天；原 Day N 对应 Stage N。为兼容既有入口，`DAY4_*.md`、脚本、结果目录和历史日报文件名保留。
+> 命名约定：Stage 表示按验收推进的工作阶段，每个阶段可跨多天；原 Day N 对应 Stage N。为兼容既有入口，`DAY4_*.md`、脚本名和结果目录名保留；日报文件名已统一改为 Stage。
 
 
 ## 0. 最终决定
@@ -260,7 +260,7 @@ gripper state
 phase one-hot
 ```
 
-如果 garment 拓扑不能稳定提供四角，就使用固定数量 sampled particles 或 point-cloud keypoints。不要在第 4 天以后更换 observation 定义。
+如果 garment 拓扑不能稳定提供四角，就使用固定数量 sampled particles 或 point-cloud keypoints。不要在 Stage 4 以后更换 observation 定义。
 
 ### 5.3 Action
 
@@ -306,6 +306,8 @@ configs/difficulty.yaml
 - drop position；
 - physics settle steps；
 - random seeds。
+
+> 实现现状与口径约束（2026-11-02 定稿；第二步核对脚本后修正）：L1 用独立“过折”折形（place 末目标沿折向 +2 cm，place 横向 0.42），L2/L3 用同一个 nominal 20/20 左半折（width 0.20、无 overhang、place 横向 0.40），两者的差别只在初态（L2 为 bottom 折条 0.1615–0.1793 m，L3 为 left 折条 0.20 m）。因此 **L1 与 L2/L3 是两个不同折形任务**，L1 vs L2/L3 的成功率差异不得归因于初态难度；L2 与 L3 是同一任务下的两种初态族，可比但不是受控难度梯度。各档成功率必须按本档冻结的折形定义单独报告，三档汇总只能称多任务平均、不能称难度曲线。实现上 L2/L3 的初态由 strip 生成器（`day4-square-initial-stripfold.py` + `square-initial-plan.json`）产生，不是上表的 lift-drop 流程。定义冻结见 [STAGE4_TASK_DEFINITION_FREEZE.md](STAGE4_TASK_DEFINITION_FREEZE.md)，状态见 [DAY4_ACCEPTANCE_TRACKER.md](DAY4_ACCEPTANCE_TRACKER.md)。
 
 ### 5.5 Scripted expert
 

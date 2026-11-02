@@ -1,0 +1,4 @@
+RIGHT_MANIFEST_BAD []
+SHA square-recovery-fold-right-v1-files.json 9b105cf60607bce8d98c8111018a659aabdfc0c3673050573f1bd54a26dc095d
+SHA stage4-b-right-dev-v1.json 37b1dfbafd63ee8d26d9826ac3f56214f55906a65c39c654aed2249737c0387f
+SHA square-recovery-fold-files.json cb947b85c4d5acdaf2028cfcbde8eb3743158d3868e9ca082e85994beadb73b1

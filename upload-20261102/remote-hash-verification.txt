@@ -1,0 +1,5 @@
+NEW square-initial-plan.json 32e61d575d77eae0943cb2251d10c25b12d7f0d9f8f962ddd96dc1a4d4d2ab85 EXPECTED_PREFIX_MATCH True
+NEW run-square-initial.sh b22f848ee995c88b48d550ba83687ee6d804b9a2731fabb054fa143687bc4637 EXPECTED_PREFIX_MATCH True
+NEW run-square-initial-stripfold.sh 1116550f65b9282c2a0e85f321c9ceb863cf8f1fe152c36bc48e387ebc34b631 EXPECTED_PREFIX_MATCH True
+MANIFEST square-initial-files.json other-entries-bad [('square-difficulty.yaml', 'mismatch'), ('multi_prepared_grasp_control.py', 'mismatch'), ('square_start.py', 'mismatch')]
+MANIFEST square-initial-stripfold-files.json other-entries-bad []

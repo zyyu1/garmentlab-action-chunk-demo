@@ -1,0 +1,78 @@
+[
+  {
+    "file": "room_collision_audit.json",
+    "sha256": "e6f758f589ccb7b2c48e1ed573a35d71c0649aa6dcd04cec2ee0358016618516"
+  },
+  {
+    "file": "cloth_constructed.npz",
+    "sha256": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f"
+  },
+  {
+    "file": "particle_masses_after_start.npy",
+    "sha256": "a975cc0916de542424a6808204af3a00e12129206eaf43c4cdaaf2b95d7db5af"
+  },
+  {
+    "file": "mass_audit.json",
+    "sha256": "9bb3bd7d3d252a80b20fe01203feb11c034ce083a339340c7255b8753cba8a3a"
+  },
+  {
+    "file": "00_initial.npz",
+    "sha256": "02d88dd88edc2772cc972f2b5a0a88af672ba46a8689708d0785b41e19e74251"
+  },
+  {
+    "file": "01_approach.npz",
+    "sha256": "9ed71e8c403f43548a01591ab2173f7c0a92bd91710b3a9b2e59670e89ae49e5"
+  },
+  {
+    "file": "02_close.npz",
+    "sha256": "68969d09118f5a99d665ae867f13953aba255e8cbb6034534a31574278d44d3b"
+  },
+  {
+    "file": "03_arc45.npz",
+    "sha256": "2eaa61ae26d9a16a7e96a76f5eae23d2c73f4d63724420b57d91e92726fd3951"
+  },
+  {
+    "file": "03_arc90.npz",
+    "sha256": "d4bb1d63b22591eee8179b08b4535c9ed7f1f4c3e979b0417f3b43935680e50c"
+  },
+  {
+    "file": "03_arc135.npz",
+    "sha256": "72a0d40a17b4c413173886526bde09c966cb482f0f20523938b2c522ab709ad1"
+  },
+  {
+    "file": "03_place.npz",
+    "sha256": "8a0c70d0bbcec3b4da21ca0b8045f04c6d9bc5d6085ae7fb1c8a7f2e298734ae"
+  },
+  {
+    "file": "hold_trace.jsonl",
+    "sha256": "30ceb97d4d89b4031a987c85b8a9ec8c383d456f85b2acc84b110037d3730fb3"
+  },
+  {
+    "file": "03_hold_end.npz",
+    "sha256": "ec605d0512761b3ae8108a98a54651b3e3b4317ab527b75ce25407ef20b7c13d"
+  },
+  {
+    "file": "04_released.npz",
+    "sha256": "da2c72eab50e9647158bbe42c15d35f4cb32f86e93bc0133fe57b71a574a7f6f"
+  },
+  {
+    "file": "05_release_stationary.npz",
+    "sha256": "26493c1c9874077a5503af921ccdeb187a287a8e17213faaf7857905d8590cce"
+  },
+  {
+    "file": "06_final_3s.npz",
+    "sha256": "8f02c9c382255ec90aa48258016fdb2d8207e4c7bfa61fd88adfb3d644ebf2dd"
+  },
+  {
+    "file": "final.png",
+    "sha256": "f42dcbc1fbd65c2b79784e8cbb711cdcde02895a35bf0bdb5230533f9da94f21"
+  },
+  {
+    "file": "result.json",
+    "sha256": "511da7117d0bbcf47cbb5c9efb612dd4e7e64b4591374a4cd0ca851de5eb108f"
+  },
+  {
+    "file": "runner.log",
+    "sha256": "f5c5650ee31d3bf05d6bb58ea378abeb3d0636a4782a28ba9b9d709ef71bb171"
+  }
+]

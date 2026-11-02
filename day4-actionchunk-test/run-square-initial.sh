@@ -7,7 +7,7 @@ seed=${1:-4100}
 import sys,json,hashlib
 from pathlib import Path
 seed=int(sys.argv[1])
-assert seed in range(4100,4110), 'Only L1 seeds 4100..4109 are enabled'
+assert 4100<=seed<=4129, 'Only registered L1 seeds 4100..4109 (dev) and 4110..4129 (held-out) are enabled'
 for name,digest in json.loads(Path('square-initial-files.json').read_text()).items():
     assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==digest,name
 plan=json.loads(Path('square-initial-plan.json').read_text())

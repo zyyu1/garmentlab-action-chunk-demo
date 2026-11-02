@@ -1,8 +1,8 @@
-# Day4：上游核对与具体解决路线（2026-10-30）
+# Stage 4：上游核对与具体解决路线（2026-10-30）
 
 ## 结论与范围
 
-已通过 GitHub 插件检索 GarmentLab/GarmentLab 的 main、README、FoldDemo、FoldEnv、Control、GarmentConfig、Garment、BaseEnv 和相关 issues，并核对本地 Day4 源码/结果。上游 main 本次解析为 `6ee0620fddb8083d5eab554fa343cdc966c61d5f`，与本地原先选定版本一致。
+已通过 GitHub 插件检索 GarmentLab/GarmentLab 的 main、README、FoldDemo、FoldEnv、Control、GarmentConfig、Garment、BaseEnv 和相关 issues，并核对本地 Stage 4 源码/结果。上游 main 本次解析为 `6ee0620fddb8083d5eab554fa343cdc966c61d5f`，与本地原先选定版本一致。
 
 当前主要阻塞是完整释放后没有保持 half-fold。不是尚未实现动作流程，也没有证据把根因唯一归为 IK、腕部、弯曲刚度或锚点数量。本轮只做检索和离线审查，没有启动远端仿真、修改正式 Backend 或增加成功样本。新实例的实际代码与环境仍需核验。
 
@@ -78,7 +78,7 @@ p_ee_goal = p_ee_now + (p_material_goal - p_material_now)
 4. **统一坐标与yaw**：现hem_plan使用world x/y，Backend导出版本又没有接入yaw。三档若随机旋转衣物，固定世界折线和固定夹爪方向不能直接推广。用衣物规范坐标定义折线与材料对应点，再变换到世界；需要yaw则在公共接口真正接入并验证，未接入就明确限制实验范围，禁止悄悄忽略非零yaw。
 5. **预算**：先保留密集路径验证几何，再用公开waypoint表达实际必要阶段；普通servo插值留在Backend。所有改变目标的expert决策和recovery都计数。≤12要求针对主流程+实际recovery总和；不能把整条折叠轨迹塞进一个CLOSE，也不能把H=4的chunk当成单动作。
 
-## 6. 完成Day4的顺序
+## 6. 完成Stage 4的顺序
 
 单次释放保持成功 → 独立开发重复 → 整合Backend/安全重抓/动作预算 → 固定三档与30张初态截图 → 验证评价能拒绝未折叠、整体搬移、回弹样例并冻结阈值 → 每档至少5条正式成功，保存全部尝试和拒绝率分母 → 合并完成10次reset/rollout与接口隔离检查 → Day5。
 
@@ -89,6 +89,6 @@ p_ee_goal = p_ee_now + (p_material_goal - p_material_now)
 - 重启180°翻腕、增益/惯量/迭代数扫描。
 - 重跑已经失败的三阶段102动作或当前单锚点对照。
 - 因官方demo“看起来折了”而保留最后附件或缩短释放后测量。
-- 立刻迁移DexGarmentLab：作者在 [issue #7](https://github.com/GarmentLab/GarmentLab/issues/7#issuecomment-2878550405) 指向基于Isaac Sim 4.5的双灵巧手后续项目，但这不是当前Franka Day4的即插即用修复。
+- 立刻迁移DexGarmentLab：作者在 [issue #7](https://github.com/GarmentLab/GarmentLab/issues/7#issuecomment-2878550405) 指向基于Isaac Sim 4.5的双灵巧手后续项目，但这不是当前Franka Stage 4的即插即用修复。
 
 本轮结论：优先验证已经准备好的终段支撑放置候选；把官方末次未释放的语义差异作为评估边界明确记录。尚无证据承诺这一候选必然修复回弹，但它是当前证据最充分、改动最小的下一步。

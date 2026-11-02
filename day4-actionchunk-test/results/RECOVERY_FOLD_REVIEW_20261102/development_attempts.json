@@ -1,0 +1,45 @@
+{
+  "scope": "development_only_not_formal_acceptance",
+  "formal_success_count": 0,
+  "formal_rejection_rate": null,
+  "attempts": [
+    {
+      "run": "day4-recovery-fold-20261102-113247-548209",
+      "seed": 4300,
+      "edge": "left",
+      "status": "fold_failed",
+      "action_count": 12,
+      "recovery_count": 1,
+      "failure_reasons": [
+        "RuntimeError('Fold did not cross the fold line')"
+      ]
+    },
+    {
+      "run": "day4-recovery-fold-20261102-114705-003675",
+      "seed": 4300,
+      "edge": "right",
+      "status": "pipeline_passed_fold_candidate",
+      "action_count": 12,
+      "recovery_count": 1,
+      "failure_reasons": []
+    },
+    {
+      "run": "day4-recovery-fold-20261102-115933-089864",
+      "seed": 4200,
+      "edge": "left",
+      "status": "fold_failed",
+      "action_count": 12,
+      "recovery_count": 1,
+      "failure_reasons": [
+        "RuntimeError('Fold did not cross the fold line')"
+      ]
+    }
+  ],
+  "incomplete_attempts": [
+    {
+      "run": "day4-recovery-fold-20261102-112937-225297",
+      "status": "incomplete_no_result_json",
+      "cause": "unknown; do not classify as success"
+    }
+  ]
+}

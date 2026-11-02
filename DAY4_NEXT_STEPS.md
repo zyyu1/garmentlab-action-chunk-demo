@@ -1,6 +1,42 @@
 # Stage 4 收尾计划（当前有效版本）
 
-> 命名约定：Stage 表示按验收推进的工作阶段，每个阶段可跨多天；原 Day N 对应 Stage N。为兼容既有入口，`DAY4_*.md`、脚本、结果目录和历史日报文件名保留。
+## 2026-11-02 L1 过折 0.02：最后三例已执行并逐例下载
+
+按用户指定顺序 4101 → 4106 → 4103，各执行一次 `L1_XFOLD_OVERHANG=0.02`；每例完成后下载完整目录并核对 SHA256，再启动下一例。三例 runner_exit=0、passed=true、errors=[]，各7个公开动作，总计57份原始文件哈希一致。未追加重试或其他GPU实验，三例进程均已结束。
+
+| seed | 完整运行目录 | crossed | alignment (mm) | IoU代理 | z_p95 (mm) |
+|---|---|---:|---:|---:|---:|
+| 4101 | `day4-l1-xfold-yaw-aware-20261102-224914-136557` | 1.0 | 13.823 | 0.3646 | 67.657 |
+| 4106 | `day4-l1-xfold-yaw-aware-20261102-225757-935709` | 1.0 | 13.824 | 0.3766 | 67.527 |
+| 4103 | `day4-l1-xfold-yaw-aware-20261102-230743-527418` | 1.0 | 13.811 | 0.3700 | 67.468 |
+
+独立重算与日志一致：seed/overhang、441顶点、动作状态、60步保持、最终OPEN未附着及释放后几何检查全部通过。05_release_stationary→06_final_3s 平均顶点位移：4101约0.186mm、4106约0.223mm、4103约0.181mm。阶段图及三张最终PNG已视觉检查，未摊平；仍存在拱形/偏置覆盖和机器人遮挡，不能用passed替代正式折叠质量验收。
+
+本地overhang=0.02的结果现已覆盖seeds4100–4109，10例runner均通过且crossed=1.0；覆盖CSV记录各结果JSON哈希。该覆盖统计不证明正式统一配置/阈值已经冻结，也不等同正式批次成功。
+
+本轮汇总位于 `day4-actionchunk-test/results/L1_OVERHANG_002_REMAINING_20261102-144907/`，含 `batch.json`、每例SSH完整日志/下载哈希、`independent_audit.json`、`review.md`、`l1_overhang_comparison.png` 和 `l1_overhang_002_development_coverage.csv`。完整原始目录位于同级results目录。
+
+限制：本7动作runner在OPEN后30个release tick和180个settle步取样，没有独立退让或3秒后的第二保持样本；本轮为开发验证，正式成功仍为0。下一步需统一L1过折与L2/L3折叠定义和评价口径，再冻结正式评价；不自动启动额外实验。
+
+> 命名约定：Stage 表示按验收推进的工作阶段，每个阶段可跨多天；原 Day N 对应 Stage N。为兼容既有入口，`DAY4_*.md`、脚本名和结果目录名保留；日报文件名已统一改为 Stage。本计划内的“第 N 步”是 Stage 4 内部的收尾子步骤编号，与 Stage 编号无关（如“第 7 步正式批次”不等于 Stage 7）。
+
+## 2026-11-02 自动接续结果：L3 right 保持，L2 recovered-yaw left 回弹
+
+本轮通过 SSH 等待正在运行的 L3 right 结束，再执行一次 L2 left；两组均已退出，未追加其他 GPU 实验。完整结果均下载至本仓库 `day4-actionchunk-test/results/`，与远端逐文件 SHA256 一致。
+
+| 开发尝试 | 结果目录后缀 | crossed | 释放静置后 XY extent (m) | z_p95 (m) | 动作 |
+|---|---|---:|---|---:|---:|
+| L3 4300 left（已运行对照） | 113247-548209 | 0.0 | 0.458×0.458 | 0.00990 | 12 |
+| L3 4300 right fallback | 114705-003675 | 1.0 | 0.245×0.428 | 0.06908 | 12 |
+| L2 4200 left recovered-yaw 重跑 | 115933-089864 | 0.0 | 0.442×0.442 | 0.00990 | 12 |
+
+三组 441 顶点快照、5+7 动作、逐动作状态、60步保持记录和最终 OPEN 未持布/未附着记录核对通过。L3 right 的截图及材料分半投影支持半折候选；两个 left 最终网格为平铺，不能按动作完成认定折叠成功。9/10/9 份原始结果文件哈希核对通过。失败例的 final.png 未生成（脚本在几何门槛失败后进入 finally），但 final.npz、result.json、hold_trace 和 runner.log 均保留。另有 112937-225297 未写 result.json 的未完成目录，原因未判定，单独记录。
+
+L2 新旧对照：旧成功例 103502-594762 与新失败例的 recovered.npz 逐字节相同；5个 recovery 目标相同；fold yaw 改变 0.002499711 rad（约0.143°），place XYZ 改变约1.000 mm。结果由 crossed=1 变为0，说明候选敏感，不能宣称 recovered-yaw 修正已普遍通过，也不据此断定单一物理根因。
+
+审查产物：`day4-actionchunk-test/results/RECOVERY_FOLD_REVIEW_20261102/` 下的 `review.md`、`audit.json`、`recovery_fold_comparison.png`、`transfer_verification.json`、`L2_old_vs_recovered_yaw.json`、`development_attempts.json`；脚本 `day4-actionchunk-test/review_recovery_fold_nov2.py`。
+
+限制：本组合脚本在 OPEN 后额外30个release tick和180个settle步取样，未单独退让、未保存第二个延迟保持快照。不得将本轮算作退让后保持或正式批次验收。正式成功仍为0，评价未冻结。L2 right 随后通过（`151711-625509`：12 动作、crossed 1.0、extent 0.227×0.421、z_p95 0.0691、5 文件哈希核对一致），L2/L3 的 right 边组合开发例齐备。下一收敛点为 L1 yaw-aware 复验，再统一路径选择与评价冻结；不启动参数网格、翻腕或完整三阶段折衣。
 
 ## 当前步骤：第 6 步进行中：L2 4200 通过，L3 4300 lift 超时，诊断 4300
 
@@ -35,10 +71,107 @@
 - 5 动作 recovery 已在 L2 4200（`095917-466741`）与 L3 4300（`095042-400051`）验证：刚性残差 8.0/8.6 µm、`action_count=5`。
 - 7 动作折叠 v2（`102118-812499`）通过：approach→close→arc45→arc90→arc135→place→release；crossed 1.0、对齐 6.357 mm、z_p95 68.60 mm、held 与 9 动作一致；IoU 0.607（9 动作 0.652–0.662）。
 - 组合 recovery+fold：L2 4200（`103502-594762`）**12 动作通过**（recovery 8.6 µm、fold crossed 1.0、extent 0.232×0.421、z 0.0595）。
-- L3 4300 组合（`104603-419951`）失败：recovery 正常，fold 动作执行且锚点跟随，但释放后折半摊平（crossed 0.0）。怀疑共用左槽位/初始 yaw 错位；已改为用 recovered vs flat 的刚性拟合 yaw（script `88be0966…`），待重跑。
-- 7 动作 fold runner 仍固定 yaw=0；L1 正式批需要 yaw-aware 版本。
+- L3 4300 组合（`104603-419951`）失败：recovery 正常，fold 动作执行且锚点跟随，但释放后折半摊平（crossed 0.0）。实测 recovered 相对 flat 的刚性 yaw 差 Δ=-2.007°；旧版用初始 yaw，折叠目标偏差 13.9 mm。已改为 `fold_yaw = case_yaw + Δ`（script `83d1fb24…`，已被第 3 步版本 `ddad4116…` 取代，见上节）；修正后 4 个折叠目标与初始 L3 成功轨迹经同一刚体变换一致到 0.1 mm。
+- **right 槽位镜像半折 fallback 已实现**：组合脚本新增 `--fold-edge right`（右边缘 pick、lateral=-x、moving=右半）；默认 `left` 路径不变。run 脚本第二个参数 `left|right`，manifest 已更新。
+- 7 动作 fold runner 原固定 yaw=0；L1 yaw-aware 版本已准备（`l1_yaw_fold_geometry.py` + `day4-l1-xfold-yaw-aware.py` + `run-l1-xfold-yaw-aware.sh`，24 项哈希），待远端复验。
 
-下一步：重跑 L2/L3 组合（recovered-yaw 版）；L3 若仍失败则改用未使用的 right 槽位镜像半折。之后 L1 7 动作 yaw-aware 复验，再进入第 7 步正式批次。完整交接见 [2026-11-02 日报](2026-11-02-GarmentLab日报%20Day4%20L2L3初态与6b交接.md)。正式成功仍为 0。下方第 1/2 步及旧交接均为历史状态。
+recovered-yaw 重跑结果：L3 4300 `left` 仍回弹（`113247-548209`，crossed 0.0）；改用 `right` 后 **通过**（`114705-003675`，12 动作、crossed 1.0、extent 0.2446×0.4275、z_p95 0.0691）。L2 4200 `left` 回弹（`115933-089864`，crossed 0.0）；与旧成功例 `103502-594762` 的 recovered.npz 逐字节相同，fold yaw 仅差 0.0025 rad、place 差约 1.0 mm，说明该候选处于双稳边缘。L2 4200 `right` **通过**（`151711-625509`，12 动作、crossed 1.0、extent 0.2273×0.4211、z_p95 0.0691、held 1.45 cm/0.00154 rad/s/锚点 2.33 mm），脚本/runner/manifest 未改。
+
+下一步：L1 7 动作 yaw-aware 复验。旧 `day4-l1-xfold-7actions.py` 固定 yaw=0；新增 `l1_yaw_fold_geometry.py`、`day4-l1-xfold-yaw-aware.py`、`run-l1-xfold-yaw-aware.sh`、`square-l1-xfold-yaw-files.json`（24 项哈希），旧文件保持不动。新脚本读 L1 初始目录的 `initial_geometry.npz['settled']`，用局部网格→世界顶点的刚体拟合测 yaw（与 `case['yaw_rad']` 差 ≤0.02 rad），7 个公开动作在 cloth-local 帧生成，保留 1 cm held gate 并新增 crossed≥0.5。离线验证：yaw=0 时弧目标与旧版本差 6.0e-9 m；合成 ±0.033/0.13/−0.149 rad 下指标不变。
+
+首例 4100（`day4-l1-xfold-yaw-aware-20261102-165141-003161`）failed：测量 yaw 与 case 差 −4.5e-8，`03_place` 的 cloth-local 折叠几何与 yaw=0 dev 例几乎逐点相同（flap 局部 x [0.2306,0.4006]，z 0.035），但释放动作内 flap 回滑 1.3 cm，30 tick 后 crossed 0.852，180 步静置后完全展平（crossed 0、z_p95 0.0099）。属于折到位后保持不住，不是 yaw/弧错误。
+
+第二例 4107（`day4-l1-xfold-yaw-aware-20261102-171533-773483`，yaw −0.1488，平移 1.78 cm）同样 failed：yaw 差 −4.1e-8，held gate 通过（误差 3.6 mm、锚点 1.99 mm），place flap 局部 x [0.231,0.400]、z 剖面 [0.068,0.062,0.039,0.030,0.030] 与 dev 的 [0.231,0.401]/[0.067,0.060,0.037,0.029,0.029] 几乎相同；04 crossed 0.995、30 tick 后 0.662、180 步后 0.0。两例 place 时都是约 6.7 cm 高的拱形/卷曲，释放后回弹；每动作实际物理步数随初始位姿变化（close/arc45/arc90/arc135/place：dev 107/156/148/156/174，4100 109/155/175/202/208，4107 111/160/174/176/149）。结论：同一折法在不同初始位姿下处于保持临界，初始位姿经机械臂 IK 路径改变了折叠的动力学。
+
+零扰动对照 `initial-cases/dev-zero-perturbation/`（dev 的 `00_initial` 441 点作为 settled，yaw=0、平移 0）**通过**（`173908-646355`），且 close/arc45/arc90/arc135/place/release 物理步数 107/156/148/156/174/82 与 dev 逐项相同，证明 yaw-aware 装载路径是对 dev 状态的精确重放；4100/4107 的失败只来自初始位姿改变机械臂 IK 路径。
+
+诊断重跑（4100，`175052-846321`）：`03_place` crossed 1.000、flap qx [0.231,0.401]、z_p95 0.0701；`03_hold_end` crossed 1.000、qx [0.231,0.400]、z_p95 0.0700（对齐 5.41 mm、IoU 0.583），固定持握 60 步内变化 ≤1 mm；`04_released` 内缘 0.231→0.218、30 tick 后 crossed 0.852、180 步后 0。回滑由 ungrasp 触发；自由拱形是浅势垒平衡（对照例自由状态 zmax 0.069/chord 0.157 稳定，4107 的 chord 0.151→0.125 展开）。速度读取不可用（`ClothPrimView` 无 `get_world_velocities`）。4105（`180153-252676`，yaw +0.0069、平移 1.06 cm）也 failed；已下载核对，事实一致。
+
+下一步：在 4100 上试过折 `L1_XFOLD_OVERHANG=0.02` —— 只把 place 末目标沿折向多伸 2 cm（弧的 45/90/135 目标不变），flap 自由边越过静止半远端边缘约 2 cm、折缝右移约 1 cm（约 21/19 轻微不对称，如实记录），用“尖端落在边缘外桌面”的自重锁住展开。默认 `overhang=0` 与旧行为逐字节一致；runner 断言 `fold_overhang_m` 与 `L1_XFOLD_OVERHANG` 一致。暂不改阈值、不加动作。
+
+```powershell
+scp -P 23636 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\l1_yaw_fold_geometry.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\day4-l1-xfold-yaw-aware.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-l1-xfold-yaw-aware.sh" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\square-l1-xfold-yaw-files.json" root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
+```
+
+```bash
+L1_XFOLD_OVERHANG=0.02 bash /root/autodl-tmp/run-l1-xfold-yaw-aware.sh /root/autodl-tmp/day4-square-initial-20261031-094446-203825   # 4100 过折
+```
+
+**过折复验结果：10/10 通过**（4100–4109）。全部 7 动作、yaw 差 <1e-7、`fold_overhang_m=0.02`、crossed 全 1.000、final.png 640×480；最终 IoU 0.365–0.423、对齐均为 13.8 mm、z_p95 67.5–67.7 mm、held 误差 ≤4.1 mm。基础版（overhang 0）里 4100/4105/4107 的 04/05/06 crossed 为 1.000→0.852→0.000、1.000→0.948→0.000、0.995→0.662→0.000；过折版在 ungrasp 后的 04 定型，05/06 与 04 只差 ≤0.013 IoU。逐例目录与数值见日报 L1 段。
+
+几何代价：十例最终 qx 剖面几乎逐点相同（0.438/0.361/0.292/0.243/0.317/0.397，4108 整体内移约 5 mm），与初始 yaw/平移无关；折脊 qx≈0.29（控制组 0.25），flap 自由边落在桌面、越过静止半远端边缘约 4.1 cm（place 时 2.2 cm）；折形是约 21/19 的偏置拱形，不是 20/20 对折，最终仍为站立拱形（z_p95 6.75 cm，控制组 6.87 cm），俯视 `final.png` 为规整折叠矩形。
+
+**折形口径已定稿（修正版 b，2026-11-02）**：L1 保留独立“过折”定义（`L1_XFOLD_OVERHANG=0.02`，只延长 place 末目标 2 cm，折形约 21/19 偏置拱形），L2/L3 组合脚本本轮不改（仍为 nominal 20/20 左半折：width 0.20、无 overhang、place 横向 0.40；L2/L3 的差别在初态——L2 为 bottom 折条 0.1615–0.1793 m，L3 为 left 折条 0.20 m）。因此 **L1 与 L2/L3 是两个不同折形任务**：L1 vs L2/L3 的成功率差异不能解释为“初态难度”；L2 与 L3 是同一折形目标下的两种初态族，可比但不是受控难度梯度。每档只按自己的冻结折形定义单独验收与报告；三档汇总只能称多任务平均，不做跨档难度归因或成功率梯度比较。该差异记为已知任务差异，不在本轮移植 overhang 到组合脚本重验。**第一步机制核实已完成（离线）**：overhang 属最终目标偏移而非轨迹补偿——place 到位误差 ≤2.3 mm、折形拟合残差与基础例一致（仅平移从 +4 mm 变 +22…+24 mm）、差异来自释放后 flap 自由边落到边缘外桌面（基础例悬空 16–20 mm 后摊平）。限制：零扰动控制例用名义目标也能保持，不得写成修复了机器人缺陷。**第二步任务定义已冻结（2026-11-02）**：目标、held gate、评价器身份、seed 规则与代码 manifest 见 [STAGE4_TASK_DEFINITION_FREEZE.md](STAGE4_TASK_DEFINITION_FREEZE.md)；冻结时修正两点——L2 的 “0.16–0.18” 是初态折条宽度而非折形目标；当前两个折叠脚本（L1 与 L2/L3 组合）在第二步入库时均为单 waypoint chunk（`executed_steps==1`），H=4 当时尚未实现；第 3 步已补齐 `--execution arc4`（见下节），但仍未在远端跑过配对。机制核实见 [review](day4-actionchunk-test/results/L1_OVERHANG_MECHANISM_20261102/review.md)；决策见 [2026-11-02 日报](2026-11-02-GarmentLab日报%20Stage4%20L2L3初态与6b交接.md) 与 [验收状态](DAY4_ACCEPTANCE_TRACKER.md)。
+
+下载 4105 结果：
+
+```powershell
+scp -P 23636 -r root@connect.nmb2.seetacloud.com:/root/autodl-tmp/day4-l1-xfold-yaw-aware-20261102-180153-252676 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\results\"
+```
+
+当前脚本 hash `0aab8e7c…`（geometry `aa1f8a6e…`、runner `560d38bb…`），4 个文件都需覆盖上传。零扰动对照已通过；4100/4105/4107 基础版均失败，过折 0.02 在全部 10 例（4100–4109）通过（04→06 稳定，折形为约 21/19 偏置拱形）。下一步：折形口径与任务定义均已冻结（L1 独立“过折”、L2/L3 保留 nominal 20/20、两档单独验收），第 3 步的表示层已实现并完成两任务各一对开发配对（见下节；两对内部逐字节相同，只证明表示等价，不证明 H=4 收益），第 4 步分任务报告也已完成并补齐任务 B 的冻结版证据（见上节：L1 冻结版 1/1、L2/L3 冻结版 0/2，多任务平均 0.50 不是难度曲线），最后进入第 7 步正式批次（held-out seed 集合、初态 plan 与批次工具已登记，见下节“第 7 步”；尚未运行，且成功判据阈值未冻结）；本批 10 例只算开发复验，正式批次仍需失败/拒绝率、10 次 reset、接口/视频/30 图与验收表。命令见日报与下节。完整交接见 [2026-11-02 日报](2026-11-02-GarmentLab日报%20Stage4%20L2L3初态与6b交接.md)。正式成功仍为 0。下方第 1/2 步及旧交接均为历史状态。
+
+## 第 4 步：分任务报告（已完成）
+
+按用户要求的顺序，前两步（overhang 机制核实、定义冻结）与第 3 步（表示层）已完成，第 4 步的分任务报告已写入 [day4-actionchunk-test/results/STAGE4_PER_TASK_20261102/review.md](day4-actionchunk-test/results/STAGE4_PER_TASK_20261102/review.md)，数据表由 `stage4_task_report.py` 从 27 条已下载 `result.json` 生成（`task_report.json`，可复算；根目录含 `thesis/…/TASK_B_SINGLE_EVIDENCE_20261102-173708/`）。
+
+| 折形任务 | 冻结版（seed 级） | 开发历史（旧版代码） | 失败形态 |
+|---|---|---|---|
+| A：L1 过折 | 1/1（4100；single 与 arc4 各 1/1） | 过折 0.02：seeds 4100–4109 共 10/10；基线 overhang 0：4100/4105/4107 共 0/3 | 基线失败=释放后回弹摊平（crossed 0、z_p95 9.9 mm） |
+| B：L2/L3 nominal 20/20 | **0/2**（L2/4200 left、L3/4300 left；共 4 次尝试全失败） | L2 left 含冻结版共 5 次尝试 1 次通过（recovered-yaw 之前）；L3 left 共 3 次尝试 0 次通过 | left 失败=释放后回弹摊平（extent 回到 0.442–0.458、z_p95 9.9 mm），held gate 均通过 |
+
+- single 与 arc4：L1/4100 均 1/1、L2/4200 left 均 0/1，两组指标差全为 0、快照逐字节相同 → 本数据里 H=4 无任何效果，不存在可报的“H=4 vs single”成功率差异。
+- 多任务平均（只有两个任务有冻结版数据）= 0.50（A n=1、B n=2 个 seed）。**只能叫多任务平均**，不能当难度曲线，不能用 L1 vs L2/L3 的成功率差解释初态难度。
+- 本步未建立：正式成功（仍为 0）、held-out seeds、rejection rate、10 次 reset、接口/视频/30 图。
+- 任务 B 冻结版证据**已补齐**（2026-11-02）：L2/4200、L3/4300 left 各一次冻结版 single，均失败，`code_files` 与 21 项 manifest 一致、18 个下载文件哈希一致、评价器复算通过；与既有同条件运行逐字节相同（L2 与 `001939` 7/9 文件含 `result.json` 相同，L3 与 `113247` 6 个几何/审计文件相同），说明该失败是确定性可复现结果。证据见 [TASK_B_SINGLE_EVIDENCE_20261102-173708](../thesis/day4-actionchunk-test/results/TASK_B_SINGLE_EVIDENCE_20261102-173708/review.md)。L3 只补了 single，没有 arc4 配对。
+
+## 第 7 步：正式批次准备（已登记，未运行）
+
+按冻结文档 §0 登记，完整运行手册见 [STAGE4_FORMAL_BATCH_PLAN.md](STAGE4_FORMAL_BATCH_PLAN.md)。
+
+- **seed**：L1 `4110–4129`、L2 `4210–4229`、L3 `4310–4329`，每档 20 个，与开发集不重叠，批次前固定、single/arc4 共用；已写入 `square-initial-plan.json`（30→90 条）与 `stage4-heldout-seeds.json`。
+- **初态参数**：dx/dy/yaw 沿用 `default_rng(seed)` 前三次抽样（对 30 个开发条目逐位复验）；L2 条宽改为同流第 4 次抽样 `U(0.16,0.18)`（开发条宽为人工值，已声明差异）。
+- **代码**：两个初态 runner 的 seed 断言放宽（原写死开发区间，held-out 无法生成）；两份折叠 manifest 与折叠脚本未改。刷新两份初态 manifest 时发现 5 项落后于远端：plan 条目自 6a 起未同步（`51e2800d` vs `e2cfaebe`），另有 `square_start.py`、`multi_prepared_grasp_control.py`、`square-difficulty.yaml` 三项仍是旧版。三项依赖的新值取自两份折叠 manifest 与条带 manifest 已共同钉住、且远端核对通过的值，不是仓库本地哈希。
+- **远端状态（2026-11-02）**：4 个新文件已转 LF 上传，远端完整 SHA256 与本地一致；两份刷新后的 manifest 也已上传，无排除项的完整核对通过（两个 `bad` 均为空，manifest 哈希 `bccf3e15…` / `70b1793b…`）。**初态生成与折叠都未运行。**
+- **状态**：批次**暂停**。按冻结文档 `b-right-dev-v1`，先用开发 seeds 4200/4300 验证 right 的释放后保持；在此之前不生成、不运行任何 held-out 初态。
+- **汇总**：`stage4_formal_report.py` 按档/表示给尝试数、通过数、拒绝率 `(rejected+error)/总尝试`（空批次报空，不写 0%）。
+- **硬前置**：正式成功判据阈值仍未冻结；跑完也只有开发门槛 `passed` 与拒绝率，不能变成正式成功。
+- **先要决定的**：任务 B 的 left 释放后回弹是确定性失败，40 个 held-out 仍走 left 时预期接近全失败。要么先跑一遍作为正式拒绝率基线，要么先解决 B 的保持（right 变体需按 §4.2 单独冻结）再跑。
+- 未覆盖：折叠脚本不录视频、10 次 reset 批次未并入、验收图未整理。正式成功仍为 0。
+
+## 第 3 步：表示层对齐（已完成：实现 + 两任务各一对开发配对）
+
+**目标**：同一任务内，single-step 与 H=4 用完全相同的目标、评价器与测试 seeds。定义、实现与结果见 [冻结文档 §7/§7.1](STAGE4_TASK_DEFINITION_FREEZE.md)，配对报告见 [STAGE4_REPRESENTATION_PAIRS_20261102](../thesis/day4-actionchunk-test/results/STAGE4_REPRESENTATION_PAIRS_20261102/review.md)。
+
+**冻结映射**：只把四个 arc 目标合成一个 H=4 chunk，抓取/释放仍 H=1。
+- L1：single `[1,1,1,1,1,1,1]`；arc4 `[1,1,4,1]`（`arc45/arc90/arc135/place`）。
+- L2/L3：single `[1]*12`；arc4 `[1]*7+[4,1]`（`fold_arc45…fold_place`）。
+
+**已完成**：`--execution {single,arc4}`、两个 runner 透传与断言、`execution_mode / call_horizons / chunks / code_files` 记录、评价器统一（`stage4_fold_metrics.py` + `lateral_local`）与身份自校验、配对审计（`stage4_representation_audit.py`）、两份 manifest 刷新、脚本启动时自身哈希校验。
+
+**本轮配对结果**（开发例；L1 seed 4100 overhang 0.02，L2 seed 4200 left）：
+
+| 任务 / seed | single | arc4 | 审计 |
+|---|---|---|---|
+| L1 / 4100 | `passed=true`，crossed 1.000，IoU 0.3747，对齐 13.82 mm | 同上，逐字节相同的快照 | `PAIRS_COMPARABLE` |
+| L2 / 4200 | `passed=false`（释放后摊平：extent 0.4424、z_p95 9.9 mm、crossed 0） | 同上，逐字节相同的快照 | `PAIRS_COMPARABLE` |
+
+四例 `result.json` 的 `code_files` 与本地 manifest 逐条相等（24 / 21 项，零差异），下载 53 个文件哈希一致；两对目标差、五项指标差全为 0。
+
+**两条必须保留的解释**：
+
+1. **0 差是同一条轨迹，不是“近似等价”**。同一对内所有可比快照逐字节相同，因为后端 `execute()` 逐行发出同一串 `control.move`，两种表示在 waypoint 之间都不消费观测。所以本实验证明的是**专家轨迹在两种表示下等价**，不构成“H=4 降低反馈频率带来收益/损失”的证据；后者属于有策略在 chunk 边界决策的 BC 阶段。
+2. **L2 / 4200 left 的失败是可复现的**（本次 single 与 arc4 都与此前冻结版 runs 一致地回弹），不是运行间随机差异；与旧版通过例的差异仍是版本相关、原因未隔离。held gate 与 chunk 执行均正常，失败发生在释放之后。
+
+**若要再补其它 seed 的配对**（当前上传已通过 preflight，无需重复上传）：同一初态、同一 seed 下各跑一次 `L1_XFOLD_EXECUTION=single|arc4` 或 `RECOVERY_FOLD_EXECUTION=single|arc4`，下载两个目录后本地执行
+
+```powershell
+cd E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test
+python stage4_fold_metrics.py --task l1 --result-dir results\<single目录> --result-dir results\<arc4目录>
+python stage4_representation_audit.py --pair results\<single目录> results\<arc4目录>
+```
+
+旧目录没有 `execution_mode` / `code_files`，不能与 arc4 配对；single 侧必须用本版脚本重跑。
 
 ## 第 1 步几何核对完成（历史记录）
 
@@ -48,7 +181,7 @@
 
 ## 最新交接：2026-10-31 v5 已审查，今日暂停
 
-以 [2026-10-31 交接日报](2026-10-31-GarmentLab日报%20Day4%20v5保持与接触审查交接.md) 为最新状态，下方冲突段落仅作历史记录。
+以 [2026-10-31 交接日报](2026-10-31-GarmentLab日报%20Stage4%20v5保持与接触审查交接.md) 为最新状态，下方冲突段落仅作历史记录。
 
 v5 两次结果已下载读取：112822-203913 因 KeyError('attachment_bodies') 失败；113930-047613 短程保持/释放和接触正控通过。位置误差 0.4733 mm、末臂速 0.00860 rad/s、锚点间隙 1.361 mm。发现双指持续触地共 356 条事件；接触明细位置、法向、冲量全零，不能据此认定接触力为零。robot_block=0 受已有碰撞过滤限制。正式折叠成功仍为 0。
 
@@ -182,3 +315,34 @@ GitHub README 已于上一轮更新至 Stage 4（提交 d25cea29c3bb376d5504a39d
 ## 实例和权限
 
 当前服务器：root@connect.nmb2.seetacloud.com:23636。用户已授权自动上传必要实验文件、下载完整结果；当前由用户运行仿真，助手准备、上传、检查和下载审查。本次没有启动 GPU 实验。
+
+
+## 2026-11-02 汇总器修复与 right 开发验证登记（尚未运行）
+
+stage4_formal_report.py 已把缺失结果转换为 error 尝试，按档/表示/任务计入 attempts 和 (rejected+error)/attempts；空批次保持 null。新增 test_stage4_formal_report.py，8 项纯离线测试通过（一次通过+一次缺失结果得到2次尝试、50%拒绝率）。已有结果与日志不重复计数，非 held-out 日志不纳入，重试独立计数。
+
+按冻结文档最新 b-right-dev-v1 条目，仅以开发 seeds 4200/4300 各运行 single/arc4 验证 right 的释放后保持；独立 manifest 与目录白名单在任何新结果前登记。held-out 与正式批次暂停，正式成功仍为0。检查范围仅现有 OPEN+30ticks+180settle 的终态，不宣称第二时刻保持或长期稳定。
+
+
+## 2026-11-02 right 验证执行分工更新（用户指定）
+
+用户明确指定“另一聊天继续；本聊天只下载和审计其结果”。本聊天已停止自动提交控制器，之后不再提交 GPU 实验；此前已在途进程不终止。L2 4200 right single/arc4 已下载并通过原版 PAIRS_COMPARABLE，crossed均1.0、IoU约0.559；L3等待外部结果，尚不宣称验证完成。
+
+后续下载保留外部结果的真实来源，核对同一初态、right、seed、execution_mode与21项底层代码身份；未经过本变体入口的外部结果不伪造23项wrapper身份。优先按目录启动时间选取结果，不按passed筛选；额外或失败尝试原样留存。并发运行不作耗时比较。held-out不运行，正式成功仍为0。
+
+
+## 2026-11-02 b-right-dev-v1 开发复验与移交后审计完成
+
+汇总器缺失结果分母修复与8项离线测试已通过；原项目代码与已测试副本SHA256一致（9a757d34…）。一次通过+一次无结果error的合成回归输出2次尝试、50%拒绝率；空批次保持null。
+
+L2 4200的right single/arc4由本聊天在移交前完成；L3 4300采用另一聊天产出的最早外部single/arc4，按目录启动时间选择而非passed。两对均通过原版PAIRS_COMPARABLE，四份选定结果held gate通过、crossed=1.0，L2 IoU=0.559091、L3 IoU=0.562997；各对目标差及五项指标差值精确为0。底层21项代码不变，四份结果的独立23项变体manifest、配置和初态文件哈希均核对一致。
+
+共下载核验66个远端文件，包含6份完整开发结果：选定4份配对结果与2份额外L3 single重复尝试。额外尝试原样保留，不增加独立seed覆盖，不计算正式成功率。用户移交后本聊天仅下载审计，未再提交GPU仿真，未终止已在途远端进程。
+
+结论仅为每档一个开发seed在OPEN后30 release ticks+settle(180)终态保持；没有独立退让、第二retention样本或长期稳定性验证，不能外推整个开发集/held-out，更不能解释为BC策略或H=4性能提升。right为独立变体，不替换left失败或默认定义。held-out与正式批次保持暂停，正式Stage 4成功仍为0。
+
+完整报告：[right开发复验与移交后审计](../thesis/day4-actionchunk-test/results/TASK_B_RIGHT_DEV_V1_20261102-183740/review.md)。
+
+补充交叉核对（2026-11-02）：把主审计未采用的 4200 arc4 尝试 `025355-106410` 与 4300 single 重复尝试 `031535-711404` 一并核对，5 个目录 77 项检查全部通过；同 seed 全部 7 次已下载尝试（4200 三例、4300 四例）的 `final.npz` 441 个顶点逐位相同（max|Δ|=0），包括并发在途的 4200 arc4 两例。该核对不新增 seed、不改任何阈值、不改变上述结论。[补充审计](../thesis/day4-actionchunk-test/results/B_RIGHT_DEV_AUDIT_SUPPLEMENT_20261102/review.md)。
+
+right 开发覆盖扩展 `b-right-dev-v2` 已登记、未运行：L2 4201–4209、L3 4301–4309 共 18 个剩余开发 seed，先登记初态哈希再跑 right single；不跑 arc4、不冻结阈值、held-out 不动。见 [扩展计划](STAGE4_B_RIGHT_DEV_V2_PLAN.md)。

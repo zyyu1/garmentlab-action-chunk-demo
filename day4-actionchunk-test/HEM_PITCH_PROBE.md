@@ -12,7 +12,7 @@ Final wrist pitch is retained during release/retreat to avoid an unplanned wrist
 
 ## Interface restriction
 
-set_fold_angle is a pilot-only side channel, outside the current CartesianAction XYZ+yaw schema. Each action and pending failed action records pilot_fold_angle_rad; snapshots include actual wrist/block quaternions and block tracking error. This run is diagnostic only, never a policy demonstration or formal Day4 success. If full pitch proves necessary, the action representation and public backend require an explicit design/update before data collection.
+set_fold_angle is a pilot-only side channel, outside the current CartesianAction XYZ+yaw schema. Each action and pending failed action records pilot_fold_angle_rad; snapshots include actual wrist/block quaternions and block tracking error. This run is diagnostic only, never a policy demonstration or formal Stage 4 success. If full pitch proves necessary, the action representation and public backend require an explicit design/update before data collection.
 
 ## Validation
 

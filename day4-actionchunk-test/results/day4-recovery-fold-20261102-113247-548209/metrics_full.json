@@ -1,0 +1,69 @@
+{
+ "task": "l2l3",
+ "result_dir": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-recovery-fold-20261102-113247-548209",
+ "seed": 4300,
+ "level": "crumpled",
+ "execution_mode": "single",
+ "call_horizons": null,
+ "evaluator_files": {
+  "l1_yaw_fold_geometry.py": "aa1f8a6e3ede7f7b66e91961f2801ec4cd34abd1fd2cd75f5e593391ea50c933",
+  "stage4_fold_metrics.py": "8d1f31591c1c9c02882220141cb54b5d444de0d7d0a03ec265696734f80013f8"
+ },
+ "fold_edge": "left",
+ "passed": false,
+ "formal_stage4_success": false,
+ "fold_width_m": 0.2,
+ "fold_overhang_m": 0.0,
+ "pick_index": 210,
+ "fold_yaw_rad": -0.15903744216045973,
+ "metrics": {
+  "symmetric_xy_alignment_mean_m": 0.11523858342685707,
+  "particle_occupancy_iou": 0.015206372194062274,
+  "occupancy_cell_m": 0.01,
+  "occupancy_dilation_cells": 1,
+  "moving_half_crossed_fraction": 0.0,
+  "moving_material_reflected_target_mean_error_m": 0.22212447452285286,
+  "cloth_z_p95_m": 0.009900021366775036,
+  "fold_yaw_rad": -0.15903744216045973,
+  "fold_width_m": 0.2,
+  "fold_lateral_local": [
+   1.0,
+   0.0,
+   0.0
+  ],
+  "fold_line_local_x": -2.980232227667301e-09,
+  "pick_index": 210,
+  "moving_count": 210,
+  "fold_frame": "cloth-local",
+  "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality."
+ },
+ "cross_check_vs_inline": {
+  "crossed_fraction": {
+   "inline": 0.0,
+   "recomputed": 0.0,
+   "delta": 0.0
+  },
+  "moving_count": {
+   "inline": 210.0,
+   "recomputed": 210.0,
+   "delta": 0.0
+  },
+  "extent": {
+   "inline": [
+    0.45771822333335876,
+    0.45770877599716187,
+    6.05359673500061e-08
+   ],
+   "recomputed": [
+    0.45771822333335876,
+    0.45770876109600067,
+    6.05359673500061e-08
+   ]
+  },
+  "z_p95": {
+   "inline": 0.009900021366775036,
+   "recomputed": 0.009900021366775036
+  }
+ },
+ "scope": "Particle projection proxies; not certified triangle overlap or material quality."
+}

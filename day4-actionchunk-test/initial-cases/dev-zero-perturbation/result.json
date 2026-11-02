@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "initial_case": {
+    "level": "flat",
+    "seed": 0,
+    "translation_xy_m": [
+      0.0,
+      0.0
+    ],
+    "yaw_rad": 0.0,
+    "lift_drop_cycles": [],
+    "settle_steps": 120,
+    "status": "dev_zero_perturbation_control"
+  },
+  "scope": "Development control: replays the exact validated yaw=0 fold initial state through the yaw-aware loader."
+}

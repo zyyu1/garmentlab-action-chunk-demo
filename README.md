@@ -4,7 +4,7 @@
 
 > **当前状态：Stage 4 开发中，正式成功轨迹 0 条。** 流程正常结束、视频可解码或 `passed=True`，不等于折叠成功或 Stage 4 验收通过。
 
-## 当前进度（2026-10-31）
+## 当前进度（2026-11-02）
 
 | 工作项 | 状态与证据 |
 | --- | --- |
@@ -12,9 +12,13 @@
 | 物理配置与诊断 | 已完成配置读取、质量/迭代数对照及抓取、释放、控制诊断；历史结果和失败记录已保留。 |
 | 原服装折叠 | 多次动作流程完成，但未得到已验收的释放后保持折叠；旧服装与被动载体探索分支已冻结。 |
 | 单层方巾 L1 | 转向原计划范围内的 40 cm 单层方巾、单 Franka；441 顶点、800 三角形。先打通一个符合公共接口的 L1，再扩展三档。 |
-| 最新短程验证 | v5 保持/释放与接触正控通过；双指触地证据及接触明细全零仍需审查。不是 L1 折叠成功。 |
-| 初态与离线工具 | L1 开发初态 10/10，L2/L3 各 0/10；接口预算、评价及尝试记录工具已有离线版本，尚未完成正式整合。 |
-| 正式验收与学习 | 三档正式成功轨迹、Stage 5 demonstrations、BC 训练及正式评估均未完成。 |
+| L1 折叠（开发） | yaw-aware 7 动作 + 独立“过折”折形（place 多伸 2 cm）：seeds 4100–4109 共 10/10 通过 runner 断言，释放后稳定（crossed 1.000、IoU 0.37–0.42、z_p95≈67.5 mm）。只算开发复验，不是验收。 |
+| L2/L3 组合（开发） | 12 动作（5 recovery + 7 fold）在 L2/L3 的 right 槽位各有一个通过例；left（默认折向）在 4200/4300 释放后回弹。 |
+| 任务定义冻结 | L1（过折）与 L2/L3（nominal 20/20）是两个折形任务，L2/L3 是同一任务下的两种初态族；三档汇总只能称多任务平均。见 [冻结文档](STAGE4_TASK_DEFINITION_FREEZE.md)。 |
+| 表示层（single vs H=4） | 两个折叠脚本支持 `--execution single` / `arc4`，只把四个 arc 目标合成一个 H=4 chunk。L1/4100 与 L2/4200 各跑 single+arc4 配对：审计 `PAIRS_COMPARABLE`，同一对内快照**逐字节相同**、指标差全为 0 → 只证明专家轨迹在两种表示下等价，**不构成 H=4 收益证据**。 |
+| 分任务报告 | 按 L1（过折）与 L2/L3（nominal 20/20）分别汇总：冻结版 seed 级 L1 1/1、L2/L3 0/2（L2/4200、L3/4300 left，共 4 次尝试全失败），多任务平均 0.50（A n=1、B n=2 个 seed）**不是难度曲线**；失败均为释放后回弹摊平，且补充的两例与既有同条件运行逐字节相同。见 [分任务报告](day4-actionchunk-test/results/STAGE4_PER_TASK_20261102/review.md)。 |
+| 正式批次准备 | 每档 20 个 held-out seeds（L1 4110–4129、L2 4210–4229、L3 4310–4329）已登记并写入初态 plan；两个初态 runner 的 seed 断言已放宽，批次驱动与拒绝率汇总工具已就位，两份初态 manifest 已在远端无排除项核对通过。**未运行**（按 `b-right-dev-v1` 暂停），且正式成功判据阈值未冻结。见 [正式批次准备](STAGE4_FORMAL_BATCH_PLAN.md)。 |
+| 正式验收与学习 | 三档正式成功轨迹、Stage 5 demonstrations、BC 训练及正式评估均未完成。正式 Stage 4 成功仍为 0。 |
 
 当前进度以 [Stage 4 下一步](DAY4_NEXT_STEPS.md) 和 [验收记录](DAY4_ACCEPTANCE_TRACKER.md) 为准。历史日报和旧脚本用于追溯，不应作为当前运行入口。
 
@@ -35,11 +39,11 @@
 
 ## 最新交接与下一步
 
-最新 v5 运行 `day4-square-grasp-hold-v5-20261031-113930-047613` 的短程保持/释放通过：位置误差 0.4733 mm、末臂速 0.00860 rad/s、锚点间隙 1.361 mm；事件和辅助块净力正控有效。首次 v5 因 `KeyError('attachment_bodies')` 失败，两个结果均保留。
+当前状态以 [2026-11-02 日报](2026-11-02-GarmentLab日报%20Stage4%20L2L3初态与6b交接.md) 为准：任务定义与表示层已冻结，表示层配对、分任务报告与任务 B 的冻结版 single 证据均已完成。第 7 步正式批次已**登记但未运行**：每档 20 个 held-out seeds（L1 4110–4129、L2 4210–4229、L3 4310–4329）与初态 plan/批次工具已就位，详见 [正式批次准备](STAGE4_FORMAL_BATCH_PLAN.md)。开跑前还差两件事：冻结正式成功判据阈值；决定是先跑 left 基线还是先解决 B 的释放后回弹。当前按 `b-right-dev-v1` 先做 right 的开发验证，批次保持暂停。
 
-目前停工，不自动启动实验。下次先核对抓取坐标偏移、手指碰撞几何、地面间隙及辅助块实际/目标高度，再决定修正与短程复验；随后解决完整 L1 末段路径连续性。旧服装、翻腕和参数扫描分支冻结。
+此前的 v5 短程保持/释放结论（位置误差 0.4733 mm、末臂速 0.00860 rad/s、锚点间隙 1.361 mm；双指触地 356 条事件、接触明细全零）仍是有效证据，但已被折叠开发例取代为“最新运行”。历史日报与旧脚本仅用于追溯，不作为当前运行入口。
 
-详见 [最新交接日报](2026-10-31-GarmentLab日报%20Day4%20v5保持与接触审查交接.md) 和 [v5 预登记](day4-actionchunk-test/SQUARE_GRASP_HOLD_V5.md)。后续下载由用户手动执行。
+详见 [最新交接日报](2026-11-02-GarmentLab日报%20Stage4%20L2L3初态与6b交接.md)、[Stage 4 下一步](DAY4_NEXT_STEPS.md) 与 [v5 预登记](day4-actionchunk-test/SQUARE_GRASP_HOLD_V5.md)。后续下载由用户手动执行。
 
 仓库是代码与精简证据归档，不是完整环境镜像。实验依赖 Isaac Sim 4.0、现有 GarmentLab/Backend 环境及对应文件清单；历史入口不代表当前应运行的实验。
 
@@ -75,4 +79,21 @@ Stage 4 验收完成后，依次进行 demonstrations 与 dataset 构建、singl
 
 本项目复用 [GarmentLab](https://github.com/GarmentLab/GarmentLab) 的场景、机器人、布料和控制组件，新增动作分块接口、实验控制与审查流程。当前适配快照的基线与覆盖范围见 [检查点说明](CHECKPOINT_20261031.md)；早期改动见 [AutoDL 适配 patch](third_party/autodl_adaptations.patch)。
 
-更多背景：[环境记录](environment_log.md)、[Stage 2 报告](docs/2026-10-13_day2_report.md)、[真机迁移假设](docs/sim2real_assumptions.md)。早期环境与硬件记录属于对应实验日期，不代表当前实例配置。
+更多背景：[环境记录](environment_log.md)、[Stage 2 报告](docs/2026-10-13_stage2_report.md)、[真机迁移假设](docs/sim2real_assumptions.md)。早期环境与硬件记录属于对应实验日期，不代表当前实例配置。
+
+
+## 2026-11-02 b-right-dev-v1 开发复验与移交后审计完成
+
+汇总器缺失结果分母修复与8项离线测试已通过；原项目代码与已测试副本SHA256一致（9a757d34…）。一次通过+一次无结果error的合成回归输出2次尝试、50%拒绝率；空批次保持null。
+
+L2 4200的right single/arc4由本聊天在移交前完成；L3 4300采用另一聊天产出的最早外部single/arc4，按目录启动时间选择而非passed。两对均通过原版PAIRS_COMPARABLE，四份选定结果held gate通过、crossed=1.0，L2 IoU=0.559091、L3 IoU=0.562997；各对目标差及五项指标差值精确为0。底层21项代码不变，四份结果的独立23项变体manifest、配置和初态文件哈希均核对一致。
+
+共下载核验66个远端文件，包含6份完整开发结果：选定4份配对结果与2份额外L3 single重复尝试。额外尝试原样保留，不增加独立seed覆盖，不计算正式成功率。用户移交后本聊天仅下载审计，未再提交GPU仿真，未终止已在途远端进程。
+
+结论仅为每档一个开发seed在OPEN后30 release ticks+settle(180)终态保持；没有独立退让、第二retention样本或长期稳定性验证，不能外推整个开发集/held-out，更不能解释为BC策略或H=4性能提升。right为独立变体，不替换left失败或默认定义。held-out与正式批次保持暂停，正式Stage 4成功仍为0。
+
+完整报告：[right开发复验与移交后审计](../thesis/day4-actionchunk-test/results/TASK_B_RIGHT_DEV_V1_20261102-183740/review.md)。
+
+补充交叉核对（2026-11-02）：把主审计未采用的 4200 arc4 尝试 `025355-106410` 与 4300 single 重复尝试 `031535-711404` 一并核对，5 个目录 77 项检查全部通过；同 seed 全部 7 次已下载尝试（4200 三例、4300 四例）的 `final.npz` 441 个顶点逐位相同（max|Δ|=0），包括并发在途的 4200 arc4 两例。该核对不新增 seed、不改任何阈值、不改变上述结论。[补充审计](../thesis/day4-actionchunk-test/results/B_RIGHT_DEV_AUDIT_SUPPLEMENT_20261102/review.md)。
+
+right 开发覆盖扩展 `b-right-dev-v2` 已登记、未运行：L2 4201–4209、L3 4301–4309 共 18 个剩余开发 seed，先登记初态哈希再跑 right single；不跑 arc4、不冻结阈值、held-out 不动。见 [扩展计划](STAGE4_B_RIGHT_DEV_V2_PLAN.md)。

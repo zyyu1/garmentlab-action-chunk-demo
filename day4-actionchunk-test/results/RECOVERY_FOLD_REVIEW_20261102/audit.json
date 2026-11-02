@@ -1,0 +1,172 @@
+[
+  {
+    "run": "day4-recovery-fold-20261102-113247-548209",
+    "seed": 4300,
+    "edge": "left",
+    "script_passed": false,
+    "errors": [
+      "RuntimeError('Fold did not cross the fold line')"
+    ],
+    "checks": {
+      "finite_441_vertices": true,
+      "12_logged_actions": true,
+      "all_action_checks": true,
+      "all_single_public_rows": true,
+      "release_record_unattached": true,
+      "held_gate": true,
+      "60_hold_samples": true,
+      "hold_attached_throughout": true,
+      "reported_crossed_matches": true,
+      "reported_extent_matches": true,
+      "reported_height_matches": true,
+      "reported_recovery_matches_float32_tolerance": true
+    },
+    "action_count": 12,
+    "recovery_actions": 5,
+    "fold_actions": 7,
+    "crossed_fraction": 0.0,
+    "world_extent_m": [
+      0.45771822333335876,
+      0.45770876109600067,
+      6.05359673500061e-08
+    ],
+    "cloth_frame_extent_m": [
+      0.40069087972076906,
+      0.400726159538472
+    ],
+    "z_p95_m": 0.009900021366775036,
+    "recovery_residual_max_m": 8.119916253620093e-06,
+    "hold_ee_drift_max_m": 3.0394049314130068e-05,
+    "hold_anchor_gap_max_m": 0.0022550128324391188,
+    "moving_to_fixed_xy_mean_m": 0.11000046630387411,
+    "moving_to_fixed_xy_p95_m": 0.2000011828797453,
+    "particle_grid_iou_10mm_no_dilation_diagnostic": 0.0,
+    "final_image_present": false,
+    "measurement": "180 settle steps after OPEN and 30 release ticks; no separate retreat or second retention snapshot",
+    "formal_success": null,
+    "file_sha256": {
+      "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+      "final.npz": "7a84899bba76b817f53f397f7ea3169998a9bd057422b52a27b3d8734a7ae4ec",
+      "mass_audit.json": "9bb3bd7d3d252a80b20fe01203feb11c034ce083a339340c7255b8753cba8a3a",
+      "particle_masses_after_start.npy": "a975cc0916de542424a6808204af3a00e12129206eaf43c4cdaaf2b95d7db5af",
+      "recovered.npz": "4e1c184f598a5f0a8e484903d29d5f1244a56f570931666999b0df0c80cfe4df",
+      "result.json": "318f19bf770d1168cf9d0dbae99e5d18bb176d6b4cec2401801777e6b2f6b549",
+      "room_collision_audit.json": "e6f758f589ccb7b2c48e1ed573a35d71c0649aa6dcd04cec2ee0358016618516",
+      "runner.log": "d26c7bd8406413095ddb20e204308e958f09422909dec86c3526f267d4bb25c8",
+      "fold_hold\\hold_trace.jsonl": "4d8682ac9e8de9f75d28e1de0b212877fccec7437c1dac6df21f23092b202f74"
+    }
+  },
+  {
+    "run": "day4-recovery-fold-20261102-114705-003675",
+    "seed": 4300,
+    "edge": "right",
+    "script_passed": true,
+    "errors": [],
+    "checks": {
+      "finite_441_vertices": true,
+      "12_logged_actions": true,
+      "all_action_checks": true,
+      "all_single_public_rows": true,
+      "release_record_unattached": true,
+      "held_gate": true,
+      "60_hold_samples": true,
+      "hold_attached_throughout": true,
+      "reported_crossed_matches": true,
+      "reported_extent_matches": true,
+      "reported_height_matches": true,
+      "reported_recovery_matches_float32_tolerance": true
+    },
+    "action_count": 12,
+    "recovery_actions": 5,
+    "fold_actions": 7,
+    "crossed_fraction": 1.0,
+    "world_extent_m": [
+      0.2446233555674553,
+      0.42751845717430115,
+      0.0612166915088892
+    ],
+    "cloth_frame_extent_m": [
+      0.19428212787535365,
+      0.4110228901905386
+    ],
+    "z_p95_m": 0.06907770037651062,
+    "recovery_residual_max_m": 8.119916253620093e-06,
+    "hold_ee_drift_max_m": 1.2610225838463219e-05,
+    "hold_anchor_gap_max_m": 0.0023119293682142936,
+    "moving_to_fixed_xy_mean_m": 0.007931856854608163,
+    "moving_to_fixed_xy_p95_m": 0.01284224090990054,
+    "particle_grid_iou_10mm_no_dilation_diagnostic": 0.14659685863874344,
+    "final_image_present": true,
+    "measurement": "180 settle steps after OPEN and 30 release ticks; no separate retreat or second retention snapshot",
+    "formal_success": null,
+    "file_sha256": {
+      "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+      "final.npz": "c9fa771a7f5dc17e1a6a996737f2b44ee9cb95a422118f18cd62d6a595697b2a",
+      "final.png": "dbf990d0d7f0d87aeefd47ab6c6b70f5a1329cc70bcf43d23432b8fd243590ae",
+      "mass_audit.json": "9bb3bd7d3d252a80b20fe01203feb11c034ce083a339340c7255b8753cba8a3a",
+      "particle_masses_after_start.npy": "a975cc0916de542424a6808204af3a00e12129206eaf43c4cdaaf2b95d7db5af",
+      "recovered.npz": "4e1c184f598a5f0a8e484903d29d5f1244a56f570931666999b0df0c80cfe4df",
+      "result.json": "ffd6e5f57d02a2704ebef7c3e74442d8bf267a24854133389393197c184a6c90",
+      "room_collision_audit.json": "e6f758f589ccb7b2c48e1ed573a35d71c0649aa6dcd04cec2ee0358016618516",
+      "runner.log": "b827bb4569caccf59ccf7cdecd209d7c1e0cc7946a6c434655c807cfb5233d86",
+      "fold_hold\\hold_trace.jsonl": "6b1a5a6a3ed85387872c3113701e8300341989bbdcc4ec3f19641950254cdde4"
+    }
+  },
+  {
+    "run": "day4-recovery-fold-20261102-115933-089864",
+    "seed": 4200,
+    "edge": "left",
+    "script_passed": false,
+    "errors": [
+      "RuntimeError('Fold did not cross the fold line')"
+    ],
+    "checks": {
+      "finite_441_vertices": true,
+      "12_logged_actions": true,
+      "all_action_checks": true,
+      "all_single_public_rows": true,
+      "release_record_unattached": true,
+      "held_gate": true,
+      "60_hold_samples": true,
+      "hold_attached_throughout": true,
+      "reported_crossed_matches": true,
+      "reported_extent_matches": true,
+      "reported_height_matches": true,
+      "reported_recovery_matches_float32_tolerance": true
+    },
+    "action_count": 12,
+    "recovery_actions": 5,
+    "fold_actions": 7,
+    "crossed_fraction": 0.0,
+    "world_extent_m": [
+      0.4423837661743164,
+      0.4423453211784363,
+      5.960464477539063e-08
+    ],
+    "cloth_frame_extent_m": [
+      0.4001821384945519,
+      0.400238087320206
+    ],
+    "z_p95_m": 0.009900018572807312,
+    "recovery_residual_max_m": 8.539082301153998e-06,
+    "hold_ee_drift_max_m": 3.129243663279416e-05,
+    "hold_anchor_gap_max_m": 0.002222254138687495,
+    "moving_to_fixed_xy_mean_m": 0.11000105824273292,
+    "moving_to_fixed_xy_p95_m": 0.2000020780404334,
+    "particle_grid_iou_10mm_no_dilation_diagnostic": 0.0,
+    "final_image_present": false,
+    "measurement": "180 settle steps after OPEN and 30 release ticks; no separate retreat or second retention snapshot",
+    "formal_success": null,
+    "file_sha256": {
+      "cloth_constructed.npz": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+      "final.npz": "03ae5a9ff3fdee1cf50aaaa5557b6e2f56e3307022556d29473e5d2b7976299c",
+      "mass_audit.json": "9bb3bd7d3d252a80b20fe01203feb11c034ce083a339340c7255b8753cba8a3a",
+      "particle_masses_after_start.npy": "a975cc0916de542424a6808204af3a00e12129206eaf43c4cdaaf2b95d7db5af",
+      "recovered.npz": "da2b2ccec6a1e67d3255d6d21e5a504e195c2b69e862fdd0acab7b13c46a379a",
+      "result.json": "b10c4a556c9394df5aa26df73c1f060b0673f679a517fdb8c7928475912cf159",
+      "room_collision_audit.json": "e6f758f589ccb7b2c48e1ed573a35d71c0649aa6dcd04cec2ee0358016618516",
+      "runner.log": "74497ddbd89f4cca5c4710cd0682a09efbf278604803c02ff6a14106f5a834a0",
+      "fold_hold\\hold_trace.jsonl": "26ceac524ea1d3fa77745de361c21bad115af481ab6df806e8a04e20d9be491f"
+    }
+  }
+]

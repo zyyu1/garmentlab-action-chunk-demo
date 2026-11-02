@@ -1,0 +1,93 @@
+{
+  "old_run": "day4-recovery-fold-20261102-103502-594762",
+  "new_run": "day4-recovery-fold-20261102-115933-089864",
+  "old_passed": true,
+  "new_passed": false,
+  "old_fold_metrics": {
+    "moving_count": 210,
+    "crossed_fraction": 1.0,
+    "extent": [
+      0.2318292260169983,
+      0.42070284485816956,
+      0.05953587219119072
+    ],
+    "z_p95": 0.06772780418395996,
+    "pick_index": 210
+  },
+  "new_fold_metrics": {
+    "moving_count": 210,
+    "crossed_fraction": 0.0,
+    "extent": [
+      0.4423837661743164,
+      0.4423453211784363,
+      5.960464477539063e-08
+    ],
+    "z_p95": 0.009900018572807312,
+    "pick_index": 210
+  },
+  "old_yaw": -0.1154881356954241,
+  "new_yaw": -0.11298842468779477,
+  "recovery_npz_identical": true,
+  "actions": [
+    {
+      "label": "rec_approach",
+      "target_xyz_delta_m": 0.0,
+      "yaw_delta_rad": 0.0
+    },
+    {
+      "label": "rec_pick",
+      "target_xyz_delta_m": 0.0,
+      "yaw_delta_rad": 0.0
+    },
+    {
+      "label": "rec_lift",
+      "target_xyz_delta_m": 0.0,
+      "yaw_delta_rad": 0.0
+    },
+    {
+      "label": "rec_spread",
+      "target_xyz_delta_m": 0.0,
+      "yaw_delta_rad": 0.0
+    },
+    {
+      "label": "rec_release",
+      "target_xyz_delta_m": 0.0,
+      "yaw_delta_rad": 0.0
+    },
+    {
+      "label": "fold_approach",
+      "target_xyz_delta_m": 0.0,
+      "yaw_delta_rad": 0.0024997110076293294
+    },
+    {
+      "label": "fold_close",
+      "target_xyz_delta_m": 0.0,
+      "yaw_delta_rad": 0.0024997110076293294
+    },
+    {
+      "label": "fold_arc45",
+      "target_xyz_delta_m": 0.00014642964250165128,
+      "yaw_delta_rad": 0.0024997110076293294
+    },
+    {
+      "label": "fold_arc90",
+      "target_xyz_delta_m": 0.0004999420713626963,
+      "yaw_delta_rad": 0.0024997110076293294
+    },
+    {
+      "label": "fold_arc135",
+      "target_xyz_delta_m": 0.0008534545002237397,
+      "yaw_delta_rad": 0.0024997110076293294
+    },
+    {
+      "label": "fold_place",
+      "target_xyz_delta_m": 0.0009998841427253926,
+      "yaw_delta_rad": 0.0024997110076293294
+    },
+    {
+      "label": "fold_release",
+      "target_xyz_delta_m": 0.0009880938567750042,
+      "yaw_delta_rad": 0.0024997110076293294
+    }
+  ]
+}

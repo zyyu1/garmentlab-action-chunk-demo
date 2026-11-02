@@ -1,0 +1,148 @@
+{
+  "day4-recovery-fold-20261102-114705-003675": [
+    {
+      "file": "room_collision_audit.json",
+      "remote_sha256": "e6f758f589ccb7b2c48e1ed573a35d71c0649aa6dcd04cec2ee0358016618516",
+      "local_sha256": "e6f758f589ccb7b2c48e1ed573a35d71c0649aa6dcd04cec2ee0358016618516"
+    },
+    {
+      "file": "cloth_constructed.npz",
+      "remote_sha256": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+      "local_sha256": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f"
+    },
+    {
+      "file": "particle_masses_after_start.npy",
+      "remote_sha256": "a975cc0916de542424a6808204af3a00e12129206eaf43c4cdaaf2b95d7db5af",
+      "local_sha256": "a975cc0916de542424a6808204af3a00e12129206eaf43c4cdaaf2b95d7db5af"
+    },
+    {
+      "file": "mass_audit.json",
+      "remote_sha256": "9bb3bd7d3d252a80b20fe01203feb11c034ce083a339340c7255b8753cba8a3a",
+      "local_sha256": "9bb3bd7d3d252a80b20fe01203feb11c034ce083a339340c7255b8753cba8a3a"
+    },
+    {
+      "file": "recovered.npz",
+      "remote_sha256": "4e1c184f598a5f0a8e484903d29d5f1244a56f570931666999b0df0c80cfe4df",
+      "local_sha256": "4e1c184f598a5f0a8e484903d29d5f1244a56f570931666999b0df0c80cfe4df"
+    },
+    {
+      "file": "fold_hold/hold_trace.jsonl",
+      "remote_sha256": "6b1a5a6a3ed85387872c3113701e8300341989bbdcc4ec3f19641950254cdde4",
+      "local_sha256": "6b1a5a6a3ed85387872c3113701e8300341989bbdcc4ec3f19641950254cdde4"
+    },
+    {
+      "file": "final.npz",
+      "remote_sha256": "c9fa771a7f5dc17e1a6a996737f2b44ee9cb95a422118f18cd62d6a595697b2a",
+      "local_sha256": "c9fa771a7f5dc17e1a6a996737f2b44ee9cb95a422118f18cd62d6a595697b2a"
+    },
+    {
+      "file": "final.png",
+      "remote_sha256": "dbf990d0d7f0d87aeefd47ab6c6b70f5a1329cc70bcf43d23432b8fd243590ae",
+      "local_sha256": "dbf990d0d7f0d87aeefd47ab6c6b70f5a1329cc70bcf43d23432b8fd243590ae"
+    },
+    {
+      "file": "result.json",
+      "remote_sha256": "ffd6e5f57d02a2704ebef7c3e74442d8bf267a24854133389393197c184a6c90",
+      "local_sha256": "ffd6e5f57d02a2704ebef7c3e74442d8bf267a24854133389393197c184a6c90"
+    },
+    {
+      "file": "runner.log",
+      "remote_sha256": "b827bb4569caccf59ccf7cdecd209d7c1e0cc7946a6c434655c807cfb5233d86",
+      "local_sha256": "b827bb4569caccf59ccf7cdecd209d7c1e0cc7946a6c434655c807cfb5233d86"
+    }
+  ],
+  "day4-recovery-fold-20261102-113247-548209": [
+    {
+      "file": "room_collision_audit.json",
+      "remote_sha256": "e6f758f589ccb7b2c48e1ed573a35d71c0649aa6dcd04cec2ee0358016618516",
+      "local_sha256": "e6f758f589ccb7b2c48e1ed573a35d71c0649aa6dcd04cec2ee0358016618516"
+    },
+    {
+      "file": "cloth_constructed.npz",
+      "remote_sha256": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+      "local_sha256": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f"
+    },
+    {
+      "file": "particle_masses_after_start.npy",
+      "remote_sha256": "a975cc0916de542424a6808204af3a00e12129206eaf43c4cdaaf2b95d7db5af",
+      "local_sha256": "a975cc0916de542424a6808204af3a00e12129206eaf43c4cdaaf2b95d7db5af"
+    },
+    {
+      "file": "mass_audit.json",
+      "remote_sha256": "9bb3bd7d3d252a80b20fe01203feb11c034ce083a339340c7255b8753cba8a3a",
+      "local_sha256": "9bb3bd7d3d252a80b20fe01203feb11c034ce083a339340c7255b8753cba8a3a"
+    },
+    {
+      "file": "recovered.npz",
+      "remote_sha256": "4e1c184f598a5f0a8e484903d29d5f1244a56f570931666999b0df0c80cfe4df",
+      "local_sha256": "4e1c184f598a5f0a8e484903d29d5f1244a56f570931666999b0df0c80cfe4df"
+    },
+    {
+      "file": "fold_hold/hold_trace.jsonl",
+      "remote_sha256": "4d8682ac9e8de9f75d28e1de0b212877fccec7437c1dac6df21f23092b202f74",
+      "local_sha256": "4d8682ac9e8de9f75d28e1de0b212877fccec7437c1dac6df21f23092b202f74"
+    },
+    {
+      "file": "final.npz",
+      "remote_sha256": "7a84899bba76b817f53f397f7ea3169998a9bd057422b52a27b3d8734a7ae4ec",
+      "local_sha256": "7a84899bba76b817f53f397f7ea3169998a9bd057422b52a27b3d8734a7ae4ec"
+    },
+    {
+      "file": "result.json",
+      "remote_sha256": "318f19bf770d1168cf9d0dbae99e5d18bb176d6b4cec2401801777e6b2f6b549",
+      "local_sha256": "318f19bf770d1168cf9d0dbae99e5d18bb176d6b4cec2401801777e6b2f6b549"
+    },
+    {
+      "file": "runner.log",
+      "remote_sha256": "d26c7bd8406413095ddb20e204308e958f09422909dec86c3526f267d4bb25c8",
+      "local_sha256": "d26c7bd8406413095ddb20e204308e958f09422909dec86c3526f267d4bb25c8"
+    }
+  ],
+  "day4-recovery-fold-20261102-115933-089864": [
+    {
+      "file": "room_collision_audit.json",
+      "remote_sha256": "e6f758f589ccb7b2c48e1ed573a35d71c0649aa6dcd04cec2ee0358016618516",
+      "local_sha256": "e6f758f589ccb7b2c48e1ed573a35d71c0649aa6dcd04cec2ee0358016618516"
+    },
+    {
+      "file": "cloth_constructed.npz",
+      "remote_sha256": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f",
+      "local_sha256": "0b16cc385aef106f8533dbf27d205e602b05376aa7740f1695cfae16a5691e2f"
+    },
+    {
+      "file": "particle_masses_after_start.npy",
+      "remote_sha256": "a975cc0916de542424a6808204af3a00e12129206eaf43c4cdaaf2b95d7db5af",
+      "local_sha256": "a975cc0916de542424a6808204af3a00e12129206eaf43c4cdaaf2b95d7db5af"
+    },
+    {
+      "file": "mass_audit.json",
+      "remote_sha256": "9bb3bd7d3d252a80b20fe01203feb11c034ce083a339340c7255b8753cba8a3a",
+      "local_sha256": "9bb3bd7d3d252a80b20fe01203feb11c034ce083a339340c7255b8753cba8a3a"
+    },
+    {
+      "file": "recovered.npz",
+      "remote_sha256": "da2b2ccec6a1e67d3255d6d21e5a504e195c2b69e862fdd0acab7b13c46a379a",
+      "local_sha256": "da2b2ccec6a1e67d3255d6d21e5a504e195c2b69e862fdd0acab7b13c46a379a"
+    },
+    {
+      "file": "fold_hold/hold_trace.jsonl",
+      "remote_sha256": "26ceac524ea1d3fa77745de361c21bad115af481ab6df806e8a04e20d9be491f",
+      "local_sha256": "26ceac524ea1d3fa77745de361c21bad115af481ab6df806e8a04e20d9be491f"
+    },
+    {
+      "file": "final.npz",
+      "remote_sha256": "03ae5a9ff3fdee1cf50aaaa5557b6e2f56e3307022556d29473e5d2b7976299c",
+      "local_sha256": "03ae5a9ff3fdee1cf50aaaa5557b6e2f56e3307022556d29473e5d2b7976299c"
+    },
+    {
+      "file": "result.json",
+      "remote_sha256": "b10c4a556c9394df5aa26df73c1f060b0673f679a517fdb8c7928475912cf159",
+      "local_sha256": "b10c4a556c9394df5aa26df73c1f060b0673f679a517fdb8c7928475912cf159"
+    },
+    {
+      "file": "runner.log",
+      "remote_sha256": "74497ddbd89f4cca5c4710cd0682a09efbf278604803c02ff6a14106f5a834a0",
+      "local_sha256": "74497ddbd89f4cca5c4710cd0682a09efbf278604803c02ff6a14106f5a834a0"
+    }
+  ]
+}

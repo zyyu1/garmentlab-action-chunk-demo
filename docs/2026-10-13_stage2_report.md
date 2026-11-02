@@ -1,0 +1,42 @@
+# Stage 2 Report — Fold action sequence + third grasp diagnostic
+
+## Instance
+- Container: autodl-container-5d974b909f-0ac9998e
+- GPU: RTX 4080 32GB
+- Driver: 580.105.08
+- Isaac Sim: 4.0.0.0
+- Python venv: /root/autodl-tmp/envs/isaac40
+
+## GarmentLab
+- Repo: /root/autodl-tmp/garmentlab_workspace/GarmentLab
+- Base commit: 6ee0620 (grafted)
+- Adaptation commit: f2988b1
+- Tag: autodl-adapt-2026-10-13
+- Garment asset: TNLC_Dress057 (NoCollar_LSleeve_FrontClose/TNLC_Dress057/TNLC_Dress057_obj.usd)
+- Local modifications:
+  - FoldEnv.py: headless=True, multi_gpu typo fixed, sys.path local
+  - SceneConfig.py: room_usd_path local
+  - Control.py: cur_step += 1 in move() loop
+
+## What ran
+- Script: scripts/fold-third-grasp-debug.py
+- Exit code: 0
+- Sequence: 3x (grasp -> move -> release) + third-grasp diagnostic D00-D04
+- Per-stage vertices: 15 npy files + garment_vertices.npy (9945 vertices)
+- Runtime: approx 30 min (13:54:20 -> 14:00:15)
+
+## Result
+- Action sequence executed successfully
+- Fold quality: NOT verified as tidy half-fold
+- Observed: final state tilted, one corner lifted
+- Occlusion: arm blocks approx 30-40% of view in main camera
+
+## Limits
+- Single run, no repeatability test
+- No side-view camera yet
+- No mp4 video saved (only PNG sequence)
+- Ground truth final state: garment_vertices.npy (9945 vertices)
+
+## Next
+- Day 3: wrap into GarmentLabBackend + shared schemas
+- Day 4: difficulty protocol + parameterized expert

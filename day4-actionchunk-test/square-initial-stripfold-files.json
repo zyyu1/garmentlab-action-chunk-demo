@@ -18,8 +18,8 @@
   "square_proxy_ground_control.py": "b315a4e5f044ed0de81d11570e05a6c9bd0201e889ba1c1eae28ebd8e91fa05b",
   "square_stable_hold.py": "693c397952dc9bc7a5a4cb2abe762e42fea58279cad87c4338971ffc94b85cb2",
   "day4-square-initial-stripfold.py": "178ab10c08511b6dbb2ec1fd4581ab5af2493ee6a1ca7577ac49b575b913dcc6",
-  "run-square-initial-stripfold.sh": "33a4e142ca81e0d78a828b473d0d8c23e6c6e50998bcdb7ecaa0fb114d86e4b8",
+  "run-square-initial-stripfold.sh": "1116550f65b9282c2a0e85f321c9ceb863cf8f1fe152c36bc48e387ebc34b631",
   "strip_prepared_control.py": "49075fb4bf90d08e2186ea8c734da38429ebcc53f807949276aac52e404bce90",
-  "square-initial-plan.json": "e2cfaebe597e52b579010032148a3782269c8d651c187d69a9ad690d256fb00d",
+  "square-initial-plan.json": "32e61d575d77eae0943cb2251d10c25b12d7f0d9f8f962ddd96dc1a4d4d2ab85",
   "square-difficulty.yaml": "a42fec8a1069ad43525d609bd058d9540bb7d6a1370d580abfc8616f61cd24f4"
 }

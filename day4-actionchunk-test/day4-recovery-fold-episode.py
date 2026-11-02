@@ -5,12 +5,21 @@
 then 7 fold actions on the recovered cloth, using the cloth-local axis:
   fold_approach -> fold_close -> fold_arc45 -> fold_arc90 -> fold_arc135 ->
   fold_place -> fold_release
-Total 12 public actions.  The fold is the left half (width 0.20) in the
-cloth's local frame (yaw from the initial case).  L3 reuses the left slot for
-both recovery and fold via enable_regrasp; L2 recovers the bottom slot and
-folds with the unused left slot.
+Total 12 public actions.  The fold is a half fold (width 0.20) in the
+cloth's local frame (initial-case yaw plus the rigid yaw measured on the
+recovered cloth).  Default is the left half; `--fold-edge right` mirrors the
+arc and uses the otherwise unused right slot.  L3 reuses the left slot for
+both recovery and fold via enable_regrasp, so the right slot is the fallback
+when that re-grasp destabilizes the fold; L2 recovers the bottom slot and
+folds with the unused left (or right) slot.
+
+``--execution`` selects the waypoint representation: ``single`` (default) sends
+one public action per waypoint, ``arc4`` sends fold_arc45/fold_arc90/
+fold_arc135/fold_place as one H=4 chunk.  The fold targets are computed once,
+before fold_approach, so both representations send identical targets.
 """
 import argparse
+import hashlib
 import importlib
 import json
 import sys
@@ -53,8 +62,19 @@ def local_arc(pick, yaw, lateral_local, width):
 
 ap = argparse.ArgumentParser()
 ap.add_argument('--initial-dir', required=True)
+ap.add_argument('--fold-edge', choices=('left', 'right'), default='left')
+ap.add_argument('--execution', choices=('single', 'arc4'), default='single',
+                help='Waypoint representation: one public action per waypoint '
+                     '(frozen default), or one H=4 chunk covering '
+                     'fold_arc45/fold_arc90/fold_arc135/fold_place. The fold '
+                     'targets are computed once, before fold_approach, so both '
+                     'representations send identical targets.')
 ap.add_argument('--allow-root', action='store_true')
 args = ap.parse_args()
+manifest_path = Path(__file__).with_name('square-recovery-fold-files.json')
+code_files = json.loads(manifest_path.read_text())
+if code_files.get(Path(__file__).name) != hashlib.sha256(Path(__file__).read_bytes()).hexdigest():
+    raise RuntimeError('Script bytes do not match ' + manifest_path.name)
 init_dir = Path(args.initial_dir)
 init = json.loads((init_dir / 'result.json').read_text())
 if not init.get('passed'):
@@ -69,13 +89,17 @@ with np.load(init_dir / 'initial_geometry.npz') as data:
     folded = np.asarray(data['final'], dtype=float)
 if flat.shape != (441, 3) or folded.shape != (441, 3):
     raise ValueError('Unexpected initial geometry')
-edges = list(dict.fromkeys([s['edge'] for s in strips] + ['left']))
+fold_edges = ['left'] if args.fold_edge == 'left' else ['right']
+edges = list(dict.fromkeys([s['edge'] for s in strips] + fold_edges))
 out = Path('/root/autodl-tmp') / ('day4-recovery-fold-' +
                                   datetime.now().strftime('%Y%m%d-%H%M%S-%f'))
 out.mkdir()
 result = {'probe_version': 'recovery-fold-episode-v1', 'passed': False,
           'initial_dir': str(init_dir), 'initial_case': case,
-          'control_edges': edges, 'actions': [], 'errors': [], 'records': []}
+          'fold_edge': args.fold_edge, 'execution_mode': args.execution,
+          'control_edges': edges, 'call_horizons': [], 'chunks': [],
+          'code_files': code_files,
+          'actions': [], 'errors': [], 'records': []}
 b = None
 
 
@@ -122,6 +146,53 @@ def action(xyz, yaw, command, label, limit):
     if len(result['actions']) > limit:
         raise RuntimeError('Action budget exceeded at ' + label)
     return row
+
+
+def action_chunk(rows, label, limit):
+    """Execute 2-4 ordered waypoints inside one public ActionChunk.
+
+    The targets are the same arrays the single-step path would send; only the
+    call boundary changes.  Per-row state is read after the chunk returns, so a
+    row's ``ee``/``step``/``block_error_m`` describe the end of the chunk.
+    """
+    if not 2 <= len(rows) <= 4:
+        raise ValueError('Chunk horizon must be within [2, 4]')
+    targets = [np.r_[np.asarray(xyz, dtype=float), float(row_yaw)] for xyz, row_yaw, _, _ in rows]
+    chunk = ActionChunk(actions=[
+        CartesianAction(target_pose=target.astype(np.float32), gripper_command=int(command))
+        for target, (_, _, command, _) in zip(targets, rows)])
+    response = b.execute(chunk)
+    control = b._env.control
+    attached = control.attachlist != [None]
+    checks = {'executed_horizon': response['executed_steps'] == len(rows),
+              'not_done': response['done'] is False,
+              'holding_consistent': bool(b._holding) == bool(attached),
+              'attachment_count': int(attached) == int(b._holding)}
+    ee = np.asarray(b._env.robots[0].get_cur_ee_pos()[0], dtype=float)
+    step = int(b._step_count['n'])
+    slot = getattr(control, 'active', None)
+    chunk_index = len(result['chunks'])
+    for index, ((xyz, row_yaw, command, row_label), target) in enumerate(zip(rows, targets)):
+        row = {'label': row_label, 'target_pose': target.tolist(), 'command': int(command),
+               'response': response, 'checks': checks, 'holding': bool(b._holding),
+               'attached': bool(attached), 'ee': ee.tolist(), 'ee_scope': 'after_chunk',
+               'step': step, 'chunk_label': label, 'chunk_index': chunk_index,
+               'chunk_size': len(rows), 'row_in_chunk': index}
+        if attached and slot is not None:
+            row['block_error_m'] = float(np.linalg.norm(
+                np.asarray(slot.block_target(), dtype=float) - slot.block.get_position().numpy()))
+            row['max_single_anchor_gap_m'] = float(slot.max_single_anchor_gap_m)
+        result['actions'].append(row)
+    result['chunks'].append({'label': label, 'horizon': len(rows),
+                             'labels': [r[3] for r in rows],
+                             'targets': [t.tolist() for t in targets],
+                             'response': response, 'checks': checks,
+                             'ee_after_chunk': ee.tolist(), 'step': step})
+    print('EPISODE_CHUNK', label, json.dumps(response, default=json_default), flush=True)
+    if not all(checks.values()):
+        raise RuntimeError('Episode chunk state mismatch: ' + label)
+    if len(result['actions']) > limit:
+        raise RuntimeError('Action budget exceeded at ' + label)
 
 
 def rigid_fit(a, b):
@@ -213,30 +284,44 @@ try:
         'extent': np.ptp(recovered, axis=0).tolist(),
         'z_p95': float(np.percentile(recovered[:, 2], 95))}
     np.savez_compressed(out / 'recovered.npz', vertices=recovered)
-    # ---- fold (7 actions, cloth-local left half) ----
-    if control.active is rec_slot:
+    # ---- fold (7 actions, cloth-local half) ----
+    fold_slot = control.slots[{'right': 0, 'left': 1}[args.fold_edge]]
+    if control.active is rec_slot and args.fold_edge == 'left':
+        # Preserve the validated left-fold path: L3 reuses its own left slot.
+        # Right-fold fallback leaves the recovery slot used, so CLOSE selects right.
         control.enable_regrasp()
-    left_slot = control.slots[1]
-    left_pick_index = int(left_slot.pick_index)
-    pick = b._garment_world_positions()[left_pick_index].copy()
+    fold_pick_index = int(fold_slot.pick_index)
+    pick = b._garment_world_positions()[fold_pick_index].copy()
     fold_width = .2
-    material_targets = local_arc(pick, fold_yaw, np.array([1., 0., 0.]), fold_width)
+    lateral_local = np.array([1. if args.fold_edge == 'left' else -1., 0., 0.])
+    material_targets = local_arc(pick, fold_yaw, lateral_local, fold_width)
     ee_targets = [grasp_to_ee(point, fold_yaw) for point in material_targets]
-    record('fold_targets', {'pick_index': left_pick_index, 'pick_world': pick.tolist(),
+    record('fold_targets', {'edge': args.fold_edge, 'pick_index': fold_pick_index,
+                            'pick_world': pick.tolist(),
                             'fold_yaw': fold_yaw,
                             'width_m': fold_width,
                             'material_targets': material_targets.tolist(),
                             'ee_targets': [np.asarray(t, dtype=float).tolist() for t in ee_targets]})
     action(pick + [0., 0., .15], fold_yaw, GripperCommand.OPEN, 'fold_approach', 12)
     action(grasp_to_ee(pick, fold_yaw), fold_yaw, GripperCommand.CLOSE, 'fold_close', 12)
-    if control.active is not left_slot:
-        raise RuntimeError('Expected left slot for fold')
-    for label, target in zip(('arc45', 'arc90', 'arc135', 'place'), ee_targets):
-        action(target, fold_yaw, GripperCommand.HOLD, 'fold_' + label, 12)
+    if control.active is not fold_slot:
+        raise RuntimeError('Expected ' + args.fold_edge + ' slot for fold')
+    fold_rows = [(target, fold_yaw, GripperCommand.HOLD, 'fold_' + label)
+                 for label, target in zip(('arc45', 'arc90', 'arc135', 'place'), ee_targets)]
+    if args.execution == 'single':
+        fold_horizons = [1, 1, 1, 1]
+        for target, row_yaw, command, row_label in fold_rows:
+            action(target, row_yaw, command, row_label, 12)
+    else:
+        fold_horizons = [4]
+        action_chunk(fold_rows, 'fold_arc4', 12)
+    result['call_horizons'] = [1] * 7 + fold_horizons + [1]
+    if sum(result['call_horizons']) != 12:
+        raise RuntimeError('Representation horizon mismatch')
     from square_stable_hold import StableHold
     hold_dir = out / 'fold_hold'
     hold_dir.mkdir()
-    hold = StableHold(robot, b._env.world, left_slot, hold_dir)
+    hold = StableHold(robot, b._env.world, fold_slot, hold_dir)
     hold.begin()
     try:
         hold.run(60)
@@ -248,36 +333,43 @@ try:
     held_ok = (held_error < .03 and
                float(np.max(np.abs(b._to_numpy(robot._robot.get_joint_velocities())[:7]))) < .1 and
                bool(robot.reach(ee_targets[-1], orientation_euler(fold_yaw))) and
-               left_slot.max_single_anchor_gap_m <= .01)
+               fold_slot.max_single_anchor_gap_m <= .01)
     result['fold_held_check'] = {
         'position_error_m': held_error,
         'arm_speed_rad_s': float(np.max(np.abs(
             b._to_numpy(robot._robot.get_joint_velocities())[:7]))),
-        'anchor_gap_max_m': float(left_slot.max_single_anchor_gap_m),
+        'anchor_gap_max_m': float(fold_slot.max_single_anchor_gap_m),
         'accepted': bool(held_ok)}
     action(ee, fold_yaw, GripperCommand.OPEN, 'fold_release', 12)
     for _ in range(30):
-        left_slot._tick(ee, orientation_euler(fold_yaw), follow=False)
+        fold_slot._tick(ee, orientation_euler(fold_yaw), follow=False)
     b._settle(180)
     final = b._garment_world_positions().copy()
     np.savez_compressed(out / 'final.npz', vertices=final)
     R = Rotation.from_euler('z', fold_yaw).as_matrix()
-    lateral = R @ np.array([1., 0., 0.])
+    lateral = R @ lateral_local
     with np.load(out / 'cloth_constructed.npz') as data:
         local_points = np.asarray(data['points'], dtype=float)
-    left_local = local_points[left_pick_index]
-    moving = local_points[:, 0] < left_local[0] + fold_width
+    fold_local = local_points[fold_pick_index]
+    if args.fold_edge == 'left':
+        moving = local_points[:, 0] < fold_local[0] + fold_width
+    else:
+        moving = local_points[:, 0] > fold_local[0] - fold_width
     crossed = float((((final[moving] - pick) @ lateral) > fold_width).mean())
     result['fold_metrics'] = {
         'moving_count': int(moving.sum()),
         'crossed_fraction': crossed,
         'extent': np.ptp(final, axis=0).tolist(),
         'z_p95': float(np.percentile(final[:, 2], 95)),
-        'pick_index': left_pick_index}
+        'pick_index': fold_pick_index}
     result['action_count'] = len(result['actions'])
     result['action_labels'] = [a['label'] for a in result['actions']]
     if result['action_count'] != 12:
         raise RuntimeError('Expected exactly 12 public actions')
+    if result['action_count'] != sum(result['call_horizons']):
+        raise RuntimeError('Representation/action count mismatch')
+    if len(result['chunks']) != (0 if args.execution == 'single' else 1):
+        raise RuntimeError('Unexpected chunk count')
     if not held_ok:
         raise RuntimeError('Fold held gate failed; released and saved')
     if crossed < .5:
