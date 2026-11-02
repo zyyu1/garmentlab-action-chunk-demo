@@ -135,8 +135,7 @@ class GarmentLabBackend(RobotBackend):
             franka_config=FrankaConfig(ori=[np.array([0, 0, -np.pi / 2])]),
         )
         if self.prepared_grasp:
-            from backends.prepared_grasp_control import PreparedGraspControl
-            env.control = PreparedGraspControl(env)
+            env.control = self._make_prepared_control(env)
         env.reset()
 
         # Initialize the cloth view after the world has created physics.
@@ -170,6 +169,11 @@ class GarmentLabBackend(RobotBackend):
         self._env = env
         self._step_count = counter
         self._started = True
+
+    def _make_prepared_control(self, env):
+        """Control factory; subclasses may install a scene-specific adapter."""
+        from backends.prepared_grasp_control import PreparedGraspControl
+        return PreparedGraspControl(env)
 
     def stop(self) -> None:
         if self._simulation_app is not None:

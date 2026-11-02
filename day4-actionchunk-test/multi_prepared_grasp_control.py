@@ -50,6 +50,7 @@ class PreparedRegion(HemPreparedGraspControl):
         self.enabled=PhysxSchema.PhysxPhysicsAttachment.Get(stage,self.block.attachment_path).CreateAttachmentEnabledAttr()
         if not self.enabled.Set(False):raise RuntimeError('Could not pre-disable slot')
         self.anchor_ids=None;self.alignment_record=None;self.activation_record=None;self.output_directory=None
+        self.max_single_anchor_gap_m=0.;self.reuse_count=0
 
     def initialize(self):
         super().initialize()
@@ -120,6 +121,39 @@ class PreparedRegion(HemPreparedGraspControl):
         self.holding=False;self.attachlist[0]=None
         # Keep constraint and block alive; no scene topology mutation during rollout.
         self.robot.open()
+
+    def enable_regrasp(self):
+        """Allow this released slot to be selected again after a safe release."""
+        if self.holding or self.attachment_enabled():
+            raise RuntimeError('Re-grasp requires a released, disabled slot: '+self.label)
+        self.used=False;self.alignment_record=None;self.activation_record=None
+        self.max_single_anchor_gap_m=0.;self.reuse_count+=1
+
+    def prepare_episode_reset(self):
+        """Force a released/disabled state before the scene is reset."""
+        if self.holding or self.attachment_enabled():
+            if self.enabled.Get() is True and not self.enabled.Set(False):
+                raise RuntimeError('Episode reset could not disable '+self.label)
+        self.block.set_velocities(np.zeros(6))
+        self.holding=False;self.used=False;self.attachlist[0]=None
+        self.alignment_record=None;self.activation_record=None
+        self.max_single_anchor_gap_m=0.;self.reuse_count=0
+
+    def after_scene_reset(self):
+        """Re-validate the precreated block/constraint after world.reset()."""
+        view=self.block.move_block_controller
+        if view._physics_view is not None and not view.is_physics_handle_valid():
+            view._physics_view=None
+        self.block.initialize_physics()
+        self.block.set_velocities(np.zeros(6))
+        if self.attachment_enabled():
+            raise RuntimeError('Slot enabled after scene reset: '+self.label)
+        prim=self.world.stage.GetPrimAtPath(self.block.attachment_path)
+        if not prim.IsValid() or self.anchor_ids is None or self.original_points0 is None:
+            raise RuntimeError('Precreated slot missing after scene reset: '+self.label)
+        p0=np.asarray(prim.GetAttribute('points0').Get(),dtype=float)
+        if not np.array_equal(p0,self.original_points0):
+            raise RuntimeError('Slot points0 changed after scene reset: '+self.label)
 
 class MultiPreparedGraspControl:
     enable_early_contact_reporting=False
@@ -231,6 +265,18 @@ class MultiPreparedGraspControl:
         if not self.holding:raise RuntimeError('No active grasp to release')
         self.active.ungrasp(flag,keep);self.assert_exclusive()
         self.events.append({'event':'release','slot':self.active.label,'status':self.status()})
+    def prepare_episode_reset(self):
+        for s in self.slots:s.prepare_episode_reset()
+        self.active_index=0;self.events=[]
+        if hasattr(self,'motion_records'):self.motion_records=[]
+
+    def after_scene_reset(self):
+        for s in self.slots:s.after_scene_reset()
+        self.active_index=0
+
+    def enable_regrasp(self):
+        self.active.enable_regrasp()
+
     def robot_reset(self):
         if self.holding:raise RuntimeError('Release first; episode reset is not implemented')
         self.robot.open()

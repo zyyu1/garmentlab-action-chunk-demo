@@ -1,0 +1,220 @@
+{
+  "probe_version": "square-initial-liftdrop-v1",
+  "passed": false,
+  "formal_day4_success": false,
+  "level": "crumpled",
+  "scope": "L2/L3 initial-state generation only; corner lift/drop via original dynamic attachment; no fold, recovery, or reset reliability claim",
+  "initial_case": {
+    "level": "crumpled",
+    "seed": 4300,
+    "translation_xy_m": [
+      0.017776032468595538,
+      0.005222137169594488
+    ],
+    "yaw_rad": -0.12400478081752844,
+    "lift_drop_cycles": [
+      {
+        "corner_label": 3,
+        "lift_height_m": 0.10681547889406222,
+        "drop_xy_offset_m": [
+          0.026055776626069165,
+          0.03983199814654579
+        ],
+        "hold_steps": 45
+      },
+      {
+        "corner_label": 3,
+        "lift_height_m": 0.1358136764028993,
+        "drop_xy_offset_m": [
+          0.005054960895358368,
+          -0.009757230612687396
+        ],
+        "hold_steps": 45
+      }
+    ],
+    "settle_steps": 240,
+    "status": "blocked_unvalidated_corner_lift_drop"
+  },
+  "lift_drop_records": [
+    {
+      "cycle": 0,
+      "corner_label": 3,
+      "corner_index": 420,
+      "corner_world": [
+        -0.15595079958438873,
+        -0.22157615423202515,
+        0.009900016710162163
+      ],
+      "approach": [
+        -0.15595079958438873,
+        -0.22157615423202515,
+        0.16330001671016214
+      ],
+      "grasp": [
+        -0.15595079958438873,
+        -0.22157615423202515,
+        0.013300016710162163
+      ],
+      "lift": [
+        -0.15595079958438873,
+        -0.22157615423202515,
+        0.12011549560422438
+      ],
+      "lift_material": [
+        -0.15595079958438873,
+        -0.22157615423202515,
+        0.11671549560422438
+      ],
+      "drop_requested": [
+        -0.12989502295831956,
+        -0.18174415608547936,
+        0.11671549560422438
+      ],
+      "drop": [
+        -0.12989502295831956,
+        -0.25,
+        0.12011549560422438
+      ],
+      "drop_material": [
+        -0.12989502295831956,
+        -0.25,
+        0.11671549560422438
+      ],
+      "drop_clamped": true,
+      "near_drop_clamp_y": -0.25,
+      "hold_steps": 45,
+      "label": "cycle_start"
+    }
+  ],
+  "actions": [
+    {
+      "cycle": 0,
+      "label": "approach",
+      "target_pose": [
+        -0.15595079958438873,
+        -0.22157615423202515,
+        0.16330001671016214,
+        -0.12400478081752844
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 591,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "gripper_state": 0,
+      "ee": [
+        -0.15679099764264168,
+        -0.22280087700941387,
+        0.16344375157346216
+      ],
+      "step": 591
+    },
+    {
+      "cycle": 0,
+      "label": "grasp",
+      "target_pose": [
+        -0.15595079958438873,
+        -0.22157615423202515,
+        0.013300016710162163,
+        -0.12400478081752844
+      ],
+      "command": 1,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 974,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "gripper_state": 2,
+      "ee": [
+        -0.15621949943514915,
+        -0.22198583498210106,
+        0.01396994078385302
+      ],
+      "step": 974
+    }
+  ],
+  "errors": [
+    "RuntimeError('Robot/block target timed out')"
+  ],
+  "physics_profile": "original robot asset; cloth mass .0001/friction .3/particle friction scale 0; room collisions isolated; constructor bend 100",
+  "drop_clamp_policy": {
+    "near_y_max": -0.25,
+    "scope": "near-corner drop targets clamped to keep the fixed downward pose reachable; far targets unchanged"
+  },
+  "constructor_bend_applied": 100.0,
+  "home_ee": [
+    0.0055302243601351555,
+    -0.46081547315767946,
+    0.3883201813095618
+  ],
+  "home_quaternion_wxyz": [
+    0.2698972916992235,
+    0.6330690219473039,
+    0.669818838918058,
+    -0.27878627730678057
+  ],
+  "material_readback": {
+    "friction": 0.30000001192092896,
+    "particle_friction_scale": 0.0
+  },
+  "runtime_source_hashes": {
+    "backend": {
+      "path": "/root/autodl-tmp/day4-square-initial-liftdrop.py",
+      "sha256": "312b79b77989b8ed7d91cb3dc60f6b82b4f4365bbbe4dfd0c4f7f209af9f907f"
+    },
+    "environment": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/FoldEnv.py",
+      "sha256": "e0aff36e6b25d724cd8c7f2ffd4dd7c53ffd95693f4e502457eaecf63ebcbe24"
+    },
+    "robot": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py",
+      "sha256": "adc6abc5b8721a0730fe7281d6cc1d89a6b7e1abad0d7b5da167369f0371428a"
+    },
+    "original_control": {
+      "path": "/root/autodl-tmp/corner_prepared_control.py",
+      "sha256": "51a535f9081bfb6edb273c56dc7c2893b092450d59cf224413a5eff8222da433"
+    }
+  },
+  "flat_transform": {
+    "translation_xy_m": [
+      0.017776032468595538,
+      0.005222137169594488
+    ],
+    "yaw_rad": -0.12400478081752844,
+    "center_before": [
+      6.58894894201012e-09,
+      -0.44999974966049194,
+      0.009900032542645931
+    ],
+    "transform_error_max_m": 2.9651043731426796e-08
+  },
+  "lift_trace_file": "/root/autodl-tmp/day4-square-initial-liftdrop-20261101-110942-527451/lift_trace.jsonl",
+  "lift_trace_rows": 288
+}

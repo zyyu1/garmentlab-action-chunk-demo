@@ -1,0 +1,14 @@
+{
+  "day4-square-initial-liftdrop.py": "c99f9500c476930ee1e603d359afd3fc5e7eeb8368fde21dfde8e96bac78f8e8",
+  "square-initial-plan.json": "4879e0af7cdfbc5dfae9284181798dbde26d0468b81aef3859560e6411b08a98",
+  "square-difficulty.yaml": "cae003931cc12e0b38336c97192d0b3abfc25843b92e02a67943bf00b8fc9057",
+  "square_start.py": "d2b47783c263fc9ecf732402d82cf3a71ea8435db69c6667676fa0cdf633cdae",
+  "square_pose_backend.py": "f78261623a4c48ef5de2db2bb951f68d626d437e2504c7b233c883af7f868b24",
+  "square_pose_contract.py": "31179c3e5f5d185499e13db42a758bc5692de6b01c006fa02c16aa3e70a8d148",
+  "square_cloth_40cm.usda": "fef138f6dd76484f3452455bf98cdc4d166812d290631125a5c375de8308ef7e",
+  "room_collision_control.py": "023c3a93dd4fb21db312223056834d5849cf070d7aed157d42f491f20721888e",
+  "garmentlab-action-chunk-demo/backends/garmentlab_backend.py": "def9544ddbd597bddc6a2e65ae4d57165d69a80c4f5b6646cb67929ef4add372",
+  "garmentlab-action-chunk-demo/backends/base.py": "d1d85718b3748df83743ac5d26693bd1cd35dfaca99f504bdec2f5ea94debc16",
+  "garmentlab-action-chunk-demo/schemas/action.py": "3801f47eb4489dee2d66a7c1287434493de8233b6345f246a80cad4985b669b0",
+  "garmentlab-action-chunk-demo/schemas/observation.py": "49ca2836985a46a798addeee9a27e72cbbd6eaeb25f4f693f0482a9c0790dd18"
+}

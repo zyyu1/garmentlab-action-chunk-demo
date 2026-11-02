@@ -1,0 +1,259 @@
+{
+  "scope": "Offline saved-state audit. URDF triangle mesh is not cooked USD collision geometry; ground z=0 from default-ground construction.",
+  "source_result": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-grasp-hold-v5-20261031-113930-047613",
+  "snapshots": [
+    {
+      "snapshot": "00_initial",
+      "ee_world_m": [
+        0.005530224349022515,
+        -0.46081547315781285,
+        0.3883201813095618
+      ],
+      "material_reference_world_m": [
+        0.00555940542468209,
+        -0.4632471525801804,
+        0.38594403239763364
+      ],
+      "cloth_pick_world_m": [
+        -5.666015923111445e-08,
+        -0.6499999761581421,
+        0.009899995289742947
+      ],
+      "block_center_world_m": [
+        0.0,
+        -0.6499999761581421,
+        0.07999999821186066
+      ],
+      "block_bottom_z_m": 0.06499999821186066,
+      "block_center_minus_target_m": [
+        -0.00555940542468209,
+        -0.1867528235779617,
+        -0.305944034185773
+      ],
+      "urdf_mesh_min_z_open_closed_m": {
+        "left_0.0": 0.3760272314028754,
+        "right_0.0": 0.37559527200368964,
+        "left_0.04": 0.3772970462843445,
+        "right_0.04": 0.3743254571222206
+      }
+    },
+    {
+      "snapshot": "01_before_close",
+      "ee_world_m": [
+        -5.509962279915888e-05,
+        -0.6497833195697337,
+        0.017461985285544265
+      ],
+      "material_reference_world_m": [
+        -5.4722862672044214e-05,
+        -0.649784435009206,
+        0.01406198548939036
+      ],
+      "cloth_pick_world_m": [
+        -5.6731934705567255e-08,
+        -0.6499999761581421,
+        0.009899995289742947
+      ],
+      "block_center_world_m": [
+        0.0,
+        -0.6499999761581421,
+        0.07999999821186066
+      ],
+      "block_bottom_z_m": 0.06499999821186066,
+      "block_center_minus_target_m": [
+        5.4722862672044214e-05,
+        -0.00021554114893607146,
+        0.0659380127224703
+      ],
+      "urdf_mesh_min_z_open_closed_m": {
+        "left_0.0": 0.005176917066064414,
+        "right_0.0": 0.0051823302461720365,
+        "left_0.04": 0.005163794056801681,
+        "right_0.04": 0.00519545325543477
+      }
+    },
+    {
+      "snapshot": "02_grasp",
+      "ee_world_m": [
+        -1.2105789209162015e-05,
+        -0.6496469120574668,
+        0.013619923987557705
+      ],
+      "material_reference_world_m": [
+        -1.1318899726340949e-05,
+        -0.6496407747307057,
+        0.010219929617852782
+      ],
+      "cloth_pick_world_m": [
+        5.802131113341602e-07,
+        -0.6499930620193481,
+        0.011260746978223324
+      ],
+      "block_center_world_m": [
+        -3.3963089663302526e-05,
+        -0.6498113870620728,
+        0.01499999314546585
+      ],
+      "block_bottom_z_m": -4.308414050697984e-08,
+      "block_center_minus_target_m": [
+        -2.2644189936961577e-05,
+        -0.00017061233136705933,
+        0.004780063527613069
+      ],
+      "urdf_mesh_min_z_open_closed_m": {
+        "left_0.0": 0.0013398106049747165,
+        "right_0.0": 0.0013099151696430947,
+        "left_0.04": 0.0014120194721099332,
+        "right_0.04": 0.0012377063025078763
+      }
+    },
+    {
+      "snapshot": "03_held",
+      "ee_world_m": [
+        -1.0735919696930764e-05,
+        -0.6496394853659729,
+        0.013606493640943875
+      ],
+      "material_reference_world_m": [
+        -9.947005372750108e-06,
+        -0.6496332789718307,
+        0.01020649939708317
+      ],
+      "cloth_pick_world_m": [
+        6.650875548075419e-07,
+        -0.6499936580657959,
+        0.011260571889579296
+      ],
+      "block_center_world_m": [
+        -3.392012877156958e-05,
+        -0.649811327457428,
+        0.01499999314546585
+      ],
+      "block_bottom_z_m": -4.6062431900001366e-08,
+      "block_center_minus_target_m": [
+        -2.3973123398819472e-05,
+        -0.00017804848559732633,
+        0.004793493748382682
+      ],
+      "urdf_mesh_min_z_open_closed_m": {
+        "left_0.0": 0.0013263791572956391,
+        "right_0.0": 0.001296147598561198,
+        "left_0.04": 0.0013994005188114507,
+        "right_0.04": 0.0012231262370453865
+      }
+    },
+    {
+      "snapshot": "04_released",
+      "ee_world_m": [
+        7.285907163402928e-05,
+        -0.6492225835621055,
+        0.013565874370164484
+      ],
+      "material_reference_world_m": [
+        7.753530377039497e-05,
+        -0.6492129249299956,
+        0.010165891304959781
+      ],
+      "cloth_pick_world_m": [
+        -6.088607733545359e-07,
+        -0.6500020027160645,
+        0.009899995289742947
+      ],
+      "block_center_world_m": [
+        -3.392546932445839e-05,
+        -0.649811327457428,
+        0.015000034123659134
+      ],
+      "block_bottom_z_m": -5.084238616920311e-09,
+      "block_center_minus_target_m": [
+        -0.00011146077309485336,
+        -0.0005984025274323734,
+        0.004834142818699353
+      ],
+      "urdf_mesh_min_z_open_closed_m": {
+        "left_0.0": 0.0012801603553178088,
+        "right_0.0": 0.0012329924502178912,
+        "left_0.04": 0.0013937692805730522,
+        "right_0.04": 0.0011193835249626478
+      }
+    }
+  ],
+  "hold_reconstructed_follow_velocity_first_m_s": [
+    0.0014194907309693391,
+    0.010558383821746009,
+    -0.28744586323551796
+  ],
+  "hold_reconstructed_follow_speed_range_m_s": [
+    0.28764321426738837,
+    0.28782087033379095
+  ],
+  "contact_counts": [
+    {
+      "category": "block_ground",
+      "phase": "initial_settle",
+      "count": 360
+    },
+    {
+      "category": "block_ground",
+      "phase": "approach",
+      "count": 996
+    },
+    {
+      "category": "block_ground",
+      "phase": "descend",
+      "count": 438
+    },
+    {
+      "category": "robot_ground",
+      "phase": "descend",
+      "count": 50
+    },
+    {
+      "category": "block_ground",
+      "phase": "close",
+      "count": 123
+    },
+    {
+      "category": "robot_ground",
+      "phase": "close",
+      "count": 82
+    },
+    {
+      "category": "block_ground",
+      "phase": "held_stationary",
+      "count": 180
+    },
+    {
+      "category": "robot_ground",
+      "phase": "held_stationary",
+      "count": 120
+    },
+    {
+      "category": "block_ground",
+      "phase": "release",
+      "count": 66
+    },
+    {
+      "category": "robot_ground",
+      "phase": "release",
+      "count": 44
+    },
+    {
+      "category": "block_ground",
+      "phase": "released_stationary",
+      "count": 90
+    },
+    {
+      "category": "robot_ground",
+      "phase": "released_stationary",
+      "count": 60
+    }
+  ],
+  "input_sha256": {
+    "E:\\learning\\project\\thesis\\day4-actionchunk-test\\frame_audit\\lula_franka_gen.urdf": "e9024642e7952cbcaec0ae14425bf1cd19d674d3c98eeef3793913f63a8101b6",
+    "E:\\learning\\project\\thesis\\day4-actionchunk-test\\frame_audit\\finger.stl": "eade0765d87446c8833d88511a4c46573baba2e8eacc15b975aecd123d740296",
+    "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-grasp-hold-v5-20261031-113930-047613\\result.json": "5e8ed2baed4c2ef2018b38e3cebff1fe2e0f196bafac4fd49f2527c44fc82f51",
+    "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-grasp-hold-v5-20261031-113930-047613\\hold_trace.jsonl": "1995652fb481b23861e0689a8e74f6340c30094b1580364510a48bc68685391e",
+    "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-grasp-hold-v5-20261031-113930-047613\\block_contacts.jsonl": "d4197c9d0d937f63a8eacfb8c60dc5f19e3937bde56fd4aeb0bf3c6e316039cf"
+  }
+}

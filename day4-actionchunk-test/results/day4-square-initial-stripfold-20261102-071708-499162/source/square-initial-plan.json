@@ -1,0 +1,514 @@
+{
+  "version": "square-initial-v3",
+  "config_sha256": "407414840ba244c3d6559208bef0baca09604f3abc377d623e80aa3e7c17eac6",
+  "asset_sha256": "fef138f6dd76484f3452455bf98cdc4d166812d290631125a5c375de8308ef7e",
+  "corner_labels": [
+    "local(-x,-y)",
+    "local(+x,-y)",
+    "local(+x,+y)",
+    "local(-x,+y)"
+  ],
+  "sampling": "NumPy default_rng; exact values persisted here",
+  "episodes": [
+    {
+      "level": "flat",
+      "seed": 4100,
+      "translation_xy_m": [
+        0.00385909927936512,
+        0.02681397324895149
+      ],
+      "yaw_rad": 0.03280146619631816,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4101,
+      "translation_xy_m": [
+        0.01498582960605534,
+        0.01783269589870703
+      ],
+      "yaw_rad": -0.1309625593436558,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4102,
+      "translation_xy_m": [
+        0.011672438593540209,
+        0.016478848282689623
+      ],
+      "yaw_rad": -0.06080896820903929,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4103,
+      "translation_xy_m": [
+        0.025541287784536643,
+        0.008883868197686768
+      ],
+      "yaw_rad": -0.07512365618078788,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4104,
+      "translation_xy_m": [
+        0.02387148084002474,
+        0.0017753656325589372
+      ],
+      "yaw_rad": -0.0730364481903002,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4105,
+      "translation_xy_m": [
+        0.005274487690073377,
+        0.00914147801368554
+      ],
+      "yaw_rad": 0.006861560892466062,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4106,
+      "translation_xy_m": [
+        0.023683784416422445,
+        0.027006491652189983
+      ],
+      "yaw_rad": 0.10287975492043139,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4107,
+      "translation_xy_m": [
+        0.01211277719742286,
+        0.013083401307232446
+      ],
+      "yaw_rad": -0.1488146393791384,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4108,
+      "translation_xy_m": [
+        0.008001330077323877,
+        0.02499443745381175
+      ],
+      "yaw_rad": 0.1381264374156722,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4109,
+      "translation_xy_m": [
+        0.026343189649365967,
+        0.01163826863045452
+      ],
+      "yaw_rad": 0.008845313363414403,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "perturbed",
+      "seed": 4200,
+      "translation_xy_m": [
+        0.016812008040814945,
+        0.003964959026106275
+      ],
+      "yaw_rad": -0.1154881356954241,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.174179
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4201,
+      "translation_xy_m": [
+        0.0026708191265400125,
+        0.02748634418386058
+      ],
+      "yaw_rad": 0.16205999298044266,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.179284
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4202,
+      "translation_xy_m": [
+        0.024471162663252336,
+        0.0069321790495343915
+      ],
+      "yaw_rad": 0.1157488843229747,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.171397
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4203,
+      "translation_xy_m": [
+        0.0091555449896575,
+        0.021029534466375586
+      ],
+      "yaw_rad": 0.13094538328626049,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.177043
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4204,
+      "translation_xy_m": [
+        0.002829251753489883,
+        0.019232622910444988
+      ],
+      "yaw_rad": 0.04128354429623271,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.174309
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4205,
+      "translation_xy_m": [
+        0.01912170121237165,
+        0.011912924684114114
+      ],
+      "yaw_rad": -0.017537726229255035,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.161505
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4206,
+      "translation_xy_m": [
+        0.019688758559314602,
+        0.01670679078340298
+      ],
+      "yaw_rad": 0.16074555186198408,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.166082
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4207,
+      "translation_xy_m": [
+        0.029997918215315056,
+        0.013603403260385255
+      ],
+      "yaw_rad": -0.011933988357613862,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.17589
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4208,
+      "translation_xy_m": [
+        0.004178342932478177,
+        0.009979353353076568
+      ],
+      "yaw_rad": 0.03597578731633752,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.174321
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4209,
+      "translation_xy_m": [
+        0.00045356570687733906,
+        0.023835787796662365
+      ],
+      "yaw_rad": -0.09998697853744408,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.17517
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4300,
+      "translation_xy_m": [
+        0.017776032468595538,
+        0.005
+      ],
+      "yaw_rad": -0.12400478081752844,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.177855
+        },
+        {
+          "edge": "top",
+          "width_m": 0.206879
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4301,
+      "translation_xy_m": [
+        0.046856387967661395,
+        0.005
+      ],
+      "yaw_rad": 0.2692456525470284,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.171467
+        },
+        {
+          "edge": "top",
+          "width_m": 0.209072
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4302,
+      "translation_xy_m": [
+        0.005411810700933057,
+        0.005
+      ],
+      "yaw_rad": -0.18560065242622373,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.171465
+        },
+        {
+          "edge": "top",
+          "width_m": 0.200178
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4303,
+      "translation_xy_m": [
+        0.009092440503317301,
+        0.003834
+      ],
+      "yaw_rad": -0.26659416620433596,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.179211
+        },
+        {
+          "edge": "top",
+          "width_m": 0.209434
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4304,
+      "translation_xy_m": [
+        0.008407668791280331,
+        0.005
+      ],
+      "yaw_rad": -0.32308453077721117,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.170525
+        },
+        {
+          "edge": "top",
+          "width_m": 0.205243
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4305,
+      "translation_xy_m": [
+        0.04442473922197005,
+        0.005
+      ],
+      "yaw_rad": -0.1435913415803779,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.179074
+        },
+        {
+          "edge": "top",
+          "width_m": 0.20876
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4306,
+      "translation_xy_m": [
+        0.002350992107512695,
+        0.005
+      ],
+      "yaw_rad": 0.10861759703201768,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.178917
+        },
+        {
+          "edge": "top",
+          "width_m": 0.200541
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4307,
+      "translation_xy_m": [
+        0.006951297875911245,
+        0.005
+      ],
+      "yaw_rad": -0.16833222648186896,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.171607
+        },
+        {
+          "edge": "top",
+          "width_m": 0.208688
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4308,
+      "translation_xy_m": [
+        0.00593128678265405,
+        0.005
+      ],
+      "yaw_rad": 0.0908082242514554,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.178479
+        },
+        {
+          "edge": "top",
+          "width_m": 0.202246
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4309,
+      "translation_xy_m": [
+        0.04756682837162049,
+        0.005
+      ],
+      "yaw_rad": 0.34691299690603,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.178663
+        },
+        {
+          "edge": "top",
+          "width_m": 0.208079
+        }
+      ]
+    }
+  ]
+}

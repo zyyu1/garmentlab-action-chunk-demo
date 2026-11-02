@@ -42,7 +42,16 @@ def start_with_square(backend,output,particle_mass):
         data['reads'][label]={'total_kg':float(masses.sum()),'min_kg':float(masses.min()),'max_kg':float(masses.max())}
         (output/'mass_audit.json').write_text(json.dumps(data,indent=2))
     capture('after_start')
-    world=backend._env.control.rest_world
+    control=backend._env.control
+    world=getattr(control,'rest_world',None)
+    if world is None:
+        from pxr import UsdGeom,Gf
+        garment=backend._env.garment[0]
+        mesh=UsdGeom.Mesh(backend._env.world.stage.GetPrimAtPath(garment.garment_mesh_prim_path))
+        transform=UsdGeom.XformCache().GetLocalToWorldTransform(mesh.GetPrim())
+        world=np.asarray([tuple(transform.Transform(Gf.Vec3d(*map(float,p))))
+                          for p in mesh.GetPointsAttr().Get()],dtype=float)
+    world=np.asarray(world)
     assert np.allclose(np.ptp(world,axis=0),[.4,.4,0],atol=1e-5)
     assert np.allclose((world.min(axis=0)+world.max(axis=0))/2,[0,-.45,.08],atol=1e-5)
     return capture

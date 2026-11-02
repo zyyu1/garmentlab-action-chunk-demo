@@ -1,0 +1,45 @@
+# Day4 square initial-state candidate v2; parameters fixed for this development batch.
+# Translation samples dx and dy independently from the positive range, matching existing code.
+# Not yet validated or frozen for formal acceptance.
+# Difficulty protocol for garment initial states.
+# These numbers define the three levels used in Day 8 evaluation.
+# Schema is frozen; numbers may be tuned before Day 8.
+# L2/L3 "drop" is a corner fold-over: lift, move inward toward the cloth center,
+# lower to release_clearance_m above the sheet, then release.  The exact fold
+# distance/tangent per episode is persisted in square-initial-plan.json.
+
+flat:
+  translate_xy_range: [0.0, 0.03]
+  yaw_range: [-0.1745, 0.1745]      # +-10 degrees
+  num_lift_drops: 0
+  lift_height_range: [0.0, 0.0]
+  lift_hold_steps: 0
+  drop_xy_jitter: 0.0
+  settle_steps: 120
+  needs_recovery: false
+  max_recovery_moves: 0
+  notes: "Slight random translation and yaw only."
+
+perturbed:
+  translate_xy_range: [0.0, 0.03]
+  yaw_range: [-0.1745, 0.1745]
+  num_lift_drops: 1
+  lift_height_range: [0.05, 0.10]
+  lift_hold_steps: 30
+  drop_xy_jitter: 0.02
+  settle_steps: 180
+  needs_recovery: true
+  max_recovery_moves: 1
+  notes: "One corner lifted, folded inward onto the sheet, and released; persistent corner flap."
+
+crumpled:
+  translate_xy_range: [0.0, 0.05]
+  yaw_range: [-0.3491, 0.3491]      # +-20 degrees
+  num_lift_drops: 2
+  lift_height_range: [0.08, 0.15]
+  lift_hold_steps: 45
+  drop_xy_jitter: 0.04
+  settle_steps: 240
+  needs_recovery: true
+  max_recovery_moves: 2
+  notes: "Two corner fold-overs; two flaps; requires recovery before folding."

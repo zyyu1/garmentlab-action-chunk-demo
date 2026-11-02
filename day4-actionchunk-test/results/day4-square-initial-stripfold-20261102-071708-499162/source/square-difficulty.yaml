@@ -1,0 +1,46 @@
+# Day4 square initial-state candidate v3; parameters fixed for this development batch.
+# Translation samples dx and dy independently from the positive range, matching existing code.
+# Not yet validated or frozen for formal acceptance.
+# Difficulty protocol for garment initial states.
+# These numbers define the three levels used in Day 8 evaluation.
+# Schema is frozen; numbers may be tuned before Day 8.
+# L2/L3 "drop" is a partial edge-strip fold using the validated x-axis half-fold
+# arc: the strip midpoint is carried over its fold line and placed on the sheet.
+# lift_height_range is the strip width.  Exact edges/widths per episode are
+# persisted in square-initial-plan.json.
+
+flat:
+  translate_xy_range: [0.0, 0.03]
+  yaw_range: [-0.1745, 0.1745]      # +-10 degrees
+  num_lift_drops: 0
+  lift_height_range: [0.0, 0.0]
+  lift_hold_steps: 0
+  drop_xy_jitter: 0.0
+  settle_steps: 120
+  needs_recovery: false
+  max_recovery_moves: 0
+  notes: "Slight random translation and yaw only."
+
+perturbed:
+  translate_xy_range: [0.0, 0.03]
+  yaw_range: [-0.1745, 0.1745]
+  num_lift_drops: 1
+  lift_height_range: [0.16, 0.18]
+  lift_hold_steps: 30
+  drop_xy_jitter: 0.02
+  settle_steps: 180
+  needs_recovery: true
+  max_recovery_moves: 1
+  notes: "One bottom-edge strip (width 0.16-0.18) folded inward onto the sheet."
+
+crumpled:
+  translate_xy_range: [0.0, 0.05]
+  yaw_range: [-0.3491, 0.3491]      # +-20 degrees
+  num_lift_drops: 2
+  lift_height_range: [0.17, 0.21]
+  lift_hold_steps: 45
+  drop_xy_jitter: 0.04
+  settle_steps: 240
+  needs_recovery: true
+  max_recovery_moves: 2
+  notes: "Bottom strip 0.17-0.18 then top strip 0.20-0.21; dy <= 0.005 keeps the top edge inside the fixed-pose workspace."

@@ -1,0 +1,634 @@
+{
+  "version": "square-initial-v2",
+  "config_sha256": "cae003931cc12e0b38336c97192d0b3abfc25843b92e02a67943bf00b8fc9057",
+  "asset_sha256": "fef138f6dd76484f3452455bf98cdc4d166812d290631125a5c375de8308ef7e",
+  "corner_labels": [
+    "local(-x,-y)",
+    "local(+x,-y)",
+    "local(+x,+y)",
+    "local(-x,+y)"
+  ],
+  "sampling": "NumPy default_rng; exact values persisted here",
+  "episodes": [
+    {
+      "level": "flat",
+      "seed": 4100,
+      "translation_xy_m": [
+        0.00385909927936512,
+        0.02681397324895149
+      ],
+      "yaw_rad": 0.03280146619631816,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4101,
+      "translation_xy_m": [
+        0.01498582960605534,
+        0.01783269589870703
+      ],
+      "yaw_rad": -0.1309625593436558,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4102,
+      "translation_xy_m": [
+        0.011672438593540209,
+        0.016478848282689623
+      ],
+      "yaw_rad": -0.06080896820903929,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4103,
+      "translation_xy_m": [
+        0.025541287784536643,
+        0.008883868197686768
+      ],
+      "yaw_rad": -0.07512365618078788,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4104,
+      "translation_xy_m": [
+        0.02387148084002474,
+        0.0017753656325589372
+      ],
+      "yaw_rad": -0.0730364481903002,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4105,
+      "translation_xy_m": [
+        0.005274487690073377,
+        0.00914147801368554
+      ],
+      "yaw_rad": 0.006861560892466062,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4106,
+      "translation_xy_m": [
+        0.023683784416422445,
+        0.027006491652189983
+      ],
+      "yaw_rad": 0.10287975492043139,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4107,
+      "translation_xy_m": [
+        0.01211277719742286,
+        0.013083401307232446
+      ],
+      "yaw_rad": -0.1488146393791384,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4108,
+      "translation_xy_m": [
+        0.008001330077323877,
+        0.02499443745381175
+      ],
+      "yaw_rad": 0.1381264374156722,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4109,
+      "translation_xy_m": [
+        0.026343189649365967,
+        0.01163826863045452
+      ],
+      "yaw_rad": 0.008845313363414403,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "perturbed",
+      "seed": 4200,
+      "translation_xy_m": [
+        0.016812008040814945,
+        0.003964959026106275
+      ],
+      "yaw_rad": -0.1154881356954241,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 1,
+          "lift_height_m": 0.08233789002735489,
+          "hold_steps": 30,
+          "fold_over_m": 0.081831,
+          "fold_tangent_m": -0.00426,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "perturbed",
+      "seed": 4201,
+      "translation_xy_m": [
+        0.0026708191265400125,
+        0.02748634418386058
+      ],
+      "yaw_rad": 0.16205999298044266,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 2,
+          "lift_height_m": 0.06475052686378419,
+          "hold_steps": 30,
+          "fold_over_m": 0.079679,
+          "fold_tangent_m": 0.014597,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "perturbed",
+      "seed": 4202,
+      "translation_xy_m": [
+        0.024471162663252336,
+        0.0069321790495343915
+      ],
+      "yaw_rad": 0.1157488843229747,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 0,
+          "lift_height_m": 0.06388472974400643,
+          "hold_steps": 30,
+          "fold_over_m": 0.072719,
+          "fold_tangent_m": -0.014969,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "perturbed",
+      "seed": 4203,
+      "translation_xy_m": [
+        0.0091555449896575,
+        0.021029534466375586
+      ],
+      "yaw_rad": 0.13094538328626049,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 3,
+          "lift_height_m": 0.09509011019620942,
+          "hold_steps": 30,
+          "fold_over_m": 0.080366,
+          "fold_tangent_m": -0.007034,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "perturbed",
+      "seed": 4204,
+      "translation_xy_m": [
+        0.002829251753489883,
+        0.019232622910444988
+      ],
+      "yaw_rad": 0.04128354429623271,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 0,
+          "lift_height_m": 0.07656250001682859,
+          "hold_steps": 30,
+          "fold_over_m": 0.078652,
+          "fold_tangent_m": -0.001984,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "perturbed",
+      "seed": 4205,
+      "translation_xy_m": [
+        0.01912170121237165,
+        0.011912924684114114
+      ],
+      "yaw_rad": -0.017537726229255035,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 3,
+          "lift_height_m": 0.0950383446597041,
+          "hold_steps": 30,
+          "fold_over_m": 0.074998,
+          "fold_tangent_m": -0.005973,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "perturbed",
+      "seed": 4206,
+      "translation_xy_m": [
+        0.019688758559314602,
+        0.01670679078340298
+      ],
+      "yaw_rad": 0.16074555186198408,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 1,
+          "lift_height_m": 0.06643953563715554,
+          "hold_steps": 30,
+          "fold_over_m": 0.076324,
+          "fold_tangent_m": 0.003942,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "perturbed",
+      "seed": 4207,
+      "translation_xy_m": [
+        0.029997918215315056,
+        0.013603403260385255
+      ],
+      "yaw_rad": -0.011933988357613862,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 1,
+          "lift_height_m": 0.06432285453965982,
+          "hold_steps": 30,
+          "fold_over_m": 0.08796,
+          "fold_tangent_m": 0.003217,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "perturbed",
+      "seed": 4208,
+      "translation_xy_m": [
+        0.004178342932478177,
+        0.009979353353076568
+      ],
+      "yaw_rad": 0.03597578731633752,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 1,
+          "lift_height_m": 0.06912870326028416,
+          "hold_steps": 30,
+          "fold_over_m": 0.086202,
+          "fold_tangent_m": -0.011714,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "perturbed",
+      "seed": 4209,
+      "translation_xy_m": [
+        0.00045356570687733906,
+        0.023835787796662365
+      ],
+      "yaw_rad": -0.09998697853744408,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 2,
+          "lift_height_m": 0.058211816073776394,
+          "hold_steps": 30,
+          "fold_over_m": 0.083316,
+          "fold_tangent_m": 0.008883,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "crumpled",
+      "seed": 4300,
+      "translation_xy_m": [
+        0.017776032468595538,
+        0.005222137169594488
+      ],
+      "yaw_rad": -0.12400478081752844,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 3,
+          "lift_height_m": 0.10681547889406222,
+          "hold_steps": 45,
+          "fold_over_m": 0.118456,
+          "fold_tangent_m": 0.013219,
+          "release_clearance_m": 0.02
+        },
+        {
+          "corner_label": 1,
+          "lift_height_m": 0.1358136764028993,
+          "hold_steps": 45,
+          "fold_over_m": 0.115174,
+          "fold_tangent_m": -0.018901,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "crumpled",
+      "seed": 4301,
+      "translation_xy_m": [
+        0.046856387967661395,
+        0.04422311714532419
+      ],
+      "yaw_rad": 0.2692456525470284,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 1,
+          "lift_height_m": 0.13280525209470825,
+          "hold_steps": 45,
+          "fold_over_m": 0.121967,
+          "fold_tangent_m": -0.002547,
+          "release_clearance_m": 0.02
+        },
+        {
+          "corner_label": 0,
+          "lift_height_m": 0.12619376893609652,
+          "hold_steps": 45,
+          "fold_over_m": 0.124774,
+          "fold_tangent_m": -0.006764,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "crumpled",
+      "seed": 4302,
+      "translation_xy_m": [
+        0.005411810700933057,
+        0.016770457404895668
+      ],
+      "yaw_rad": -0.18560065242622373,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 0,
+          "lift_height_m": 0.12892790025968198,
+          "hold_steps": 45,
+          "fold_over_m": 0.125645,
+          "fold_tangent_m": -0.011468,
+          "release_clearance_m": 0.02
+        },
+        {
+          "corner_label": 1,
+          "lift_height_m": 0.13540334390109957,
+          "hold_steps": 45,
+          "fold_over_m": 0.116515,
+          "fold_tangent_m": -0.005133,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "crumpled",
+      "seed": 4303,
+      "translation_xy_m": [
+        0.009092440503317301,
+        0.003834281353379515
+      ],
+      "yaw_rad": -0.26659416620433596,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 0,
+          "lift_height_m": 0.08531868605339454,
+          "hold_steps": 45,
+          "fold_over_m": 0.102301,
+          "fold_tangent_m": 0.003439,
+          "release_clearance_m": 0.02
+        },
+        {
+          "corner_label": 1,
+          "lift_height_m": 0.10393391022816571,
+          "hold_steps": 45,
+          "fold_over_m": 0.10155,
+          "fold_tangent_m": -0.002712,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "crumpled",
+      "seed": 4304,
+      "translation_xy_m": [
+        0.008407668791280331,
+        0.006849645313597014
+      ],
+      "yaw_rad": -0.32308453077721117,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 2,
+          "lift_height_m": 0.11790539027960988,
+          "hold_steps": 45,
+          "fold_over_m": 0.110901,
+          "fold_tangent_m": 0.027547,
+          "release_clearance_m": 0.02
+        },
+        {
+          "corner_label": 1,
+          "lift_height_m": 0.12010609749582243,
+          "hold_steps": 45,
+          "fold_over_m": 0.106051,
+          "fold_tangent_m": 0.026349,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "crumpled",
+      "seed": 4305,
+      "translation_xy_m": [
+        0.04442473922197005,
+        0.03077148184213503
+      ],
+      "yaw_rad": -0.1435913415803779,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 1,
+          "lift_height_m": 0.08173147276821545,
+          "hold_steps": 45,
+          "fold_over_m": 0.119722,
+          "fold_tangent_m": -0.00446,
+          "release_clearance_m": 0.02
+        },
+        {
+          "corner_label": 3,
+          "lift_height_m": 0.14814096899147078,
+          "hold_steps": 45,
+          "fold_over_m": 0.114811,
+          "fold_tangent_m": 0.01978,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "crumpled",
+      "seed": 4306,
+      "translation_xy_m": [
+        0.002350992107512695,
+        0.02399838387670122
+      ],
+      "yaw_rad": 0.10861759703201768,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 1,
+          "lift_height_m": 0.08374867141473515,
+          "hold_steps": 45,
+          "fold_over_m": 0.122851,
+          "fold_tangent_m": 0.002048,
+          "release_clearance_m": 0.02
+        },
+        {
+          "corner_label": 2,
+          "lift_height_m": 0.10247492944629778,
+          "hold_steps": 45,
+          "fold_over_m": 0.117264,
+          "fold_tangent_m": -0.0134,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "crumpled",
+      "seed": 4307,
+      "translation_xy_m": [
+        0.006951297875911245,
+        0.017335464796176158
+      ],
+      "yaw_rad": -0.16833222648186896,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 3,
+          "lift_height_m": 0.10457838632727265,
+          "hold_steps": 45,
+          "fold_over_m": 0.128967,
+          "fold_tangent_m": -0.023419,
+          "release_clearance_m": 0.02
+        },
+        {
+          "corner_label": 0,
+          "lift_height_m": 0.09499760886481613,
+          "hold_steps": 45,
+          "fold_over_m": 0.123511,
+          "fold_tangent_m": 0.003064,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "crumpled",
+      "seed": 4308,
+      "translation_xy_m": [
+        0.00593128678265405,
+        0.020121700955046104
+      ],
+      "yaw_rad": 0.0908082242514554,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 0,
+          "lift_height_m": 0.14459289863591043,
+          "hold_steps": 45,
+          "fold_over_m": 0.10186,
+          "fold_tangent_m": 0.0292,
+          "release_clearance_m": 0.02
+        },
+        {
+          "corner_label": 2,
+          "lift_height_m": 0.13552092108177338,
+          "hold_steps": 45,
+          "fold_over_m": 0.111136,
+          "fold_tangent_m": 0.00805,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    },
+    {
+      "level": "crumpled",
+      "seed": 4309,
+      "translation_xy_m": [
+        0.04756682837162049,
+        0.027853960759431987
+      ],
+      "yaw_rad": 0.34691299690603,
+      "lift_drop_cycles": [
+        {
+          "corner_label": 3,
+          "lift_height_m": 0.1396258441402054,
+          "hold_steps": 45,
+          "fold_over_m": 0.117729,
+          "fold_tangent_m": -0.001888,
+          "release_clearance_m": 0.02
+        },
+        {
+          "corner_label": 0,
+          "lift_height_m": 0.13602771872607067,
+          "hold_steps": 45,
+          "fold_over_m": 0.113983,
+          "fold_tangent_m": 0.027464,
+          "release_clearance_m": 0.02
+        }
+      ],
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop"
+    }
+  ]
+}

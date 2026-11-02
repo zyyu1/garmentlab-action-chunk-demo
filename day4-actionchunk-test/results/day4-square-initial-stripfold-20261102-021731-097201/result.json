@@ -1,0 +1,1076 @@
+{
+  "probe_version": "square-initial-stripfold-v1",
+  "passed": true,
+  "formal_day4_success": false,
+  "level": "crumpled",
+  "scope": "L2/L3 initial-state generation; partial edge-strip folds; no fold or policy acceptance",
+  "initial_case": {
+    "level": "crumpled",
+    "seed": 4300,
+    "translation_xy_m": [
+      0.017776032468595538,
+      0.005222137169594488
+    ],
+    "yaw_rad": -0.12400478081752844,
+    "settle_steps": 240,
+    "status": "blocked_unvalidated_corner_lift_drop",
+    "strips": [
+      {
+        "edge": "bottom",
+        "width_m": 0.168725
+      },
+      {
+        "edge": "top",
+        "width_m": 0.177577
+      }
+    ]
+  },
+  "strip_records": [
+    {
+      "strip": 0,
+      "edge": "bottom",
+      "width_m": 0.168725,
+      "slot": "hem",
+      "pick_index": 10,
+      "pick_world": [
+        -0.0069614797830581665,
+        -0.6432420611381531,
+        0.009899997152388096
+      ],
+      "local_pick": [
+        0.0,
+        -0.20000000298023224,
+        0.0
+      ],
+      "moving_count": 189,
+      "lateral_world": [
+        0.12368721765426412,
+        0.9923212545284651,
+        0.0
+      ],
+      "grasp": [
+        -0.0069614797830581665,
+        -0.6432420611381531,
+        0.013299997152388096
+      ],
+      "material_targets": [
+        [
+          -0.0008490543540494591,
+          -0.5942031241731376,
+          0.13420658880808833
+        ],
+        [
+          0.013907646015657547,
+          -0.4758126574678378,
+          0.18862499715238812
+        ],
+        [
+          0.028664346385364553,
+          -0.35742219076253806,
+          0.14420658880808834
+        ],
+        [
+          0.03477677181437326,
+          -0.3083832537975225,
+          0.029899997152388117
+        ]
+      ],
+      "ee_targets": [
+        [
+          -0.0008490543540494591,
+          -0.5942031241731376,
+          0.13760658880808832
+        ],
+        [
+          0.013907646015657547,
+          -0.4758126574678378,
+          0.1920249971523881
+        ],
+        [
+          0.028664346385364553,
+          -0.35742219076253806,
+          0.14760658880808833
+        ],
+        [
+          0.03477677181437326,
+          -0.3083832537975225,
+          0.033299997152388114
+        ]
+      ],
+      "label": "strip_start"
+    },
+    {
+      "strip": 0,
+      "target_joint_positions": [
+        0.13334384560585022,
+        0.14932170510292053,
+        -0.012994778342545033,
+        -2.9456369876861572,
+        0.051710668951272964,
+        3.0946922302246094,
+        2.5492448806762695
+      ],
+      "summary": {
+        "steps": 60,
+        "control": "joint_position_hold; RMP not called at fixed target",
+        "target_joint_positions": [
+          0.13334384560585022,
+          0.14932170510292053,
+          -0.012994778342545033,
+          -2.9456369876861572,
+          0.051710668951272964,
+          3.0946922302246094,
+          2.5492448806762695
+        ],
+        "arm_joint_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "label": "hold_summary"
+    },
+    {
+      "strip": 0,
+      "position_error_m": 0.014779667629647518,
+      "arm_speed_rad_s": 0.0004893229925073683,
+      "anchor_gap_max_m": 0.002116264174782266,
+      "accepted": true,
+      "label": "held_check"
+    },
+    {
+      "strip": 0,
+      "settle_steps": 240,
+      "center": [
+        0.026551760733127594,
+        -0.37234973907470703,
+        0.027733324095606804
+      ],
+      "extent": [
+        0.4249833822250366,
+        0.2618170380592346,
+        0.06245793029665947
+      ],
+      "crossed_fraction": 1.0,
+      "pick_displacement_m": 0.32671236991882324,
+      "label": "strip_settled"
+    },
+    {
+      "strip": 1,
+      "edge": "top",
+      "width_m": 0.177577,
+      "slot": "top",
+      "pick_index": 430,
+      "pick_world": [
+        0.04254169017076492,
+        -0.2500323951244354,
+        0.009899989701807499
+      ],
+      "local_pick": [
+        0.0,
+        0.20000000298023224,
+        0.0
+      ],
+      "moving_count": 189,
+      "lateral_world": [
+        -0.12368721765426412,
+        -0.9923212545284651,
+        0.0
+      ],
+      "grasp": [
+        0.04254169017076492,
+        -0.2500323951244354,
+        0.0132999897018075
+      ],
+      "material_targets": [
+        [
+          0.03610858203381379,
+          -0.3016441142498558,
+          0.14046589058457104
+        ],
+        [
+          0.020577685121373663,
+          -0.42624582653983667,
+          0.19747698970180752
+        ],
+        [
+          0.005046788208933541,
+          -0.5508475388298175,
+          0.15046589058457108
+        ],
+        [
+          -0.0013863199280175972,
+          -0.6024592579552379,
+          0.02989998970180752
+        ]
+      ],
+      "ee_targets": [
+        [
+          0.03610858203381379,
+          -0.3016441142498558,
+          0.14386589058457103
+        ],
+        [
+          0.020577685121373663,
+          -0.42624582653983667,
+          0.2008769897018075
+        ],
+        [
+          0.005046788208933541,
+          -0.5508475388298175,
+          0.15386589058457106
+        ],
+        [
+          -0.0013863199280175972,
+          -0.6024592579552379,
+          0.03329998970180752
+        ]
+      ],
+      "label": "strip_start"
+    },
+    {
+      "strip": 1,
+      "target_joint_positions": [
+        -2.0707223415374756,
+        -1.2352817058563232,
+        1.9542646408081055,
+        -1.9204730987548828,
+        1.359397292137146,
+        2.0316696166992188,
+        1.745964765548706
+      ],
+      "summary": {
+        "steps": 60,
+        "control": "joint_position_hold; RMP not called at fixed target",
+        "target_joint_positions": [
+          -2.0707223415374756,
+          -1.2352817058563232,
+          1.9542646408081055,
+          -1.9204730987548828,
+          1.359397292137146,
+          2.0316696166992188,
+          1.745964765548706
+        ],
+        "arm_joint_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "label": "hold_summary"
+    },
+    {
+      "strip": 1,
+      "position_error_m": 0.014186245094624208,
+      "arm_speed_rad_s": 0.0037269690074026585,
+      "anchor_gap_max_m": 0.0021269481815222716,
+      "accepted": true,
+      "label": "held_check"
+    },
+    {
+      "strip": 1,
+      "settle_steps": 240,
+      "center": [
+        0.004945299122482538,
+        -0.5318427085876465,
+        0.027379771694540977
+      ],
+      "extent": [
+        0.4248550236225128,
+        0.25772398710250854,
+        0.06149108707904816
+      ],
+      "crossed_fraction": 1.0,
+      "pick_displacement_m": 0.3495819866657257,
+      "label": "strip_settled"
+    }
+  ],
+  "actions": [
+    {
+      "strip": 0,
+      "label": "approach",
+      "target_pose": [
+        -0.0069614797830581665,
+        -0.6432420611381531,
+        0.1598999971523881,
+        -0.12400478081752844
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 472,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "gripper_state": 0,
+      "ee": [
+        -0.006908329988461492,
+        -0.6417194348324319,
+        0.16172025080231575
+      ],
+      "step": 472
+    },
+    {
+      "strip": 0,
+      "label": "descend",
+      "target_pose": [
+        -0.0069614797830581665,
+        -0.6432420611381531,
+        0.013299997152388096,
+        -0.12400478081752844
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 618,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "gripper_state": 0,
+      "ee": [
+        -0.007017771659138705,
+        -0.6430671359375411,
+        0.01740326230723822
+      ],
+      "step": 618
+    },
+    {
+      "strip": 0,
+      "label": "close",
+      "target_pose": [
+        -0.0069614797830581665,
+        -0.6432420611381531,
+        0.013299997152388096,
+        -0.12400478081752844
+      ],
+      "command": 1,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 659,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "gripper_state": 2,
+      "ee": [
+        -0.0069785142949967596,
+        -0.6429175816795387,
+        0.013620687717777299
+      ],
+      "step": 659,
+      "block_error_m": 2.8544635295112015e-05,
+      "max_single_anchor_gap_m": 0.001386315451401761
+    },
+    {
+      "strip": 0,
+      "label": "arc45",
+      "target_pose": [
+        -0.0008490543540494591,
+        -0.5942031241731376,
+        0.13760658880808832,
+        -0.12400478081752844
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 732,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "gripper_state": 2,
+      "ee": [
+        -0.0017517926675482455,
+        -0.5992288796620042,
+        0.12457036564532292
+      ],
+      "step": 732,
+      "block_error_m": 0.0010059675411108406,
+      "max_single_anchor_gap_m": 0.001386315451401761
+    },
+    {
+      "strip": 0,
+      "label": "arc90",
+      "target_pose": [
+        0.013907646015657547,
+        -0.4758126574678378,
+        0.1920249971523881,
+        -0.12400478081752844
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 809,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "gripper_state": 2,
+      "ee": [
+        0.013631394050967896,
+        -0.4880523083951953,
+        0.18544093692975583
+      ],
+      "step": 809,
+      "block_error_m": 0.0010222262246149963,
+      "max_single_anchor_gap_m": 0.001386315451401761
+    },
+    {
+      "strip": 0,
+      "label": "arc135",
+      "target_pose": [
+        0.028664346385364553,
+        -0.35742219076253806,
+        0.14760658880808833,
+        -0.12400478081752844
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 884,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "gripper_state": 2,
+      "ee": [
+        0.026666720213078865,
+        -0.3708549256193057,
+        0.15167424743187172
+      ],
+      "step": 884,
+      "block_error_m": 0.001000570782153376,
+      "max_single_anchor_gap_m": 0.0017084336038344825
+    },
+    {
+      "strip": 0,
+      "label": "place",
+      "target_pose": [
+        0.03477677181437326,
+        -0.3083832537975225,
+        0.033299997152388114,
+        -0.12400478081752844
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 959,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "gripper_state": 2,
+      "ee": [
+        0.033511298125026005,
+        -0.31500352779648844,
+        0.04645767953897487
+      ],
+      "step": 959,
+      "block_error_m": 0.0010204372486534601,
+      "max_single_anchor_gap_m": 0.002116264174782266
+    },
+    {
+      "strip": 0,
+      "label": "release",
+      "target_pose": [
+        0.033512649352019454,
+        -0.31499967204475465,
+        0.04645536028765416,
+        -0.12400478081752844
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1041,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "gripper_state": 0,
+      "ee": [
+        0.03344741789836566,
+        -0.31501441627790955,
+        0.04652525932907876
+      ],
+      "step": 1041
+    },
+    {
+      "strip": 0,
+      "label": "retreat",
+      "target_pose": [
+        0.033512649352019454,
+        -0.31499967204475465,
+        0.19645536028765415,
+        -0.12400478081752844
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1217,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "gripper_state": 0,
+      "ee": [
+        0.03341506680416239,
+        -0.3150489480364422,
+        0.19240549027438814
+      ],
+      "step": 1217
+    },
+    {
+      "strip": 1,
+      "label": "approach",
+      "target_pose": [
+        0.04254169017076492,
+        -0.2500323951244354,
+        0.1598999897018075,
+        -0.12400478081752844
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1565,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "gripper_state": 0,
+      "ee": [
+        0.0439559690063137,
+        -0.25741446474967306,
+        0.15890948692370693
+      ],
+      "step": 1565
+    },
+    {
+      "strip": 1,
+      "label": "descend",
+      "target_pose": [
+        0.04254169017076492,
+        -0.2500323951244354,
+        0.0132999897018075,
+        -0.12400478081752844
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1712,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "gripper_state": 0,
+      "ee": [
+        0.04264631502314109,
+        -0.25028619733831786,
+        0.017734250896103403
+      ],
+      "step": 1712
+    },
+    {
+      "strip": 1,
+      "label": "close",
+      "target_pose": [
+        0.04254169017076492,
+        -0.2500323951244354,
+        0.0132999897018075,
+        -0.12400478081752844
+      ],
+      "command": 1,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1756,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "gripper_state": 2,
+      "ee": [
+        0.04275248295822067,
+        -0.2501142916772743,
+        0.013692461416162201
+      ],
+      "step": 1756,
+      "block_error_m": 2.8086663753188167e-05,
+      "max_single_anchor_gap_m": 0.00138367368269128
+    },
+    {
+      "strip": 1,
+      "label": "arc45",
+      "target_pose": [
+        0.03610858203381379,
+        -0.3016441142498558,
+        0.14386589058457103,
+        -0.12400478081752844
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1832,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "gripper_state": 2,
+      "ee": [
+        0.036630699961279635,
+        -0.29636397264425474,
+        0.13055203939330312
+      ],
+      "step": 1832,
+      "block_error_m": 0.0010263377799447167,
+      "max_single_anchor_gap_m": 0.00138367368269128
+    },
+    {
+      "strip": 1,
+      "label": "arc90",
+      "target_pose": [
+        0.020577685121373663,
+        -0.42624582653983667,
+        0.2008769897018075,
+        -0.12400478081752844
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1912,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "gripper_state": 2,
+      "ee": [
+        0.02214402563082804,
+        -0.4128020788739231,
+        0.1947752504402368
+      ],
+      "step": 1912,
+      "block_error_m": 0.0010370532643026729,
+      "max_single_anchor_gap_m": 0.00138367368269128
+    },
+    {
+      "strip": 1,
+      "label": "arc135",
+      "target_pose": [
+        0.005046788208933541,
+        -0.5508475388298175,
+        0.15386589058457106,
+        -0.12400478081752844
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1993,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "gripper_state": 2,
+      "ee": [
+        0.00683075455261958,
+        -0.53663856081375,
+        0.15844941127430287
+      ],
+      "step": 1993,
+      "block_error_m": 0.0010363936669093448,
+      "max_single_anchor_gap_m": 0.0016790519372631852
+    },
+    {
+      "strip": 1,
+      "label": "place",
+      "target_pose": [
+        -0.0013863199280175972,
+        -0.6024592579552379,
+        0.03329998970180752,
+        -0.12400478081752844
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 2072,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "gripper_state": 2,
+      "ee": [
+        -0.00047050693685609193,
+        -0.5955612724659419,
+        0.04567247088110831
+      ],
+      "step": 2072,
+      "block_error_m": 0.0009936854381040088,
+      "max_single_anchor_gap_m": 0.0021269481815222716
+    },
+    {
+      "strip": 1,
+      "label": "release",
+      "target_pose": [
+        -0.00047516346986849515,
+        -0.5955533652186069,
+        0.04565830630657492,
+        -0.12400478081752844
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 2154,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "gripper_state": 0,
+      "ee": [
+        -0.0004571741081167509,
+        -0.5955119487388478,
+        0.045719408991282524
+      ],
+      "step": 2154
+    },
+    {
+      "strip": 1,
+      "label": "retreat",
+      "target_pose": [
+        -0.00047516346986849515,
+        -0.5955533652186069,
+        0.1956583063065749,
+        -0.12400478081752844
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 2327,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "gripper_state": 0,
+      "ee": [
+        -0.0004468783801219499,
+        -0.5953861798812683,
+        0.1914038432248545
+      ],
+      "step": 2327
+    },
+    {
+      "strip": 0,
+      "label": "home",
+      "target_pose": [
+        0.0055302243601351555,
+        -0.46081547315767946,
+        0.3883201813095618,
+        -0.12400478081752844
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 2799,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "gripper_state": 0,
+      "ee": [
+        0.005398253881962694,
+        -0.46298342944891613,
+        0.3848954777138035
+      ],
+      "step": 2799
+    }
+  ],
+  "errors": [],
+  "physics_profile": "original robot asset; cloth mass .0001/friction .3/particle friction scale 0; room collisions isolated; constructor bend 100",
+  "strip_policy": {
+    "edges": [
+      "bottom",
+      "top"
+    ],
+    "motion": "same semicircular arc as the validated x-axis half-fold, radius = strip width",
+    "release": "place target at pick + 2*width inward, 2 cm above the sheet",
+    "grasp": "prepared 5 mm single anchor; pre-grasp drive keeps the 10 mm gate"
+  },
+  "constructor_bend_applied": 100.0,
+  "home_ee": [
+    0.0055302243601351555,
+    -0.46081547315767946,
+    0.3883201813095618
+  ],
+  "home_quaternion_wxyz": [
+    0.2698972916992235,
+    0.6330690219473039,
+    0.669818838918058,
+    -0.27878627730678057
+  ],
+  "material_readback": {
+    "friction": 0.30000001192092896,
+    "particle_friction_scale": 0.0
+  },
+  "runtime_source_hashes": {
+    "backend": {
+      "path": "/root/autodl-tmp/day4-square-initial-stripfold.py",
+      "sha256": "49fa0c209d771f384955d69cd5bcced8805468a57d248aae0ca0c5c02f31bc96"
+    },
+    "environment": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/FoldEnv.py",
+      "sha256": "e0aff36e6b25d724cd8c7f2ffd4dd7c53ffd95693f4e502457eaecf63ebcbe24"
+    },
+    "robot": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py",
+      "sha256": "adc6abc5b8721a0730fe7281d6cc1d89a6b7e1abad0d7b5da167369f0371428a"
+    },
+    "original_control": {
+      "path": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/Control.py",
+      "sha256": "2b51b9956c5b296b43c2e85509678984061ca716273c33e84cffbb0706f93547"
+    }
+  },
+  "flat_transform": {
+    "translation_xy_m": [
+      0.017776032468595538,
+      0.005222137169594488
+    ],
+    "yaw_rad": -0.12400478081752844,
+    "center_before": [
+      6.58894894201012e-09,
+      -0.44999974966049194,
+      0.009900032542645931
+    ],
+    "transform_error_max_m": 2.9651043731426796e-08
+  },
+  "geometry": {
+    "center": [
+      0.0049967337399721146,
+      -0.5310723781585693,
+      0.0273793563246727
+    ],
+    "extent": [
+      0.4249557852745056,
+      0.2580130994319916,
+      0.06147557869553566
+    ],
+    "z_p95": 0.06855075061321259
+  },
+  "initial_image": "/root/autodl-tmp/day4-square-initial-stripfold-20261102-021731-097201/initial.png",
+  "strip_trace_file": "/root/autodl-tmp/day4-square-initial-stripfold-20261102-021731-097201/strip_trace.jsonl",
+  "strip_trace_rows": 616
+}

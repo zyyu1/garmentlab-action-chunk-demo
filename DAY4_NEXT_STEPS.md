@@ -1,5 +1,41 @@
 # Day4 收尾计划（当前有效版本）
 
+## 当前步骤：第 6 步进行中：L2 4200 通过，L3 4300 lift 超时，诊断 4300
+
+第 2 步 v6 已通过（末端位置误差0.4733mm、末臂速0.00860rad/s、最大锚点误差1.3906mm、块中心最大跟随误差0.0121mm）。第 3 步离线复核发现：原 y 向候选从 v5 实际抓取关节连续跟踪时，在 place 第 15 个子目标（y=-0.277, z=0.097）被关节限位阻断，最终点 y=-0.25, z=0.033 在该分支上不可连续到达；3.15rad 不是单纯离散 IK 分支选择。
+
+改用同一方巾的 x 向中心对折：`left_sleeve` 槽位、左边缘折到右边缘，仍为 9 个公共动作、同一接口和物理配置。用 v5 实际初态几何对 8 个 descend 分支做连续跟踪，8/8 完成，最大相邻关节变化 ≤0.100rad。
+
+首次运行 `day4-square-l1-xfold-v1-20261101-062036-672015` 因初始化属性错误失败；修正后有效运行 `day4-square-l1-xfold-v1-20261101-062602-150760` 完成：`passed=true`、errors为空、9个公共动作状态一致、held gate 通过（位置0.5033mm、末臂速0.000916rad/s、锚点间隙1.9907mm）、生命周期检查全部通过。运行时折叠各阶段相邻5步关节变化≤0.0206rad、最大速度≤0.257rad/s，无跳变。`moving_half_crossed_fraction=1.0`、投影IoU=0.6617、对齐6.358mm、静置4s漂移0.860mm。
+
+已下载并完成视频/阶段图视觉审查：折叠前后投影由完整方巾变为右半幅，左半覆盖在右半上；释放、退让、静置3s/4s后形状保持，无整件搬移、翻转或持续滑动。折叠层左侧略抬/卷曲（垂直间隙中位数22.1mm、p90 56.8mm，`cloth_z_p95=68.66mm`），固定半片被拖拽约1.1cm；不冻结正式高度/重叠阈值。详见 [x向L1候选](day4-actionchunk-test/SQUARE_L1_XFOLD_V1.md) 和 [视觉审查](day4-actionchunk-test/results/day4-square-l1-xfold-v1-20261101-062602-150760/review.md)。
+
+第 4 步独立重复 `day4-square-l1-xfold-v1-20261101-065314-576894` 也完成：`passed=true`、errors为空、9个公共动作，步数与第一次完全相同（469/616/657/813/961/1119/1293/1375/1550）。`result.json`、`hold_trace.jsonl`、`state_trace.json`、`postcross_trace.npz`、`00_initial.npz`、`10_final_3s.npz` 的 SHA256 与第一次逐字节一致；`episode.mp4` 文件哈希不同，解码帧全图平均差约20.9灰度级，阶段图显示第一次蓝色网格背景、第二次浅灰背景，机器人位姿和折叠形状相同。审查见 [第二例 review](day4-actionchunk-test/results/day4-square-l1-xfold-v1-20261101-065314-576894/review.md)。
+
+第 3/4 步开发判据满足：两次开发运行均完成真正对折；同配置物理轨迹可重复，但不证明种子/初态扰动/难度鲁棒性。两次均为开发候选，不计正式成功。
+
+第 5 步整合候选已上传：`backends/prepared_square_backend.py`（yaw 映射、静止 HOLD 自动 60 步 StableHold、OPEN 释放后允许同槽位重抓取、`reset` 场景重置）、`garmentlab_backend.py` 控制工厂钩子、`multi_prepared_grasp_control.py` 的 `enable_regrasp/prepare_episode_reset/after_scene_reset`，以及测试入口 `day4-prepared-square-backend-reset.py`。清单 20/20 预检通过。
+
+10 循环已通过：远端 `day4-prepared-square-backend-reset-20261101-080713-870146`，`passed=true`、`cycle_count=10`、`ERRORS=[]`、`RESULT_VERIFIED True`。10 个循环全部 reset 检查通过并保存读回：三槽 released/disabled/unused、约束存在且路径唯一、布料 0.4×0.4、z_p95=9.9mm、PNG 480×640。第 1 循环完整折叠 IoU 0.6971、对齐 5.350mm、z_p95 69.39mm，held gate 0.474mm/0.000915rad/s/2.034mm；第 2 循环同 episode 重抓取 `reuse_count=2`、激活最大位移 1.2718mm、yaw 误差 1.9e-4rad；第 3–10 循环短程 held 4.093mm/0.003331rad/s/1.427mm、hold 60 步。详见 [Backend reset 候选](day4-actionchunk-test/SQUARE_BACKEND_RESET_V1.md) 和 [10循环审查](day4-actionchunk-test/results/day4-prepared-square-backend-reset-20261101-080713-870146/review.md)。
+
+第 5 步开发判据满足：同一 episode 可重抓取；连续 10 次 reset/rollout 无状态残留或保存错误。yaw、抓取、静止保持、附件清理和 reset 已接入正式 Backend 候选。正式成功仍为 0。
+
+第 6 步拆为 6a（三档初态）与 6b（recovery + 动作预算）。
+
+**6a 已完成**：L1/L2/L3 各 10 张、共 30 张初态图全部 `passed=true`，三档肉眼可区分（L1 平铺、L2 宽短折带、L3 窄高半折）。最终方案：
+
+- L1：平整方巾；L2：一条 bottom 折条 width 0.16–0.18（典型 extent 0.42×0.25、z 0.06）；L3：一条 left 半折 width 0.20（典型 extent 0.25×0.43、z 0.06）。
+- plan `e2cfaebe…`（version square-initial-v3）、yaml `a42fec8a…`、stripfold script `178ab10c…`、strip control `49075fb4…`、run script `33a4e142…`；30 张对比图本地 `results/initial30_sheet_v2.png`。
+- 已排除：lift→原高度释放（平铺）、原始动态 Control（3 cm reach 空抓）、角点折角（release 弹平）、left 0.165 / bottom 0.11（展开）、L3 top 第二折（近基座不可达）。
+
+**6b 暂停点**：5 动作 recovery 冒烟脚本已写好、未运行（`day4-strip-recovery-smoke.py` `68781cf2…`、`run-strip-recovery-smoke.sh` `57bdfd68…`、`square-strip-recovery-files.json`）。7 动作折叠压缩未实现；当前 9+5=14>12。下一步：上传 recovery 3 文件 → 跑 L2 4200 与 L3 4300 recovery 冒烟 → 实现 7 动作 fold 并复验 → 组合 recovery(5)+fold(7)=12。完整交接见 [2026-11-02 日报](2026-11-02-GarmentLab日报%20Day4%20L2L3初态与6b交接.md)。正式成功仍为 0。下方第 1/2 步及旧交接均为历史状态。
+
+## 第 1 步几何核对完成（历史记录）
+
+详见 [实际 USD 几何与偏移审查](DAY4_STEP1_GRASP_GEOMETRY.md)。手指有效 contactOffset=5.45 mm、restOffset=0；保存姿态下实际 USD 碰撞源网格仍有约 1.2–1.4 mm 间隙，接触事件可由余量解释，暂不改手指或轨迹高度。辅助块实体半高15 mm而中心目标约10.207 mm，已确认与默认地面不相容。下一步只修正该代理块—地面关系并短程复验，尚未执行。
+
+完成了一次失败读取和一次修正后的仅初始化诊断（无公共动作，读取前后 step=2）。静态地面有效 offset 未被 rigid-body view 读取到，报告保留此限制；不声称所有形状读数或整条轨迹无碰撞认证通过。正式折叠成功仍为0，不进入第3步。完整结果下载由用户手动执行。
+
 ## 最新交接：2026-10-31 v5 已审查，今日暂停
 
 以 [2026-10-31 交接日报](2026-10-31-GarmentLab日报%20Day4%20v5保持与接触审查交接.md) 为最新状态，下方冲突段落仅作历史记录。

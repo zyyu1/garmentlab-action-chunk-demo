@@ -1,6 +1,6 @@
 {
-  "version": "square-initial-v1",
-  "config_sha256": "82ab6771e3b055279fdc2f2eb54c2f0530e74760f7c8603545b71fe6084ab3e2",
+  "version": "square-initial-v3",
+  "config_sha256": "a42fec8a1069ad43525d609bd058d9540bb7d6a1370d580abfc8616f61cd24f4",
   "asset_sha256": "fef138f6dd76484f3452455bf98cdc4d166812d290631125a5c375de8308ef7e",
   "corner_labels": [
     "local(-x,-y)",
@@ -138,19 +138,14 @@
         0.003964959026106275
       ],
       "yaw_rad": -0.1154881356954241,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 1,
-          "lift_height_m": 0.08233789002735489,
-          "drop_xy_offset_m": [
-            0.010822101277244221,
-            -0.0009215051484314923
-          ],
-          "hold_steps": 30
-        }
-      ],
       "settle_steps": 180,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.174179
+        }
+      ]
     },
     {
       "level": "perturbed",
@@ -160,19 +155,14 @@
         0.02748634418386058
       ],
       "yaw_rad": 0.16205999298044266,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 2,
-          "lift_height_m": 0.06475052686378419,
-          "drop_xy_offset_m": [
-            -0.004381635780732519,
-            -0.019549697426595247
-          ],
-          "hold_steps": 30
-        }
-      ],
       "settle_steps": 180,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.179284
+        }
+      ]
     },
     {
       "level": "perturbed",
@@ -182,19 +172,14 @@
         0.0069321790495343915
       ],
       "yaw_rad": 0.1157488843229747,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 0,
-          "lift_height_m": 0.06388472974400643,
-          "drop_xy_offset_m": [
-            -0.013683202338761559,
-            -0.018224577977569947
-          ],
-          "hold_steps": 30
-        }
-      ],
       "settle_steps": 180,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.171397
+        }
+      ]
     },
     {
       "level": "perturbed",
@@ -204,19 +189,14 @@
         0.021029534466375586
       ],
       "yaw_rad": 0.13094538328626049,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 3,
-          "lift_height_m": 0.09509011019620942,
-          "drop_xy_offset_m": [
-            -0.01459300656371695,
-            -0.019969706509912227
-          ],
-          "hold_steps": 30
-        }
-      ],
       "settle_steps": 180,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.177043
+        }
+      ]
     },
     {
       "level": "perturbed",
@@ -226,19 +206,14 @@
         0.019232622910444988
       ],
       "yaw_rad": 0.04128354429623271,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 0,
-          "lift_height_m": 0.07656250001682859,
-          "drop_xy_offset_m": [
-            0.01737205330977185,
-            -0.018791616290981025
-          ],
-          "hold_steps": 30
-        }
-      ],
       "settle_steps": 180,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.174309
+        }
+      ]
     },
     {
       "level": "perturbed",
@@ -248,19 +223,14 @@
         0.011912924684114114
       ],
       "yaw_rad": -0.017537726229255035,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 3,
-          "lift_height_m": 0.0950383446597041,
-          "drop_xy_offset_m": [
-            -0.019291120895584872,
-            0.0009239032800487761
-          ],
-          "hold_steps": 30
-        }
-      ],
       "settle_steps": 180,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.161505
+        }
+      ]
     },
     {
       "level": "perturbed",
@@ -270,19 +240,14 @@
         0.01670679078340298
       ],
       "yaw_rad": 0.16074555186198408,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 1,
-          "lift_height_m": 0.06643953563715554,
-          "drop_xy_offset_m": [
-            0.017902796138356974,
-            0.014271442514771675
-          ],
-          "hold_steps": 30
-        }
-      ],
       "settle_steps": 180,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.166082
+        }
+      ]
     },
     {
       "level": "perturbed",
@@ -292,19 +257,14 @@
         0.013603403260385255
       ],
       "yaw_rad": -0.011933988357613862,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 1,
-          "lift_height_m": 0.06432285453965982,
-          "drop_xy_offset_m": [
-            -0.012479987327201854,
-            0.015863820128079496
-          ],
-          "hold_steps": 30
-        }
-      ],
       "settle_steps": 180,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.17589
+        }
+      ]
     },
     {
       "level": "perturbed",
@@ -314,19 +274,14 @@
         0.009979353353076568
       ],
       "yaw_rad": 0.03597578731633752,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 1,
-          "lift_height_m": 0.06912870326028416,
-          "drop_xy_offset_m": [
-            -0.014028263928146056,
-            0.004796247909869732
-          ],
-          "hold_steps": 30
-        }
-      ],
       "settle_steps": 180,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.174321
+        }
+      ]
     },
     {
       "level": "perturbed",
@@ -336,19 +291,14 @@
         0.023835787796662365
       ],
       "yaw_rad": -0.09998697853744408,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 2,
-          "lift_height_m": 0.058211816073776394,
-          "drop_xy_offset_m": [
-            0.013095247439695357,
-            0.010273029632335912
-          ],
-          "hold_steps": 30
-        }
-      ],
       "settle_steps": 180,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.17517
+        }
+      ]
     },
     {
       "level": "crumpled",
@@ -358,28 +308,14 @@
         0.005222137169594488
       ],
       "yaw_rad": -0.12400478081752844,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 3,
-          "lift_height_m": 0.10681547889406222,
-          "drop_xy_offset_m": [
-            0.026055776626069165,
-            0.03983199814654579
-          ],
-          "hold_steps": 45
-        },
-        {
-          "corner_label": 3,
-          "lift_height_m": 0.1358136764028993,
-          "drop_xy_offset_m": [
-            0.005054960895358368,
-            -0.009757230612687396
-          ],
-          "hold_steps": 45
-        }
-      ],
       "settle_steps": 240,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
     },
     {
       "level": "crumpled",
@@ -389,28 +325,14 @@
         0.04422311714532419
       ],
       "yaw_rad": 0.2692456525470284,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 1,
-          "lift_height_m": 0.13280525209470825,
-          "drop_xy_offset_m": [
-            -0.013833398305512432,
-            -0.005927986344558871
-          ],
-          "hold_steps": 45
-        },
-        {
-          "corner_label": 0,
-          "lift_height_m": 0.12619376893609652,
-          "drop_xy_offset_m": [
-            0.02650150896762129,
-            -0.013025422126786496
-          ],
-          "hold_steps": 45
-        }
-      ],
       "settle_steps": 240,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
     },
     {
       "level": "crumpled",
@@ -420,28 +342,14 @@
         0.016770457404895668
       ],
       "yaw_rad": -0.18560065242622373,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 0,
-          "lift_height_m": 0.12892790025968198,
-          "drop_xy_offset_m": [
-            -0.017018016354780247,
-            -0.03752460082741025
-          ],
-          "hold_steps": 45
-        },
-        {
-          "corner_label": 1,
-          "lift_height_m": 0.13540334390109957,
-          "drop_xy_offset_m": [
-            -0.013737633499149544,
-            -0.017182149303941616
-          ],
-          "hold_steps": 45
-        }
-      ],
       "settle_steps": 240,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
     },
     {
       "level": "crumpled",
@@ -451,28 +359,14 @@
         0.003834281353379515
       ],
       "yaw_rad": -0.26659416620433596,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 0,
-          "lift_height_m": 0.08531868605339454,
-          "drop_xy_offset_m": [
-            0.0247800655258067,
-            -0.0349462794041441
-          ],
-          "hold_steps": 45
-        },
-        {
-          "corner_label": 1,
-          "lift_height_m": 0.10393391022816571,
-          "drop_xy_offset_m": [
-            0.039599021635092206,
-            0.02775815218146279
-          ],
-          "hold_steps": 45
-        }
-      ],
       "settle_steps": 240,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
     },
     {
       "level": "crumpled",
@@ -482,28 +376,14 @@
         0.006849645313597014
       ],
       "yaw_rad": -0.32308453077721117,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 2,
-          "lift_height_m": 0.11790539027960988,
-          "drop_xy_offset_m": [
-            0.030679085720862205,
-            0.009604173026433037
-          ],
-          "hold_steps": 45
-        },
-        {
-          "corner_label": 1,
-          "lift_height_m": 0.12010609749582243,
-          "drop_xy_offset_m": [
-            0.004334045345844181,
-            0.024455757980594274
-          ],
-          "hold_steps": 45
-        }
-      ],
       "settle_steps": 240,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
     },
     {
       "level": "crumpled",
@@ -513,28 +393,14 @@
         0.03077148184213503
       ],
       "yaw_rad": -0.1435913415803779,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 1,
-          "lift_height_m": 0.08173147276821545,
-          "drop_xy_offset_m": [
-            -0.0021306670516564735,
-            0.009131971244626363
-          ],
-          "hold_steps": 45
-        },
-        {
-          "corner_label": 3,
-          "lift_height_m": 0.14814096899147078,
-          "drop_xy_offset_m": [
-            -0.02710805226955733,
-            -0.023750980444663155
-          ],
-          "hold_steps": 45
-        }
-      ],
       "settle_steps": 240,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
     },
     {
       "level": "crumpled",
@@ -544,28 +410,14 @@
         0.02399838387670122
       ],
       "yaw_rad": 0.10861759703201768,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 1,
-          "lift_height_m": 0.08374867141473515,
-          "drop_xy_offset_m": [
-            -0.020199958406898116,
-            -0.022367532029923875
-          ],
-          "hold_steps": 45
-        },
-        {
-          "corner_label": 2,
-          "lift_height_m": 0.10247492944629778,
-          "drop_xy_offset_m": [
-            -0.011890367826898788,
-            0.020263786243442897
-          ],
-          "hold_steps": 45
-        }
-      ],
       "settle_steps": 240,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
     },
     {
       "level": "crumpled",
@@ -575,28 +427,14 @@
         0.017335464796176158
       ],
       "yaw_rad": -0.16833222648186896,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 3,
-          "lift_height_m": 0.10457838632727265,
-          "drop_xy_offset_m": [
-            0.025634023191399048,
-            -0.03685907268756223
-          ],
-          "hold_steps": 45
-        },
-        {
-          "corner_label": 0,
-          "lift_height_m": 0.09499760886481613,
-          "drop_xy_offset_m": [
-            0.029255843153331677,
-            -0.023810540603027112
-          ],
-          "hold_steps": 45
-        }
-      ],
       "settle_steps": 240,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
     },
     {
       "level": "crumpled",
@@ -606,28 +444,14 @@
         0.020121700955046104
       ],
       "yaw_rad": 0.0908082242514554,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 0,
-          "lift_height_m": 0.14459289863591043,
-          "drop_xy_offset_m": [
-            -0.006152772979645879,
-            -0.022380528253177746
-          ],
-          "hold_steps": 45
-        },
-        {
-          "corner_label": 2,
-          "lift_height_m": 0.13552092108177338,
-          "drop_xy_offset_m": [
-            0.0394439923057057,
-            0.004261626797674667
-          ],
-          "hold_steps": 45
-        }
-      ],
       "settle_steps": 240,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
     },
     {
       "level": "crumpled",
@@ -637,28 +461,14 @@
         0.027853960759431987
       ],
       "yaw_rad": 0.34691299690603,
-      "lift_drop_cycles": [
-        {
-          "corner_label": 3,
-          "lift_height_m": 0.1396258441402054,
-          "drop_xy_offset_m": [
-            0.0008575445244942762,
-            0.030676837748055484
-          ],
-          "hold_steps": 45
-        },
-        {
-          "corner_label": 0,
-          "lift_height_m": 0.13602771872607067,
-          "drop_xy_offset_m": [
-            -0.0003610623195775542,
-            0.033618915323197406
-          ],
-          "hold_steps": 45
-        }
-      ],
       "settle_steps": 240,
-      "status": "blocked_unvalidated_corner_lift_drop"
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
     }
   ]
 }
