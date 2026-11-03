@@ -1,0 +1,51 @@
+PASS frozen_hash:stage4-b-right-dev-v2.json | raw
+PASS frozen_hash:square-recovery-fold-right-v2-files.json | raw
+PASS frozen_hash:run-recovery-fold-right-v2.sh | raw
+PASS frozen_hash:run-stage4-b-right-dev-v2-batch.sh | raw
+PASS frozen_hash:square-recovery-fold-files.json | raw
+PASS frozen_hash:square-initial-stripfold-files.json | raw
+PASS frozen_hash:run-square-initial-stripfold.sh | raw
+PASS frozen_hash:day4-square-initial-stripfold.py | raw
+PASS variant_manifest_entries | 23
+PASS base_manifest_entries | 21
+PASS variant_manifest_set | []
+PASS base_values_identical
+PASS config_hash_in_manifest
+PASS base_manifest_hash_in_config
+PASS variant_entries_resolve_and_match | []
+PASS config_variant_id | b-right-dev-v2
+PASS config_fold_edge_right | right
+PASS config_width | 0.2
+PASS config_overhang_zero | 0.0
+PASS config_execution_single | ['single']
+PASS config_action_count_12 | 12
+PASS config_seed_matrix | []
+PASS config_attempt_order
+PASS config_no_heldout | []
+PASS config_development_only | True/False
+PASS config_sampling_text | OPEN + 30 release ticks + settle(180) for both levels; final.npz only; initial-state settle 180 (perturbed) / 240 (crumpled) occurs before the fold episode
+PASS config_registry_name | stage4-b-right-dev-v2-initials.json
+PASS initial_plan_a2_a3_entries | 18 seeds
+PASS initial_plan_totals | 90
+PASS initial_plan_lf_hash | 32e61d575d77
+PASS initial_manifest_entries | []
+PASS initial_runner_seed_ranges
+PASS sampling_recovery_240 | 12919/12942/16652
+PASS sampling_release_30_then_180 | 16652/16676/16771
+PASS sampling_no_240_after_release
+PASS sampling_fold_width
+PASS sampling_right_lateral
+PASS sampling_action_count
+PASS runner_no_b_c_integration
+PASS entry_registry_only
+PASS entry_initial_hashes
+PASS entry_base_manifest
+PASS entry_right_and_12
+PASS driver_registry_flow
+PASS driver_single_only
+PASS driver_abort_on_infrastructure
+PASS identity_excludes_b_c | []
+PASS initial_registry_absent_expected | A2 creates it
+
+A1_PREFLIGHT_OK checks=48 failed=0
+A1_PREFLIGHT_JSON results\STAGE4_A1_PREFLIGHT_20261102\preflight.json

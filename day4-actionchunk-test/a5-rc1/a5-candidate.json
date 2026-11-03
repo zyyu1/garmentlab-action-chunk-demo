@@ -1,0 +1,76 @@
+{
+  "version": "stage4-a5-rc1",
+  "status": "candidate",
+  "tasks": {
+    "flat": {
+      "runner": "l1",
+      "edge": "left",
+      "actions": 7,
+      "task": "A_l1_overfold"
+    },
+    "perturbed": {
+      "runner": "recovery",
+      "edge": "right",
+      "actions": 12,
+      "task": "B_nominal"
+    },
+    "crumpled": {
+      "runner": "recovery",
+      "edge": "right",
+      "actions": 12,
+      "task": "B_nominal"
+    }
+  },
+  "development": {
+    "4100": {
+      "initial": "day4-square-initial-20261031-094446-203825",
+      "files": {
+        "result.json": "31d8d47f4e18f6f9c8e96b0e3a3f0237ac87786978a343548cefddf1a7e567d8",
+        "initial_geometry.npz": "dd5783038cd7ae95c17525574ca9c76d0df2399261a6df6a0c8f09a5b351bcb3"
+      },
+      "modes": [
+        "single",
+        "arc4"
+      ],
+      "positive": true
+    },
+    "4202": {
+      "initial": "day4-square-initial-stripfold-20261103-062710-242560",
+      "files": {
+        "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+        "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+      },
+      "modes": [
+        "single",
+        "arc4"
+      ],
+      "positive": true
+    },
+    "4302": {
+      "initial": "day4-square-initial-stripfold-20261103-094143-137994",
+      "files": {
+        "result.json": "1bed437fdc5b01dd4dc55acc45be1d797d3cccfa2f4b855c5e0b44cd6e39840e",
+        "initial_geometry.npz": "1c27514f2ba95a3e276b01bf9f40ee30acf77600837908322864fdb57be97b32"
+      },
+      "modes": [
+        "single",
+        "arc4"
+      ],
+      "positive": true
+    },
+    "4201": {
+      "initial": "day4-square-initial-stripfold-20261103-060526-426086",
+      "files": {
+        "result.json": "3ac6f8a3a3675230b8d3742251c49a171770194f3611415a7a8c371ea86cc01b",
+        "initial_geometry.npz": "40bfeb51a04a30c7511cd65c4a849db5adc2660e2cf967f2d62da99109448d68"
+      },
+      "modes": [
+        "single"
+      ],
+      "positive": false
+    }
+  },
+  "release_action": "public OPEN target = measured EE + [0,0,0.15] m; existing ungrasp before move",
+  "sampling": "after release_retreat returns, sample [0,330] at 60 Hz; geometry and stability [210,330]",
+  "freeze_rule": "seven pre-registered real runs, six positives, complete control evidence, comparable mode targets; explicit freeze only"
+}

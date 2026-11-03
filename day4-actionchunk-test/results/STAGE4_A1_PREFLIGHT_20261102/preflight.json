@@ -1,0 +1,344 @@
+{
+  "a1": "b-right-dev-v2",
+  "generated_utc": "2026-11-02T21:43:11.339922+00:00",
+  "root": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test",
+  "ok": true,
+  "checks": 48,
+  "failed": 0,
+  "failed_names": [],
+  "frozen": {
+    "stage4-b-right-dev-v2.json": {
+      "sha256": "91c0fe7f12cf28cdab1a62d4d1a4b9a63c2418857744f0b0f7711b7cf095bff5",
+      "expected": "91c0fe7f12cf28cdab1a62d4d1a4b9a63c2418857744f0b0f7711b7cf095bff5",
+      "mode": "raw"
+    },
+    "square-recovery-fold-right-v2-files.json": {
+      "sha256": "c3e34c9149d75c56932873b4705ee996b808f61348ca0e700d3d49a505deff97",
+      "expected": "c3e34c9149d75c56932873b4705ee996b808f61348ca0e700d3d49a505deff97",
+      "mode": "raw"
+    },
+    "run-recovery-fold-right-v2.sh": {
+      "sha256": "3822bd98d3d05bc6cba3880ba756f3a438a6985b6abc19c19259a67b47091af3",
+      "expected": "3822bd98d3d05bc6cba3880ba756f3a438a6985b6abc19c19259a67b47091af3",
+      "mode": "raw"
+    },
+    "run-stage4-b-right-dev-v2-batch.sh": {
+      "sha256": "d4c0016202949a45ec6ff8a4edca746581f95832c5d528534c1be6f144231142",
+      "expected": "d4c0016202949a45ec6ff8a4edca746581f95832c5d528534c1be6f144231142",
+      "mode": "raw"
+    },
+    "square-recovery-fold-files.json": {
+      "sha256": "cb947b85c4d5acdaf2028cfcbde8eb3743158d3868e9ca082e85994beadb73b1",
+      "expected": "cb947b85c4d5acdaf2028cfcbde8eb3743158d3868e9ca082e85994beadb73b1",
+      "mode": "raw"
+    },
+    "square-initial-stripfold-files.json": {
+      "sha256": "70b1793b5a87f69e9a4cbde5f6b40b047120eed798bdd895dee27e33072477f0",
+      "expected": "70b1793b5a87f69e9a4cbde5f6b40b047120eed798bdd895dee27e33072477f0",
+      "mode": "raw"
+    },
+    "run-square-initial-stripfold.sh": {
+      "sha256": "1116550f65b9282c2a0e85f321c9ceb863cf8f1fe152c36bc48e387ebc34b631",
+      "expected": "1116550f65b9282c2a0e85f321c9ceb863cf8f1fe152c36bc48e387ebc34b631",
+      "mode": "raw"
+    },
+    "day4-square-initial-stripfold.py": {
+      "sha256": "178ab10c08511b6dbb2ec1fd4581ab5af2493ee6a1ca7577ac49b575b913dcc6",
+      "expected": "178ab10c08511b6dbb2ec1fd4581ab5af2493ee6a1ca7577ac49b575b913dcc6",
+      "mode": "raw"
+    }
+  },
+  "variant_entry_modes": {
+    "raw": 9,
+    "lf": 14
+  },
+  "config": {
+    "variant_id": "b-right-dev-v2",
+    "revision": "v2.1",
+    "revised_utc": "2026-11-02T21:40:05Z",
+    "fold_edge": "right",
+    "width_m": 0.2,
+    "overhang_m": 0.0,
+    "execution_modes": [
+      "single"
+    ],
+    "public_action_count": 12,
+    "seed_matrix": {
+      "4201": "perturbed",
+      "4202": "perturbed",
+      "4203": "perturbed",
+      "4204": "perturbed",
+      "4205": "perturbed",
+      "4206": "perturbed",
+      "4207": "perturbed",
+      "4208": "perturbed",
+      "4209": "perturbed",
+      "4301": "crumpled",
+      "4302": "crumpled",
+      "4303": "crumpled",
+      "4304": "crumpled",
+      "4305": "crumpled",
+      "4306": "crumpled",
+      "4307": "crumpled",
+      "4308": "crumpled",
+      "4309": "crumpled"
+    },
+    "sampling": "OPEN + 30 release ticks + settle(180) for both levels; final.npz only; initial-state settle 180 (perturbed) / 240 (crumpled) occurs before the fold episode"
+  },
+  "initial_plan": {
+    "episodes": 90,
+    "a2_a3_entries": 18,
+    "plan_lf_sha256": "32e61d575d77eae0943cb2251d10c25b12d7f0d9f8f962ddd96dc1a4d4d2ab85"
+  },
+  "initial_registry": {
+    "present": false,
+    "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\stage4-b-right-dev-v2-initials.json"
+  },
+  "notes": [
+    "variant entry hash modes: {\"lf\": 14, \"raw\": 9}",
+    "B/C files exist outside the 21/23-item identity; the registered runner imports none of them.",
+    "initial registry is remote-only and absent locally; A2 will create it before the first fold."
+  ],
+  "checks_detail": [
+    {
+      "name": "frozen_hash:stage4-b-right-dev-v2.json",
+      "ok": true,
+      "detail": "raw"
+    },
+    {
+      "name": "frozen_hash:square-recovery-fold-right-v2-files.json",
+      "ok": true,
+      "detail": "raw"
+    },
+    {
+      "name": "frozen_hash:run-recovery-fold-right-v2.sh",
+      "ok": true,
+      "detail": "raw"
+    },
+    {
+      "name": "frozen_hash:run-stage4-b-right-dev-v2-batch.sh",
+      "ok": true,
+      "detail": "raw"
+    },
+    {
+      "name": "frozen_hash:square-recovery-fold-files.json",
+      "ok": true,
+      "detail": "raw"
+    },
+    {
+      "name": "frozen_hash:square-initial-stripfold-files.json",
+      "ok": true,
+      "detail": "raw"
+    },
+    {
+      "name": "frozen_hash:run-square-initial-stripfold.sh",
+      "ok": true,
+      "detail": "raw"
+    },
+    {
+      "name": "frozen_hash:day4-square-initial-stripfold.py",
+      "ok": true,
+      "detail": "raw"
+    },
+    {
+      "name": "variant_manifest_entries",
+      "ok": true,
+      "detail": "23"
+    },
+    {
+      "name": "base_manifest_entries",
+      "ok": true,
+      "detail": "21"
+    },
+    {
+      "name": "variant_manifest_set",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "base_values_identical",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "config_hash_in_manifest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "base_manifest_hash_in_config",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "variant_entries_resolve_and_match",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "config_variant_id",
+      "ok": true,
+      "detail": "b-right-dev-v2"
+    },
+    {
+      "name": "config_fold_edge_right",
+      "ok": true,
+      "detail": "right"
+    },
+    {
+      "name": "config_width",
+      "ok": true,
+      "detail": "0.2"
+    },
+    {
+      "name": "config_overhang_zero",
+      "ok": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "config_execution_single",
+      "ok": true,
+      "detail": "['single']"
+    },
+    {
+      "name": "config_action_count_12",
+      "ok": true,
+      "detail": "12"
+    },
+    {
+      "name": "config_seed_matrix",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "config_attempt_order",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "config_no_heldout",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "config_development_only",
+      "ok": true,
+      "detail": "True/False"
+    },
+    {
+      "name": "config_sampling_text",
+      "ok": true,
+      "detail": "OPEN + 30 release ticks + settle(180) for both levels; final.npz only; initial-state settle 180 (perturbed) / 240 (crumpled) occurs before the fold episode"
+    },
+    {
+      "name": "config_registry_name",
+      "ok": true,
+      "detail": "stage4-b-right-dev-v2-initials.json"
+    },
+    {
+      "name": "initial_plan_a2_a3_entries",
+      "ok": true,
+      "detail": "18 seeds"
+    },
+    {
+      "name": "initial_plan_totals",
+      "ok": true,
+      "detail": "90"
+    },
+    {
+      "name": "initial_plan_lf_hash",
+      "ok": true,
+      "detail": "32e61d575d77"
+    },
+    {
+      "name": "initial_manifest_entries",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "initial_runner_seed_ranges",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sampling_recovery_240",
+      "ok": true,
+      "detail": "12919/12942/16652"
+    },
+    {
+      "name": "sampling_release_30_then_180",
+      "ok": true,
+      "detail": "16652/16676/16771"
+    },
+    {
+      "name": "sampling_no_240_after_release",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sampling_fold_width",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sampling_right_lateral",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sampling_action_count",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runner_no_b_c_integration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "entry_registry_only",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "entry_initial_hashes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "entry_base_manifest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "entry_right_and_12",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "driver_registry_flow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "driver_single_only",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "driver_abort_on_infrastructure",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "identity_excludes_b_c",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "initial_registry_absent_expected",
+      "ok": true,
+      "detail": "A2 creates it"
+    }
+  ]
+}

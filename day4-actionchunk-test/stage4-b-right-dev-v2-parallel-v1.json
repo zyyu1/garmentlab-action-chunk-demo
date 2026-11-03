@@ -1,0 +1,19 @@
+{
+  "revision": "parallel-v1",
+  "base_driver_sha256": "d4c0016202949a45ec6ff8a4edca746581f95832c5d528534c1be6f144231142",
+  "worker_sha256": "212334f94b0cf3dc1de8337ccbf5924d83d725126fee116fc4b7c21a115db476",
+  "config_sha256": "91c0fe7f12cf28cdab1a62d4d1a4b9a63c2418857744f0b0f7711b7cf095bff5",
+  "changes": [
+    "partition L2/L3; per-level fixed seed order",
+    "per-level worker lock; serialized atomic registry write",
+    "separate per-level state dirs",
+    "start markers; interrupted runs require reconciliation"
+  ],
+  "experiment_code_and_sampling_changed": false,
+  "simulation_started": false,
+  "checks": [
+    "bash -n PASS",
+    "L2 seed order 4201..4209 PASS",
+    "L3 seed order 4301..4309 PASS"
+  ]
+}

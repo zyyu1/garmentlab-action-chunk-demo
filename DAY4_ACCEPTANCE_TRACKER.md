@@ -1,4 +1,16 @@
-# 当前验收状态（最新：2026-11-02 折形口径定稿 + 任务定义冻结 + 表示层配对 + 分任务报告）
+# 当前验收状态（最新：2026-11-02 折形口径定稿 + 任务定义冻结 + 表示层配对 + 分任务报告 + A1 预检）
+
+## 2026-11-02 A1：b-right-dev-v2 预检完成（仅离线）
+
+`stage4_a1_right_v2_preflight.py` 48/48 检查通过；未启动仿真、未生成 held-out、正式成功仍为 0。预检发现并修正一处登记描述与实际采样不一致：配置原写 `settle(180 for perturbed, 240 for crumpled)`，实际 runner 对两档都在 fold OPEN 后执行 30 release ticks + `settle(180)`；`settle(240)` 只在 recovery 展开后，180/240 是初态生成 settle。配置已修正为 v2.1（仅描述字段，无行为改动），新哈希：config `91c0fe7f…`、variant manifest `c3e34c91…`（旧 `adf4c9a8…` / `2fff0bf9…` 记录在 A1 报告）。入口 `3822bd98…`、批次驱动 `d4c00162…`、21 项底层 `cb947b85…`、初态 manifest `70b1793b…` 均未变；B/C 新增文件不在 21/23 项身份中，登记 runner 未导入它们。初态 registry 本地不存在，A2 首次生成时在远端创建。
+
+下一步 A2：上传修正后的 4 个 v2 文件（按原字节，不转换行尾），远端复核 `V2_MANIFEST_BAD [] 23` 与四个新哈希后，按 4201→4209、4301→4309 运行 right single。证据：[A1 预检报告](day4-actionchunk-test/results/STAGE4_A1_PREFLIGHT_20261102/review.md)。
+
+## 2026-11-02 B项：正式成功判据 v1.0.0 已交付（仅离线）
+
+以 [STAGE4_SUCCESS_CRITERIA_V1.md](STAGE4_SUCCESS_CRITERIA_V1.md) 与 `day4-actionchunk-test/stage4-success-v1.json` 为当前成功判据。A/L1过折和B/nominal分任务评价；新增OPEN完成后逐物理步0..330采集、3.5–5.5秒连续几何及稳定窗口。原目标、held门槛和7/12动作预算不变。独立评价manifest登记新成功层，旧折叠manifest/runner未修改。
+
+13项离线测试通过；31个历史目录复算20个满足对应终态几何、11个不满足，但全部缺新协议完整时序证据，不能追认正式成功。稳定阈值为预登记工程容差，尚待开发复验。评价配置与分类器已完成，不等于runner采样接入或正式批次已解锁。下一步需单独接入记录并用开发seed复验；held-out保持暂停，正式成功0。right是否正式采用仍需独立登记。下方“数值阈值未冻结”等段落保留为本次之前的历史状态。
 
 > 命名约定：Stage 表示按验收推进的工作阶段，每个阶段可跨多天；原 Day N 对应 Stage N。为兼容既有入口，`DAY4_*.md`、脚本名和结果目录名保留；日报文件名已统一改为 Stage。
 
@@ -388,4 +400,4 @@ L2 4200的right single/arc4由本聊天在移交前完成；L3 4300采用另一�
 
 补充交叉核对（2026-11-02）：把主审计未采用的 4200 arc4 尝试 `025355-106410` 与 4300 single 重复尝试 `031535-711404` 一并核对，5 个目录 77 项检查全部通过；同 seed 全部 7 次已下载尝试（4200 三例、4300 四例）的 `final.npz` 441 个顶点逐位相同（max|Δ|=0），包括并发在途的 4200 arc4 两例。该核对不新增 seed、不改任何阈值、不改变上述结论。[补充审计](../thesis/day4-actionchunk-test/results/B_RIGHT_DEV_AUDIT_SUPPLEMENT_20261102/review.md)。
 
-right 开发覆盖扩展 `b-right-dev-v2` 已登记、未运行：L2 4201–4209、L3 4301–4309 共 18 个剩余开发 seed，先登记初态哈希再跑 right single；不跑 arc4、不冻结阈值、held-out 不动。见 [扩展计划](STAGE4_B_RIGHT_DEV_V2_PLAN.md)。
+right 开发覆盖扩展 `b-right-dev-v2` 已登记并完成 A1 预检（48/48，仅离线；v2.1 修正 sampling 描述，config `91c0fe7f…`、manifest `c3e34c91…`），尚未运行任何 seed：L2 4201–4209、L3 4301–4309 共 18 个剩余开发 seed，先登记初态哈希再跑 right single；不跑 arc4、不冻结阈值、held-out 不动。见 [扩展计划](STAGE4_B_RIGHT_DEV_V2_PLAN.md) 与 [A1 预检](day4-actionchunk-test/results/STAGE4_A1_PREFLIGHT_20261102/review.md)。

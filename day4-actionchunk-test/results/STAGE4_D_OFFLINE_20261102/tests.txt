@@ -1,0 +1,25 @@
+test_corrupt_result_retains_logged_denominator (test_stage4_formal_report.FormalReportTests.test_corrupt_result_retains_logged_denominator) ... ok
+test_empty_cell_remains_empty (test_stage4_formal_report.FormalReportTests.test_empty_cell_remains_empty) ... ok
+test_error_only_cell_and_task_b_total (test_stage4_formal_report.FormalReportTests.test_error_only_cell_and_task_b_total) ... ok
+test_existing_report_is_not_overwritten (test_stage4_formal_report.FormalReportTests.test_existing_report_is_not_overwritten) ... ok
+test_existing_result_and_repeated_inputs_are_not_double_counted (test_stage4_formal_report.FormalReportTests.test_existing_result_and_repeated_inputs_are_not_double_counted) ... ok
+test_legacy_formal_claim_is_not_formal_evidence (test_stage4_formal_report.FormalReportTests.test_legacy_formal_claim_is_not_formal_evidence) ... ok
+test_named_result_not_downloaded_is_an_error (test_stage4_formal_report.FormalReportTests.test_named_result_not_downloaded_is_an_error) ... ok
+test_non_heldout_attempts_and_results_are_excluded (test_stage4_formal_report.FormalReportTests.test_non_heldout_attempts_and_results_are_excluded) ... ok
+test_pass_and_missing_result_is_two_attempts_and_half_rejected (test_stage4_formal_report.FormalReportTests.test_pass_and_missing_result_is_two_attempts_and_half_rejected) ... ok
+test_rejected_and_missing_result_is_fully_rejected (test_stage4_formal_report.FormalReportTests.test_rejected_and_missing_result_is_fully_rejected) ... ok
+test_retries_are_separate_but_two_modes_are_not_duplicate_attempts (test_stage4_formal_report.FormalReportTests.test_retries_are_separate_but_two_modes_are_not_duplicate_attempts) ... ok
+test_runner_error_cannot_count_as_development_pass (test_stage4_formal_report.FormalReportTests.test_runner_error_cannot_count_as_development_pass) ... ok
+test_started_attempt_is_error_until_finished (test_stage4_formal_report.FormalReportTests.test_started_attempt_is_error_until_finished) ... ok
+test_unattempted_are_not_errors (test_stage4_formal_report.FormalReportTests.test_unattempted_are_not_errors) ... ok
+test_batch_identity_is_bound_across_resume (test_stage4_batch_preflight.BatchTests.test_batch_identity_is_bound_across_resume) ... ok
+test_corrupt_or_conflicting_journal_fails_closed (test_stage4_batch_preflight.BatchTests.test_corrupt_or_conflicting_journal_fails_closed) ... ok
+test_duplicate_seed_and_strip_mutation_rejected (test_stage4_batch_preflight.BatchTests.test_duplicate_seed_and_strip_mutation_rejected) ... ok
+test_interrupted_attempt_blocks_resume_and_duplicate_start (test_stage4_batch_preflight.BatchTests.test_interrupted_attempt_blocks_resume_and_duplicate_start) ... ok
+test_real_registration_without_simulation (test_stage4_batch_preflight.BatchTests.test_real_registration_without_simulation) ... ok
+test_rejected_completed_attempt_is_skipped (test_stage4_batch_preflight.BatchTests.test_rejected_completed_attempt_is_skipped) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.816s
+
+OK

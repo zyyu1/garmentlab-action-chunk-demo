@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "file_hashes": true,
+    "source_hashes": true,
+    "time_monotonic": true,
+    "continuous_steps": true,
+    "state_consistent": true,
+    "video_decodes": true,
+    "frame_indices": true,
+    "actions_complete": false,
+    "no_capture_errors": true,
+    "retention_samples": false,
+    "retention_timing": false,
+    "retention_detached": false,
+    "retreat_moved": false,
+    "retreat_public_action": false,
+    "terminal_saved": true
+  },
+  "evidence_complete": false,
+  "decoded_frames": 2,
+  "attempted_public_actions": 0,
+  "action_budget_passed": true,
+  "synthetic": true,
+  "formal_day4_success": false,
+  "note": "Evidence completeness is not fold quality acceptance; synthetic examples are never experiments."
+}

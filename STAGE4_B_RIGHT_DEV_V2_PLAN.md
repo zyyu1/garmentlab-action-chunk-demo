@@ -1,6 +1,19 @@
-# Stage 4 right 开发覆盖扩展 b-right-dev-v2（已登记，未运行）
+# Stage 4 right 开发覆盖扩展 b-right-dev-v2（已登记；A1 预检完成，未运行）
 
 日期 2026-11-02。本文件登记并说明 right 边开发覆盖的扩展：在 `b-right-dev-v1` 已验证 4200/4300 两个开发初态的基础上，把剩余全部开发 seed 纳入 right 的 single 表示验证。**没有运行任何仿真；held-out 未生成、未运行；正式批次仍暂停；正式 Stage 4 成功仍为 0。**
+
+## 0. A1 预检完成（2026-11-02，仅离线）
+
+`stage4_a1_right_v2_preflight.py` 的 48 项检查全部通过；未启动仿真、未生成 held-out、未产生正式成功。预检发现并修正一处**描述与实际采样不一致**：v2 配置原写 `settle(180 for perturbed, 240 for crumpled)`，但已登记 runner 对两档都在 fold OPEN 后执行 **30 release ticks + `settle(180)`**；`settle(240)` 只在 recovery 展开后，且 180/240 是初态生成时的 settle。配置已修正为 v2.1（仅描述字段，无行为改动），manifest 同步更新：
+
+| 文件 | 旧哈希 | 新哈希 |
+|---|---|---|
+| `stage4-b-right-dev-v2.json` | `adf4c9a8…` | `91c0fe7f…` |
+| `square-recovery-fold-right-v2-files.json` | `2fff0bf9…` | `c3e34c91…` |
+
+入口 `run-recovery-fold-right-v2.sh`（`3822bd98…`）、批次驱动（`d4c00162…`）、21 项底层身份（`cb947b85…`）、初态生成 manifest（`70b1793b…`）均未变。B/C 新增文件不在 21/23 项身份中，登记 runner 也未导入它们。初态 registry 尚未在本地出现，A2 首次生成初态时在远端创建。
+
+证据：[A1 预检报告](day4-actionchunk-test/results/STAGE4_A1_PREFLIGHT_20261102/review.md)、`preflight.json`、`preflight_stdout.txt`。下一步进入 A2；上传时必须使用修正后的 config/manifest，并在远端复核新哈希。
 
 ## 1. 为什么扩、扩到哪
 
@@ -13,19 +26,19 @@ v1 只在每档一个 seed（4200、4300）上验证了 right 的释放后保持
 
 合计 18 个初态 + 18 次折叠尝试。**只跑 single**：single/arc4 在 4200/4300 上 12 个公开动作的目标、后端指令与终态顶点已逐位相同，表示等价不需要在每个 seed 上重复；本批不产生任何 H=4 收益结论。
 
-不动的部分：21 项底层代码身份、12 个公开动作、物理、评价器、held gate、采样时序（OPEN + 30 release ticks + settle(180/240)）、left 的失败记录、默认折向定义。
+不动的部分：21 项底层代码身份、12 个公开动作、物理、评价器、held gate、采样时序（OPEN + 30 release ticks + settle(180) for both levels；初态生成 settle 180/240 在 episode 之前）、left 的失败记录、默认折向定义。
 
 ## 2. 新增文件（已登记；21 项底层代码未改）
 
 | 文件 | 作用 | SHA256（原始字节） |
 |---|---|---|
-| `stage4-b-right-dev-v2.json` | 变体配置：18 个 seed、single、right 目标参数 | `adf4c9a834f4aa407ed1bb393da30622eff6742aadb1486d25309335c477d4c1` |
+| `stage4-b-right-dev-v2.json` | 变体配置：18 个 seed、single、right 目标参数；A1 v2.1 修正 sampling 描述 | `91c0fe7f12cf28cdab1a62d4d1a4b9a63c2418857744f0b0f7711b7cf095bff5` |
 | `run-recovery-fold-right-v2.sh` | 只接受 registry 内初态的入口 | `3822bd98d3d05bc6cba3880ba756f3a438a6985b6abc19c19259a67b47091af3` |
-| `square-recovery-fold-right-v2-files.json` | 独立 manifest：21 项底层 + 上述 2 项 = 23 项 | `2fff0bf9335ebf079921577aee4ebe312c9796e39f3e3fcc0087d832575392fd` |
+| `square-recovery-fold-right-v2-files.json` | 独立 manifest：21 项底层 + 上述 2 项 = 23 项；A1 刷新 config 条目 | `c3e34c9149d75c56932873b4705ee996b808f61348ca0e700d3d49a505deff97` |
 | `run-stage4-b-right-dev-v2-batch.sh` | 远端批次驱动（生成/复用初态、登记、折叠、记账） | `d4c0016202949a45ec6ff8a4edca746581f95832c5d528534c1be6f144231142` |
 | 底层身份 | `square-recovery-fold-files.json` | `cb947b85c4d5acdaf2028cfcbde8eb3743158d3868e9ca082e85994beadb73b1` |
 
-本地离线工具（不上传远端、不进入身份）：`stage4_b_right_dev_v2_audit.py`、`test_stage4_b_right_dev_v2_audit.py`（3 项合成数据测试通过）。
+本地离线工具（不上传远端、不进入身份）：`stage4_b_right_dev_v2_audit.py`、`test_stage4_b_right_dev_v2_audit.py`（3 项合成数据测试通过）、`stage4_a1_right_v2_preflight.py`（A1 48 项预检通过，哈希 `9b777af8…`）。
 
 ## 3. 初态登记规则（本批的信任模型）
 
@@ -40,7 +53,7 @@ v1 把两个初态目录名写死在配置里；扩展批的目录要等生成�
 
 ## 4. 远端步骤（由用户执行）
 
-**第一步：上传 4 个文件，原样（不做行尾转换）**。manifest 的登记哈希是含 CRLF 的原始字节，转换会改变它：
+**第一步：上传 4 个文件，原样（不做行尾转换）**。A1 修正后 config 为 LF、manifest 为 CRLF；四个文件均按原字节上传，任何行尾转换都会改变登记哈希：
 
 ```powershell
 scp -P 23636 E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-recovery-fold-right-v2.sh E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\stage4-b-right-dev-v2.json E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\square-recovery-fold-right-v2-files.json E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-stage4-b-right-dev-v2-batch.sh root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
@@ -59,8 +72,8 @@ for n,v in m.items():
     if not p.exists(): bad.append((n,'missing')); continue
     if hashlib.sha256(p.read_bytes()).hexdigest()!=v: bad.append((n,'mismatch'))
 print('V2_MANIFEST_BAD',bad,len(m))
-for f,want in [('square-recovery-fold-right-v2-files.json','2fff0bf9'),
-               ('stage4-b-right-dev-v2.json','adf4c9a8'),
+for f,want in [('square-recovery-fold-right-v2-files.json','c3e34c91'),
+               ('stage4-b-right-dev-v2.json','91c0fe7f'),
                ('run-recovery-fold-right-v2.sh','3822bd98'),
                ('square-recovery-fold-files.json','cb947b85')]:
     h=hashlib.sha256(Path(f).read_bytes()).hexdigest()
@@ -100,6 +113,6 @@ python -I stage4_b_right_dev_v2_audit.py --results E:\learning\project\thesis\da
 
 - 不能当作每档 20 seeds 的正式结果，也不能计算正式成功率；held-out 集合仍未使用。
 - 不能比较 single 与 arc4 的精度或收益：本批只有 single。
-- 不能说明更长时间的保持：只有 OPEN 后 30 release ticks + settle(180/240) 的终态，没有独立退让或第二个 retention 样本。
+- 不能说明更长时间的保持：只有 OPEN 后 30 release ticks + settle(180)（两档相同）的终态，没有独立退让或第二个 retention 样本。
 - 不能据此自动把 right 写进任务定义：是否采用 right、是否替换 left，需要按冻结文档 §0/§4.2 另行登记，并对 single/arc4 同时生效。
 - 失败与拒绝全部保留在 `attempts.jsonl` 与结果目录中，不挑选、不重试替换。

@@ -1,0 +1,50 @@
+{
+  "checked_utc": "2026-11-02T22:01:08.705692+00:00",
+  "before": [
+    {
+      "log": "/root/autodl-tmp/day4-recovery-fold-log-05G5FCD2.log",
+      "bytes": 30568,
+      "mtime": 1793656831.5180998,
+      "last_actions": [
+        "EPISODE_ACTION rec_approach {\"executed_steps\": 1, \"done\": false, \"info\": {\"step_count\": 444, \"phase\": 5, \"gripper_state\": 0, \"holding\": false}}",
+        "EPISODE_ACTION rec_pick {\"executed_steps\": 1, \"done\": false, \"info\": {\"step_count\": 778, \"phase\": 1, \"gripper_state\": 2, \"holding\": true}}",
+        "EPISODE_ACTION rec_lift {\"executed_steps\": 1, \"done\": false, \"info\": {\"step_count\": 829, \"phase\": 3, \"gripper_state\": 2, \"holding\": true}}"
+      ]
+    },
+    {
+      "log": "/root/autodl-tmp/day4-square-initial-stripfold-log-Jt6txC3p.log",
+      "bytes": 31438,
+      "mtime": 1793656833.213948,
+      "last_actions": [
+        "STRIPFOLD_ACTION close {\"executed_steps\": 1, \"done\": false, \"info\": {\"step_count\": 627, \"phase\": 1, \"gripper_state\": 2, \"holding\": true}}",
+        "STRIPFOLD_ACTION arc45 {\"executed_steps\": 1, \"done\": false, \"info\": {\"step_count\": 714, \"phase\": 3, \"gripper_state\": 2, \"holding\": true}}",
+        "STRIPFOLD_ACTION arc90 {\"executed_steps\": 1, \"done\": false, \"info\": {\"step_count\": 811, \"phase\": 3, \"gripper_state\": 2, \"holding\": true}}"
+      ]
+    }
+  ],
+  "after": [
+    {
+      "log": "/root/autodl-tmp/day4-recovery-fold-log-05G5FCD2.log",
+      "bytes": 30568,
+      "mtime": 1793656831.5180998,
+      "last_actions": [
+        "EPISODE_ACTION rec_approach {\"executed_steps\": 1, \"done\": false, \"info\": {\"step_count\": 444, \"phase\": 5, \"gripper_state\": 0, \"holding\": false}}",
+        "EPISODE_ACTION rec_pick {\"executed_steps\": 1, \"done\": false, \"info\": {\"step_count\": 778, \"phase\": 1, \"gripper_state\": 2, \"holding\": true}}",
+        "EPISODE_ACTION rec_lift {\"executed_steps\": 1, \"done\": false, \"info\": {\"step_count\": 829, \"phase\": 3, \"gripper_state\": 2, \"holding\": true}}"
+      ]
+    },
+    {
+      "log": "/root/autodl-tmp/day4-square-initial-stripfold-log-Jt6txC3p.log",
+      "bytes": 31438,
+      "mtime": 1793656833.213948,
+      "last_actions": [
+        "STRIPFOLD_ACTION close {\"executed_steps\": 1, \"done\": false, \"info\": {\"step_count\": 627, \"phase\": 1, \"gripper_state\": 2, \"holding\": true}}",
+        "STRIPFOLD_ACTION arc45 {\"executed_steps\": 1, \"done\": false, \"info\": {\"step_count\": 714, \"phase\": 3, \"gripper_state\": 2, \"holding\": true}}",
+        "STRIPFOLD_ACTION arc90 {\"executed_steps\": 1, \"done\": false, \"info\": {\"step_count\": 811, \"phase\": 3, \"gripper_state\": 2, \"holding\": true}}"
+      ]
+    }
+  ],
+  "processes": "184308 178606       11:29  0.0 S+   bash run-stage4-b-right-dev-v2-worker.sh dev-v2-parallel-v1 L2\n184326 184308       11:28  0.0 S+   bash run-stage4-b-right-dev-v2-worker.sh dev-v2-parallel-v1 L2\n184341 184330       11:28  415 Rl+  /root/autodl-tmp/envs/isaac40/bin/python -u day4-recovery-fold-episode.py --initial-dir /root/autodl-tmp/day4-square-initial-stripfold-20261103-053327-824887 --fold-edge right --execution single --allow-root\n184610 184392       11:20  0.0 S+   bash run-stage4-b-right-dev-v2-worker.sh dev-v2-parallel-v1 L3\n184630 184610       11:20  0.0 S+   bash run-stage4-b-right-dev-v2-worker.sh dev-v2-parallel-v1 L3\n184634 184631       11:20  425 Rl+  /root/autodl-tmp/envs/isaac40/bin/python -u day4-square-initial-stripfold.py --allow-root",
+  "action": "read-only inspection; no restart, termination, or experiment configuration change",
+  "duplicate_note": "Earlier user-provided output identifies old PID 183129 and current PID 184341 as the same initial-dir right single attempt; retain both. Old PID no longer present at inspection."
+}

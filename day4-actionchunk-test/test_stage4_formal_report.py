@@ -38,7 +38,7 @@ class FormalReportTests(unittest.TestCase):
     def run_report(self, attempts=(), repeated_args=False):
         log = self.root / 'attempts.jsonl'
         log.write_text(''.join(json.dumps(r) + '\n' for r in attempts))
-        output = self.root / 'out.json'
+        output = self.root / ('out-' + str(len(list(self.root.glob('out-*.json')))) + '.json')
         cmd = [sys.executable, '-I', str(REPORT), '--seeds', str(self.seeds),
                '--root', str(self.results), '--attempts', str(log), '--out', str(output)]
         if repeated_args:
@@ -116,6 +116,52 @@ class FormalReportTests(unittest.TestCase):
         self.assertEqual(error['outcome'], 'error')
         self.assertEqual(error['attempt_line'], 1)
         self.assertEqual(row['non_frozen_code'], [])
+
+    def test_legacy_formal_claim_is_not_formal_evidence(self):
+        path = self.result()
+        r = json.loads((path / 'result.json').read_text())
+        r['formal_day4_success'] = True
+        (path / 'result.json').write_text(json.dumps(r))
+        data = self.run_report()
+        self.assertTrue(data['rows'][0]['legacy_formal_claim'])
+        self.assertIsNone(self.cell(data)['formal_success_rate'])
+
+    def test_corrupt_result_retains_logged_denominator(self):
+        path = self.result()
+        (path / 'result.json').write_text('{broken')
+        data = self.run_report([self.attempt(result=path)])
+        self.assertEqual(self.cell(data)['error'], 1)
+        self.assertFalse(data['denominator_complete'])
+
+    def test_started_attempt_is_error_until_finished(self):
+        start = dict(self.attempt(), attempt_id='one', event='started', initial_dir='/initial')
+        data = self.run_report([start])
+        self.assertEqual(self.cell(data)['error'], 1)
+        path = self.result()
+        end = dict(start, event='finished', result_dir='/remote/' + path.name, exit_code=0)
+        data = self.run_report([start, end])
+        self.assertEqual((self.cell(data)['attempts'], self.cell(data)['passed']), (1, 1))
+
+    def test_unattempted_are_not_errors(self):
+        self.result()
+        data = self.run_report()
+        self.assertEqual(data['planned_attempts'], 8)
+        self.assertEqual(len(data['not_attempted']), 7)
+        self.assertEqual(self.cell(data)['error'], 0)
+
+    def test_existing_report_is_not_overwritten(self):
+        self.run_report()
+        output = self.root / 'out-0.json'
+        original = output.read_bytes()
+        p = subprocess.run([sys.executable, str(REPORT), '--seeds', str(self.seeds),
+                            '--root', str(self.results), '--out', str(output)], capture_output=True)
+        self.assertNotEqual(p.returncode, 0)
+        self.assertEqual(output.read_bytes(), original)
+
+    def test_runner_error_cannot_count_as_development_pass(self):
+        path = self.result()
+        row = self.cell(self.run_report([dict(self.attempt(result=path), exit_code=2)]))
+        self.assertEqual((row['passed'], row['error']), (0, 1))
 
 
 if __name__ == '__main__':

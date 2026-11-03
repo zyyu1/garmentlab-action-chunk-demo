@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "frames": 2,
+  "observed_steps": 1,
+  "execute_calls": 0,
+  "errors": [],
+  "sources": {
+    "000_test_episode_evidence.py": {
+      "original": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\test_episode_evidence.py",
+      "sha256": "286b15fafbc36f857087dd6ef689ea1c598a6600d2fae8186dd3a2c8659d9e11"
+    },
+    "001_episode_evidence.py": {
+      "original": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\episode_evidence.py",
+      "sha256": "691fbee5ec04cb1c0c3579fb6889afce8f4c0cc8c2c373df42c3e6ceb994165a"
+    }
+  },
+  "samples": {
+    "terminal": {
+      "kind": "sample",
+      "utc": "2026-11-02T21:25:46.125349+00:00",
+      "monotonic_ns": 32127828000000,
+      "sim_time_s": 0.016666666666666666,
+      "observed_step": 1,
+      "call_id": null,
+      "label": "terminal",
+      "holding": false,
+      "attached": false,
+      "ee_m": [
+        0.0,
+        0.0,
+        0.2
+      ],
+      "backend_step": 1
+    }
+  },
+  "formal_day4_success": false,
+  "playback_fps": 30,
+  "time_authority": "timeline.sim_time_s; video playback is not elapsed simulation time"
+}

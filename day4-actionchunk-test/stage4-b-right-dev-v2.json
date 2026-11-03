@@ -1,6 +1,9 @@
 {
   "variant_id": "b-right-dev-v2",
   "registered_utc": "2026-11-02T20:11:02+00:00",
+  "revision": "v2.1",
+  "revised_utc": "2026-11-02T21:40:05Z",
+  "revision_note": "A1 preflight corrected the sampling description: the fold episode samples OPEN + 30 release ticks + settle(180) for both levels. settle(240) is the recovery unfold and the crumpled initial-state settle, outside the fold-episode terminal sampling. No behavioral change.",
   "development_only": true,
   "formal_stage4_success": false,
   "base_manifest_sha256": "cb947b85c4d5acdaf2028cfcbde8eb3743158d3868e9ca082e85994beadb73b1",
@@ -160,7 +163,7 @@
       "single"
     ]
   ],
-  "sampling": "OPEN + 30 release ticks + settle(180 for perturbed, 240 for crumpled); final.npz only",
+  "sampling": "OPEN + 30 release ticks + settle(180) for both levels; final.npz only; initial-state settle 180 (perturbed) / 240 (crumpled) occurs before the fold episode",
   "development_gates": "unchanged base runner: held gate, crossed >= 0.5, exactly 12 actions, no residual attachment",
   "limitations": [
     "coverage expansion only; not a formal success threshold freeze",

@@ -21,8 +21,12 @@ Usage:
 import argparse
 import json
 import sys
+import hashlib
 from collections import Counter
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from stage4_batch_preflight import journal
 
 PREFIX = {'flat': 'day4-l1-xfold-yaw-aware-',
           'perturbed': 'day4-recovery-fold-',
@@ -47,7 +51,11 @@ def scan(roots, held):
                 result_file = path / 'result.json'
                 if not path.is_dir() or not result_file.exists():
                     continue
-                result = json.loads(result_file.read_text(encoding='utf-8'))
+                try:
+                    result = json.loads(result_file.read_text(encoding='utf-8'))
+                except (ValueError, UnicodeError) as exc:
+                    skipped.append({'dir': path.name, 'reason': 'invalid_result_json', 'error': str(exc)})
+                    continue  # corresponding logged attempt is still an error
                 case = result.get('initial_case') or {}
                 key = (case.get('level'), case.get('seed'))
                 if key not in held:
@@ -58,16 +66,21 @@ def scan(roots, held):
                     'seed': key[1],
                     'execution': result.get('execution_mode'),
                     'dir': path.name,
-                    'passed': bool(result.get('passed')),
-                    'formal_success': bool(result.get('formal_day4_success')
-                                           or result.get('fold_success_accepted')),
+                    'passed': result.get('passed') is True,
+                    'formal_success': False,
+                    'formal_status': 'not_evaluated_by_frozen_formal_audit',
+                    'legacy_formal_claim': bool(result.get('formal_day4_success')
+                                              or result.get('fold_success_accepted')),
+                    'result_sha256': hashlib.sha256(result_file.read_bytes()).hexdigest(),
                     'fold_edge': result.get('fold_edge'),
                     'action_count': result.get('action_count'),
                     'crossed': metrics.get('moving_half_crossed_fraction',
                                            metrics.get('crossed_fraction')),
-                    'frozen_code': bool(result.get('code_files')),
+                    'frozen_code': False,
+                    'code_identity_recorded': bool(result.get('code_files')),
                     'errors': result.get('errors') or [],
-                    'outcome': 'passed' if result.get('passed') else 'rejected',
+                    'outcome': ('passed' if result.get('passed') is True else
+                                'rejected' if result.get('passed') is False else 'error'),
                 }
                 # One timestamped result directory is one attempt, even if copied
                 # into several supplied roots or a root is supplied twice.
@@ -99,6 +112,7 @@ def summarize_rows(subset, level, execution):
         'execution': execution or 'both',
         'attempts': attempts,
         'passed': passed,
+        'development_passed': passed,
         'rejected': rejected,
         'error': error,
         'rejection_rate': None if empty else (rejected + error) / attempts,
@@ -107,6 +121,8 @@ def summarize_rows(subset, level, execution):
         'non_frozen_code': sorted({r['dir'] for r in subset
                                    if r['dir'] is not None and not r['frozen_code']}),
         'formal_success': sum(1 for r in subset if r['formal_success']),
+        'formal_evaluated': 0,
+        'formal_success_rate': None,
     }
 
 
@@ -125,10 +141,7 @@ def reconcile_attempts(rows, attempt_paths, held):
         if path in seen_logs:
             continue
         seen_logs.add(path)
-        for line_number, line in enumerate(path.read_text(encoding='utf-8').splitlines(), 1):
-            if not line.strip():
-                continue
-            rec = json.loads(line)
+        for line_number, rec in enumerate(journal(path), 1):
             key = (rec['level'], rec['seed'])
             if key not in held:
                 skipped.append({'log': str(path), 'line': line_number, 'reason': 'attempt_not_heldout'})
@@ -141,6 +154,12 @@ def reconcile_attempts(rows, attempt_paths, held):
                 result = by_dir[name]
                 if (result['level'], result['seed'], result['execution']) != (*key, rec['execution']):
                     raise ValueError('attempt/result identity mismatch: ' + name)
+                if rec.get('result_sha256') and rec['result_sha256'] != result['result_sha256']:
+                    raise ValueError('logged result hash mismatch: ' + name)
+                if rec.get('exit_code') not in (None, 0) and result['passed']:
+                    result['outcome'] = 'error'
+                    result['passed'] = False
+                    result['errors'].append('runner failed despite result passed=true')
                 continue
             missing.append(rec)
             rows.append({'level': key[0], 'seed': key[1], 'execution': rec['execution'],
@@ -201,9 +220,17 @@ def main():
 
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps({'rows': rows, 'summary': table, 'tasks': tasks,
-                               'missing': missing, 'skipped': skipped, 'logged_attempts': logged},
-                              ensure_ascii=False, indent=1), encoding='utf-8')
+    observed = {(r['level'], r['seed'], r['execution']) for r in rows}
+    not_attempted = [{'level': level, 'seed': seed, 'execution': mode}
+                     for level, seed in sorted(held) for mode in ('single', 'arc4')
+                     if (level, seed, mode) not in observed]
+    payload = {'rows': rows, 'summary': table, 'tasks': tasks,
+               'missing': missing, 'skipped': skipped, 'logged_attempts': logged,
+               'planned_attempts': len(held) * 2, 'not_attempted': not_attempted,
+               'formal_status': 'pending_independent_frozen_evaluator_audit',
+               'denominator_complete': bool(args.attempts) and not skipped}
+    with out.open('x', encoding='utf-8') as fh:
+        json.dump(payload, fh, ensure_ascii=False, indent=1)
     print('wrote', out)
     return 0
 

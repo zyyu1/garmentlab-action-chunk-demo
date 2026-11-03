@@ -1,5 +1,15 @@
 # Stage 4 折形任务定义冻结（2026-11-02，第二步 + 第三步表示层）
 
+## A5 候选变更登记 · stage4-a5-rc1（2026-11-03）
+
+任务 B（L2/L3 nominal 20/20）拟采用 right，两种表示共用；L1 沿用 left 过折。登记将最后一个公开 OPEN 的目标设为实测 EE 上方 0.15 m，解除抓取后显式移向该目标，L1/B 仍为 7/12 个公开动作。新 step 0 定义为这次 OPEN 完成的物理步；固定采集 0–330 并以冻结 B 数值判据评价 210–330。旧开发终态不补记本版本成功。状态为候选，须经真实开发复验后另行冻结。详见 [A5 决策与 E 清单](STAGE4_A5_E_HANDOFF.md)。
+
+## 2026-11-02 B项：正式成功判据 v1.0.0 已交付（仅离线）
+
+以 [STAGE4_SUCCESS_CRITERIA_V1.md](STAGE4_SUCCESS_CRITERIA_V1.md) 与 `day4-actionchunk-test/stage4-success-v1.json` 为当前成功判据。A/L1过折和B/nominal分任务评价；新增OPEN完成后逐物理步0..330采集、3.5–5.5秒连续几何及稳定窗口。原目标、held门槛和7/12动作预算不变。独立评价manifest登记新成功层，旧折叠manifest/runner未修改。
+
+13项离线测试通过；31个历史目录复算20个满足对应终态几何、11个不满足，但全部缺新协议完整时序证据，不能追认正式成功。稳定阈值为预登记工程容差，尚待开发复验。评价配置与分类器已完成，不等于runner采样接入或正式批次已解锁。下一步需单独接入记录并用开发seed复验；held-out保持暂停，正式成功0。right是否正式采用仍需独立登记。下方“数值阈值未冻结”等段落保留为本次之前的历史状态。
+
 > 命名约定与仓库其他文档一致：正文用 Stage，`DAY4_*.md`、脚本名、结果目录名保留。
 
 本文件回答一个问题：**L1 / L2 / L3 各自要折叠成什么形状、用哪个评价器判定、用哪些 seed 测、以及 single-step 与 H=4 怎么对齐**。第一步已离线核实 L1 的 overhang 属最终目标偏移而非轨迹补偿（[review](day4-actionchunk-test/results/L1_OVERHANG_MECHANISM_20261102/review.md)）。第二步按“保留 L1 独立过折目标、L2/L3 保留各自已有目标”冻结定义；第三步（§7）把两种动作表示对齐到同一份目标、评价器与 seed 规则。
@@ -307,8 +317,8 @@ L2 4200的right single/arc4由本聊天在移交前完成；L3 4300采用另一�
 
 - 失败策略：`passed=false` 记一行 rejected 并继续；初态生成失败或缺结果目录视为基础设施错误并停止整批；不自动重试、不覆盖旧结果；中断后重跑按 attempts 跳过已有结果目录的 seed，强制重跑须换新 tag。
 
-- 文件与哈希：变体配置 `adf4c9a8…`、入口 `3822bd98…`、独立 23 项 manifest `2fff0bf9…`、批次驱动 `d4c00162…`；21 项底层身份 `cb947b85…` 不变。详见 [扩展计划](STAGE4_B_RIGHT_DEV_V2_PLAN.md)。
+- 文件与哈希：变体配置 `91c0fe7f…`（A1 v2.1 修正 sampling 描述）、入口 `3822bd98…`、独立 23 项 manifest `c3e34c91…`（A1 刷新 config 条目）、批次驱动 `d4c00162…`；21 项底层身份 `cb947b85…` 不变。旧值 `adf4c9a8…` / `2fff0bf9…` 保留在 A1 报告中。详见 [扩展计划](STAGE4_B_RIGHT_DEV_V2_PLAN.md) 与 [A1 预检](day4-actionchunk-test/results/STAGE4_A1_PREFLIGHT_20261102/review.md)。
 
 - 禁止：held-out 4110–4129 / 4210–4229 / 4310–4329 不生成、不运行；不把本批 `passed` 当正式成功；不据此自动采用 right 或替换 left。
 
-- 状态：已登记，未运行。正式 Stage 4 成功仍为 0。
+- 状态：A1 预检完成（48/48，仅离线），未运行任何 seed；A2 待启动。正式 Stage 4 成功仍为 0。

@@ -2,9 +2,11 @@
 
 研究 single-step behavior cloning 与 H=4 action-chunk BC 在三档衣物初态下的折叠成功率、恢复能力和推理开销。当前工作集中在 GarmentLab / Isaac Sim 中建立可靠的 expert 和动作接口，尚未进入策略训练或正式对比实验。
 
-> **当前状态：Stage 4 开发中，正式成功轨迹 0 条。** 流程正常结束、视频可解码或 `passed=True`，不等于折叠成功或 Stage 4 验收通过。
+## 当前状态（2026-11-03）
 
-## 当前进度（2026-11-02）
+**Stage 4 暂停在 A5 RC2 开发复验收尾。** 七例证据完整。4100 的两种表示通过，4202、4302 的两种表示均因释放后漂移超限被拒绝。4201 single 为有效负对照。任务 B 的 right 保留为拟采用折向。RC2 未冻结，E 和 held-out 均未运行。[交接日报](2026-11-03-GarmentLab日报%20Stage4%20A5%20RC2复验与暂停交接.md) · [逐例审计](../thesis/day4-actionchunk-test/results/A5_RC2_AUDIT_20261103T194913Z/review.md)
+
+## 历史进度（截至 2026-11-02）
 
 | 工作项 | 状态与证据 |
 | --- | --- |
@@ -20,9 +22,9 @@
 | 正式批次准备 | 每档 20 个 held-out seeds（L1 4110–4129、L2 4210–4229、L3 4310–4329）已登记并写入初态 plan；两个初态 runner 的 seed 断言已放宽，批次驱动与拒绝率汇总工具已就位，两份初态 manifest 已在远端无排除项核对通过。**未运行**（按 `b-right-dev-v1` 暂停），且正式成功判据阈值未冻结。见 [正式批次准备](STAGE4_FORMAL_BATCH_PLAN.md)。 |
 | 正式验收与学习 | 三档正式成功轨迹、Stage 5 demonstrations、BC 训练及正式评估均未完成。正式 Stage 4 成功仍为 0。 |
 
-当前进度以 [Stage 4 下一步](DAY4_NEXT_STEPS.md) 和 [验收记录](DAY4_ACCEPTANCE_TRACKER.md) 为准。历史日报和旧脚本用于追溯，不应作为当前运行入口。
+截至 11 月 2 日的进度以 [Stage 4 下一步](DAY4_NEXT_STEPS.md) 和 [验收记录](DAY4_ACCEPTANCE_TRACKER.md) 为准。历史日报和旧脚本用于追溯，不应作为当前运行入口。
 
-## 当前阻塞与修正候选
+## 历史抓取诊断与修正候选
 
 此前方巾试跑先后在抓取距离检查和下降运动中失败，均未证明 L1 折叠成功。源码审查确认：共享 Backend 尚未使用动作中的 `yaw`，位置运动也未固定末端姿态；使用下降前姿态一次性换算抓取偏移，不能保证到达时对齐。
 
@@ -37,17 +39,17 @@
 
 详见 [末端接口审查](DAY4_SQUARE_FRAME_AUDIT.md)、[离线运动学结果](day4-actionchunk-test/frame_audit/pose_audit.json) 和 [网格间隙检查](day4-actionchunk-test/frame_audit/clearance_audit.json)。
 
-## 最新交接与下一步
+## 2026-11-02 交接记录
 
-当前状态以 [2026-11-02 日报](2026-11-02-GarmentLab日报%20Stage4%20L2L3初态与6b交接.md) 为准：任务定义与表示层已冻结，表示层配对、分任务报告与任务 B 的冻结版 single 证据均已完成。第 7 步正式批次已**登记但未运行**：每档 20 个 held-out seeds（L1 4110–4129、L2 4210–4229、L3 4310–4329）与初态 plan/批次工具已就位，详见 [正式批次准备](STAGE4_FORMAL_BATCH_PLAN.md)。开跑前还差两件事：冻结正式成功判据阈值；决定是先跑 left 基线还是先解决 B 的释放后回弹。当前按 `b-right-dev-v1` 先做 right 的开发验证，批次保持暂停。
+当时状态以 [2026-11-02 日报](2026-11-02-GarmentLab日报%20Stage4%20L2L3初态与6b交接.md) 为准：任务定义与表示层已冻结，表示层配对、分任务报告与任务 B 的冻结版 single 证据均已完成。第 7 步正式批次已**登记但未运行**：每档 20 个 held-out seeds（L1 4110–4129、L2 4210–4229、L3 4310–4329）与初态 plan/批次工具已就位，详见 [正式批次准备](STAGE4_FORMAL_BATCH_PLAN.md)。开跑前还差两件事：冻结正式成功判据阈值；决定是先跑 left 基线还是先解决 B 的释放后回弹。当前按 `b-right-dev-v1` 先做 right 的开发验证，批次保持暂停。
 
 此前的 v5 短程保持/释放结论（位置误差 0.4733 mm、末臂速 0.00860 rad/s、锚点间隙 1.361 mm；双指触地 356 条事件、接触明细全零）仍是有效证据，但已被折叠开发例取代为“最新运行”。历史日报与旧脚本仅用于追溯，不作为当前运行入口。
 
-详见 [最新交接日报](2026-11-02-GarmentLab日报%20Stage4%20L2L3初态与6b交接.md)、[Stage 4 下一步](DAY4_NEXT_STEPS.md) 与 [v5 预登记](day4-actionchunk-test/SQUARE_GRASP_HOLD_V5.md)。后续下载由用户手动执行。
+详见 [11 月 2 日交接日报](2026-11-02-GarmentLab日报%20Stage4%20L2L3初态与6b交接.md)、[Stage 4 下一步](DAY4_NEXT_STEPS.md) 与 [v5 预登记](day4-actionchunk-test/SQUARE_GRASP_HOLD_V5.md)。后续下载由用户手动执行。
 
 仓库是代码与精简证据归档，不是完整环境镜像。实验依赖 Isaac Sim 4.0、现有 GarmentLab/Backend 环境及对应文件清单；历史入口不代表当前应运行的实验。
 
-## Stage 4 剩余验收
+## Stage 4 原验收计划（历史）
 
 1. 得到完整释放、退让和静置后仍保持重叠的 L1 候选，并独立重复确认。
 2. 将有效控制整合到正式 Backend，验证 `reset(seed, difficulty)`、episode 内重抓取及连续 10 次 reset/rollout；折叠与 recovery 合计不超过 12 个高层动作。

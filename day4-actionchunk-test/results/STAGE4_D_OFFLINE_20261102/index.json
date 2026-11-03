@@ -1,0 +1,2298 @@
+{
+  "selection_source": "2026-11-02 handoff: final 6a registered directories",
+  "initial_states": [
+    {
+      "level": "flat",
+      "seed": 4100,
+      "registered_dir": "day4-square-initial-20261031-094446-203825",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-094446-203825\\initial.png",
+            "sha256": "b1958f20cb274d4c469477a3331c337101e85edd7cb03a314b67c9e6dbcf1fd7",
+            "bytes": 166486,
+            "size": [
+              640,
+              480
+            ]
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-094446-203825\\initial.png",
+            "sha256": "b1958f20cb274d4c469477a3331c337101e85edd7cb03a314b67c9e6dbcf1fd7",
+            "bytes": 166486,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-20261031-094446-203825\\result.json",
+            "sha256": "48126b9a19c8b5fff70637576215f7eb4d47dc2ea87ea1da8a66298543afdcc0",
+            "bytes": 3580
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-094446-203825\\result.json",
+            "sha256": "31d8d47f4e18f6f9c8e96b0e3a3f0237ac87786978a343548cefddf1a7e567d8",
+            "bytes": 3452
+          }
+        ],
+        "initial_geometry.npz": [
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-094446-203825\\initial_geometry.npz",
+            "sha256": "dd5783038cd7ae95c17525574ca9c76d0df2399261a6df6a0c8f09a5b351bcb3",
+            "bytes": 10395,
+            "arrays": {
+              "before": [
+                441,
+                3
+              ],
+              "applied": [
+                441,
+                3
+              ],
+              "settled": [
+                441,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      "missing": [],
+      "result_identity_verified": true,
+      "development_passed": true,
+      "conflicting_copies": [
+        "result.json"
+      ]
+    },
+    {
+      "level": "flat",
+      "seed": 4101,
+      "registered_dir": "day4-square-initial-20261031-095254-316552",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-095254-316552\\initial.png",
+            "sha256": "831567dee3cf37f22d3b39e22e06218ebdd87777a1e9ad1ad515303054950f98",
+            "bytes": 166007,
+            "size": [
+              640,
+              480
+            ]
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-095254-316552\\initial.png",
+            "sha256": "831567dee3cf37f22d3b39e22e06218ebdd87777a1e9ad1ad515303054950f98",
+            "bytes": 166007,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-20261031-095254-316552\\result.json",
+            "sha256": "c443931803546a5659d6f760b82d4acb92e2f1c0061a1a63684ae295e31abba9",
+            "bytes": 3579
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-095254-316552\\result.json",
+            "sha256": "7b33d274b855ba55bc07acd5b1bc03f4b35f5a85ebb3c782b44f783db7a8e1db",
+            "bytes": 3451
+          }
+        ],
+        "initial_geometry.npz": [
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-095254-316552\\initial_geometry.npz",
+            "sha256": "b7b379ad5409a3bff4c0cf46df820abd701d71f0af38697d698bdd70833d52c7",
+            "bytes": 10471,
+            "arrays": {
+              "before": [
+                441,
+                3
+              ],
+              "applied": [
+                441,
+                3
+              ],
+              "settled": [
+                441,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      "missing": [],
+      "result_identity_verified": true,
+      "development_passed": true,
+      "conflicting_copies": [
+        "result.json"
+      ]
+    },
+    {
+      "level": "flat",
+      "seed": 4102,
+      "registered_dir": "day4-square-initial-20261031-095611-471489",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-095611-471489\\initial.png",
+            "sha256": "b9c82a60b5bd0cb61bcb1f05b450acdebc8def3fedbd5a6eaea8fbc98764608f",
+            "bytes": 165980,
+            "size": [
+              640,
+              480
+            ]
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-095611-471489\\initial.png",
+            "sha256": "b9c82a60b5bd0cb61bcb1f05b450acdebc8def3fedbd5a6eaea8fbc98764608f",
+            "bytes": 165980,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-20261031-095611-471489\\result.json",
+            "sha256": "5912424071bd80ed8eaa3c780cc06aa1aaf0dbe139060965b4edb383a4f6a548",
+            "bytes": 3581
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-095611-471489\\result.json",
+            "sha256": "37ab1f117ac72627dbe9369d664a8a44b64968f532a8e56d49136bb530d5fb0d",
+            "bytes": 3453
+          }
+        ],
+        "initial_geometry.npz": [
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-095611-471489\\initial_geometry.npz",
+            "sha256": "6139e662569fcc6501cff7323d8f3dbfe112d9afd5ceafb1ca25790829de3bbf",
+            "bytes": 10445,
+            "arrays": {
+              "before": [
+                441,
+                3
+              ],
+              "applied": [
+                441,
+                3
+              ],
+              "settled": [
+                441,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      "missing": [],
+      "result_identity_verified": true,
+      "development_passed": true,
+      "conflicting_copies": [
+        "result.json"
+      ]
+    },
+    {
+      "level": "flat",
+      "seed": 4103,
+      "registered_dir": "day4-square-initial-20261031-095925-799656",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-095925-799656\\initial.png",
+            "sha256": "1d743c52346fe7bf599f44afcc4b64434dc883c49932c54ed51b6381978b823e",
+            "bytes": 98399,
+            "size": [
+              640,
+              480
+            ]
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-095925-799656\\initial.png",
+            "sha256": "1d743c52346fe7bf599f44afcc4b64434dc883c49932c54ed51b6381978b823e",
+            "bytes": 98399,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-20261031-095925-799656\\result.json",
+            "sha256": "5fbfd129cd831cff5ca834cab86be613c1e64cc1d9a84cc9904f32b5d3ce16ee",
+            "bytes": 3582
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-095925-799656\\result.json",
+            "sha256": "130956af28e544c61d79f4e4b8e6caf2be65b761547e37085f018e022070a82f",
+            "bytes": 3454
+          }
+        ],
+        "initial_geometry.npz": [
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-095925-799656\\initial_geometry.npz",
+            "sha256": "d28ff2f2b50bf6d531dae86116e7270dcb551e7114124b9f0884b3c38d8a850e",
+            "bytes": 10450,
+            "arrays": {
+              "before": [
+                441,
+                3
+              ],
+              "applied": [
+                441,
+                3
+              ],
+              "settled": [
+                441,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      "missing": [],
+      "result_identity_verified": true,
+      "development_passed": true,
+      "conflicting_copies": [
+        "result.json"
+      ]
+    },
+    {
+      "level": "flat",
+      "seed": 4104,
+      "registered_dir": "day4-square-initial-20261031-100246-659222",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-100246-659222\\initial.png",
+            "sha256": "b6230ccfccac6a867e48405e0edbadda2c9e95e9364dc9a155d93e91df27811d",
+            "bytes": 165225,
+            "size": [
+              640,
+              480
+            ]
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-100246-659222\\initial.png",
+            "sha256": "b6230ccfccac6a867e48405e0edbadda2c9e95e9364dc9a155d93e91df27811d",
+            "bytes": 165225,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-20261031-100246-659222\\result.json",
+            "sha256": "04802cc5c18a347e8e99595b85aabc39c27fdcc610bde867b391b8b27a5afd3a",
+            "bytes": 3582
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-100246-659222\\result.json",
+            "sha256": "7c6cca943bb012e0147a1d1b013966f3f28c5b458dd7166fc699a096d7df2cab",
+            "bytes": 3454
+          }
+        ],
+        "initial_geometry.npz": [
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-100246-659222\\initial_geometry.npz",
+            "sha256": "b52903aa342cf191968b46a270f413990d166899d373ad84987a019c300d51c9",
+            "bytes": 10465,
+            "arrays": {
+              "before": [
+                441,
+                3
+              ],
+              "applied": [
+                441,
+                3
+              ],
+              "settled": [
+                441,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      "missing": [],
+      "result_identity_verified": true,
+      "development_passed": true,
+      "conflicting_copies": [
+        "result.json"
+      ]
+    },
+    {
+      "level": "flat",
+      "seed": 4105,
+      "registered_dir": "day4-square-initial-20261031-100558-317616",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-100558-317616\\initial.png",
+            "sha256": "024550372a403fd4685a23fb567751498f997f598931e505c2ec1b093d9065c3",
+            "bytes": 165017,
+            "size": [
+              640,
+              480
+            ]
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-100558-317616\\initial.png",
+            "sha256": "024550372a403fd4685a23fb567751498f997f598931e505c2ec1b093d9065c3",
+            "bytes": 165017,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-20261031-100558-317616\\result.json",
+            "sha256": "21327f8e255bb00b16cfc13bff8b4225b2ccbadbf3dcc2470771caad39b862dc",
+            "bytes": 3581
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-100558-317616\\result.json",
+            "sha256": "7e192c1389b9aa95295c4923c966cfe03adf4556db150fa192aa4a9db31b6f52",
+            "bytes": 3453
+          }
+        ],
+        "initial_geometry.npz": [
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-100558-317616\\initial_geometry.npz",
+            "sha256": "11d2ccdebbb431480c1056e99c2e505b60253090810896ff2d8a5a80a6222adb",
+            "bytes": 10239,
+            "arrays": {
+              "before": [
+                441,
+                3
+              ],
+              "applied": [
+                441,
+                3
+              ],
+              "settled": [
+                441,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      "missing": [],
+      "result_identity_verified": true,
+      "development_passed": true,
+      "conflicting_copies": [
+        "result.json"
+      ]
+    },
+    {
+      "level": "flat",
+      "seed": 4106,
+      "registered_dir": "day4-square-initial-20261031-100909-165817",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-100909-165817\\initial.png",
+            "sha256": "153f4eb43a5000fd9ee0ba114c9e29f370eb802efc0ee19b3b14a566800f4bd0",
+            "bytes": 165450,
+            "size": [
+              640,
+              480
+            ]
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-100909-165817\\initial.png",
+            "sha256": "153f4eb43a5000fd9ee0ba114c9e29f370eb802efc0ee19b3b14a566800f4bd0",
+            "bytes": 165450,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-20261031-100909-165817\\result.json",
+            "sha256": "1cf66a4ceba472f77504eedb057d925ce785215157c5ab646c4eb47b42238615",
+            "bytes": 3579
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-100909-165817\\result.json",
+            "sha256": "84b998836f4886d047eca059e915d67be1d8fa1bcdd1f9e8ef47fdbf2cffee5f",
+            "bytes": 3451
+          }
+        ],
+        "initial_geometry.npz": [
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-100909-165817\\initial_geometry.npz",
+            "sha256": "a1f1beb5dc501e22580c714cb1b6ef39ad30ef5debfdf03016f84243b841e231",
+            "bytes": 10466,
+            "arrays": {
+              "before": [
+                441,
+                3
+              ],
+              "applied": [
+                441,
+                3
+              ],
+              "settled": [
+                441,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      "missing": [],
+      "result_identity_verified": true,
+      "development_passed": true,
+      "conflicting_copies": [
+        "result.json"
+      ]
+    },
+    {
+      "level": "flat",
+      "seed": 4107,
+      "registered_dir": "day4-square-initial-20261031-101224-181183",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-101224-181183\\initial.png",
+            "sha256": "586eb5ce1db5d3ae146fb305c222d0a340035c5c0c05e2f1cded2ca106cf7826",
+            "bytes": 98909,
+            "size": [
+              640,
+              480
+            ]
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-101224-181183\\initial.png",
+            "sha256": "586eb5ce1db5d3ae146fb305c222d0a340035c5c0c05e2f1cded2ca106cf7826",
+            "bytes": 98909,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-20261031-101224-181183\\result.json",
+            "sha256": "30848e690e7adcd2e24b9f8a9f971deb53db11561af5a28699ffea988cd248d1",
+            "bytes": 3579
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-101224-181183\\result.json",
+            "sha256": "6bf52209684bb1bfcd43c5a912fbde304edf320a9dd0e5315470fa17b85c7df6",
+            "bytes": 3451
+          }
+        ],
+        "initial_geometry.npz": [
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-101224-181183\\initial_geometry.npz",
+            "sha256": "879c8837a9c7e70e925eac30aa7e0a54d763675d304c95b9d47f1de0a4d816bb",
+            "bytes": 10506,
+            "arrays": {
+              "before": [
+                441,
+                3
+              ],
+              "applied": [
+                441,
+                3
+              ],
+              "settled": [
+                441,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      "missing": [],
+      "result_identity_verified": true,
+      "development_passed": true,
+      "conflicting_copies": [
+        "result.json"
+      ]
+    },
+    {
+      "level": "flat",
+      "seed": 4108,
+      "registered_dir": "day4-square-initial-20261031-101541-103282",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-101541-103282\\initial.png",
+            "sha256": "4aee778f06459df3b2abe95660dd073a86089bb5a6215c46ea4607f1e696e8dc",
+            "bytes": 99675,
+            "size": [
+              640,
+              480
+            ]
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-101541-103282\\initial.png",
+            "sha256": "4aee778f06459df3b2abe95660dd073a86089bb5a6215c46ea4607f1e696e8dc",
+            "bytes": 99675,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-20261031-101541-103282\\result.json",
+            "sha256": "48ee0350a828581e191751fc2c0eb49c9e7c46817fb0039a124924a699a8cd47",
+            "bytes": 3578
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-101541-103282\\result.json",
+            "sha256": "33aa9e04b10598a3daa8ae9efd1967906769eaaf54ba69e0ed96091f485e03a5",
+            "bytes": 3450
+          }
+        ],
+        "initial_geometry.npz": [
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-101541-103282\\initial_geometry.npz",
+            "sha256": "76422f8b02bac7d669faacba1ab55ed53809c098178fa7be5b46db2eab56232a",
+            "bytes": 10527,
+            "arrays": {
+              "before": [
+                441,
+                3
+              ],
+              "applied": [
+                441,
+                3
+              ],
+              "settled": [
+                441,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      "missing": [],
+      "result_identity_verified": true,
+      "development_passed": true,
+      "conflicting_copies": [
+        "result.json"
+      ]
+    },
+    {
+      "level": "flat",
+      "seed": 4109,
+      "registered_dir": "day4-square-initial-20261031-101853-191858",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-101853-191858\\initial.png",
+            "sha256": "21dbf99d3825217452ebcd291c984a5338a5bc0f8f462162c5469fc0e34d6764",
+            "bytes": 98404,
+            "size": [
+              640,
+              480
+            ]
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-101853-191858\\initial.png",
+            "sha256": "21dbf99d3825217452ebcd291c984a5338a5bc0f8f462162c5469fc0e34d6764",
+            "bytes": 98404,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-20261031-101853-191858\\result.json",
+            "sha256": "f9ef1003420c06aaa0802fb7e0fe55e1ce567f806f82d19c57743a02b5de6987",
+            "bytes": 3583
+          },
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-101853-191858\\result.json",
+            "sha256": "33e7bb8515833a3ce6b47ecd8c9f505dbaf6502be386f6f57d7ef41d33544494",
+            "bytes": 3455
+          }
+        ],
+        "initial_geometry.npz": [
+          {
+            "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-square-initial-20261031-101853-191858\\initial_geometry.npz",
+            "sha256": "696354653af86dd43dd841d415ac636b3351983db1ef2fda3fdd90969707c5af",
+            "bytes": 10365,
+            "arrays": {
+              "before": [
+                441,
+                3
+              ],
+              "applied": [
+                441,
+                3
+              ],
+              "settled": [
+                441,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      "missing": [],
+      "result_identity_verified": true,
+      "development_passed": true,
+      "conflicting_copies": [
+        "result.json"
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4200,
+      "registered_dir": "day4-square-initial-stripfold-20261102-023311-548690",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-stripfold-20261102-023311-548690\\initial.png",
+            "sha256": "34ea5b9a65aa077bb26fbb9fc0e268be83d6cd3f43067008d19b93c8f97b92b1",
+            "bytes": 176175,
+            "size": [
+              640,
+              480
+            ]
+          },
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-023311-548690\\initial.png",
+            "sha256": "34ea5b9a65aa077bb26fbb9fc0e268be83d6cd3f43067008d19b93c8f97b92b1",
+            "bytes": 176175,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-stripfold-20261102-023311-548690\\result.json",
+            "sha256": "819894c2e09e6cbe39a90c58277bb9e7602e51a5ba13f137a8543360407fd20a",
+            "bytes": 14590
+          }
+        ],
+        "initial_geometry.npz": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-stripfold-20261102-023311-548690\\initial_geometry.npz",
+            "sha256": "b73256498d6d60127acdd73358b6cac54336d0627e7fcbf2f51294f6c7cd1140",
+            "bytes": 15368,
+            "arrays": {
+              "before": [
+                441,
+                3
+              ],
+              "applied": [
+                441,
+                3
+              ],
+              "flat_settled": [
+                441,
+                3
+              ],
+              "final": [
+                441,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      "missing": [],
+      "result_identity_verified": true,
+      "development_passed": true,
+      "conflicting_copies": []
+    },
+    {
+      "level": "perturbed",
+      "seed": 4201,
+      "registered_dir": "day4-square-initial-stripfold-20261102-031859-758705",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-031859-758705\\initial.png",
+            "sha256": "ccebec43adc3ebb19fb55e7f4d6f3d3dc33e76a60716641184df7c704b45bfc4",
+            "bytes": 178573,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "perturbed",
+      "seed": 4202,
+      "registered_dir": "day4-square-initial-stripfold-20261102-032804-246519",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-032804-246519\\initial.png",
+            "sha256": "9e20f6c1d48e17d2234430c8125f7675df85f461e6a9d6728f4dac13d7c44bd6",
+            "bytes": 174843,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "perturbed",
+      "seed": 4203,
+      "registered_dir": "day4-square-initial-stripfold-20261102-033648-809964",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-033648-809964\\initial.png",
+            "sha256": "138e89b2beb008d0b26290afa2bac907787af090653aba3986a771390ee8b75a",
+            "bytes": 177126,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "perturbed",
+      "seed": 4204,
+      "registered_dir": "day4-square-initial-stripfold-20261102-034544-830190",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-034544-830190\\initial.png",
+            "sha256": "423f18a1bb17af41ffe0e2cc35e587bd7b65eaee9c84770f5f17033527088379",
+            "bytes": 176962,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "perturbed",
+      "seed": 4205,
+      "registered_dir": "day4-square-initial-stripfold-20261102-035436-003676",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-035436-003676\\initial.png",
+            "sha256": "ad3019705577d15a0beb1d55a3568a33997318a93ad840d89a2023b258eab24f",
+            "bytes": 102022,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "perturbed",
+      "seed": 4206,
+      "registered_dir": "day4-square-initial-stripfold-20261102-040355-509776",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-040355-509776\\initial.png",
+            "sha256": "437fcf24141c54611a3cca593690bf012552333b38232f8a49e303423ac6c925",
+            "bytes": 104837,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "perturbed",
+      "seed": 4207,
+      "registered_dir": "day4-square-initial-stripfold-20261102-041256-658874",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-041256-658874\\initial.png",
+            "sha256": "9b1d5823c9feeb01fb9b292fb30e4d860589dc85880fb3572fe1d6efcecb0370",
+            "bytes": 100668,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "perturbed",
+      "seed": 4208,
+      "registered_dir": "day4-square-initial-stripfold-20261102-042215-851125",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-042215-851125\\initial.png",
+            "sha256": "426ddf6c98a008f2b5e8fc387e8f1c5e7f1f9e01befc7d9886a6b2db3c93dce1",
+            "bytes": 101483,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "perturbed",
+      "seed": 4209,
+      "registered_dir": "day4-square-initial-stripfold-20261102-043151-454479",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-043151-454479\\initial.png",
+            "sha256": "4deb9e432cf40e14468098d9354f1d2bf1295f229a8a7e0c756ed998a5357672",
+            "bytes": 173566,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "crumpled",
+      "seed": 4300,
+      "registered_dir": "day4-square-initial-stripfold-20261102-074349-406408",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-stripfold-20261102-074349-406408\\initial.png",
+            "sha256": "f7a947ab6a46e4aa34f78079eb7361e6aeb2927cad888b284f77b4252fd55430",
+            "bytes": 100697,
+            "size": [
+              640,
+              480
+            ]
+          },
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\l3_initial\\day4-square-initial-stripfold-20261102-074349-406408\\initial.png",
+            "sha256": "f7a947ab6a46e4aa34f78079eb7361e6aeb2927cad888b284f77b4252fd55430",
+            "bytes": 100697,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-stripfold-20261102-074349-406408\\result.json",
+            "sha256": "6e71ce55b09eb9e1382c9f1b1ef267918e7f6e61e2a97f966a3fd168445160e4",
+            "bytes": 14591
+          }
+        ],
+        "initial_geometry.npz": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\day4-square-initial-stripfold-20261102-074349-406408\\initial_geometry.npz",
+            "sha256": "35cf50a6f835e5be586fa59e998e5a7229394848c0af02a293e6e6401680533e",
+            "bytes": 15489,
+            "arrays": {
+              "before": [
+                441,
+                3
+              ],
+              "applied": [
+                441,
+                3
+              ],
+              "flat_settled": [
+                441,
+                3
+              ],
+              "final": [
+                441,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      "missing": [],
+      "result_identity_verified": true,
+      "development_passed": true,
+      "conflicting_copies": []
+    },
+    {
+      "level": "crumpled",
+      "seed": 4301,
+      "registered_dir": "day4-square-initial-stripfold-20261102-075606-421583",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\l3_initial\\day4-square-initial-stripfold-20261102-075606-421583\\initial.png",
+            "sha256": "2d5db019667a98c93c23ba270b2f262f14072dc668892be6d3ccb921bbcf951f",
+            "bytes": 178244,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "crumpled",
+      "seed": 4302,
+      "registered_dir": "day4-square-initial-stripfold-20261102-080548-693912",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\l3_initial\\day4-square-initial-stripfold-20261102-080548-693912\\initial.png",
+            "sha256": "bdf9c8d584c4f1986b0146d5567d104a60f97705e21d6e7a9b15240a415da104",
+            "bytes": 176229,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "crumpled",
+      "seed": 4303,
+      "registered_dir": "day4-square-initial-stripfold-20261102-082753-692325",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\l3_initial\\day4-square-initial-stripfold-20261102-082753-692325\\initial.png",
+            "sha256": "3fdea9be2dc294b2bbbfa1f10b14b69bc2cf04dbbd8a6b4fce3a3c6fadeea143",
+            "bytes": 105744,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "crumpled",
+      "seed": 4304,
+      "registered_dir": "day4-square-initial-stripfold-20261102-083848-796253",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\l3_initial\\day4-square-initial-stripfold-20261102-083848-796253\\initial.png",
+            "sha256": "5f2994c7c4ad6d82c3d88f3fd4a61f21ef3e647f573e38b140fcdd53660f3418",
+            "bytes": 178189,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "crumpled",
+      "seed": 4305,
+      "registered_dir": "day4-square-initial-stripfold-20261102-084918-410795",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\l3_initial\\day4-square-initial-stripfold-20261102-084918-410795\\initial.png",
+            "sha256": "0a1b417cf515e79a675cde0d73f64513a956d927adfc5903a89525671d795ac6",
+            "bytes": 105286,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "crumpled",
+      "seed": 4306,
+      "registered_dir": "day4-square-initial-stripfold-20261102-090016-424984",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\l3_initial\\day4-square-initial-stripfold-20261102-090016-424984\\initial.png",
+            "sha256": "4761ab65d670be11bc13091f548de8e14ba9ca853f173d16103f23c0c03aaa26",
+            "bytes": 171586,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "crumpled",
+      "seed": 4307,
+      "registered_dir": "day4-square-initial-stripfold-20261102-091001-304307",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\l3_initial\\day4-square-initial-stripfold-20261102-091001-304307\\initial.png",
+            "sha256": "8d5ce4cb48049c118a4cdfba86f7a5e96f1177c3e718e25be61ccf44717c8b9e",
+            "bytes": 97998,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "crumpled",
+      "seed": 4308,
+      "registered_dir": "day4-square-initial-stripfold-20261102-092049-522618",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\l3_initial\\day4-square-initial-stripfold-20261102-092049-522618\\initial.png",
+            "sha256": "50e61a8bcf57b8df9eeaf039470e7efa5ca2af5580df35d8656491c77459eb4c",
+            "bytes": 171728,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    },
+    {
+      "level": "crumpled",
+      "seed": 4309,
+      "registered_dir": "day4-square-initial-stripfold-20261102-093018-418187",
+      "files": {
+        "initial.png": [
+          {
+            "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\l3_initial\\day4-square-initial-stripfold-20261102-093018-418187\\initial.png",
+            "sha256": "c4a1953fb045ce2bd1a997aed3632d78620bb4a733715e2c392329112611f271",
+            "bytes": 174856,
+            "size": [
+              640,
+              480
+            ]
+          }
+        ],
+        "result.json": [],
+        "initial_geometry.npz": []
+      },
+      "missing": [
+        "result.json",
+        "initial_geometry.npz"
+      ],
+      "result_identity_verified": false,
+      "development_passed": null,
+      "conflicting_copies": []
+    }
+  ],
+  "contact_sheets": [
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30_sheet.png",
+      "sha256": "1c5b2f4a961babb71b141ba0eca3fd6ac1c1a4c6cc7e510be499addf5f5d5ea8",
+      "bytes": 1060463,
+      "size": [
+        1920,
+        1290
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30_sheet_v2.png",
+      "sha256": "ab22a244bbae09b7a931663b1109ebe8a3137afa71fc83d2a4176b9389383891",
+      "bytes": 1040342,
+      "size": [
+        1920,
+        1290
+      ]
+    }
+  ],
+  "historical_image_inventory": [
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-094446-203825\\initial.png",
+      "sha256": "b1958f20cb274d4c469477a3331c337101e85edd7cb03a314b67c9e6dbcf1fd7",
+      "bytes": 166486,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-095254-316552\\initial.png",
+      "sha256": "831567dee3cf37f22d3b39e22e06218ebdd87777a1e9ad1ad515303054950f98",
+      "bytes": 166007,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-095611-471489\\initial.png",
+      "sha256": "b9c82a60b5bd0cb61bcb1f05b450acdebc8def3fedbd5a6eaea8fbc98764608f",
+      "bytes": 165980,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-095925-799656\\initial.png",
+      "sha256": "1d743c52346fe7bf599f44afcc4b64434dc883c49932c54ed51b6381978b823e",
+      "bytes": 98399,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-100246-659222\\initial.png",
+      "sha256": "b6230ccfccac6a867e48405e0edbadda2c9e95e9364dc9a155d93e91df27811d",
+      "bytes": 165225,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-100558-317616\\initial.png",
+      "sha256": "024550372a403fd4685a23fb567751498f997f598931e505c2ec1b093d9065c3",
+      "bytes": 165017,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-100909-165817\\initial.png",
+      "sha256": "153f4eb43a5000fd9ee0ba114c9e29f370eb802efc0ee19b3b14a566800f4bd0",
+      "bytes": 165450,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-101224-181183\\initial.png",
+      "sha256": "586eb5ce1db5d3ae146fb305c222d0a340035c5c0c05e2f1cded2ca106cf7826",
+      "bytes": 98909,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-101541-103282\\initial.png",
+      "sha256": "4aee778f06459df3b2abe95660dd073a86089bb5a6215c46ea4607f1e696e8dc",
+      "bytes": 99675,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-20261031-101853-191858\\initial.png",
+      "sha256": "21dbf99d3825217452ebcd291c984a5338a5bc0f8f462162c5469fc0e34d6764",
+      "bytes": 98404,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-023311-548690\\initial.png",
+      "sha256": "34ea5b9a65aa077bb26fbb9fc0e268be83d6cd3f43067008d19b93c8f97b92b1",
+      "bytes": 176175,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-031859-758705\\initial.png",
+      "sha256": "ccebec43adc3ebb19fb55e7f4d6f3d3dc33e76a60716641184df7c704b45bfc4",
+      "bytes": 178573,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-032804-246519\\initial.png",
+      "sha256": "9e20f6c1d48e17d2234430c8125f7675df85f461e6a9d6728f4dac13d7c44bd6",
+      "bytes": 174843,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-033648-809964\\initial.png",
+      "sha256": "138e89b2beb008d0b26290afa2bac907787af090653aba3986a771390ee8b75a",
+      "bytes": 177126,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-034544-830190\\initial.png",
+      "sha256": "423f18a1bb17af41ffe0e2cc35e587bd7b65eaee9c84770f5f17033527088379",
+      "bytes": 176962,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-035436-003676\\initial.png",
+      "sha256": "ad3019705577d15a0beb1d55a3568a33997318a93ad840d89a2023b258eab24f",
+      "bytes": 102022,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-040355-509776\\initial.png",
+      "sha256": "437fcf24141c54611a3cca593690bf012552333b38232f8a49e303423ac6c925",
+      "bytes": 104837,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-041256-658874\\initial.png",
+      "sha256": "9b1d5823c9feeb01fb9b292fb30e4d860589dc85880fb3572fe1d6efcecb0370",
+      "bytes": 100668,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-042215-851125\\initial.png",
+      "sha256": "426ddf6c98a008f2b5e8fc387e8f1c5e7f1f9e01befc7d9886a6b2db3c93dce1",
+      "bytes": 101483,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-043151-454479\\initial.png",
+      "sha256": "4deb9e432cf40e14468098d9354f1d2bf1295f229a8a7e0c756ed998a5357672",
+      "bytes": 173566,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-045527-397564\\initial.png",
+      "sha256": "ccb56b5444cec13005cacf01e907ec3f165f6b16bb6d52bf4740b21998041b7e",
+      "bytes": 185057,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-050847-800133\\initial.png",
+      "sha256": "6e3548855d45705860e57d81d21ff8193d6c123264dbc0c47ee5592538c858ca",
+      "bytes": 110534,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-052319-202958\\initial.png",
+      "sha256": "352637981ea6ba3d25d12a5bacf5ab43e6bde8de9628ab2f1ebe99e8d82f2766",
+      "bytes": 186211,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-053722-399111\\initial.png",
+      "sha256": "b9cfbc0f6ef8df39e4c38ae30409945634ed9e6ffecaf1652003b087521114bf",
+      "bytes": 107809,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-055134-961602\\initial.png",
+      "sha256": "62b5e7224e904ea53b1270d99d1320038ecfbd3c52de82859b5a24cf10af8ebf",
+      "bytes": 185966,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-060514-748991\\initial.png",
+      "sha256": "ac36dff928de166867a8fe360b824c4ba03289cd55803478cbd9bd7d89de7592",
+      "bytes": 114758,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-062012-009072\\initial.png",
+      "sha256": "6d81e0487f3811533e635beb6a2e2dbe403e1ea2c6c9c4a5e36d46fcd347563f",
+      "bytes": 183339,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-063351-173381\\initial.png",
+      "sha256": "e6ae0c6081333187795a69072aa19e3e0a55b010e9dc3a6214064b9827b59004",
+      "bytes": 184337,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-064743-471256\\initial.png",
+      "sha256": "23895bf3fa0928ed4723440a43640e41fb507c513ef63fb549210ff09a49857a",
+      "bytes": 106066,
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\initial30\\day4-square-initial-stripfold-20261102-071708-499162\\initial.png",
+      "sha256": "cc69d467e53ad602fb34dfc3529af3812fa82eac7078e240fd3f216cb074661a",
+      "bytes": 112668,
+      "size": [
+        640,
+        480
+      ]
+    }
+  ],
+  "reset_evidence": [
+    {
+      "result": {
+        "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\result.json",
+        "sha256": "eda705ea41334ca7b912333c83aadfac3a622555dfb00cbde0875e84595ffd13",
+        "bytes": 110826
+      },
+      "passed": true,
+      "cycle_count": 10,
+      "settings": {
+        "cycles": 10,
+        "fold_cycles": 1,
+        "regrasp_cycle": 2,
+        "seed": 5100,
+        "allow_root": true
+      },
+      "errors": [],
+      "cycles": [
+        {
+          "cycle": 1,
+          "files": {
+            "reset.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_01\\reset.json",
+              "sha256": "2edda7ecdce130a9abec474980591e3f06f52cee6e5a0d4c25fe62f2eda92751",
+              "bytes": 1272
+            },
+            "reset_state.npz": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_01\\reset_state.npz",
+              "sha256": "264666c82566f0253e919c36f7bf56516f22f28064efbfdc174e5cda27652a29",
+              "bytes": 2953,
+              "arrays": {
+                "vertices": [
+                  441,
+                  3
+                ],
+                "ee": [
+                  3
+                ],
+                "quaternion": [
+                  4
+                ],
+                "joints": [
+                  9
+                ]
+              }
+            },
+            "reset.png": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_01\\reset.png",
+              "sha256": "9257a12f600929a2410e402207483c387f0a1356dbd0f8ee8323a347b11f12dc",
+              "bytes": 59122,
+              "size": [
+                640,
+                480
+              ]
+            },
+            "cycle.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_01\\cycle.json",
+              "sha256": "b0136e53bfff41a9b9a481d580cda9cb8f83783a2f8251a67c2c3210e541512b",
+              "bytes": 12152
+            }
+          },
+          "missing": [],
+          "checks": {
+            "all_slots_released": true,
+            "not_holding": true,
+            "not_enabled": true,
+            "constraints_exist": true,
+            "paths_distinct_and_valid": true,
+            "fold_slot_label": "left_sleeve",
+            "cloth_shape": [
+              441,
+              3
+            ],
+            "cloth_xy_extent": [
+              0.40000033378601074,
+              0.3999999761581421
+            ],
+            "cloth_center_xy": [
+              4.696737665454975e-09,
+              -0.44999974966049194
+            ],
+            "cloth_z_p95": 0.009900019504129887,
+            "robot_joint_velocity_max": 0.0011882847175002098,
+            "finite": true
+          },
+          "rollout": "fold",
+          "state_checks_passed": true
+        },
+        {
+          "cycle": 2,
+          "files": {
+            "reset.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_02\\reset.json",
+              "sha256": "2edda7ecdce130a9abec474980591e3f06f52cee6e5a0d4c25fe62f2eda92751",
+              "bytes": 1272
+            },
+            "reset_state.npz": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_02\\reset_state.npz",
+              "sha256": "264666c82566f0253e919c36f7bf56516f22f28064efbfdc174e5cda27652a29",
+              "bytes": 2953,
+              "arrays": {
+                "vertices": [
+                  441,
+                  3
+                ],
+                "ee": [
+                  3
+                ],
+                "quaternion": [
+                  4
+                ],
+                "joints": [
+                  9
+                ]
+              }
+            },
+            "reset.png": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_02\\reset.png",
+              "sha256": "91ee3f033ab39de755a2e4120d4053ff04bcc7c724b6161fda310d7016153421",
+              "bytes": 65263,
+              "size": [
+                640,
+                480
+              ]
+            },
+            "cycle.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_02\\cycle.json",
+              "sha256": "808ed2522b645577ba1f75675a9dcc8fcee8c622b5f5117d865496556dea84c1",
+              "bytes": 12957
+            }
+          },
+          "missing": [],
+          "checks": {
+            "all_slots_released": true,
+            "not_holding": true,
+            "not_enabled": true,
+            "constraints_exist": true,
+            "paths_distinct_and_valid": true,
+            "fold_slot_label": "left_sleeve",
+            "cloth_shape": [
+              441,
+              3
+            ],
+            "cloth_xy_extent": [
+              0.40000033378601074,
+              0.3999999761581421
+            ],
+            "cloth_center_xy": [
+              4.696737665454975e-09,
+              -0.44999974966049194
+            ],
+            "cloth_z_p95": 0.009900019504129887,
+            "robot_joint_velocity_max": 0.0011882847175002098,
+            "finite": true
+          },
+          "rollout": "short",
+          "state_checks_passed": true
+        },
+        {
+          "cycle": 3,
+          "files": {
+            "reset.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_03\\reset.json",
+              "sha256": "2edda7ecdce130a9abec474980591e3f06f52cee6e5a0d4c25fe62f2eda92751",
+              "bytes": 1272
+            },
+            "reset_state.npz": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_03\\reset_state.npz",
+              "sha256": "264666c82566f0253e919c36f7bf56516f22f28064efbfdc174e5cda27652a29",
+              "bytes": 2953,
+              "arrays": {
+                "vertices": [
+                  441,
+                  3
+                ],
+                "ee": [
+                  3
+                ],
+                "quaternion": [
+                  4
+                ],
+                "joints": [
+                  9
+                ]
+              }
+            },
+            "reset.png": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_03\\reset.png",
+              "sha256": "7a1d8f9354edc1021802bb166f5479ba9a1c362c11bf8424629dead2d4b3e37c",
+              "bytes": 64725,
+              "size": [
+                640,
+                480
+              ]
+            },
+            "cycle.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_03\\cycle.json",
+              "sha256": "235242b17ff626f79c523a27005c5b1e5ede3d22db99964af120a60625e40155",
+              "bytes": 8454
+            }
+          },
+          "missing": [],
+          "checks": {
+            "all_slots_released": true,
+            "not_holding": true,
+            "not_enabled": true,
+            "constraints_exist": true,
+            "paths_distinct_and_valid": true,
+            "fold_slot_label": "left_sleeve",
+            "cloth_shape": [
+              441,
+              3
+            ],
+            "cloth_xy_extent": [
+              0.40000033378601074,
+              0.3999999761581421
+            ],
+            "cloth_center_xy": [
+              4.696737665454975e-09,
+              -0.44999974966049194
+            ],
+            "cloth_z_p95": 0.009900019504129887,
+            "robot_joint_velocity_max": 0.0011882847175002098,
+            "finite": true
+          },
+          "rollout": "short",
+          "state_checks_passed": true
+        },
+        {
+          "cycle": 4,
+          "files": {
+            "reset.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_04\\reset.json",
+              "sha256": "2edda7ecdce130a9abec474980591e3f06f52cee6e5a0d4c25fe62f2eda92751",
+              "bytes": 1272
+            },
+            "reset_state.npz": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_04\\reset_state.npz",
+              "sha256": "264666c82566f0253e919c36f7bf56516f22f28064efbfdc174e5cda27652a29",
+              "bytes": 2953,
+              "arrays": {
+                "vertices": [
+                  441,
+                  3
+                ],
+                "ee": [
+                  3
+                ],
+                "quaternion": [
+                  4
+                ],
+                "joints": [
+                  9
+                ]
+              }
+            },
+            "reset.png": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_04\\reset.png",
+              "sha256": "aa6b1389aafb07cb3b8f7b3803317fb70209e8677685c41ba8500da050599b98",
+              "bytes": 65036,
+              "size": [
+                640,
+                480
+              ]
+            },
+            "cycle.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_04\\cycle.json",
+              "sha256": "95be13c8698e6ff4ee3d7b37c6e2a34c1a1476a6082b3855f5fd2456a884dbcd",
+              "bytes": 8454
+            }
+          },
+          "missing": [],
+          "checks": {
+            "all_slots_released": true,
+            "not_holding": true,
+            "not_enabled": true,
+            "constraints_exist": true,
+            "paths_distinct_and_valid": true,
+            "fold_slot_label": "left_sleeve",
+            "cloth_shape": [
+              441,
+              3
+            ],
+            "cloth_xy_extent": [
+              0.40000033378601074,
+              0.3999999761581421
+            ],
+            "cloth_center_xy": [
+              4.696737665454975e-09,
+              -0.44999974966049194
+            ],
+            "cloth_z_p95": 0.009900019504129887,
+            "robot_joint_velocity_max": 0.0011882847175002098,
+            "finite": true
+          },
+          "rollout": "short",
+          "state_checks_passed": true
+        },
+        {
+          "cycle": 5,
+          "files": {
+            "reset.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_05\\reset.json",
+              "sha256": "2edda7ecdce130a9abec474980591e3f06f52cee6e5a0d4c25fe62f2eda92751",
+              "bytes": 1272
+            },
+            "reset_state.npz": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_05\\reset_state.npz",
+              "sha256": "264666c82566f0253e919c36f7bf56516f22f28064efbfdc174e5cda27652a29",
+              "bytes": 2953,
+              "arrays": {
+                "vertices": [
+                  441,
+                  3
+                ],
+                "ee": [
+                  3
+                ],
+                "quaternion": [
+                  4
+                ],
+                "joints": [
+                  9
+                ]
+              }
+            },
+            "reset.png": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_05\\reset.png",
+              "sha256": "cc1b602106cb94b78c02c588d16f8943a7f21b29ee645a4aec881975f8859531",
+              "bytes": 65004,
+              "size": [
+                640,
+                480
+              ]
+            },
+            "cycle.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_05\\cycle.json",
+              "sha256": "8fd915e2238e17d8266d021719383d590c277b8fdc4d31c872076c20e768dd01",
+              "bytes": 8454
+            }
+          },
+          "missing": [],
+          "checks": {
+            "all_slots_released": true,
+            "not_holding": true,
+            "not_enabled": true,
+            "constraints_exist": true,
+            "paths_distinct_and_valid": true,
+            "fold_slot_label": "left_sleeve",
+            "cloth_shape": [
+              441,
+              3
+            ],
+            "cloth_xy_extent": [
+              0.40000033378601074,
+              0.3999999761581421
+            ],
+            "cloth_center_xy": [
+              4.696737665454975e-09,
+              -0.44999974966049194
+            ],
+            "cloth_z_p95": 0.009900019504129887,
+            "robot_joint_velocity_max": 0.0011882847175002098,
+            "finite": true
+          },
+          "rollout": "short",
+          "state_checks_passed": true
+        },
+        {
+          "cycle": 6,
+          "files": {
+            "reset.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_06\\reset.json",
+              "sha256": "2edda7ecdce130a9abec474980591e3f06f52cee6e5a0d4c25fe62f2eda92751",
+              "bytes": 1272
+            },
+            "reset_state.npz": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_06\\reset_state.npz",
+              "sha256": "264666c82566f0253e919c36f7bf56516f22f28064efbfdc174e5cda27652a29",
+              "bytes": 2953,
+              "arrays": {
+                "vertices": [
+                  441,
+                  3
+                ],
+                "ee": [
+                  3
+                ],
+                "quaternion": [
+                  4
+                ],
+                "joints": [
+                  9
+                ]
+              }
+            },
+            "reset.png": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_06\\reset.png",
+              "sha256": "5d1b073e835d438febc12bf544dd90cdf382919366019bbc24318514ef611880",
+              "bytes": 65326,
+              "size": [
+                640,
+                480
+              ]
+            },
+            "cycle.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_06\\cycle.json",
+              "sha256": "58706d6efcd466130249c330e587364e1b6fc81257c52f29ee51c92f63e26c4c",
+              "bytes": 8454
+            }
+          },
+          "missing": [],
+          "checks": {
+            "all_slots_released": true,
+            "not_holding": true,
+            "not_enabled": true,
+            "constraints_exist": true,
+            "paths_distinct_and_valid": true,
+            "fold_slot_label": "left_sleeve",
+            "cloth_shape": [
+              441,
+              3
+            ],
+            "cloth_xy_extent": [
+              0.40000033378601074,
+              0.3999999761581421
+            ],
+            "cloth_center_xy": [
+              4.696737665454975e-09,
+              -0.44999974966049194
+            ],
+            "cloth_z_p95": 0.009900019504129887,
+            "robot_joint_velocity_max": 0.0011882847175002098,
+            "finite": true
+          },
+          "rollout": "short",
+          "state_checks_passed": true
+        },
+        {
+          "cycle": 7,
+          "files": {
+            "reset.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_07\\reset.json",
+              "sha256": "2edda7ecdce130a9abec474980591e3f06f52cee6e5a0d4c25fe62f2eda92751",
+              "bytes": 1272
+            },
+            "reset_state.npz": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_07\\reset_state.npz",
+              "sha256": "264666c82566f0253e919c36f7bf56516f22f28064efbfdc174e5cda27652a29",
+              "bytes": 2953,
+              "arrays": {
+                "vertices": [
+                  441,
+                  3
+                ],
+                "ee": [
+                  3
+                ],
+                "quaternion": [
+                  4
+                ],
+                "joints": [
+                  9
+                ]
+              }
+            },
+            "reset.png": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_07\\reset.png",
+              "sha256": "f9b96bfcbfcca62d4ec45eb13b01d9d738a3a2e461273ce17e4d53cfbd384ac0",
+              "bytes": 65075,
+              "size": [
+                640,
+                480
+              ]
+            },
+            "cycle.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_07\\cycle.json",
+              "sha256": "27968c0c9b91531deadbeacf2af4dac669fccbe456f88dffdeb68275600bc639",
+              "bytes": 8454
+            }
+          },
+          "missing": [],
+          "checks": {
+            "all_slots_released": true,
+            "not_holding": true,
+            "not_enabled": true,
+            "constraints_exist": true,
+            "paths_distinct_and_valid": true,
+            "fold_slot_label": "left_sleeve",
+            "cloth_shape": [
+              441,
+              3
+            ],
+            "cloth_xy_extent": [
+              0.40000033378601074,
+              0.3999999761581421
+            ],
+            "cloth_center_xy": [
+              4.696737665454975e-09,
+              -0.44999974966049194
+            ],
+            "cloth_z_p95": 0.009900019504129887,
+            "robot_joint_velocity_max": 0.0011882847175002098,
+            "finite": true
+          },
+          "rollout": "short",
+          "state_checks_passed": true
+        },
+        {
+          "cycle": 8,
+          "files": {
+            "reset.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_08\\reset.json",
+              "sha256": "2edda7ecdce130a9abec474980591e3f06f52cee6e5a0d4c25fe62f2eda92751",
+              "bytes": 1272
+            },
+            "reset_state.npz": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_08\\reset_state.npz",
+              "sha256": "264666c82566f0253e919c36f7bf56516f22f28064efbfdc174e5cda27652a29",
+              "bytes": 2953,
+              "arrays": {
+                "vertices": [
+                  441,
+                  3
+                ],
+                "ee": [
+                  3
+                ],
+                "quaternion": [
+                  4
+                ],
+                "joints": [
+                  9
+                ]
+              }
+            },
+            "reset.png": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_08\\reset.png",
+              "sha256": "5d433d857b3d23bcf8352c08b02bd9ab5c9b95b081110488d308df68e58661d9",
+              "bytes": 65171,
+              "size": [
+                640,
+                480
+              ]
+            },
+            "cycle.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_08\\cycle.json",
+              "sha256": "c85e663bbf2e1b3a3a1e63c3bba7c556a4fc98521aa0546da028d1343765be79",
+              "bytes": 8454
+            }
+          },
+          "missing": [],
+          "checks": {
+            "all_slots_released": true,
+            "not_holding": true,
+            "not_enabled": true,
+            "constraints_exist": true,
+            "paths_distinct_and_valid": true,
+            "fold_slot_label": "left_sleeve",
+            "cloth_shape": [
+              441,
+              3
+            ],
+            "cloth_xy_extent": [
+              0.40000033378601074,
+              0.3999999761581421
+            ],
+            "cloth_center_xy": [
+              4.696737665454975e-09,
+              -0.44999974966049194
+            ],
+            "cloth_z_p95": 0.009900019504129887,
+            "robot_joint_velocity_max": 0.0011882847175002098,
+            "finite": true
+          },
+          "rollout": "short",
+          "state_checks_passed": true
+        },
+        {
+          "cycle": 9,
+          "files": {
+            "reset.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_09\\reset.json",
+              "sha256": "2edda7ecdce130a9abec474980591e3f06f52cee6e5a0d4c25fe62f2eda92751",
+              "bytes": 1272
+            },
+            "reset_state.npz": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_09\\reset_state.npz",
+              "sha256": "264666c82566f0253e919c36f7bf56516f22f28064efbfdc174e5cda27652a29",
+              "bytes": 2953,
+              "arrays": {
+                "vertices": [
+                  441,
+                  3
+                ],
+                "ee": [
+                  3
+                ],
+                "quaternion": [
+                  4
+                ],
+                "joints": [
+                  9
+                ]
+              }
+            },
+            "reset.png": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_09\\reset.png",
+              "sha256": "20cfb5db0aad81b37cfed5ae7e8288e3de5164c43c91b7e918fb5643aac0db3f",
+              "bytes": 65339,
+              "size": [
+                640,
+                480
+              ]
+            },
+            "cycle.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_09\\cycle.json",
+              "sha256": "44b5d996f637f7d8ebb17cae7a57326787f541c9925d36feb9e184131f9292b4",
+              "bytes": 8454
+            }
+          },
+          "missing": [],
+          "checks": {
+            "all_slots_released": true,
+            "not_holding": true,
+            "not_enabled": true,
+            "constraints_exist": true,
+            "paths_distinct_and_valid": true,
+            "fold_slot_label": "left_sleeve",
+            "cloth_shape": [
+              441,
+              3
+            ],
+            "cloth_xy_extent": [
+              0.40000033378601074,
+              0.3999999761581421
+            ],
+            "cloth_center_xy": [
+              4.696737665454975e-09,
+              -0.44999974966049194
+            ],
+            "cloth_z_p95": 0.009900019504129887,
+            "robot_joint_velocity_max": 0.0011882847175002098,
+            "finite": true
+          },
+          "rollout": "short",
+          "state_checks_passed": true
+        },
+        {
+          "cycle": 10,
+          "files": {
+            "reset.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_10\\reset.json",
+              "sha256": "2edda7ecdce130a9abec474980591e3f06f52cee6e5a0d4c25fe62f2eda92751",
+              "bytes": 1272
+            },
+            "reset_state.npz": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_10\\reset_state.npz",
+              "sha256": "264666c82566f0253e919c36f7bf56516f22f28064efbfdc174e5cda27652a29",
+              "bytes": 2953,
+              "arrays": {
+                "vertices": [
+                  441,
+                  3
+                ],
+                "ee": [
+                  3
+                ],
+                "quaternion": [
+                  4
+                ],
+                "joints": [
+                  9
+                ]
+              }
+            },
+            "reset.png": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_10\\reset.png",
+              "sha256": "a9d4bdb02f2b161e782cf2a2b7294687048e2fe5bddb63b4fb18d4477d46aebf",
+              "bytes": 64957,
+              "size": [
+                640,
+                480
+              ]
+            },
+            "cycle.json": {
+              "path": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-prepared-square-backend-reset-20261101-080713-870146\\cycle_10\\cycle.json",
+              "sha256": "e43e5d8cc208587e308bcfd056cf37d0fbbb857dd7fbed1487b69d12fad4ae0b",
+              "bytes": 8455
+            }
+          },
+          "missing": [],
+          "checks": {
+            "all_slots_released": true,
+            "not_holding": true,
+            "not_enabled": true,
+            "constraints_exist": true,
+            "paths_distinct_and_valid": true,
+            "fold_slot_label": "left_sleeve",
+            "cloth_shape": [
+              441,
+              3
+            ],
+            "cloth_xy_extent": [
+              0.40000033378601074,
+              0.3999999761581421
+            ],
+            "cloth_center_xy": [
+              4.696737665454975e-09,
+              -0.44999974966049194
+            ],
+            "cloth_z_p95": 0.009900019504129887,
+            "robot_joint_velocity_max": 0.0011882847175002098,
+            "finite": true
+          },
+          "rollout": "short",
+          "state_checks_passed": true
+        }
+      ],
+      "scope": "development lifecycle evidence; not ten complete folds or formal successes"
+    }
+  ],
+  "totals": {
+    "registered": 30,
+    "images_available": 30,
+    "complete_bundles": 2
+  },
+  "formal_successes_added": 0,
+  "simulation_started": false
+}

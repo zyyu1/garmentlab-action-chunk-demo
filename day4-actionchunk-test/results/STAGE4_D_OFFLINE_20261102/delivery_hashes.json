@@ -1,0 +1,26 @@
+{
+  "run-stage4-formal-batch.sh": {
+    "raw_sha256": "25347b712a0c54c27ae8cfda095499acbe36cee24599b8b1ac94059b52533a2d",
+    "lf_sha256": "25347b712a0c54c27ae8cfda095499acbe36cee24599b8b1ac94059b52533a2d"
+  },
+  "stage4_batch_preflight.py": {
+    "raw_sha256": "4a3111f5685247f1457fe7bdc31b5c3fb741245f84dbfdac3b78958ffa447fdd",
+    "lf_sha256": "d7a9b52e01780b26d7e61c17784cf6a3595afad210a478bc8620b80861166b44"
+  },
+  "stage4_formal_report.py": {
+    "raw_sha256": "788d65a4fbc9122fc2fac83df3ccc5aa84c1211259c01697f2bf0f2f3a06ea4e",
+    "lf_sha256": "788d65a4fbc9122fc2fac83df3ccc5aa84c1211259c01697f2bf0f2f3a06ea4e"
+  },
+  "stage4_acceptance_index.py": {
+    "raw_sha256": "e89769dbd15ace34611821e7ea0e30e30ce39f363dbb06e8697927680ca804d9",
+    "lf_sha256": "e89769dbd15ace34611821e7ea0e30e30ce39f363dbb06e8697927680ca804d9"
+  },
+  "test_stage4_batch_preflight.py": {
+    "raw_sha256": "e3ba0b77230a347a3a35faafe79f08ea662cd7155274c6f7c1e7f7d26dbbb152",
+    "lf_sha256": "f6e9aa77ee3fd66885f23644d158b2a96e10b8328ac9637398bdf1b7fe8aa559"
+  },
+  "test_stage4_formal_report.py": {
+    "raw_sha256": "7183535d6f09e88b1e2f07fbdf486b513b0e8d18b5555f113fcd0264eb1f8da1",
+    "lf_sha256": "7183535d6f09e88b1e2f07fbdf486b513b0e8d18b5555f113fcd0264eb1f8da1"
+  }
+}

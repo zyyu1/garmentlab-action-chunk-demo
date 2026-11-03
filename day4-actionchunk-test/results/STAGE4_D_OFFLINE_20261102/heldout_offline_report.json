@@ -1,0 +1,825 @@
+{
+ "rows": [],
+ "summary": [
+  {
+   "level": "flat",
+   "execution": "single",
+   "attempts": 0,
+   "passed": 0,
+   "development_passed": 0,
+   "rejected": 0,
+   "error": 0,
+   "rejection_rate": null,
+   "seeds": 0,
+   "duplicate_attempts": [],
+   "non_frozen_code": [],
+   "formal_success": 0,
+   "formal_evaluated": 0,
+   "formal_success_rate": null
+  },
+  {
+   "level": "flat",
+   "execution": "arc4",
+   "attempts": 0,
+   "passed": 0,
+   "development_passed": 0,
+   "rejected": 0,
+   "error": 0,
+   "rejection_rate": null,
+   "seeds": 0,
+   "duplicate_attempts": [],
+   "non_frozen_code": [],
+   "formal_success": 0,
+   "formal_evaluated": 0,
+   "formal_success_rate": null
+  },
+  {
+   "level": "flat",
+   "execution": "both",
+   "attempts": 0,
+   "passed": 0,
+   "development_passed": 0,
+   "rejected": 0,
+   "error": 0,
+   "rejection_rate": null,
+   "seeds": 0,
+   "duplicate_attempts": [],
+   "non_frozen_code": [],
+   "formal_success": 0,
+   "formal_evaluated": 0,
+   "formal_success_rate": null
+  },
+  {
+   "level": "perturbed",
+   "execution": "single",
+   "attempts": 0,
+   "passed": 0,
+   "development_passed": 0,
+   "rejected": 0,
+   "error": 0,
+   "rejection_rate": null,
+   "seeds": 0,
+   "duplicate_attempts": [],
+   "non_frozen_code": [],
+   "formal_success": 0,
+   "formal_evaluated": 0,
+   "formal_success_rate": null
+  },
+  {
+   "level": "perturbed",
+   "execution": "arc4",
+   "attempts": 0,
+   "passed": 0,
+   "development_passed": 0,
+   "rejected": 0,
+   "error": 0,
+   "rejection_rate": null,
+   "seeds": 0,
+   "duplicate_attempts": [],
+   "non_frozen_code": [],
+   "formal_success": 0,
+   "formal_evaluated": 0,
+   "formal_success_rate": null
+  },
+  {
+   "level": "perturbed",
+   "execution": "both",
+   "attempts": 0,
+   "passed": 0,
+   "development_passed": 0,
+   "rejected": 0,
+   "error": 0,
+   "rejection_rate": null,
+   "seeds": 0,
+   "duplicate_attempts": [],
+   "non_frozen_code": [],
+   "formal_success": 0,
+   "formal_evaluated": 0,
+   "formal_success_rate": null
+  },
+  {
+   "level": "crumpled",
+   "execution": "single",
+   "attempts": 0,
+   "passed": 0,
+   "development_passed": 0,
+   "rejected": 0,
+   "error": 0,
+   "rejection_rate": null,
+   "seeds": 0,
+   "duplicate_attempts": [],
+   "non_frozen_code": [],
+   "formal_success": 0,
+   "formal_evaluated": 0,
+   "formal_success_rate": null
+  },
+  {
+   "level": "crumpled",
+   "execution": "arc4",
+   "attempts": 0,
+   "passed": 0,
+   "development_passed": 0,
+   "rejected": 0,
+   "error": 0,
+   "rejection_rate": null,
+   "seeds": 0,
+   "duplicate_attempts": [],
+   "non_frozen_code": [],
+   "formal_success": 0,
+   "formal_evaluated": 0,
+   "formal_success_rate": null
+  },
+  {
+   "level": "crumpled",
+   "execution": "both",
+   "attempts": 0,
+   "passed": 0,
+   "development_passed": 0,
+   "rejected": 0,
+   "error": 0,
+   "rejection_rate": null,
+   "seeds": 0,
+   "duplicate_attempts": [],
+   "non_frozen_code": [],
+   "formal_success": 0,
+   "formal_evaluated": 0,
+   "formal_success_rate": null
+  }
+ ],
+ "tasks": {
+  "A_l1": {
+   "level": "flat",
+   "execution": "both",
+   "attempts": 0,
+   "passed": 0,
+   "development_passed": 0,
+   "rejected": 0,
+   "error": 0,
+   "rejection_rate": null,
+   "seeds": 0,
+   "duplicate_attempts": [],
+   "non_frozen_code": [],
+   "formal_success": 0,
+   "formal_evaluated": 0,
+   "formal_success_rate": null
+  },
+  "B_l2l3": {
+   "level": "l2l3",
+   "execution": "both",
+   "attempts": 0,
+   "passed": 0,
+   "development_passed": 0,
+   "rejected": 0,
+   "error": 0,
+   "rejection_rate": null,
+   "seeds": 0,
+   "duplicate_attempts": [],
+   "non_frozen_code": [],
+   "formal_success": 0,
+   "formal_evaluated": 0,
+   "formal_success_rate": null,
+   "split": {
+    "perturbed": {
+     "level": "perturbed",
+     "execution": "both",
+     "attempts": 0,
+     "passed": 0,
+     "development_passed": 0,
+     "rejected": 0,
+     "error": 0,
+     "rejection_rate": null,
+     "seeds": 0,
+     "duplicate_attempts": [],
+     "non_frozen_code": [],
+     "formal_success": 0,
+     "formal_evaluated": 0,
+     "formal_success_rate": null
+    },
+    "crumpled": {
+     "level": "crumpled",
+     "execution": "both",
+     "attempts": 0,
+     "passed": 0,
+     "development_passed": 0,
+     "rejected": 0,
+     "error": 0,
+     "rejection_rate": null,
+     "seeds": 0,
+     "duplicate_attempts": [],
+     "non_frozen_code": [],
+     "formal_success": 0,
+     "formal_evaluated": 0,
+     "formal_success_rate": null
+    }
+   }
+  }
+ },
+ "missing": [],
+ "skipped": [],
+ "logged_attempts": 0,
+ "planned_attempts": 120,
+ "not_attempted": [
+  {
+   "level": "crumpled",
+   "seed": 4310,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4310,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4311,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4311,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4312,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4312,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4313,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4313,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4314,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4314,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4315,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4315,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4316,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4316,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4317,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4317,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4318,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4318,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4319,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4319,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4320,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4320,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4321,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4321,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4322,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4322,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4323,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4323,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4324,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4324,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4325,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4325,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4326,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4326,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4327,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4327,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4328,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4328,
+   "execution": "arc4"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4329,
+   "execution": "single"
+  },
+  {
+   "level": "crumpled",
+   "seed": 4329,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4110,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4110,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4111,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4111,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4112,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4112,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4113,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4113,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4114,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4114,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4115,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4115,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4116,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4116,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4117,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4117,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4118,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4118,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4119,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4119,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4120,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4120,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4121,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4121,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4122,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4122,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4123,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4123,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4124,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4124,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4125,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4125,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4126,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4126,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4127,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4127,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4128,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4128,
+   "execution": "arc4"
+  },
+  {
+   "level": "flat",
+   "seed": 4129,
+   "execution": "single"
+  },
+  {
+   "level": "flat",
+   "seed": 4129,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4210,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4210,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4211,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4211,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4212,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4212,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4213,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4213,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4214,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4214,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4215,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4215,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4216,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4216,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4217,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4217,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4218,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4218,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4219,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4219,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4220,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4220,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4221,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4221,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4222,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4222,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4223,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4223,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4224,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4224,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4225,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4225,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4226,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4226,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4227,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4227,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4228,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4228,
+   "execution": "arc4"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4229,
+   "execution": "single"
+  },
+  {
+   "level": "perturbed",
+   "seed": 4229,
+   "execution": "arc4"
+  }
+ ],
+ "formal_status": "pending_independent_frozen_evaluator_audit",
+ "denominator_complete": false
+}
