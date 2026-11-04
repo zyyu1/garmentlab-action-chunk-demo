@@ -1,0 +1,13 @@
+﻿{
+    "listing":  "remote_hashes.txt",
+    "verified":  true,
+    "method":  "remote find -exec sha256sum over 7 result dirs + batch ledger + frames; local sha256 of every file",
+    "hash_mismatch":  0,
+    "local_files":  807,
+    "scope":  "rc8 remote -\u003e local full-directory verification",
+    "remote_files":  807,
+    "missing":  0,
+    "separate_download":  [
+                              "rc8-verify-dev.log"
+                          ]
+}

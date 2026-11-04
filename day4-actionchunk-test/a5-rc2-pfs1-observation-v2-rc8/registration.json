@@ -1,0 +1,331 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "final-candidate-rc8-task-scoped",
+  "stage": "rc8_batch_complete_passed",
+  "created_utc": "2026-11-04T15:20:00Z",
+  "status": "Seven-case task-scoped RC passed: all six positive cases accepted, 4201 is a valid rejection, all evidence complete, all three single/arc4 pairs have 0.0 target drift, local recompute matches and original verify-dev passes. Freeze materials prepared; explicit freeze, held-out and formal batch are not executed in this round; formal Stage 4 success remains 0.",
+  "final_candidate": true,
+  "parent": "a5-rc2-pfs1-observation-v2-rc7",
+  "parent_manifest_sha256": "bcba8c11b5c65b179227a01feef343b3d90be415776f216d8aefb1424ed18a2a",
+  "base_manifest_sha256": "d97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f",
+  "preserved_results": [
+    "rc7 seven-case batch (4 accepted / 3 evidence-complete rejections; not released)",
+    "4202/4302 singles and RC2 baselines"
+  ],
+  "physics_scope": {
+    "decision": "task_scoped",
+    "routing_key": "task identity (flat / perturbed / crumpled); seed, mode and result excluded",
+    "tasks": {
+      "flat": {
+        "particle_friction_scale": 0.0,
+        "friction": 0.3
+      },
+      "perturbed": {
+        "particle_friction_scale": 1.0,
+        "friction": 0.3
+      },
+      "crumpled": {
+        "particle_friction_scale": 1.0,
+        "friction": 0.3
+      }
+    },
+    "set_at": "material construction, before reset and any physics step",
+    "same_task_single_arc4_identical": true,
+    "uniform_physics_claim": false,
+    "reporting_requirement": "results are reported per task; not a uniform-physics initial-state difficulty comparison",
+    "changed_simulation_sources": [
+      "a5_l1.py: 1.0 -> 0.0 plus expected_scale=0.0 readbacks",
+      "pfs1_observation_v2.py: expected particleFrictionScale parameterised per task"
+    ],
+    "unchanged_simulation_sources": [
+      "a5_recovery.py",
+      "a5_capture.py",
+      "a5_entry.py",
+      "stage4_success_v1.py"
+    ],
+    "thresholds": {
+      "centroid_limit_mm": 1.0,
+      "vertex_p95_limit_mm": 3.0
+    },
+    "evaluator": "stage4_success_v1 unchanged"
+  },
+  "material_readback": {
+    "stages": [
+      "after_construction",
+      "after_reset",
+      "after_initial_settle",
+      "after_recovery",
+      "pre_release"
+    ],
+    "task_expected": {
+      "flat": 0.0,
+      "perturbed": 1.0,
+      "crumpled": 1.0
+    },
+    "l1_stages": [
+      "after_construction",
+      "after_reset",
+      "after_initial_settle",
+      "pre_release"
+    ],
+    "enforced": "mismatch stops before release",
+    "solver_effective": "unverified; scene/USD readback only"
+  },
+  "initial_generation_protocol": {
+    "rule": "future formal initial generation, reset and rollout must use the same per-task scale",
+    "this_round": "registered dev initials reused, not regenerated",
+    "recorded_mismatch": "L2/L3 dev initials were settled at 0.0 while their rollouts use 1.0; inherited, unchanged"
+  },
+  "matrix": [
+    {
+      "slot": 1,
+      "seed": 4100,
+      "level": "flat",
+      "task": "A_l1_overfold",
+      "mode": "single",
+      "actions": 7,
+      "positive": true
+    },
+    {
+      "slot": 2,
+      "seed": 4100,
+      "level": "flat",
+      "task": "A_l1_overfold",
+      "mode": "arc4",
+      "actions": 7,
+      "positive": true
+    },
+    {
+      "slot": 3,
+      "seed": 4202,
+      "level": "perturbed",
+      "task": "B_nominal",
+      "mode": "single",
+      "actions": 12,
+      "positive": true
+    },
+    {
+      "slot": 4,
+      "seed": 4202,
+      "level": "perturbed",
+      "task": "B_nominal",
+      "mode": "arc4",
+      "actions": 12,
+      "positive": true
+    },
+    {
+      "slot": 5,
+      "seed": 4302,
+      "level": "crumpled",
+      "task": "B_nominal",
+      "mode": "single",
+      "actions": 12,
+      "positive": true
+    },
+    {
+      "slot": 6,
+      "seed": 4302,
+      "level": "crumpled",
+      "task": "B_nominal",
+      "mode": "arc4",
+      "actions": 12,
+      "positive": true
+    },
+    {
+      "slot": 7,
+      "seed": 4201,
+      "level": "perturbed",
+      "task": "B_nominal_history_failure",
+      "mode": "single",
+      "actions": 12,
+      "positive": false
+    }
+  ],
+  "initial": {
+    "regenerated": false,
+    "4100": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-20261031-094446-203825",
+      "result.json": "31d8d47f4e18f6f9c8e96b0e3a3f0237ac87786978a343548cefddf1a7e567d8",
+      "initial_geometry.npz": "dd5783038cd7ae95c17525574ca9c76d0df2399261a6df6a0c8f09a5b351bcb3"
+    },
+    "4201": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-060526-426086",
+      "result.json": "3ac6f8a3a3675230b8d3742251c49a171770194f3611415a7a8c371ea86cc01b",
+      "initial_geometry.npz": "40bfeb51a04a30c7511cd65c4a849db5adc2660e2cf967f2d62da99109448d68"
+    },
+    "4202": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560",
+      "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+      "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+    },
+    "4302": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-094143-137994",
+      "result.json": "1bed437fdc5b01dd4dc55acc45be1d797d3cccfa2f4b855c5e0b44cd6e39840e",
+      "initial_geometry.npz": "1c27514f2ba95a3e276b01bf9f40ee30acf77600837908322864fdb57be97b32"
+    }
+  },
+  "identity": {
+    "candidate_manifest_sha256": "6893001070f6bfc24307927cafe95bb83001524edcb35804a4aaf57479f457aa",
+    "deployment_manifest_sha256": "6893001070f6bfc24307927cafe95bb83001524edcb35804a4aaf57479f457aa",
+    "candidate_manifest_entries": 63,
+    "changed_entries_vs_v2": [
+      "a5_l1.py",
+      "pfs1_observation_v2.py",
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "unchanged_entries_vs_v2": 59,
+    "a5_l1_sha256": "7cbdc1e4e10a663e9b6f25b8361945a2f6d08305d736c59b3b365557845eea8e",
+    "pfs1_observation_v2_sha256": "b0d6c6d4b1fd1940a0111eab70c5b02a99f4692afae8a2c012f731735c2b5caf",
+    "config_sha256": "1a02db291bbbc3904643228fb75f2baaa04957f55f6ad4eb4fe7b5248a7f6a50",
+    "runner_sha256": "bec54ade5e8fea422b549b2f5c3ccb05079a108a7c921c866dfe3c81117113d5",
+    "static_audit_sha256": "4f0bf0f1d8e5f0e957c753bac33d3fd3d36797f59f2c56bd4f31700f9b673d5c",
+    "source_diff_sha256": "26f9249ff8fc8db5e7fa1a47ce81f9a764f2c20d4a1fbaf74b368afd3962bf7a"
+  },
+  "verification": {
+    "candidate_manifest": "63/63 (local)",
+    "parent_manifest": "d97bf349... (v2) and bcba8c11... (rc7)",
+    "unchanged_entries_vs_v2": 59,
+    "changed_entries_vs_v2": 4,
+    "py_compile": true,
+    "bash_syntax_pending": true,
+    "preflight_remote": "RC8_PREFLIGHT_OK 63 68930010... cases 7",
+    "download_verified": "807/807 remote-local SHA256 match",
+    "verify_dev": "PASSED: A5_DEV_VERIFIED 7, exit 0",
+    "pairs": "4100 0.0, 4202 0.0, 4302 0.0 m",
+    "local_recompute": "7/7 status and stability identical",
+    "video_review": "passed: arm clear of cloth at end; L1 flap on table; 4201 slides"
+  },
+  "run": {
+    "batch_dir": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc8-runs",
+    "journal": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc8-runs/journal",
+    "attempts": {
+      "started": 7,
+      "finished": 7,
+      "total_lines": 14
+    },
+    "accepted": 6,
+    "rejected_complete": 1,
+    "all_six_positives_accepted": true,
+    "pairs_pass": true,
+    "cases": [
+      {
+        "slot": 1,
+        "seed": 4100,
+        "mode": "single",
+        "quality": "accepted",
+        "centroid_mm": 0.143531,
+        "p95_mm": 0.2072,
+        "task_expected_scale": 0.0,
+        "run": "day4-a5-rc2-l1-20261104-232119-752070"
+      },
+      {
+        "slot": 2,
+        "seed": 4100,
+        "mode": "arc4",
+        "quality": "accepted",
+        "centroid_mm": 0.143531,
+        "p95_mm": 0.2072,
+        "task_expected_scale": 0.0,
+        "run": "day4-a5-rc2-l1-20261104-233552-117153"
+      },
+      {
+        "slot": 3,
+        "seed": 4202,
+        "mode": "single",
+        "quality": "accepted",
+        "centroid_mm": 0.264171,
+        "p95_mm": 0.379168,
+        "task_expected_scale": 1.0,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261104-234933-939207"
+      },
+      {
+        "slot": 4,
+        "seed": 4202,
+        "mode": "arc4",
+        "quality": "accepted",
+        "centroid_mm": 0.264171,
+        "p95_mm": 0.379168,
+        "task_expected_scale": 1.0,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261105-000702-532436"
+      },
+      {
+        "slot": 5,
+        "seed": 4302,
+        "mode": "single",
+        "quality": "accepted",
+        "centroid_mm": 0.239004,
+        "p95_mm": 0.352353,
+        "task_expected_scale": 1.0,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261105-002359-645065"
+      },
+      {
+        "slot": 6,
+        "seed": 4302,
+        "mode": "arc4",
+        "quality": "accepted",
+        "centroid_mm": 0.239004,
+        "p95_mm": 0.352353,
+        "task_expected_scale": 1.0,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261105-004356-929618"
+      },
+      {
+        "slot": 7,
+        "seed": 4201,
+        "mode": "single",
+        "quality": "rejected",
+        "centroid_mm": 0.940927,
+        "p95_mm": 2.807293,
+        "task_expected_scale": 1.0,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261105-010307-127409"
+      }
+    ],
+    "verify_dev": {
+      "status": "passed",
+      "exit_code": 0,
+      "output": "A5_DEV_VERIFIED 7",
+      "log": "results/RC8_SEVEN_CASE_20261104/rc8-verify-dev.log"
+    },
+    "download_verified": "807/807 files",
+    "review": "results/RC8_SEVEN_CASE_20261104/review.md",
+    "freeze_materials": "results/RC8_SEVEN_CASE_20261104/FREEZE_DOSSIER.md"
+  },
+  "run_status": "batch_complete_passed_freeze_blocked",
+  "formal_stage4_success": 0,
+  "next_gate": "Freeze is blocked on the formal initial-generation entry. Fix it in a new candidate (rc8b), re-run the seven-case RC and re-freeze; do not start held-out or the formal batch before that. Formal Stage 4 success remains 0.",
+  "notes": [
+    "Task protocol registered before the run: flat 0.0, perturbed/crumpled 1.0; no seed/mode/result routing.",
+    "rc7 is retained as a failed candidate and its results are excluded from this matrix.",
+    "The rc7 operator-terminated startup record remains in the run history and is not part of any quality denominator.",
+    "Results are reported per task; this is not a uniform-physics difficulty comparison.",
+    "Batch completed with 6 accepted and 1 valid rejection; no auto retry.",
+    "L1 under task-scoped 0.0 reproduces the RC2 4100 numbers exactly (0.1435/0.2072 mm), consistent with the rc7 L1 failure being caused by the uniform 1.0 setting.",
+    "Freeze materials prepared; explicit freeze, held-out and formal batch were not executed.",
+    "Freeze precheck: identity passed; formal L2/L3 initial generation still 0.0 -> freeze not executed, no receipts written."
+  ],
+  "freeze": {
+    "status": "blocked",
+    "checked_utc": "2026-11-05T18:30:00Z",
+    "identity_checks": "pass",
+    "formal_entry_checks": "fail_initial_generation_scale",
+    "identity_detail": {
+      "manifest_sha256": "6893001070f6bfc24307927cafe95bb83001524edcb35804a4aaf57479f457aa",
+      "manifest_entries": 63,
+      "manifest_bad": [],
+      "remote_manifest_match": true,
+      "freeze_manifest_hashes_match": true,
+      "per_case_evidence_hashes_match": 7,
+      "ledger_lines": 14,
+      "ledger_started": 7,
+      "ledger_finished": 7,
+      "unfinished_attempts": [],
+      "existing_receipts": false
+    },
+    "blocking_finding": "Formal L2/L3 initial-state generation still forces particleFrictionScale=0.0 (day4-square-initial-stripfold.py:196, asserted at 261-262) and run-stage4-formal-batch.sh:73 uses that script for non-flat levels; stage4_batch_preflight.initial() does not check the material scale. The task protocol requires 1.0 for perturbed/crumpled initial generation.",
+    "receipts_written": false,
+    "freeze_executed": false,
+    "hashes_modified": false,
+    "remediation": "Recommended rc8b: set/assert 1.0 for L2/L3 in day4-square-initial-stripfold.py, update square-initial-stripfold-files.json, new manifest, re-run the seven-case RC (about 2 h) and re-freeze. Alternatives (explicit protocol exception or external pre-generation) are not recommended; see results/RC8_SEVEN_CASE_20261104/FREEZE_PRECHECK.md.",
+    "precheck_report": "results/RC8_SEVEN_CASE_20261104/FREEZE_PRECHECK.md"
+  }
+}

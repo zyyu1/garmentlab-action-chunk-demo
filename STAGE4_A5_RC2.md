@@ -93,3 +93,27 @@ RC2 基线、七例索引、独立诊断批次登记、事件分段和曲线见 
 单次 4202 复验 `day4-a5-rc2-pfs1-observation-v2-20261104-111514-134428`：`file_complete=true`、`observation_semantics_valid=true`、质量 **accepted**、`overall_valid=true`；formal 质心 **0.2642 mm**、P95 **0.3792 mm**；动作 target、recovery/pre-release 状态、formal 指标与 pfs1 **0 差**。材料五阶段 friction .3 / particleFrictionScale 1.0 / binding `/World/Garment/particleMaterial` / self/non-particle true；solver-effective 仍标 unverified；FD 484 有效区间、1 首帧无效；raw readback unvalidated。
 
 **判定：** 观测修订通过，但只是观测-only 复验，不增加新的物理改善，也不是正式 Stage 4 成功。**尚未运行 4302 single**；先审查 v2；正式成功仍为 0；不宣称地面摩擦已修复；cloth-ground 力/冲量不是新增门槛。详见 [v2 对照](day4-actionchunk-test/results/D2_E_PFS1_V2_COMPARE_20261104/review.md)。
+
+## 2026-11-04 a5-rc2-pfs1-observation-v2-4302：4302 single 单次扩展通过
+
+[a5-rc2-pfs1-observation-v2-4302](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-4302/README.md) 固定 v2 候选，只把登记范围扩到 4302 single：63 项 manifest 中 61 项与 v2 逐字节相同，仅登记 JSON 与 runner 变化（manifest `6d1958f5…`、config `577931aa…`、runner `550efa65…`）；新锁 `a5-rc2-pfs1-observation-v2-4302-runs`，4202 结果与 v2 标记保留。4302 初态 `day4-square-initial-stripfold-20261103-094143-137994`（`1bed437f…` / `1c27514f…`）；预检 63/63。
+
+单次运行 `day4-a5-rc2-pfs1-observation-v2-20261104-201557-235290`（tmux，无重试，下载 104/104 哈希一致）：`file_complete=true`、`observation_semantics_valid=true`、质量 **accepted**、`overall_valid=true`；`geometry_entire_window/stable/held/released_continuously` 全 true；正式 210–330 质心 **0.2390 mm**、P95 **0.3524 mm**（RC2 4302 single 1.9102 / 4.1231）。释放后 0.5 s 15.70/12.40 mm/s；1.5–8.0 s 0.372/0.659 mm/s、0.092°/s；z_min 9.867 mm；粘滞检查通过；材料 live 读回 0.3/1.0。
+
+**边界：** recovery 末态相对 RC2 平移 10.27 mm，fold 目标由未改 expert 重算（差 7.7–8.0 mm、yaw −3.28°），因此是端到端对比；两次 dev 单例（4202/4302）均通过不等于跨 seed 统计或机制确认。正式 Stage 4 成功仍为 **0**；不跑七例/不冻结/不跑 held-out。详见 [4302 对照](day4-actionchunk-test/results/PFS1_V2_EXT_4302_20261104/review.md)。
+
+## 2026-11-04 rc7 七例 RC：4/6 阳性通过，L1 回归失败
+
+[rc7](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc7/README.md) 把 4202/4302 单例的物理/控制固定为一个候选并把 L1 接入 v2 观测；**uniform particleFrictionScale=1.0（含 L1）**；manifest `bcba8c11…`（63 项，60 项与 v2 逐字节相同）、新批次账本、七槽顺序每槽一次。
+
+结果：4100 s/a **rejected**（0.7031/1.7764 mm；`free_edge_overrun` 15.4 < 20 mm、`free_edge_height_p90` 24.4 > 15 mm、`vertex_speed_max` 64.6 > 50 mm/s；RC2 pfs=0 为 40.7/10.1/16.5）；4202 s/a **accepted**（0.2642/0.3792）；4302 s/a **accepted**（0.2390/0.3524）；4201 single **rejected 有效**（0.9409/2.8073；几何全过，速度 P95 20.3 > 10 mm/s）。三组配对 target 差 **0.0**；7/7 证据完整、765/765 下载哈希一致；原版 `verify-dev` **失败**于 4100。
+
+**判定：不冻结、不释放**（六阳性未全过 + verify-dev 失败）。下一版本建议 task-scoped 物理配置（L1=0.0、L2/L3=1.0）并重跑七例；本轮结果保留、不并入新矩阵。正式成功仍为 0。详见 [rc7 审查](day4-actionchunk-test/results/RC7_SEVEN_CASE_20261104/review.md)。
+
+## 2026-11-05 rc8 task-scoped 七例 RC：通过
+
+[rc8](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc8/README.md) 按任务固定物理：L1 flat **0.0**、L2/L3 **1.0**，在材料构造时设置、早于 reset/物理步；materials 读回按任务核对（0.0 / 1.0）。manifest `68930010…`（63 项，59 项与 v2 逐字节相同）、新账本；七槽顺序、每槽一次、无重试。
+
+结果：4100 s/a **accepted**（0.1435/0.2072 mm，与 RC2 pfs=0 逐值相同）；4202 s/a **accepted**（0.2642/0.3792）；4302 s/a **accepted**（0.2390/0.3524）；4201 single **rejected 有效**（0.9409/2.8073；几何全过，速度 P95 20.3 > 10 mm/s）。六阳性全部接受；三组配对 target 差 **0.0**；7/7 证据完整；807/807 下载哈希一致；本地 evaluator 重算 7/7 一致；视频审查通过；原版 `verify-dev` **通过**（`A5_DEV_VERIFIED 7`，exit 0）。
+
+**判定：通过本轮 task-scoped RC**；冻结材料已整理（[FREEZE_DOSSIER](day4-actionchunk-test/results/RC8_SEVEN_CASE_20261104/FREEZE_DOSSIER.md)）。本轮**未执行**显式 freeze、held-out、正式批次；正式成功仍为 **0**；结果按任务报告，不是统一物理条件下的难度比较。详见 [rc8 审查](day4-actionchunk-test/results/RC8_SEVEN_CASE_20261104/review.md)。

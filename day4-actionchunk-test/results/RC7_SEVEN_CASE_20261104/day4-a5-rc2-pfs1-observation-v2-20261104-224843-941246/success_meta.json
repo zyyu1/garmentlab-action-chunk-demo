@@ -1,0 +1,32 @@
+{
+  "protocol": "stage4-a5-rc2",
+  "task": "B_nominal",
+  "seed": 4201,
+  "level": "perturbed",
+  "edge": "right",
+  "execution_mode": "single",
+  "width_m": 0.2,
+  "overhang_m": 0.0,
+  "floor_z_m": 0.0,
+  "action_count": 12,
+  "recovery_count": 1,
+  "held_check": {
+    "position_error_m": 0.01487224982898769,
+    "arm_speed_rad_s": 0.0010938207851722836,
+    "anchor_gap_max_m": 0.002147526614286568,
+    "orientation_reached": true,
+    "accepted": true
+  },
+  "errors": [],
+  "initial_hashes": {
+    "result.json": "3ac6f8a3a3675230b8d3742251c49a171770194f3611415a7a8c371ea86cc01b",
+    "initial_geometry.npz": "40bfeb51a04a30c7511cd65c4a849db5adc2660e2cf967f2d62da99109448d68"
+  },
+  "manifest_sha256": "bcba8c11b5c65b179227a01feef343b3d90be415776f216d8aefb1424ed18a2a",
+  "absolute_step": 2373,
+  "sim_time_s": 39.55000206269324,
+  "dt_s": 0.016666666666666666,
+  "pick_index": 230,
+  "yaw_rad": 0.16343367103098977,
+  "upward_displacement_m": 0.1460205516220511
+}

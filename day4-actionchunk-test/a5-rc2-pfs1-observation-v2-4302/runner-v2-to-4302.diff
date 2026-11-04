@@ -1,0 +1,258 @@
+--- a5-rc2-pfs1-observation-v2/app/run-a5-rc2-pfs1-observation-v2.sh
++++ a5-rc2-pfs1-observation-v2-4302/app/run-a5-rc2-pfs1-observation-v2.sh
+@@ -1,32 +1,34 @@
+ #!/usr/bin/env bash
+-# a5-rc2-pfs1-observation-v2: one registered 4202 single observation revalidation.
+-# Physics/control are inherited unchanged from a5-rc2-pfs1.  This runner uses a
+-# NEW manifest and a NEW one-shot lock; it does not reuse the pfs1 marker.
++# a5-rc2-pfs1-observation-v2 extension: one registered 4302 single run.
++# Physics, control, sampling, evaluator and observation code are byte-identical
++# to a5-rc2-pfs1-observation-v2 (61/63 manifest entries unchanged; only the
++# registration JSON and this orchestration script differ).  This runner uses a
++# NEW manifest and a NEW one-shot lock; it does not reuse the v2 or pfs1 marker.
+ # There is no retry loop.  A completed marker blocks a second attempt unless
+-# PFS1_OBS_V2_ALLOW_RERUN=1 is set explicitly after review.
++# PFS1_V2_EXT_ALLOW_RERUN=1 is set explicitly after review.
+ set -euo pipefail
+ 
+-app_dir=/root/autodl-tmp/a5-rc2-pfs1-observation-v2/app
++app_dir=/root/autodl-tmp/a5-rc2-pfs1-observation-v2-4302/app
+ cd "$app_dir"
+ python_bin=/root/autodl-tmp/envs/isaac40/bin/python
+-seed=${1:-4202}
++seed=${1:-4302}
+ mode=${2:-single}
+ version=a5-rc2-pfs1-observation-v2
+-manifest_name=a5-rc2-pfs1-observation-v2-files.json
++manifest_name=a5-rc2-pfs1-observation-v2-4302-files.json
+ config_name=a5-rc2-pfs1-observation-v2.json
+ 
+-if [ "$seed" != "4202" ] || [ "$mode" != "single" ]; then
+-  echo "PFS1_V2_SCOPE_ERROR only 4202 single is registered; got seed=${seed} mode=${mode}" >&2
++if [ "$seed" != "4302" ] || [ "$mode" != "single" ]; then
++  echo "PFS1_V2_EXT_SCOPE_ERROR only 4302 single is registered in this extension; got seed=${seed} mode=${mode}" >&2
+   exit 2
+ fi
+ 
+-runs=/root/autodl-tmp/a5-rc2-pfs1-observation-v2-runs
++runs=/root/autodl-tmp/a5-rc2-pfs1-observation-v2-4302-runs
+ mkdir -p "$runs"
+-if [ "${PFS1_OBS_V2_ALLOW_RERUN:-0}" != "1" ] && [ -e "$runs/completed" ]; then
+-  echo "PFS1_V2_ALREADY_RUN $runs/completed; review evidence before any rerun" >&2
++if [ "${PFS1_V2_EXT_ALLOW_RERUN:-0}" != "1" ] && [ -e "$runs/completed" ]; then
++  echo "PFS1_V2_EXT_ALREADY_RUN $runs/completed; review evidence before any rerun" >&2
+   exit 6
+ fi
+-mkdir "$runs/run.lock" 2>/dev/null || { echo "PFS1_V2_LOCKED $runs/run.lock" >&2; exit 6; }
++mkdir "$runs/run.lock" 2>/dev/null || { echo "PFS1_V2_EXT_LOCKED $runs/run.lock" >&2; exit 6; }
+ trap 'rmdir "$runs/run.lock" 2>/dev/null || true' EXIT
+ 
+ initial=$("$python_bin" - "$seed" <<'PY'
+@@ -38,7 +40,7 @@
+ PY
+ )
+ 
+-# --- offline preflight: deployment manifest, parent pfs1, initial identity, scope ---
++# --- offline preflight: deployment manifest, v2 parent, initial identity, scope ---
+ "$python_bin" - "$seed" "$mode" <<'PY'
+ import hashlib, json, sys
+ from pathlib import Path
+@@ -49,7 +51,7 @@
+ version_dir = app.parent
+ sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
+ 
+-manifest = json.loads((app / 'a5-rc2-pfs1-observation-v2-files.json').read_text())
++manifest = json.loads((app / 'a5-rc2-pfs1-observation-v2-4302-files.json').read_text())
+ bad = []
+ for name, want in manifest.items():
+     p = app / name
+@@ -59,31 +61,42 @@
+         bad.append((name, 'mismatch'))
+ assert not bad, bad
+ assert len(manifest) == 63, len(manifest)
+-
+-parent_manifest_path = version_dir / 'parent-pfs1-manifest.json'
++assert (app / 'a5-manifest.json').read_bytes() == \
++       (app / 'a5-rc2-pfs1-observation-v2-4302-files.json').read_bytes(), 'manifest alias out of sync'
++
++# Parent is the fixed v2 candidate itself; exactly two registration/orchestration
++# entries differ, every physics/control/observation source stays byte-identical.
++parent_manifest_path = version_dir / 'parent-v2-manifest.json'
+ assert sha(parent_manifest_path) == \
+-       'bad4b59a0baecd08bd814bc98cfc28e7a0197fb9fed2effd21282ef40563c51b', \
++       'd97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f', \
+        sha(parent_manifest_path)
+ parent_manifest = json.loads(parent_manifest_path.read_text())
+-base = json.loads((app / 'a5-manifest.json').read_text())
+-parent_specific = {'pfs1_observation.py', 'a5-rc2-pfs1.json', 'run-a5-rc2-pfs1.sh'}
+-changed = {'a5_recovery.py', 'a5_capture.py'}
+-unchanged = [name for name in parent_manifest
+-             if name not in parent_specific and name not in changed]
+-assert len(unchanged) == 58, len(unchanged)
+-for name in unchanged:
+-    assert base.get(name) == parent_manifest[name], ('parent/base identity mismatch', name)
++changed = {'a5-rc2-pfs1-observation-v2.json', 'run-a5-rc2-pfs1-observation-v2.sh'}
++assert set(parent_manifest) == set(manifest), 'manifest key set differs from v2'
++drifted = [name for name in parent_manifest
++           if name not in changed and manifest[name] != parent_manifest[name]]
++assert not drifted, ('v2 identity drift', drifted)
++assert len([n for n in parent_manifest if n not in changed]) == 61
++for name in changed:
++    assert manifest[name] != parent_manifest[name], ('changed file did not change', name)
+ 
+ config = json.loads((app / 'a5-rc2-pfs1-observation-v2.json').read_text())
+ assert config['version'] == 'a5-rc2-pfs1-observation-v2'
+ assert config['parent_manifest_sha256'] == \
+-       'bad4b59a0baecd08bd814bc98cfc28e7a0197fb9fed2effd21282ef40563c51b'
+-assert config['physical_invariance']['unchanged_from_pfs1'] is True
++       'd97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f'
++assert config['extension']['id'] == '4302-single'
++assert config['extension']['new_lock'] == 'a5-rc2-pfs1-observation-v2-4302-runs'
++assert config['extension']['changed_files_vs_v2'] == sorted(changed)
++assert config['extension']['unchanged_manifest_entries_vs_v2'] == 61
++assert config['extension']['retry'] is False
++assert config['physical_invariance']['unchanged_from_v2'] is True
+ assert config['physical_invariance']['particle_friction_scale'] == 1.0
+ assert config['physical_invariance']['friction'] == 0.3
+-assert config['subject']['seed'] == seed == 4202
++assert config['subject']['seed'] == seed == 4302
+ assert config['subject']['mode'] == mode == 'single'
++assert config['subject']['level'] == 'crumpled'
+ assert config['run']['one_shot'] is True
++assert config['run']['new_lock'] == config['extension']['new_lock']
+ assert config['observation_revision']['velocity_policy']['raw_api_validated'] is False
+ assert config['observation_revision']['semantic_validity']['raw_readback_is_not_semantic_pass'] is True
+ assert config['observation_revision']['contact_capability']['required_for_acceptance'] is False
+@@ -92,6 +105,11 @@
+ capture = (app / 'a5_capture.py').read_text()
+ assert "k['particle_friction_scale'] = 1." in recovery
+ assert 'pfs1_observation_v2' in recovery and 'pfs1_observation_v2' in capture
++mat_expected = config['observation_revision']['material_readback']['expected']
++assert mat_expected['friction'] == 0.3
++assert mat_expected['particle_friction_scale'] == 1.0
++assert mat_expected['global_self_collision_enabled'] is True
++assert mat_expected['non_particle_collision_enabled'] is True
+ for bad_marker in ('hold_open_for_steps', 'internal_delay', 'release_order', 'preopen'):
+     assert bad_marker not in recovery, ('D1/D2-C residue', bad_marker)
+ for bad_marker in ('release_order', 'preopen', 'suppressed_open'):
+@@ -113,8 +131,8 @@
+     assert have == want, (name, have, want)
+ 
+ # New one-shot lock: an unfinished attempt for THIS manifest blocks a retry.
+-attempts_path = Path('/root/autodl-tmp/a5-rc2-pfs1-observation-v2-runs/attempts.jsonl')
+-current_manifest = hashlib.sha256((app / 'a5-rc2-pfs1-observation-v2-files.json').read_bytes()).hexdigest()
++attempts_path = Path('/root/autodl-tmp/a5-rc2-pfs1-observation-v2-4302-runs/attempts.jsonl')
++current_manifest = hashlib.sha256((app / 'a5-rc2-pfs1-observation-v2-4302-files.json').read_bytes()).hexdigest()
+ if attempts_path.is_file():
+     attempts = [json.loads(line) for line in attempts_path.read_text().splitlines() if line.strip()]
+     started_current = [r for r in attempts if r.get('state') == 'started'
+@@ -122,19 +140,19 @@
+     finished_current = [r for r in attempts if r.get('state') == 'finished'
+                         and r.get('manifest_sha256') == current_manifest]
+     assert not (started_current and not finished_current), \
+-        'unfinished attempt exists for the current v2 manifest; inspect the ledger'
++        'unfinished attempt exists for the current extension manifest; inspect the ledger'
+ 
+ initial_result = json.loads((initial / 'result.json').read_text())
+ assert initial_result.get('passed') is True
+ case = initial_result['initial_case']
+-assert case['seed'] == seed and case['level'] == 'perturbed'
++assert case['seed'] == seed and case['level'] == 'crumpled'
+ plan = json.loads((app / 'square-initial-plan.json').read_text())['episodes']
+ assert sum(row == case for row in plan) == 1, 'Initial case differs from plan'
+-print('PFS1_V2_PREFLIGHT_OK', len(manifest), config['parent_manifest_sha256'], str(initial), flush=True)
++print('PFS1_V2_EXT_PREFLIGHT_OK', len(manifest), config['parent_manifest_sha256'], str(initial), flush=True)
+ PY
+ 
+-if [ "${PFS1_OBS_V2_PREFLIGHT_ONLY:-0}" = "1" ]; then
+-  echo "PFS1_V2_PREFLIGHT_ONLY_OK $initial"
++if [ "${PFS1_V2_EXT_PREFLIGHT_ONLY:-0}" = "1" ]; then
++  echo "PFS1_V2_EXT_PREFLIGHT_ONLY_OK $initial"
+   exit 0
+ fi
+ 
+@@ -150,12 +168,13 @@
+     'state': 'started',
+     'utc': datetime.now(timezone.utc).isoformat(),
+     'version': 'a5-rc2-pfs1-observation-v2',
++    'extension': '4302-single',
+     'seed': seed,
+     'mode': mode,
+     'host': socket.gethostname(),
+     'pid': os.getpid(),
+     'cwd': str(Path.cwd()),
+-    'manifest_sha256': hashlib.sha256(Path('a5-rc2-pfs1-observation-v2-files.json').read_bytes()).hexdigest(),
++    'manifest_sha256': hashlib.sha256(Path('a5-rc2-pfs1-observation-v2-4302-files.json').read_bytes()).hexdigest(),
+     'config_sha256': hashlib.sha256(Path('a5-rc2-pfs1-observation-v2.json').read_bytes()).hexdigest(),
+     'initial': initial,
+ }
+@@ -167,7 +186,7 @@
+ 
+ existing=$(mktemp)
+ ls -d /root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-* 2>/dev/null > "$existing" || true
+-log=$(mktemp /root/autodl-tmp/a5-rc2-pfs1-observation-v2-log-XXXXXXXX.log)
++log=$(mktemp /root/autodl-tmp/a5-rc2-pfs1-observation-v2-4302-log-XXXXXXXX.log)
+ 
+ set +e
+ GARMENTLAB_ATTACHMENT_OVERLAP=0.005 GARMENTLAB_DISABLED_ATTACHMENT_PROBE=0 \
+@@ -187,12 +206,12 @@
+   fi
+ fi
+ if [ -z "$result_dir" ] || [ ! -d "$result_dir" ]; then
+-  echo 'PFS1_V2_ABORT no result directory; retain log '"$log" >&2
+-  echo 'PFS1_V2_LOG_RETAINED '"$log" >&2
++  echo 'PFS1_V2_EXT_ABORT no result directory; retain log '"$log" >&2
++  echo 'PFS1_V2_EXT_LOG_RETAINED '"$log" >&2
+   exit 4
+ fi
+ cp "$log" "$result_dir/runner.log"
+-echo "PFS1_V2_LOG $result_dir/runner.log"
++echo "PFS1_V2_EXT_LOG $result_dir/runner.log"
+ 
+ # --- post-run: separate file completeness, observation semantics, quality ---
+ post_status=0
+@@ -321,6 +340,7 @@
+ overall_valid = bool(file_complete and observation_semantics_valid and quality_accepted and episode_passed)
+ semantics = {
+     'created_utc': datetime.now(timezone.utc).isoformat(),
++    'extension': '4302-single',
+     'file_completeness': {'complete': bool(file_complete), 'presence': file_presence,
+                           'stage_labels': stage_labels, 'required_stages': required_stages},
+     'observation_semantics': {'valid': bool(observation_semantics_valid),
+@@ -343,9 +363,10 @@
+     'state': 'finished',
+     'utc': datetime.now(timezone.utc).isoformat(),
+     'version': 'a5-rc2-pfs1-observation-v2',
+-    'manifest_sha256': hashlib.sha256((app / 'a5-rc2-pfs1-observation-v2-files.json').read_bytes()).hexdigest(),
++    'extension': '4302-single',
++    'manifest_sha256': hashlib.sha256((app / 'a5-rc2-pfs1-observation-v2-4302-files.json').read_bytes()).hexdigest(),
+     'config_sha256': hashlib.sha256((app / 'a5-rc2-pfs1-observation-v2.json').read_bytes()).hexdigest(),
+-    'seed': 4202,
++    'seed': 4302,
+     'mode': 'single',
+     'result_dir': str(d),
+     'entry_assess_exit': entry_status,
+@@ -368,18 +389,18 @@
+     fh.write(json.dumps(rec, sort_keys=True) + '\n')
+     fh.flush()
+ marker.write_text(str(d) + '\n', encoding='utf-8')
+-print('PFS1_V2_LEDGER', d / 'pfs1_observation_v2_ledger.json', flush=True)
+-print('PFS1_V2_SEMANTICS', json.dumps(semantic_checks, sort_keys=True), flush=True)
++print('PFS1_V2_EXT_LEDGER', d / 'pfs1_observation_v2_ledger.json', flush=True)
++print('PFS1_V2_EXT_SEMANTICS', json.dumps(semantic_checks, sort_keys=True), flush=True)
+ if not overall_valid:
+     raise SystemExit(5)
+ PY
+ 
+ if [ "$post_status" -eq 5 ]; then
+-  echo "PFS1_V2_NOT_OVERALL_PASS $result_dir" >&2
++  echo "PFS1_V2_EXT_NOT_OVERALL_PASS $result_dir" >&2
+   exit 5
+ fi
+ if [ "$post_status" -ne 0 ]; then
+-  echo "PFS1_V2_POSTCHECK_FAILED status=$post_status; evidence retained in $result_dir" >&2
++  echo "PFS1_V2_EXT_POSTCHECK_FAILED status=$post_status; evidence retained in $result_dir" >&2
+   exit 1
+ fi
+-echo "PFS1_V2_SINGLE_RUN_COMPLETE $result_dir"
++echo "PFS1_V2_EXT_SINGLE_RUN_COMPLETE $result_dir"

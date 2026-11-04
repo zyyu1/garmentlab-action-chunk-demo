@@ -1,0 +1,7 @@
+{
+  "seed": 4100,
+  "mode": "arc4",
+  "split": "dev",
+  "initial": "/root/autodl-tmp/day4-square-initial-20261031-094446-203825",
+  "manifest_sha256": "6893001070f6bfc24307927cafe95bb83001524edcb35804a4aaf57479f457aa"
+}

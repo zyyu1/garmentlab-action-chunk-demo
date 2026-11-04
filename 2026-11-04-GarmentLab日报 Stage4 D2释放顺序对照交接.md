@@ -1,8 +1,10 @@
 # 2026-11-04 GarmentLab 日报 · Stage 4 D2 释放顺序对照 / pfs1 观测修订
 
+> 后续交接见 [2026-11-05 日报](2026-11-05-GarmentLab日报%20Stage4%20rc8七例RC与冻结暂停交接.md)：rc8 七例 RC 通过，冻结前检查因正式初态生成协议不符而暂停。
+
 **暂停位置**　本轮从 D1-120 的延迟退让转入 D2 场景/接触核查和释放顺序对照：D2-A/B 确认了实际支撑、释放时序和 contact-report 的适用范围；D2-C 实现“附着保持期间完成夹爪张开、随后解除附件”；D2-D 只运行一次 4202 single，episode `passed=True`、诊断审计 `complete=True`、质量 `rejected`。**释放顺序没有降低释放瞬态或前 0.5 s 速度，不是该例漂移的主要因素。**
 
-随后完成 **a5-rc2-pfs1** 粒子间摩擦缩放敏感性单次运行：质量 accepted，正式窗口质心 **0.2642 mm**、P95 **0.3792 mm**，但速度读回/材料读回存在观测缺口。再用 **a5-rc2-pfs1-observation-v2** 做观测-only 修订并单次复验 4202：`file_complete=true`、`observation_semantics_valid=true`、质量 accepted、`overall_valid=true`；动作/状态/formal 与 pfs1 **0 差**，确认只修订观测、未改变物理/控制。**当前暂停在 v2 之后；尚未运行 4302 single。** 正式 Stage 4 成功仍为 **0**；held-out、正式批次和冻结均暂停。
+随后完成 **a5-rc2-pfs1** 粒子间摩擦缩放敏感性单次运行：质量 accepted，正式窗口质心 **0.2642 mm**、P95 **0.3792 mm**，但速度读回/材料读回存在观测缺口。再用 **a5-rc2-pfs1-observation-v2** 做观测-only 修订并单次复验 4202：`file_complete=true`、`observation_semantics_valid=true`、质量 accepted、`overall_valid=true`；动作/状态/formal 与 pfs1 **0 差**，确认只修订观测、未改变物理/控制。**4302 single 单次扩展随后已完成并通过（见 §12）。** 正式 Stage 4 成功仍为 **0**；held-out、正式批次和冻结均暂停。
 
 ## 1. 为什么从 D1 转到 D2
 
@@ -131,4 +133,72 @@ D1-120 在末次 OPEN 内插入 120 个物理步等待，保持 12 个公开动�
 
 运行 `day4-a5-rc2-pfs1-observation-v2-20261104-111514-134428` 一次：`file_complete=true`、`observation_semantics_valid=true`、质量 **accepted**、`overall_valid=true`。formal 质心 **0.2642 mm**、P95 **0.3792 mm**；动作 target、recovery/pre-release 状态、formal 指标与 pfs1 **0 差**。材料五阶段 friction .3 / particleFrictionScale 1.0 / binding `/World/Garment/particleMaterial` / self/non-particle true；solver-effective 仍标 unverified。FD 484 个有效区间、1 个首帧无效；raw readback 标 unvalidated。contact 能力：robot-rigid only，cloth-ground 力/冲量不可得，0 事件不是无接触；不新增验收门槛。
 
-**判定：** 观测修订通过，但只是观测-only 复验，不增加新的物理改善，也不是正式 Stage 4 成功。**尚未运行 4302 single**；先审查 v2；正式成功仍为 0；不宣称地面摩擦已修复。详见 [v2 对照](day4-actionchunk-test/results/D2_E_PFS1_V2_COMPARE_20261104/review.md)。
+**判定：** 观测修订通过，但只是观测-only 复验，不增加新的物理改善，也不是正式 Stage 4 成功。**4302 single 单次扩展随后已完成并通过（见 §12）**；正式成功仍为 0；不宣称地面摩擦已修复。详见 [v2 对照](day4-actionchunk-test/results/D2_E_PFS1_V2_COMPARE_20261104/review.md)。
+
+## 12. 4302 single 扩展：质量 accepted + 证据完整（单次）
+
+按 v2 预登记的下一道门槛，固定 v2 候选并登记单次 4302 扩展：[a5-rc2-pfs1-observation-v2-4302](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-4302/README.md)。63 项 manifest 中 **61 项与 v2 逐字节相同**，仅登记 JSON 与 runner 变化（新 manifest `6d1958f5…`、config `577931aa…`、runner `550efa65…`）；新锁 `a5-rc2-pfs1-observation-v2-4302-runs`，4202 结果、v2 完成标记与旧锁全部保留。4302 初态复用 `day4-square-initial-stripfold-20261103-094143-137994`（`1bed437f…` / `1c27514f…`），未重生。
+
+**预检：** 远端 63/63（父 manifest、61/63 身份、4302 初态、level=crumpled、plan 唯一、新账本无未完成尝试、`bash -n`、py_compile）。
+
+**运行：** tmux 单次 `day4-a5-rc2-pfs1-observation-v2-20261104-201557-235290`，退出 0、12 动作、`completed` 写入、无重试；下载 **104/104** 文件哈希一致。
+
+| 项目 | 结果 |
+|---|---|
+| `file_complete` / `observation_semantics_valid` | **true / true**（12/12 语义检查） |
+| 质量 / `overall_valid` | **accepted / true**；`errors=[]` |
+| 评价器检查 | geometry_entire_window、stable、held、released_continuously 全 **true**；`failed_geometry_frames=[]` |
+| 正式 210–330 | 质心 **0.2390 mm**、P95 **0.3524 mm**（RC2 4302 single 1.9102 / 4.1231，−87.5% / −91.5%） |
+| fold | crossed 1.0；IoU 0.6617→0.6494；对齐 6.19 mm；z_p95 68.92 mm |
+| held | 14.16 mm / 0.00215 rad/s / 2.13 mm，accepted |
+| 释放后 0.5 s | 粒子 15.70 mm/s、质心 12.40 mm/s；首区间 20.06 / 10.97 |
+| 1.5–8.0 s | 质心 0.372 mm/s、粒子 0.659 mm/s、角速度 0.092°/s |
+| z_min / 穿透 | 9.867 mm / 0 mm；低于 contact offset 0.133 mm（几何） |
+| 粘滞 | 通过：release 后无 attachment/holding/latch 复活；OPEN 锁存仅 10 步；夹爪 0.080 m；布料不跟随 retreat 的 EE |
+| 材料读回 | 五阶段 live：friction 0.3、particleFrictionScale 1.0、binding `/World/Garment/particleMaterial`、self/non-particle true；solver-effective 仍 unverified |
+| 证据 | ledger 19/19、evidence 73/73 |
+
+**解释：** recovery 末态相对 RC2 平移 **10.27 mm**（刚体 RMS 0.0006 mm），expert 按未改逻辑重算 fold 目标，导致 fold 目标差 7.7–8.0 mm、yaw −3.28°；因此这是**端到端**对比，不是“同一动作、只改摩擦”的受控对照。4202（0.2642/0.3792）与 4302（0.2390/0.3524）两个 dev seed 各一次 single 均通过，但仍不足以推断跨 seed 普遍有效，也不确认具体摩擦机制。
+
+**判定：** 按预登记表“质量接受且证据完整 → 固定最终候选，准备完整七例 RC”。本轮不跑七例、不冻结、不跑 held-out/正式批次、不扫参数、不重跑 4202/4302；正式 Stage 4 成功仍为 **0**。详见 [4302 对照审查](day4-actionchunk-test/results/PFS1_V2_EXT_4302_20261104/review.md)。
+
+## 13. 下一步（需明确指令）
+
+1. 准备七例 RC：例表（哪些 seed/模式）、身份与上限、失败/拒绝的停止条件；
+2. 在七例 RC 通过后，才讨论显式冻结与正式批次；
+3. 继续保持：不宣称地面摩擦已修复、不把单例通过写成跨 seed 结论、正式成功计数 0。
+
+## 14. rc7 七例 RC 执行结果：4/6 阳性，未放行
+
+按第 13 节的顺序，登记并执行 [rc7](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc7/README.md)：把 4202/4302 单例的物理/控制固定为一个最终候选，L1 runner 接入同一观测；**uniform `particleFrictionScale=1.0`（含 L1）在运行前登记**；manifest `bcba8c11…`（63 项，60 项与 v2 逐字节相同）、新批次账本 `…-rc7-runs`；七槽顺序、每槽一次、无自动重试。
+
+| 槽 | seed / 模式 | 质量 | 质心 / P95 (mm) | 几何窗口 | stable | 配对差 |
+|---:|---|---|---:|---|---|---:|
+| 1 | 4100 single | **rejected** | 0.7031 / 1.7764 | **false** | false | — |
+| 2 | 4100 arc4 | **rejected** | 0.7031 / 1.7764 | **false** | false | 0.0 |
+| 3 | 4202 single | accepted | 0.2642 / 0.3792 | true | true | — |
+| 4 | 4202 arc4 | accepted | 0.2642 / 0.3792 | true | true | 0.0 |
+| 5 | 4302 single | accepted | 0.2390 / 0.3524 | true | true | — |
+| 6 | 4302 arc4 | accepted | 0.2390 / 0.3524 | true | true | 0.0 |
+| 7 | 4201 single | rejected（有效） | 0.9409 / 2.8073 | true | false | — |
+
+**4100 失败机制：** `free_edge_overrun` **15.4 mm**（要求 20–60）、`free_edge_height_p90` **24.4 mm**（≤15）、`vertex_speed_max` **64.6 mm/s**（≤50）；RC2 4100（pfs=0）为 40.7 / 10.1 / 16.5，全部通过。uniform pfs=1.0 下 flap 没有滑过静止半片落到边缘外桌面，L1 过折依赖的“自重锁”没有发生；single/arc4 逐项相同。**4201** 几何全过、`crossed=1.0`，但速度 P95 20.3 > 10 mm/s → 有效拒绝（未强制、未重跑）。4202/4302 与先前单例逐值相同。
+
+**证据与门禁：** 7/7 槽 `file_complete` + 观测语义通过；三组配对 target 差 **0.0**；下载 **765/765** 哈希一致；原版 `verify-dev` **失败**（`Expected positive smoke case failed: …l1-…212326-225911`，exit 1）。中途一次会话在 Isaac 启动阶段被操作者终止（无 episode 结果），保留于 `runs.aborted-20261104T1304Z`，未计入槽结果。
+
+**判定：不冻结、不释放。** 放行条件 1（六阳性全部接受）与条件 5（verify-dev）未满足。下一版本应另行登记 **task-scoped** 物理配置（L1=0.0、L2/L3=1.0，保留本轮观测接入），并重跑整个七例矩阵；本轮结果保留、不插入新矩阵，赛后不得切换参数。正式 Stage 4 成功仍为 **0**。详见 [rc7 审查](day4-actionchunk-test/results/RC7_SEVEN_CASE_20261104/review.md)。
+
+## 15. rc8 task-scoped 七例 RC：6/6 阳性通过（冻结材料已整理，未冻结）
+
+按 §13 的下一版本建议登记 [rc8](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc8/README.md)：**L1 flat `particleFrictionScale=0.0`，L2/L3 `=1.0`**，在材料构造时设置、早于 reset/物理步；路由只按任务身份，不读取 seed/mode/结果；材料五阶段读回按任务核对（0.0 / 1.0）。manifest `68930010…`（63 项，59 项与 v2 逐字节相同），新批次账本；七槽顺序、每槽一次、无重试；attempts 14 行。
+
+| 槽 | seed / 模式 | 质量 | 质心 / P95 (mm) | 协议 expected |
+|---:|---|---|---:|---:|
+| 1–2 | 4100 single/arc4 | **accepted** | 0.1435 / 0.2072 | **0.0** |
+| 3–4 | 4202 single/arc4 | **accepted** | 0.2642 / 0.3792 | 1.0 |
+| 5–6 | 4302 single/arc4 | **accepted** | 0.2390 / 0.3524 | 1.0 |
+| 7 | 4201 single | rejected（有效） | 0.9409 / 2.8073 | 1.0 |
+
+**门禁：** 六阳性全部接受；4201 有效拒绝；三组 single/arc4 配对 target 差 **0.0**；7/7 证据完整；807/807 下载哈希一致；本地 `stage4_success_v1.evaluate` 重算 7/7 status/stability 逐值相同；视频审查通过（末帧机械臂撤离、布料在桌面；L1 flap 落桌）；原版 `verify-dev` **通过**（`A5_DEV_VERIFIED 7`，exit 0）。4100 与 RC2 4100（pfs=0）逐值相同，支持“rc7 的 L1 失败来自 uniform 1.0”的机制解释——仍按视频支持的机制解释报告，不写成已确认因果。
+
+**判定：** 候选 **rc8 通过本轮 task-scoped 七例 RC**。冻结材料已整理：[FREEZE_DOSSIER](day4-actionchunk-test/results/RC8_SEVEN_CASE_20261104/FREEZE_DOSSIER.md)、[freeze_manifest.json](day4-actionchunk-test/results/RC8_SEVEN_CASE_20261104/freeze_manifest.json)。但**冻结前检查未通过**：正式 L2/L3 初态生成脚本仍强制 `particleFrictionScale=0.0`（应为 1.0，`day4-square-initial-stripfold.py:196/261`，由 `run-stage4-formal-batch.sh:73` 调用），因此**未执行 freeze、未写 `verified-dev.json`/`E_RELEASE.json`**，现场保持为“RC 通过、冻结待修正”。建议 rc8b 最小修正初态生成并重跑七例后重新冻结；在此之前不启动 held-out/正式批次。正式 Stage 4 成功仍为 **0**。报告口径：结果按任务报告，不是统一物理条件下的纯初态难度比较；rc7 被操作者终止的启动记录继续列入运行历史（未形成可评价 episode，不计入质量分母）。详见 [FREEZE_PRECHECK](day4-actionchunk-test/results/RC8_SEVEN_CASE_20261104/FREEZE_PRECHECK.md) 与 [rc8 审查](day4-actionchunk-test/results/RC8_SEVEN_CASE_20261104/review.md)。

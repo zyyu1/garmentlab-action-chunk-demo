@@ -1,0 +1,36 @@
+{
+  "attachment_enabled_any_after_boundary": false,
+  "logical_attached_after_boundary": false,
+  "holding_after_boundary": false,
+  "enabled_slots_any_after_boundary": false,
+  "attachment_reactivation": false,
+  "command_holding_latch_steps": 10,
+  "command_holding_contiguous_prefix_only": true,
+  "gripper_state_first_last": [
+    2,
+    0
+  ],
+  "gripper_aperture_first_last_m": [
+    0.015316055621951818,
+    0.07999996840953827
+  ],
+  "gripper_open_after_release": true,
+  "retreat_index": 11,
+  "retreat_duration_s": 0.18333334289491177,
+  "retreat_end_index": 157,
+  "cloth_centroid_disp_retreat_mm": 2.73464875090339,
+  "ee_disp_retreat_mm": 1.9361481907531122,
+  "cloth_follows_ee_ratio_retreat": 1.4124170680549415,
+  "cloth_follows_ee_cos_retreat": -0.16943932932177622,
+  "cloth_follows_ee": false,
+  "post_retreat_seconds": 5.500000286847353,
+  "cloth_centroid_disp_after_retreat_mm": 0.6584439114274914,
+  "ee_disp_after_retreat_mm": 0.08143064757729819,
+  "ee_static_after_retreat": true,
+  "cloth_still_sliding_after_retreat": true,
+  "z_min_all_mm": 9.866955690085888,
+  "ground_penetration_mm": 0.0,
+  "below_contact_offset_mm": 0.1330443099141121,
+  "note": "attachment/holding/latch must stay false after the release boundary; the OPEN command latch is allowed only as a short contiguous prefix; cloth following the retreating EE while detached would be abnormal sticking.",
+  "pass": true
+}

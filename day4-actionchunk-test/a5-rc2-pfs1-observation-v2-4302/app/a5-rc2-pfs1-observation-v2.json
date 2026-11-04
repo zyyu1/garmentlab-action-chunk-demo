@@ -1,0 +1,180 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "candidate-registered-observation-v2-extension-4302",
+  "created_utc": "2026-11-04T12:20:00Z",
+  "status": "extension_registered_not_run",
+  "parent": "a5-rc2-pfs1-observation-v2",
+  "parent_manifest_sha256": "d97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f",
+  "parent_result": "results/PFS1_V2_RUN_4202_20261104/day4-a5-rc2-pfs1-observation-v2-20261104-111514-134428 (4202 single, overall_valid=true, preserved; not overwritten)",
+  "base": "Same candidate version as a5-rc2-pfs1-observation-v2. Only the run scope is extended from 4202 to the pre-registered 4302 single seed; physics, control, sampling, evaluator and observation code are byte-identical to v2.",
+  "extension": {
+    "id": "4302-single",
+    "created_from": "a5-rc2-pfs1-observation-v2",
+    "reason": "4202 single passed quality and evidence gates after the observation-only revision; a pre-registered cross-seed check on 4302 is the next single-run gate. This is not a new physical intervention.",
+    "scope": {
+      "seeds": [
+        4302
+      ],
+      "modes": [
+        "single"
+      ],
+      "fold_edge": "right"
+    },
+    "new_lock": "a5-rc2-pfs1-observation-v2-4302-runs",
+    "one_shot": true,
+    "retry": false,
+    "does_not_reuse_v2_completed_marker": true,
+    "changed_files_vs_v2": [
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "unchanged_manifest_entries_vs_v2": 61,
+    "changed_file_roles": {
+      "a5-rc2-pfs1-observation-v2.json": "registration/scope only; not read by simulation code",
+      "run-a5-rc2-pfs1-observation-v2.sh": "orchestration only; scope, lock, ledger and pre/post checks"
+    }
+  },
+  "initial": {
+    "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-094143-137994",
+    "regenerated": false,
+    "hashes": {
+      "result.json": "1bed437fdc5b01dd4dc55acc45be1d797d3cccfa2f4b855c5e0b44cd6e39840e",
+      "initial_geometry.npz": "1c27514f2ba95a3e276b01bf9f40ee30acf77600837908322864fdb57be97b32"
+    }
+  },
+  "subject": {
+    "seed": 4302,
+    "level": "crumpled",
+    "mode": "single",
+    "split": "dev",
+    "fold_edge": "right"
+  },
+  "physical_invariance": {
+    "unchanged_from_v2": true,
+    "particle_friction_scale": 1.0,
+    "friction": 0.3,
+    "ground": "unchanged",
+    "collision": "unchanged",
+    "material_binding": "unchanged",
+    "public_actions": 12,
+    "action_logic": "unchanged",
+    "action_targets": "expert logic unchanged; targets are computed from the 4302 recovered state exactly as in RC2/pfs1/v2",
+    "call_horizons": "unchanged",
+    "retreat_target": "unchanged",
+    "evaluator": "stage4_success_v1 unchanged",
+    "thresholds": {
+      "centroid_limit_mm": 1.0,
+      "vertex_p95_limit_mm": 3.0
+    },
+    "initial_regenerated": false
+  },
+  "observation_revision": {
+    "only_change": "inherited unchanged from v2: observation semantics, material readback and reporting; no physics/control change",
+    "velocity_policy": {
+      "physical_source": "world-position backward finite difference",
+      "time_source": "world.current_time at each passive post-step snapshot",
+      "interval": "dt = sim_time_s[k] - sim_time_s[previous distinct frame]",
+      "raw_api": "ClothPrimView.get_velocities(clone=True)",
+      "raw_api_validated": false,
+      "raw_api_usage": "retained only as unvalidated data; not used for physical conclusions",
+      "single_frame_stage_velocity": "not computed; raw readback retained with invalid flag"
+    },
+    "material_readback": {
+      "stages": [
+        "after_construction",
+        "after_reset",
+        "after_initial_settle",
+        "after_recovery",
+        "pre_release"
+      ],
+      "fields": [
+        "particle material prim path and attrs",
+        "particleFrictionScale",
+        "friction",
+        "particle system binding targets",
+        "global self-collision",
+        "non-particle collision",
+        "particle contact offset",
+        "particle group and raw filter attrs",
+        "support collider material bindings"
+      ],
+      "expected": {
+        "friction": 0.3,
+        "particle_friction_scale": 1.0,
+        "global_self_collision_enabled": true,
+        "non_particle_collision_enabled": true
+      },
+      "solver_effective_boundary": "unverified; scene/USD readback only",
+      "mismatch_action": "stop before release and retain the partial evidence"
+    },
+    "semantic_validity": {
+      "file_completeness": "required result/evidence/stage files exist and their hashes match",
+      "observation_semantics": [
+        "finite-difference velocity policy is recorded",
+        "release-step records contain valid finite-difference velocities",
+        "raw velocity readback is marked unvalidated and is not required to be physically correct",
+        "material readback stages are present and match registered values",
+        "contact capability is recorded separately"
+      ],
+      "quality_acceptance": "evaluator quality accepted/rejected is recorded separately",
+      "raw_readback_is_not_semantic_pass": true,
+      "overall_pass": "file completeness AND observation semantics AND quality accepted"
+    },
+    "contact_capability": {
+      "supported_scope": "robot-rigid contacts only",
+      "cloth_ground_force_impulse": false,
+      "zero_events_interpretation": "not evidence of no contact",
+      "required_for_acceptance": false,
+      "reason": "existing ContactRecorder/report channel does not expose cloth-particle contacts (D2-B)"
+    }
+  },
+  "run": {
+    "seed": 4302,
+    "mode": "single",
+    "split": "dev",
+    "fold_edge": "right",
+    "one_shot": true,
+    "new_lock": "a5-rc2-pfs1-observation-v2-4302-runs",
+    "does_not_reuse_v2_completed_marker": true,
+    "output_prefix": "day4-a5-rc2-pfs1-observation-v2-",
+    "allow_arc4": false,
+    "retry": false
+  },
+  "comparison": {
+    "against": "RC2 4302 single (day4-a5-rc2-recovery-20261104-025702-598075) and, secondarily, v2/pfs1 4202 single",
+    "primary_purpose": "cross-seed extension of the fixed particleFrictionScale candidate under valid observation semantics",
+    "windows": [
+      "after recovery",
+      "pre-release",
+      "release boundary",
+      "first 0.5 s",
+      "0.5 s bins through available trace",
+      "formal 210-330"
+    ],
+    "metrics": [
+      "file completeness",
+      "observation semantic validity",
+      "material scene readback",
+      "evaluator quality",
+      "centroid drift",
+      "vertex P95",
+      "rotation",
+      "finite-difference speed",
+      "z_min and penetration geometry",
+      "recovery state",
+      "release boundary and attachment release",
+      "sustained slip / sticking check"
+    ],
+    "no_contact_force_requirement": true,
+    "no_parameter_scan": true
+  },
+  "run_status": "not_run",
+  "formal_stage4_success": 0,
+  "notes": [
+    "Extension of the fixed a5-rc2-pfs1-observation-v2 candidate; physics/control/observation sources are byte-identical to v2 (61/63 manifest entries unchanged).",
+    "Only a5-rc2-pfs1-observation-v2.json (registration) and run-a5-rc2-pfs1-observation-v2.sh (orchestration) differ from v2.",
+    "One 4302 single only, under a new manifest and a new one-shot lock; the v2 4202 result and completed marker are preserved.",
+    "No 4202 rerun, no seven-case RC, no freeze, no held-out, no formal batch, no parameter scan in this round.",
+    "Cloth-ground force/impulse remains unavailable and is not a new acceptance gate; material solver-effective value remains unverified."
+  ]
+}

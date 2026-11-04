@@ -1,0 +1,23 @@
+{
+  "version": "stage4-success-v1.0.0",
+  "registered_date": "2026-11-02",
+  "scope": "Simulation material-indexed geometry proxies; not physical pinch, self-intersection, or textile quality certification",
+  "sampling": {"dt_s": 0.016666666666666666, "release_step": 0, "last_step": 330, "window_first_step": 210, "window_last_step": 330},
+  "common_geometry": {
+    "crossed_min": 0.95,
+    "stationary_drift_mean_max_m": 0.025,
+    "fold_extent_min_m": 0.16,
+    "fold_extent_max_m": 0.28,
+    "tangent_extent_min_m": 0.36,
+    "tangent_extent_max_m": 0.44,
+    "height_p95_max_m": 0.09,
+    "height_min_m": -0.002,
+    "height_max_m": 0.12
+  },
+  "stability": {"centroid_drift_max_m": 0.001, "vertex_drift_p95_max_m": 0.003, "vertex_drift_max_m": 0.01, "vertex_speed_p95_max_m_s": 0.01, "vertex_speed_max_m_s": 0.05},
+  "held": {"arm_speed_max_rad_s": 0.1, "anchor_gap_max_m": 0.01},
+  "tasks": {
+    "A_l1_overfold": {"levels": ["flat"], "edges": ["left"], "width_m": 0.2, "overhang_m": 0.02, "action_count": 7, "recovery_count": 0, "held_position_max_m": 0.01, "iou_min": 0.30, "alignment_max_m": 0.02, "reflected_error_max_m": 0.06, "free_edge_overrun_min_m": 0.02, "free_edge_overrun_max_m": 0.06, "free_edge_height_p90_max_m": 0.015},
+    "B_nominal": {"levels": ["perturbed", "crumpled"], "edges": ["left", "right"], "width_m": 0.2, "overhang_m": 0.0, "action_count": 12, "recovery_count": 1, "held_position_max_m": 0.03, "iou_min": 0.50, "alignment_max_m": 0.015, "reflected_error_max_m": 0.03, "free_edge_overrun_min_m": -0.03, "free_edge_overrun_max_m": 0.03}
+  }
+}

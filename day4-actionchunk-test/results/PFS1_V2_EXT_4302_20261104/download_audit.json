@@ -1,0 +1,12 @@
+﻿{
+    "listing":  "download_audit_remote_hashes.txt",
+    "hash_mismatch":  0,
+    "method":  "remote: find . -type f -exec sha256sum; local: sha256 of every file; compare sets",
+    "result_dir":  "day4-a5-rc2-pfs1-observation-v2-20261104-201557-235290",
+    "local_files":  104,
+    "scope":  "remote -\u003e local full-directory download verification",
+    "remote_files":  104,
+    "missing":  0,
+    "extra":  0,
+    "verified":  true
+}

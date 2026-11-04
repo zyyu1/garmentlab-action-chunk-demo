@@ -1,4 +1,42 @@
-# 当前验收状态（最新：2026-11-04 D2-E 步骤4 持续滑移核查完成（仅离线），步骤5 决定 particleFrictionScale 0→1.0 敏感性对照（未创建/未运行）；D2-E 步骤2 支撑/摩擦配置核查完成（仅离线）；D2-D 释放顺序对照完成（4202 single 单次；质量仍 rejected）；D2-C 版本已登记并运行一次；D2-A/B 场景与接触核查完成；2026-11-03 D0 4202/4302 基线复现 + A5 RC2 漂移诊断第 1–3 项；2026-11-02 折形口径定稿 + 任务定义冻结 + 表示层配对 + 分任务报告 + A1 预检）
+# 当前验收状态（最新：2026-11-05 **rc8 task-scoped 七例 RC 通过：6/6 阳性 accepted、4201 有效拒绝、配对 0 差、verify-dev 通过；冻结前检查发现正式 L2/L3 初态生成仍为 0.0（应为 1.0），freeze 暂停、未写回执，正式成功仍为 0**；前序：2026-11-04 **rc7 七例 RC 完成，4/6 阳性通过（4202/4302 s/a accepted；4100 s/a 质量拒绝），4201 有效拒绝，三组配对 0 差，verify-dev 失败，未放行**；2026-11-04 **4302 single 扩展通过**（`overall_valid=true`、质量 accepted、质心 0.2390 mm / P95 0.3524 mm）；2026-11-04 pfs1-observation-v2 4202 single 观测修订复验通过（0.2642/0.3792 mm）；2026-11-04 D2-E 步骤4 持续滑移核查完成（仅离线），步骤5 决定 particleFrictionScale 0→1.0 敏感性对照（已创建并单次运行）；D2-E 步骤2 支撑/摩擦配置核查完成（仅离线）；D2-D 释放顺序对照完成（4202 single 单次；质量仍 rejected）；D2-C 版本已登记并运行一次；D2-A/B 场景与接触核查完成；2026-11-03 D0 4202/4302 基线复现 + A5 RC2 漂移诊断第 1–3 项；2026-11-02 折形口径定稿 + 任务定义冻结 + 表示层配对 + 分任务报告 + A1 预检）
+
+## 2026-11-05 rc8 task-scoped 七例 RC：通过
+
+[rc8](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc8/README.md) 按任务固定物理：L1 flat **0.0**、L2/L3 **1.0**，材料构造时设置、早于 reset/物理步；manifest `68930010…`（63 项，59 项与 v2 不变）、新账本；七槽顺序、每槽一次、无重试。
+
+| 槽 | seed / 模式 | 质量 | 质心 / P95 (mm) | 协议 expected |
+|---:|---|---|---:|---:|
+| 1–2 | 4100 single/arc4 | accepted | 0.1435 / 0.2072 | 0.0 |
+| 3–4 | 4202 single/arc4 | accepted | 0.2642 / 0.3792 | 1.0 |
+| 5–6 | 4302 single/arc4 | accepted | 0.2390 / 0.3524 | 1.0 |
+| 7 | 4201 single | rejected（有效） | 0.9409 / 2.8073 | 1.0 |
+
+六阳性全部接受；配对 target 差 **0.0**；7/7 证据完整；807/807 哈希一致；本地 evaluator 重算 7/7 一致；视频审查通过；原版 `verify-dev` **通过**（`A5_DEV_VERIFIED 7`）。4100 与 RC2 4100（pfs=0）逐值相同。
+
+**判定：** 通过本轮 RC；冻结材料已整理（[FREEZE_DOSSIER](day4-actionchunk-test/results/RC8_SEVEN_CASE_20261104/FREEZE_DOSSIER.md)）。但**冻结前检查未通过**：正式 L2/L3 初态生成仍强制 `particleFrictionScale=0.0`（应为 1.0），因此**未执行 freeze、未写回执**；建议 rc8b 修正初态生成并重跑七例后重新冻结。正式成功仍为 **0**。结果按任务报告，不是统一物理条件下的纯初态难度比较。详见 [FREEZE_PRECHECK](day4-actionchunk-test/results/RC8_SEVEN_CASE_20261104/FREEZE_PRECHECK.md) 与 [rc8 审查](day4-actionchunk-test/results/RC8_SEVEN_CASE_20261104/review.md)。
+
+## 2026-11-04 rc7 七例 RC：4/6 阳性通过，未放行
+
+[rc7](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc7/README.md) 固定 4202/4302 单例的物理/控制并接入 L1 观测；**uniform particleFrictionScale=1.0（含 L1）**；manifest `bcba8c11…`、新批次账本；七槽顺序、每槽一次、无重试。
+
+| 槽 | seed / 模式 | 质量 | 质心 / P95 (mm) | 几何 | 配对 |
+|---:|---|---|---:|---|---:|
+| 1–2 | 4100 single/arc4 | rejected | 0.7031 / 1.7764 | false | 0.0 |
+| 3–4 | 4202 single/arc4 | accepted | 0.2642 / 0.3792 | true | 0.0 |
+| 5–6 | 4302 single/arc4 | accepted | 0.2390 / 0.3524 | true | 0.0 |
+| 7 | 4201 single | rejected（有效） | 0.9409 / 2.8073 | true | — |
+
+**4100：** `free_edge_overrun` 15.4 mm（<20）、`free_edge_height_p90` 24.4 mm（>15）、`vertex_speed_max` 64.6 mm/s（>50）；RC2 pfs=0 为 40.7 / 10.1 / 16.5。uniform pfs=1.0 使 flap 未滑到边缘外桌面，L1 过折自重锁未发生。4201 几何全过但速度 P95 20.3 > 10 → 有效拒绝。7/7 证据完整、765/765 哈希一致；`verify-dev` 失败于 4100。
+
+**判定：不冻结、不释放**。放行条件 1 与 5 未满足。下一版本需登记 task-scoped（L1=0.0、L2/L3=1.0）并重跑七例；本轮结果保留、不并入新矩阵。详见 [rc7 审查](day4-actionchunk-test/results/RC7_SEVEN_CASE_20261104/review.md)。
+
+## 2026-11-04 4302 single 扩展：质量 accepted + 证据完整（单次）
+
+[a5-rc2-pfs1-observation-v2-4302](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-4302/README.md) 固定 v2 候选，只扩登记范围到 4302 single；61/63 manifest 项与 v2 逐字节相同。新 manifest `6d1958f5…`、新锁 `a5-rc2-pfs1-observation-v2-4302-runs`；预检 63/63；tmux 单次 `day4-a5-rc2-pfs1-observation-v2-20261104-201557-235290`，退出 0、无重试、下载 104/104 哈希一致。
+
+**结果：** `file_complete=true`、`observation_semantics_valid=true`、质量 **accepted**、`overall_valid=true`；`geometry_entire_window/stable/held/released_continuously` 全 true、`failed_geometry_frames=[]`；正式 210–330 质心 **0.2390 mm**、P95 **0.3524 mm**（RC2 4302 single 1.9102 / 4.1231）。释放后 0.5 s 15.70/12.40 mm/s；1.5–8.0 s 0.372/0.659 mm/s、0.092°/s；z_min 9.867 mm；粘滞检查通过（无 attachment/latch 复活、OPEN 锁存 10 步、夹爪 0.080 m、布料不跟随 EE）；材料 live 读回 0.3/1.0、binding 正确。
+
+**边界：** recovery 末态相对 RC2 平移 10.27 mm，fold 目标按未改 expert 重算（差 7.7–8.0 mm、yaw −3.28°），是端到端对比；两个 dev seed 各一次 single 通过不等于跨 seed 统计；机制未确认；正式 Stage 4 成功仍为 **0**。判定：固定最终候选，准备七例 RC（本轮未跑七例/未冻结/未跑 held-out）。详见 [4302 对照](day4-actionchunk-test/results/PFS1_V2_EXT_4302_20261104/review.md)。
 
 ## 2026-11-04 D2-E 步骤2：支撑面与摩擦配置核查（仅离线）
 

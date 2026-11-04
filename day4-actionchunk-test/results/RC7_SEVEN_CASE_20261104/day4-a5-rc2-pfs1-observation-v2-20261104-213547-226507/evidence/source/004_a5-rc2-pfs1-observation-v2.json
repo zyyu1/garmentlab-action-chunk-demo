@@ -1,0 +1,97 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "final-candidate-rc7-seven-case",
+  "created_utc": "2026-11-04T13:05:00Z",
+  "status": "rc7_registered_not_run",
+  "final_candidate": true,
+  "parent": "a5-rc2-pfs1-observation-v2",
+  "parent_manifest_sha256": "d97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f",
+  "base": "Fixes the physics/control logic validated by the 4202 and 4302 singles into one candidate and brings the L1 runner into the same observation scheme. One manifest and one batch ledger cover all seven RC cases; old results are preserved and are not inserted into this matrix.",
+  "physics_scope": {
+    "decision": "uniform",
+    "particle_friction_scale": 1.0,
+    "friction": 0.3,
+    "applies_to": ["flat", "perturbed", "crumpled"],
+    "l1_regression": "4100 single/arc4 are the regression check for applying particleFrictionScale=1.0 to L1",
+    "task_scoped_override": false,
+    "changed_simulation_source": "a5_l1.py: particle_friction_scale 0.0 -> 1.0 plus passive observation hooks; a5_recovery.py already used 1.0 and is unchanged",
+    "ground_collision_material_binding": "unchanged",
+    "public_actions": "L1 7, L2/L3 12; command and horizon semantics unchanged",
+    "thresholds": {"centroid_limit_mm": 1.0, "vertex_p95_limit_mm": 3.0},
+    "evaluator": "stage4_success_v1 unchanged"
+  },
+  "observation_scope": {
+    "same_as_v2": true,
+    "l1_additions": [
+      "capture_material_object at after_construction",
+      "record_material_stage at after_reset / after_initial_settle / pre_release",
+      "record_stage at initial_loaded / pre_release"
+    ],
+    "velocity": "world-position backward finite difference; raw readback unvalidated",
+    "material_expected": {"friction": 0.3, "particle_friction_scale": 1.0,
+                          "global_self_collision_enabled": true,
+                          "non_particle_collision_enabled": true},
+    "solver_effective": "unverified; scene/USD readback only",
+    "contact_capability": {"supported_scope": "robot-rigid only",
+                           "cloth_ground_force_impulse": false,
+                           "required_for_acceptance": false}
+  },
+  "matrix": [
+    {"slot": 1, "seed": 4100, "level": "flat", "task": "A_l1_overfold", "mode": "single", "actions": 7, "positive": true},
+    {"slot": 2, "seed": 4100, "level": "flat", "task": "A_l1_overfold", "mode": "arc4", "actions": 7, "positive": true},
+    {"slot": 3, "seed": 4202, "level": "perturbed", "task": "B_nominal", "mode": "single", "actions": 12, "positive": true},
+    {"slot": 4, "seed": 4202, "level": "perturbed", "task": "B_nominal", "mode": "arc4", "actions": 12, "positive": true},
+    {"slot": 5, "seed": 4302, "level": "crumpled", "task": "B_nominal", "mode": "single", "actions": 12, "positive": true},
+    {"slot": 6, "seed": 4302, "level": "crumpled", "task": "B_nominal", "mode": "arc4", "actions": 12, "positive": true},
+    {"slot": 7, "seed": 4201, "level": "perturbed", "task": "B_nominal_history_failure", "mode": "single", "actions": 12, "positive": false}
+  ],
+  "initial": {
+    "registry": "a5-candidate.json development entries; reused as registered, not regenerated",
+    "4100": {"dir_remote": "/root/autodl-tmp/day4-square-initial-20261031-094446-203825",
+             "result.json": "31d8d47f4e18f6f9c8e96b0e3a3f0237ac87786978a343548cefddf1a7e567d8",
+             "initial_geometry.npz": "dd5783038cd7ae95c17525574ca9c76d0df2399261a6df6a0c8f09a5b351bcb3"},
+    "4201": {"dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-060526-426086",
+             "result.json": "3ac6f8a3a3675230b8d3742251c49a171770194f3611415a7a8c371ea86cc01b",
+             "initial_geometry.npz": "40bfeb51a04a30c7511cd65c4a849db5adc2660e2cf967f2d62da99109448d68"},
+    "4202": {"dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560",
+             "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+             "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"},
+    "4302": {"dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-094143-137994",
+             "result.json": "1bed437fdc5b01dd4dc55acc45be1d797d3cccfa2f4b855c5e0b44cd6e39840e",
+             "initial_geometry.npz": "1c27514f2ba95a3e276b01bf9f40ee30acf77600837908322864fdb57be97b32"},
+    "regenerated": false
+  },
+  "run": {
+    "kind": "seven_case_rc",
+    "order": "sequential as matrix order",
+    "one_attempt_per_slot": true,
+    "retry": false,
+    "journal": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7-runs/journal",
+    "batch_lock": "a5-rc2-pfs1-observation-v2-rc7-runs",
+    "output_prefix": "day4-a5-rc2-",
+    "pair_target_atol": 1e-06
+  },
+  "stop_rules": {
+    "preflight_mismatch": "stop before any episode",
+    "missing_result_or_execution_error_or_incomplete_capture_or_semantics_invalid": "pause queue, retain scene",
+    "positive_quality_rejected_with_complete_evidence": "record frozen failure, continue remaining registered cases",
+    "pair_target_drift_above_atol": "pause queue",
+    "code_parameter_or_threshold_change_required": "end this candidate batch; register a new version"
+  },
+  "release_gates": [
+    "all six positive cases accepted",
+    "4201 has a valid accepted or rejected evaluation",
+    "all seven evidence sets complete; three single/arc4 pairs pass",
+    "video visual check of release/retreat/no sustained support",
+    "local recomputation matches remote",
+    "original verify-dev passes for this candidate identity"
+  ],
+  "run_status": "not_run",
+  "formal_stage4_success": 0,
+  "notes": [
+    "Uniform particleFrictionScale=1.0 is registered for L1/L2/L3 before any run; 4100 is the L1 regression.",
+    "One manifest and one batch ledger; old 4202/4302 singles and RC2 results are preserved and not inserted into the matrix.",
+    "No freeze, no held-out, no formal batch in this round.",
+    "Cloth-ground force/impulse remains unavailable and is not a gate."
+  ]
+}

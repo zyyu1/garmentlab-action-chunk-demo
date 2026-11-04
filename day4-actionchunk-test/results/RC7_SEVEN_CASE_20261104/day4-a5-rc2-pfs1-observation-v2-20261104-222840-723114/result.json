@@ -1,0 +1,1158 @@
+{
+  "probe_version": "recovery-fold-episode-v1",
+  "passed": true,
+  "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-094143-137994",
+  "initial_case": {
+    "level": "crumpled",
+    "seed": 4302,
+    "translation_xy_m": [
+      0.005411810700933057,
+      0.016770457404895668
+    ],
+    "yaw_rad": -0.18560065242622373,
+    "settle_steps": 240,
+    "status": "blocked_unvalidated_corner_lift_drop",
+    "strips": [
+      {
+        "edge": "left",
+        "width_m": 0.2
+      }
+    ]
+  },
+  "fold_edge": "right",
+  "execution_mode": "arc4",
+  "control_edges": [
+    "left",
+    "right"
+  ],
+  "call_horizons": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    4,
+    1
+  ],
+  "chunks": [
+    {
+      "label": "fold_arc4",
+      "horizon": 4,
+      "labels": [
+        "fold_arc45",
+        "fold_arc90",
+        "fold_arc135",
+        "fold_place"
+      ],
+      "targets": [
+        [
+          0.13002273648146256,
+          -0.4665744953312839,
+          0.1597213273126655,
+          -0.2247197185844362
+        ],
+        [
+          -0.007842806217831955,
+          -0.4350611309245912,
+          0.223299971075356,
+          -0.2247197185844362
+        ],
+        [
+          -0.14570834891712642,
+          -0.40354776651789853,
+          0.16972132731266554,
+          -0.2247197185844362
+        ],
+        [
+          -0.2028141264871013,
+          -0.39049450358464083,
+          0.03329997107535603,
+          -0.2247197185844362
+        ]
+      ],
+      "response": {
+        "executed_steps": 4,
+        "done": false,
+        "info": {
+          "step_count": 2198,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_horizon": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "ee_after_chunk": [
+        -0.197036012384545,
+        -0.3914727937730413,
+        0.04619451383593098
+      ],
+      "step": 2198
+    }
+  ],
+  "code_files": {
+    "../STAGE4_SUCCESS_CRITERIA_V1.md": "0b831130dd0ee5f72a9408fdceffed16f209e07a7f46b60b6a0d386787d252a3",
+    "a5-candidate.json": "10a6cb452b9fafd5907f245b68fd02d49c7af1e12fa6cb0f755f1791a5af27a5",
+    "a5-rc2-pfs1-observation-v2.json": "83ce14b9b491c231db63fc1f5746d5d391164291994e59e52fe61b2784080571",
+    "a5_capture.py": "c5651dc80a137115730a1ae6d6f9c1d8e48e3c4b76c70ef3e14c164f03f23f28",
+    "a5_entry.py": "b8f87af35d0eb45ec1997f7c0d3147c0bf13053e048568447b3aa387425256e2",
+    "a5_l1.py": "c1534c5da6e6c89adc0535cbdc84e170dbedb0854aea0f945d844ce22432986e",
+    "a5_recovery.py": "b9993097980379fb72cf0feadb4c42d5ea254c758e19488bc518898adb4d3eda",
+    "a5_report.py": "f16d4fd2d51a4b24d77f5b181e0dff0bfc924fd5035f76376895b49166af81b7",
+    "audit_episode_evidence.py": "b1274e5fe579bc993e4822b9187403179bb8ea9ddeaa32cdaf9bd35d592142e6",
+    "audit_stage4_success_v1.py": "147c092ab85365fdfd6de182f24a9a7647a545c213513e722603a62e96a246ce",
+    "day4-l1-xfold-yaw-aware.py": "0aab8e7cd42f441a6dd9bfb547541bf806dc77740fd3f67a325e3e061036c53a",
+    "day4-recovery-fold-episode.py": "ddad4116ad33b38c8be2082de5a9fe43946f509bb7c272e931a8f136c74ab412",
+    "day4-square-initial-stripfold.py": "178ab10c08511b6dbb2ec1fd4581ab5af2493ee6a1ca7577ac49b575b913dcc6",
+    "day4-square-initial.py": "038dfc6ad11d4eed970743cd4a7c3b4fd0e7ef30ffb93ecab539040be5f62ad4",
+    "early_descent_geometry.py": "8911934112870121df8fb5b373da7f67575f6ef138af30bbca51f694777d5d0d",
+    "episode_evidence.py": "67965e8302515062c9288236ba291e183c5d04f97b34970dffee8a3b7dc5eab8",
+    "garmentlab-action-chunk-demo/backends/base.py": "d1d85718b3748df83743ac5d26693bd1cd35dfaca99f504bdec2f5ea94debc16",
+    "garmentlab-action-chunk-demo/backends/garmentlab_backend.py": "def9544ddbd597bddc6a2e65ae4d57165d69a80c4f5b6646cb67929ef4add372",
+    "garmentlab-action-chunk-demo/schemas/action.py": "3801f47eb4489dee2d66a7c1287434493de8233b6345f246a80cad4985b669b0",
+    "garmentlab-action-chunk-demo/schemas/observation.py": "49ca2836985a46a798addeee9a27e72cbbd6eaeb25f4f693f0482a9c0790dd18",
+    "hem_fold_geometry.py": "7d05f381e4e6e931422159ec722000c498e1efd910bf6903a61fa73f54c39156",
+    "hem_prepared_grasp_control.py": "46b6f7ac82a95df98bed3c91541ea7164552948b3e257a97dc303ce2aba38e63",
+    "l1_fold_geometry.py": "15275f27cda85f7b0b761b598394928c40bd0bf716fa6f007ab5b55bd1e421e9",
+    "l1_yaw_fold_geometry.py": "aa1f8a6e3ede7f7b66e91961f2801ec4cd34abd1fd2cd75f5e593391ea50c933",
+    "minimum_fold_geometry.py": "86ef99d36f2288546dab8bbea290a87d52efd84d47d215ad8d916b04943faa03",
+    "multi_grasp_geometry.py": "b4acc72886a80cb0ac37eb62d2189a0a28755a79777778077cf34bdbe53d5656",
+    "multi_prepared_grasp_control.py": "579de3d63230c51da7f17693a6995ab411fedfd6c3d00d76a7f0209c545e537c",
+    "pfs1_observation_v2.py": "abd459feb7adcddf4f1adf45d925e710ca65fb0ef0e7af41437222b4adef6d35",
+    "rc2_live_backend.py": "6ce84c4f0aef0452ea7625065d44c475e01dd083a65460687af586850bd40dd2",
+    "room_collision_control.py": "023c3a93dd4fb21db312223056834d5849cf070d7aed157d42f491f20721888e",
+    "run-a5-rc2-pfs1-observation-v2.sh": "dd0f8740b995654bfa2dcfeedcabff34c88ba79c53c360a16657bdd3512ebba6",
+    "run-l1-xfold-yaw-aware.sh": "560d38bbb08308ad808fd37e119b1059b45d4b625c849e893a879850d309e3db",
+    "run-recovery-fold-episode.sh": "41026c913f128690ad50c6e1446fbab33716927509d182f3d427d70e69493e59",
+    "run-square-initial-stripfold.sh": "1116550f65b9282c2a0e85f321c9ceb863cf8f1fe152c36bc48e387ebc34b631",
+    "run-square-initial.sh": "b22f848ee995c88b48d550ba83687ee6d804b9a2731fabb054fa143687bc4637",
+    "run-stage4-formal-batch.sh": "79ee868c146d7cdf012c342e4bc048b5780195e625e750d357e81ade469662d5",
+    "single_anchor_hem_control.py": "0fba623e7c023499a787fac366d74ca6700017c0804a9fa367bd06e1cee92547",
+    "square-difficulty.yaml": "a42fec8a1069ad43525d609bd058d9540bb7d6a1370d580abfc8616f61cd24f4",
+    "square-initial-files.json": "bccf3e157d96a53c4afba154194ddb652880f7634bedca912b9b5e4127ec5940",
+    "square-initial-plan.json": "32e61d575d77eae0943cb2251d10c25b12d7f0d9f8f962ddd96dc1a4d4d2ab85",
+    "square-initial-stripfold-files.json": "70b1793b5a87f69e9a4cbde5f6b40b047120eed798bdd895dee27e33072477f0",
+    "square-l1-xfold-yaw-files.json": "a9d9eddfe0bf6e1d4d6c7e628ac654dce444b2b74389fec2c0ceeee6c50f1adf",
+    "square-recovery-fold-files.json": "16cd67135dee249caa81ff4d23fed3ff9819db1b7f2e2119a9ee535849ed8cf1",
+    "square_cloth_40cm.usda": "fef138f6dd76484f3452455bf98cdc4d166812d290631125a5c375de8308ef7e",
+    "square_contact_recorder.py": "c91ba601babd927f335b16b6e2620ad9365d4dce950679ab8af0c31a04428934",
+    "square_contact_reporting.py": "178e79ac6de58ff25b42b6a3789123994169c110015848748a96fcce682e58a3",
+    "square_control_trace.py": "2b8fae48be4276fcc2aedb253b54b0a4e5c507aad1495927a83b01f145c9387d",
+    "square_edge_control.py": "6f16c10fddd2bede41f630ab5754fd88c0e8faee0d05153da5918a8859a17ef7",
+    "square_edge_fold_geometry.py": "a27d32c730f75a56645616bcf02a6a502e7f4052d10803a9364b0b0cc57be4fd",
+    "square_geometry.py": "e4702577f5e405d5b5cca29d00609c3f81edc19ffdd9e5a75aed5c5b67fad64e",
+    "square_pose_backend.py": "f78261623a4c48ef5de2db2bb951f68d626d437e2504c7b233c883af7f868b24",
+    "square_pose_contract.py": "31179c3e5f5d185499e13db42a758bc5692de6b01c006fa02c16aa3e70a8d148",
+    "square_probe_control.py": "c8fc57915dbcc5e47752012756a94c7a43e80eac897d4b0e2da2b2a3eb2f7727",
+    "square_proxy_ground_control.py": "b315a4e5f044ed0de81d11570e05a6c9bd0201e889ba1c1eae28ebd8e91fa05b",
+    "square_stable_hold.py": "693c397952dc9bc7a5a4cb2abe762e42fea58279cad87c4338971ffc94b85cb2",
+    "square_start.py": "d2b47783c263fc9ecf732402d82cf3a71ea8435db69c6667676fa0cdf633cdae",
+    "stage4-heldout-seeds.json": "15c87eec47412eaaa437a7c4627480ddb1315de3aafdd0f091a73601dfa6feed",
+    "stage4-success-v1-files.json": "5aa25774ce0a916c1371762c7f3e55350e62d3e55365f2e54e67b08213a50324",
+    "stage4-success-v1.json": "c51853c585955b399145bd9af211dc38f5b086a8c1fa0a4b391eb432f4bf9c55",
+    "stage4_batch_preflight.py": "1e39daa18d57ce3ac7557e321386fe46bd31e3675e70477ae158786e939d3ba5",
+    "stage4_success_v1.py": "8354b61286fa8bd37bc60444f1a237d9c8a5504a30e71df26352bb94496aa76d",
+    "strip_prepared_control.py": "49075fb4bf90d08e2186ea8c734da38429ebcc53f807949276aac52e404bce90",
+    "test_stage4_success_v1.py": "0a6c6de220e1d8fa91565222afdca96b6c9e5bead84e9b809ebbd584d6981db8"
+  },
+  "actions": [
+    {
+      "label": "rec_approach",
+      "target_pose": [
+        0.17514246702194214,
+        -0.47747427225112915,
+        0.1470259566605091,
+        -0.18560065242622373
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 417,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "ee": [
+        0.17524144242353323,
+        -0.47740855731478454,
+        0.14709117609562553
+      ],
+      "step": 417
+    },
+    {
+      "label": "rec_pick",
+      "target_pose": [
+        0.17514246702194214,
+        -0.47747427225112915,
+        0.03042595666050911,
+        -0.18560065242622373
+      ],
+      "command": 1,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 573,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "ee": [
+        0.17503177757965663,
+        -0.47747542908209406,
+        0.030489517425035924
+      ],
+      "step": 573,
+      "block_error_m": 4.437614378333562e-07,
+      "max_single_anchor_gap_m": 0.0013975177010944547
+    },
+    {
+      "label": "rec_lift",
+      "target_pose": [
+        0.17514246702194214,
+        -0.47747427225112915,
+        0.11042595666050911,
+        -0.18560065242622373
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 617,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "ee": [
+        0.17470586289136084,
+        -0.47755834098825334,
+        0.09633625169188964
+      ],
+      "step": 617,
+      "block_error_m": 0.0010036335677207017,
+      "max_single_anchor_gap_m": 0.0013975177010944547
+    },
+    {
+      "label": "rec_spread",
+      "target_pose": [
+        -0.19115334749221802,
+        -0.3963221311569214,
+        0.04330002043545246,
+        -0.18560065242622373
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 826,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "ee": [
+        -0.17692643688285492,
+        -0.39924912724740574,
+        0.04604221382289891
+      ],
+      "step": 826,
+      "block_error_m": 0.0010547322282302846,
+      "max_single_anchor_gap_m": 0.002158042178259306
+    },
+    {
+      "label": "rec_release",
+      "target_pose": [
+        -0.19115334749221802,
+        -0.3963221311569214,
+        0.04330002043545246,
+        -0.18560065242622373
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 853,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "ee": [
+        -0.18717646386219672,
+        -0.39710115089796105,
+        0.044170183046680904
+      ],
+      "step": 853
+    },
+    {
+      "label": "fold_approach",
+      "target_pose": [
+        0.18712851405143738,
+        -0.4796277582645416,
+        0.159899971075356,
+        -0.2247197185844362
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1478,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "ee": [
+        0.1837925844733202,
+        -0.4786898141253554,
+        0.15853976395348404
+      ],
+      "step": 1478
+    },
+    {
+      "label": "fold_close",
+      "target_pose": [
+        0.18712851405143738,
+        -0.4796277582645416,
+        0.013299971075356007,
+        -0.2247197185844362
+      ],
+      "command": 1,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 1845,
+          "phase": 1,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "ee": [
+        0.18696309540432302,
+        -0.4793017440540494,
+        0.01316704747248484
+      ],
+      "step": 1845,
+      "block_error_m": 2.7251057850675853e-05,
+      "max_single_anchor_gap_m": 0.0013621620239730207
+    },
+    {
+      "label": "fold_arc45",
+      "target_pose": [
+        0.13002273648146256,
+        -0.4665744953312839,
+        0.1597213273126655,
+        -0.2247197185844362
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 4,
+        "done": false,
+        "info": {
+          "step_count": 2198,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_horizon": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "ee": [
+        -0.197036012384545,
+        -0.3914727937730413,
+        0.04619451383593098
+      ],
+      "ee_scope": "after_chunk",
+      "step": 2198,
+      "chunk_label": "fold_arc4",
+      "chunk_index": 0,
+      "chunk_size": 4,
+      "row_in_chunk": 0,
+      "block_error_m": 0.0009954421645294329,
+      "max_single_anchor_gap_m": 0.002128061448699186
+    },
+    {
+      "label": "fold_arc90",
+      "target_pose": [
+        -0.007842806217831955,
+        -0.4350611309245912,
+        0.223299971075356,
+        -0.2247197185844362
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 4,
+        "done": false,
+        "info": {
+          "step_count": 2198,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_horizon": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "ee": [
+        -0.197036012384545,
+        -0.3914727937730413,
+        0.04619451383593098
+      ],
+      "ee_scope": "after_chunk",
+      "step": 2198,
+      "chunk_label": "fold_arc4",
+      "chunk_index": 0,
+      "chunk_size": 4,
+      "row_in_chunk": 1,
+      "block_error_m": 0.0009954421645294329,
+      "max_single_anchor_gap_m": 0.002128061448699186
+    },
+    {
+      "label": "fold_arc135",
+      "target_pose": [
+        -0.14570834891712642,
+        -0.40354776651789853,
+        0.16972132731266554,
+        -0.2247197185844362
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 4,
+        "done": false,
+        "info": {
+          "step_count": 2198,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_horizon": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "ee": [
+        -0.197036012384545,
+        -0.3914727937730413,
+        0.04619451383593098
+      ],
+      "ee_scope": "after_chunk",
+      "step": 2198,
+      "chunk_label": "fold_arc4",
+      "chunk_index": 0,
+      "chunk_size": 4,
+      "row_in_chunk": 2,
+      "block_error_m": 0.0009954421645294329,
+      "max_single_anchor_gap_m": 0.002128061448699186
+    },
+    {
+      "label": "fold_place",
+      "target_pose": [
+        -0.2028141264871013,
+        -0.39049450358464083,
+        0.03329997107535603,
+        -0.2247197185844362
+      ],
+      "command": 2,
+      "response": {
+        "executed_steps": 4,
+        "done": false,
+        "info": {
+          "step_count": 2198,
+          "phase": 3,
+          "gripper_state": 2,
+          "holding": true
+        }
+      },
+      "checks": {
+        "executed_horizon": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": true,
+      "attached": true,
+      "ee": [
+        -0.197036012384545,
+        -0.3914727937730413,
+        0.04619451383593098
+      ],
+      "ee_scope": "after_chunk",
+      "step": 2198,
+      "chunk_label": "fold_arc4",
+      "chunk_index": 0,
+      "chunk_size": 4,
+      "row_in_chunk": 3,
+      "block_error_m": 0.0009954421645294329,
+      "max_single_anchor_gap_m": 0.002128061448699186
+    },
+    {
+      "label": "release_retreat",
+      "target_pose": [
+        -0.19702531597611664,
+        -0.3914727525425848,
+        0.19618965890297013,
+        -0.2247197185844362
+      ],
+      "command": 0,
+      "response": {
+        "executed_steps": 1,
+        "done": false,
+        "info": {
+          "step_count": 2536,
+          "phase": 5,
+          "gripper_state": 0,
+          "holding": false
+        }
+      },
+      "checks": {
+        "executed_one": true,
+        "not_done": true,
+        "holding_consistent": true,
+        "attachment_count": true
+      },
+      "holding": false,
+      "attached": false,
+      "ee": [
+        -0.1986835185551085,
+        -0.390589122443139,
+        0.19207136621320342
+      ],
+      "step": 2536
+    }
+  ],
+  "errors": [],
+  "records": [
+    {
+      "edge": "left",
+      "width_m": 0.2,
+      "pick_index": 210,
+      "folded_pick": [
+        0.17514246702194214,
+        -0.47747427225112915,
+        0.02702595666050911
+      ],
+      "flat_pick": [
+        -0.19115334749221802,
+        -0.3963221311569214,
+        0.009900020435452461
+      ],
+      "label": "recovery_targets"
+    },
+    {
+      "edge": "right",
+      "pick_index": 230,
+      "pick_world": [
+        0.18712851405143738,
+        -0.4796277582645416,
+        0.009899971075356007
+      ],
+      "fold_yaw": -0.2247197185844362,
+      "width_m": 0.2,
+      "material_targets": [
+        [
+          0.13002273648146256,
+          -0.4665744953312839,
+          0.15632132731266551
+        ],
+        [
+          -0.007842806217831955,
+          -0.4350611309245912,
+          0.21989997107535603
+        ],
+        [
+          -0.14570834891712642,
+          -0.40354776651789853,
+          0.16632132731266555
+        ],
+        [
+          -0.2028141264871013,
+          -0.39049450358464083,
+          0.02989997107535603
+        ]
+      ],
+      "ee_targets": [
+        [
+          0.13002273648146256,
+          -0.4665744953312839,
+          0.1597213273126655
+        ],
+        [
+          -0.007842806217831955,
+          -0.4350611309245912,
+          0.223299971075356
+        ],
+        [
+          -0.14570834891712642,
+          -0.40354776651789853,
+          0.16972132731266554
+        ],
+        [
+          -0.2028141264871013,
+          -0.39049450358464083,
+          0.03329997107535603
+        ]
+      ],
+      "label": "fold_targets"
+    }
+  ],
+  "fold_yaw": -0.2247197185844362,
+  "recovery_metrics": {
+    "rigid_residual_vs_flat_max_m": 6.417180447813859e-06,
+    "rigid_residual_vs_flat_p95_m": 5.2348403334662645e-06,
+    "extent": [
+      0.47907090187072754,
+      0.47908222675323486,
+      6.51925802230835e-08
+    ],
+    "z_p95": 0.009900021366775036
+  },
+  "fold_hold": {
+    "steps": 180,
+    "control": "joint_position_hold; RMP not called at fixed target",
+    "target_joint_positions": [
+      -0.19118273258209229,
+      0.3349125385284424,
+      -0.21861974895000458,
+      -2.5699849128723145,
+      0.2870861291885376,
+      2.887507677078247,
+      1.9050981998443604
+    ],
+    "arm_joint_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "fold_held_check": {
+    "position_error_m": 0.014163733633796841,
+    "arm_speed_rad_s": 0.0021472882945090532,
+    "anchor_gap_max_m": 0.002128061448699186,
+    "orientation_reached": true,
+    "accepted": true
+  },
+  "release_clock": {
+    "absolute_step": 2538,
+    "sim_time_s": 42.300002206116915,
+    "dt_s": 0.016666666666666666,
+    "pick_index": 230,
+    "yaw_rad": -0.2247197185844362,
+    "upward_displacement_m": 0.14588119378866915
+  },
+  "fold_metrics": {
+    "moving_count": 210,
+    "crossed_fraction": 1.0,
+    "extent": [
+      0.2687662485986948,
+      0.43317319452762604,
+      0.06032660882920027
+    ],
+    "z_p95": 0.06892389059066772,
+    "pick_index": 230
+  },
+  "action_count": 12,
+  "action_labels": [
+    "rec_approach",
+    "rec_pick",
+    "rec_lift",
+    "rec_spread",
+    "rec_release",
+    "fold_approach",
+    "fold_close",
+    "fold_arc45",
+    "fold_arc90",
+    "fold_arc135",
+    "fold_place",
+    "release_retreat"
+  ],
+  "formal_12_action_budget_passed": true,
+  "formal_day4_success": false,
+  "fold_success_accepted": false,
+  "final_image": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261104-222840-723114/final.png",
+  "evidence": {
+    "schema_version": 1,
+    "synthetic": false,
+    "frames": 1439,
+    "observed_steps": 2866,
+    "execute_calls": 9,
+    "errors": [],
+    "sources": {
+      "000_episode_evidence.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/episode_evidence.py",
+        "sha256": "67965e8302515062c9288236ba291e183c5d04f97b34970dffee8a3b7dc5eab8"
+      },
+      "001_a5_recovery.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/a5_recovery.py",
+        "sha256": "b9993097980379fb72cf0feadb4c42d5ea254c758e19488bc518898adb4d3eda"
+      },
+      "002_STAGE4_SUCCESS_CRITERIA_V1.md": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/STAGE4_SUCCESS_CRITERIA_V1.md",
+        "sha256": "0b831130dd0ee5f72a9408fdceffed16f209e07a7f46b60b6a0d386787d252a3"
+      },
+      "003_a5-candidate.json": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/a5-candidate.json",
+        "sha256": "10a6cb452b9fafd5907f245b68fd02d49c7af1e12fa6cb0f755f1791a5af27a5"
+      },
+      "004_a5-rc2-pfs1-observation-v2.json": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/a5-rc2-pfs1-observation-v2.json",
+        "sha256": "83ce14b9b491c231db63fc1f5746d5d391164291994e59e52fe61b2784080571"
+      },
+      "005_a5_capture.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/a5_capture.py",
+        "sha256": "c5651dc80a137115730a1ae6d6f9c1d8e48e3c4b76c70ef3e14c164f03f23f28"
+      },
+      "006_a5_entry.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/a5_entry.py",
+        "sha256": "b8f87af35d0eb45ec1997f7c0d3147c0bf13053e048568447b3aa387425256e2"
+      },
+      "007_a5_l1.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/a5_l1.py",
+        "sha256": "c1534c5da6e6c89adc0535cbdc84e170dbedb0854aea0f945d844ce22432986e"
+      },
+      "008_a5_report.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/a5_report.py",
+        "sha256": "f16d4fd2d51a4b24d77f5b181e0dff0bfc924fd5035f76376895b49166af81b7"
+      },
+      "009_audit_episode_evidence.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/audit_episode_evidence.py",
+        "sha256": "b1274e5fe579bc993e4822b9187403179bb8ea9ddeaa32cdaf9bd35d592142e6"
+      },
+      "010_audit_stage4_success_v1.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/audit_stage4_success_v1.py",
+        "sha256": "147c092ab85365fdfd6de182f24a9a7647a545c213513e722603a62e96a246ce"
+      },
+      "011_day4-l1-xfold-yaw-aware.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/day4-l1-xfold-yaw-aware.py",
+        "sha256": "0aab8e7cd42f441a6dd9bfb547541bf806dc77740fd3f67a325e3e061036c53a"
+      },
+      "012_day4-recovery-fold-episode.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/day4-recovery-fold-episode.py",
+        "sha256": "ddad4116ad33b38c8be2082de5a9fe43946f509bb7c272e931a8f136c74ab412"
+      },
+      "013_day4-square-initial-stripfold.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/day4-square-initial-stripfold.py",
+        "sha256": "178ab10c08511b6dbb2ec1fd4581ab5af2493ee6a1ca7577ac49b575b913dcc6"
+      },
+      "014_day4-square-initial.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/day4-square-initial.py",
+        "sha256": "038dfc6ad11d4eed970743cd4a7c3b4fd0e7ef30ffb93ecab539040be5f62ad4"
+      },
+      "015_early_descent_geometry.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/early_descent_geometry.py",
+        "sha256": "8911934112870121df8fb5b373da7f67575f6ef138af30bbca51f694777d5d0d"
+      },
+      "016_base.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/garmentlab-action-chunk-demo/backends/base.py",
+        "sha256": "d1d85718b3748df83743ac5d26693bd1cd35dfaca99f504bdec2f5ea94debc16"
+      },
+      "017_garmentlab_backend.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/garmentlab-action-chunk-demo/backends/garmentlab_backend.py",
+        "sha256": "def9544ddbd597bddc6a2e65ae4d57165d69a80c4f5b6646cb67929ef4add372"
+      },
+      "018_action.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/garmentlab-action-chunk-demo/schemas/action.py",
+        "sha256": "3801f47eb4489dee2d66a7c1287434493de8233b6345f246a80cad4985b669b0"
+      },
+      "019_observation.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/garmentlab-action-chunk-demo/schemas/observation.py",
+        "sha256": "49ca2836985a46a798addeee9a27e72cbbd6eaeb25f4f693f0482a9c0790dd18"
+      },
+      "020_hem_fold_geometry.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/hem_fold_geometry.py",
+        "sha256": "7d05f381e4e6e931422159ec722000c498e1efd910bf6903a61fa73f54c39156"
+      },
+      "021_hem_prepared_grasp_control.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/hem_prepared_grasp_control.py",
+        "sha256": "46b6f7ac82a95df98bed3c91541ea7164552948b3e257a97dc303ce2aba38e63"
+      },
+      "022_l1_fold_geometry.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/l1_fold_geometry.py",
+        "sha256": "15275f27cda85f7b0b761b598394928c40bd0bf716fa6f007ab5b55bd1e421e9"
+      },
+      "023_l1_yaw_fold_geometry.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/l1_yaw_fold_geometry.py",
+        "sha256": "aa1f8a6e3ede7f7b66e91961f2801ec4cd34abd1fd2cd75f5e593391ea50c933"
+      },
+      "024_minimum_fold_geometry.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/minimum_fold_geometry.py",
+        "sha256": "86ef99d36f2288546dab8bbea290a87d52efd84d47d215ad8d916b04943faa03"
+      },
+      "025_multi_grasp_geometry.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/multi_grasp_geometry.py",
+        "sha256": "b4acc72886a80cb0ac37eb62d2189a0a28755a79777778077cf34bdbe53d5656"
+      },
+      "026_multi_prepared_grasp_control.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/multi_prepared_grasp_control.py",
+        "sha256": "579de3d63230c51da7f17693a6995ab411fedfd6c3d00d76a7f0209c545e537c"
+      },
+      "027_pfs1_observation_v2.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/pfs1_observation_v2.py",
+        "sha256": "abd459feb7adcddf4f1adf45d925e710ca65fb0ef0e7af41437222b4adef6d35"
+      },
+      "028_rc2_live_backend.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/rc2_live_backend.py",
+        "sha256": "6ce84c4f0aef0452ea7625065d44c475e01dd083a65460687af586850bd40dd2"
+      },
+      "029_room_collision_control.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/room_collision_control.py",
+        "sha256": "023c3a93dd4fb21db312223056834d5849cf070d7aed157d42f491f20721888e"
+      },
+      "030_run-a5-rc2-pfs1-observation-v2.sh": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/run-a5-rc2-pfs1-observation-v2.sh",
+        "sha256": "dd0f8740b995654bfa2dcfeedcabff34c88ba79c53c360a16657bdd3512ebba6"
+      },
+      "031_run-l1-xfold-yaw-aware.sh": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/run-l1-xfold-yaw-aware.sh",
+        "sha256": "560d38bbb08308ad808fd37e119b1059b45d4b625c849e893a879850d309e3db"
+      },
+      "032_run-recovery-fold-episode.sh": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/run-recovery-fold-episode.sh",
+        "sha256": "41026c913f128690ad50c6e1446fbab33716927509d182f3d427d70e69493e59"
+      },
+      "033_run-square-initial-stripfold.sh": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/run-square-initial-stripfold.sh",
+        "sha256": "1116550f65b9282c2a0e85f321c9ceb863cf8f1fe152c36bc48e387ebc34b631"
+      },
+      "034_run-square-initial.sh": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/run-square-initial.sh",
+        "sha256": "b22f848ee995c88b48d550ba83687ee6d804b9a2731fabb054fa143687bc4637"
+      },
+      "035_run-stage4-formal-batch.sh": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/run-stage4-formal-batch.sh",
+        "sha256": "79ee868c146d7cdf012c342e4bc048b5780195e625e750d357e81ade469662d5"
+      },
+      "036_single_anchor_hem_control.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/single_anchor_hem_control.py",
+        "sha256": "0fba623e7c023499a787fac366d74ca6700017c0804a9fa367bd06e1cee92547"
+      },
+      "037_square-difficulty.yaml": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square-difficulty.yaml",
+        "sha256": "a42fec8a1069ad43525d609bd058d9540bb7d6a1370d580abfc8616f61cd24f4"
+      },
+      "038_square-initial-files.json": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square-initial-files.json",
+        "sha256": "bccf3e157d96a53c4afba154194ddb652880f7634bedca912b9b5e4127ec5940"
+      },
+      "039_square-initial-plan.json": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square-initial-plan.json",
+        "sha256": "32e61d575d77eae0943cb2251d10c25b12d7f0d9f8f962ddd96dc1a4d4d2ab85"
+      },
+      "040_square-initial-stripfold-files.json": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square-initial-stripfold-files.json",
+        "sha256": "70b1793b5a87f69e9a4cbde5f6b40b047120eed798bdd895dee27e33072477f0"
+      },
+      "041_square-l1-xfold-yaw-files.json": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square-l1-xfold-yaw-files.json",
+        "sha256": "a9d9eddfe0bf6e1d4d6c7e628ac654dce444b2b74389fec2c0ceeee6c50f1adf"
+      },
+      "042_square-recovery-fold-files.json": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square-recovery-fold-files.json",
+        "sha256": "16cd67135dee249caa81ff4d23fed3ff9819db1b7f2e2119a9ee535849ed8cf1"
+      },
+      "043_square_cloth_40cm.usda": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_cloth_40cm.usda",
+        "sha256": "fef138f6dd76484f3452455bf98cdc4d166812d290631125a5c375de8308ef7e"
+      },
+      "044_square_contact_recorder.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_contact_recorder.py",
+        "sha256": "c91ba601babd927f335b16b6e2620ad9365d4dce950679ab8af0c31a04428934"
+      },
+      "045_square_contact_reporting.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_contact_reporting.py",
+        "sha256": "178e79ac6de58ff25b42b6a3789123994169c110015848748a96fcce682e58a3"
+      },
+      "046_square_control_trace.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_control_trace.py",
+        "sha256": "2b8fae48be4276fcc2aedb253b54b0a4e5c507aad1495927a83b01f145c9387d"
+      },
+      "047_square_edge_control.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_edge_control.py",
+        "sha256": "6f16c10fddd2bede41f630ab5754fd88c0e8faee0d05153da5918a8859a17ef7"
+      },
+      "048_square_edge_fold_geometry.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_edge_fold_geometry.py",
+        "sha256": "a27d32c730f75a56645616bcf02a6a502e7f4052d10803a9364b0b0cc57be4fd"
+      },
+      "049_square_geometry.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_geometry.py",
+        "sha256": "e4702577f5e405d5b5cca29d00609c3f81edc19ffdd9e5a75aed5c5b67fad64e"
+      },
+      "050_square_pose_backend.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_pose_backend.py",
+        "sha256": "f78261623a4c48ef5de2db2bb951f68d626d437e2504c7b233c883af7f868b24"
+      },
+      "051_square_pose_contract.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_pose_contract.py",
+        "sha256": "31179c3e5f5d185499e13db42a758bc5692de6b01c006fa02c16aa3e70a8d148"
+      },
+      "052_square_probe_control.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_probe_control.py",
+        "sha256": "c8fc57915dbcc5e47752012756a94c7a43e80eac897d4b0e2da2b2a3eb2f7727"
+      },
+      "053_square_proxy_ground_control.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_proxy_ground_control.py",
+        "sha256": "b315a4e5f044ed0de81d11570e05a6c9bd0201e889ba1c1eae28ebd8e91fa05b"
+      },
+      "054_square_stable_hold.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_stable_hold.py",
+        "sha256": "693c397952dc9bc7a5a4cb2abe762e42fea58279cad87c4338971ffc94b85cb2"
+      },
+      "055_square_start.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/square_start.py",
+        "sha256": "d2b47783c263fc9ecf732402d82cf3a71ea8435db69c6667676fa0cdf633cdae"
+      },
+      "056_stage4-heldout-seeds.json": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/stage4-heldout-seeds.json",
+        "sha256": "15c87eec47412eaaa437a7c4627480ddb1315de3aafdd0f091a73601dfa6feed"
+      },
+      "057_stage4-success-v1-files.json": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/stage4-success-v1-files.json",
+        "sha256": "5aa25774ce0a916c1371762c7f3e55350e62d3e55365f2e54e67b08213a50324"
+      },
+      "058_stage4-success-v1.json": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/stage4-success-v1.json",
+        "sha256": "c51853c585955b399145bd9af211dc38f5b086a8c1fa0a4b391eb432f4bf9c55"
+      },
+      "059_stage4_batch_preflight.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/stage4_batch_preflight.py",
+        "sha256": "1e39daa18d57ce3ac7557e321386fe46bd31e3675e70477ae158786e939d3ba5"
+      },
+      "060_stage4_success_v1.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/stage4_success_v1.py",
+        "sha256": "8354b61286fa8bd37bc60444f1a237d9c8a5504a30e71df26352bb94496aa76d"
+      },
+      "061_strip_prepared_control.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/strip_prepared_control.py",
+        "sha256": "49075fb4bf90d08e2186ea8c734da38429ebcc53f807949276aac52e404bce90"
+      },
+      "062_test_stage4_success_v1.py": {
+        "original": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7/app/test_stage4_success_v1.py",
+        "sha256": "0a6c6de220e1d8fa91565222afdca96b6c9e5bead84e9b809ebbd584d6981db8"
+      },
+      "063_FoldEnv.py": {
+        "original": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/FoldEnv.py",
+        "sha256": "e0aff36e6b25d724cd8c7f2ffd4dd7c53ffd95693f4e502457eaecf63ebcbe24"
+      },
+      "064_MyFranka.py": {
+        "original": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py",
+        "sha256": "adc6abc5b8721a0730fe7281d6cc1d89a6b7e1abad0d7b5da167369f0371428a"
+      }
+    },
+    "samples": {
+      "released": {
+        "kind": "sample",
+        "utc": "2026-11-04T14:45:51.698546+00:00",
+        "monotonic_ns": 21903257919130334,
+        "sim_time_s": 39.833335410803556,
+        "observed_step": 2388,
+        "call_id": 9,
+        "label": "released",
+        "holding": false,
+        "attached": false,
+        "enabled_slots": [
+          false,
+          false,
+          false
+        ],
+        "logical_attached": false,
+        "command_holding": false,
+        "ee_m": [
+          -0.19702608679360725,
+          -0.3914738500161881,
+          0.046190172424534263
+        ],
+        "backend_step": 2388
+      },
+      "retreated": {
+        "kind": "sample",
+        "utc": "2026-11-04T14:46:41.630924+00:00",
+        "monotonic_ns": 21903307851520282,
+        "sim_time_s": 42.300002206116915,
+        "observed_step": 2536,
+        "call_id": null,
+        "label": "retreated",
+        "holding": false,
+        "attached": false,
+        "enabled_slots": [
+          false,
+          false,
+          false
+        ],
+        "logical_attached": false,
+        "command_holding": false,
+        "ee_m": [
+          -0.1986835185551085,
+          -0.390589122443139,
+          0.19207136621320342
+        ],
+        "backend_step": 2536
+      },
+      "hold_3s": {
+        "kind": "sample",
+        "utc": "2026-11-04T14:47:44.494771+00:00",
+        "monotonic_ns": 21903370715350438,
+        "sim_time_s": 45.30000236257911,
+        "observed_step": 2716,
+        "call_id": null,
+        "label": "hold_3s",
+        "holding": false,
+        "attached": false,
+        "enabled_slots": [
+          false,
+          false,
+          false
+        ],
+        "logical_attached": false,
+        "command_holding": false,
+        "ee_m": [
+          -0.19866887007675338,
+          -0.3905955837523948,
+          0.19215120745523684
+        ],
+        "backend_step": 2716
+      },
+      "hold_4s": {
+        "kind": "sample",
+        "utc": "2026-11-04T14:48:05.795124+00:00",
+        "monotonic_ns": 21903392015704128,
+        "sim_time_s": 46.30000241473317,
+        "observed_step": 2776,
+        "call_id": null,
+        "label": "hold_4s",
+        "holding": false,
+        "attached": false,
+        "enabled_slots": [
+          false,
+          false,
+          false
+        ],
+        "logical_attached": false,
+        "command_holding": false,
+        "ee_m": [
+          -0.1986688698905096,
+          -0.39059558383835613,
+          0.1921512074552782
+        ],
+        "backend_step": 2776
+      },
+      "terminal": {
+        "kind": "sample",
+        "utc": "2026-11-04T14:48:38.620803+00:00",
+        "monotonic_ns": 21903424841396008,
+        "sim_time_s": 47.80000249296427,
+        "observed_step": 2866,
+        "call_id": null,
+        "label": "terminal",
+        "holding": false,
+        "attached": false,
+        "enabled_slots": [
+          false,
+          false,
+          false
+        ],
+        "logical_attached": false,
+        "command_holding": false,
+        "ee_m": [
+          -0.19866887007675338,
+          -0.3905955837523948,
+          0.19215120745523684
+        ],
+        "backend_step": 2866
+      }
+    },
+    "formal_day4_success": false,
+    "playback_fps": 30,
+    "time_authority": "timeline.sim_time_s; video playback is not elapsed simulation time"
+  }
+}

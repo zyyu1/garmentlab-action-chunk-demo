@@ -1,0 +1,278 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "final-candidate-rc7-seven-case",
+  "stage": "rc7_batch_complete_six_positives_failed",
+  "created_utc": "2026-11-04T13:05:00Z",
+  "status": "Seven-case RC completed. All 7 slots have complete evidence and all three single/arc4 pairs have 0.0 target drift, but only 4 of the 6 positive cases are accepted: 4202 s/a and 4302 s/a pass; 4100 s/a fail quality (L1 free edge not on the table; residual speed). 4201 is a valid rejection. Release gate 1 fails and verify-dev rejects the candidate at 4100.",
+  "final_candidate": true,
+  "parent": "a5-rc2-pfs1-observation-v2",
+  "parent_manifest_sha256": "d97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f",
+  "parent_manifest_entries": 63,
+  "preserved_results": [
+    "results/PFS1_V2_RUN_4202_20261104 (4202 single, overall_valid)",
+    "results/PFS1_V2_EXT_4302_20261104 (4302 single, overall_valid)",
+    "RC2 4302/4202 baselines under the RC audit directories"
+  ],
+  "physics_scope": {
+    "decision": "uniform",
+    "particle_friction_scale": 1.0,
+    "friction": 0.3,
+    "applies_to": [
+      "flat",
+      "perturbed",
+      "crumpled"
+    ],
+    "l1_regression": "4100 single/arc4 are the regression check for the L1 0.0 -> 1.0 change",
+    "task_scoped_override": false,
+    "changed_simulation_source": "a5_l1.py only (scale 0.0 -> 1.0 + passive observation hooks); a5_recovery.py unchanged",
+    "ground_collision_material_binding": "unchanged",
+    "evaluator": "stage4_success_v1 unchanged",
+    "thresholds": {
+      "centroid_limit_mm": 1.0,
+      "vertex_p95_limit_mm": 3.0
+    }
+  },
+  "matrix": [
+    {
+      "slot": 1,
+      "seed": 4100,
+      "level": "flat",
+      "task": "A_l1_overfold",
+      "mode": "single",
+      "actions": 7,
+      "positive": true
+    },
+    {
+      "slot": 2,
+      "seed": 4100,
+      "level": "flat",
+      "task": "A_l1_overfold",
+      "mode": "arc4",
+      "actions": 7,
+      "positive": true
+    },
+    {
+      "slot": 3,
+      "seed": 4202,
+      "level": "perturbed",
+      "task": "B_nominal",
+      "mode": "single",
+      "actions": 12,
+      "positive": true
+    },
+    {
+      "slot": 4,
+      "seed": 4202,
+      "level": "perturbed",
+      "task": "B_nominal",
+      "mode": "arc4",
+      "actions": 12,
+      "positive": true
+    },
+    {
+      "slot": 5,
+      "seed": 4302,
+      "level": "crumpled",
+      "task": "B_nominal",
+      "mode": "single",
+      "actions": 12,
+      "positive": true
+    },
+    {
+      "slot": 6,
+      "seed": 4302,
+      "level": "crumpled",
+      "task": "B_nominal",
+      "mode": "arc4",
+      "actions": 12,
+      "positive": true
+    },
+    {
+      "slot": 7,
+      "seed": 4201,
+      "level": "perturbed",
+      "task": "B_nominal_history_failure",
+      "mode": "single",
+      "actions": 12,
+      "positive": false
+    }
+  ],
+  "initial": {
+    "regenerated": false,
+    "4100": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-20261031-094446-203825",
+      "result.json": "31d8d47f4e18f6f9c8e96b0e3a3f0237ac87786978a343548cefddf1a7e567d8",
+      "initial_geometry.npz": "dd5783038cd7ae95c17525574ca9c76d0df2399261a6df6a0c8f09a5b351bcb3"
+    },
+    "4201": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-060526-426086",
+      "result.json": "3ac6f8a3a3675230b8d3742251c49a171770194f3611415a7a8c371ea86cc01b",
+      "initial_geometry.npz": "40bfeb51a04a30c7511cd65c4a849db5adc2660e2cf967f2d62da99109448d68"
+    },
+    "4202": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560",
+      "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+      "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+    },
+    "4302": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-094143-137994",
+      "result.json": "1bed437fdc5b01dd4dc55acc45be1d797d3cccfa2f4b855c5e0b44cd6e39840e",
+      "initial_geometry.npz": "1c27514f2ba95a3e276b01bf9f40ee30acf77600837908322864fdb57be97b32"
+    }
+  },
+  "identity": {
+    "candidate_manifest_sha256": "bcba8c11b5c65b179227a01feef343b3d90be415776f216d8aefb1424ed18a2a",
+    "deployment_manifest_sha256": "bcba8c11b5c65b179227a01feef343b3d90be415776f216d8aefb1424ed18a2a",
+    "candidate_manifest_entries": 63,
+    "config_sha256": "83ce14b9b491c231db63fc1f5746d5d391164291994e59e52fe61b2784080571",
+    "runner_sha256": "dd0f8740b995654bfa2dcfeedcabff34c88ba79c53c360a16657bdd3512ebba6",
+    "changed_entries_vs_v2": [
+      "a5_l1.py",
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "unchanged_entries_vs_v2": 60,
+    "a5_l1_sha256": "c1534c5da6e6c89adc0535cbdc84e170dbedb0854aea0f945d844ce22432986e",
+    "audit_script": "audit_rc7_case.py",
+    "static_audit_sha256": "0e3be02e8c2273dddad5304a58328357c7cee5b076c0328c771485cc992c9d5c",
+    "source_diff_sha256": "32cd04d3ed4276bf783b6f1fcd7c35c4cd24d8934d1edbfb3f055d2b8030a583"
+  },
+  "verification": {
+    "candidate_manifest": "63/63 (local and remote)",
+    "parent_manifest": "d97bf349...",
+    "unchanged_entries_vs_v2": 60,
+    "changed_entries_vs_v2": 3,
+    "preflight_remote": "RC7_PREFLIGHT_OK 63 bcba8c11... cases 7",
+    "initial_hashes": "all four seeds match the registered files on the remote host",
+    "matrix_modes": "4100 s/a, 4202 s/a, 4302 s/a, 4201 s; matches a5-candidate development modes",
+    "py_compile": true,
+    "bash_syntax": true,
+    "no_4202_4302_rerun": true,
+    "no_freeze_heldout_formal": true,
+    "download_verified": "765/765 remote-local SHA256 match",
+    "pair_targets": "4100 0.0, 4202 0.0, 4302 0.0 m",
+    "verify_dev": "FAILED at 4100 (positive smoke case rejected); exit 1; log rc7-verify-dev.log",
+    "verify_dev_integration": "a5_entry.py bytes unchanged; MANIFEST resolves to a5-manifest.json = bcba8c11...; protocol label stage4-a5-rc2 retained; assess/verify-dev checks and thresholds unchanged"
+  },
+  "incident_log": [
+    {
+      "utc": "2026-11-04T13:03:54Z",
+      "slot": 1,
+      "event": "First batch session started; the operator terminated the tmux session while Isaac was still in its startup asset-root check. No episode was produced (runner.log ends in the blocking omni.client stack; GPU went idle).",
+      "preserved_at": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7-runs.aborted-20261104T1304Z",
+      "counted_as_case_result": false,
+      "action": "Preserved the aborted ledger; restarted the batch under the same manifest and config with a fresh ledger at 2026-11-04T13:09:21Z."
+    }
+  ],
+  "run_status": "batch_complete_not_released",
+  "run": {
+    "batch_dir": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7-runs",
+    "journal": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7-runs/journal",
+    "attempts": {
+      "started": 7,
+      "finished": 7,
+      "total_lines": 14
+    },
+    "cases": [
+      {
+        "slot": 1,
+        "seed": 4100,
+        "mode": "single",
+        "quality": "rejected",
+        "centroid_mm": 0.7031,
+        "p95_mm": 1.7764,
+        "geometry": false,
+        "stable": false,
+        "run": "day4-a5-rc2-l1-20261104-210923-025602"
+      },
+      {
+        "slot": 2,
+        "seed": 4100,
+        "mode": "arc4",
+        "quality": "rejected",
+        "centroid_mm": 0.7031,
+        "p95_mm": 1.7764,
+        "geometry": false,
+        "stable": false,
+        "run": "day4-a5-rc2-l1-20261104-212326-225911"
+      },
+      {
+        "slot": 3,
+        "seed": 4202,
+        "mode": "single",
+        "quality": "accepted",
+        "centroid_mm": 0.2642,
+        "p95_mm": 0.3792,
+        "geometry": true,
+        "stable": true,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261104-213547-226507"
+      },
+      {
+        "slot": 4,
+        "seed": 4202,
+        "mode": "arc4",
+        "quality": "accepted",
+        "centroid_mm": 0.2642,
+        "p95_mm": 0.3792,
+        "geometry": true,
+        "stable": true,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261104-215152-043317"
+      },
+      {
+        "slot": 5,
+        "seed": 4302,
+        "mode": "single",
+        "quality": "accepted",
+        "centroid_mm": 0.239,
+        "p95_mm": 0.3524,
+        "geometry": true,
+        "stable": true,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261104-220859-844555"
+      },
+      {
+        "slot": 6,
+        "seed": 4302,
+        "mode": "arc4",
+        "quality": "accepted",
+        "centroid_mm": 0.239,
+        "p95_mm": 0.3524,
+        "geometry": true,
+        "stable": true,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261104-222840-723114"
+      },
+      {
+        "slot": 7,
+        "seed": 4201,
+        "mode": "single",
+        "quality": "rejected",
+        "centroid_mm": 0.9409,
+        "p95_mm": 2.8073,
+        "geometry": true,
+        "stable": false,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261104-224843-941246"
+      }
+    ],
+    "accepted": 4,
+    "rejected_complete": 3,
+    "all_six_positives_accepted": false,
+    "pairs_pass": true,
+    "verify_dev": {
+      "status": "failed",
+      "exit_code": 1,
+      "reason": "Expected positive smoke case failed: 4100 arc4 (and single)",
+      "log": "results/RC7_SEVEN_CASE_20261104/rc7-verify-dev.log"
+    },
+    "download_verified": "765/765 files",
+    "review": "results/RC7_SEVEN_CASE_20261104/review.md"
+  },
+  "formal_stage4_success": 0,
+  "next_gate": "Do not freeze or release: gate 1 (six positives accepted) and gate 5 (verify-dev) fail because of L1. The next version should register a task-scoped physics config (L1 particleFrictionScale=0.0, L2/L3=1.0) and re-run the whole seven-case matrix; that requires a separate registration and explicit authorisation, and this round must not switch parameters.",
+  "notes": [
+    "Uniform particleFrictionScale=1.0 was registered before the batch; no task-scoped switching.",
+    "Old 4202/4302 singles and RC2 baselines are preserved and not inserted into this matrix.",
+    "The aborted first session produced no result and is preserved separately; the batch was restarted under the same manifest.",
+    "Batch completed with 4 accepted / 3 evidence-complete rejections; no auto retry.",
+    "All seven evidence sets and all three single/arc4 pairs are valid; the failure is L1 quality (free edge not on table, residual speed) plus the 4201 negative control.",
+    "verify-dev fails at 4100 as expected; no freeze, no held-out, formal success remains 0."
+  ]
+}

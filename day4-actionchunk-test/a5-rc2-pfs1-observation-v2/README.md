@@ -2,7 +2,7 @@
 
 本版本只修订 **观测完整性**，不改 pfs1 的物理参数和控制逻辑：`particleFrictionScale=1.0`、`friction=0.3`、地面/碰撞/材料绑定、12 个公开动作/命令/horizon、退让目标、evaluator 和 1 mm / 3 mm 阈值均与 `a5-rc2-pfs1` 相同。旧 pfs1 结果继续保留为“质量 accepted、观测存在缺口”的开发证据。
 
-**状态：4202 single 一次已完成。** `file_complete=true`、`observation_semantics_valid=true`、`quality_status=accepted`、`overall_valid=true`。物理结果与 pfs1 逐值相同（动作 target、recovery/pre-release、formal 全 0 差）；这是观测-only 修订通过，不增加新的物理改善，也不是正式 Stage 4 成功。**未运行 4302、七例、冻结或 held-out。**
+**状态：4202 single 一次已完成。** `file_complete=true`、`observation_semantics_valid=true`、`quality_status=accepted`、`overall_valid=true`。物理结果与 pfs1 逐值相同（动作 target、recovery/pre-release、formal 全 0 差）；这是观测-only 修订通过，不增加新的物理改善，也不是正式 Stage 4 成功。**4302 single 已由独立扩展版本 `a5-rc2-pfs1-observation-v2-4302` 单次运行并通过；本目录的 4202 结果与 manifest 未改动。**
 
 ## 1. 身份
 
@@ -68,7 +68,7 @@
 ## 5. 通过条件与边界
 
 - 通过：原几何全程通过、质心 ≤1 mm、顶点 P95 ≤3 mm、release/retreat/证据完整，且上述语义检查通过。
-- 通过后仍只作为 **4202 单例审查通过**；再决定是否扩展 4302 single。
+- 通过后仍只作为 **4202 单例审查通过**；再决定是否扩展 4302 single。**（2026-11-04：已由 [a5-rc2-pfs1-observation-v2-4302](../a5-rc2-pfs1-observation-v2-4302/README.md) 单次扩展并通过；见 [4302 对照](../results/PFS1_V2_EXT_4302_20261104/review.md)。）**
 - 不运行七例 RC、不冻结、不运行 held-out；正式 Stage 4 成功计数不增加。
 - 不宣称地面摩擦已修复；本轮只做 pfs1 的观测重验。
 - cloth-ground 力/冲量不是新增验收门槛。

@@ -1,0 +1,134 @@
+{
+  "scope": "rc8 freeze materials; explicit freeze NOT executed",
+  "candidate": {
+    "version": "a5-rc2-pfs1-observation-v2",
+    "revision": "final-candidate-rc8-task-scoped",
+    "manifest_sha256": "6893001070f6bfc24307927cafe95bb83001524edcb35804a4aaf57479f457aa",
+    "config_sha256": "1a02db291bbbc3904643228fb75f2baaa04957f55f6ad4eb4fe7b5248a7f6a50",
+    "runner_sha256": "bec54ade5e8fea422b549b2f5c3ccb05079a108a7c921c866dfe3c81117113d5",
+    "a5_l1_sha256": "7cbdc1e4e10a663e9b6f25b8361945a2f6d08305d736c59b3b365557845eea8e",
+    "pfs1_observation_v2_sha256": "b0d6c6d4b1fd1940a0111eab70c5b02a99f4692afae8a2c012f731735c2b5caf",
+    "parent_v2_manifest_sha256": "d97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f",
+    "parent_rc7_manifest_sha256": "bcba8c11b5c65b179227a01feef343b3d90be415776f216d8aefb1424ed18a2a"
+  },
+  "task_protocol": {
+    "flat": 0.0,
+    "perturbed": 1.0,
+    "crumpled": 1.0,
+    "routing": "task identity only; set before reset/physics"
+  },
+  "cases": [
+    {
+      "slot": 1,
+      "seed": 4100,
+      "mode": "single",
+      "quality": "accepted",
+      "centroid_mm": 0.143531,
+      "p95_mm": 0.2072,
+      "task_protocol_expected_scale": 0.0,
+      "result_dir": "day4-a5-rc2-l1-20261104-232119-752070",
+      "success_trace_sha256": "14b50fab8ec3bbb81c124526bc273057fa00bf95639a63e56c4995f9b877a434",
+      "a5_verdict_sha256": "77aa39191c361a582ba948eccaaf8c35eb09048304ae3d7f10ca2a9b60305ef1",
+      "evidence_manifest_sha256": "a47ff22ed854e7de44325eee2c4927db16135d429b1d301c2f1122efa1f82d67",
+      "rc8_semantics_sha256": "4c94f6cfe564661d3313718f090f68657cca6742571042e3b5d7845966bbb59d"
+    },
+    {
+      "slot": 2,
+      "seed": 4100,
+      "mode": "arc4",
+      "quality": "accepted",
+      "centroid_mm": 0.143531,
+      "p95_mm": 0.2072,
+      "task_protocol_expected_scale": 0.0,
+      "result_dir": "day4-a5-rc2-l1-20261104-233552-117153",
+      "success_trace_sha256": "14b50fab8ec3bbb81c124526bc273057fa00bf95639a63e56c4995f9b877a434",
+      "a5_verdict_sha256": "60e6746dab3663ee342a5655d5f36068d23af48bf3e1cadbddcb94d5954b176c",
+      "evidence_manifest_sha256": "32fb8d43e4efec68fa0c634013ecd92a08fc3c36e552b3cf5b5dec813361d0f6",
+      "rc8_semantics_sha256": "e68d0a1f0c4ea805366ee5e3ac0c3f3543976a428c803d3288916e292f83119f"
+    },
+    {
+      "slot": 3,
+      "seed": 4202,
+      "mode": "single",
+      "quality": "accepted",
+      "centroid_mm": 0.264171,
+      "p95_mm": 0.379168,
+      "task_protocol_expected_scale": 1.0,
+      "result_dir": "day4-a5-rc2-pfs1-observation-v2-20261104-234933-939207",
+      "success_trace_sha256": "3df1303b785448166cbb509d7ca1ab38b62eaad4c98cb32b52a267c1ab1b6c37",
+      "a5_verdict_sha256": "da8fd658b3f01567b5c22d03280eb0f877ca05803ca64493d037bb714091eac3",
+      "evidence_manifest_sha256": "b5e22a18310ae6cafcc4da733e23423abf4665eb14e061e8c983b183fd66ab16",
+      "rc8_semantics_sha256": "c39ad37b03d6e405ed04892cb2d4eed74506cabebb762ca0e16b58ddd1f2a667"
+    },
+    {
+      "slot": 4,
+      "seed": 4202,
+      "mode": "arc4",
+      "quality": "accepted",
+      "centroid_mm": 0.264171,
+      "p95_mm": 0.379168,
+      "task_protocol_expected_scale": 1.0,
+      "result_dir": "day4-a5-rc2-pfs1-observation-v2-20261105-000702-532436",
+      "success_trace_sha256": "3df1303b785448166cbb509d7ca1ab38b62eaad4c98cb32b52a267c1ab1b6c37",
+      "a5_verdict_sha256": "083780a16418e8b0efbbd9a36afb6bda6f243f0f9228a4c6d49ee1a5916ba8e8",
+      "evidence_manifest_sha256": "07aa759519da971cc3a26f4abe9fa48c5246582b943280920615824f61bdb3af",
+      "rc8_semantics_sha256": "4689e2da0a924806ddc3e2ef0facd9cfc0bb7564968d50c1e8bcbefa05601bd3"
+    },
+    {
+      "slot": 5,
+      "seed": 4302,
+      "mode": "single",
+      "quality": "accepted",
+      "centroid_mm": 0.239004,
+      "p95_mm": 0.352353,
+      "task_protocol_expected_scale": 1.0,
+      "result_dir": "day4-a5-rc2-pfs1-observation-v2-20261105-002359-645065",
+      "success_trace_sha256": "7573aae25f7dde3535713acec9a96204f94c3eff4de908b2eb8773bccbb47bbc",
+      "a5_verdict_sha256": "1eb4dd18dbc508e68040b0044b57eef21c8dd9b3f8ed9639e8849ad93787511d",
+      "evidence_manifest_sha256": "839a218e9139d2e62ad1d17d71b9e363fbb2c2350cb5b7647b3610a825136995",
+      "rc8_semantics_sha256": "abc5d52b42fc88d3a61c23eb9d9c1beb190cee8117ceee0a1f8de52d84726d14"
+    },
+    {
+      "slot": 6,
+      "seed": 4302,
+      "mode": "arc4",
+      "quality": "accepted",
+      "centroid_mm": 0.239004,
+      "p95_mm": 0.352353,
+      "task_protocol_expected_scale": 1.0,
+      "result_dir": "day4-a5-rc2-pfs1-observation-v2-20261105-004356-929618",
+      "success_trace_sha256": "7573aae25f7dde3535713acec9a96204f94c3eff4de908b2eb8773bccbb47bbc",
+      "a5_verdict_sha256": "4662488e80c28b9f3dfa38c36cbcaf2edadd292d6fba84643672ab26fd3cb947",
+      "evidence_manifest_sha256": "cfad1eb5c5457c0e4090037d89acc2e728a6b1988e2981352fd983f70eec8b78",
+      "rc8_semantics_sha256": "de0a8fc27eb9359a2978ca273ab76f190e0491a52073100d46f5e7e48d01f3b6"
+    },
+    {
+      "slot": 7,
+      "seed": 4201,
+      "mode": "single",
+      "quality": "rejected",
+      "centroid_mm": 0.940927,
+      "p95_mm": 2.807293,
+      "task_protocol_expected_scale": 1.0,
+      "result_dir": "day4-a5-rc2-pfs1-observation-v2-20261105-010307-127409",
+      "success_trace_sha256": "2185e10bb76c92f6237fe2ba38421d704fe2fb531e39b86bcb2ee6960e75baa4",
+      "a5_verdict_sha256": "c337b79b96b30c194abf9edecf8c51fc1ff1c84b26143b533e411864bff46122",
+      "evidence_manifest_sha256": "24acb2af05df18e8bbb450a1d9b6b85f30a05b3579bd0d9d41aa113082329bbf",
+      "rc8_semantics_sha256": "4dff8cc02beccb7ee8ced0b02b85ee0c52b44bfc6de63d706d3911423aff8fa1"
+    }
+  ],
+  "gates": {
+    "six_positives_accepted": true,
+    "valid_4201_evaluation": true,
+    "pairs_zero_drift": true,
+    "all_evidence_valid": true,
+    "verify_dev": "A5_DEV_VERIFIED 7 (exit 0)",
+    "local_recompute": "7/7 status and stability identical"
+  },
+  "not_done": [
+    "explicit freeze / verified-dev.json / E_RELEASE.json",
+    "held-out seeds",
+    "formal batch",
+    "formal Stage 4 success remains 0"
+  ]
+}

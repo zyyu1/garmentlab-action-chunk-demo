@@ -1,0 +1,33 @@
+{
+  "seed": 4302,
+  "file_complete": true,
+  "observation_semantics_valid": true,
+  "quality_status": "accepted",
+  "overall_valid": true,
+  "geometry_entire_window": true,
+  "stable": true,
+  "centroid_drift_max_mm": 0.23900411955256803,
+  "vertex_p95_max_mm": 0.352352710243823,
+  "pass_1mm_3mm": true,
+  "rc2_centroid_drift_max_mm": 1.9102328734530754,
+  "rc2_vertex_p95_max_mm": 4.123147177582222,
+  "first_0_5s_centroid_mm_s": 12.404433012688461,
+  "first_0_5s_particle_mm_s": 15.695430899378206,
+  "steady_centroid_mm_s": 0.3720421875460993,
+  "steady_particle_mm_s": 0.6590259543784921,
+  "steady_angular_deg_s": 0.0920397822333412,
+  "z_min_mm": 9.866955690085888,
+  "sticking_pass": true,
+  "release_reactivation": false,
+  "command_holding_latch_steps": 10,
+  "fold_crossed": 1.0,
+  "fold_held_check": {
+    "position_error_m": 0.014163733633796841,
+    "arm_speed_rad_s": 0.0021472882945090532,
+    "anchor_gap_max_m": 0.002128061448699186,
+    "orientation_reached": true,
+    "accepted": true
+  },
+  "ledger_bad": 0,
+  "evidence_bad": 0
+}

@@ -1,0 +1,5 @@
+window,n_frames,duration_s,centroid_speed_mean_mm_s,particle_mean_speed_mean_mm_s,angular_speed_mean_deg_s,z_min_mm,ground_penetration_mm,below_contact_offset_mm
+boundary_to_0.5s,31,0.5,12.404433,15.695431,2.169914,9.866956,0.0,0.133044
+steady_1.5_8.0s,390,6.483334,0.372042,0.659026,0.09204,9.866956,0.0,0.133044
+formal_210_330,121,2.0,0.385783,0.71269,0.103374,9.876664,0.0,0.123336
+rc2_formal_210_330,121,2.0,0.957349,1.205937,0.335934,9.875851,0.0,0.124149

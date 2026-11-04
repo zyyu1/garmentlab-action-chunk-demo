@@ -1,0 +1,54 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "extension": "4302-single",
+  "created_utc": "2026-11-04T12:20:00Z",
+  "scope": "offline identity/scope audit before the 4302 single run",
+  "parent_manifest_sha256": "d97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f",
+  "new_manifest_sha256": "6d1958f5b1c6828d79821dc7831dcc1c1bcf3bed07cca9b17c6e04de0eaaccc3",
+  "config_sha256": "577931aaacde3177b01080c2c04b27a5378a6fbfdc6cd8a06d83ab803b2dfbd5",
+  "runner_sha256": "550efa6576d82d45786d2c1179da2ae8ad548b01f1da6c99dff39c7624fa453e",
+  "checks": {
+    "manifest_entries": 63,
+    "manifest_all_hashes_match": true,
+    "manifest_alias_byte_equal": true,
+    "parent_manifest_sha256_match": true,
+    "unchanged_entries_vs_v2": 61,
+    "changed_entries_vs_v2": [
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "changed_entries_are_registration_and_orchestration": true,
+    "physics_control_observation_sources_byte_identical": true,
+    "particle_friction_scale_token": "k['particle_friction_scale'] = 1.",
+    "d1_d2c_residue": "none",
+    "material_stage_hooks": [
+      "after_construction",
+      "after_reset",
+      "after_initial_settle",
+      "after_recovery",
+      "pre_release"
+    ],
+    "fd_velocity_hooks": true,
+    "raw_readback_marked_unvalidated": true,
+    "contact_capability_not_gate": true,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-094143-137994",
+    "initial_result_sha256": "1bed437fdc5b01dd4dc55acc45be1d797d3cccfa2f4b855c5e0b44cd6e39840e",
+    "initial_geometry_sha256": "1c27514f2ba95a3e276b01bf9f40ee30acf77600837908322864fdb57be97b32",
+    "initial_hashes_match_remote": true,
+    "initial_result_passed": true,
+    "initial_level": "crumpled",
+    "initial_in_plan_exactly_once": true,
+    "new_lock": "a5-rc2-pfs1-observation-v2-4302-runs",
+    "new_lock_completed_absent": true,
+    "new_lock_unfinished_attempts": 0,
+    "v2_completed_marker_reused": false,
+    "bash_syntax": "pass",
+    "py_compile_files": 44,
+    "manifest_line_endings": "LF"
+  },
+  "result": "pass",
+  "notes": [
+    "Offline + remote preflight only; the single 4302 run is launched separately under the new lock.",
+    "The registration JSON is not read by simulation code; only the runner asserts it."
+  ]
+}

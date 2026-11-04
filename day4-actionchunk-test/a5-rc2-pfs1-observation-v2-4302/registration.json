@@ -1,0 +1,300 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "extension_id": "4302-single",
+  "stage": "extension_4302_single_completed_overall_pass",
+  "created_utc": "2026-11-04T12:20:00Z",
+  "status": "4302 single completed and passed all gates: file complete, observation semantics valid, quality accepted, overall valid; centroid 0.2390 mm / P95 0.3524 mm (RC2 4302 single: 1.9102 / 4.1231 mm). Formal Stage 4 success remains 0.",
+  "parent": "a5-rc2-pfs1-observation-v2",
+  "parent_manifest_sha256": "d97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f",
+  "parent_manifest_entries": 63,
+  "preserved_parent_result": "results/PFS1_V2_RUN_4202_20261104/day4-a5-rc2-pfs1-observation-v2-20261104-111514-134428 (4202 single, overall_valid=true; not overwritten)",
+  "extension": {
+    "id": "4302-single",
+    "scope": {
+      "seeds": [
+        4302
+      ],
+      "modes": [
+        "single"
+      ],
+      "fold_edge": "right"
+    },
+    "reason": "4202 single passed quality and evidence gates after the observation-only revision; the pre-registered cross-seed check on 4302 is the next single-run gate.",
+    "new_lock": "a5-rc2-pfs1-observation-v2-4302-runs",
+    "one_shot": true,
+    "retry": false,
+    "does_not_reuse_v2_completed_marker": true,
+    "changed_files_vs_v2": [
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "unchanged_manifest_entries_vs_v2": 61,
+    "changed_file_roles": {
+      "a5-rc2-pfs1-observation-v2.json": "registration/scope only; not read by simulation code",
+      "run-a5-rc2-pfs1-observation-v2.sh": "orchestration only; scope, lock, ledger and pre/post checks"
+    }
+  },
+  "initial": {
+    "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-094143-137994",
+    "regenerated": false,
+    "hashes": {
+      "result.json": "1bed437fdc5b01dd4dc55acc45be1d797d3cccfa2f4b855c5e0b44cd6e39840e",
+      "initial_geometry.npz": "1c27514f2ba95a3e276b01bf9f40ee30acf77600837908322864fdb57be97b32"
+    }
+  },
+  "subject": {
+    "seed": 4302,
+    "level": "crumpled",
+    "mode": "single",
+    "split": "dev",
+    "fold_edge": "right"
+  },
+  "physical_invariance": {
+    "unchanged_from_v2": true,
+    "particle_friction_scale": 1.0,
+    "friction": 0.3,
+    "ground": "unchanged",
+    "collision": "unchanged",
+    "material_binding": "unchanged",
+    "public_actions": 12,
+    "action_logic": "unchanged",
+    "action_targets": "expert logic unchanged; targets computed from the 4302 recovered state exactly as in RC2/pfs1/v2",
+    "call_horizons": "unchanged",
+    "retreat_target": "unchanged",
+    "evaluator": "stage4_success_v1 unchanged",
+    "thresholds": {
+      "centroid_limit_mm": 1.0,
+      "vertex_p95_limit_mm": 3.0
+    },
+    "initial_regenerated": false
+  },
+  "observation_revision": {
+    "only_change": "inherited unchanged from v2; no physics/control change",
+    "velocity_policy": {
+      "physical_source": "world-position backward finite difference",
+      "time_source": "world.current_time at each passive post-step snapshot",
+      "interval": "dt = sim_time_s[k] - sim_time_s[previous distinct frame]",
+      "raw_api": "ClothPrimView.get_velocities(clone=True)",
+      "raw_api_validated": false
+    },
+    "material_readback": {
+      "stages": [
+        "after_construction",
+        "after_reset",
+        "after_initial_settle",
+        "after_recovery",
+        "pre_release"
+      ],
+      "expected": {
+        "friction": 0.3,
+        "particle_friction_scale": 1.0,
+        "global_self_collision_enabled": true,
+        "non_particle_collision_enabled": true
+      },
+      "solver_effective_boundary": "unverified; scene/USD readback only"
+    },
+    "contact_capability": {
+      "supported_scope": "robot-rigid contacts only",
+      "cloth_ground_force_impulse": false,
+      "zero_events_interpretation": "not evidence of no contact",
+      "required_for_acceptance": false
+    }
+  },
+  "identity": {
+    "candidate_manifest_sha256": "6d1958f5b1c6828d79821dc7831dcc1c1bcf3bed07cca9b17c6e04de0eaaccc3",
+    "deployment_manifest_sha256": "6d1958f5b1c6828d79821dc7831dcc1c1bcf3bed07cca9b17c6e04de0eaaccc3",
+    "candidate_manifest_entries": 63,
+    "deployment_manifest_entries": 63,
+    "config_sha256": "577931aaacde3177b01080c2c04b27a5378a6fbfdc6cd8a06d83ab803b2dfbd5",
+    "runner_sha256": "550efa6576d82d45786d2c1179da2ae8ad548b01f1da6c99dff39c7624fa453e",
+    "unchanged_source_entries_vs_v2": 61,
+    "source_sha256": {
+      "a5_recovery.py": "b9993097980379fb72cf0feadb4c42d5ea254c758e19488bc518898adb4d3eda",
+      "a5_capture.py": "c5651dc80a137115730a1ae6d6f9c1d8e48e3c4b76c70ef3e14c164f03f23f28",
+      "pfs1_observation_v2.py": "abd459feb7adcddf4f1adf45d925e710ca65fb0ef0e7af41437222b4adef6d35",
+      "a5_l1.py": "3d3d2994035d2cdfc78b23ac7abb8b1a8784539d5b2ac2add84f472ca9866b00",
+      "a5_entry.py": "b8f87af35d0eb45ec1997f7c0d3147c0bf13053e048568447b3aa387425256e2",
+      "stage4_success_v1.py": "8354b61286fa8bd37bc60444f1a237d9c8a5504a30e71df26352bb94496aa76d"
+    },
+    "static_audit_sha256": "2113cf918605cf587f26ef35fe3f461fa416997f27465cec6b0830c0de68482d",
+    "source_diff_sha256": "f2444f3085240120d3337e2f4e79dccaf0472912906af1cddc04b3e100dbd47d",
+    "runner_diff_sha256": "79e75a150d648026c2e56eff9fafbbd40cfea31757289743874ca2e686271ae2"
+  },
+  "verification": {
+    "candidate_manifest": "63/63 paths and SHA256 match (local and remote)",
+    "parent_manifest": "d97bf349... match",
+    "unchanged_entries_vs_v2": 61,
+    "changed_entries_vs_v2": 2,
+    "action_and_horizon_lines": "identical to v2",
+    "particle_scale": "1.0 unchanged",
+    "d1_d2c_residue": "none",
+    "initial_hashes_unchanged": true,
+    "thresholds": "1 mm / 3 mm",
+    "py_compile": true,
+    "bash_syntax": true,
+    "preflight_remote": "PFS1_V2_EXT_PREFLIGHT_OK 63",
+    "download_verified": "104/104 remote-local SHA256 match",
+    "download_audit": "results/PFS1_V2_EXT_4302_20261104/download_audit.json",
+    "run_result": "overall_valid=true; quality accepted; centroid 0.2390 mm; P95 0.3524 mm",
+    "no_4202_rerun": true,
+    "no_seven_case_freeze_heldout": true
+  },
+  "run_status": "valid_single_run_completed_overall_pass",
+  "run": {
+    "result_dir": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\PFS1_V2_EXT_4302_20261104\\day4-a5-rc2-pfs1-observation-v2-20261104-201557-235290",
+    "remote_run_id": "day4-a5-rc2-pfs1-observation-v2-20261104-201557-235290",
+    "manifest_sha256": "6d1958f5b1c6828d79821dc7831dcc1c1bcf3bed07cca9b17c6e04de0eaaccc3",
+    "config_sha256": "577931aaacde3177b01080c2c04b27a5378a6fbfdc6cd8a06d83ab803b2dfbd5",
+    "runner_sha256": "550efa6576d82d45786d2c1179da2ae8ad548b01f1da6c99dff39c7624fa453e",
+    "entry_assess_exit": 0,
+    "file_complete": true,
+    "observation_semantics_valid": true,
+    "quality_status": "accepted",
+    "quality_accepted": true,
+    "episode_passed": true,
+    "overall_valid": true,
+    "action_count": 12,
+    "call_horizons": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "formal_stability": {
+      "centroid_drift_max_m": 0.00023900411955256803,
+      "vertex_drift_p95_max_m": 0.00035235271024382296,
+      "vertex_drift_max_m": 0.00038084711474675476,
+      "vertex_speed_p95_max_m_s": 0.00343836358114942,
+      "vertex_speed_max_m_s": 0.009990380323992548
+    },
+    "evaluator_checks": {
+      "definition": true,
+      "budget": true,
+      "no_runtime_error": true,
+      "held": true,
+      "released_continuously": true,
+      "geometry_entire_window": true,
+      "stable": true,
+      "failed_geometry_frames": []
+    },
+    "formal_success_flag": false,
+    "first_0_5s": {
+      "n_frames": 31,
+      "n_intervals": 30,
+      "duration_s": 0.5000000260770321,
+      "first_step": 2381,
+      "last_step": 2411,
+      "particle_mean_speed_mean_mm_s": 15.695430899378206,
+      "particle_mean_speed_max_mm_s": 34.29853520702944,
+      "centroid_speed_mean_mm_s": 12.404433012688461,
+      "centroid_speed_max_mm_s": 31.999077572398903,
+      "angular_speed_mean_deg_s": 2.1699142929918858,
+      "angular_speed_max_deg_s": 5.284427471706729,
+      "first_interval_particle_mean_mm_s": 20.059907368576276,
+      "first_interval_centroid_mm_s": 10.967259278126967,
+      "first_interval_angular_deg_s": 1.2186149877789203,
+      "first_interval_dt_s": 0.01666666753590107,
+      "centroid_direction_deg": -22.064355520549523
+    },
+    "steady_1_5_to_8_0s": {
+      "n_frames": 390,
+      "n_intervals": 389,
+      "duration_s": 6.483333671465516,
+      "particle_mean_speed_mean_mm_s": 0.6590259543784921,
+      "particle_mean_speed_max_mm_s": 1.268873522007509,
+      "centroid_speed_mean_mm_s": 0.3720421875460993,
+      "centroid_speed_max_mm_s": 0.8592138249742685,
+      "angular_speed_mean_deg_s": 0.0920397822333412,
+      "angular_speed_max_deg_s": 0.27687735345274295,
+      "centroid_direction_deg": 2.784596603704435
+    },
+    "recovery_state_vs_rc2": {
+      "centroid_mm": 10.273260925311474,
+      "p95_mm": 10.936302969468278,
+      "rotation_deg": -0.18799418085303365,
+      "rigid_rms_mm": 0.0005986300843840785
+    },
+    "pre_release_state_vs_rc2": {
+      "centroid_mm": 9.246849218758411,
+      "p95_mm": 14.492136412217318,
+      "max_mm": 26.86934359130067,
+      "rotation_deg": -0.0993770557587799,
+      "rigid_rms_mm": 3.4995867018099815
+    },
+    "release_clock": {
+      "pre_release_step": 2380,
+      "boundary_step": 2381,
+      "released_sample_step": 2388,
+      "sampling_error_steps": 1,
+      "boundary_localization_note": "sampling_error_steps=1 is the boundary localization precision (actual disable between 2380 and 2381)",
+      "released_sample_latency_steps": 7,
+      "released_sample_latency_note": "2381->2388 is the released-sample latency (OPEN completion to retreat command sample), distinct from boundary localization"
+    },
+    "sticking": {
+      "pass": true,
+      "attachment_reactivation": false,
+      "command_holding_latch_steps": 10,
+      "gripper_state_first_last": [2, 0],
+      "gripper_aperture_first_last_m": [0.015316055621951818, 0.07999996840953827],
+      "cloth_follows_ee": false,
+      "cloth_follows_ee_cos_retreat": -0.16943932932177622,
+      "cloth_follows_ee_ratio_retreat": 1.4124170680549415,
+      "ee_static_after_retreat": true,
+      "cloth_still_sliding_after_retreat": true,
+      "post_retreat_seconds": 5.500000286847353,
+      "cloth_centroid_disp_after_retreat_mm": 0.6584439114274914,
+      "ee_disp_after_retreat_mm": 0.08143064757729819,
+      "z_min_mm": 9.866955690085888,
+      "ground_penetration_mm": 0.0,
+      "below_contact_offset_mm": 0.1330443099141121
+    },
+    "action_diffs_vs_rc2": {
+      "labels_identical": true,
+      "commands_identical": true,
+      "horizons_identical": true,
+      "recovery_max_abs_diff_mm": 0.36950409412384033,
+      "fold_max_abs_diff_mm": 8.0014845702025,
+      "fold_yaw_diff_deg": -3.2811177265319182,
+      "reason": "expert logic unchanged; targets recomputed from the recovered state, which is translated 10.27 mm relative to RC2"
+    },
+    "fold": {
+      "crossed_fraction": 1.0,
+      "extent_m": [0.2687662485986948, 0.43317319452762604, 0.06032660882920027],
+      "z_p95_m": 0.06892389059066772,
+      "iou_first_window": 0.6616915422885572,
+      "iou_final": 0.6494464944649446,
+      "alignment_mm": 6.185154627193126
+    },
+    "semantic_checks": {
+      "fd_policy_recorded": true,
+      "fd_velocity_valid_present": true,
+      "raw_readback_marked_unvalidated": true,
+      "material_stages_present": true,
+      "material_values_match": true,
+      "material_binding_match": true,
+      "self_collision_true": true,
+      "non_particle_collision_true": true,
+      "solver_effective_boundary_recorded": true,
+      "contact_capability_recorded": true,
+      "release_clock_boundary_recorded": true,
+      "quality_status_recorded": true
+    },
+    "evidence": {
+      "ledger_files": 19,
+      "ledger_bad": [],
+      "evidence_manifest_entries": 73,
+      "evidence_manifest_bad": [],
+      "download_verified_files": 104
+    },
+    "caveats": [
+      "Material readback is scene/USD, not solver-effective.",
+      "Cloth-ground force/impulse is unavailable and is not an acceptance gate.",
+      "Single 4302 example; two single-seed passes do not prove cross-seed validity or identify the friction mechanism.",
+      "Fold targets moved with the recovered state (about 8 mm), so this is an end-to-end comparison, not a fixed-action friction test.",
+      "Formal Stage 4 success remains 0."
+    ]
+  },
+  "formal_stage4_success": 0,
+  "next_gate": "4302 single passed with complete evidence: fix the final candidate and prepare the full seven-case RC. No seven-case run, freeze, held-out or formal batch in this round.",
+  "notes": [
+    "Only the registration JSON and the runner differ from v2; all simulation sources are byte-identical (61/63 entries).",
+    "One 4302 single only, under a new manifest and a new one-shot lock; the v2 4202 result and completed marker are preserved.",
+    "No 4202 rerun, no seven-case RC, no freeze, no held-out, no formal batch, no parameter scan in this round.",
+    "Cloth-ground force/impulse remains unavailable and is not a new acceptance gate."
+  ]
+}
