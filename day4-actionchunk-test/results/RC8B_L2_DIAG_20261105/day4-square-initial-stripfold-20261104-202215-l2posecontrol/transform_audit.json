@@ -1,0 +1,68 @@
+{
+  "derived_initial": "day4-square-initial-stripfold-20261104-202215-l2posecontrol",
+  "transform": {
+    "fit_vertices": 441,
+    "fit_scope": "final xy, all vertices",
+    "rotation_axis": "+z",
+    "rotation_deg": 0.25637672628027197,
+    "center_old_m": [
+      0.01599198754635574,
+      -0.3722809881580119
+    ],
+    "center_new_m": [
+      0.01571626246666199,
+      -0.3694982057323261
+    ],
+    "translation_m": [
+      -0.0019413746339726964,
+      0.002707497692018168
+    ],
+    "matrix4x4": [
+      [
+        0.999989988913585,
+        -0.004474603067135883,
+        0.0,
+        -0.0019413746339726964
+      ],
+      [
+        0.004474603067135901,
+        0.999989988913585,
+        0.0,
+        0.002707497692018168
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "alignment_residual_vs_new_p95_mm": 0.06721100090149144,
+    "alignment_residual_vs_new_max_mm": 0.3018999450247332,
+    "internal_pairwise_distance_max_abs_diff_m": 1.6653345369377348e-16
+  },
+  "source_hashes": {
+    "source_initial": "day4-square-initial-stripfold-20261103-062710-242560",
+    "source_result_sha256": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+    "source_geometry_sha256": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106",
+    "pose_reference_initial": "day4-square-initial-stripfold-20261105-015817-115841",
+    "pose_reference_geometry_sha256": "13b568082faaa293153487b19cde371608e11ad51429e0ce8dce64397a22151e"
+  },
+  "derived_hashes": {
+    "result.json": "b051737a20a7b6ef94d65234c8b66a34f7501b2569b9878ad85809a53496cd59",
+    "initial_geometry.npz": "32e7686823d48c3de01a6bb602339b73a6e5e84e44044dfa712e34269b75f0ab",
+    "initial.png": "8b9469ed3d9c3489219b61581c8a8f6bb60240dae1b88a541ec3c767ec36eed8"
+  },
+  "flat_settled_equal_new": true,
+  "z_unchanged": true,
+  "internal_pairwise_distance_max_abs_diff_m": 1.6653345369377348e-16,
+  "alignment_residual_vs_new_p95_mm": 0.06721100090149144,
+  "alignment_residual_vs_new_max_mm": 0.3018999450247332,
+  "initial_image": "copied from the source old initial; not re-rendered"
+}

@@ -1,0 +1,13 @@
+﻿{
+    "listing":  "remote_hashes.txt",
+    "verified":  true,
+    "separate_download":  [
+                              "rc8b-verify-dev.log",
+                              "rc8b_frames.tar.gz -\u003e rc8b_frames"
+                          ],
+    "hash_mismatch":  0,
+    "local_files":  765,
+    "missing":  0,
+    "scope":  "rc8b remote -\u003e local verification",
+    "remote_files":  765
+}

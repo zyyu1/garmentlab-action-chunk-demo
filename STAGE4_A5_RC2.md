@@ -117,3 +117,11 @@ RC2 基线、七例索引、独立诊断批次登记、事件分段和曲线见 
 结果：4100 s/a **accepted**（0.1435/0.2072 mm，与 RC2 pfs=0 逐值相同）；4202 s/a **accepted**（0.2642/0.3792）；4302 s/a **accepted**（0.2390/0.3524）；4201 single **rejected 有效**（0.9409/2.8073；几何全过，速度 P95 20.3 > 10 mm/s）。六阳性全部接受；三组配对 target 差 **0.0**；7/7 证据完整；807/807 下载哈希一致；本地 evaluator 重算 7/7 一致；视频审查通过；原版 `verify-dev` **通过**（`A5_DEV_VERIFIED 7`，exit 0）。
 
 **判定：通过本轮 task-scoped RC**；冻结材料已整理（[FREEZE_DOSSIER](day4-actionchunk-test/results/RC8_SEVEN_CASE_20261104/FREEZE_DOSSIER.md)）。本轮**未执行**显式 freeze、held-out、正式批次；正式成功仍为 **0**；结果按任务报告，不是统一物理条件下的难度比较。详见 [rc8 审查](day4-actionchunk-test/results/RC8_SEVEN_CASE_20261104/review.md)。
+
+## 2026-11-05 rc8b 初态协议补齐：七例 4/6 阳性，未冻结
+
+[rc8b](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc8b/README.md) 把协议补到初态生成：L1 flat 0.0、L2/L3 1.0；初态结果记录 task/材料绑定/scale/生成器身份；正式 preflight 拒绝旧/错初态；生成与正式入口改为 app-relative。4100/4201/4202/4302 各生成一次；4100 几何与旧初态逐位相同，L2 条宽在冻结范围，L3 extent 变化已记录。
+
+七例：4100 s/a **accepted**（0.1435/0.2072）；4302 s/a **accepted**（0.2756/0.4125）；**4202 s/a rejected**（7.4809/11.5382；`stationary_half` 29.9 mm > 25；速度 P95 25.7 > 10 mm/s）；4201 rejected（7.0657/10.4252；`stationary_half` 30.1 mm）。三组配对 0.0；7/7 `initial_protocol=true`；765/765 下载哈希一致；本地复算 7/7 一致；`verify-dev` 失败于 4202。
+
+**判定：六阳性 4/6 → 不冻结、未写回执。** 失败在 fold 后整体滑移（4202 fold extent 0.196×0.408，旧流程 0.228×0.420），机制未隔离；不回退旧初态、不用 rc8 结果补齐、不改阈值。下一步：调查 L2 初态敏感性，或显式修订协议（L2/L3 初态生成 0.0、rollout 1.0）后重跑。正式成功仍为 0。详见 [rc8b 审查](day4-actionchunk-test/results/RC8B_SEVEN_CASE_20261105/review.md)。

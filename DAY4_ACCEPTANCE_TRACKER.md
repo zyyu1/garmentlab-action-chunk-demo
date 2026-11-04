@@ -1,6 +1,20 @@
-# 当前验收状态（最新：2026-11-05 **rc8 task-scoped 七例 RC 通过：6/6 阳性 accepted、4201 有效拒绝、配对 0 差、verify-dev 通过；冻结前检查发现正式 L2/L3 初态生成仍为 0.0（应为 1.0），freeze 暂停、未写回执，正式成功仍为 0**；前序：2026-11-04 **rc7 七例 RC 完成，4/6 阳性通过（4202/4302 s/a accepted；4100 s/a 质量拒绝），4201 有效拒绝，三组配对 0 差，verify-dev 失败，未放行**；2026-11-04 **4302 single 扩展通过**（`overall_valid=true`、质量 accepted、质心 0.2390 mm / P95 0.3524 mm）；2026-11-04 pfs1-observation-v2 4202 single 观测修订复验通过（0.2642/0.3792 mm）；2026-11-04 D2-E 步骤4 持续滑移核查完成（仅离线），步骤5 决定 particleFrictionScale 0→1.0 敏感性对照（已创建并单次运行）；D2-E 步骤2 支撑/摩擦配置核查完成（仅离线）；D2-D 释放顺序对照完成（4202 single 单次；质量仍 rejected）；D2-C 版本已登记并运行一次；D2-A/B 场景与接触核查完成；2026-11-03 D0 4202/4302 基线复现 + A5 RC2 漂移诊断第 1–3 项；2026-11-02 折形口径定稿 + 任务定义冻结 + 表示层配对 + 分任务报告 + A1 预检）
+# 当前验收状态（最新：2026-11-05 **rc8b 初态协议补齐后七例 4/6 阳性：4100/4302 s/a accepted，4202 s/a 与 4201 rejected（stationary half ~30 mm，fold 后整体滑移）；配对 0 差、证据完整、verify-dev 失败于 4202；l2pose 位姿匹配单次 accepted 0.7396/1.5397 mm（中间行为，未重现失败）；l2pose/rc8b 两例重复逐位重现原行为（阶段/目标/trace 最大差 0.0），固定初态差异可重复；未冻结、未写回执，正式成功仍为 0**；前序：2026-11-05 **rc8 task-scoped 七例 RC 通过：6/6 阳性 accepted、4201 有效拒绝、配对 0 差、verify-dev 通过；冻结前检查发现正式 L2/L3 初态生成仍为 0.0（应为 1.0），freeze 暂停、未写回执，正式成功仍为 0**；2026-11-04 **rc7 七例 RC 完成，4/6 阳性通过（4202/4302 s/a accepted；4100 s/a 质量拒绝），4201 有效拒绝，三组配对 0 差，verify-dev 失败，未放行**；2026-11-04 **4302 single 扩展通过**（`overall_valid=true`、质量 accepted、质心 0.2390 mm / P95 0.3524 mm）；2026-11-04 pfs1-observation-v2 4202 single 观测修订复验通过（0.2642/0.3792 mm）；2026-11-04 D2-E 步骤4 持续滑移核查完成（仅离线），步骤5 决定 particleFrictionScale 0→1.0 敏感性对照（已创建并单次运行）；D2-E 步骤2 支撑/摩擦配置核查完成（仅离线）；D2-D 释放顺序对照完成（4202 single 单次；质量仍 rejected）；D2-C 版本已登记并运行一次；D2-A/B 场景与接触核查完成；2026-11-03 D0 4202/4302 基线复现 + A5 RC2 漂移诊断第 1–3 项；2026-11-02 折形口径定稿 + 任务定义冻结 + 表示层配对 + 分任务报告 + A1 预检）
 
-## 2026-11-05 rc8 task-scoped 七例 RC：通过
+## 2026-11-05 rc8b 初态协议补齐：七例 4/6 阳性，未冻结
+
+[rc8b](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc8b/README.md) 把 L1=0、L2/L3=1 的协议补到初态生成：初态结果记录 task/材料绑定/scale/生成器身份；正式 preflight 拒绝旧/错初态；生成入口改为 app-relative。4100/4201/4202/4302 各生成一次（4100 几何与旧初态逐位相同；L2 条宽在冻结范围；L3 extent 变化已记录）。
+
+七例（manifest `cce573dd…`，14 行账本）：4100 s/a **accepted**（0.1435/0.2072 mm）、4302 s/a **accepted**（0.2756/0.4125）、**4202 s/a rejected**（7.4809/11.5382 mm；`stationary_half` 29.9 mm > 25；速度 P95 25.7 > 10）、4201 rejected（7.0657/10.4252；`stationary_half` 30.1 mm）。三组配对 0.0；7/7 `initial_protocol=true`；765/765 下载哈希一致；本地复算 7/7 一致；`verify-dev` 失败于 4202。
+
+**判定：** 六阳性 4/6 → **不冻结、未写回执**；保留失败，不回退旧初态、不用 rc8 结果补 4202/4201、不改阈值。失败在 fold 后整体滑移（4202 fold extent 0.196×0.408，旧流程 0.228×0.420），机制未隔离。详见 [rc8b 审查](day4-actionchunk-test/results/RC8B_SEVEN_CASE_20261105/review.md)。
+
+**L2 离线定位（无新增仿真）：** 新旧 4202 在载入时是 2.80 mm / −0.26° 的整体位姿差；recovery 后内部形状差仅 1 µm（纯平移 2.02 mm），pre-release 折形差 <0.8 mm；放大在**释放后**（持续 ~4 mm/s 滑移，首个几何失败在 release 后 4.15 s）。9.2 µm 只是几何指标，recovery 残余速度/接触/应力未知；“3 mm→30 mm”是相关观察，不是因果。已预登记一次位姿匹配单例对照（未运行、待批准），见 [L2 定位](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/review.md) 与 [单例预登记](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/SINGLE_COMPARISON_PLAN.md)。
+
+**l2pose 单次诊断（已完成）：** 旧折叠几何 + 新位姿 → **accepted 0.7396/1.5397 mm**、stationary 7.63 mm、稳态 0.418 mm/s、无失败；old 为 0.2642/0.3792，new 为 7.4809/11.5382。专家目标跟随新位姿（与 new 差 0.209 mm）。2.8 mm 位姿变化不足以单独重现失败；也不是完整旧行为，而是中间行为。l2pose 与 new 只剩亚毫米 `final` 几何差（P95 0.067 / max 0.302 mm），相关但不能归因隐藏应力；未做重复性。详见 [l2pose 审查](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/l2pose_review.md)。单次、无重试、未冻结。
+
+**两例重复性（已完成）：** `l2pose-repeat1`（manifest `a529ec05…`）与 `rc8b-4202-repeat1`（`cb28ae4c…`）各一次、原候选/原初态/完整哈希；**逐位重现原行为**（所有阶段、目标、trace 最大差 0.0；l2pose accepted 0.739646/1.539675，rc8b rejected 7.480913/11.538153，首次失败 step 249 相同）。下载 111/111 ×2。固定初态差异可重复；仿真重复性不是来源。**局部几何：** #91（0.302 mm，z 0.264 mm）位于多层折叠区，距折线代理约 55 mm；25 mm 内 4 层 z≈9.9/40.6/53.75（含 #91）/66.4 mm，层间距约 30.7/13.15/12.64 mm；网格近邻差 0.003–0.246 mm；xy 最近点 99.3% <0.1 mm。层间距/投影仅为代理，不认定真实接触/穿透。详见 [重复性与几何审查](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/repeat_review.md)。**单变量对照设计（未运行）：** new 初态仅改 #91 的 3×3 邻域 z 为 derived 值，4202 single 一次；本轮不扩批、不冻结。
+
+## 2026-11-05 rc8 task-scoped 七例 RC：通过但冻结被正式初态生成阻塞
 
 [rc8](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc8/README.md) 按任务固定物理：L1 flat **0.0**、L2/L3 **1.0**，材料构造时设置、早于 reset/物理步；manifest `68930010…`（63 项，59 项与 v2 不变）、新账本；七槽顺序、每槽一次、无重试。
 

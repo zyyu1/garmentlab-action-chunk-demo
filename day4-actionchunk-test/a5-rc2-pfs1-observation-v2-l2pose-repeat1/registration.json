@@ -1,0 +1,42 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "diagnostic-repeat1",
+  "stage": "repeat1_completed",
+  "kind": "diagnostic_single_case_repeat",
+  "parent": "a5-rc2-pfs1-observation-v2-l2pose",
+  "parent_manifest_sha256": "3a97a5000ac856b758b65a78d15d1f31fe826048ab59f79714c99b7fb89667f0",
+  "identity": {
+    "manifest_sha256": "a529ec05988c28826d9f82a0177050e99ef71ebda226d97290290ee1d2c0e851",
+    "manifest_entries": 63,
+    "changed_vs_parent": [
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "unchanged_vs_parent": 61,
+    "config_sha256": "80af49bdaa31ea38f32b080e0fc904d1d1a61a471e6eef91d6d81c75b0a1a94c",
+    "runner_sha256": "67f330a6067bfb36cfe4904e6c11951fefa4e8174531a865c6286ac3185be62c"
+  },
+  "initial": "day4-square-initial-stripfold-20261104-202215-l2posecontrol",
+  "run": {
+    "seed": 4202,
+    "mode": "single",
+    "attempts": 1,
+    "retry": false,
+    "result_dir": "results/RC8B_L2_DIAG_20261105/l2pose_repeat1/day4-a5-rc2-pfs1-observation-v2-20261105-050830-340362",
+    "quality": "accepted",
+    "centroid_mm": 0.739646,
+    "p95_mm": 1.539675,
+    "stationary_drift_mm": 7.6258,
+    "steady_centroid_mm_s": 0.418,
+    "geometry_failure_frames": 0,
+    "download_verified": "111/111 files"
+  },
+  "comparison": {
+    "vs_original": "bit-identical at all stages, targets and success_trace (max diff 0.0)",
+    "review": "results/RC8B_L2_DIAG_20261105/repeat_review.md"
+  },
+  "boundaries": [
+    "single repeat, no retry, no expansion, no freeze",
+    "diagnostic repeat, not part of the seven-case matrix or formal success"
+  ]
+}

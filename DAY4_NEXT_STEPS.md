@@ -1,6 +1,14 @@
 # Stage 4 收尾计划（当前有效版本）
 
-> 最新交接：[2026-11-05 日报](2026-11-05-GarmentLab日报%20Stage4%20rc8七例RC与冻结暂停交接.md)（rc8 七例 RC 通过；冻结前检查因正式初态生成协议不符而暂停）。
+> 最新交接：[2026-11-05 L2 诊断与暂停日报](2026-11-05-GarmentLab日报%20Stage4%20rc8b初态协议与七例失败交接.md)：rc8b 4/6、l2pose 中间行为、两例重复逐位重现；单变量对照已设计未运行。
+
+## 2026-11-05 rc8b 初态协议补齐：七例 4/6 阳性，未冻结
+
+[rc8b](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc8b/README.md)：L1=0、L2/L3=1 的协议补到初态生成（结果记录 task/材料绑定/scale/生成器身份；正式 preflight 拒绝旧/错初态；生成与正式入口 app-relative）。4100/4201/4202/4302 各生成一次；4100 几何与旧初态逐位相同，L2 条宽在冻结范围，L3 extent 变化已记录。manifest `cce573dd…`（63 项，52 项与 rc8 相同）。
+
+七例：4100 s/a **accepted**（0.1435/0.2072）、4302 s/a **accepted**（0.2756/0.4125）；**4202 s/a rejected**（7.4809/11.5382；`stationary_half` 29.9 mm、速度 P95 25.7 mm/s）；4201 rejected（7.0657/10.4252；`stationary_half` 30.1 mm）。配对 0.0；7/7 `initial_protocol=true`；765/765 哈希一致；本地复算 7/7 一致；verify-dev 失败于 4202。
+
+**判定：六阳性 4/6 → 不冻结、未写回执。** 失败在 fold 后整体滑移，机制未隔离；不回退旧初态、不用 rc8 结果补齐、不改阈值。**L2 离线定位：** 新旧 4202 在载入时是 2.80 mm / −0.26° 的整体位姿差；recovery 后内部形状差仅 1 µm（纯平移 2.02 mm），pre-release 折形差 <0.8 mm；放大在释放后（持续 ~4 mm/s 滑移，首个几何失败在 release 后 4.15 s）。9.2 µm 只是几何指标，recovery 残余速度/接触/应力未知；“3 mm→30 mm”是相关观察，不是因果。**l2pose 单次诊断（已完成）：** 旧折叠几何 + 新位姿 → accepted 0.7396/1.5397 mm、stationary 7.63 mm、稳态 0.418 mm/s、无失败；old 0.2642/0.3792，new 7.4809/11.5382；专家目标跟随新位姿（与 new 差 0.209 mm）。2.8 mm 位姿变化不足以单独重现失败；也不是完整旧行为，而是中间行为；剩余亚毫米 `final` 几何差（P95 0.067 / max 0.302 mm）相关但未证明因果；重复性见下（两例逐位重现）。**两例重复性（已完成）：** `l2pose-repeat1` / `rc8b-4202-repeat1` 各一次，逐位重现原行为（所有阶段/目标/trace 最大差 0.0；accepted 0.739646/1.539675，rejected 7.480913/11.538153，首次失败 step 249 相同），固定初态差异可重复；仿真重复性不是来源。**局部几何：** #91（0.302 mm）位于多层折叠区，距折线代理约 55 mm；25 mm 内 z≈9.9/40.6/53.75（含 #91）/66.4 mm，层间距约 13 mm；xy 最近点 99.3% <0.1 mm；层间距/投影仅为代理。**单变量对照设计（未运行）：** new 初态仅改 #91 的 3×3 邻域 z 为 derived 值，4202 single 一次。详见 [L2 定位](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/review.md)、[l2pose 审查](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/l2pose_review.md)、[重复性与几何](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/repeat_review.md)。正式成功仍为 0；本轮不扩批、不冻结。
 
 ## 2026-11-05 rc8 task-scoped 七例 RC：6/6 阳性通过，冻结材料已整理（未冻结）
 

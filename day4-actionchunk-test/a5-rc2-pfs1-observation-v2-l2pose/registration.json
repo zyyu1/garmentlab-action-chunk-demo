@@ -1,0 +1,132 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "diagnostic-l2-pose-control",
+  "stage": "diagnostic_completed_intermediate",
+  "created_utc": "2026-11-05T20:25:00Z",
+  "status": "Single 4202 pose-matched diagnostic completed: accepted 0.7396/1.5397 mm, stationary half 7.63 mm, steady 0.418 mm/s, no geometry failure. It does not reproduce the rc8b sustained sliding and is intermediate between old (0.2642/0.3792) and new (7.4809/11.5382).",
+  "kind": "diagnostic_single_case_control",
+  "parent": "a5-rc2-pfs1-observation-v2-rc8b",
+  "parent_manifest_sha256": "cce573ddd626715b15818467290152a4c68502bafc9595b11780fe1dd601bc8e",
+  "identity": {
+    "candidate_manifest_sha256": "3a97a5000ac856b758b65a78d15d1f31fe826048ab59f79714c99b7fb89667f0",
+    "candidate_manifest_entries": 63,
+    "changed_entries_vs_rc8b": [
+      "a5-candidate.json",
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "unchanged_entries_vs_rc8b": 60,
+    "config_sha256": "cc92f6c752c6f5b2aca8fd66f56993e407b2e651f8bfaacd42f412eb1aa8b8e7",
+    "runner_sha256": "08a623a5b65b83eb424030084f600cff0986ed28975ba52c86b62c98f4ca3d8e",
+    "static_audit_sha256": "5d4d2c3572205c39af69b8bc0b9be6d82d11657efa31cfa023e008ab0d6cb7d9",
+    "source_diff_sha256": "982a3785d607f88daeaf62a0b5f02aa284ce3c88e0656ab580de4d5a6b51d11b"
+  },
+  "rollout_identity": {
+    "same_as_rc8b": true,
+    "unchanged_sources": [
+      "a5_recovery.py",
+      "a5_capture.py",
+      "pfs1_observation_v2.py",
+      "stage4_success_v1.py",
+      "a5_entry.py",
+      "assets",
+      "evaluator config"
+    ],
+    "note": "only the registered initial and diagnostic orchestration differ"
+  },
+  "diagnostic_initial": {
+    "dir": "day4-square-initial-stripfold-20261104-202215-l2posecontrol",
+    "kind": "pose_matched_old_geometry",
+    "source_initial": "day4-square-initial-stripfold-20261103-062710-242560",
+    "pose_reference_initial": "day4-square-initial-stripfold-20261105-015817-115841",
+    "transform": {
+      "rotation_axis": "+z",
+      "rotation_deg": 0.256377,
+      "translation_m": [
+        -0.0019413746,
+        0.0027074977
+      ],
+      "fit_vertices": 441,
+      "fit_scope": "final xy, all vertices",
+      "centers_from_initials_only": true
+    },
+    "loaded_state": {
+      "flat_settled": "unchanged (bit-identical to new initial)",
+      "final": "transformed old folded geometry at new overall pose",
+      "velocities_restored": false,
+      "velocity_transform": "none (loader clears velocities)"
+    },
+    "is_task_scoped_generated": false,
+    "derived_hashes": {
+      "result.json": "b051737a20a7b6ef94d65234c8b66a34f7501b2569b9878ad85809a53496cd59",
+      "initial_geometry.npz": "32e7686823d48c3de01a6bb602339b73a6e5e84e44044dfa712e34269b75f0ab",
+      "initial.png": "8b9469ed3d9c3489219b61581c8a8f6bb60240dae1b88a541ec3c767ec36eed8"
+    },
+    "audit": {
+      "internal_pairwise_distance_max_abs_diff_m": 1.6653345369377348e-16,
+      "alignment_residual_vs_new_p95_mm": 0.06721100090149144,
+      "alignment_residual_vs_new_max_mm": 0.3018999450247332,
+      "flat_settled_equal_new": true,
+      "z_unchanged": true
+    }
+  },
+  "evaluation": {
+    "evaluator": "stage4_success_v1 unchanged",
+    "thresholds": {
+      "centroid_limit_mm": 1.0,
+      "vertex_p95_limit_mm": 3.0
+    },
+    "expert_control": "unchanged; targets recomputed from observed state",
+    "windows": "unchanged"
+  },
+  "run": {
+    "seed": 4202,
+    "mode": "single",
+    "result_dir": "results/RC8B_L2_DIAG_20261105/l2pose_run/day4-a5-rc2-pfs1-observation-v2-20261105-042455-646408",
+    "quality": "accepted",
+    "centroid_mm": 0.7396,
+    "p95_mm": 1.5397,
+    "stationary_drift_mm": 7.63,
+    "steady_centroid_mm_s": 0.418,
+    "geometry_failure_frames": 0,
+    "initial_diagnostic": true,
+    "download_verified": "111/111 files",
+    "review": "results/RC8B_L2_DIAG_20261105/l2pose_review.md",
+    "attempts": 1,
+    "retry": false
+  },
+  "run_status": "completed_intermediate_no_freeze",
+  "formal_stage4_success": 0,
+  "interpretation": {
+    "reproduce_sliding": "overall pose change sufficient in this case; not a contact-mechanism identification",
+    "old_behavior": "rigid transform insufficient; inspect remaining geometry/loaded state/repeatability; no hidden-stress claim",
+    "intermediate": "record continuous metrics; no forced binary"
+  },
+  "notes": [
+    "Derived initial is not a stage4-initial-v2-task-scoped generated initial.",
+    "No seven-case rerun, no expansion, no freeze.",
+    "rc8b failure preserved."
+  ],
+  "interpretation_result": {
+    "class": "intermediate",
+    "pose_alone_sufficient_to_reproduce": false,
+    "old_behavior_identical": false,
+    "targets_vs_new_max_mm": 0.209,
+    "remaining_geometry_vs_new": {
+      "resid_p95_mm": 0.0672,
+      "resid_max_mm": 0.3019,
+      "z_max_mm": 0.264
+    },
+    "caveats": [
+      "one run only; repeatability not tested",
+      "sub-millimetre geometry difference is associated, not proven causal",
+      "no hidden-stress claim"
+    ]
+  },
+  "next": "Optional repeatability runs (l2pose/new) or offline inspection of the 0.30 mm max-difference vertex/灞傚簭; no protocol change or friction scan without explicit instruction.",
+  "repeat1": {
+    "status": "repeat1_bit_identical_accepted",
+    "repeat_candidate": "a5-rc2-pfs1-observation-v2-l2pose-repeat1",
+    "repeat_result": "accepted 0.739646/1.539675; max stage/target/trace diff 0.0"
+  }
+}

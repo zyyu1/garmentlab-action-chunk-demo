@@ -1,0 +1,329 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "final-candidate-rc8b-task-scoped-initials",
+  "stage": "rc8b_batch_complete_positive_failed",
+  "created_utc": "2026-11-05T18:40:00Z",
+  "status": "Seven-case RC completed under the new task-scoped initials: all evidence complete, all three pairs 0.0, but 4202 s/a (and 4201) fail with ~30 mm stationary-half drift after the fold. Six positives: 4/6 accepted. Freeze not executed; no receipt written; rc8b failure preserved and rc8 results not reused.",
+  "final_candidate": true,
+  "parent": "a5-rc2-pfs1-observation-v2-rc8",
+  "parent_manifest_sha256": "6893001070f6bfc24307927cafe95bb83001524edcb35804a4aaf57479f457aa",
+  "base_manifest_sha256": "d97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f",
+  "preserved_results": [
+    "rc8 seven-case RC (passed; freeze blocked on initial generation)",
+    "rc7 uniform seven-case RC (failed)",
+    "4202/4302 singles and RC2 baselines"
+  ],
+  "physics_scope": {
+    "decision": "task_scoped",
+    "tasks": {
+      "flat": {
+        "particle_friction_scale": 0.0,
+        "friction": 0.3
+      },
+      "perturbed": {
+        "particle_friction_scale": 1.0,
+        "friction": 0.3
+      },
+      "crumpled": {
+        "particle_friction_scale": 1.0,
+        "friction": 0.3
+      }
+    },
+    "applies_to": [
+      "initial generation",
+      "reset",
+      "rollout"
+    ],
+    "set_at": "material construction, before reset and any physics step",
+    "routing_key": "task identity; seed, mode and result excluded",
+    "uniform_physics_claim": false,
+    "reporting_requirement": "results reported per task; not a uniform-physics difficulty comparison",
+    "evaluator": "stage4_success_v1 unchanged",
+    "thresholds": {
+      "centroid_limit_mm": 1.0,
+      "vertex_p95_limit_mm": 3.0
+    },
+    "expert_control": "unchanged"
+  },
+  "initial_protocol": {
+    "version": "stage4-initial-v2-task-scoped",
+    "recorded_fields": [
+      "task",
+      "level",
+      "seed",
+      "particle_friction_scale_expected",
+      "particle_friction_scale_readback",
+      "material_binding",
+      "generator",
+      "generated_utc"
+    ],
+    "formal_preflight": "accepts protocol-complete task-scoped initials; rejects old, wrong-scale, missing-binding and generator-mismatch initials",
+    "old_initial_fallback": "forbidden"
+  },
+  "initial": {
+    "regenerated": true,
+    "4100": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-20261105-014501-526555",
+      "result.json": "df9ed58289bb1a7a1e9077190d8c32c99f08ca6a6dbd186b342c128593e8ee29",
+      "initial_geometry.npz": "dd5783038cd7ae95c17525574ca9c76d0df2399261a6df6a0c8f09a5b351bcb3",
+      "scale": 0.0,
+      "geometry_identical_to_old": true
+    },
+    "4201": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261105-014825-318974",
+      "result.json": "156765f607925736493e38ff8f14a2a609e12fbc1353a2909257d154de0bbabf",
+      "initial_geometry.npz": "219ac39bdcb2799e8290d2ece1df1d4a6d2bb2b2f3eb60712beec511275660e7",
+      "scale": 1.0,
+      "extent_m": [
+        0.42826294898986816,
+        0.2669016718864441,
+        0.05929836258292198
+      ],
+      "old_extent_m": [
+        0.4285758435726166,
+        0.26775479316711426,
+        0.05926920846104622
+      ]
+    },
+    "4202": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261105-015817-115841",
+      "result.json": "1eef6c8395fcc720cae4323e7c9aabf8b1e426df49ce814f2d82188844528d89",
+      "initial_geometry.npz": "13b568082faaa293153487b19cde371608e11ad51429e0ce8dce64397a22151e",
+      "scale": 1.0,
+      "extent_m": [
+        0.42131897807121277,
+        0.2557813823223114,
+        0.062445033341646194
+      ],
+      "old_extent_m": [
+        0.4205876588821411,
+        0.2541115880012512,
+        0.06241774931550026
+      ]
+    },
+    "4302": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261105-020706-026048",
+      "result.json": "6a06021d61a8a051e40f148eee8006c84b372dbf4a6d3f8fe8c6c14b083f5075",
+      "initial_geometry.npz": "bc0853599bc0328baf62cf57c7c6573cdfbb482c97cbf1c032efd9e5b5a83f13",
+      "scale": 1.0,
+      "extent_m": [
+        0.26737043261528015,
+        0.43151646852493286,
+        0.06091141328215599
+      ],
+      "old_extent_m": [
+        0.2846769094467163,
+        0.43569430708885193,
+        0.059692077338695526
+      ],
+      "note": "x extent 17 mm narrower than the old 0.0-settled initial; still a left strip of width 0.20, z_p95 0.069 m"
+    }
+  },
+  "identity": {
+    "candidate_manifest_sha256": "cce573ddd626715b15818467290152a4c68502bafc9595b11780fe1dd601bc8e",
+    "deployment_manifest_sha256": "cce573ddd626715b15818467290152a4c68502bafc9595b11780fe1dd601bc8e",
+    "candidate_manifest_entries": 63,
+    "changed_entries_vs_rc8": [
+      "a5-candidate.json",
+      "a5-rc2-pfs1-observation-v2.json",
+      "day4-square-initial-stripfold.py",
+      "day4-square-initial.py",
+      "run-a5-rc2-pfs1-observation-v2.sh",
+      "run-square-initial-stripfold.sh",
+      "run-square-initial.sh",
+      "run-stage4-formal-batch.sh",
+      "square-initial-files.json",
+      "square-initial-stripfold-files.json",
+      "stage4_batch_preflight.py"
+    ],
+    "unchanged_entries_vs_rc8": 52,
+    "config_sha256": "785e985f74171774d55d2ebd54a1800120453c678810dc2c01cb2f8fd38d765a",
+    "runner_sha256": "8866dcf45d6b6ea371a4967e0575bd880d28097aa841a278d195b5f01ca7dd40",
+    "a5_l1_sha256": "7cbdc1e4e10a663e9b6f25b8361945a2f6d08305d736c59b3b365557845eea8e",
+    "pfs1_observation_v2_sha256": "b0d6c6d4b1fd1940a0111eab70c5b02a99f4692afae8a2c012f731735c2b5caf",
+    "stage4_batch_preflight_sha256": "7e6715ad802074fc61402b83d2461c817aa655111a7060cc3fc6d0b6d39a1585",
+    "flat_generator_sha256": "664aeb33d5835e36a99a35202572a0b2f9b615484aaf41ddd702fc1c9997ea35",
+    "stripfold_generator_sha256": "ba40bfb1402e287242b3b46924652e543133f9feff4f378399f55f8fcad3d0b9",
+    "static_audit_sha256": "deed2238e60bf585d854e226e1bff4125f6754f1c406047db95b3fb5abe4b284",
+    "source_diff_sha256": "dbac38cb2932bf27ab24d26e934d854f3c957f1e6f6ac15fa120ada74270f5ba"
+  },
+  "verification": {
+    "manifest": "63/63 local",
+    "changed_vs_rc8": 11,
+    "unchanged_vs_rc8": 52,
+    "py_compile": true,
+    "protocol_tests": "accept 4100/4202/4302; reject old 4100, wrong scale, missing binding, generator mismatch, missing protocol",
+    "generation_runs": {
+      "4100": "exit 0",
+      "4201": "exit 0",
+      "4202": "exit 0",
+      "4302": "exit 0"
+    },
+    "initial_case_plan_match": true,
+    "old_4100_geometry_identical": true,
+    "download_verified": "765/765 remote-local SHA256 match",
+    "local_recompute": "7/7 status and stability identical",
+    "verify_dev": "FAILED at 4202 arc4 (Expected positive smoke case failed), exit 1",
+    "pairs": "4100 0.0, 4202 0.0, 4302 0.0 m",
+    "initial_protocol_cases": "7/7 initial_protocol=true"
+  },
+  "run": {
+    "batch_dir": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc8b-runs",
+    "journal": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc8b-runs/journal",
+    "attempts": {
+      "started": 7,
+      "finished": 7,
+      "total_lines": 14
+    },
+    "accepted": 4,
+    "rejected_complete": 3,
+    "all_six_positives_accepted": false,
+    "pairs_pass": true,
+    "cases": [
+      {
+        "slot": 1,
+        "seed": 4100,
+        "mode": "single",
+        "quality": "accepted",
+        "centroid_mm": 0.143531,
+        "p95_mm": 0.2072,
+        "scale": 0.0,
+        "run": "day4-a5-rc2-l1-20261105-022655-542233"
+      },
+      {
+        "slot": 2,
+        "seed": 4100,
+        "mode": "arc4",
+        "quality": "accepted",
+        "centroid_mm": 0.143531,
+        "p95_mm": 0.2072,
+        "scale": 0.0,
+        "run": "day4-a5-rc2-l1-20261105-023850-153428"
+      },
+      {
+        "slot": 3,
+        "seed": 4202,
+        "mode": "single",
+        "quality": "rejected",
+        "centroid_mm": 7.480913,
+        "p95_mm": 11.538153,
+        "scale": 1.0,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261105-025057-237749"
+      },
+      {
+        "slot": 4,
+        "seed": 4202,
+        "mode": "arc4",
+        "quality": "rejected",
+        "centroid_mm": 7.480913,
+        "p95_mm": 11.538153,
+        "scale": 1.0,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261105-030451-224469"
+      },
+      {
+        "slot": 5,
+        "seed": 4302,
+        "mode": "single",
+        "quality": "accepted",
+        "centroid_mm": 0.27563,
+        "p95_mm": 0.412474,
+        "scale": 1.0,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261105-031858-626939"
+      },
+      {
+        "slot": 6,
+        "seed": 4302,
+        "mode": "arc4",
+        "quality": "accepted",
+        "centroid_mm": 0.27563,
+        "p95_mm": 0.412474,
+        "scale": 1.0,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261105-033510-220649"
+      },
+      {
+        "slot": 7,
+        "seed": 4201,
+        "mode": "single",
+        "quality": "rejected",
+        "centroid_mm": 7.065738,
+        "p95_mm": 10.425162,
+        "scale": 1.0,
+        "run": "day4-a5-rc2-pfs1-observation-v2-20261105-035127-926461"
+      }
+    ],
+    "failure_analysis": {
+      "4202_stationary_drift_mean_m": 0.029914,
+      "4201_stationary_drift_mean_m": 0.030077,
+      "4202_fold_extent_m": [
+        0.195839,
+        0.407787,
+        0.05952
+      ],
+      "old_4202_fold_extent_m": [
+        0.228291,
+        0.419899,
+        0.060337
+      ],
+      "note": "recovery stays flat; the failure occurs after the fold as a whole-cloth slide"
+    },
+    "verify_dev": {
+      "status": "failed",
+      "exit_code": 1,
+      "reason": "Expected positive smoke case failed: 4202 arc4",
+      "log": "results/RC8B_SEVEN_CASE_20261105/rc8b-verify-dev.log"
+    },
+    "download_verified": "765/765 files",
+    "review": "results/RC8B_SEVEN_CASE_20261105/review.md"
+  },
+  "run_status": "batch_complete_positive_failed_no_freeze",
+  "formal_stage4_success": 0,
+  "next_gate": "Do not freeze. The task-scoped initial generation at 1.0 changes L2 behaviour enough that 4202 (and 4201) fail after the fold. Decide whether to investigate the L2 initial sensitivity or explicitly revise the protocol (e.g. L2/L3 initial generation 0.0, rollout 1.0) as a new registered configuration, then re-run. Formal Stage 4 success remains 0.",
+  "notes": [
+    "4100 was regenerated under the flat protocol; its geometry is byte-identical to the old state.",
+    "L2/L3 initials were regenerated at scale 1.0 and may differ physically; task identity (strip edge/width) is checked and recorded, not assumed identical.",
+    "rc8 and rc7 results are preserved and excluded from this matrix.",
+    "Results are reported per task; no uniform-physics difficulty claim.",
+    "rc8b seven-case run: 4/6 positives accepted; 4202 s/a and 4201 rejected with ~30 mm stationary-half drift; no freeze.",
+    "All seven initial_protocol checks passed; the failure is physical, not an identity/protocol failure."
+  ],
+  "freeze": {
+    "status": "not_executed",
+    "reason": "six-positive gate failed (4202 s/a rejected); verify-dev failed; per instructions no freeze and no reuse of rc8 results",
+    "receipts_written": false,
+    "hashes_modified": false
+  },
+  "l2_diagnostic": {
+    "status": "completed_intermediate",
+    "report": "results/RC8B_L2_DIAG_20261105/review.md",
+    "single_comparison_plan": "results/RC8B_L2_DIAG_20261105/SINGLE_COMPARISON_PLAN.md",
+    "finding": {
+      "loaded_pose_diff_mm": 2.796,
+      "loaded_rotation_deg": -0.256,
+      "recovery_pose_diff_mm": 2.022,
+      "recovery_internal_resid_p95_mm": 0.001,
+      "pre_release_pose_diff_mm": 1.718,
+      "pre_release_internal_resid_p95_mm": 0.649,
+      "amplification_stage": "post-release (sustained ~4 mm/s sliding in new; old decays to 0.5-0.8 mm/s)",
+      "first_geometry_failure_after_release_s": 4.15,
+      "formal_window_start_after_release_s": 3.5,
+      "note": "3 mm pose difference and 30 mm slide are correlated, not causal; recovery-motion/stress/contact state is unrecorded/unknown"
+    },
+    "next": "optional repeatability runs or offline 0.30 mm vertex/layer inspection; no protocol change without instruction",
+    "result": {
+      "quality": "accepted",
+      "centroid_mm": 0.7396,
+      "p95_mm": 1.5397,
+      "stationary_drift_mm": 7.63,
+      "steady_centroid_mm_s": 0.418,
+      "geometry_failure_frames": 0,
+      "download_verified": "111/111",
+      "review": "results/RC8B_L2_DIAG_20261105/l2pose_review.md"
+    },
+    "interpretation": "pose change alone does not reproduce the failure; result is intermediate between old and new; sub-mm remaining geometry is associated, not proven causal; repeatability not tested"
+  },
+  "repeat1": {
+    "status": "repeat1_bit_identical_rejected",
+    "repeat_candidate": "a5-rc2-pfs1-observation-v2-rc8b-repeat1",
+    "repeat_result": "rejected 7.480913/11.538153; max stage/target/trace diff 0.0"
+  }
+}

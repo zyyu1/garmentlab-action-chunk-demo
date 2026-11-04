@@ -1,0 +1,118 @@
+{
+  "cases": [
+    {
+      "slot": 1,
+      "seed": 4100,
+      "mode": "single",
+      "local_status": "accepted",
+      "remote_status": "accepted",
+      "status_match": true,
+      "stability_match": true,
+      "local_stability": {
+        "centroid_drift_max_m": 0.00014353134692869643,
+        "vertex_drift_p95_max_m": 0.00020719995120599787,
+        "vertex_drift_max_m": 0.00028557355593814763,
+        "vertex_speed_p95_max_m_s": 0.0021000383535357625,
+        "vertex_speed_max_m_s": 0.0165301362397056
+      }
+    },
+    {
+      "slot": 2,
+      "seed": 4100,
+      "mode": "arc4",
+      "local_status": "accepted",
+      "remote_status": "accepted",
+      "status_match": true,
+      "stability_match": true,
+      "local_stability": {
+        "centroid_drift_max_m": 0.00014353134692869643,
+        "vertex_drift_p95_max_m": 0.00020719995120599787,
+        "vertex_drift_max_m": 0.00028557355593814763,
+        "vertex_speed_p95_max_m_s": 0.0021000383535357625,
+        "vertex_speed_max_m_s": 0.0165301362397056
+      }
+    },
+    {
+      "slot": 3,
+      "seed": 4202,
+      "mode": "single",
+      "local_status": "rejected",
+      "remote_status": "rejected",
+      "status_match": true,
+      "stability_match": true,
+      "local_stability": {
+        "centroid_drift_max_m": 0.00748091296679558,
+        "vertex_drift_p95_max_m": 0.011538152828582325,
+        "vertex_drift_max_m": 0.012872831613332338,
+        "vertex_speed_p95_max_m_s": 0.02569520603210012,
+        "vertex_speed_max_m_s": 0.03977065696089865
+      }
+    },
+    {
+      "slot": 4,
+      "seed": 4202,
+      "mode": "arc4",
+      "local_status": "rejected",
+      "remote_status": "rejected",
+      "status_match": true,
+      "stability_match": true,
+      "local_stability": {
+        "centroid_drift_max_m": 0.00748091296679558,
+        "vertex_drift_p95_max_m": 0.011538152828582325,
+        "vertex_drift_max_m": 0.012872831613332338,
+        "vertex_speed_p95_max_m_s": 0.02569520603210012,
+        "vertex_speed_max_m_s": 0.03977065696089865
+      }
+    },
+    {
+      "slot": 5,
+      "seed": 4302,
+      "mode": "single",
+      "local_status": "accepted",
+      "remote_status": "accepted",
+      "status_match": true,
+      "stability_match": true,
+      "local_stability": {
+        "centroid_drift_max_m": 0.0002756295694941649,
+        "vertex_drift_p95_max_m": 0.00041247385341989037,
+        "vertex_drift_max_m": 0.0004607823500026087,
+        "vertex_speed_p95_max_m_s": 0.003292874748105843,
+        "vertex_speed_max_m_s": 0.009019311124338679
+      }
+    },
+    {
+      "slot": 6,
+      "seed": 4302,
+      "mode": "arc4",
+      "local_status": "accepted",
+      "remote_status": "accepted",
+      "status_match": true,
+      "stability_match": true,
+      "local_stability": {
+        "centroid_drift_max_m": 0.0002756295694941649,
+        "vertex_drift_p95_max_m": 0.00041247385341989037,
+        "vertex_drift_max_m": 0.0004607823500026087,
+        "vertex_speed_p95_max_m_s": 0.003292874748105843,
+        "vertex_speed_max_m_s": 0.009019311124338679
+      }
+    },
+    {
+      "slot": 7,
+      "seed": 4201,
+      "mode": "single",
+      "local_status": "rejected",
+      "remote_status": "rejected",
+      "status_match": true,
+      "stability_match": true,
+      "local_stability": {
+        "centroid_drift_max_m": 0.007065738064690087,
+        "vertex_drift_p95_max_m": 0.010425162286747416,
+        "vertex_drift_max_m": 0.011383019673560308,
+        "vertex_speed_p95_max_m_s": 0.025529337021942128,
+        "vertex_speed_max_m_s": 0.039299067120563934
+      }
+    }
+  ],
+  "all_match": true,
+  "evaluator": "stage4_success_v1.evaluate unchanged; config stage4-success-v1.json"
+}

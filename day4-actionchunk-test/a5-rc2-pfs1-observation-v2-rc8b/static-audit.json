@@ -1,0 +1,63 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "final-candidate-rc8b-task-scoped-initials",
+  "created_utc": "2026-11-05T18:40:00Z",
+  "scope": "offline identity, initial-protocol and entry-binding audit",
+  "parent_rc8_manifest_sha256": "6893001070f6bfc24307927cafe95bb83001524edcb35804a4aaf57479f457aa",
+  "new_manifest_sha256": "cce573ddd626715b15818467290152a4c68502bafc9595b11780fe1dd601bc8e",
+  "checks": {
+    "manifest_entries": 63,
+    "manifest_all_hashes_match": true,
+    "alias_byte_equal": true,
+    "changed_vs_rc8": 11,
+    "unchanged_vs_rc8": 52,
+    "changed_files": [
+      "a5-candidate.json",
+      "a5-rc2-pfs1-observation-v2.json",
+      "day4-square-initial-stripfold.py",
+      "day4-square-initial.py",
+      "run-a5-rc2-pfs1-observation-v2.sh",
+      "run-square-initial-stripfold.sh",
+      "run-square-initial.sh",
+      "run-stage4-formal-batch.sh",
+      "square-initial-files.json",
+      "square-initial-stripfold-files.json",
+      "stage4_batch_preflight.py"
+    ],
+    "initial_protocol": {
+      "version": "stage4-initial-v2-task-scoped",
+      "flat_scale": 0.0,
+      "perturbed_scale": 1.0,
+      "crumpled_scale": 1.0,
+      "binding": "/World/Garment/particleMaterial + /World/Garment/particleSystem",
+      "generator_hashes_bound": true
+    },
+    "protocol_tests": {
+      "accept_new_4100": true,
+      "accept_new_4202": true,
+      "accept_new_4302": true,
+      "reject_old_4100": true,
+      "reject_wrong_scale": true,
+      "reject_missing_binding": true,
+      "reject_generator_mismatch": true,
+      "reject_missing_protocol": true
+    },
+    "generation_runs_exit_zero": ["4100", "4201", "4202", "4302"],
+    "initial_hashes_match_candidate": true,
+    "initial_case_plan_match": true,
+    "old_4100_geometry_identical": true,
+    "formal_entry_app_relative": true,
+    "a5_entry_unchanged": true,
+    "a5_recovery_unchanged": true,
+    "a5_capture_unchanged": true,
+    "pfs1_observation_v2_unchanged_from_rc8": true,
+    "stage4_success_v1_unchanged": true,
+    "py_compile": true
+  },
+  "result": "pass",
+  "notes": [
+    "The only rollout physics change vs rc8 is none: rc8b changes initial generation, formal entry binding and metadata only.",
+    "Initial states were regenerated once per seed; no selection or retry.",
+    "Old initials and missing protocol blocks are rejected by the formal preflight."
+  ]
+}

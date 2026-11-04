@@ -1,5 +1,7 @@
 # 2026-11-05 GarmentLab 日报 · Stage 4 rc8 七例 RC 通过 / 冻结前检查暂停交接
 
+> 后续交接见 [rc8b 日报](2026-11-05-GarmentLab日报%20Stage4%20rc8b初态协议与七例失败交接.md)：初态协议补齐后，新 L2 初态导致 4202/4201 失败，未冻结。
+
 > 时间说明：rc8 的七次运行在远端（UTC+8）跨过 2026-11-05 凌晨；本地 Europe/Berlin 仍是 2026-11-04 晚间。本报告按远端运行日命名。
 
 **暂停位置**　rc8（task-scoped：L1 `particleFrictionScale=0.0`、L2/L3 `=1.0`）七例 RC **通过**：6/6 阳性 accepted、4201 有效拒绝、三组配对 0 差、证据完整、verify-dev 通过。随后做冻结前核对：**身份检查通过**（manifest `68930010…`、14 行账本无未完成、无已有回执），但**正式入口检查未通过**——正式 L2/L3 初态生成脚本仍强制 `particleFrictionScale=0.0`（协议要求 1.0），因此**未执行 freeze、未写 `verified-dev.json`/`E_RELEASE.json`**，也没有改写任何哈希。正式 Stage 4 成功仍为 **0**；held-out 与正式批次未运行。等 A/B/C 选择后继续。

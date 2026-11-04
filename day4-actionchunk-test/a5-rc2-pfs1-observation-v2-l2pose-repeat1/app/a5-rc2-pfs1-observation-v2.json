@@ -1,0 +1,84 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "diagnostic-l2-pose-control-repeat1",
+  "created_utc": "2026-11-05T20:25:00Z",
+  "status": "repeat1_registered_not_run",
+  "kind": "diagnostic_single_case_repeat",
+  "purpose": "Test whether the overall pose change alone is sufficient to reproduce the rc8b 4202 sustained sliding. It cannot separate hidden contact/stress/velocity contributions.",
+  "parent": "a5-rc2-pfs1-observation-v2-l2pose",
+  "parent_manifest_sha256": "3a97a5000ac856b758b65a78d15d1f31fe826048ab59f79714c99b7fb89667f0",
+  "rollout_identity": {
+    "same_as": "rc8b",
+    "changed_entries": [
+      "a5-candidate.json",
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "unchanged_entries": 60,
+    "note": "a5_recovery.py, a5_capture.py, pfs1_observation_v2.py, stage4_success_v1.py and assets are byte-identical to rc8b; only the registered initial and diagnostic orchestration change"
+  },
+  "physics_scope": {
+    "decision": "task_scoped_as_rc8b",
+    "task": "perturbed",
+    "particle_friction_scale": 1.0,
+    "friction": 0.3,
+    "evaluator": "stage4_success_v1 unchanged",
+    "thresholds": {
+      "centroid_limit_mm": 1.0,
+      "vertex_p95_limit_mm": 3.0
+    },
+    "expert_control": "unchanged; targets recomputed from the observed state"
+  },
+  "diagnostic_initial": {
+    "dir": "day4-square-initial-stripfold-20261104-202215-l2posecontrol",
+    "kind": "pose_matched_old_geometry",
+    "source_initial": "day4-square-initial-stripfold-20261103-062710-242560",
+    "pose_reference_initial": "day4-square-initial-stripfold-20261105-015817-115841",
+    "transform": {
+      "fit_vertices": 441,
+      "fit_scope": "final xy, all vertices",
+      "rotation_axis": "+z",
+      "rotation_deg": 0.256377,
+      "translation_mm": [
+        -1.9414,
+        2.7075
+      ],
+      "centers_from_initials_only": true
+    },
+    "loaded_state": {
+      "flat_settled": "unchanged (bit-identical to the new initial)",
+      "final": "transformed old folded geometry at the new overall pose",
+      "velocities_restored": false,
+      "velocity_transform": "none (loader clears velocities)"
+    },
+    "is_task_scoped_generated": false,
+    "note": "derived control; not valid for formal batches or the seven-case matrix"
+  },
+  "case": {
+    "seed": 4202,
+    "level": "perturbed",
+    "task": "B_nominal",
+    "mode": "single",
+    "actions": 12,
+    "fold_edge": "right",
+    "split": "dev"
+  },
+  "run": {
+    "one_attempt": true,
+    "retry": false,
+    "lock": "a5-rc2-pfs1-observation-v2-l2pose-repeat1-runs",
+    "journal": "/root/autodl-tmp/a5-rc2-pfs1-observation-v2-l2pose-repeat1-runs/journal",
+    "output_prefix": "day4-a5-rc2-pfs1-observation-v2-"
+  },
+  "interpretation": {
+    "reproduce_sliding": "overall pose change is sufficient in this case; does not identify the release contact mechanism",
+    "old_behavior": "the rigid transform is insufficient; inspect remaining geometry, loaded state and repeatability; do not claim hidden stress is the cause",
+    "intermediate": "record continuous metrics; do not force a binary conclusion"
+  },
+  "boundaries": [
+    "one 4202 single only; no retry, no expansion, no freeze",
+    "not part of the seven-case matrix; rc8b failure preserved",
+    "formal Stage 4 success remains 0"
+  ],
+  "repeat_of": "a5-rc2-pfs1-observation-v2-l2pose"
+}

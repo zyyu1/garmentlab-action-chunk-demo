@@ -1,0 +1,2 @@
+{"initial": "/root/autodl-tmp/day4-square-initial-stripfold-20261104-202215-l2posecontrol", "manifest_sha256": "3a97a5000ac856b758b65a78d15d1f31fe826048ab59f79714c99b7fb89667f0", "mode": "single", "seed": 4202, "state": "started", "utc": "2026-11-04T20:24:54.623229+00:00"}
+{"mode": "single", "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-042455-646408", "seed": 4202, "state": "finished", "utc": "2026-11-04T20:42:32.533379+00:00", "verdict": "accepted True"}

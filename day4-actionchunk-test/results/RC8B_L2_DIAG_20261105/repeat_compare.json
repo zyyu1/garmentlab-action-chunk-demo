@@ -1,0 +1,110 @@
+{
+  "l2pose": {
+    "original": "day4-a5-rc2-pfs1-observation-v2-20261105-042455-646408",
+    "repeat": "day4-a5-rc2-pfs1-observation-v2-20261105-050830-340362",
+    "quality_original": "accepted",
+    "quality_repeat": "accepted",
+    "stability_original_mm": [
+      0.7396457308402281,
+      1.5396752076933657
+    ],
+    "stability_repeat_mm": [
+      0.7396457308402281,
+      1.5396752076933657
+    ],
+    "stationary_original_mm": 7.6257634713361435,
+    "stationary_repeat_mm": 7.6257634713361435,
+    "stages": {
+      "initial_loaded": {
+        "max_mm": 0.0,
+        "mean_mm": 0.0,
+        "z_max_mm": 0.0
+      },
+      "after_recovery": {
+        "max_mm": 0.0,
+        "mean_mm": 0.0,
+        "z_max_mm": 0.0
+      },
+      "pre_release": {
+        "max_mm": 0.0,
+        "mean_mm": 0.0,
+        "z_max_mm": 0.0
+      },
+      "release_boundary": {
+        "max_mm": 0.0,
+        "mean_mm": 0.0,
+        "z_max_mm": 0.0
+      }
+    },
+    "target_max_mm": 0.0,
+    "target_max_yaw_deg": 0.0,
+    "formal_trace_max_mm": 0.0,
+    "formal_trace_mean_mm": 0.0,
+    "first_fail_original": 0,
+    "first_fail_repeat": 0,
+    "fold_extent_original": [
+      0.221084613353014,
+      0.4158749282360077,
+      0.0600474588572979
+    ],
+    "fold_extent_repeat": [
+      0.221084613353014,
+      0.4158749282360077,
+      0.0600474588572979
+    ]
+  },
+  "rc8b": {
+    "original": "day4-a5-rc2-pfs1-observation-v2-20261105-025057-237749",
+    "repeat": "day4-a5-rc2-pfs1-observation-v2-20261105-052531-038610",
+    "quality_original": "rejected",
+    "quality_repeat": "rejected",
+    "stability_original_mm": [
+      7.4809129667955805,
+      11.538152828582325
+    ],
+    "stability_repeat_mm": [
+      7.4809129667955805,
+      11.538152828582325
+    ],
+    "stationary_original_mm": 29.914403348433726,
+    "stationary_repeat_mm": 29.914403348433726,
+    "stages": {
+      "initial_loaded": {
+        "max_mm": 0.0,
+        "mean_mm": 0.0,
+        "z_max_mm": 0.0
+      },
+      "after_recovery": {
+        "max_mm": 0.0,
+        "mean_mm": 0.0,
+        "z_max_mm": 0.0
+      },
+      "pre_release": {
+        "max_mm": 0.0,
+        "mean_mm": 0.0,
+        "z_max_mm": 0.0
+      },
+      "release_boundary": {
+        "max_mm": 0.0,
+        "mean_mm": 0.0,
+        "z_max_mm": 0.0
+      }
+    },
+    "target_max_mm": 0.0,
+    "target_max_yaw_deg": 0.0,
+    "formal_trace_max_mm": 0.0,
+    "formal_trace_mean_mm": 0.0,
+    "first_fail_original": 249,
+    "first_fail_repeat": 249,
+    "fold_extent_original": [
+      0.19583897106349468,
+      0.4077874720096588,
+      0.05952025856822729
+    ],
+    "fold_extent_repeat": [
+      0.19583897106349468,
+      0.4077874720096588,
+      0.05952025856822729
+    ]
+  }
+}

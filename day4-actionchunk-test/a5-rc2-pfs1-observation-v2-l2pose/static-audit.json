@@ -1,0 +1,42 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "diagnostic-l2-pose-control",
+  "created_utc": "2026-11-05T20:25:00Z",
+  "scope": "offline identity and derived-initial audit before the single 4202 diagnostic",
+  "parent_rc8b_manifest_sha256": "cce573ddd626715b15818467290152a4c68502bafc9595b11780fe1dd601bc8e",
+  "manifest_sha256": "3a97a5000ac856b758b65a78d15d1f31fe826048ab59f79714c99b7fb89667f0",
+  "checks": {
+    "manifest_entries": 63,
+    "manifest_all_hashes_match": true,
+    "alias_byte_equal": true,
+    "changed_vs_rc8b": 3,
+    "unchanged_vs_rc8b": 60,
+    "rollout_sources_identical": ["a5_recovery.py", "a5_capture.py", "pfs1_observation_v2.py",
+                                  "stage4_success_v1.py", "a5_entry.py", "assets"],
+    "diagnostic_initial": {
+      "kind": "pose_matched_old_geometry",
+      "fit_vertices": 441,
+      "rotation_axis": "+z",
+      "rotation_deg": 0.256377,
+      "translation_m": [-0.0019413746, 0.0027074977],
+      "internal_distance_max_abs_diff_m": 1.6653345369377348e-16,
+      "alignment_residual_vs_new_p95_mm": 0.06721100090149144,
+      "alignment_residual_vs_new_max_mm": 0.3018999450247332,
+      "flat_settled_equal_new": true,
+      "z_unchanged": true,
+      "velocities_restored": false,
+      "is_task_scoped_generated": false
+    },
+    "initial_case_in_plan": true,
+    "candidate_modes": ["single"],
+    "evaluator_unchanged": true,
+    "thresholds_unchanged": true,
+    "py_compile": true
+  },
+  "result": "pass",
+  "notes": [
+    "The derived initial is old folded geometry at the new overall pose; it does not restore contact/stress/solver state.",
+    "The diagnostic does not enter the seven-case matrix, held-out or a freeze.",
+    "Old/new/derived use the same rc8b rollout sources."
+  ]
+}
