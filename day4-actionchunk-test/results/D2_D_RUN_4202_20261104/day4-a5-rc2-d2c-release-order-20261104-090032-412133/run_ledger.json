@@ -1,0 +1,136 @@
+{
+  "state": "finished",
+  "utc": "2026-11-04T01:19:37.343795+00:00",
+  "version": "a5-rc2-d2c-release-order",
+  "seed": 4202,
+  "level": "perturbed",
+  "mode": "single",
+  "result_dir": "/root/autodl-tmp/day4-a5-rc2-d2c-release-order-20261104-090032-412133",
+  "sim_process_status": 0,
+  "assess_status": 0,
+  "episode_passed": true,
+  "errors": [],
+  "action_count": 12,
+  "call_horizons": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "internal_delay": {
+    "requested_steps": 120,
+    "start_step": 1955,
+    "end_step": 2075,
+    "elapsed_steps": 120,
+    "start_sim_time_s": 32.58333503268659,
+    "end_sim_time_s": 34.58333513699472,
+    "elapsed_sim_time_s": 2.0000001043081284,
+    "ee_start_m": [
+      -0.1683365157140608,
+      -0.47106278389122935,
+      0.046766248577871906
+    ],
+    "ee_end_m": [
+      -0.1683365157140608,
+      -0.47106278389122935,
+      0.046766248577871906
+    ],
+    "ee_displacement_m": 0.0,
+    "gripper_state_open": true,
+    "attachment_enabled": false,
+    "control_calls": 0,
+    "target_changes": 0,
+    "cloth_position_reset": false,
+    "cloth_velocity_reset": false,
+    "public_action": false,
+    "scope": "internal_control_stage",
+    "public_action_label": "release_retreat",
+    "public_action_index": 12,
+    "public_action_target": [
+      -0.168335948015093,
+      -0.4710616045576297,
+      0.1967657491862911
+    ],
+    "registered_at": "a5-rc2-d2c-release-order.json:delay.location"
+  },
+  "evidence": {
+    "result.json": {
+      "present": true,
+      "bytes": 50902,
+      "sha256": "ac1785877e2b322320a34103efee74d27c9f4d8e22dec92541724181ac45bfa6"
+    },
+    "success_trace.npz": {
+      "present": true,
+      "bytes": 1671494,
+      "sha256": "be35b6540ea64f6feba4add1d26c083bc360e71fd0d7ed6fdaedb28d6436e4ec"
+    },
+    "success_meta.json": {
+      "present": true,
+      "bytes": 3019,
+      "sha256": "f310c7f98e16eaaffecd72fbb5e312c31cd42a686d102cc4464a299415e8d6db"
+    },
+    "final.png": {
+      "present": true,
+      "bytes": 101829,
+      "sha256": "56bda4faa2fe47f86f5a06f195876564ee17a56e585e1056be75fe48d279a0a0"
+    },
+    "runner.log": {
+      "present": true,
+      "bytes": 34305,
+      "sha256": "d94e716e242ee5fdc8cbde4413330d5e4b165837ff38a92e7a8153f648b5b1d7"
+    },
+    "contact_report.json": {
+      "present": true,
+      "bytes": 674,
+      "sha256": "0bf452e39a3bb8b880f5c3409835abb0e03be945f84c18af33deabb61998844d"
+    },
+    "evidence/release_diag.npz": {
+      "present": true,
+      "bytes": 1412322,
+      "sha256": "abe49bc26531d0a50b04692546e2b61f53b1ebf4b64d4bdeba616045d48b6223"
+    },
+    "evidence/release_diag.json": {
+      "present": true,
+      "bytes": 9476,
+      "sha256": "81e932a94db49b7c357a0c24b6feb9544a12d6f6c096c712590d28a0f1e347b9"
+    },
+    "evidence/release_diag_events.csv": {
+      "present": true,
+      "bytes": 1602,
+      "sha256": "ff3c6c6690edec195443195deaac5d6448e7336ada74ac6c6dc298991079b082"
+    },
+    "evidence/summary.json": {
+      "present": true,
+      "bytes": 22918,
+      "sha256": "2f33ee3e0e67404b562b0b0b02b1ce0d09244e37310d8cf2b79aaa771c70a983"
+    },
+    "evidence/episode.mp4": {
+      "present": true,
+      "bytes": 943788,
+      "sha256": "c4136c4428c65d1333513c607b02b870fd59ca1da98493daa93650d160d12d7c"
+    },
+    "evidence/timeline.jsonl": {
+      "present": true,
+      "bytes": 4165460,
+      "sha256": "26e817169628113ca4208dc751e0c54c9d727fc25bf48e8106656f46047c867b"
+    },
+    "evidence/manifest.json": {
+      "present": true,
+      "bytes": 8266,
+      "sha256": "932349865d4d866a29f92ebede3798c6d05eb3107e7fba8eded508c9bdb3be1a"
+    },
+    "diag-verdict.json": {
+      "present": true,
+      "bytes": 10778,
+      "sha256": "3979cff87f13f5bf1997003f0a1318a193962b1be81de056f7a70b12c98b4303"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "version": "a5-rc2-drift-diag-v1",
+  "revision": "v1.1",
+  "revised_utc": "2026-11-03T22:40:00Z",
+  "revision_note": "Anchor is emitted as release_anchor (non-state) so the original evidence continuous_steps audit stays valid; release action target is compared at float32. No physics, control or action-target change. The v1 4202 diagnostic run remains a preliminary record with complete=False caused only by these two audit/interface issues.",
+  "parent": "stage4-a5-rc2",
+  "status": "v1.1_ready; v1 4202 run completed with complete=False (audit/interface only); v1.1 rerun pending",
+  "base_candidate_sha256": "10a6cb452b9fafd5907f245b68fd02d49c7af1e12fa6cb0f755f1791a5af27a5",
+  "base_manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+  "subject": {
+    "seed": 4202,
+    "level": "perturbed",
+    "mode": "single",
+    "initial": "day4-square-initial-stripfold-20261103-062710-242560"
+  },
+  "revalidation": {
+    "seed": 4302,
+    "level": "crumpled",
+    "mode": "single",
+    "initial": "day4-square-initial-stripfold-20261103-094143-137994"
+  },
+  "observation_only": true,
+  "physics_control_actions_unchanged": true,
+  "new_recording": {
+    "interval": "release action begin through the retreated snapshot",
+    "cloth": "441 vertices per physical step",
+    "gripper_pose": "EE position and quaternion from every state row",
+    "gripper_aperture": "all joint positions, DOF names and derived finger-joint aperture",
+    "attachment": "holding, attached, enabled_slots, logical_attached, command_holding",
+    "distance": "EE-to-nearest-vertex and finger-link-to-nearest-vertex distance",
+    "contact": "available robot rigid contact report; zero events are not evidence of no contact"
+  },
+  "output_prefix": "day4-a5-rc2-drift-diag-",
+  "public_actions": 12,
+  "formal_stage4_success": 0,
+  "notes": [
+    "This is a diagnostic version of RC2, not a new task or success criterion.",
+    "The diagnostic recorder only observes after world.step; it never adds steps or control calls.",
+    "The release action target and the 331-step success trace remain the RC2 ones.",
+    "contact_report.json is a robot-rigid contact channel; it is not cloth-particle certification.",
+    "Distances are distance evidence, not contact force or impulse."
+  ]
+}

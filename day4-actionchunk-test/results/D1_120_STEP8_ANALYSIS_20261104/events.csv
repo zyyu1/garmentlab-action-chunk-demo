@@ -1,0 +1,8 @@
+event,observed_step,sim_time_s,elapsed_since_release_s,phase,holding,attached
+ungrasp_return,1953,32.58333503268659,0.0,ungrasp_return,False,False
+delay_begin,1953,32.58333503268659,0.0,delay_begin,False,False
+delay_end,2073,34.58333513699472,2.0000001043081284,delay_end,False,False
+retreat_begin,2073,34.58333513699472,2.0000001043081284,retreat_begin,False,False
+retreat_end,2217,36.98333526216447,4.400000229477882,retreat_end,False,False
+window_begin_210,2429,40.4833354447037,7.900000412017107,formal_window,,
+window_end_330,2549,42.48333554901183,9.900000516325235,formal_window,,

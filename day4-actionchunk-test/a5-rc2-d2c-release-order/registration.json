@@ -1,0 +1,214 @@
+{
+  "version": "a5-rc2-d2c-release-order",
+  "stage": "d2c_registered_offline_verified",
+  "created_utc": "2026-11-04T00:39:00Z",
+  "implemented_utc": "2026-11-04T00:43:48Z",
+  "status": "release-order intervention run once; diagnostic complete; quality rejected; retained as valid comparison",
+  "scope": {
+    "seed": 4202,
+    "level": "perturbed",
+    "mode": "single",
+    "split": "dev",
+    "fold_edge": "right"
+  },
+  "parent": "stage4-a5-rc2",
+  "parent_diagnostic": {
+    "version": "a5-rc2-d1-120",
+    "revision": "step2-4+run",
+    "manifest_sha256": "cd1d7f83d065974e12191486eddbf722edd4a1b7392ec78543966483434b25a6",
+    "config_sha256": "a6884eab8ae4bf6d703b0321415cfc2cd501f878472068109addba564ba4d471",
+    "clean_run": "day4-a5-rc2-d1-120-20261104-071602-499516",
+    "postfix_complete": true,
+    "quality": "rejected",
+    "formal_window_centroid_drift_max_m": 0.00204088167284051,
+    "formal_window_vertex_p95_max_m": 0.0044134143018154616,
+    "note": "120-step wait did not stabilize the cloth; baseline and D1 cloth trajectories are bit-identical at equal elapsed time"
+  },
+  "base": {
+    "candidate_sha256": "10a6cb452b9fafd5907f245b68fd02d49c7af1e12fa6cb0f755f1791a5af27a5",
+    "manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+    "manifest_entries": 60
+  },
+  "initial": {
+    "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560",
+    "dir_name": "day4-square-initial-stripfold-20261103-062710-242560",
+    "hashes": {
+      "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+      "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+    }
+  },
+  "new_identity": {
+    "config_sha256": "96acc5fa4a0a318c876437c236a5c9260497a00028adb6db280784ed1725be27",
+    "manifest_sha256": "778935ab6ec62a093470a8485a86e241884ba4f867c1be6d0f57c4f3f9eda537",
+    "manifest_entries": 66,
+    "source_sha256": {
+      "release_diag.py": "dcd0d1cdf19d17868019da6b594d67c6aed533031ba1a5bd4fa4025160a4d70c",
+      "a5_capture_diag.py": "df558cf1539f4688fe1bebcc2e153fa6096259610138ca2de086ee33d735814e",
+      "a5_recovery_diag.py": "79028071a46e0a99dc40583943e9d993bf761e87e5926710dcfbbc7a2c8dec0a",
+      "a5_diag_assess.py": "6fde80af380053b6593ca94ba1a3130bd856bce12a7349fc4a924326e98bee8e",
+      "run-a5-rc2-d2c-release-order.sh": "34cfb8949291f67caec7d000300466d60a6f09b4d8649d433bb1758d32c38d1e"
+    },
+    "test_sha256": {
+      "test_d2c_release_order.py": "8ae5409675de52f2e2e73cd1df9e1994bd4179746254e2a4b9d49490fac3b149",
+      "test_release_diag.py": "bc2502fc73182a1d6355e4e73ec2e5c2e470c1a8400eb96c812e811c2fb65538"
+    },
+    "static_audit_sha256": "099d42d7c8f142ce9e05a267be8ae2eec5ed3f0daf71d194d75cc92b20974e36"
+  },
+  "release_order_plan": {
+    "intervention": "open_while_attached_then_disable",
+    "location": "final public OPEN/release_retreat, before attachment disable",
+    "preopen_steps": 10,
+    "open_while_attachment_enabled": true,
+    "suppress_redundant_second_open": true,
+    "attachment_disable_after_gripper_open": true,
+    "public_actions_unchanged": true,
+    "action_targets_unchanged": true,
+    "wait_steps_after_release": 120,
+    "why": "D2-A/B showed attachment disabled at 1944 while gripper_state/command latch remained non-open until 1953; release-step velocity jumped 17.4/11.0 mm/s. This single change keeps attachment until the 10-step gripper opening completes.",
+    "preopen_steps_moved_before_disable_vs_d1": 10,
+    "total_physics_steps_vs_d1_unchanged": true,
+    "total_physics_steps_vs_rc2": "+120 from the retained D1 wait"
+  },
+  "retained_from_d1": {
+    "delay_steps": 120,
+    "dt_s": 0.016666666666666666,
+    "duration_s": 2.0,
+    "insertion": "inside the final OPEN, after ungrasp returns and before the original upward retreat target motion",
+    "hold": "current position target and open gripper; no cloth position or velocity reset",
+    "public_actions": 12,
+    "public_actions_unchanged": true,
+    "action_targets_unchanged": true,
+    "retreat_target": "original computed OPEN target"
+  },
+  "event_recording": {
+    "required": [
+      "ungrasp_return",
+      "delay_begin",
+      "delay_end",
+      "retreat_begin",
+      "retreat_end"
+    ],
+    "event_json": "evidence/release_diag.json:events",
+    "event_csv": "evidence/release_diag_events.csv",
+    "phase_labels": [
+      "release_opening",
+      "released",
+      "delay",
+      "retreat",
+      "retreat_done"
+    ],
+    "per_step_arrays": "vertices, EE pose/quaternion, all joints, aperture, attachment flags",
+    "event_state": "EE, joints, aperture, attachment, cloth centroid and cloth vertices SHA256"
+  },
+  "evaluation": {
+    "retreat_complete_step": 0,
+    "capture_steps": "0..330",
+    "evaluate_steps": "210..330",
+    "centroid_limit_mm": 1.0,
+    "vertex_p95_limit_mm": 3.0,
+    "time_alignment": "t=0 is the attachment-disable step read from release_diag attachment flags, not delay_begin; compare by elapsed time after attachment release, not by absolute step.  Action-relative stage windows are reported separately."
+  },
+  "analysis_plan": {
+    "release_t0": "released sample row emitted immediately after attachment disable; it must share observed_step with the last preopen state.  The first all-off state row is one step later and is not used as the exact release instant.",
+    "transient": "release+0..30 steps (0..0.5 s)",
+    "later_slip": "release+30..120 steps",
+    "wait_window": "release+0..120 steps for both runs; D1 opening steps are included in its post-release window",
+    "stage_windows": "retreat and formal 210..330 aligned by public action step, reported separately",
+    "contact": "cloth-ground contact force/impulse is unavailable; use particle/centroid speed, height and penetration",
+    "missing": "normal/tangential contact force or impulse cannot be claimed",
+    "release_sampling": "record last preopen state step, release boundary observed step, released sample step and their delta; if delta is nonzero report the sampling error instead of claiming an exact instant; the released sample is a zero-physics-step state read at the boundary"
+  },
+  "expected_phenomenon": [
+    "attachment remains enabled during the 10-step gripper opening and is disabled after preopen",
+    "release-step and first-5-step particle/centroid/angular speeds decrease versus D1",
+    "if the release impulse is causal, wait/retreat/formal-window centroid and P95 drift decrease versus D1",
+    "if unchanged, release order is not the dominant cause; do not infer from a single run beyond the pre-registered metrics"
+  ],
+  "comparison": {
+    "against": "a5-rc2-d1-120 clean run and RC2 4202 single",
+    "alignment": "release t=0 = released sample immediately after all three attachment slots become false; report its observed_step delta from the last preopen state; transient 0..30 steps (0..0.5 s), later slip 30..120 steps; wait window release+0..120 steps for both runs so D1 includes its 10 opening steps; retreat and formal 210..330 remain action-relative stage metrics.",
+    "primary": [
+      "release-step particle mean speed at attachment disable",
+      "first-5 particle/centroid/angular speed after release",
+      "release+0..120 step centroid/P95/rotation (D1 includes its 10 opening steps)",
+      "retreat centroid/P95/rotation (action-relative)",
+      "formal window 210..330 centroid/P95/rotation (action-relative)",
+      "formal quality/stability"
+    ],
+    "secondary": [
+      "attachment disabled step",
+      "preopen steps",
+      "gripper open step",
+      "public action/target/horizon identity",
+      "total physics steps"
+    ]
+  },
+  "verification": {
+    "manifest_checked": true,
+    "manifest_bad": [],
+    "base_manifest_sha256_checked": true,
+    "base_files_unchanged": "60/60",
+    "py_compile": true,
+    "bash_syntax": true,
+    "offline_fixture_release_order": "8/8 passed",
+    "offline_fixture_delay": "5/5 passed",
+    "offline_fixture_release_diag": "1/1 passed",
+    "static_audit": "static-audit.json; all boolean checks true",
+    "public_action_source_unchanged": "21/21 action/horizon lines identical to D1-120; start_ee, retreat target and release(target) identical",
+    "release_order_behavior": "preopen 10 steps while holding and attached; second open suppressed; attachment disabled after ungrasp; aperture increase asserted",
+    "no_friction_or_velocity_clear": true,
+    "no_run": "preflight only; no Isaac/GPU episode executed",
+    "preopen_per_step_consistency": "10/10 world steps checked; control.assert_exclusive called after each step; global audit_episode_evidence.py and episode_evidence.py byte-identical to D1",
+    "release_boundary_sampling": "last preopen state, boundary observed step, released sample step and delta recorded; delta is not assumed zero"
+  },
+  "run_status": "completed_assessed",
+  "formal_stage4_success": 0,
+  "notes": [
+    "D2-C is a new independent diagnostic version; D1-120, RC2 and v1.1 directories are not modified.",
+    "Only the final-release order is changed; the 120-step wait, public actions/targets/commands/horizons and retreat target are retained.",
+    "Compared with D1-120, total physics steps are unchanged: the same 10 gripper-opening steps now occur while the attachment is enabled.",
+    "No friction value is changed and no cloth velocity is cleared as a fix.",
+    "One 4202 single run only; formal thresholds 1 mm / 3 mm remain; formal batch paused; no held-out.",
+    "No simulation run has occurred; D2-D requires explicit instruction."
+  ],
+  "pre_run_checks": {
+    "preopen_holding_attachment_rule": "during the 10 pre-registered steps the gripper may be open while holding remains true, but active.holding, active.attachment_enabled(), control.holding, control.attachment_enabled() and control.assert_exclusive() are checked after every step; global checks are unchanged",
+    "release_instant": "released sample is a zero-physics-step state read immediately after attachment disable; it shares observed_step with the last preopen state.  The first all-off state row is one step later and is not used as t=0.  A nonzero boundary-sample delta is reported as sampling error.",
+    "global_state_checks_unchanged": "audit_episode_evidence.py and episode_evidence.py hashes equal D1-120"
+  },
+  "run": {
+    "result_dir": "day4-a5-rc2-d2c-release-order-20261104-090032-412133",
+    "remote_dir": "/root/autodl-tmp/day4-a5-rc2-d2c-release-order-20261104-090032-412133",
+    "sim_process_status": 0,
+    "assess_status": 0,
+    "episode_passed": true,
+    "errors": [],
+    "action_count": 12,
+    "call_horizons": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "absolute_step": 2219,
+    "internal_delay_start_step": 1955,
+    "internal_delay_end_step": 2075,
+    "trace_len": 331,
+    "complete_diagnostic": true,
+    "quality": "rejected",
+    "centroid_drift_max_m": 0.001982335551959771,
+    "vertex_drift_p95_max_m": 0.004342617176576339,
+    "release_boundary_sample_step_delta": 0,
+    "no_retry": true,
+    "comparison_report": "day4-actionchunk-test/results/D2_D_COMPARE_20261104/review.md",
+    "note": "One valid diagnostic episode; quality rejected only for stability (1.98 mm > 1 mm, 4.34 mm > 3 mm). Evidence complete and retained."
+  }
+}

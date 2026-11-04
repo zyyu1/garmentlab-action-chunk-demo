@@ -1,5 +1,43 @@
 # Stage 4 收尾计划（当前有效版本）
 
+## 2026-11-03 D0 4202/4302 基线复现（两例均逐项审计通过）
+
+远端 `day4-a5-rc2-recovery-20261104-042325-295743`（journal `stage4-rc2-d0-4202-XaDTIjGX`）对照 RC2 4202 single `022718-388270`：审计 **97/97 通过**（[D0_4202_REPRO_AUDIT](day4-actionchunk-test/results/D0_4202_REPRO_AUDIT_20261103/review.md)）。12 个 action target 最大差 0；final/recovered/pre_release_hold/cloth_constructed/success_trace 顶点逐位相同；五个 evidence 快照、timeline state/action 行、summary 物理字段与 sources 哈希相同；verdict/geometry/stability/evidence_checks 相同。稳定性拒绝为 2.042884/4.414119 mm；runner_exit=0，entry exit 1 是评价器拒绝。只有 summary.json/timeline.jsonl/episode.mp4 哈希不同（UTC/单调时钟/视频编码，非物理）；视频本地未解码。
+
+结论：D0 4202 确定性复现 RC2 4202 single。这是 RC2 基线，不是 `a5-rc2-drift-diag-v1` 的 release_diag；逐物理步释放/开爪/退让已由诊断版 v1.1 补齐（见下）。
+
+D0 4302 已下载并逐项审计 **97/97 通过**（[D0_4302_REPRO_AUDIT](day4-actionchunk-test/results/D0_4302_REPRO_AUDIT_20261103/review.md)）：对照 RC2 4302 single `025702-598075`，12 个 action target 0 差，终态/轨迹/保持顶点逐位相同，evidence 快照与 timeline 行相同，verdict/geometry/stability/evidence_checks 相同；稳定性拒绝 1.910233/4.123147 mm；只有 summary/timeline/video 哈希不同（非物理）。
+
+两例 D0 均确定性地复现对应 RC2 baseline。诊断版 4202（`a5-rc2-drift-diag-v1`）v1.1 已完成，release_diag 齐全且与 v1/RC2 物理逐位相同；D1-120 步骤 6–8 已完成：4202 single 单次运行 `passed=True`、120 步等待/事件完整；标准 assessor 因 3D/4D target 形状崩溃，独立 postfix 评估 `complete=True`、`quality=rejected`（稳定性）。无重试；步骤 7 下载核验 46/46 通过；步骤 8 分段分析完成（等待 2.0783 mm / 退让 2.4590 mm / 窗口 2.0409 mm；相同 elapsed 布料逐位相同，486 点 0 差）。120 步延迟不改变滑移率，优先检查释放瞬态/回弹/地面接触。正式成功仍为 0。
+
+## 2026-11-03 A5 RC2 漂移诊断：第 1–2 项完成（仅离线）
+
+RC2 基线、七例索引、独立诊断批次登记、事件分段和漂移曲线见 [诊断报告](day4-actionchunk-test/results/STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103/review.md)。原版 verify-dev 为 exit 1、release_exists=false，失败点是 4202 arc4 稳定性拒绝；七例 RGB/视频/持布 evidence_checks 全过，RC2 仍未冻结。
+
+关键结果：保持稳定；释放/开爪瞬态为非刚体局部变形（P95 13.83/15.03 mm，最大 25.62/27.65 mm）；退让阶段贡献最大质心/旋转（2.48/2.44 mm，−0.91/−0.94°）；正式窗口为近刚体滑移/转动（质心 2.04/1.91 mm，P95 4.41/4.12 mm），超 1 mm/3 mm。释放→退让之间缺逐物理步顶点、夹爪开合量和接触记录；不能据此认定无碰撞。
+
+下一步：第 3 项已在 4202 single 补齐释放至退让结束的逐物理步诊断记录，且与 v1/RC2 物理逐位相同（见下）；D1/D2 仍不启动，4302 single 留作复验。公开动作预算 L1=7、任务 B=12；正式成功仍为 0。
+
+**2026-11-03 第 3 项状态**：v1 4202 已完成（`day4-a5-rc2-drift-diag-20261104-050739-915052`）：release_diag 157 行（155 state 步）、contact 0、quality rejected（稳定性，符合 baseline）。`complete=False` 由 float32/float64 action target 比较过严和锚点重复 state 行引起，不是物理变化；v1.1 已修复（manifest `13c1f20a…`、config `aa5da98b…`、release_diag `dbb7801c…`、assessor `fcdc3383…`），并已完成干净重跑，`complete=True`。
+
+v1.1 分段（与 v1 逐位相同）：开爪/释放局部非刚体（质心 0.848、P95 13.831、最大 25.619、RMS 1.894 mm；1948 峰值 1.236 后回落）；退让近刚体（质心 2.277、旋转 −0.804°、P95 4.887、RMS 0.094 mm）；正式窗口延续刚体滑移。详见 [release diag 分析](day4-actionchunk-test/results/STAGE4_A5_RC2_RELEASE_DIAG_4202_20261103/review.md)、[README](day4-actionchunk-test/a5-rc2-drift-diag/README.md) 与 [诊断报告 §8](day4-actionchunk-test/results/STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103/review.md)。
+
+**v1.1 4202 已运行并完成比较**：`day4-a5-rc2-drift-diag-20261104-053151-197013`，`DIAG_ASSESS complete=True`、25/25 诊断检查、18/18 evidence 检查、release_rows=157、contact_events=0、quality=rejected（稳定性，符合 baseline）。与 v1 逐位相同：release_diag 全部数组（finger 距离全 NaN、掩码相同）、12 个动作目标、final/recovered/pre_release_hold/cloth_constructed/success_trace、五个证据快照、2427 条 state 和 1219 条 frame 均一致；唯一差异是 v1 的 1943 重复 state 锚点改为 `release_anchor` 及三个诊断文件 hash。与 RC2 4202 single `022718-388270` 的目标序列（最大差 0）、success_trace、快照、success_meta 物理字段和 quality/criteria 也逐位相同。**无需登记新物理版本或重建 baseline。** 详见 [v1_1_compare.md](day4-actionchunk-test/results/STAGE4_A5_RC2_RELEASE_DIAG_4202_20261103/v1_1_compare.md)。
+
+## 2026-11-04 D1-120：步骤 6–8 完成（运行 + 核验 + 分段分析）
+
+独立目录 [a5-rc2-d1-120](day4-actionchunk-test/a5-rc2-d1-120/README.md)：从 v1.1 `053151-197013` 复制并重定向版本。父 v1.1 manifest `13c1f20a…`、config `aa5da98b…`；基础 RC2 candidate `10a6cb45…`、manifest `39dc5055…`（60 项）；4202 初态 `day4-square-initial-stripfold-20261103-062710-242560`，`result.json` `4472f4df…`、`initial_geometry.npz` `a6646d66…`。新 manifest 66 项 SHA256 `cd1d7f83…`、config `a6884eab…`，[registration.json](day4-actionchunk-test/a5-rc2-d1-120/registration.json) 记录身份与源码哈希。
+
+`hold_open_for_steps` 已在 `a5_capture_diag.measure_detachment` 内插入**恰好 120 个物理步**（2.0 s，dt=1/60），位于 `ungrasp` 返回后、原退让目标 `original(*args)` 前；不调用控制、不改变目标、不写布料位置/速度。等待在第 12 个公开动作 `release_retreat` 内，代码断言 action 索引 12 和 horizon 总和 12；`a5_recovery_diag.py` 与 v1.1 的 action 调用/目标表达式逐项未改，实际动作数组将在运行后与基线比较。
+
+步骤 4 已加入五个命名事件 `ungrasp_return`/`delay_begin`/`delay_end`/`retreat_begin`/`retreat_end`，写入 `release_diag.json:events` 和 `release_diag_events.csv`；`release_diag.npz` 的 phase 区分 `delay`（120 个 state 行）和 `retreat`。离线：manifest 66/66、delay fixture 5/5、release fixture 1/1（含事件与 CSV）、`py_compile`、`bash -n` 均通过。**步骤 5 离线预检 65/65 通过**（[D1_120_PREFLIGHT](day4-actionchunk-test/results/D1_120_PREFLIGHT_20261103/review.md)）：身份、manifest、插入位置、动作计数、采集逻辑、recovery 隔离和 4202 single 范围均通过。**未运行仿真；RC2 与 v1.1 未修改。** 下一步步骤 6 单次运行，需明确指令。
+
+**2026-11-04 步骤 6 运行、步骤 7 核验、步骤 8 分段分析完成**：`day4-a5-rc2-d1-120-20261104-071602-499516`，episode `passed=True`、12 个公开动作、120 步等待、五个事件完整、`release_diag` 277 行（delay 120/retreat 144）；视频/证据/ledger 已保存并下载。标准 assessor 因 3D/4D target 形状 bug 崩溃（审计问题，非 episode 失败）；执行后 app/manifest 未改，独立 [postfix 评估](day4-actionchunk-test/results/D1_120_RUN_4202_20261104/review.md) `complete=True`、`quality=rejected`（质心 2.040882 mm、P95 4.413414 mm）。无重试；正式成功 0。步骤 8 已完成：等待 2.0783 mm/4.5603 mm P95、退让 2.4590/5.3214、窗口 2.0409/4.4134；D1 与基线布料在相同 elapsed 时间点 486 点逐位相同。决策：延迟不改变滑移率，优先释放瞬态/回弹/地面接触；D2 须改变脱离/接触而非仅时序。详见 [步骤 8 分析](day4-actionchunk-test/results/D1_120_STEP8_ANALYSIS_20261104/review.md)。
+
+## 2026-11-04 D2-A/B：场景、释放速度与接触通道（仅核查，未改配置）
+
+[D2-A/B 报告](day4-actionchunk-test/results/D2_A_B_SCENE_CONTACT_20261104/review.md)：实际支撑为默认地面 `/World/defaultGroundPlane/GroundPlane/CollisionPlane`；室内地面 collider 已禁用；地面**无显式 physics material binding**，地面/布料无可读 filter group；particle material 已绑定，`friction=0.3`、`particleFrictionScale=0.0`（initial protocol 明确断言），`particleContactOffset=0.01`、`nonParticleCollisionEnabled=true`。释放前最后 5 步粒子平均 0.262 mm/s、质心 0.055 mm/s；附着 1944 断开，1944 一步跳至 17.42/11.04 mm/s，前 5 步 35.95/19.42 mm/s；gripper_state=2 持续到 1953，1954 才 open。D2-B：rigid 已知接触在原 ContactRecorder 配置下 0 事件，cube+ground API 且 reset 前应用时 166 事件；粒子布料落到 contact offset 0.01，但 API 加到 ground/particle system/cloth 仍 0 事件 → 当前 contact-report 不支持 cloth-ground，需改用高度/穿透/粒子速度。D2-C 已选择释放顺序干预并登记，随后已单次运行（见下）；不直接提高摩擦，阈值与暂停不变。
+
 ## 2026-11-02 A1：b-right-dev-v2 预检完成（仅离线）
 
 `stage4_a1_right_v2_preflight.py` 48/48 通过；未启动仿真、未生成 held-out、正式成功仍为 0。发现并修正一处登记描述与实际采样不一致：配置原写 `settle(180 for perturbed, 240 for crumpled)`，实际 runner 对两档都在 fold OPEN 后执行 30 release ticks + `settle(180)`；`settle(240)` 只在 recovery 展开后，180/240 是初态生成 settle。配置修正为 v2.1（仅描述字段，无行为改动），config 新哈希 `91c0fe7f…`、variant manifest `c3e34c91…`；入口 `3822bd98…`、批次驱动 `d4c00162…`、21 项底层 `cb947b85…`、初态 manifest `70b1793b…` 未变。B/C 新增文件不在 21/23 项身份中，登记 runner 未导入它们。初态 registry 本地不存在，A2 首次生成时在远端创建。
@@ -358,3 +396,23 @@ L2 4200的right single/arc4由本聊天在移交前完成；L3 4300采用另一�
 补充交叉核对（2026-11-02）：把主审计未采用的 4200 arc4 尝试 `025355-106410` 与 4300 single 重复尝试 `031535-711404` 一并核对，5 个目录 77 项检查全部通过；同 seed 全部 7 次已下载尝试（4200 三例、4300 四例）的 `final.npz` 441 个顶点逐位相同（max|Δ|=0），包括并发在途的 4200 arc4 两例。该核对不新增 seed、不改任何阈值、不改变上述结论。[补充审计](../thesis/day4-actionchunk-test/results/B_RIGHT_DEV_AUDIT_SUPPLEMENT_20261102/review.md)。
 
 right 开发覆盖扩展 `b-right-dev-v2` 已登记并完成 A1 预检（48/48，仅离线；v2.1 修正 sampling 描述，config `91c0fe7f…`、manifest `c3e34c91…`），尚未运行任何 seed：L2 4201–4209、L3 4301–4309 共 18 个剩余开发 seed，先登记初态哈希再跑 right single；不跑 arc4、不冻结阈值、held-out 不动。见 [扩展计划](STAGE4_B_RIGHT_DEV_V2_PLAN.md) 与 [A1 预检](day4-actionchunk-test/results/STAGE4_A1_PREFLIGHT_20261102/review.md)。
+
+## 2026-11-04 D2-C：释放顺序单变量干预已登记（未运行）
+
+独立目录 [a5-rc2-d2c-release-order](day4-actionchunk-test/a5-rc2-d2c-release-order/README.md)：父 D1-120 manifest `cd1d7f83…`、config `a6884eab…`，基础 RC2 `10a6cb45…`/`39dc5055…`（60 项），4202 初态哈希不变。新 manifest 66 项 `778935ab…`、config `96acc5fa…`；[registration.json](day4-actionchunk-test/a5-rc2-d2c-release-order/registration.json) 已登记身份、源码、测试和比较指标。
+
+**干预：** 附着仍启用时先完成 10 步夹爪张开，再解除附件；原 `ungrasp` 内第二次 `open()` 抑制。120 步等待、12 个公开动作/目标/命令/horizon、退让目标和阈值不变；总物理步数与 D1 相同。不提高摩擦、不清零速度。
+
+**预期与比较：** 释放步/前 5 步速度应低于 D1；若释放冲量为主因，等待/退让/正式窗口漂移下降；若不变，则释放顺序不是主因。按释放后 elapsed time 对齐。
+
+**离线验证：** manifest 66/66；release-order fixture 8/8、delay fixture 5/5、release fixture 1/1；`py_compile`、`bash -n`；21/21 action/horizon 行与 D1 相同，recovery diff 仅版本字符串和 `release_order` 元数据。**预运行补查：** preopen 10 步每步检查 holding/attachment 一致并调用 `control.assert_exclusive()`；全局 evidence 检查与 D1 字节相同、未关闭。释放 t=0 用 `released` sample，记录 boundary step/delta，delta 非零报告采样误差；不用首个全关 state。**该版本随后已按 D2-D 上传、远端预检并单次运行 4202 single；见 D2-D 对照。** 正式成功仍为 0。
+
+## 2026-11-04 D2-D：释放顺序对照完成（单次 4202 single）
+
+运行 `day4-a5-rc2-d2c-release-order-20261104-090032-412133`：tmux 退出码 0，episode `passed=True`、12 动作、`absolute_step=2219`、等待 1955–2075、trace 331 步，与 D1 完全一致；`DIAG_ASSESS complete=True`、`quality=rejected`、release_rows=277、contact_events=0。远端预检 66/66、未启动仿真；`completed` 已写入、无重试；证据/ledger SHA256 全部一致。
+
+**预运行补查：** preopen 10/10 步每步检查 holding/attachment 一致并调用 `control.assert_exclusive()`；全局 evidence 检查与 D1 字节相同、未关闭。D2-C `released` sample 与最后 preopen state 同 step/time（delta=0），首个全关 state 为 +1 步；D1 anchor→首个自由 state 为 1 步（16.7 ms）采样区间。
+
+**结果：** 干预前 action target 最大差 0.0、anchor 顶点/EE/关节 0.0；release t=0 质心差 0.0113 mm、P95 0.0293 mm、最大 0.0375 mm；释放一步粒子速度 17.4197 vs 17.4223 mm/s；free 0–30 质心 1.9092 vs 1.9119 mm、P95 12.2286 vs 12.2044 mm；free 30–120 −3.02%/−2.65%；退让 −2.83%/−1.27%；正式窗口 2.0409→1.9823 mm（−2.87%）、P95 4.4134→4.3426 mm（−1.60%），仍拒绝。
+
+**结论：** 释放顺序没有降低释放瞬态/前 0.5 s 速度，**不是该例漂移的主要因素**；正式窗口小幅下降不能归因于释放冲量减少，单例不足外推；cloth-ground 接触力/冲量不可用。详见 [D2-D 对照](day4-actionchunk-test/results/D2_D_COMPARE_20261104/review.md)。正式成功 0。

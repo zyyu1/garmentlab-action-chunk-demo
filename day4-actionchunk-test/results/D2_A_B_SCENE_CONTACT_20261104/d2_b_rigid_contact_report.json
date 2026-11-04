@@ -1,0 +1,23 @@
+{
+  "bodies": [
+    "/World/Franka/TestCube"
+  ],
+  "callback_count": 0,
+  "event_count": 0,
+  "errors": [],
+  "subscription_created": true,
+  "scope": "Robot rigid contacts only; not cloth particle contact certification",
+  "diagnosis": "configured_no_events_channel_not_independently_validated",
+  "cube_start_m": [
+    0.0,
+    0.0,
+    0.5
+  ],
+  "cube_final_m": [
+    -5.633120963466354e-06,
+    3.6451151572691742e-06,
+    0.02499932236969471
+  ],
+  "steps": 180,
+  "expected": "cube falls from z=0.5 m onto default ground; contact report expected"
+}

@@ -1,0 +1,785 @@
+[
+  {
+    "case": "4100 single",
+    "seed": 4100,
+    "level": "flat",
+    "mode": "single",
+    "positive": true,
+    "role": "positive",
+    "result_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-020232-100288",
+    "result_dir_name": "day4-a5-rc2-l1-20261104-020232-100288",
+    "initial_dir_remote": "/root/autodl-tmp/day4-square-initial-20261031-094446-203825",
+    "initial_dir_local": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-square-initial-20261031-094446-203825",
+    "initial_hashes": {
+      "result.json": "31d8d47f4e18f6f9c8e96b0e3a3f0237ac87786978a343548cefddf1a7e567d8",
+      "initial_geometry.npz": "dd5783038cd7ae95c17525574ca9c76d0df2399261a6df6a0c8f09a5b351bcb3"
+    },
+    "manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+    "action_count": 7,
+    "call_horizons": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "development_pass": true,
+    "evidence_checks": {
+      "video_and_samples": true,
+      "actual_sim": true,
+      "source": true,
+      "input_hashes": true,
+      "identity": true,
+      "actual_budget": true,
+      "horizons": true,
+      "final_open": true,
+      "upward_public_target": true,
+      "clock_origin": true,
+      "absolute_clock": true,
+      "double_hold": true,
+      "terminal_matches": true
+    },
+    "evidence_all_true": true,
+    "verdict": "accepted",
+    "success": true,
+    "criteria_checks": {
+      "definition": true,
+      "budget": true,
+      "no_runtime_error": true,
+      "held": true,
+      "released_continuously": true,
+      "geometry_entire_window": true,
+      "stable": true
+    },
+    "failed_checks": [],
+    "rejection_reason": "accepted",
+    "geometry_pass": true,
+    "failed_geometry_frames": 0,
+    "stability": {
+      "centroid_drift_max_m": 0.00014353134692869643,
+      "vertex_drift_p95_max_m": 0.00020719995120599787,
+      "vertex_drift_max_m": 0.00028557355593814763,
+      "vertex_speed_p95_max_m_s": 0.0021000383535357625,
+      "vertex_speed_max_m_s": 0.0165301362397056
+    },
+    "held_check": {
+      "position_error_m": 0.00034209064952874305,
+      "arm_speed_rad_s": 0.0008468731539323926,
+      "anchor_gap_max_m": 0.0019406018475806555,
+      "orientation_reached": true,
+      "accepted": true
+    },
+    "evaluation": {
+      "success_trace_steps": [
+        210,
+        330
+      ],
+      "success_trace_absolute_steps": [
+        1681,
+        1801
+      ],
+      "sim_time_s": [
+        28.016667945310473,
+        30.016667945310473
+      ],
+      "video_frame_first": 843,
+      "video_frame_last": 904,
+      "video_frame_count": 62,
+      "success_trace": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-020232-100288\\success_trace.npz",
+      "video": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-020232-100288\\evidence\\episode.mp4",
+      "timeline": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-020232-100288\\evidence\\timeline.jsonl",
+      "verdict": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-020232-100288\\a5-verdict.json",
+      "success_meta": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-020232-100288\\success_meta.json",
+      "evidence_summary": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-020232-100288\\evidence\\summary.json"
+    },
+    "release_clock": {
+      "last_action_label": "release_retreat",
+      "action_count": 7,
+      "absolute_step": 1471,
+      "sim_time_s": 24.516667945310473,
+      "dt_s": 0.016666666666666666,
+      "action_begin_observed_step": 1313,
+      "action_begin_sim_time_s": 21.916667809709907,
+      "action_end_observed_step": 1469,
+      "action_end_sim_time_s": 24.516667945310473,
+      "observed_to_absolute_offset": 2
+    }
+  },
+  {
+    "case": "4100 arc4",
+    "seed": 4100,
+    "level": "flat",
+    "mode": "arc4",
+    "positive": true,
+    "role": "positive",
+    "result_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-021445-679358",
+    "result_dir_name": "day4-a5-rc2-l1-20261104-021445-679358",
+    "initial_dir_remote": "/root/autodl-tmp/day4-square-initial-20261031-094446-203825",
+    "initial_dir_local": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-square-initial-20261031-094446-203825",
+    "initial_hashes": {
+      "result.json": "31d8d47f4e18f6f9c8e96b0e3a3f0237ac87786978a343548cefddf1a7e567d8",
+      "initial_geometry.npz": "dd5783038cd7ae95c17525574ca9c76d0df2399261a6df6a0c8f09a5b351bcb3"
+    },
+    "manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+    "action_count": 7,
+    "call_horizons": [
+      1,
+      1,
+      4,
+      1
+    ],
+    "development_pass": true,
+    "evidence_checks": {
+      "video_and_samples": true,
+      "actual_sim": true,
+      "source": true,
+      "input_hashes": true,
+      "identity": true,
+      "actual_budget": true,
+      "horizons": true,
+      "final_open": true,
+      "upward_public_target": true,
+      "clock_origin": true,
+      "absolute_clock": true,
+      "double_hold": true,
+      "terminal_matches": true
+    },
+    "evidence_all_true": true,
+    "verdict": "accepted",
+    "success": true,
+    "criteria_checks": {
+      "definition": true,
+      "budget": true,
+      "no_runtime_error": true,
+      "held": true,
+      "released_continuously": true,
+      "geometry_entire_window": true,
+      "stable": true
+    },
+    "failed_checks": [],
+    "rejection_reason": "accepted",
+    "geometry_pass": true,
+    "failed_geometry_frames": 0,
+    "stability": {
+      "centroid_drift_max_m": 0.00014353134692869643,
+      "vertex_drift_p95_max_m": 0.00020719995120599787,
+      "vertex_drift_max_m": 0.00028557355593814763,
+      "vertex_speed_p95_max_m_s": 0.0021000383535357625,
+      "vertex_speed_max_m_s": 0.0165301362397056
+    },
+    "held_check": {
+      "position_error_m": 0.00034209064952874305,
+      "arm_speed_rad_s": 0.0008468731539323926,
+      "anchor_gap_max_m": 0.0019406018475806555,
+      "orientation_reached": true,
+      "accepted": true
+    },
+    "evaluation": {
+      "success_trace_steps": [
+        210,
+        330
+      ],
+      "success_trace_absolute_steps": [
+        1681,
+        1801
+      ],
+      "sim_time_s": [
+        28.016667945310473,
+        30.016667945310473
+      ],
+      "video_frame_first": 843,
+      "video_frame_last": 904,
+      "video_frame_count": 62,
+      "success_trace": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-021445-679358\\success_trace.npz",
+      "video": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-021445-679358\\evidence\\episode.mp4",
+      "timeline": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-021445-679358\\evidence\\timeline.jsonl",
+      "verdict": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-021445-679358\\a5-verdict.json",
+      "success_meta": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-021445-679358\\success_meta.json",
+      "evidence_summary": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-l1-20261104-021445-679358\\evidence\\summary.json"
+    },
+    "release_clock": {
+      "last_action_label": "release_retreat",
+      "action_count": 7,
+      "absolute_step": 1471,
+      "sim_time_s": 24.516667945310473,
+      "dt_s": 0.016666666666666666,
+      "action_begin_observed_step": 1313,
+      "action_begin_sim_time_s": 21.916667809709907,
+      "action_end_observed_step": 1469,
+      "action_end_sim_time_s": 24.516667945310473,
+      "observed_to_absolute_offset": 2
+    }
+  },
+  {
+    "case": "4202 single",
+    "seed": 4202,
+    "level": "perturbed",
+    "mode": "single",
+    "positive": true,
+    "role": "positive",
+    "result_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-022718-388270",
+    "result_dir_name": "day4-a5-rc2-recovery-20261104-022718-388270",
+    "initial_dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560",
+    "initial_dir_local": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-square-initial-stripfold-20261103-062710-242560",
+    "initial_hashes": {
+      "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+      "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+    },
+    "manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+    "action_count": 12,
+    "call_horizons": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "development_pass": true,
+    "evidence_checks": {
+      "video_and_samples": true,
+      "actual_sim": true,
+      "source": true,
+      "input_hashes": true,
+      "identity": true,
+      "actual_budget": true,
+      "horizons": true,
+      "final_open": true,
+      "upward_public_target": true,
+      "clock_origin": true,
+      "absolute_clock": true,
+      "double_hold": true,
+      "terminal_matches": true
+    },
+    "evidence_all_true": true,
+    "verdict": "rejected",
+    "success": false,
+    "criteria_checks": {
+      "definition": true,
+      "budget": true,
+      "no_runtime_error": true,
+      "held": true,
+      "released_continuously": true,
+      "geometry_entire_window": true,
+      "stable": false
+    },
+    "failed_checks": [
+      "stable"
+    ],
+    "rejection_reason": "stability: centroid_max=0.002043 m (limit 0.001), vertex_p95_max=0.004414 m (limit 0.003)",
+    "geometry_pass": true,
+    "failed_geometry_frames": 0,
+    "stability": {
+      "centroid_drift_max_m": 0.0020428842149812537,
+      "vertex_drift_p95_max_m": 0.004414118956489676,
+      "vertex_drift_max_m": 0.004837910601351933,
+      "vertex_speed_p95_max_m_s": 0.0034447123824592235,
+      "vertex_speed_max_m_s": 0.0164683856734328
+    },
+    "held_check": {
+      "position_error_m": 0.014793219325422111,
+      "arm_speed_rad_s": 0.0011032301699742675,
+      "anchor_gap_max_m": 0.0021413731579228265,
+      "orientation_reached": true,
+      "accepted": true
+    },
+    "evaluation": {
+      "success_trace_steps": [
+        210,
+        330
+      ],
+      "success_trace_absolute_steps": [
+        2309,
+        2429
+      ],
+      "sim_time_s": [
+        38.483335157856345,
+        40.483335157856345
+      ],
+      "video_frame_first": 1157,
+      "video_frame_last": 1218,
+      "video_frame_count": 62,
+      "success_trace": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-022718-388270\\success_trace.npz",
+      "video": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-022718-388270\\evidence\\episode.mp4",
+      "timeline": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-022718-388270\\evidence\\timeline.jsonl",
+      "verdict": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-022718-388270\\a5-verdict.json",
+      "success_meta": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-022718-388270\\success_meta.json",
+      "evidence_summary": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-022718-388270\\evidence\\summary.json"
+    },
+    "release_clock": {
+      "last_action_label": "release_retreat",
+      "action_count": 12,
+      "absolute_step": 2099,
+      "sim_time_s": 34.983335157856345,
+      "dt_s": 0.016666666666666666,
+      "action_begin_observed_step": 1943,
+      "action_begin_sim_time_s": 32.41666835732758,
+      "action_end_observed_step": 2097,
+      "action_end_sim_time_s": 34.983335157856345,
+      "observed_to_absolute_offset": 2
+    }
+  },
+  {
+    "case": "4202 arc4",
+    "seed": 4202,
+    "level": "perturbed",
+    "mode": "arc4",
+    "positive": true,
+    "role": "positive",
+    "result_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-024310-304319",
+    "result_dir_name": "day4-a5-rc2-recovery-20261104-024310-304319",
+    "initial_dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560",
+    "initial_dir_local": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-square-initial-stripfold-20261103-062710-242560",
+    "initial_hashes": {
+      "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+      "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+    },
+    "manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+    "action_count": 12,
+    "call_horizons": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      4,
+      1
+    ],
+    "development_pass": true,
+    "evidence_checks": {
+      "video_and_samples": true,
+      "actual_sim": true,
+      "source": true,
+      "input_hashes": true,
+      "identity": true,
+      "actual_budget": true,
+      "horizons": true,
+      "final_open": true,
+      "upward_public_target": true,
+      "clock_origin": true,
+      "absolute_clock": true,
+      "double_hold": true,
+      "terminal_matches": true
+    },
+    "evidence_all_true": true,
+    "verdict": "rejected",
+    "success": false,
+    "criteria_checks": {
+      "definition": true,
+      "budget": true,
+      "no_runtime_error": true,
+      "held": true,
+      "released_continuously": true,
+      "geometry_entire_window": true,
+      "stable": false
+    },
+    "failed_checks": [
+      "stable"
+    ],
+    "rejection_reason": "stability: centroid_max=0.002043 m (limit 0.001), vertex_p95_max=0.004414 m (limit 0.003)",
+    "geometry_pass": true,
+    "failed_geometry_frames": 0,
+    "stability": {
+      "centroid_drift_max_m": 0.0020428842149812537,
+      "vertex_drift_p95_max_m": 0.004414118956489676,
+      "vertex_drift_max_m": 0.004837910601351933,
+      "vertex_speed_p95_max_m_s": 0.0034447123824592235,
+      "vertex_speed_max_m_s": 0.0164683856734328
+    },
+    "held_check": {
+      "position_error_m": 0.014793219325422111,
+      "arm_speed_rad_s": 0.0011032301699742675,
+      "anchor_gap_max_m": 0.0021413731579228265,
+      "orientation_reached": true,
+      "accepted": true
+    },
+    "evaluation": {
+      "success_trace_steps": [
+        210,
+        330
+      ],
+      "success_trace_absolute_steps": [
+        2309,
+        2429
+      ],
+      "sim_time_s": [
+        38.483335157856345,
+        40.483335157856345
+      ],
+      "video_frame_first": 1157,
+      "video_frame_last": 1218,
+      "video_frame_count": 62,
+      "success_trace": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-024310-304319\\success_trace.npz",
+      "video": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-024310-304319\\evidence\\episode.mp4",
+      "timeline": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-024310-304319\\evidence\\timeline.jsonl",
+      "verdict": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-024310-304319\\a5-verdict.json",
+      "success_meta": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-024310-304319\\success_meta.json",
+      "evidence_summary": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-024310-304319\\evidence\\summary.json"
+    },
+    "release_clock": {
+      "last_action_label": "release_retreat",
+      "action_count": 12,
+      "absolute_step": 2099,
+      "sim_time_s": 34.983335157856345,
+      "dt_s": 0.016666666666666666,
+      "action_begin_observed_step": 1943,
+      "action_begin_sim_time_s": 32.41666835732758,
+      "action_end_observed_step": 2097,
+      "action_end_sim_time_s": 34.983335157856345,
+      "observed_to_absolute_offset": 2
+    }
+  },
+  {
+    "case": "4302 single",
+    "seed": 4302,
+    "level": "crumpled",
+    "mode": "single",
+    "positive": true,
+    "role": "positive",
+    "result_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-025702-598075",
+    "result_dir_name": "day4-a5-rc2-recovery-20261104-025702-598075",
+    "initial_dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-094143-137994",
+    "initial_dir_local": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-square-initial-stripfold-20261103-094143-137994",
+    "initial_hashes": {
+      "result.json": "1bed437fdc5b01dd4dc55acc45be1d797d3cccfa2f4b855c5e0b44cd6e39840e",
+      "initial_geometry.npz": "1c27514f2ba95a3e276b01bf9f40ee30acf77600837908322864fdb57be97b32"
+    },
+    "manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+    "action_count": 12,
+    "call_horizons": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "development_pass": true,
+    "evidence_checks": {
+      "video_and_samples": true,
+      "actual_sim": true,
+      "source": true,
+      "input_hashes": true,
+      "identity": true,
+      "actual_budget": true,
+      "horizons": true,
+      "final_open": true,
+      "upward_public_target": true,
+      "clock_origin": true,
+      "absolute_clock": true,
+      "double_hold": true,
+      "terminal_matches": true
+    },
+    "evidence_all_true": true,
+    "verdict": "rejected",
+    "success": false,
+    "criteria_checks": {
+      "definition": true,
+      "budget": true,
+      "no_runtime_error": true,
+      "held": true,
+      "released_continuously": true,
+      "geometry_entire_window": true,
+      "stable": false
+    },
+    "failed_checks": [
+      "stable"
+    ],
+    "rejection_reason": "stability: centroid_max=0.001910 m (limit 0.001), vertex_p95_max=0.004123 m (limit 0.003)",
+    "geometry_pass": true,
+    "failed_geometry_frames": 0,
+    "stability": {
+      "centroid_drift_max_m": 0.0019102328734530753,
+      "vertex_drift_p95_max_m": 0.004123147177582222,
+      "vertex_drift_max_m": 0.004516947235450122,
+      "vertex_speed_p95_max_m_s": 0.0035226906337712197,
+      "vertex_speed_max_m_s": 0.016576247947171815
+    },
+    "held_check": {
+      "position_error_m": 0.015117103749939615,
+      "arm_speed_rad_s": 0.002023755107074976,
+      "anchor_gap_max_m": 0.0021997267449813526,
+      "orientation_reached": true,
+      "accepted": true
+    },
+    "evaluation": {
+      "success_trace_steps": [
+        210,
+        330
+      ],
+      "success_trace_absolute_steps": [
+        2729,
+        2849
+      ],
+      "sim_time_s": [
+        45.483335522934794,
+        47.483335522934794
+      ],
+      "video_frame_first": 1367,
+      "video_frame_last": 1428,
+      "video_frame_count": 62,
+      "success_trace": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-025702-598075\\success_trace.npz",
+      "video": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-025702-598075\\evidence\\episode.mp4",
+      "timeline": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-025702-598075\\evidence\\timeline.jsonl",
+      "verdict": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-025702-598075\\a5-verdict.json",
+      "success_meta": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-025702-598075\\success_meta.json",
+      "evidence_summary": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-025702-598075\\evidence\\summary.json"
+    },
+    "release_clock": {
+      "last_action_label": "release_retreat",
+      "action_count": 12,
+      "absolute_step": 2519,
+      "sim_time_s": 41.983335522934794,
+      "dt_s": 0.016666666666666666,
+      "action_begin_observed_step": 2360,
+      "action_begin_sim_time_s": 39.36666871979833,
+      "action_end_observed_step": 2517,
+      "action_end_sim_time_s": 41.983335522934794,
+      "observed_to_absolute_offset": 2
+    }
+  },
+  {
+    "case": "4302 arc4",
+    "seed": 4302,
+    "level": "crumpled",
+    "mode": "arc4",
+    "positive": true,
+    "role": "positive",
+    "result_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-031322-789753",
+    "result_dir_name": "day4-a5-rc2-recovery-20261104-031322-789753",
+    "initial_dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-094143-137994",
+    "initial_dir_local": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-square-initial-stripfold-20261103-094143-137994",
+    "initial_hashes": {
+      "result.json": "1bed437fdc5b01dd4dc55acc45be1d797d3cccfa2f4b855c5e0b44cd6e39840e",
+      "initial_geometry.npz": "1c27514f2ba95a3e276b01bf9f40ee30acf77600837908322864fdb57be97b32"
+    },
+    "manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+    "action_count": 12,
+    "call_horizons": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      4,
+      1
+    ],
+    "development_pass": true,
+    "evidence_checks": {
+      "video_and_samples": true,
+      "actual_sim": true,
+      "source": true,
+      "input_hashes": true,
+      "identity": true,
+      "actual_budget": true,
+      "horizons": true,
+      "final_open": true,
+      "upward_public_target": true,
+      "clock_origin": true,
+      "absolute_clock": true,
+      "double_hold": true,
+      "terminal_matches": true
+    },
+    "evidence_all_true": true,
+    "verdict": "rejected",
+    "success": false,
+    "criteria_checks": {
+      "definition": true,
+      "budget": true,
+      "no_runtime_error": true,
+      "held": true,
+      "released_continuously": true,
+      "geometry_entire_window": true,
+      "stable": false
+    },
+    "failed_checks": [
+      "stable"
+    ],
+    "rejection_reason": "stability: centroid_max=0.001910 m (limit 0.001), vertex_p95_max=0.004123 m (limit 0.003)",
+    "geometry_pass": true,
+    "failed_geometry_frames": 0,
+    "stability": {
+      "centroid_drift_max_m": 0.0019102328734530753,
+      "vertex_drift_p95_max_m": 0.004123147177582222,
+      "vertex_drift_max_m": 0.004516947235450122,
+      "vertex_speed_p95_max_m_s": 0.0035226906337712197,
+      "vertex_speed_max_m_s": 0.016576247947171815
+    },
+    "held_check": {
+      "position_error_m": 0.015117103749939615,
+      "arm_speed_rad_s": 0.002023755107074976,
+      "anchor_gap_max_m": 0.0021997267449813526,
+      "orientation_reached": true,
+      "accepted": true
+    },
+    "evaluation": {
+      "success_trace_steps": [
+        210,
+        330
+      ],
+      "success_trace_absolute_steps": [
+        2729,
+        2849
+      ],
+      "sim_time_s": [
+        45.483335522934794,
+        47.483335522934794
+      ],
+      "video_frame_first": 1367,
+      "video_frame_last": 1428,
+      "video_frame_count": 62,
+      "success_trace": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-031322-789753\\success_trace.npz",
+      "video": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-031322-789753\\evidence\\episode.mp4",
+      "timeline": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-031322-789753\\evidence\\timeline.jsonl",
+      "verdict": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-031322-789753\\a5-verdict.json",
+      "success_meta": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-031322-789753\\success_meta.json",
+      "evidence_summary": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-031322-789753\\evidence\\summary.json"
+    },
+    "release_clock": {
+      "last_action_label": "release_retreat",
+      "action_count": 12,
+      "absolute_step": 2519,
+      "sim_time_s": 41.983335522934794,
+      "dt_s": 0.016666666666666666,
+      "action_begin_observed_step": 2360,
+      "action_begin_sim_time_s": 39.36666871979833,
+      "action_end_observed_step": 2517,
+      "action_end_sim_time_s": 41.983335522934794,
+      "observed_to_absolute_offset": 2
+    }
+  },
+  {
+    "case": "4201 single",
+    "seed": 4201,
+    "level": "perturbed",
+    "mode": "single",
+    "positive": false,
+    "role": "negative_control",
+    "result_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-033006-394291",
+    "result_dir_name": "day4-a5-rc2-recovery-20261104-033006-394291",
+    "initial_dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-060526-426086",
+    "initial_dir_local": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-square-initial-stripfold-20261103-060526-426086",
+    "initial_hashes": {
+      "result.json": "3ac6f8a3a3675230b8d3742251c49a171770194f3611415a7a8c371ea86cc01b",
+      "initial_geometry.npz": "40bfeb51a04a30c7511cd65c4a849db5adc2660e2cf967f2d62da99109448d68"
+    },
+    "manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+    "action_count": 12,
+    "call_horizons": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "development_pass": false,
+    "evidence_checks": {
+      "video_and_samples": true,
+      "actual_sim": true,
+      "source": true,
+      "input_hashes": true,
+      "identity": true,
+      "actual_budget": true,
+      "horizons": true,
+      "final_open": true,
+      "upward_public_target": true,
+      "clock_origin": true,
+      "absolute_clock": true,
+      "double_hold": true,
+      "terminal_matches": true
+    },
+    "evidence_all_true": true,
+    "verdict": "rejected",
+    "success": false,
+    "criteria_checks": {
+      "definition": true,
+      "budget": true,
+      "no_runtime_error": false,
+      "held": true,
+      "released_continuously": true,
+      "geometry_entire_window": false,
+      "stable": true
+    },
+    "failed_checks": [
+      "no_runtime_error",
+      "geometry_entire_window"
+    ],
+    "rejection_reason": "geometry: 121/121 window frames fail; runtime gate: RuntimeError('Fold did not cross the fold line')",
+    "geometry_pass": false,
+    "failed_geometry_frames": 121,
+    "stability": {
+      "centroid_drift_max_m": 2.4323344053316894e-07,
+      "vertex_drift_p95_max_m": 2.573072868196635e-06,
+      "vertex_drift_max_m": 4.3327544499298335e-06,
+      "vertex_speed_p95_max_m_s": 6.322027276634105e-06,
+      "vertex_speed_max_m_s": 2.5097731675418973e-05
+    },
+    "held_check": {
+      "position_error_m": 0.014882689659740813,
+      "arm_speed_rad_s": 0.001087839831598103,
+      "anchor_gap_max_m": 0.002143739460175406,
+      "orientation_reached": true,
+      "accepted": true
+    },
+    "evaluation": {
+      "success_trace_steps": [
+        210,
+        330
+      ],
+      "success_trace_absolute_steps": [
+        2591,
+        2711
+      ],
+      "sim_time_s": [
+        43.18333540298045,
+        45.18333540298045
+      ],
+      "video_frame_first": 1298,
+      "video_frame_last": 1359,
+      "video_frame_count": 62,
+      "success_trace": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-033006-394291\\success_trace.npz",
+      "video": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-033006-394291\\evidence\\episode.mp4",
+      "timeline": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-033006-394291\\evidence\\timeline.jsonl",
+      "verdict": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-033006-394291\\a5-verdict.json",
+      "success_meta": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-033006-394291\\success_meta.json",
+      "evidence_summary": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-033006-394291\\evidence\\summary.json"
+    },
+    "release_clock": {
+      "last_action_label": "release_retreat",
+      "action_count": 12,
+      "absolute_step": 2381,
+      "sim_time_s": 39.68333540298045,
+      "dt_s": 0.016666666666666666,
+      "action_begin_observed_step": 2225,
+      "action_begin_sim_time_s": 37.11666860245168,
+      "action_end_observed_step": 2379,
+      "action_end_sim_time_s": 39.68333540298045,
+      "observed_to_absolute_offset": 2
+    }
+  }
+]

@@ -1,0 +1,582 @@
+{
+  "schema_version": 1,
+  "synthetic": false,
+  "frames": 1279,
+  "observed_steps": 2547,
+  "execute_calls": 12,
+  "errors": [],
+  "sources": {
+    "000_release_diag.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/release_diag.py",
+      "sha256": "dcd0d1cdf19d17868019da6b594d67c6aed533031ba1a5bd4fa4025160a4d70c"
+    },
+    "001_episode_evidence.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/episode_evidence.py",
+      "sha256": "67965e8302515062c9288236ba291e183c5d04f97b34970dffee8a3b7dc5eab8"
+    },
+    "002_a5_recovery_diag.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/a5_recovery_diag.py",
+      "sha256": "79028071a46e0a99dc40583943e9d993bf761e87e5926710dcfbbc7a2c8dec0a"
+    },
+    "003_STAGE4_SUCCESS_CRITERIA_V1.md": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/STAGE4_SUCCESS_CRITERIA_V1.md",
+      "sha256": "0b831130dd0ee5f72a9408fdceffed16f209e07a7f46b60b6a0d386787d252a3"
+    },
+    "004_a5-candidate.json": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/a5-candidate.json",
+      "sha256": "10a6cb452b9fafd5907f245b68fd02d49c7af1e12fa6cb0f755f1791a5af27a5"
+    },
+    "005_a5_capture.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/a5_capture.py",
+      "sha256": "a6cf0b41510b923f714eb9cddf6531cd1b20614be590645a034f5d1314592ee0"
+    },
+    "006_a5_entry.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/a5_entry.py",
+      "sha256": "b8f87af35d0eb45ec1997f7c0d3147c0bf13053e048568447b3aa387425256e2"
+    },
+    "007_a5_l1.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/a5_l1.py",
+      "sha256": "3d3d2994035d2cdfc78b23ac7abb8b1a8784539d5b2ac2add84f472ca9866b00"
+    },
+    "008_a5_recovery.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/a5_recovery.py",
+      "sha256": "e06f814fa6079399c0b9c14c626b4126ebcdc27eeed4b1f465d7b96e704ae43c"
+    },
+    "009_a5_report.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/a5_report.py",
+      "sha256": "f16d4fd2d51a4b24d77f5b181e0dff0bfc924fd5035f76376895b49166af81b7"
+    },
+    "010_audit_episode_evidence.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/audit_episode_evidence.py",
+      "sha256": "b1274e5fe579bc993e4822b9187403179bb8ea9ddeaa32cdaf9bd35d592142e6"
+    },
+    "011_audit_stage4_success_v1.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/audit_stage4_success_v1.py",
+      "sha256": "147c092ab85365fdfd6de182f24a9a7647a545c213513e722603a62e96a246ce"
+    },
+    "012_day4-l1-xfold-yaw-aware.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/day4-l1-xfold-yaw-aware.py",
+      "sha256": "0aab8e7cd42f441a6dd9bfb547541bf806dc77740fd3f67a325e3e061036c53a"
+    },
+    "013_day4-recovery-fold-episode.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/day4-recovery-fold-episode.py",
+      "sha256": "ddad4116ad33b38c8be2082de5a9fe43946f509bb7c272e931a8f136c74ab412"
+    },
+    "014_day4-square-initial-stripfold.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/day4-square-initial-stripfold.py",
+      "sha256": "178ab10c08511b6dbb2ec1fd4581ab5af2493ee6a1ca7577ac49b575b913dcc6"
+    },
+    "015_day4-square-initial.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/day4-square-initial.py",
+      "sha256": "038dfc6ad11d4eed970743cd4a7c3b4fd0e7ef30ffb93ecab539040be5f62ad4"
+    },
+    "016_early_descent_geometry.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/early_descent_geometry.py",
+      "sha256": "8911934112870121df8fb5b373da7f67575f6ef138af30bbca51f694777d5d0d"
+    },
+    "017_base.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/garmentlab-action-chunk-demo/backends/base.py",
+      "sha256": "d1d85718b3748df83743ac5d26693bd1cd35dfaca99f504bdec2f5ea94debc16"
+    },
+    "018_garmentlab_backend.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/garmentlab-action-chunk-demo/backends/garmentlab_backend.py",
+      "sha256": "def9544ddbd597bddc6a2e65ae4d57165d69a80c4f5b6646cb67929ef4add372"
+    },
+    "019_action.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/garmentlab-action-chunk-demo/schemas/action.py",
+      "sha256": "3801f47eb4489dee2d66a7c1287434493de8233b6345f246a80cad4985b669b0"
+    },
+    "020_observation.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/garmentlab-action-chunk-demo/schemas/observation.py",
+      "sha256": "49ca2836985a46a798addeee9a27e72cbbd6eaeb25f4f693f0482a9c0790dd18"
+    },
+    "021_hem_fold_geometry.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/hem_fold_geometry.py",
+      "sha256": "7d05f381e4e6e931422159ec722000c498e1efd910bf6903a61fa73f54c39156"
+    },
+    "022_hem_prepared_grasp_control.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/hem_prepared_grasp_control.py",
+      "sha256": "46b6f7ac82a95df98bed3c91541ea7164552948b3e257a97dc303ce2aba38e63"
+    },
+    "023_l1_fold_geometry.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/l1_fold_geometry.py",
+      "sha256": "15275f27cda85f7b0b761b598394928c40bd0bf716fa6f007ab5b55bd1e421e9"
+    },
+    "024_l1_yaw_fold_geometry.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/l1_yaw_fold_geometry.py",
+      "sha256": "aa1f8a6e3ede7f7b66e91961f2801ec4cd34abd1fd2cd75f5e593391ea50c933"
+    },
+    "025_minimum_fold_geometry.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/minimum_fold_geometry.py",
+      "sha256": "86ef99d36f2288546dab8bbea290a87d52efd84d47d215ad8d916b04943faa03"
+    },
+    "026_multi_grasp_geometry.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/multi_grasp_geometry.py",
+      "sha256": "b4acc72886a80cb0ac37eb62d2189a0a28755a79777778077cf34bdbe53d5656"
+    },
+    "027_multi_prepared_grasp_control.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/multi_prepared_grasp_control.py",
+      "sha256": "579de3d63230c51da7f17693a6995ab411fedfd6c3d00d76a7f0209c545e537c"
+    },
+    "028_rc2_live_backend.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/rc2_live_backend.py",
+      "sha256": "6ce84c4f0aef0452ea7625065d44c475e01dd083a65460687af586850bd40dd2"
+    },
+    "029_room_collision_control.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/room_collision_control.py",
+      "sha256": "023c3a93dd4fb21db312223056834d5849cf070d7aed157d42f491f20721888e"
+    },
+    "030_run-l1-xfold-yaw-aware.sh": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/run-l1-xfold-yaw-aware.sh",
+      "sha256": "560d38bbb08308ad808fd37e119b1059b45d4b625c849e893a879850d309e3db"
+    },
+    "031_run-recovery-fold-episode.sh": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/run-recovery-fold-episode.sh",
+      "sha256": "41026c913f128690ad50c6e1446fbab33716927509d182f3d427d70e69493e59"
+    },
+    "032_run-square-initial-stripfold.sh": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/run-square-initial-stripfold.sh",
+      "sha256": "1116550f65b9282c2a0e85f321c9ceb863cf8f1fe152c36bc48e387ebc34b631"
+    },
+    "033_run-square-initial.sh": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/run-square-initial.sh",
+      "sha256": "b22f848ee995c88b48d550ba83687ee6d804b9a2731fabb054fa143687bc4637"
+    },
+    "034_run-stage4-formal-batch.sh": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/run-stage4-formal-batch.sh",
+      "sha256": "79ee868c146d7cdf012c342e4bc048b5780195e625e750d357e81ade469662d5"
+    },
+    "035_single_anchor_hem_control.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/single_anchor_hem_control.py",
+      "sha256": "0fba623e7c023499a787fac366d74ca6700017c0804a9fa367bd06e1cee92547"
+    },
+    "036_square-difficulty.yaml": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square-difficulty.yaml",
+      "sha256": "a42fec8a1069ad43525d609bd058d9540bb7d6a1370d580abfc8616f61cd24f4"
+    },
+    "037_square-initial-files.json": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square-initial-files.json",
+      "sha256": "bccf3e157d96a53c4afba154194ddb652880f7634bedca912b9b5e4127ec5940"
+    },
+    "038_square-initial-plan.json": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square-initial-plan.json",
+      "sha256": "32e61d575d77eae0943cb2251d10c25b12d7f0d9f8f962ddd96dc1a4d4d2ab85"
+    },
+    "039_square-initial-stripfold-files.json": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square-initial-stripfold-files.json",
+      "sha256": "70b1793b5a87f69e9a4cbde5f6b40b047120eed798bdd895dee27e33072477f0"
+    },
+    "040_square-l1-xfold-yaw-files.json": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square-l1-xfold-yaw-files.json",
+      "sha256": "a9d9eddfe0bf6e1d4d6c7e628ac654dce444b2b74389fec2c0ceeee6c50f1adf"
+    },
+    "041_square-recovery-fold-files.json": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square-recovery-fold-files.json",
+      "sha256": "16cd67135dee249caa81ff4d23fed3ff9819db1b7f2e2119a9ee535849ed8cf1"
+    },
+    "042_square_cloth_40cm.usda": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_cloth_40cm.usda",
+      "sha256": "fef138f6dd76484f3452455bf98cdc4d166812d290631125a5c375de8308ef7e"
+    },
+    "043_square_contact_recorder.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_contact_recorder.py",
+      "sha256": "c91ba601babd927f335b16b6e2620ad9365d4dce950679ab8af0c31a04428934"
+    },
+    "044_square_contact_reporting.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_contact_reporting.py",
+      "sha256": "178e79ac6de58ff25b42b6a3789123994169c110015848748a96fcce682e58a3"
+    },
+    "045_square_control_trace.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_control_trace.py",
+      "sha256": "2b8fae48be4276fcc2aedb253b54b0a4e5c507aad1495927a83b01f145c9387d"
+    },
+    "046_square_edge_control.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_edge_control.py",
+      "sha256": "6f16c10fddd2bede41f630ab5754fd88c0e8faee0d05153da5918a8859a17ef7"
+    },
+    "047_square_edge_fold_geometry.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_edge_fold_geometry.py",
+      "sha256": "a27d32c730f75a56645616bcf02a6a502e7f4052d10803a9364b0b0cc57be4fd"
+    },
+    "048_square_geometry.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_geometry.py",
+      "sha256": "e4702577f5e405d5b5cca29d00609c3f81edc19ffdd9e5a75aed5c5b67fad64e"
+    },
+    "049_square_pose_backend.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_pose_backend.py",
+      "sha256": "f78261623a4c48ef5de2db2bb951f68d626d437e2504c7b233c883af7f868b24"
+    },
+    "050_square_pose_contract.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_pose_contract.py",
+      "sha256": "31179c3e5f5d185499e13db42a758bc5692de6b01c006fa02c16aa3e70a8d148"
+    },
+    "051_square_probe_control.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_probe_control.py",
+      "sha256": "c8fc57915dbcc5e47752012756a94c7a43e80eac897d4b0e2da2b2a3eb2f7727"
+    },
+    "052_square_proxy_ground_control.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_proxy_ground_control.py",
+      "sha256": "b315a4e5f044ed0de81d11570e05a6c9bd0201e889ba1c1eae28ebd8e91fa05b"
+    },
+    "053_square_stable_hold.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_stable_hold.py",
+      "sha256": "693c397952dc9bc7a5a4cb2abe762e42fea58279cad87c4338971ffc94b85cb2"
+    },
+    "054_square_start.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/square_start.py",
+      "sha256": "d2b47783c263fc9ecf732402d82cf3a71ea8435db69c6667676fa0cdf633cdae"
+    },
+    "055_stage4-heldout-seeds.json": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/stage4-heldout-seeds.json",
+      "sha256": "15c87eec47412eaaa437a7c4627480ddb1315de3aafdd0f091a73601dfa6feed"
+    },
+    "056_stage4-success-v1-files.json": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/stage4-success-v1-files.json",
+      "sha256": "5aa25774ce0a916c1371762c7f3e55350e62d3e55365f2e54e67b08213a50324"
+    },
+    "057_stage4-success-v1.json": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/stage4-success-v1.json",
+      "sha256": "c51853c585955b399145bd9af211dc38f5b086a8c1fa0a4b391eb432f4bf9c55"
+    },
+    "058_stage4_batch_preflight.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/stage4_batch_preflight.py",
+      "sha256": "1e39daa18d57ce3ac7557e321386fe46bd31e3675e70477ae158786e939d3ba5"
+    },
+    "059_stage4_success_v1.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/stage4_success_v1.py",
+      "sha256": "8354b61286fa8bd37bc60444f1a237d9c8a5504a30e71df26352bb94496aa76d"
+    },
+    "060_strip_prepared_control.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/strip_prepared_control.py",
+      "sha256": "49075fb4bf90d08e2186ea8c734da38429ebcc53f807949276aac52e404bce90"
+    },
+    "061_test_stage4_success_v1.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/test_stage4_success_v1.py",
+      "sha256": "0a6c6de220e1d8fa91565222afdca96b6c9e5bead84e9b809ebbd584d6981db8"
+    },
+    "062_a5_capture_diag.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/a5_capture_diag.py",
+      "sha256": "df558cf1539f4688fe1bebcc2e153fa6096259610138ca2de086ee33d735814e"
+    },
+    "063_a5_diag_assess.py": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/a5_diag_assess.py",
+      "sha256": "6fde80af380053b6593ca94ba1a3130bd856bce12a7349fc4a924326e98bee8e"
+    },
+    "064_a5-rc2-d2c-release-order.json": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/a5-rc2-d2c-release-order.json",
+      "sha256": "96acc5fa4a0a318c876437c236a5c9260497a00028adb6db280784ed1725be27"
+    },
+    "065_run-a5-rc2-d2c-release-order.sh": {
+      "original": "/root/autodl-tmp/a5-rc2-d2c-release-order/app/run-a5-rc2-d2c-release-order.sh",
+      "sha256": "34cfb8949291f67caec7d000300466d60a6f09b4d8649d433bb1758d32c38d1e"
+    },
+    "066_FoldEnv.py": {
+      "original": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/FoldEnv.py",
+      "sha256": "e0aff36e6b25d724cd8c7f2ffd4dd7c53ffd95693f4e502457eaecf63ebcbe24"
+    },
+    "067_MyFranka.py": {
+      "original": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py",
+      "sha256": "adc6abc5b8721a0730fe7281d6cc1d89a6b7e1abad0d7b5da167369f0371428a"
+    }
+  },
+  "samples": {
+    "released": {
+      "kind": "sample",
+      "utc": "2026-11-04T01:15:39.884197+00:00",
+      "monotonic_ns": 21854645237548430,
+      "sim_time_s": 32.58333503268659,
+      "observed_step": 1953,
+      "call_id": 12,
+      "label": "released",
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.1683365157140608,
+        -0.47106278389122935,
+        0.046766248577871906
+      ],
+      "backend_step": 1953,
+      "ee_quaternion_wxyz": [
+        4.980123533363327e-05,
+        0.9985543842368036,
+        0.05375071088606602,
+        -1.7903563814850125e-05
+      ],
+      "joint_positions": [
+        -0.13881132006645203,
+        0.43109142780303955,
+        -0.17393280565738678,
+        -2.3701817989349365,
+        0.21064500510692596,
+        2.7884445190429688,
+        1.753546953201294,
+        0.03999999910593033,
+        0.03999999910593033
+      ],
+      "dof_names": [
+        "panda_joint1",
+        "panda_joint2",
+        "panda_joint3",
+        "panda_joint4",
+        "panda_joint5",
+        "panda_joint6",
+        "panda_joint7",
+        "panda_finger_joint1",
+        "panda_finger_joint2"
+      ],
+      "finger_joint_indices": [
+        7,
+        8
+      ],
+      "gripper_aperture_m": 0.07999999821186066,
+      "gripper_aperture_note": "sum of the two finger joint positions; not a calibrated fingertip gap",
+      "gripper_state": 0
+    },
+    "retreated": {
+      "kind": "sample",
+      "utc": "2026-11-04T01:17:20.280467+00:00",
+      "monotonic_ns": 21854745633814574,
+      "sim_time_s": 36.98333526216447,
+      "observed_step": 2217,
+      "call_id": null,
+      "label": "retreated",
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.16653003134874367,
+        -0.47161272528139536,
+        0.19278658271143526
+      ],
+      "backend_step": 2217,
+      "ee_quaternion_wxyz": [
+        0.00010598849583523014,
+        0.9983954427895674,
+        0.0566262103225078,
+        2.979888496323127e-05
+      ],
+      "joint_positions": [
+        -0.05436262860894203,
+        0.07002746313810349,
+        -0.2842216491699219,
+        -2.382146120071411,
+        0.030957458540797234,
+        2.449310064315796,
+        1.8811265230178833,
+        0.03999999910593033,
+        0.03999999910593033
+      ],
+      "dof_names": [
+        "panda_joint1",
+        "panda_joint2",
+        "panda_joint3",
+        "panda_joint4",
+        "panda_joint5",
+        "panda_joint6",
+        "panda_joint7",
+        "panda_finger_joint1",
+        "panda_finger_joint2"
+      ],
+      "finger_joint_indices": [
+        7,
+        8
+      ],
+      "gripper_aperture_m": 0.07999999821186066,
+      "gripper_aperture_note": "sum of the two finger joint positions; not a calibrated fingertip gap",
+      "gripper_state": 0
+    },
+    "hold_3s": {
+      "kind": "sample",
+      "utc": "2026-11-04T01:18:30.778924+00:00",
+      "monotonic_ns": 21854816132283014,
+      "sim_time_s": 39.983335418626666,
+      "observed_step": 2397,
+      "call_id": null,
+      "label": "hold_3s",
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.16651191220864497,
+        -0.47161797912640013,
+        0.192863049166444
+      ],
+      "backend_step": 2397,
+      "ee_quaternion_wxyz": [
+        0.00010345969546636421,
+        0.9983939896812343,
+        0.05665182889277922,
+        3.078282322791374e-05
+      ],
+      "joint_positions": [
+        -0.05443744361400604,
+        0.06986391544342041,
+        -0.2841147184371948,
+        -2.38210391998291,
+        0.030866827815771103,
+        2.449108839035034,
+        1.8811776638031006,
+        0.03999999910593033,
+        0.03999999910593033
+      ],
+      "dof_names": [
+        "panda_joint1",
+        "panda_joint2",
+        "panda_joint3",
+        "panda_joint4",
+        "panda_joint5",
+        "panda_joint6",
+        "panda_joint7",
+        "panda_finger_joint1",
+        "panda_finger_joint2"
+      ],
+      "finger_joint_indices": [
+        7,
+        8
+      ],
+      "gripper_aperture_m": 0.07999999821186066,
+      "gripper_aperture_note": "sum of the two finger joint positions; not a calibrated fingertip gap",
+      "gripper_state": 0
+    },
+    "hold_4s": {
+      "kind": "sample",
+      "utc": "2026-11-04T01:18:54.358142+00:00",
+      "monotonic_ns": 21854839711493598,
+      "sim_time_s": 40.98333547078073,
+      "observed_step": 2457,
+      "call_id": null,
+      "label": "hold_4s",
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.1665119088638728,
+        -0.47161798136710437,
+        0.192863052742552
+      ],
+      "backend_step": 2457,
+      "ee_quaternion_wxyz": [
+        0.00010346315613723938,
+        0.9983939894292473,
+        0.05665183332782884,
+        3.078186710861904e-05
+      ],
+      "joint_positions": [
+        -0.054437436163425446,
+        0.06986390799283981,
+        -0.2841147184371948,
+        -2.38210391998291,
+        0.030866825953125954,
+        2.449108839035034,
+        1.8811776638031006,
+        0.03999999910593033,
+        0.03999999910593033
+      ],
+      "dof_names": [
+        "panda_joint1",
+        "panda_joint2",
+        "panda_joint3",
+        "panda_joint4",
+        "panda_joint5",
+        "panda_joint6",
+        "panda_joint7",
+        "panda_finger_joint1",
+        "panda_finger_joint2"
+      ],
+      "finger_joint_indices": [
+        7,
+        8
+      ],
+      "gripper_aperture_m": 0.07999999821186066,
+      "gripper_aperture_note": "sum of the two finger joint positions; not a calibrated fingertip gap",
+      "gripper_state": 0
+    },
+    "terminal": {
+      "kind": "sample",
+      "utc": "2026-11-04T01:19:32.793874+00:00",
+      "monotonic_ns": 21854878147243697,
+      "sim_time_s": 42.48333554901183,
+      "observed_step": 2547,
+      "call_id": null,
+      "label": "terminal",
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.16651191050854122,
+        -0.4716179807892605,
+        0.19286305274256887
+      ],
+      "backend_step": 2547,
+      "ee_quaternion_wxyz": [
+        0.00010346339772382232,
+        0.9983939895753334,
+        0.056651830752568424,
+        3.078241031913972e-05
+      ],
+      "joint_positions": [
+        -0.054437439888715744,
+        0.06986390799283981,
+        -0.2841147184371948,
+        -2.38210391998291,
+        0.030866827815771103,
+        2.449108839035034,
+        1.8811776638031006,
+        0.03999999910593033,
+        0.03999999910593033
+      ],
+      "dof_names": [
+        "panda_joint1",
+        "panda_joint2",
+        "panda_joint3",
+        "panda_joint4",
+        "panda_joint5",
+        "panda_joint6",
+        "panda_joint7",
+        "panda_finger_joint1",
+        "panda_finger_joint2"
+      ],
+      "finger_joint_indices": [
+        7,
+        8
+      ],
+      "gripper_aperture_m": 0.07999999821186066,
+      "gripper_aperture_note": "sum of the two finger joint positions; not a calibrated fingertip gap",
+      "gripper_state": 0
+    }
+  },
+  "formal_day4_success": false,
+  "playback_fps": 30,
+  "time_authority": "timeline.sim_time_s; video playback is not elapsed simulation time"
+}

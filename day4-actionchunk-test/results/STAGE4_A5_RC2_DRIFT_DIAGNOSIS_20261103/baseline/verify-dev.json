@@ -1,0 +1,6 @@
+{
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/stage4-a5-rc2/app/a5_entry.py\", line 213, in <module>\n    main()\n  File \"/root/autodl-tmp/stage4-a5-rc2/app/a5_entry.py\", line 205, in main\n    verified=verify_dev(j)\n  File \"/root/autodl-tmp/stage4-a5-rc2/app/a5_entry.py\", line 173, in verify_dev\n    require(q['success'] is True,'Expected positive smoke case failed: '+str(d))\n  File \"/root/autodl-tmp/stage4-a5-rc2/app/a5_entry.py\", line 28, in require\n    raise ValueError(reason)\nValueError: Expected positive smoke case failed: /root/autodl-tmp/day4-a5-rc2-recovery-20261104-024310-304319\n",
+  "release_exists": false
+}

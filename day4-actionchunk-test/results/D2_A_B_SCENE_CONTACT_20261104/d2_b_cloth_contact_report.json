@@ -1,0 +1,19 @@
+{
+  "applied": [
+    "/World/defaultGroundPlane/GroundPlane/CollisionPlane",
+    "/World/Garment/particleSystem",
+    "/World/Garment/garment/mesh"
+  ],
+  "apply_errors": [],
+  "added_to_scene": true,
+  "scene_add_error": null,
+  "callback_count": 0,
+  "event_count": 0,
+  "errors": [],
+  "subscription_created": true,
+  "zmin_first": 0.1836502104997635,
+  "zmin_last": 0.009899972938001156,
+  "zmin_min": 0.0098837586119771,
+  "events": [],
+  "expected": "particle cloth at z=0.20 m falls to default ground"
+}

@@ -1,0 +1,272 @@
+{
+  "generated_utc": "2026-11-03T20:30:03.881865+00:00",
+  "source_case_index": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\case-index.json",
+  "cases": [
+    {
+      "case": "4202 single",
+      "events": [
+        {
+          "id": "E1",
+          "event": "last pre-release hold frame",
+          "evidence_observed_step": 1942,
+          "world_step_inferred": 1944,
+          "sim_time_s": 32.400001690660915,
+          "source": "pre_release_hold.npz; step inferred from action_begin",
+          "note": "last of 180 hold frames"
+        },
+        {
+          "id": "E2",
+          "event": "release action begin (public OPEN command)",
+          "evidence_observed_step": 1943,
+          "world_step_inferred": 1945,
+          "sim_time_s": 32.41666835732758,
+          "source": "evidence timeline action_begin",
+          "note": ""
+        },
+        {
+          "id": "E3",
+          "event": "attachment release / gripper effective open",
+          "evidence_observed_step": 1944,
+          "world_step_inferred": 1946,
+          "sim_time_s": 32.43333502486348,
+          "source": "first state with holding=false, attached=false, all enables=false",
+          "note": "attachment release and effective open are the same state; gripper aperture is not measured"
+        },
+        {
+          "id": "E4",
+          "event": "released snapshot (pre-retreat)",
+          "evidence_observed_step": 1953,
+          "world_step_inferred": 1955,
+          "sim_time_s": 32.58333503268659,
+          "source": "evidence sample released",
+          "note": "9 evidence steps after E3; the snapshots bracket the release transient"
+        },
+        {
+          "id": "E5",
+          "event": "retreat command start",
+          "evidence_observed_step": 1954,
+          "world_step_inferred": 1956,
+          "sim_time_s": 32.60000170022249,
+          "source": "first state with command_holding=false",
+          "note": ""
+        },
+        {
+          "id": "E6",
+          "event": "retreat reaches 1 mm upward",
+          "evidence_observed_step": 1955,
+          "world_step_inferred": 1957,
+          "sim_time_s": 32.61666836775839,
+          "source": "first state with EE z > released EE z + 1 mm",
+          "note": ""
+        },
+        {
+          "id": "E7",
+          "event": "retreat end / success-trace t=0",
+          "evidence_observed_step": 2097,
+          "world_step": 2099,
+          "sim_time_s": 34.983335157856345,
+          "source": "evidence action_end; success_meta.absolute_step",
+          "note": "observed-to-world offset=2; both clocks have the same sim time"
+        },
+        {
+          "id": "E8",
+          "event": "hold_3s sample (trace step 180)",
+          "evidence_observed_step": 2277,
+          "world_step": 2279,
+          "sim_time_s": 37.98333531431854,
+          "source": "evidence sample hold_3s; trace step 180",
+          "note": ""
+        },
+        {
+          "id": "E9",
+          "event": "formal evaluation window start (trace step 210)",
+          "evidence_observed_step": 2307,
+          "world_step": 2309,
+          "sim_time_s": 38.483335157856345,
+          "source": "success_meta.absolute_step + 210",
+          "note": ""
+        },
+        {
+          "id": "E10",
+          "event": "hold_4s sample (trace step 240)",
+          "evidence_observed_step": 2337,
+          "world_step": 2339,
+          "sim_time_s": 38.9833353664726,
+          "source": "evidence sample hold_4s; trace step 240",
+          "note": "inside the formal window"
+        },
+        {
+          "id": "E11",
+          "event": "formal evaluation window end (trace step 330)",
+          "evidence_observed_step": 2427,
+          "world_step": 2429,
+          "sim_time_s": 40.483335157856345,
+          "source": "success_meta.absolute_step + 330",
+          "note": ""
+        },
+        {
+          "id": "E12",
+          "event": "finger / gripper to cloth contact record",
+          "evidence_observed_step": null,
+          "world_step": null,
+          "sim_time_s": null,
+          "source": "missing in RC2 evidence",
+          "note": "no contact force/impulse trace; room_collision_audit.json covers room colliders only"
+        }
+      ],
+      "event_notes": {
+        "observed_to_world_offset": 2,
+        "same_time_clock": "evidence observed_step and success-trace absolute_step are different counters; sim_time_s is the common clock",
+        "same_step_events": [
+          "attachment release and gripper effective open (E3)"
+        ],
+        "missing_events": [
+          "finger/cloth contact (E12)",
+          "per-step cloth vertices between hold end and trace t0",
+          "gripper opening amount between release action begin and trace t0"
+        ]
+      },
+      "identities": {
+        "hold_3s_equals_trace_step_180": true,
+        "hold_4s_equals_trace_step_240": true,
+        "terminal_equals_trace_step_330": true,
+        "retreated_equals_trace_step_0": true
+      },
+      "contact_record": "missing",
+      "contact_record_note": "No finger/gripper-cloth contact force or impulse trace is present in RC2. room_collision_audit.json covers room colliders only. Distance evidence is not contact."
+    },
+    {
+      "case": "4302 single",
+      "events": [
+        {
+          "id": "E1",
+          "event": "last pre-release hold frame",
+          "evidence_observed_step": 2359,
+          "world_step_inferred": 2361,
+          "sim_time_s": 39.35000205313166,
+          "source": "pre_release_hold.npz; step inferred from action_begin",
+          "note": "last of 180 hold frames"
+        },
+        {
+          "id": "E2",
+          "event": "release action begin (public OPEN command)",
+          "evidence_observed_step": 2360,
+          "world_step_inferred": 2362,
+          "sim_time_s": 39.36666871979833,
+          "source": "evidence timeline action_begin",
+          "note": ""
+        },
+        {
+          "id": "E3",
+          "event": "attachment release / gripper effective open",
+          "evidence_observed_step": 2361,
+          "world_step_inferred": 2363,
+          "sim_time_s": 39.38333538733423,
+          "source": "first state with holding=false, attached=false, all enables=false",
+          "note": "attachment release and effective open are the same state; gripper aperture is not measured"
+        },
+        {
+          "id": "E4",
+          "event": "released snapshot (pre-retreat)",
+          "evidence_observed_step": 2370,
+          "world_step_inferred": 2372,
+          "sim_time_s": 39.53333539515734,
+          "source": "evidence sample released",
+          "note": "9 evidence steps after E3; the snapshots bracket the release transient"
+        },
+        {
+          "id": "E5",
+          "event": "retreat command start",
+          "evidence_observed_step": 2371,
+          "world_step_inferred": 2373,
+          "sim_time_s": 39.55000206269324,
+          "source": "first state with command_holding=false",
+          "note": ""
+        },
+        {
+          "id": "E6",
+          "event": "retreat reaches 1 mm upward",
+          "evidence_observed_step": 2372,
+          "world_step_inferred": 2374,
+          "sim_time_s": 39.56666873022914,
+          "source": "first state with EE z > released EE z + 1 mm",
+          "note": ""
+        },
+        {
+          "id": "E7",
+          "event": "retreat end / success-trace t=0",
+          "evidence_observed_step": 2517,
+          "world_step": 2519,
+          "sim_time_s": 41.983335522934794,
+          "source": "evidence action_end; success_meta.absolute_step",
+          "note": "observed-to-world offset=2; both clocks have the same sim time"
+        },
+        {
+          "id": "E8",
+          "event": "hold_3s sample (trace step 180)",
+          "evidence_observed_step": 2697,
+          "world_step": 2699,
+          "sim_time_s": 44.98333567939699,
+          "source": "evidence sample hold_3s; trace step 180",
+          "note": ""
+        },
+        {
+          "id": "E9",
+          "event": "formal evaluation window start (trace step 210)",
+          "evidence_observed_step": 2727,
+          "world_step": 2729,
+          "sim_time_s": 45.483335522934794,
+          "source": "success_meta.absolute_step + 210",
+          "note": ""
+        },
+        {
+          "id": "E10",
+          "event": "hold_4s sample (trace step 240)",
+          "evidence_observed_step": 2757,
+          "world_step": 2759,
+          "sim_time_s": 45.98333573155105,
+          "source": "evidence sample hold_4s; trace step 240",
+          "note": "inside the formal window"
+        },
+        {
+          "id": "E11",
+          "event": "formal evaluation window end (trace step 330)",
+          "evidence_observed_step": 2847,
+          "world_step": 2849,
+          "sim_time_s": 47.483335522934794,
+          "source": "success_meta.absolute_step + 330",
+          "note": ""
+        },
+        {
+          "id": "E12",
+          "event": "finger / gripper to cloth contact record",
+          "evidence_observed_step": null,
+          "world_step": null,
+          "sim_time_s": null,
+          "source": "missing in RC2 evidence",
+          "note": "no contact force/impulse trace; room_collision_audit.json covers room colliders only"
+        }
+      ],
+      "event_notes": {
+        "observed_to_world_offset": 2,
+        "same_time_clock": "evidence observed_step and success-trace absolute_step are different counters; sim_time_s is the common clock",
+        "same_step_events": [
+          "attachment release and gripper effective open (E3)"
+        ],
+        "missing_events": [
+          "finger/cloth contact (E12)",
+          "per-step cloth vertices between hold end and trace t0",
+          "gripper opening amount between release action begin and trace t0"
+        ]
+      },
+      "identities": {
+        "hold_3s_equals_trace_step_180": true,
+        "hold_4s_equals_trace_step_240": true,
+        "terminal_equals_trace_step_330": true,
+        "retreated_equals_trace_step_0": true
+      },
+      "contact_record": "missing",
+      "contact_record_note": "No finger/gripper-cloth contact force or impulse trace is present in RC2. room_collision_audit.json covers room colliders only. Distance evidence is not contact."
+    }
+  ]
+}

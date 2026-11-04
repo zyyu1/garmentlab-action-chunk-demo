@@ -1,0 +1,150 @@
+{
+  "version": "a5-rc2-d2c-release-order",
+  "revision": "c-registered",
+  "created_utc": "2026-11-04T00:39:00Z",
+  "implemented_utc": "2026-11-04T00:43:48Z",
+  "status": "d2c_implemented; final-release order intervention pre-registered; offline verification passed; no run",
+  "parent": "stage4-a5-rc2",
+  "parent_diagnostic": {
+    "version": "a5-rc2-d1-120",
+    "revision": "step2-4+run",
+    "manifest_sha256": "cd1d7f83d065974e12191486eddbf722edd4a1b7392ec78543966483434b25a6",
+    "config_sha256": "a6884eab8ae4bf6d703b0321415cfc2cd501f878472068109addba564ba4d471",
+    "clean_run": "day4-a5-rc2-d1-120-20261104-071602-499516",
+    "postfix_complete": true,
+    "quality": "rejected"
+  },
+  "base_candidate_sha256": "10a6cb452b9fafd5907f245b68fd02d49c7af1e12fa6cb0f755f1791a5af27a5",
+  "base_manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+  "subject": {
+    "seed": 4202,
+    "level": "perturbed",
+    "mode": "single",
+    "initial": "day4-square-initial-stripfold-20261103-062710-242560"
+  },
+  "initial": {
+    "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560",
+    "hashes": {
+      "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+      "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+    }
+  },
+  "delay": {
+    "steps": 120,
+    "dt_s": 0.016666666666666666,
+    "duration_s": 2.0,
+    "location": "inside the final OPEN, after ungrasp returns and before the original upward retreat target motion",
+    "hold": "keep the current position target and open gripper; do not reset cloth position or velocity",
+    "counted_as_public_action": false,
+    "control_stage": "internal_delay",
+    "public_actions": 12,
+    "implementation": "a5_capture_diag.hold_open_for_steps called from measure_detachment",
+    "verification": "exactly 120 physics steps; no control call, target change, cloth position write or velocity clear"
+  },
+  "retreat": {
+    "target": "original computed OPEN target",
+    "public_actions_unchanged": true
+  },
+  "events": [
+    "ungrasp_return",
+    "delay_begin",
+    "delay_end",
+    "retreat_begin",
+    "retreat_end"
+  ],
+  "event_recording": {
+    "required": [
+      "ungrasp_return",
+      "delay_begin",
+      "delay_end",
+      "retreat_begin",
+      "retreat_end"
+    ],
+    "event_output": "release_diag.json:events and release_diag_events.csv",
+    "phase_labels": {
+      "release_opening": "pre-release and opening states",
+      "released": "released snapshot row",
+      "delay": "the 120 wait state rows",
+      "retreat": "the original upward retreat state rows",
+      "retreat_done": "retreated snapshot row"
+    },
+    "per_step": "vertices, EE pose/quaternion, all joints, aperture, attachment flags in release_diag.npz",
+    "event_state": "event rows include EE, joints, aperture, attachment and cloth centroid/hash"
+  },
+  "evaluation": {
+    "retreat_complete_step": 0,
+    "capture_steps": "0..330",
+    "evaluate_steps": "210..330",
+    "centroid_limit_mm": 1.0,
+    "vertex_p95_limit_mm": 3.0,
+    "time_alignment": "t=0 is the attachment-disable step read from release_diag attachment flags, not delay_begin; compare by elapsed time after attachment release, not by absolute step.  Action-relative stage windows are reported separately."
+  },
+  "diagnostic_only": true,
+  "observation_only": false,
+  "public_actions_unchanged": true,
+  "action_targets_unchanged": true,
+  "physics_step_count_changed": true,
+  "internal_delay_steps": 120,
+  "output_prefix": "day4-a5-rc2-d2c-release-order-",
+  "formal_stage4_success": 0,
+  "notes": [
+    "D2-C is a new independent diagnostic version; D1-120, RC2 and v1.1 directories are not modified.",
+    "Only the final-release order is changed: open gripper while attachment is enabled, suppress the redundant open inside original ungrasp, then disable the attachment.",
+    "12 public actions, targets, commands and horizons remain unchanged; the 120-step wait and retreat target remain.",
+    "No friction value is changed and no cloth velocity is cleared as a fix.",
+    "One 4202 single run only; formal thresholds 1 mm / 3 mm remain; formal batch paused.",
+    "Compared with D1-120, total physics steps are unchanged: the same 10 gripper-opening steps now occur before attachment disable; the 120-step wait is retained."
+  ],
+  "scope": "D2-C single release-order intervention on top of D1-120; 4202 single only",
+  "release_order": {
+    "intervention": "open_while_attached_then_disable",
+    "location": "final public OPEN/release_retreat, before attachment disable",
+    "preopen_steps": 10,
+    "open_while_attachment_enabled": true,
+    "suppress_redundant_second_open": true,
+    "attachment_disable_after_gripper_open": true,
+    "public_actions_unchanged": true,
+    "action_targets_unchanged": true,
+    "wait_steps_after_release": 120,
+    "why": "D2-A/B showed attachment disabled at 1944 while gripper_state/command latch remained non-open until 1953; release-step velocity jumped 17.4/11.0 mm/s. This single change keeps attachment until the 10-step gripper opening completes.",
+    "preopen_steps_moved_before_disable_vs_d1": 10,
+    "total_physics_steps_vs_d1_unchanged": true,
+    "total_physics_steps_vs_rc2": "+120 from the retained D1 wait"
+  },
+  "expected_phenomenon": [
+    "attachment remains enabled during the 10-step gripper opening and is disabled after preopen",
+    "release-step and first-5-step particle/centroid/angular speeds decrease versus D1",
+    "if the release impulse is causal, wait/retreat/formal-window centroid and P95 drift decrease versus D1",
+    "if unchanged, release order is not the dominant cause; do not infer from a single run beyond the pre-registered metrics"
+  ],
+  "comparison": {
+    "against": "a5-rc2-d1-120 clean run and RC2 4202 single",
+    "alignment": "release t=0 = released sample immediately after all three attachment slots become false; report its observed_step delta from the last preopen state; transient 0..30 steps (0..0.5 s), later slip 30..120 steps; wait window release+0..120 steps for both runs so D1 includes its 10 opening steps; retreat and formal 210..330 remain action-relative stage metrics.",
+    "primary": [
+      "release-step particle mean speed at attachment disable",
+      "first-5 particle/centroid/angular speed after release",
+      "release+0..120 step centroid/P95/rotation (D1 includes its 10 opening steps)",
+      "retreat centroid/P95/rotation (action-relative)",
+      "formal window 210..330 centroid/P95/rotation (action-relative)",
+      "formal quality/stability"
+    ],
+    "secondary": [
+      "attachment disabled step",
+      "preopen steps",
+      "gripper open step",
+      "public action/target/horizon identity",
+      "total physics steps"
+    ]
+  },
+  "run_status": "not_run",
+  "analysis_plan": {
+    "release_t0": "released sample row emitted immediately after attachment disable; it must share observed_step with the last preopen state.  The first all-off state row is one step later and is not used as the exact release instant.",
+    "transient": "release+0..30 steps (0..0.5 s)",
+    "later_slip": "release+30..120 steps",
+    "wait_window": "release+0..120 steps for both runs; D1 opening steps are included in its post-release window",
+    "stage_windows": "retreat and formal 210..330 aligned by public action step, reported separately",
+    "contact": "cloth-ground contact force/impulse is unavailable; use particle/centroid speed, height and penetration",
+    "missing": "normal/tangential contact force or impulse cannot be claimed",
+    "release_sampling": "record last preopen state step, release boundary observed step, released sample step and their delta; if delta is nonzero report the sampling error instead of claiming an exact instant; the released sample is a zero-physics-step state read at the boundary"
+  }
+}

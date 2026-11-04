@@ -1,0 +1,25 @@
+{
+  "version": "a5-rc2-d1-120",
+  "audit": "static source comparison against a5-rc2-drift-diag-v1 v1.1",
+  "parent_manifest_sha256": "13c1f20a5081fdaea7cdbd25a299c3086fec0500eb9773f9fb1351b232a0c922",
+  "checks": {
+    "action_and_horizon_lines_identical": true,
+    "action_and_horizon_line_count": 21,
+    "start_ee_expression_identical": true,
+    "retreat_target_expression_identical": true,
+    "release_call_identical": true,
+    "public_action_count": 12,
+    "wait_public_action_index": 12,
+    "wait_public_action_label": "release_retreat",
+    "delay_steps": 120,
+    "delay_helper_no_control_call": true,
+    "delay_helper_no_cloth_position_write": true,
+    "delay_helper_no_velocity_clear": true
+  },
+  "method": [
+    "Extracted all lines containing action(, action_chunk(, fold_rows, fold_horizons or call_horizons from both a5_recovery_diag.py copies; lists are identical (21/21).",
+    "Compared the start_ee expression, the retreat target expression and the release(target) call between both a5_capture_diag.py copies; all identical.",
+    "Verified the wait is inserted in measure_detachment after the released sample and before original(*args), and that the helper only calls world.step(render=True) 120 times."
+  ],
+  "note": "This is a static/source audit. Runtime action targets and arrays are compared with the baseline after the step-6 run; no run has occurred here."
+}

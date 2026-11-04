@@ -1,0 +1,191 @@
+{
+  "generated_utc": "2026-11-03T22:32:48Z",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "a5_rc2_baseline_index.py",
+      "sha256": "80fabfa284ab5e5823e25df5e0409832302e4ec1dd15083474aece65043a099d",
+      "size": 19739
+    },
+    {
+      "path": "a5_rc2_drift_diagnosis.py",
+      "sha256": "07a1b2f3ef373497e096738938da2152cf97d886582c0ba39eb584d5b2f07b6e",
+      "size": 42149
+    },
+    {
+      "path": "audit_a5_rc2_d0_repro.py",
+      "sha256": "47938c7357150306fcb45800f9ee8b720b1f57c2b65bbec55a794319a26936a2",
+      "size": 10065
+    },
+    {
+      "path": "analyze_a5_rc2_release_diag.py",
+      "sha256": "d272157c973ffa0fab3103efbeafc627bb993af34ba9de1d751722d6a6b0ec70",
+      "size": 17191
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\baseline.json",
+      "sha256": "cdaa53302f908554597d1c6d8cf3338a738d1cc9d0d014366889d7e5dec588f4",
+      "size": 6110
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\case-index.json",
+      "sha256": "f16107daac4cc95c5d2cd225dc508bf3a1b4223d0eaead026c7d34e74b34de6e",
+      "size": 31620
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\case-index.md",
+      "sha256": "9a6598386243e7777cca9a52fa826e47487beb1586ebb8337e911e5071438c70",
+      "size": 1997
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\diagnostic-config.json",
+      "sha256": "906a2443a57ff1fefcdb7d988f540973173a8df87394ea3fb8b0dba28baabf04",
+      "size": 7122
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\review.md",
+      "sha256": "afdef58ac18294240ac0214afa10f763db4aa875b7de0a46ee6bb4219a1aeb0e",
+      "size": 19400
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\analysis\\phase-events.json",
+      "sha256": "8ba43624e0e6c2f8a0c2324eb08ea6d68de651f710a1b477326883b5d94dd1e4",
+      "size": 10606
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\analysis\\phase-segments.json",
+      "sha256": "96fab8fdb384656a81d2968e1a1bf014dffbf591e97f1c3b7a8c37c9b57d9aa2",
+      "size": 135204
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\analysis\\phase-trace.json",
+      "sha256": "66813b920fd4110111cfb02172829a7b9d903313b542ef0a0a6c576a84adfc12",
+      "size": 109175
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\analysis\\event-table.csv",
+      "sha256": "1767faff54e3b9956c7261fa8245f2052a293ff4221f5de3b88c53ea0bb0e2db",
+      "size": 3680
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\analysis\\segment-metrics.csv",
+      "sha256": "6232108c06ecc811379bb34ed7d21fde1b7311cb4cf2b643ebf590ea949ca4c9",
+      "size": 11476
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\analysis\\diagnosis.md",
+      "sha256": "932b02e2148f8f92a8eb16033cb97555e57829834578a0b099681fe7c0f77e77",
+      "size": 9811
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\analysis\\plots\\drift_4202_single.png",
+      "sha256": "38df051d0ac987ca64b18abdbcd179a4288ab3228c4e85d0fe0b7691009e646c",
+      "size": 294265
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_DRIFT_DIAGNOSIS_20261103\\analysis\\plots\\drift_4302_single.png",
+      "sha256": "ec4c2e0a589bf9991a2b96be615a79eeb3019bb320e4d7c5e2a87f50e4e0392a",
+      "size": 293460
+    },
+    {
+      "path": "a5-rc2-drift-diag\\README.md",
+      "sha256": "86c91c13de37f669278f64307beb267aee6d0994f8695e703532ac7e3892f44a",
+      "size": 7706
+    },
+    {
+      "path": "a5-rc2-drift-diag\\app\\a5-rc2-drift-diag-v1-files.json",
+      "sha256": "13c1f20a5081fdaea7cdbd25a299c3086fec0500eb9773f9fb1351b232a0c922",
+      "size": 6594
+    },
+    {
+      "path": "a5-rc2-drift-diag\\app\\a5-rc2-drift-diag-v1.json",
+      "sha256": "aa5da98be1dc03f588125d99ed6e5cc0e41728ae32c8770cfe27dfd3a6c06149",
+      "size": 2301
+    },
+    {
+      "path": "a5-rc2-drift-diag\\app\\a5_recovery_diag.py",
+      "sha256": "125111b276e9e9199eacffb5d132518a02e8eab30614366e05691bde698c9e38",
+      "size": 23824
+    },
+    {
+      "path": "a5-rc2-drift-diag\\app\\a5_capture_diag.py",
+      "sha256": "3a4ce720fc7adca10ba6f0b2064c197f97e53ac0208de14c30e820b3abad86b1",
+      "size": 5557
+    },
+    {
+      "path": "a5-rc2-drift-diag\\app\\release_diag.py",
+      "sha256": "dbb7801c82d685cb572e2ada4d4b55d588c693338e1df66f93ab5607c3840218",
+      "size": 14900
+    },
+    {
+      "path": "a5-rc2-drift-diag\\app\\a5_diag_assess.py",
+      "sha256": "fcdc3383b9716c24b3d8e4e7b90837f6b1e84c6fd6e7e5fec5e51e422a498771",
+      "size": 9573
+    },
+    {
+      "path": "a5-rc2-drift-diag\\app\\run-a5-rc2-drift-diag.sh",
+      "sha256": "2a1a3028f0998162aeae0fa6d3b43c732f68e5fe57da525b49f7b99f8eebbe7e",
+      "size": 2506
+    },
+    {
+      "path": "a5-rc2-drift-diag\\app\\test_release_diag.py",
+      "sha256": "35960de8d880deb79f45a8306b694a5ecbc1dfa95ba49a6d8cac62d5ced82116",
+      "size": 5113
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_RELEASE_DIAG_4202_20261103\\review.md",
+      "sha256": "dfcc88f0431f395585251d86c5dd7afec566515fb1216da3b9379fc0ed15419b",
+      "size": 7119
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_RELEASE_DIAG_4202_20261103\\analysis.md",
+      "sha256": "0b8b576351ee9ca97dfd9a29da1fab5fd9121f60b35beb43423c9370ce8ab860",
+      "size": 3214
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_RELEASE_DIAG_4202_20261103\\release_diag_analysis.json",
+      "sha256": "f6a827a1d628d310cdd19ecd4807df1da48bf4aeeb6ae81e2bda6f508db12bca",
+      "size": 38593
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_RELEASE_DIAG_4202_20261103\\release_diag_segments.csv",
+      "sha256": "bd8e92d0fc3ddfb10371d36ddf1d1889cb4abced7365f9786e6bc9d66c69a0d1",
+      "size": 2172
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_RELEASE_DIAG_4202_20261103\\release_diag_events.csv",
+      "sha256": "f77d17dd3f498a217a605bdf018a90717e971963851691b04200248f22a7840e",
+      "size": 509
+    },
+    {
+      "path": "results\\STAGE4_A5_RC2_RELEASE_DIAG_4202_20261103\\release_diag_4202_single.png",
+      "sha256": "3a19fb07c5ac78f58bdc635073632a997c6ae8ecebcda9a43445b23930331efd",
+      "size": 272498
+    },
+    {
+      "path": "results/STAGE4_A5_RC2_RELEASE_DIAG_4202_20261103/v1_1_compare.md",
+      "sha256": "2768b02cc586b9d0805348eefec4551c29a64f930673a283e2131063cd8bc3ad",
+      "size": 7159
+    },
+    {
+      "path": "results\\D0_4202_REPRO_AUDIT_20261103\\review.md",
+      "sha256": "967232c63eca226f3a490d832689fb26efc2d985d2a458b863cd5b1e617a033e",
+      "size": 3318
+    },
+    {
+      "path": "results\\D0_4202_REPRO_AUDIT_20261103\\audit.json",
+      "sha256": "472c53581e0f81724c2bc6f548179f044aa96d735fa92631a11bc8bcf4f3af09",
+      "size": 6058
+    },
+    {
+      "path": "results\\D0_4302_REPRO_AUDIT_20261103\\review.md",
+      "sha256": "2c8567c63189ea914f0ce4445861439337e91377b1ddd1dcf26e8b2dc7b289bd",
+      "size": 2717
+    },
+    {
+      "path": "results\\D0_4302_REPRO_AUDIT_20261103\\audit.json",
+      "sha256": "09bb1db485ad1445c40fed287d4c0bbe3a071c3f013178a813c05f45c83297ed",
+      "size": 6058
+    }
+  ]
+}

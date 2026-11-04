@@ -1,0 +1,296 @@
+{
+  "version": "a5-rc2-d1-120",
+  "created_utc": "2026-11-03T23:37:41Z",
+  "scope": "offline preflight only; no Isaac, no simulation, no held-out",
+  "app": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\a5-rc2-d1-120\\app",
+  "checks": {
+    "registration_present": {
+      "ok": true,
+      "detail": null
+    },
+    "config_hash_matches_registration": {
+      "ok": true,
+      "detail": null
+    },
+    "manifest_hash_matches_registration": {
+      "ok": true,
+      "detail": null
+    },
+    "parent_config_hash": {
+      "ok": true,
+      "detail": null
+    },
+    "parent_manifest_hash": {
+      "ok": true,
+      "detail": null
+    },
+    "parent_source_hashes": {
+      "ok": true,
+      "detail": null
+    },
+    "base_candidate_hash": {
+      "ok": true,
+      "detail": null
+    },
+    "base_manifest_hash": {
+      "ok": true,
+      "detail": null
+    },
+    "initial_hashes_recorded": {
+      "ok": true,
+      "detail": null
+    },
+    "manifest_entry_count": {
+      "ok": true,
+      "detail": 66
+    },
+    "manifest_all_present": {
+      "ok": true,
+      "detail": []
+    },
+    "manifest_all_hashes": {
+      "ok": true,
+      "detail": []
+    },
+    "manifest_base_entries_60": {
+      "ok": true,
+      "detail": 60
+    },
+    "manifest_base_hashes_match": {
+      "ok": true,
+      "detail": null
+    },
+    "manifest_diagnostic_entries_exact": {
+      "ok": true,
+      "detail": [
+        "a5-rc2-d1-120.json",
+        "a5_capture_diag.py",
+        "a5_diag_assess.py",
+        "a5_recovery_diag.py",
+        "release_diag.py",
+        "run-a5-rc2-d1-120.sh"
+      ]
+    },
+    "manifest_no_self_entry": {
+      "ok": true,
+      "detail": null
+    },
+    "candidate_base_identity": {
+      "ok": true,
+      "detail": null
+    },
+    "config_version": {
+      "ok": true,
+      "detail": null
+    },
+    "config_delay_120": {
+      "ok": true,
+      "detail": 120
+    },
+    "config_delay_internal": {
+      "ok": true,
+      "detail": null
+    },
+    "config_public_actions_12": {
+      "ok": true,
+      "detail": null
+    },
+    "config_scope_4202_single": {
+      "ok": true,
+      "detail": null
+    },
+    "config_only_4202": {
+      "ok": true,
+      "detail": null
+    },
+    "config_flags": {
+      "ok": true,
+      "detail": null
+    },
+    "config_output_prefix": {
+      "ok": true,
+      "detail": null
+    },
+    "registration_stage": {
+      "ok": true,
+      "detail": null
+    },
+    "registration_source_hashes": {
+      "ok": true,
+      "detail": null
+    },
+    "registration_test_hashes": {
+      "ok": true,
+      "detail": null
+    },
+    "runner_manifest_name": {
+      "ok": true,
+      "detail": null
+    },
+    "runner_config_name": {
+      "ok": true,
+      "detail": null
+    },
+    "runner_scope_rejection": {
+      "ok": true,
+      "detail": null
+    },
+    "runner_entry_scripts": {
+      "ok": true,
+      "detail": null
+    },
+    "runner_preflight_args": {
+      "ok": true,
+      "detail": null
+    },
+    "runner_initial_resolution": {
+      "ok": true,
+      "detail": null
+    },
+    "runner_preflight_only_guard": {
+      "ok": true,
+      "detail": null
+    },
+    "python_syntax": {
+      "ok": true,
+      "detail": {}
+    },
+    "bash_syntax": {
+      "ok": true,
+      "detail": ""
+    },
+    "fixture_test_d1_120_delay.py": {
+      "ok": true,
+      "detail": null
+    },
+    "fixture_test_release_diag.py": {
+      "ok": true,
+      "detail": null
+    },
+    "recovery_output_prefix": {
+      "ok": true,
+      "detail": null
+    },
+    "helper_loop_120": {
+      "ok": true,
+      "detail": null
+    },
+    "helper_no_control_or_cloth_reset": {
+      "ok": true,
+      "detail": null
+    },
+    "helper_rejects_wrong_steps": {
+      "ok": true,
+      "detail": null
+    },
+    "registered_delay_reads_config": {
+      "ok": true,
+      "detail": null
+    },
+    "ungrasp_event_actual": {
+      "ok": true,
+      "detail": null
+    },
+    "measure_event_order": {
+      "ok": true,
+      "detail": null
+    },
+    "measure_action_gate": {
+      "ok": true,
+      "detail": null
+    },
+    "events_emitted_once": {
+      "ok": true,
+      "detail": null
+    },
+    "capture_release_target_unchanged": {
+      "ok": true,
+      "detail": null
+    },
+    "capture_install_scope": {
+      "ok": true,
+      "detail": null
+    },
+    "recovery_imports_diag_capture_once": {
+      "ok": true,
+      "detail": null
+    },
+    "recovery_release_window_once": {
+      "ok": true,
+      "detail": null
+    },
+    "recovery_has_no_delay": {
+      "ok": true,
+      "detail": null
+    },
+    "recovery_actions_present": {
+      "ok": true,
+      "detail": null
+    },
+    "recovery_action_lines_identical": {
+      "ok": true,
+      "detail": {
+        "old": 21,
+        "new": 21
+      }
+    },
+    "recovery_action_budget_checks": {
+      "ok": true,
+      "detail": null
+    },
+    "assessor_action_checks": {
+      "ok": true,
+      "detail": null
+    },
+    "release_required_events": {
+      "ok": true,
+      "detail": null
+    },
+    "release_event_paths": {
+      "ok": true,
+      "detail": null
+    },
+    "release_npz_keys": {
+      "ok": true,
+      "detail": null
+    },
+    "release_phase_labels": {
+      "ok": true,
+      "detail": null
+    },
+    "capture_internal_delay": {
+      "ok": true,
+      "detail": null
+    },
+    "recovery_diagnostic_fields": {
+      "ok": true,
+      "detail": null
+    },
+    "assessor_delay_event_checks": {
+      "ok": true,
+      "detail": null
+    },
+    "no_local_d1_outputs": {
+      "ok": true,
+      "detail": []
+    }
+  },
+  "all_ok": true,
+  "hashes": {
+    "config_sha256": "a6884eab8ae4bf6d703b0321415cfc2cd501f878472068109addba564ba4d471",
+    "manifest_sha256": "cd1d7f83d065974e12191486eddbf722edd4a1b7392ec78543966483434b25a6",
+    "registration_sha256": "e54e72353047bc1afbc8910da9449f4687edbfb9a7a0e703c135f27ab7a081f4"
+  },
+  "test_outputs": {
+    "test_d1_120_delay.py": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.001s\n\nOK\n"
+    },
+    "test_release_diag.py": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.027s\n\nOK\n"
+    }
+  }
+}

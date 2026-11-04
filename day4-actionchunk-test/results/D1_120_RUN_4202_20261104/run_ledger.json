@@ -1,0 +1,136 @@
+{
+  "state": "finished",
+  "utc": "2026-11-03T23:32:33.678514+00:00",
+  "version": "a5-rc2-d1-120",
+  "seed": 4202,
+  "level": "perturbed",
+  "mode": "single",
+  "result_dir": "/root/autodl-tmp/day4-a5-rc2-d1-120-20261104-071602-499516",
+  "sim_process_status": 0,
+  "assess_status": 1,
+  "episode_passed": true,
+  "errors": [],
+  "action_count": 12,
+  "call_horizons": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "internal_delay": {
+    "requested_steps": 120,
+    "start_step": 1955,
+    "end_step": 2075,
+    "elapsed_steps": 120,
+    "start_sim_time_s": 32.58333503268659,
+    "end_sim_time_s": 34.58333513699472,
+    "elapsed_sim_time_s": 2.0000001043081284,
+    "ee_start_m": [
+      -0.1683365157140608,
+      -0.47106278389122935,
+      0.046766248577871906
+    ],
+    "ee_end_m": [
+      -0.1683365157140608,
+      -0.47106278389122935,
+      0.046766248577871906
+    ],
+    "ee_displacement_m": 0.0,
+    "gripper_state_open": true,
+    "attachment_enabled": false,
+    "control_calls": 0,
+    "target_changes": 0,
+    "cloth_position_reset": false,
+    "cloth_velocity_reset": false,
+    "public_action": false,
+    "scope": "internal_control_stage",
+    "public_action_label": "release_retreat",
+    "public_action_index": 12,
+    "public_action_target": [
+      -0.168335948015093,
+      -0.4710616045576297,
+      0.1967657491862911
+    ],
+    "registered_at": "a5-rc2-d1-120.json:delay.location"
+  },
+  "evidence": {
+    "result.json": {
+      "present": true,
+      "bytes": 47962,
+      "sha256": "c5b8e2fb2f2b8d8caf2c41559627431aa414c24a3b9255a6023737b7e79cbd3f"
+    },
+    "success_trace.npz": {
+      "present": true,
+      "bytes": 1670556,
+      "sha256": "8a609f59bcc902e2b6d0e9c573bd5f53bf3237040939663851a13c5bfca8c29d"
+    },
+    "success_meta.json": {
+      "present": true,
+      "bytes": 1984,
+      "sha256": "97bb3c39062e1cc23e9f7abcd7330e59600027830319e5b76f8b19c37e5cfddc"
+    },
+    "final.png": {
+      "present": true,
+      "bytes": 101474,
+      "sha256": "12501b4ddab5e01fae3b29c9cb7e2104a388221f7617a2729b62854bd2b466b5"
+    },
+    "runner.log": {
+      "present": true,
+      "bytes": 34102,
+      "sha256": "52ec8155b8470b2f168e8de0704ccb29ab5198e1e70a7dff70567761a4e98928"
+    },
+    "contact_report.json": {
+      "present": true,
+      "bytes": 674,
+      "sha256": "0bf452e39a3bb8b880f5c3409835abb0e03be945f84c18af33deabb61998844d"
+    },
+    "evidence/release_diag.npz": {
+      "present": true,
+      "bytes": 1415837,
+      "sha256": "3457ee8db3c0190274a2a26ad760abcf0992ce795795b025ff0982c4a2c4dbc8"
+    },
+    "evidence/release_diag.json": {
+      "present": true,
+      "bytes": 9466,
+      "sha256": "c9be7e0a99fe943465e968d9706d252b65ab42ee8674cece43947b91d89fa1d0"
+    },
+    "evidence/release_diag_events.csv": {
+      "present": true,
+      "bytes": 1603,
+      "sha256": "756335e2eb70d4b4cae9b6b3e7d9491d7e37b283ec90635b5afd7df1442cbbca"
+    },
+    "evidence/summary.json": {
+      "present": true,
+      "bytes": 22148,
+      "sha256": "8b756d5f66ae041bcdccfeeb7a8e2a0b2fa2e8ec14fcadad45acea07c2d5461e"
+    },
+    "evidence/episode.mp4": {
+      "present": true,
+      "bytes": 944825,
+      "sha256": "4f9897f1259c43aa69a73954870e24fb7d4db5884f989e703371fd3ac663cde3"
+    },
+    "evidence/timeline.jsonl": {
+      "present": true,
+      "bytes": 4165520,
+      "sha256": "bc7169c3984f8875849638fa8398ff9f5cde90bb9a7a5be1ead981e60ab73ce0"
+    },
+    "evidence/manifest.json": {
+      "present": true,
+      "bytes": 8244,
+      "sha256": "f32b2a953f805eac6eaca0ecaba0653f683ac48781bf6024335ab361a19f40b0"
+    },
+    "diag-verdict.json": {
+      "present": false,
+      "bytes": null,
+      "sha256": null
+    }
+  }
+}

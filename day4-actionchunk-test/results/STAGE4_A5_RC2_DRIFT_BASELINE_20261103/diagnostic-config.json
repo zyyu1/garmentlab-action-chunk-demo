@@ -1,0 +1,93 @@
+{
+  "batch_id": "a5-rc2-drift-diag-v1",
+  "status": "registered_not_run",
+  "created_utc": "2026-11-03T20:20:47.522465+00:00",
+  "base_candidate": {
+    "version": "stage4-a5-rc2",
+    "manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+    "candidate_sha256": "10a6cb452b9fafd5907f245b68fd02d49c7af1e12fa6cb0f755f1791a5af27a5",
+    "baseline_dir": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\STAGE4_A5_RC2_DRIFT_BASELINE_20261103"
+  },
+  "scope": "Diagnostic drift localisation and minimal correction only. No formal batch, no held-out, no formal success.",
+  "subjects": [
+    {
+      "order": 1,
+      "case": "4202 single",
+      "role": "first diagnostic subject",
+      "result_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-022718-388270",
+      "initial_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-square-initial-stripfold-20261103-062710-242560"
+    },
+    {
+      "order": 2,
+      "case": "4302 single",
+      "role": "later revalidation subject",
+      "result_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-025702-598075",
+      "initial_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-square-initial-stripfold-20261103-094143-137994"
+    }
+  ],
+  "fixed": {
+    "initial_dirs": [
+      "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-square-initial-stripfold-20261103-062710-242560",
+      "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-square-initial-stripfold-20261103-094143-137994"
+    ],
+    "fold_edge": "right",
+    "fold_width_m": 0.2,
+    "overhang_m": 0.0,
+    "public_actions": {
+      "4202 single": 12,
+      "4302 single": 12
+    },
+    "recovery_actions": 1,
+    "release_action": "last public OPEN, target = measured EE + [0,0,0.15] m",
+    "pre_release_hold_steps": 180,
+    "sample_clock": "after release_retreat returns: steps 0..330 at 60 Hz; formal window 210..330",
+    "stability_criteria": {
+      "centroid_drift_max_m": 0.001,
+      "vertex_drift_p95_max_m": 0.003
+    },
+    "physics_material_ground": "unchanged from RC2"
+  },
+  "variants": [
+    {
+      "id": "D0",
+      "name": "baseline reproduction with diagnostic recording",
+      "change": "none to policy, path, material, ground or release hold; add per-step diagnostic recording only",
+      "status": "registered_not_run",
+      "question": "Is the original drift reproducible with the diagnostic recorder?"
+    },
+    {
+      "id": "D1",
+      "name": "delayed retreat",
+      "change": "release/ungrasp and open; arm temporarily holds position; then retreat",
+      "status": "registered_not_run; delay length to be fixed after step 3",
+      "question": "Does the cloth drift before the retreat begins?",
+      "budget": "Must stay within 12 public actions; no hidden waypoints."
+    },
+    {
+      "id": "D2",
+      "name": "detachment path comparison",
+      "change": "design only after contact/distance evidence",
+      "status": "not_designed",
+      "question": "Does a different robot detachment path reduce the drift?"
+    }
+  ],
+  "recording_requirements": [
+    "per-physical-step cloth vertices from release action start through retreat end",
+    "gripper pose, opening amount, holding and all three attachment enables",
+    "available contact object, time, force and impulse; if only distance is available, label it as distance evidence and do not call it contact",
+    "same physical time span for every compared segment",
+    "report both the original 210..330 evaluation and the diagnostic phases"
+  ],
+  "stop_conditions": [
+    "D0 does not reproduce the original drift: stop and investigate version/repeatability",
+    "code/config/physics/action targets change without a new registration",
+    "contact records remain unavailable and the next step cannot distinguish hypotheses",
+    "a variant requires more than 12 public actions without a registered budget change"
+  ],
+  "output_policy": {
+    "separate_tag": "stage4-a5-rc2-drift-diag-v1-*",
+    "must_not_overwrite": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z",
+    "retain_all_failures": true,
+    "formal_success": 0
+  }
+}

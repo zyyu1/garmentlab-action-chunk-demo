@@ -1,0 +1,164 @@
+{
+  "d1": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-a5-rc2-d1-120-20261104-071602-499516",
+  "prehold_dt_s": 0.016666666666666666,
+  "intervals": {
+    "prehold_last5": {
+      "n_intervals": 5,
+      "particle_mean_speed_mean_mm_s": 0.26216602697968483,
+      "particle_mean_speed_max_mm_s": 0.28969804756343365,
+      "centroid_speed_mean_mm_s": 0.055277880281209946,
+      "centroid_speed_max_mm_s": 0.07736931787803769,
+      "angular_speed_mean_deg_s": 0.02019387654153163,
+      "angular_speed_max_deg_s": 0.05205094747639539
+    },
+    "prehold_last30": {
+      "n_intervals": 30,
+      "particle_mean_speed_mean_mm_s": 0.2782631986774504,
+      "particle_mean_speed_max_mm_s": 0.3488676343113184,
+      "centroid_speed_mean_mm_s": 0.07952898117946461,
+      "centroid_speed_max_mm_s": 0.1609226083382964,
+      "angular_speed_mean_deg_s": 0.0282468313430565,
+      "angular_speed_max_deg_s": 0.06777473324689114
+    },
+    "prehold_all": {
+      "n_intervals": 179,
+      "particle_mean_speed_mean_mm_s": 1.6992541121100413,
+      "particle_mean_speed_max_mm_s": 17.521787881851196,
+      "centroid_speed_mean_mm_s": 0.8516560640679048,
+      "centroid_speed_max_mm_s": 12.246721386909485,
+      "angular_speed_mean_deg_s": 0.1344714204166524,
+      "angular_speed_max_deg_s": 1.1405047181953747
+    },
+    "attachment_off_1943_1944": {
+      "n_intervals": 1,
+      "particle_mean_speed_mean_mm_s": 17.41965538136001,
+      "particle_mean_speed_max_mm_s": 17.41965538136001,
+      "centroid_speed_mean_mm_s": 11.039687987083232,
+      "centroid_speed_max_mm_s": 11.039687987083232,
+      "angular_speed_mean_deg_s": 0.0692184129690865,
+      "angular_speed_max_deg_s": 0.0692184129690865
+    },
+    "post_release_first5": {
+      "n_intervals": 5,
+      "particle_mean_speed_mean_mm_s": 35.949826266932675,
+      "particle_mean_speed_max_mm_s": 44.25105908841945,
+      "centroid_speed_mean_mm_s": 19.417567150686324,
+      "centroid_speed_max_mm_s": 27.78566840346847,
+      "angular_speed_mean_deg_s": 2.124310821808868,
+      "angular_speed_max_deg_s": 4.122427340641535
+    },
+    "post_release_first10": {
+      "n_intervals": 10,
+      "particle_mean_speed_mean_mm_s": 28.554775615275986,
+      "particle_mean_speed_max_mm_s": 44.25105908841945,
+      "centroid_speed_mean_mm_s": 16.752888715325096,
+      "centroid_speed_max_mm_s": 27.78566840346847,
+      "angular_speed_mean_deg_s": 2.586047918692049,
+      "angular_speed_max_deg_s": 5.561441692139813
+    },
+    "post_release_first30": {
+      "n_intervals": 30,
+      "particle_mean_speed_mean_mm_s": 15.015893297238904,
+      "particle_mean_speed_max_mm_s": 44.25105908841945,
+      "centroid_speed_mean_mm_s": 9.247081493468029,
+      "centroid_speed_max_mm_s": 27.78566840346847,
+      "angular_speed_mean_deg_s": 1.5742150138635618,
+      "angular_speed_max_deg_s": 5.561441692139813
+    },
+    "wait_first30": {
+      "n_intervals": 30,
+      "particle_mean_speed_mean_mm_s": 6.687882268147264,
+      "particle_mean_speed_max_mm_s": 20.530470085418898,
+      "centroid_speed_mean_mm_s": 4.460776805517572,
+      "centroid_speed_max_mm_s": 13.386415760763043,
+      "angular_speed_mean_deg_s": 0.8889017695186997,
+      "angular_speed_max_deg_s": 3.4219256660249573
+    },
+    "wait_last30": {
+      "n_intervals": 30,
+      "particle_mean_speed_mean_mm_s": 1.2874371396806294,
+      "particle_mean_speed_max_mm_s": 1.4943988132556483,
+      "centroid_speed_mean_mm_s": 1.0244411422877548,
+      "centroid_speed_max_mm_s": 1.2688825930843517,
+      "angular_speed_mean_deg_s": 0.3589784988534504,
+      "angular_speed_max_deg_s": 0.5191297953354269
+    },
+    "post30_to_wait_end": {
+      "n_intervals": 100,
+      "particle_mean_speed_mean_mm_s": 1.7962359241049464,
+      "particle_mean_speed_max_mm_s": 4.945020278950452,
+      "centroid_speed_mean_mm_s": 1.2843381048269407,
+      "centroid_speed_max_mm_s": 3.270697771624125,
+      "angular_speed_mean_deg_s": 0.38147921262824197,
+      "angular_speed_max_deg_s": 1.0030351724025397
+    }
+  },
+  "timing": [
+    {
+      "observed_step": 1943,
+      "sim_time_s": 32.41666835732758,
+      "holding": true,
+      "attached": true,
+      "enabled_slots": [
+        true,
+        false,
+        false
+      ],
+      "logical_attached": true,
+      "command_holding": true,
+      "gripper_state": 2,
+      "z_min_m": 0.009876755066215992,
+      "z_max_m": 0.07232411205768585
+    },
+    {
+      "observed_step": 1944,
+      "sim_time_s": 32.43333502486348,
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": true,
+      "gripper_state": 2,
+      "z_min_m": 0.009877163916826248,
+      "z_max_m": 0.07223720103502274
+    },
+    {
+      "observed_step": 1953,
+      "sim_time_s": 32.58333503268659,
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": true,
+      "gripper_state": 2,
+      "z_min_m": 0.009873904287815094,
+      "z_max_m": 0.06999746710062027
+    },
+    {
+      "observed_step": 1954,
+      "sim_time_s": 32.60000170022249,
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "gripper_state": 0,
+      "z_min_m": 0.00987736601382494,
+      "z_max_m": 0.0700591504573822
+    }
+  ],
+  "support_z_min_m": 0.00987162720412016,
+  "note": "speeds are backward differences between consecutive state rows; particle mean speed is the mean over 441 vertices; angular speed is the 2D rigid fit between consecutive frames."
+}

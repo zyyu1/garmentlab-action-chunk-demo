@@ -1,0 +1,98 @@
+{
+  "version": "a5-rc2-d1-120",
+  "revision": "step2-4",
+  "created_utc": "2026-11-03T22:37:30Z",
+  "implemented_utc": "2026-11-03T22:50:00Z",
+  "status": "step2_step3_step4_implemented; 120-step internal wait and named events inserted; public actions/targets/commands/horizons unchanged by construction; no run",
+  "parent": "stage4-a5-rc2",
+  "parent_diagnostic": {
+    "version": "a5-rc2-drift-diag-v1",
+    "revision": "v1.1",
+    "manifest_sha256": "13c1f20a5081fdaea7cdbd25a299c3086fec0500eb9773f9fb1351b232a0c922",
+    "config_sha256": "aa5da98be1dc03f588125d99ed6e5cc0e41728ae32c8770cfe27dfd3a6c06149",
+    "clean_run": "day4-a5-rc2-drift-diag-20261104-053151-197013",
+    "complete_diagnostic": true
+  },
+  "base_candidate_sha256": "10a6cb452b9fafd5907f245b68fd02d49c7af1e12fa6cb0f755f1791a5af27a5",
+  "base_manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+  "subject": {
+    "seed": 4202,
+    "level": "perturbed",
+    "mode": "single",
+    "initial": "day4-square-initial-stripfold-20261103-062710-242560"
+  },
+  "initial": {
+    "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560",
+    "hashes": {
+      "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+      "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+    }
+  },
+  "delay": {
+    "steps": 120,
+    "dt_s": 0.016666666666666666,
+    "duration_s": 2.0,
+    "location": "inside the final OPEN, after ungrasp returns and before the original upward retreat target motion",
+    "hold": "keep the current position target and open gripper; do not reset cloth position or velocity",
+    "counted_as_public_action": false,
+    "control_stage": "internal_delay",
+    "public_actions": 12,
+    "implementation": "a5_capture_diag.hold_open_for_steps called from measure_detachment",
+    "verification": "exactly 120 physics steps; no control call, target change, cloth position write or velocity clear"
+  },
+  "retreat": {
+    "target": "original computed OPEN target",
+    "public_actions_unchanged": true
+  },
+  "events": [
+    "ungrasp_return",
+    "delay_begin",
+    "delay_end",
+    "retreat_begin",
+    "retreat_end"
+  ],
+  "event_recording": {
+    "required": [
+      "ungrasp_return",
+      "delay_begin",
+      "delay_end",
+      "retreat_begin",
+      "retreat_end"
+    ],
+    "event_output": "release_diag.json:events and release_diag_events.csv",
+    "phase_labels": {
+      "release_opening": "pre-release and opening states",
+      "released": "released snapshot row",
+      "delay": "the 120 wait state rows",
+      "retreat": "the original upward retreat state rows",
+      "retreat_done": "retreated snapshot row"
+    },
+    "per_step": "vertices, EE pose/quaternion, all joints, aperture, attachment flags in release_diag.npz",
+    "event_state": "event rows include EE, joints, aperture, attachment and cloth centroid/hash"
+  },
+  "evaluation": {
+    "retreat_complete_step": 0,
+    "capture_steps": "0..330",
+    "evaluate_steps": "210..330",
+    "centroid_limit_mm": 1.0,
+    "vertex_p95_limit_mm": 3.0,
+    "time_alignment": "compare by elapsed time after attachment release, not by absolute step"
+  },
+  "diagnostic_only": true,
+  "observation_only": false,
+  "public_actions_unchanged": true,
+  "action_targets_unchanged": true,
+  "physics_step_count_changed": true,
+  "internal_delay_steps": 120,
+  "output_prefix": "day4-a5-rc2-d1-120-",
+  "formal_stage4_success": 0,
+  "notes": [
+    "This is an independent diagnostic version copied from the validated v1.1; RC2 and the v1.1 directory are not modified.",
+    "Steps 1-4 register the version, insert the 120-step wait, preserve the 12 public actions/targets/commands/horizons, and record named events plus per-step phase labels; no simulation has been run.",
+    "The wait is an internal control stage, not a new public action; it is inside the 12th public action (release_retreat).",
+    "The retreat continues to use the originally computed OPEN target.",
+    "Adding 120 physics steps changes total physics time by design; this is not a claim that physics is unchanged.",
+    "Contact reports are robot-rigid evidence only; zero events are not evidence of no contact.",
+    "No formal Stage 4 success is claimed or implied."
+  ]
+}

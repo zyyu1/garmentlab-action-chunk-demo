@@ -2,11 +2,11 @@
 
 研究 single-step behavior cloning 与 H=4 action-chunk BC 在三档衣物初态下的折叠成功率、恢复能力和推理开销。当前工作集中在 GarmentLab / Isaac Sim 中建立可靠的 expert 和动作接口，尚未进入策略训练或正式对比实验。
 
-## 当前状态（2026-11-03）
+## 当前状态（2026-11-04）
 
-**Stage 4 暂停在 A5 RC2 开发复验收尾。** 七例证据完整。4100 的两种表示通过，4202、4302 的两种表示均因释放后漂移超限被拒绝。4201 single 为有效负对照。任务 B 的 right 保留为拟采用折向。RC2 未冻结，E 和 held-out 均未运行。[交接日报](2026-11-03-GarmentLab日报%20Stage4%20A5%20RC2复验与暂停交接.md) · [逐例审计](../thesis/day4-actionchunk-test/results/A5_RC2_AUDIT_20261103T194913Z/review.md)
+**Stage 4 暂停在 D2 释放顺序对照之后。** D1-120 的延迟退让没有降低漂移；D2-A/B 完成实际场景与接触通道核查；D2-C 预登记“附着保持期间完成夹爪张开、随后解除附件”的单变量干预；D2-D 仅运行一次 4202 single：episode `passed=True`、诊断 `complete=True`、质量 `rejected`（质心 **1.9823 mm**、P95 **4.3426 mm**，仍超 1 mm / 3 mm）。释放一步粒子速度 **17.4197 vs 17.4223 mm/s**，free 0–30 基本不变 → **释放顺序不是该例漂移的主要因素**；formal 窗口小幅下降（2.0409→1.9823 mm、4.4134→4.3426 mm）不能归因于释放冲量减少。正式 Stage 4 成功仍为 **0**；RC2 未冻结；held-out 与正式批次暂停。[D2-D 对照](day4-actionchunk-test/results/D2_D_COMPARE_20261104/review.md) · [交接日报](2026-11-04-GarmentLab日报%20Stage4%20D2释放顺序对照交接.md) · [D2-C 版本](day4-actionchunk-test/a5-rc2-d2c-release-order/README.md)
 
-## 历史进度（截至 2026-11-02）
+## 历史进度（截至 2026-11-04）
 
 | 工作项 | 状态与证据 |
 | --- | --- |
@@ -20,9 +20,10 @@
 | 表示层（single vs H=4） | 两个折叠脚本支持 `--execution single` / `arc4`，只把四个 arc 目标合成一个 H=4 chunk。L1/4100 与 L2/4200 各跑 single+arc4 配对：审计 `PAIRS_COMPARABLE`，同一对内快照**逐字节相同**、指标差全为 0 → 只证明专家轨迹在两种表示下等价，**不构成 H=4 收益证据**。 |
 | 分任务报告 | 按 L1（过折）与 L2/L3（nominal 20/20）分别汇总：冻结版 seed 级 L1 1/1、L2/L3 0/2（L2/4200、L3/4300 left，共 4 次尝试全失败），多任务平均 0.50（A n=1、B n=2 个 seed）**不是难度曲线**；失败均为释放后回弹摊平，且补充的两例与既有同条件运行逐字节相同。见 [分任务报告](day4-actionchunk-test/results/STAGE4_PER_TASK_20261102/review.md)。 |
 | 正式批次准备 | 每档 20 个 held-out seeds（L1 4110–4129、L2 4210–4229、L3 4310–4329）已登记并写入初态 plan；两个初态 runner 的 seed 断言已放宽，批次驱动与拒绝率汇总工具已就位，两份初态 manifest 已在远端无排除项核对通过。**未运行**（按 `b-right-dev-v1` 暂停），且正式成功判据阈值未冻结。见 [正式批次准备](STAGE4_FORMAL_BATCH_PLAN.md)。 |
+| D2 释放顺序对照（2026-11-04） | D2-A/B 场景/接触核查；D2-C 单变量版本；D2-D 4202 single 一次：诊断 complete、quality rejected。释放瞬态/前 0.5 s 基本不变，正式窗口 2.0409→1.9823 mm、4.4134→4.3426 mm，仍拒绝。见 [D2-D 对照](day4-actionchunk-test/results/D2_D_COMPARE_20261104/review.md)。 |
 | 正式验收与学习 | 三档正式成功轨迹、Stage 5 demonstrations、BC 训练及正式评估均未完成。正式 Stage 4 成功仍为 0。 |
 
-截至 11 月 2 日的进度以 [Stage 4 下一步](DAY4_NEXT_STEPS.md) 和 [验收记录](DAY4_ACCEPTANCE_TRACKER.md) 为准。历史日报和旧脚本用于追溯，不应作为当前运行入口。
+截至 11 月 4 日的进度以 [Stage 4 下一步](DAY4_NEXT_STEPS.md) 和 [验收记录](DAY4_ACCEPTANCE_TRACKER.md) 为准。历史日报和旧脚本用于追溯，不应作为当前运行入口。
 
 ## 历史抓取诊断与修正候选
 
@@ -99,3 +100,25 @@ L2 4200的right single/arc4由本聊天在移交前完成；L3 4300采用另一�
 补充交叉核对（2026-11-02）：把主审计未采用的 4200 arc4 尝试 `025355-106410` 与 4300 single 重复尝试 `031535-711404` 一并核对，5 个目录 77 项检查全部通过；同 seed 全部 7 次已下载尝试（4200 三例、4300 四例）的 `final.npz` 441 个顶点逐位相同（max|Δ|=0），包括并发在途的 4200 arc4 两例。该核对不新增 seed、不改任何阈值、不改变上述结论。[补充审计](../thesis/day4-actionchunk-test/results/B_RIGHT_DEV_AUDIT_SUPPLEMENT_20261102/review.md)。
 
 right 开发覆盖扩展 `b-right-dev-v2` 已登记、未运行：L2 4201–4209、L3 4301–4309 共 18 个剩余开发 seed，先登记初态哈希再跑 right single；不跑 arc4、不冻结阈值、held-out 不动。见 [扩展计划](STAGE4_B_RIGHT_DEV_V2_PLAN.md)。
+
+## 2026-11-04 D2 释放顺序对照（暂停点）
+
+D1-120 的 120 步延迟退让没有降低漂移（等待 2.0783/4.5603 mm、退让 2.4590/5.3214 mm、正式窗口 2.0409/4.4134 mm；与基线在相同 elapsed 时间点逐位相同），说明问题不在等待时长。D2-A/B 完成实际支撑、材质、释放时序和 contact-report 核查：支撑面只有 PhysX 默认材质；particle material 已绑定（friction 0.3、particleFrictionScale 0）；附件在 1944 断开而夹爪到 1954 才报告 open，释放一步速度跳至 17.42/11.04 mm/s；cloth-ground contact report 不支持，0 事件不是无接触。
+
+D2-C 因此只改释放顺序：夹爪在附件仍启用时完成 10 步张开，再解除附件；抑制原 `ungrasp` 内第二次 `open()`。120 步等待、12 个公开动作/目标/命令/horizon 和退让目标保留；总物理步数与 D1 相同。preopen 10/10 步每步检查 holding/attachment 一致并调用 `control.assert_exclusive()`；全程 evidence 检查未关闭。D2-C 的 `released` sample 与最后 preopen state 同 step/time（delta=0），首个全关 state 为 +1 步。
+
+D2-D 仅运行一次 4202 single `day4-a5-rc2-d2c-release-order-20261104-090032-412133`：退出码 0、episode `passed=True`、`DIAG_ASSESS complete=True`、`quality=rejected`、`absolute_step=2219`、等待 1955–2075、trace 331 步，与 D1 完全一致；无重试，下载证据与 ledger SHA256 一致。
+
+| 对照项 | D1 | D2-C |
+|---|---:|---:|
+| 干预前 action target / EE / anchor 最大差 | — | **0.0** |
+| release t=0 质心 / P95 / 最大差 | — | **0.0113 / 0.0293 / 0.0375 mm** |
+| 释放一步粒子平均速度 | 17.4197 mm/s | 17.4223 mm/s |
+| free 0–30 质心 / P95 | 1.9092 / 12.2286 mm | 1.9119 / 12.2044 mm |
+| free 30–120 质心 / P95 | 1.4730 / 3.2355 mm | 1.4284 / 3.1499 mm |
+| 正式窗口 210–330 质心 / P95 | 2.0409 / 4.4134 mm | 1.9823 / 4.3426 mm |
+| quality | rejected | rejected |
+
+**结论：** 正式窗口质心/P95 小幅下降 2.87%/1.60%，可以表述为“释放顺序改变降低了本例正式窗口漂移”；但释放一步速度、release transition 和 free 0–30 基本不变，**不能说是降低了释放冲量**，也不能把下降归因于释放冲量。释放顺序不是该例漂移的主要因素；仍超 1 mm / 3 mm，质量 rejected。正式 Stage 4 成功仍为 0；held-out 与正式批次暂停；恢复工作时优先核查附件约束释放能量/接触状态、支撑面材质和布料—地面接触观测，不继续微调开爪顺序，不直接提高摩擦或清零速度。
+
+详见 [D2-D 对照](day4-actionchunk-test/results/D2_D_COMPARE_20261104/review.md)、[交接日报](2026-11-04-GarmentLab日报%20Stage4%20D2释放顺序对照交接.md) 与 [D2-C 版本](day4-actionchunk-test/a5-rc2-d2c-release-order/README.md)。

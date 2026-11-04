@@ -1,0 +1,7 @@
+id,event,step,sim_time_s,source
+A,anchor / last pre-release hold state,1943,32.41666835732758,release_start_anchor
+B,attachment release / opening starts,1944,32.43333502486348,first detached state
+C,released snapshot / retreat not yet commanded,1953,32.58333503268659,released sample
+D,retreat command start,1954,32.60000170022249,command_holding false
+E,retreat reaches 1 mm upward,1955,32.61666836775839,EE z > released EE z + 1 mm
+F,retreat end / success-trace t0,2097,34.983335157856345,action_end

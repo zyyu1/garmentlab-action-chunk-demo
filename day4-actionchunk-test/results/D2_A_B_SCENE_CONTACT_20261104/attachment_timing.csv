@@ -1,0 +1,5 @@
+observed_step,sim_time_s,holding,attached,enabled_slots,logical_attached,command_holding,gripper_state,z_min_m,z_max_m
+1943,32.41666835732758,True,True,"[True, False, False]",True,True,2,0.009876755066215992,0.07232411205768585
+1944,32.43333502486348,False,False,"[False, False, False]",False,True,2,0.009877163916826248,0.07223720103502274
+1953,32.58333503268659,False,False,"[False, False, False]",False,True,2,0.009873904287815094,0.06999746710062027
+1954,32.60000170022249,False,False,"[False, False, False]",False,False,0,0.00987736601382494,0.0700591504573822

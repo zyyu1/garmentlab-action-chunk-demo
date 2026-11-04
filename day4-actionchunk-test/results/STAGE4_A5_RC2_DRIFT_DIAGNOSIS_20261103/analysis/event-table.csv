@@ -1,0 +1,25 @@
+case,id,event,evidence_observed_step,world_step_inferred,world_step,sim_time_s,source,note
+4202 single,E1,last pre-release hold frame,1942,1944,,32.400001690660915,pre_release_hold.npz; step inferred from action_begin,last of 180 hold frames
+4202 single,E2,release action begin (public OPEN command),1943,1945,,32.41666835732758,evidence timeline action_begin,
+4202 single,E3,attachment release / gripper effective open,1944,1946,,32.43333502486348,"first state with holding=false, attached=false, all enables=false",attachment release and effective open are the same state; gripper aperture is not measured
+4202 single,E4,released snapshot (pre-retreat),1953,1955,,32.58333503268659,evidence sample released,9 evidence steps after E3; the snapshots bracket the release transient
+4202 single,E5,retreat command start,1954,1956,,32.60000170022249,first state with command_holding=false,
+4202 single,E6,retreat reaches 1 mm upward,1955,1957,,32.61666836775839,first state with EE z > released EE z + 1 mm,
+4202 single,E7,retreat end / success-trace t=0,2097,,2099,34.983335157856345,evidence action_end; success_meta.absolute_step,observed-to-world offset=2; both clocks have the same sim time
+4202 single,E8,hold_3s sample (trace step 180),2277,,2279,37.98333531431854,evidence sample hold_3s; trace step 180,
+4202 single,E9,formal evaluation window start (trace step 210),2307,,2309,38.483335157856345,success_meta.absolute_step + 210,
+4202 single,E10,hold_4s sample (trace step 240),2337,,2339,38.9833353664726,evidence sample hold_4s; trace step 240,inside the formal window
+4202 single,E11,formal evaluation window end (trace step 330),2427,,2429,40.483335157856345,success_meta.absolute_step + 330,
+4202 single,E12,finger / gripper to cloth contact record,,,,,missing in RC2 evidence,no contact force/impulse trace; room_collision_audit.json covers room colliders only
+4302 single,E1,last pre-release hold frame,2359,2361,,39.35000205313166,pre_release_hold.npz; step inferred from action_begin,last of 180 hold frames
+4302 single,E2,release action begin (public OPEN command),2360,2362,,39.36666871979833,evidence timeline action_begin,
+4302 single,E3,attachment release / gripper effective open,2361,2363,,39.38333538733423,"first state with holding=false, attached=false, all enables=false",attachment release and effective open are the same state; gripper aperture is not measured
+4302 single,E4,released snapshot (pre-retreat),2370,2372,,39.53333539515734,evidence sample released,9 evidence steps after E3; the snapshots bracket the release transient
+4302 single,E5,retreat command start,2371,2373,,39.55000206269324,first state with command_holding=false,
+4302 single,E6,retreat reaches 1 mm upward,2372,2374,,39.56666873022914,first state with EE z > released EE z + 1 mm,
+4302 single,E7,retreat end / success-trace t=0,2517,,2519,41.983335522934794,evidence action_end; success_meta.absolute_step,observed-to-world offset=2; both clocks have the same sim time
+4302 single,E8,hold_3s sample (trace step 180),2697,,2699,44.98333567939699,evidence sample hold_3s; trace step 180,
+4302 single,E9,formal evaluation window start (trace step 210),2727,,2729,45.483335522934794,success_meta.absolute_step + 210,
+4302 single,E10,hold_4s sample (trace step 240),2757,,2759,45.98333573155105,evidence sample hold_4s; trace step 240,inside the formal window
+4302 single,E11,formal evaluation window end (trace step 330),2847,,2849,47.483335522934794,success_meta.absolute_step + 330,
+4302 single,E12,finger / gripper to cloth contact record,,,,,missing in RC2 evidence,no contact force/impulse trace; room_collision_audit.json covers room colliders only

@@ -1,0 +1,337 @@
+{
+  "protocol": "stage4-a5-rc2-d2c-release-order",
+  "failed": false,
+  "count": 277,
+  "dt_s": 0.016666666666666666,
+  "start_sim_time_s": 32.41666835732758,
+  "end_sim_time_s": 36.98333526216447,
+  "start_observed_step": 1943,
+  "end_observed_step": 2217,
+  "sample_labels": [
+    "released",
+    "retreated"
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "event": "ungrasp_return",
+      "phase": "ungrasp_return",
+      "sim_time_s": 32.58333503268659,
+      "observed_step": 1953,
+      "backend_step": 1953,
+      "call_id": 12,
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": true,
+      "ee_m": [
+        -0.1683365157140608,
+        -0.47106278389122935,
+        0.046766248577871906
+      ],
+      "ee_quaternion_wxyz": [
+        4.980123533363327e-05,
+        0.9985543842368036,
+        0.05375071088606602,
+        -1.7903563814850125e-05
+      ],
+      "joint_positions": [
+        -0.13881132006645203,
+        0.43109142780303955,
+        -0.17393280565738678,
+        -2.3701817989349365,
+        0.21064500510692596,
+        2.7884445190429688,
+        1.753546953201294,
+        0.03999999910593033,
+        0.03999999910593033
+      ],
+      "gripper_aperture_m": 0.07999999821186066,
+      "gripper_state": 2,
+      "cloth_centroid_m": [
+        -0.07597791676976251,
+        -0.46176013512676267,
+        0.02968706814213202
+      ],
+      "cloth_vertices_sha256": "302251a521688f14abadf4f1b9392a0c23342156b9cf5ceb0b9988ec956d348d"
+    },
+    {
+      "sequence": 2,
+      "event": "delay_begin",
+      "phase": "delay_begin",
+      "sim_time_s": 32.58333503268659,
+      "observed_step": 1953,
+      "backend_step": 1953,
+      "call_id": 12,
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.1683365157140608,
+        -0.47106278389122935,
+        0.046766248577871906
+      ],
+      "ee_quaternion_wxyz": [
+        4.980123533363327e-05,
+        0.9985543842368036,
+        0.05375071088606602,
+        -1.7903563814850125e-05
+      ],
+      "joint_positions": [
+        -0.13881132006645203,
+        0.43109142780303955,
+        -0.17393280565738678,
+        -2.3701817989349365,
+        0.21064500510692596,
+        2.7884445190429688,
+        1.753546953201294,
+        0.03999999910593033,
+        0.03999999910593033
+      ],
+      "gripper_aperture_m": 0.07999999821186066,
+      "gripper_state": 0,
+      "cloth_centroid_m": [
+        -0.07597791676976251,
+        -0.46176013512676267,
+        0.02968706814213202
+      ],
+      "cloth_vertices_sha256": "302251a521688f14abadf4f1b9392a0c23342156b9cf5ceb0b9988ec956d348d"
+    },
+    {
+      "sequence": 3,
+      "event": "delay_end",
+      "phase": "delay_end",
+      "sim_time_s": 34.58333513699472,
+      "observed_step": 2073,
+      "backend_step": 2073,
+      "call_id": 12,
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.1683365157140608,
+        -0.47106278389122935,
+        0.046766248577871906
+      ],
+      "ee_quaternion_wxyz": [
+        4.980123533363327e-05,
+        0.9985543842368036,
+        0.05375071088606602,
+        -1.7903563814850125e-05
+      ],
+      "joint_positions": [
+        -0.13881132006645203,
+        0.43109142780303955,
+        -0.17393280565738678,
+        -2.3701817989349365,
+        0.21064500510692596,
+        2.7884445190429688,
+        1.753546953201294,
+        0.03999999910593033,
+        0.03999999910593033
+      ],
+      "gripper_aperture_m": 0.07999999821186066,
+      "gripper_state": 0,
+      "cloth_centroid_m": [
+        -0.0737538547064373,
+        -0.46101270146380746,
+        0.027953791299036572
+      ],
+      "cloth_vertices_sha256": "b682d85f59f7544572657435676731d85f57c7abd04879d811e66095a15e891d"
+    },
+    {
+      "sequence": 4,
+      "event": "retreat_begin",
+      "phase": "retreat_begin",
+      "sim_time_s": 34.58333513699472,
+      "observed_step": 2073,
+      "backend_step": 2073,
+      "call_id": 12,
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.1683365157140608,
+        -0.47106278389122935,
+        0.046766248577871906
+      ],
+      "ee_quaternion_wxyz": [
+        4.980123533363327e-05,
+        0.9985543842368036,
+        0.05375071088606602,
+        -1.7903563814850125e-05
+      ],
+      "joint_positions": [
+        -0.13881132006645203,
+        0.43109142780303955,
+        -0.17393280565738678,
+        -2.3701817989349365,
+        0.21064500510692596,
+        2.7884445190429688,
+        1.753546953201294,
+        0.03999999910593033,
+        0.03999999910593033
+      ],
+      "gripper_aperture_m": 0.07999999821186066,
+      "gripper_state": 0,
+      "cloth_centroid_m": [
+        -0.0737538547064373,
+        -0.46101270146380746,
+        0.027953791299036572
+      ],
+      "cloth_vertices_sha256": "b682d85f59f7544572657435676731d85f57c7abd04879d811e66095a15e891d"
+    },
+    {
+      "sequence": 5,
+      "event": "retreat_end",
+      "phase": "retreat_end",
+      "sim_time_s": 36.98333526216447,
+      "observed_step": 2217,
+      "backend_step": 2217,
+      "call_id": 12,
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.16653003134874367,
+        -0.47161272528139536,
+        0.19278658271143526
+      ],
+      "ee_quaternion_wxyz": [
+        0.00010598849583523014,
+        0.9983954427895674,
+        0.0566262103225078,
+        2.979888496323127e-05
+      ],
+      "joint_positions": [
+        -0.05436262860894203,
+        0.07002746313810349,
+        -0.2842216491699219,
+        -2.382146120071411,
+        0.030957458540797234,
+        2.449310064315796,
+        1.8811265230178833,
+        0.03999999910593033,
+        0.03999999910593033
+      ],
+      "gripper_aperture_m": 0.07999999821186066,
+      "gripper_state": 0,
+      "cloth_centroid_m": [
+        -0.07165556812704839,
+        -0.459880324515626,
+        0.027953860778657216
+      ],
+      "cloth_vertices_sha256": "c2c448cfe8b97faaa227bc30c3219738ee15f2e5279cbefb513400319e46284e"
+    }
+  ],
+  "event_count": 5,
+  "required_events": [
+    "ungrasp_return",
+    "delay_begin",
+    "delay_end",
+    "retreat_begin",
+    "retreat_end"
+  ],
+  "events_complete": true,
+  "action_begin": {
+    "sim_time_s": 32.41666835732758,
+    "observed_step": 1943,
+    "targets": [
+      [
+        -0.1683359444141388,
+        -0.4710616171360016,
+        0.1967657506465912,
+        0.107956662774086
+      ]
+    ],
+    "commands": [
+      0
+    ],
+    "horizon": 1
+  },
+  "action_end": {
+    "sim_time_s": 36.98333526216447,
+    "observed_step": 2217,
+    "executed_steps": 1
+  },
+  "recording": {
+    "cloth_vertices": "vertices[N,441,3]",
+    "gripper_pose": "ee_m + ee_quaternion_wxyz",
+    "gripper_aperture": "gripper_aperture_m from finger joint positions",
+    "attachment": "holding/attached/enabled_slots/logical_attached/command_holding",
+    "distances": "ee_min_vertex_distance_mm; finger_min_vertex_distance_mm if available",
+    "samples": "released/retreated labels in sample_label",
+    "events": "ungrasp_return/delay_begin/delay_end/retreat_begin/retreat_end in release_diag.json and release_diag_events.csv",
+    "phases": "per-step phase labels: release_opening, released, delay, retreat, retreat_done"
+  },
+  "physics_control_actions": {
+    "mode": "passive post-step reads only",
+    "physics_dt_s": 0.016666666666666666,
+    "no_extra_world_step": true,
+    "no_control_call": true,
+    "action_targets_from_parent": true,
+    "action_begin_targets": [
+      [
+        -0.1683359444141388,
+        -0.4710616171360016,
+        0.1967657506465912,
+        0.107956662774086
+      ]
+    ],
+    "action_begin_commands": [
+      0
+    ],
+    "action_begin_horizon": 1
+  },
+  "joint_names": null,
+  "finger_joint_indices": [
+    7,
+    8
+  ],
+  "finger_link_names": [],
+  "gripper_aperture_note": "sum of the two finger joint positions; not a calibrated fingertip gap",
+  "contact_channel": "square_contact_recorder.ContactRecorder; robot rigid contacts only; may be zero; not cloth-particle certification; see contact_report.json",
+  "distance_evidence": {
+    "ee_min_vertex_distance_mm": true,
+    "finger_min_vertex_distance_mm": false,
+    "note": "geometric proxies, not a contact record or force measurement"
+  },
+  "errors": [],
+  "notes": [
+    "release_start_anchor is the last pre-release state; the first release-action step follows it",
+    "released/retreated sample rows are included by label",
+    "named events: ungrasp_return, delay_begin, delay_end, retreat_begin, retreat_end",
+    "state phase labels distinguish delay (120 rows) from retreat",
+    "per-step cloth vertices now cover the release/opening/delay/retreat interval",
+    "contact force/impulse is only whatever the robot rigid contact channel reports; absence of events is not evidence of no contact"
+  ]
+}

@@ -1,0 +1,2 @@
+4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb  /root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560/result.json
+a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106  /root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560/initial_geometry.npz

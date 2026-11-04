@@ -1,0 +1,625 @@
+{
+  "version": "a5-rc2-d1-120",
+  "created_utc": "2026-11-04T00:40:00Z",
+  "scope": "step-7 offline audit; no simulation",
+  "d1_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-a5-rc2-d1-120-20261104-071602-499516",
+  "rc2_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\A5_RC2_AUDIT_20261103T194913Z\\day4-a5-rc2-recovery-20261104-022718-388270",
+  "v11_dir": "E:\\learning\\project\\thesis\\day4-actionchunk-test\\results\\day4-a5-rc2-drift-diag-20261104-053151-197013",
+  "checks": {
+    "remote_file_count": {
+      "ok": true,
+      "detail": 97
+    },
+    "local_file_set_matches_remote": {
+      "ok": true,
+      "detail": {
+        "missing_local": [],
+        "extra_local": []
+      }
+    },
+    "all_local_sha256_match_remote": {
+      "ok": true,
+      "detail": {}
+    },
+    "remote_initial_hashes_match_config": {
+      "ok": true,
+      "detail": {
+        "remote": {
+          "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+          "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+        },
+        "config": {
+          "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+          "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+        }
+      }
+    },
+    "result_initial_dir": {
+      "ok": true,
+      "detail": null
+    },
+    "success_meta_initial_hashes": {
+      "ok": true,
+      "detail": null
+    },
+    "initial_case_identity": {
+      "ok": true,
+      "detail": {
+        "level": "perturbed",
+        "seed": 4202,
+        "translation_xy_m": [
+          0.024471162663252336,
+          0.0069321790495343915
+        ],
+        "yaw_rad": 0.1157488843229747,
+        "settle_steps": 180,
+        "status": "blocked_unvalidated_corner_lift_drop",
+        "strips": [
+          {
+            "edge": "bottom",
+            "width_m": 0.171397
+          }
+        ]
+      }
+    },
+    "action_count_12": {
+      "ok": true,
+      "detail": {
+        "d1": 12,
+        "rc2": 12
+      }
+    },
+    "action_labels_match": {
+      "ok": true,
+      "detail": null
+    },
+    "action_commands_match": {
+      "ok": true,
+      "detail": null
+    },
+    "action_horizons_match": {
+      "ok": true,
+      "detail": null
+    },
+    "action_targets_match": {
+      "ok": true,
+      "detail": {
+        "max_abs_diff_m": 0.0,
+        "shape": [
+          12,
+          4
+        ]
+      }
+    },
+    "last_action_release_retreat": {
+      "ok": true,
+      "detail": null
+    },
+    "meta_dt_1_60": {
+      "ok": true,
+      "detail": null
+    },
+    "delay_120_world_steps": {
+      "ok": true,
+      "detail": {
+        "requested_steps": 120,
+        "start_step": 1955,
+        "end_step": 2075,
+        "elapsed_steps": 120,
+        "start_sim_time_s": 32.58333503268659,
+        "end_sim_time_s": 34.58333513699472,
+        "elapsed_sim_time_s": 2.0000001043081284,
+        "ee_start_m": [
+          -0.1683365157140608,
+          -0.47106278389122935,
+          0.046766248577871906
+        ],
+        "ee_end_m": [
+          -0.1683365157140608,
+          -0.47106278389122935,
+          0.046766248577871906
+        ],
+        "ee_displacement_m": 0.0,
+        "gripper_state_open": true,
+        "attachment_enabled": false,
+        "control_calls": 0,
+        "target_changes": 0,
+        "cloth_position_reset": false,
+        "cloth_velocity_reset": false,
+        "public_action": false,
+        "scope": "internal_control_stage",
+        "public_action_label": "release_retreat",
+        "public_action_index": 12,
+        "public_action_target": [
+          -0.168335948015093,
+          -0.4710616045576297,
+          0.1967657491862911
+        ],
+        "registered_at": "a5-rc2-d1-120.json:delay.location"
+      }
+    },
+    "delay_sim_time_2s": {
+      "ok": true,
+      "detail": 2.0000001043081284
+    },
+    "delay_ee_stationary": {
+      "ok": true,
+      "detail": null
+    },
+    "delay_no_cloth_reset": {
+      "ok": true,
+      "detail": null
+    },
+    "delay_public_action_12": {
+      "ok": true,
+      "detail": null
+    },
+    "clock_offsets_consistent": {
+      "ok": true,
+      "detail": {
+        "delay_start": 1955,
+        "delay_end": 2075,
+        "retreat_end_observed": 2217,
+        "trace_start_absolute": 2219
+      }
+    },
+    "absolute_step_delta_vs_rc2": {
+      "ok": true,
+      "detail": {
+        "d1_absolute": 2219,
+        "rc2_absolute": 2099,
+        "d1_sim": 36.98333526216447,
+        "rc2_sim": 34.983335157856345
+      }
+    },
+    "delay_phase_rows_120": {
+      "ok": true,
+      "detail": 120
+    },
+    "delay_rows_detached": {
+      "ok": true,
+      "detail": {
+        "holding": 0,
+        "attached": 0,
+        "enabled_slots_any": 0
+      }
+    },
+    "required_events_exact": {
+      "ok": true,
+      "detail": [
+        "ungrasp_return",
+        "delay_begin",
+        "delay_end",
+        "retreat_begin",
+        "retreat_end"
+      ]
+    },
+    "event_steps_and_order": {
+      "ok": true,
+      "detail": {
+        "ungrasp_return": 1953,
+        "delay_begin": 1953,
+        "delay_end": 2073,
+        "retreat_begin": 2073,
+        "retreat_end": 2217
+      }
+    },
+    "events_complete": {
+      "ok": true,
+      "detail": null
+    },
+    "phase_counts": {
+      "ok": true,
+      "detail": {
+        "delay": 120,
+        "release_opening": 10,
+        "release_start_anchor": 1,
+        "released": 1,
+        "retreat": 144,
+        "retreat_done": 1
+      }
+    },
+    "success_trace_331": {
+      "ok": true,
+      "detail": 331
+    },
+    "trace_detached": {
+      "ok": true,
+      "detail": null
+    },
+    "prewait_release_rows_count": {
+      "ok": true,
+      "detail": {
+        "d1": 12,
+        "v11": 12
+      }
+    },
+    "prewait_release_arrays_identical": {
+      "ok": true,
+      "detail": {}
+    },
+    "prewait_pre_release_hold_identical": {
+      "ok": true,
+      "detail": null
+    },
+    "prewait_recovered_identical": {
+      "ok": true,
+      "detail": null
+    },
+    "prewait_cloth_constructed_identical": {
+      "ok": true,
+      "detail": null
+    },
+    "prewait_initial_hashes_match": {
+      "ok": true,
+      "detail": null
+    },
+    "prewait_pick_yaw_match": {
+      "ok": true,
+      "detail": null
+    },
+    "retreat_upward_displacement_match": {
+      "ok": true,
+      "detail": {
+        "d1": 0.14602033413356336,
+        "rc2": 0.14602046068486133
+      }
+    },
+    "postfix_complete": {
+      "ok": true,
+      "detail": null
+    },
+    "postfix_no_failed_checks": {
+      "ok": true,
+      "detail": []
+    },
+    "quality_rejected": {
+      "ok": true,
+      "detail": null
+    },
+    "stability_values": {
+      "ok": true,
+      "detail": null
+    },
+    "evidence_complete": {
+      "ok": true,
+      "detail": null
+    },
+    "video_frames_1279": {
+      "ok": true,
+      "detail": 1279
+    },
+    "episode_passed": {
+      "ok": true,
+      "detail": null
+    },
+    "contact_zero_not_no_contact": {
+      "ok": true,
+      "detail": {
+        "bodies": [
+          "/World/Franka/panda_link0",
+          "/World/Franka/panda_link1",
+          "/World/Franka/panda_link2",
+          "/World/Franka/panda_link3",
+          "/World/Franka/panda_link4",
+          "/World/Franka/panda_link5",
+          "/World/Franka/panda_link6",
+          "/World/Franka/panda_link7",
+          "/World/Franka/panda_link8",
+          "/World/Franka/panda_hand",
+          "/World/Franka/panda_leftfinger",
+          "/World/Franka/panda_rightfinger"
+        ],
+        "callback_count": 0,
+        "event_count": 0,
+        "errors": [],
+        "subscription_created": true,
+        "scope": "Robot rigid contacts only; not cloth particle contact certification",
+        "diagnosis": "configured_no_events_channel_not_independently_validated"
+      }
+    },
+    "postfix_preserves_standard_assess_status": {
+      "ok": true,
+      "detail": {
+        "state": "finished",
+        "utc": "2026-11-03T23:32:33.678514+00:00",
+        "version": "a5-rc2-d1-120",
+        "seed": 4202,
+        "level": "perturbed",
+        "mode": "single",
+        "result_dir": "/root/autodl-tmp/day4-a5-rc2-d1-120-20261104-071602-499516",
+        "sim_process_status": 0,
+        "assess_status": 1,
+        "episode_passed": true,
+        "errors": [],
+        "action_count": 12,
+        "call_horizons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_delay": {
+          "requested_steps": 120,
+          "start_step": 1955,
+          "end_step": 2075,
+          "elapsed_steps": 120,
+          "start_sim_time_s": 32.58333503268659,
+          "end_sim_time_s": 34.58333513699472,
+          "elapsed_sim_time_s": 2.0000001043081284,
+          "ee_start_m": [
+            -0.1683365157140608,
+            -0.47106278389122935,
+            0.046766248577871906
+          ],
+          "ee_end_m": [
+            -0.1683365157140608,
+            -0.47106278389122935,
+            0.046766248577871906
+          ],
+          "ee_displacement_m": 0.0,
+          "gripper_state_open": true,
+          "attachment_enabled": false,
+          "control_calls": 0,
+          "target_changes": 0,
+          "cloth_position_reset": false,
+          "cloth_velocity_reset": false,
+          "public_action": false,
+          "scope": "internal_control_stage",
+          "public_action_label": "release_retreat",
+          "public_action_index": 12,
+          "public_action_target": [
+            -0.168335948015093,
+            -0.4710616045576297,
+            0.1967657491862911
+          ],
+          "registered_at": "a5-rc2-d1-120.json:delay.location"
+        },
+        "evidence": {
+          "result.json": {
+            "present": true,
+            "bytes": 47962,
+            "sha256": "c5b8e2fb2f2b8d8caf2c41559627431aa414c24a3b9255a6023737b7e79cbd3f"
+          },
+          "success_trace.npz": {
+            "present": true,
+            "bytes": 1670556,
+            "sha256": "8a609f59bcc902e2b6d0e9c573bd5f53bf3237040939663851a13c5bfca8c29d"
+          },
+          "success_meta.json": {
+            "present": true,
+            "bytes": 1984,
+            "sha256": "97bb3c39062e1cc23e9f7abcd7330e59600027830319e5b76f8b19c37e5cfddc"
+          },
+          "final.png": {
+            "present": true,
+            "bytes": 101474,
+            "sha256": "12501b4ddab5e01fae3b29c9cb7e2104a388221f7617a2729b62854bd2b466b5"
+          },
+          "runner.log": {
+            "present": true,
+            "bytes": 34102,
+            "sha256": "52ec8155b8470b2f168e8de0704ccb29ab5198e1e70a7dff70567761a4e98928"
+          },
+          "contact_report.json": {
+            "present": true,
+            "bytes": 674,
+            "sha256": "0bf452e39a3bb8b880f5c3409835abb0e03be945f84c18af33deabb61998844d"
+          },
+          "evidence/release_diag.npz": {
+            "present": true,
+            "bytes": 1415837,
+            "sha256": "3457ee8db3c0190274a2a26ad760abcf0992ce795795b025ff0982c4a2c4dbc8"
+          },
+          "evidence/release_diag.json": {
+            "present": true,
+            "bytes": 9466,
+            "sha256": "c9be7e0a99fe943465e968d9706d252b65ab42ee8674cece43947b91d89fa1d0"
+          },
+          "evidence/release_diag_events.csv": {
+            "present": true,
+            "bytes": 1603,
+            "sha256": "756335e2eb70d4b4cae9b6b3e7d9491d7e37b283ec90635b5afd7df1442cbbca"
+          },
+          "evidence/summary.json": {
+            "present": true,
+            "bytes": 22148,
+            "sha256": "8b756d5f66ae041bcdccfeeb7a8e2a0b2fa2e8ec14fcadad45acea07c2d5461e"
+          },
+          "evidence/episode.mp4": {
+            "present": true,
+            "bytes": 944825,
+            "sha256": "4f9897f1259c43aa69a73954870e24fb7d4db5884f989e703371fd3ac663cde3"
+          },
+          "evidence/timeline.jsonl": {
+            "present": true,
+            "bytes": 4165520,
+            "sha256": "bc7169c3984f8875849638fa8398ff9f5cde90bb9a7a5be1ead981e60ab73ce0"
+          },
+          "evidence/manifest.json": {
+            "present": true,
+            "bytes": 8244,
+            "sha256": "f32b2a953f805eac6eaca0ecaba0653f683ac48781bf6024335ab361a19f40b0"
+          },
+          "diag-verdict.json": {
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        }
+      }
+    }
+  },
+  "all_ok": true,
+  "action_target_max_abs_diff_m": 0.0,
+  "prewait_bad": {},
+  "quality": {
+    "status": "rejected",
+    "success": false,
+    "checks": {
+      "definition": true,
+      "budget": true,
+      "no_runtime_error": true,
+      "held": true,
+      "released_continuously": true,
+      "geometry_entire_window": true,
+      "stable": false
+    },
+    "stability": {
+      "centroid_drift_max_m": 0.00204088167284051,
+      "vertex_drift_p95_max_m": 0.0044134143018154616,
+      "vertex_drift_max_m": 0.004837388825155637,
+      "vertex_speed_p95_max_m_s": 0.0034665720672702625,
+      "vertex_speed_max_m_s": 0.01650284881010824
+    },
+    "first_window_geometry": {
+      "metrics": {
+        "symmetric_xy_alignment_mean_m": 0.006333019160562437,
+        "particle_occupancy_iou": 0.6682750301568154,
+        "occupancy_cell_m": 0.01,
+        "occupancy_dilation_cells": 1,
+        "moving_half_crossed_fraction": 1.0,
+        "moving_material_reflected_target_mean_error_m": 0.015899478749350382,
+        "cloth_z_p95_m": 0.06814106553792953,
+        "fold_yaw_rad": 0.10795666139009312,
+        "fold_width_m": 0.2,
+        "fold_lateral_local": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "fold_line_local_x": 2.980232227667301e-09,
+        "pick_index": 230,
+        "moving_count": 210,
+        "fold_frame": "cloth-local",
+        "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality.",
+        "crossed_fraction_tolerant": 1.0,
+        "stationary_drift_mean_m": 0.014064589715797993,
+        "free_edge_overrun_m": -0.009978202435689199,
+        "free_edge_height_p90_m": 0.027034804224967957,
+        "fold_extent_m": 0.20469297075352696,
+        "tangent_extent_m": 0.41058405770787165,
+        "height_p95_m": 0.06814106553792953,
+        "height_min_m": 0.009875881485641003,
+        "height_max_m": 0.06996951997280121
+      },
+      "checks": {
+        "crossed": true,
+        "overlap": true,
+        "alignment": true,
+        "material_target": true,
+        "stationary_half": true,
+        "free_edge": true,
+        "fold_extent": true,
+        "tangent_extent": true,
+        "height": true
+      },
+      "geometry_pass": true
+    },
+    "final_geometry": {
+      "metrics": {
+        "symmetric_xy_alignment_mean_m": 0.006332718151993401,
+        "particle_occupancy_iou": 0.6908212560386473,
+        "occupancy_cell_m": 0.01,
+        "occupancy_dilation_cells": 1,
+        "moving_half_crossed_fraction": 0.9952380952380953,
+        "moving_material_reflected_target_mean_error_m": 0.018045378332587042,
+        "cloth_z_p95_m": 0.0681421309709549,
+        "fold_yaw_rad": 0.10795666139009312,
+        "fold_width_m": 0.2,
+        "fold_lateral_local": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "fold_line_local_x": 2.980232227667301e-09,
+        "pick_index": 230,
+        "moving_count": 210,
+        "fold_frame": "cloth-local",
+        "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality.",
+        "crossed_fraction_tolerant": 0.9952380952380953,
+        "stationary_drift_mean_m": 0.01615848269586371,
+        "free_edge_overrun_m": -0.009962972658024705,
+        "free_edge_height_p90_m": 0.0270359106361866,
+        "fold_extent_m": 0.20958214326445404,
+        "tangent_extent_m": 0.4125864319532633,
+        "height_p95_m": 0.0681421309709549,
+        "height_min_m": 0.0098758889362216,
+        "height_max_m": 0.06997038424015045
+      },
+      "checks": {
+        "crossed": true,
+        "overlap": true,
+        "alignment": true,
+        "material_target": true,
+        "stationary_half": true,
+        "free_edge": true,
+        "fold_extent": true,
+        "tangent_extent": true,
+        "height": true
+      },
+      "geometry_pass": true
+    },
+    "failed_geometry_frames": []
+  },
+  "events": {
+    "names": [
+      "ungrasp_return",
+      "delay_begin",
+      "delay_end",
+      "retreat_begin",
+      "retreat_end"
+    ],
+    "steps": {
+      "ungrasp_return": 1953,
+      "delay_begin": 1953,
+      "delay_end": 2073,
+      "retreat_begin": 2073,
+      "retreat_end": 2217
+    }
+  },
+  "delay": {
+    "requested_steps": 120,
+    "start_step": 1955,
+    "end_step": 2075,
+    "elapsed_steps": 120,
+    "start_sim_time_s": 32.58333503268659,
+    "end_sim_time_s": 34.58333513699472,
+    "elapsed_sim_time_s": 2.0000001043081284,
+    "ee_start_m": [
+      -0.1683365157140608,
+      -0.47106278389122935,
+      0.046766248577871906
+    ],
+    "ee_end_m": [
+      -0.1683365157140608,
+      -0.47106278389122935,
+      0.046766248577871906
+    ],
+    "ee_displacement_m": 0.0,
+    "gripper_state_open": true,
+    "attachment_enabled": false,
+    "control_calls": 0,
+    "target_changes": 0,
+    "cloth_position_reset": false,
+    "cloth_velocity_reset": false,
+    "public_action": false,
+    "scope": "internal_control_stage",
+    "public_action_label": "release_retreat",
+    "public_action_index": 12,
+    "public_action_target": [
+      -0.168335948015093,
+      -0.4710616045576297,
+      0.1967657491862911
+    ],
+    "registered_at": "a5-rc2-d1-120.json:delay.location"
+  }
+}

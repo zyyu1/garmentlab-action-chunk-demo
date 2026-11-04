@@ -1,0 +1,137 @@
+{
+  "version": "a5-rc2-d1-120",
+  "stage": "step2_step3_step4_implemented",
+  "created_utc": "2026-11-03T22:37:30Z",
+  "implemented_utc": "2026-11-03T22:50:00Z",
+  "status": "120-step internal wait and named events implemented; public action identity unchanged by construction; no run",
+  "scope": {
+    "seed": 4202,
+    "level": "perturbed",
+    "mode": "single",
+    "split": "dev",
+    "fold_edge": "right"
+  },
+  "parent": "stage4-a5-rc2",
+  "parent_diagnostic": {
+    "version": "a5-rc2-drift-diag-v1",
+    "revision": "v1.1",
+    "manifest_sha256": "13c1f20a5081fdaea7cdbd25a299c3086fec0500eb9773f9fb1351b232a0c922",
+    "config_sha256": "aa5da98be1dc03f588125d99ed6e5cc0e41728ae32c8770cfe27dfd3a6c06149",
+    "clean_run": "day4-a5-rc2-drift-diag-20261104-053151-197013",
+    "complete_diagnostic": true,
+    "source_sha256": {
+      "release_diag.py": "dbb7801c82d685cb572e2ada4d4b55d588c693338e1df66f93ab5607c3840218",
+      "a5_capture_diag.py": "3a4ce720fc7adca10ba6f0b2064c197f97e53ac0208de14c30e820b3abad86b1",
+      "a5_recovery_diag.py": "125111b276e9e9199eacffb5d132518a02e8eab30614366e05691bde698c9e38",
+      "a5_diag_assess.py": "fcdc3383b9716c24b3d8e4e7b90837f6b1e84c6fd6e7e5fec5e51e422a498771"
+    }
+  },
+  "base": {
+    "candidate_sha256": "10a6cb452b9fafd5907f245b68fd02d49c7af1e12fa6cb0f755f1791a5af27a5",
+    "manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+    "manifest_entries": 60
+  },
+  "initial": {
+    "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560",
+    "dir_name": "day4-square-initial-stripfold-20261103-062710-242560",
+    "hashes": {
+      "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+      "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+    }
+  },
+  "new_identity": {
+    "config_sha256": "a6884eab8ae4bf6d703b0321415cfc2cd501f878472068109addba564ba4d471",
+    "manifest_sha256": "cd1d7f83d065974e12191486eddbf722edd4a1b7392ec78543966483434b25a6",
+    "manifest_entries": 66,
+    "source_sha256": {
+      "release_diag.py": "c7c43e710b282fb47c732f65bcb0f4f86c3ace079f289c8255f18dad79af9ed9",
+      "a5_capture_diag.py": "3e9d2caf17d155f5bedb0a735f1d89afcd634c7891e84fbd502da456ca9df722",
+      "a5_recovery_diag.py": "47b16d9ded7c997eaa2434419f30f08153221aad236fac7e0e246aee7de47249",
+      "a5_diag_assess.py": "59173c7ee449414f6dbdb403e91aa1e93c67600fd68fb8834c5a7b77588405bc",
+      "run-a5-rc2-d1-120.sh": "bb30e814c13cfec9b7ab763260827b8ca5b2c11fa5853a2e1cdb84db120aa817"
+    },
+    "test_sha256": {
+      "test_release_diag.py": "bc2502fc73182a1d6355e4e73ec2e5c2e470c1a8400eb96c812e811c2fb65538",
+      "test_d1_120_delay.py": "1e30c7c7d3cb517cb312b617345f5906bef19b1931acd9734106d349bc9192c7"
+    }
+  },
+  "delay_plan": {
+    "steps": 120,
+    "dt_s": 0.016666666666666666,
+    "duration_s": 2.0,
+    "insertion": "inside the final OPEN, after ungrasp returns and before the original upward retreat target motion",
+    "implementation": "a5_capture_diag.hold_open_for_steps called from measure_detachment",
+    "hold": "current position target and open gripper; no cloth position or velocity reset",
+    "public_actions": 12,
+    "public_actions_unchanged": true,
+    "action_targets_unchanged": true,
+    "internal_delay_counted_as_public_action": false,
+    "retreat_target": "original computed OPEN target",
+    "public_action_index": 12,
+    "public_action_label": "release_retreat"
+  },
+  "event_recording": {
+    "required": [
+      "ungrasp_return",
+      "delay_begin",
+      "delay_end",
+      "retreat_begin",
+      "retreat_end"
+    ],
+    "event_json": "evidence/release_diag.json:events",
+    "event_csv": "evidence/release_diag_events.csv",
+    "phase_labels": [
+      "release_opening",
+      "released",
+      "delay",
+      "retreat",
+      "retreat_done"
+    ],
+    "per_step_arrays": "vertices, EE pose/quaternion, all joints, aperture, attachment flags",
+    "event_state": "EE, joints, aperture, attachment, cloth centroid and cloth vertices SHA256"
+  },
+  "evaluation": {
+    "retreat_complete_step": 0,
+    "capture_steps": "0..330",
+    "evaluate_steps": "210..330",
+    "centroid_limit_mm": 1.0,
+    "vertex_p95_limit_mm": 3.0,
+    "time_alignment": "elapsed time after attachment release, not absolute step"
+  },
+  "verification": {
+    "manifest_checked": true,
+    "manifest_bad": [],
+    "base_manifest_sha256_checked": true,
+    "py_compile": true,
+    "bash_syntax": true,
+    "offline_fixture_release": "1/1 passed, including named events and event CSV",
+    "offline_fixture_delay": "5/5 passed",
+    "static_audit": "static-audit.json",
+    "public_action_source_unchanged": "a5_recovery_diag.py diff vs v1.1 limited to version strings and diagnostic metadata; no action target/command/horizon edits",
+    "delay_behavior": "exactly 120 world.step calls; no control call; attachment stays disabled; gripper stays open; no cloth position/velocity reset",
+    "events": "all five named events emitted in order; delay phase has 120 per-step rows; retreat phase has its own rows"
+  },
+  "run_status": "completed_postfix_assessed",
+  "formal_stage4_success": 0,
+  "notes": [
+    "RC2 and the v1.1 diagnostic directory are retained without modification.",
+    "Steps 2-4 insert the 120-step wait, preserve the 12 public actions/targets/commands/horizons, and record named events plus phase labels.",
+    "Adding 120 physics steps will change total physics time by design; public action identity is unchanged.",
+    "The wait is inside the 12th public action (release_retreat) and is registered as an internal control stage.",
+    "Steps 5-7 (preflight, single run, download/audit) have not been executed."
+  ],
+  "run": {
+    "result_dir": "day4-a5-rc2-d1-120-20261104-071602-499516",
+    "episode_passed": true,
+    "sim_process_status": 0,
+    "standard_assess_status": 1,
+    "standard_assess_error": "ValueError: operands could not be broadcast together with shapes (3,) (4,)",
+    "postfix_verdict": "diag-verdict-postfix.json",
+    "postfix_complete": true,
+    "quality": "rejected",
+    "centroid_drift_max_m": 0.00204088167284051,
+    "vertex_drift_p95_max_m": 0.0044134143018154616,
+    "no_retry": true,
+    "note": "One valid episode; the standard assessor crashed after the episode while comparing a 3-D delay target with a 4-D action target. Postfix audit compares XYZ; executed app/manifest unchanged."
+  }
+}
