@@ -1,0 +1,168 @@
+{
+  "checked_utc": "2026-11-04T02:53:22.348805+00:00",
+  "result_dir": "results\\PFS1_RUN_4202_20261104\\day4-a5-rc2-pfs1-20261104-102101-983000",
+  "remote_run_id": "day4-a5-rc2-pfs1-20261104-102101-983000",
+  "ledger_file_sha256": "02cecbe8e0fc434e912e700f91e57b5e03fe4593d9c43238446b81c80448db33",
+  "ledger_state": "finished",
+  "ledger_manifest_sha256": "bad4b59a0baecd08bd814bc98cfc28e7a0197fb9fed2effd21282ef40563c51b",
+  "ledger_config_sha256": "2d72a40565b3f63269fff861231255a45318618ed969bc7cf132bd041c34d32c",
+  "runner_exit": 0,
+  "entry_assess_exit": 0,
+  "quality_status": "accepted",
+  "episode_passed": true,
+  "evidence_complete": true,
+  "observation_complete": true,
+  "ledger_evidence_entries": 16,
+  "ledger_evidence_matched": 15,
+  "ledger_evidence_missing": [
+    "contact_report.json"
+  ],
+  "ledger_evidence_note": "contact_report.json is absent and was recorded by the runner as present=false; it is not required by the pfs1 postcheck.",
+  "ledger_evidence": [
+    {
+      "path": "result.json",
+      "expected": "e796febe88241f2684a5d55ed578766d70bfb53cf34670165a50dacbce1b7528",
+      "present": true,
+      "actual": "e796febe88241f2684a5d55ed578766d70bfb53cf34670165a50dacbce1b7528",
+      "match": true
+    },
+    {
+      "path": "success_trace.npz",
+      "expected": "3df1303b785448166cbb509d7ca1ab38b62eaad4c98cb32b52a267c1ab1b6c37",
+      "present": true,
+      "actual": "3df1303b785448166cbb509d7ca1ab38b62eaad4c98cb32b52a267c1ab1b6c37",
+      "match": true
+    },
+    {
+      "path": "success_meta.json",
+      "expected": "fe7e6da738a9b0b729a2e3e785fd2b19bb2d6d4f0888b770de1ffb7da3e1be32",
+      "present": true,
+      "actual": "fe7e6da738a9b0b729a2e3e785fd2b19bb2d6d4f0888b770de1ffb7da3e1be32",
+      "match": true
+    },
+    {
+      "path": "final.png",
+      "expected": "16d5beff372bca1da99cd3371642a872580886c62177857d1b769dc81138539a",
+      "present": true,
+      "actual": "16d5beff372bca1da99cd3371642a872580886c62177857d1b769dc81138539a",
+      "match": true
+    },
+    {
+      "path": "runner.log",
+      "expected": "b92a4cd79edcd3e25d62b6e419613b4356c92810fec4319f68be0a619747e8d4",
+      "present": true,
+      "actual": "b92a4cd79edcd3e25d62b6e419613b4356c92810fec4319f68be0a619747e8d4",
+      "match": true
+    },
+    {
+      "path": "contact_report.json",
+      "expected": null,
+      "present": false,
+      "expected_present": false,
+      "match": false
+    },
+    {
+      "path": "pre_release_hold.npz",
+      "expected": "42c82f4ed7013581879c01b4a1a55c835b53e534da1875057a6c9c98e63b3b0a",
+      "present": true,
+      "actual": "42c82f4ed7013581879c01b4a1a55c835b53e534da1875057a6c9c98e63b3b0a",
+      "match": true
+    },
+    {
+      "path": "pfs1_stage_index.json",
+      "expected": "7deb8f071d047f6f6da84dcb423adf96aba754265b11faa46da587bf9b4a9a44",
+      "present": true,
+      "actual": "7deb8f071d047f6f6da84dcb423adf96aba754265b11faa46da587bf9b4a9a44",
+      "match": true
+    },
+    {
+      "path": "pfs1_release_steps.npz",
+      "expected": "83085e2ca4ef8273b9964dad6def169c5f6570539c05978ea7a957b061a71b3a",
+      "present": true,
+      "actual": "83085e2ca4ef8273b9964dad6def169c5f6570539c05978ea7a957b061a71b3a",
+      "match": true
+    },
+    {
+      "path": "pfs1_release_steps.json",
+      "expected": "e3859c8ca50746859ac46e1f25914576838bddf23819c4439b675fde3d39451b",
+      "present": true,
+      "actual": "e3859c8ca50746859ac46e1f25914576838bddf23819c4439b675fde3d39451b",
+      "match": true
+    },
+    {
+      "path": "pfs1_first_0_5s.npz",
+      "expected": "ebb83394f38cd28be1f67561858d09593bf66b446c5fab46916bdf16c97946af",
+      "present": true,
+      "actual": "ebb83394f38cd28be1f67561858d09593bf66b446c5fab46916bdf16c97946af",
+      "match": true
+    },
+    {
+      "path": "pfs1_formal_210_330.npz",
+      "expected": "3bd02f90ae0049979b6bbb72cd78d5a5146ab374879e1bba9d3dcd193f3c7b64",
+      "present": true,
+      "actual": "3bd02f90ae0049979b6bbb72cd78d5a5146ab374879e1bba9d3dcd193f3c7b64",
+      "match": true
+    },
+    {
+      "path": "pfs1_release_clock.json",
+      "expected": "13859e2405eaa43e12ec56b0f0ee343cb853e5daed2142909e2b5fa796104e48",
+      "present": true,
+      "actual": "13859e2405eaa43e12ec56b0f0ee343cb853e5daed2142909e2b5fa796104e48",
+      "match": true
+    },
+    {
+      "path": "evidence/summary.json",
+      "expected": "32bcb960d881efd6016aeaa55e4ade11dab8ed9490f8480ff4e285c509117c93",
+      "present": true,
+      "actual": "32bcb960d881efd6016aeaa55e4ade11dab8ed9490f8480ff4e285c509117c93",
+      "match": true
+    },
+    {
+      "path": "evidence/timeline.jsonl",
+      "expected": "c265e43dd7f5379e123d5f0bccf94006c00ab65aec51b4c3bec0c3e525c8271a",
+      "present": true,
+      "actual": "c265e43dd7f5379e123d5f0bccf94006c00ab65aec51b4c3bec0c3e525c8271a",
+      "match": true
+    },
+    {
+      "path": "evidence/manifest.json",
+      "expected": "581fa2feeff24a068316b2c18ef2a5173d55d835dfd27b1d0f22eebc56b433d4",
+      "present": true,
+      "actual": "581fa2feeff24a068316b2c18ef2a5173d55d835dfd27b1d0f22eebc56b433d4",
+      "match": true
+    }
+  ],
+  "evidence_manifest_entries": 73,
+  "evidence_manifest_mismatches": [],
+  "selected_source_identity": {
+    "a5_recovery.py": {
+      "runtime_sha256": "632a7e3f49d918f876c96b1818bfcb85b620f5564854047479983c47470f4b53",
+      "candidate_sha256": "632a7e3f49d918f876c96b1818bfcb85b620f5564854047479983c47470f4b53",
+      "match": true
+    },
+    "a5_capture.py": {
+      "runtime_sha256": "c67ea7bd8486892c56bacbd9bcb5e84f99d8f8c38c9a4d4625eb7720c8ec0e5a",
+      "candidate_sha256": "c67ea7bd8486892c56bacbd9bcb5e84f99d8f8c38c9a4d4625eb7720c8ec0e5a",
+      "match": true
+    },
+    "pfs1_observation.py": {
+      "runtime_sha256": "9482847357eade07b27799134379fdf611b5e9db3dbd5fa3dea8df0acb40ed04",
+      "candidate_sha256": "9482847357eade07b27799134379fdf611b5e9db3dbd5fa3dea8df0acb40ed04",
+      "match": true
+    },
+    "a5-rc2-pfs1.json": {
+      "runtime_sha256": "2d72a40565b3f63269fff861231255a45318618ed969bc7cf132bd041c34d32c",
+      "candidate_sha256": "2d72a40565b3f63269fff861231255a45318618ed969bc7cf132bd041c34d32c",
+      "match": true
+    },
+    "run-a5-rc2-pfs1.sh": {
+      "runtime_sha256": "3f9e38e3dde535d754ab01f3319d1914872bd669d1ebf3d62e6cef6c625dfa80",
+      "candidate_sha256": "3f9e38e3dde535d754ab01f3319d1914872bd669d1ebf3d62e6cef6c625dfa80",
+      "match": true
+    }
+  },
+  "candidate_manifest_entries": 63,
+  "candidate_manifest_bad": [],
+  "material_runtime_readback_present": false,
+  "invalid_attempt_retained": "results/PFS1_INVALID_OBS_ATTEMPT_20261104"
+}

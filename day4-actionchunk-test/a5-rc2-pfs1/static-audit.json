@@ -1,0 +1,51 @@
+{
+  "version": "a5-rc2-pfs1",
+  "audit": "static comparison against RC2 parent",
+  "checks": {
+    "parent_manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+    "candidate_manifest_entries": 63,
+    "deployment_manifest_entries": 63,
+    "candidate_manifest_all_match": true,
+    "deployment_manifest_all_match": true,
+    "parent_base_58_unchanged": true,
+    "changed_base_files": [
+      "a5_recovery.py",
+      "a5_capture.py"
+    ],
+    "new_files": [
+      "pfs1_observation.py",
+      "a5-rc2-pfs1.json",
+      "run-a5-rc2-pfs1.sh"
+    ],
+    "action_and_horizon_lines_identical": true,
+    "action_and_horizon_line_count": 20,
+    "start_ee_expression_identical": true,
+    "retreat_target_expression_identical": true,
+    "release_call_identical": true,
+    "particle_scale_old_0_new_1": true,
+    "no_d1_wait_markers": true,
+    "no_d2c_order_markers": true,
+    "l1_unchanged": true,
+    "candidate_json_unchanged": true,
+    "evaluator_unchanged": true,
+    "initial_hashes_unchanged": true,
+    "thresholds_1_3": true,
+    "observation_stages_present": true,
+    "runner_scope_4202_single": true,
+    "runner_one_shot": true,
+    "runner_incomplete_attempt_guard": true,
+    "observation_velocity_api": true,
+    "observation_stage_files": true
+  },
+  "method": [
+    "Compared the 60-entry RC2 parent manifest with the candidate app; the 58 non-diagnostic base files are unchanged.",
+    "Compared action/horizon lines and the start_ee/retreat-target/release(target) expressions between RC2 and the candidate.",
+    "Verified the only active material change is particleFrictionScale 1.0 in a5_recovery.py; a5_l1.py remains RC2 and is not run.",
+    "Verified no D1-120 wait, D2-C preopen or release-order markers in the candidate code.",
+    "Verified the candidate manifest/deployment manifest, initial hashes, evaluator identity and thresholds.",
+    "Verified observation stages initial_loaded/after_recovery/pre_release/release_boundary plus first-0.5s/formal files are present in source.",
+    "Verified the runner accepts only 4202 single and has a completed marker plus explicit rerun guard.",
+    "Verified the runner blocks an unfinished attempt for the current manifest and records the per-step and stage observation files."
+  ],
+  "note": "This is a static audit; runtime action arrays, observation files and evidence are compared after the one-shot run."
+}

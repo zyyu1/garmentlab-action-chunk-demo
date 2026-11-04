@@ -1,0 +1,560 @@
+{
+  "scope": "a5-rc2-pfs1 vs RC2 original 4202 single; offline only",
+  "actions": {
+    "rc2_actions": 12,
+    "pfs1_actions": 12,
+    "labels_identical": true,
+    "commands_identical": true,
+    "targets_identical": false,
+    "target_max_abs_diff": 0.001998570283923251,
+    "ee_max_abs_diff_m": 0.0020755643393590706,
+    "rc2_horizons": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "pfs1_horizons": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "rc2_labels": [
+      "rec_approach",
+      "rec_pick",
+      "rec_lift",
+      "rec_spread",
+      "rec_release",
+      "fold_approach",
+      "fold_close",
+      "fold_arc45",
+      "fold_arc90",
+      "fold_arc135",
+      "fold_place",
+      "release_retreat"
+    ],
+    "pfs1_labels": [
+      "rec_approach",
+      "rec_pick",
+      "rec_lift",
+      "rec_spread",
+      "rec_release",
+      "fold_approach",
+      "fold_close",
+      "fold_arc45",
+      "fold_arc90",
+      "fold_arc135",
+      "fold_place",
+      "release_retreat"
+    ]
+  },
+  "recovery_state": {
+    "centroid_mm": 1.9819100375888934,
+    "p95_mm": 1.9942283904746216,
+    "max_mm": 1.9965784695777185,
+    "rotation_deg": -0.003925428272463465,
+    "rigid_rms_mm": 0.000865120352995151,
+    "z_min_m": 0.009899960830807686,
+    "z_max_m": 0.00990002229809761
+  },
+  "pre_release_state": {
+    "centroid_mm": 3.6128077498679354,
+    "p95_mm": 11.530530846166968,
+    "max_mm": 22.933955329485332,
+    "rotation_deg": 0.001547257608627685,
+    "rigid_rms_mm": 3.363127964023472,
+    "z_min_m": 0.009867868386209011,
+    "z_max_m": 0.06939827650785446
+  },
+  "pre_release_velocity": {
+    "rc2_finite_diff": {
+      "n_intervals": 1,
+      "particle_mean_speed_mean_mm_s": 0.26167804375290965,
+      "particle_mean_speed_max_mm_s": 0.26167804375290965,
+      "centroid_speed_mean_mm_s": 0.04019151558168247,
+      "centroid_speed_max_mm_s": 0.04019151558168247,
+      "angular_speed_mean_deg_s": 0.00023472007670230567,
+      "angular_speed_max_deg_s": 0.00023472007670230567
+    },
+    "pfs1_finite_diff": {
+      "n_intervals": 1,
+      "particle_mean_speed_mean_mm_s": 1.9768521934747767,
+      "particle_mean_speed_max_mm_s": 1.9768521934747767,
+      "centroid_speed_mean_mm_s": 1.170281767845158,
+      "centroid_speed_max_mm_s": 1.170281767845158,
+      "angular_speed_mean_deg_s": 0.38908929886917987,
+      "angular_speed_max_deg_s": 0.38908929886917987
+    },
+    "pfs1_actual_particle_mean_mm_s": 32.98041305583126,
+    "pfs1_actual_centroid_speed_mm_s": 25.54128254121803
+  },
+  "release_clock": {
+    "t0_definition": "pre-release last-attached state; first detached physics step is the boundary sample; no zero-step post-disable sample in the RC2 original flow",
+    "pre_release": {
+      "label": "pre_release",
+      "file": "pfs1_stages/pre_release.npz",
+      "sha256": "ca123a2faa1e76d55add9cdadfe8e2d58207c5d6a254f6c0724ffb4c0bc469c9",
+      "sim_time_s": 32.45000169239938,
+      "absolute_step": 1947,
+      "velocity_present": true,
+      "velocity_error": null,
+      "ee_m": [
+        -0.16838649054730379,
+        -0.46906303427370644,
+        0.04675056599679581
+      ],
+      "gripper_state": 2,
+      "gripper_aperture_m": 1.1401983357473e-08,
+      "holding": true,
+      "enabled_slots": [
+        true,
+        false,
+        false
+      ],
+      "logical_attached": true,
+      "command_holding": true
+    },
+    "release_boundary": {
+      "label": "release_step_000",
+      "sim_time_s": 32.466668359935284,
+      "absolute_step": 1948,
+      "holding": false,
+      "attachment_enabled_any": false
+    },
+    "released_sample": {
+      "kind": "sample",
+      "utc": "2026-11-04T02:35:01.337426+00:00",
+      "monotonic_ns": 21859407125852917,
+      "sim_time_s": 32.61666836775839,
+      "observed_step": 1955,
+      "call_id": 12,
+      "label": "released",
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.16838710733395726,
+        -0.4690641789859815,
+        0.046751038212245015
+      ],
+      "backend_step": 1955
+    },
+    "sampling_error_steps": 1,
+    "definition_note": "The actual attachment disable is between the pre-release state and the first detached step; report the step/time interval, not an exact instant."
+  },
+  "release_boundary_state": {
+    "step": 1948,
+    "time_s": 32.466668359935284,
+    "holding": false,
+    "attached": false,
+    "z_min_m": 0.009867924265563488
+  },
+  "released_state": {
+    "centroid_mm": 2.838025330981413,
+    "p95_mm": 7.396909405397445,
+    "max_mm": 9.003075675925887,
+    "rotation_deg": 0.439976155218164,
+    "rigid_rms_mm": 2.184066280745582,
+    "z_min_m": 0.009872863069176674,
+    "z_max_m": 0.06958462297916412
+  },
+  "retreated_state": {
+    "centroid_mm": 0.6298476741819707,
+    "p95_mm": 9.383793166816146,
+    "max_mm": 11.58945067854212,
+    "rotation_deg": 1.634715826912241,
+    "rigid_rms_mm": 2.54736233288637,
+    "z_min_m": 0.009877634234726429,
+    "z_max_m": 0.07014031708240509
+  },
+  "pfs1_first_0_5s": {
+    "n_frames": 30,
+    "particle_speed_mean_mm_s": 35.61028587005928,
+    "particle_speed_p95_mm_s": 92.13637565865548,
+    "particle_speed_max_mm_s": 477.20560427514016,
+    "centroid_speed_mean_mm_s": 25.171986742876832,
+    "centroid_speed_max_mm_s": 33.7371976413363,
+    "angular_speed_mean_deg_s": 2.327674239360787,
+    "angular_speed_max_deg_s": 5.600466958581533,
+    "first_step": 1948,
+    "last_step": 1977
+  },
+  "pfs1_bins": [
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 35.61028587005928,
+      "particle_speed_p95_mm_s": 92.13637565865548,
+      "particle_speed_max_mm_s": 477.20560427514016,
+      "centroid_speed_mean_mm_s": 25.171986742876832,
+      "centroid_speed_max_mm_s": 33.7371976413363,
+      "angular_speed_mean_deg_s": 2.327674239360787,
+      "angular_speed_max_deg_s": 5.600466958581533,
+      "bin_start_s": 0.0,
+      "bin_end_s": 0.5,
+      "z_min_mm": 9.86756943166256,
+      "below_offset_mm": 0.1324305683374407
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.58822960338524,
+      "particle_speed_p95_mm_s": 78.6242090643041,
+      "particle_speed_max_mm_s": 109.15629352642094,
+      "centroid_speed_mean_mm_s": 22.81195088059517,
+      "centroid_speed_max_mm_s": 23.56583448268155,
+      "angular_speed_mean_deg_s": 0.30358571661888406,
+      "angular_speed_max_deg_s": 0.7397384503157645,
+      "bin_start_s": 0.5,
+      "bin_end_s": 1.0,
+      "z_min_mm": 9.87891387194395,
+      "below_offset_mm": 0.12108612805604956
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.43650154725515,
+      "particle_speed_p95_mm_s": 77.67255572410657,
+      "particle_speed_max_mm_s": 98.34020926663578,
+      "centroid_speed_mean_mm_s": 22.512635926447565,
+      "centroid_speed_max_mm_s": 23.18935373117329,
+      "angular_speed_mean_deg_s": 0.13480306815699353,
+      "angular_speed_max_deg_s": 0.32976011874947575,
+      "bin_start_s": 1.0,
+      "bin_end_s": 1.5,
+      "z_min_mm": 9.877339005470276,
+      "below_offset_mm": 0.12266099452972433
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.620884881570717,
+      "particle_speed_p95_mm_s": 77.47373513007062,
+      "particle_speed_max_mm_s": 92.73626537651904,
+      "centroid_speed_mean_mm_s": 22.6058882606065,
+      "centroid_speed_max_mm_s": 23.18809677057434,
+      "angular_speed_mean_deg_s": 0.09644305662155939,
+      "angular_speed_max_deg_s": 0.22420402116762725,
+      "bin_start_s": 1.5,
+      "bin_end_s": 2.0,
+      "z_min_mm": 9.877442382276058,
+      "below_offset_mm": 0.12255761772394201
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.836366763931473,
+      "particle_speed_p95_mm_s": 77.75636489399535,
+      "particle_speed_max_mm_s": 92.22147816083083,
+      "centroid_speed_mean_mm_s": 22.724326346960613,
+      "centroid_speed_max_mm_s": 23.489304331548098,
+      "angular_speed_mean_deg_s": 0.09483312099221808,
+      "angular_speed_max_deg_s": 0.2925029774453525,
+      "bin_start_s": 2.0,
+      "bin_end_s": 2.5,
+      "z_min_mm": 9.877186268568039,
+      "below_offset_mm": 0.12281373143196127
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.748449414185192,
+      "particle_speed_p95_mm_s": 77.66809054181006,
+      "particle_speed_max_mm_s": 94.24154318036861,
+      "centroid_speed_mean_mm_s": 22.72212513311607,
+      "centroid_speed_max_mm_s": 23.637809042419732,
+      "angular_speed_mean_deg_s": 0.11692365194129208,
+      "angular_speed_max_deg_s": 0.38391271268608407,
+      "bin_start_s": 2.5,
+      "bin_end_s": 3.0,
+      "z_min_mm": 9.876983240246773,
+      "below_offset_mm": 0.12301675975322744
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.79909432670493,
+      "particle_speed_p95_mm_s": 77.08803873427478,
+      "particle_speed_max_mm_s": 94.37524122471962,
+      "centroid_speed_mean_mm_s": 22.62167095456625,
+      "centroid_speed_max_mm_s": 23.26219638877956,
+      "angular_speed_mean_deg_s": 0.07230438267508947,
+      "angular_speed_max_deg_s": 0.22924568541386078,
+      "bin_start_s": 3.0,
+      "bin_end_s": 3.5,
+      "z_min_mm": 9.876839816570282,
+      "below_offset_mm": 0.12316018342971823
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.76938825508748,
+      "particle_speed_p95_mm_s": 77.23428089283252,
+      "particle_speed_max_mm_s": 92.56309320777207,
+      "centroid_speed_mean_mm_s": 22.62160620036037,
+      "centroid_speed_max_mm_s": 22.989432863087202,
+      "angular_speed_mean_deg_s": 0.13045218542479387,
+      "angular_speed_max_deg_s": 0.28186734766953325,
+      "bin_start_s": 3.5,
+      "bin_end_s": 4.0,
+      "z_min_mm": 9.87747311592102,
+      "below_offset_mm": 0.1225268840789797
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.77347265113665,
+      "particle_speed_p95_mm_s": 77.43968717331937,
+      "particle_speed_max_mm_s": 92.93048906895783,
+      "centroid_speed_mean_mm_s": 22.65795609733735,
+      "centroid_speed_max_mm_s": 23.198315355203945,
+      "angular_speed_mean_deg_s": 0.09715088415857683,
+      "angular_speed_max_deg_s": 0.32312959095016447,
+      "bin_start_s": 4.0,
+      "bin_end_s": 4.5,
+      "z_min_mm": 9.877296164631844,
+      "below_offset_mm": 0.12270383536815664
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.73894853329476,
+      "particle_speed_p95_mm_s": 77.23079036272266,
+      "particle_speed_max_mm_s": 95.24808571136828,
+      "centroid_speed_mean_mm_s": 22.63958795670692,
+      "centroid_speed_max_mm_s": 23.23357222739077,
+      "angular_speed_mean_deg_s": 0.11468879715819899,
+      "angular_speed_max_deg_s": 0.34016782307310905,
+      "bin_start_s": 4.5,
+      "bin_end_s": 5.0,
+      "z_min_mm": 9.877048432826996,
+      "below_offset_mm": 0.12295156717300436
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.743412297140694,
+      "particle_speed_p95_mm_s": 77.2666419612647,
+      "particle_speed_max_mm_s": 93.01309399323763,
+      "centroid_speed_mean_mm_s": 22.660612291954873,
+      "centroid_speed_max_mm_s": 23.235047118805507,
+      "angular_speed_mean_deg_s": 0.11611570320985462,
+      "angular_speed_max_deg_s": 0.2958083258878566,
+      "bin_start_s": 5.0,
+      "bin_end_s": 5.5,
+      "z_min_mm": 9.877290576696396,
+      "below_offset_mm": 0.12270942330360433
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.834595521848325,
+      "particle_speed_p95_mm_s": 77.37006909992739,
+      "particle_speed_max_mm_s": 94.94104783085946,
+      "centroid_speed_mean_mm_s": 22.708987802636763,
+      "centroid_speed_max_mm_s": 23.204366619021478,
+      "angular_speed_mean_deg_s": 0.08975174574064165,
+      "angular_speed_max_deg_s": 0.2717789279557147,
+      "bin_start_s": 5.5,
+      "bin_end_s": 6.0,
+      "z_min_mm": 9.877031669020653,
+      "below_offset_mm": 0.12296833097934744
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.770667011167756,
+      "particle_speed_p95_mm_s": 77.20113705031085,
+      "particle_speed_max_mm_s": 93.38344766029577,
+      "centroid_speed_mean_mm_s": 22.64890060973674,
+      "centroid_speed_max_mm_s": 23.314148219988553,
+      "angular_speed_mean_deg_s": 0.10173858465264222,
+      "angular_speed_max_deg_s": 0.2758680490241528,
+      "bin_start_s": 6.0,
+      "bin_end_s": 6.5,
+      "z_min_mm": 9.877358563244343,
+      "below_offset_mm": 0.1226414367556574
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.709506544854385,
+      "particle_speed_p95_mm_s": 77.21376141752087,
+      "particle_speed_max_mm_s": 93.6454061756526,
+      "centroid_speed_mean_mm_s": 22.65622063774372,
+      "centroid_speed_max_mm_s": 23.26694550306878,
+      "angular_speed_mean_deg_s": 0.10884641495910392,
+      "angular_speed_max_deg_s": 0.3332997430592912,
+      "bin_start_s": 6.5,
+      "bin_end_s": 7.0,
+      "z_min_mm": 9.877159260213375,
+      "below_offset_mm": 0.12284073978662512
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.802413069785683,
+      "particle_speed_p95_mm_s": 77.72864506494398,
+      "particle_speed_max_mm_s": 94.72079810851645,
+      "centroid_speed_mean_mm_s": 22.765007734316804,
+      "centroid_speed_max_mm_s": 23.526793376062844,
+      "angular_speed_mean_deg_s": 0.09425269217745383,
+      "angular_speed_max_deg_s": 0.32817367417290594,
+      "bin_start_s": 7.0,
+      "bin_end_s": 7.5,
+      "z_min_mm": 9.877043776214123,
+      "below_offset_mm": 0.12295622378587744
+    },
+    {
+      "n_frames": 30,
+      "particle_speed_mean_mm_s": 28.715931732354704,
+      "particle_speed_p95_mm_s": 77.19299844693995,
+      "particle_speed_max_mm_s": 92.84241247125252,
+      "centroid_speed_mean_mm_s": 22.643036290693367,
+      "centroid_speed_max_mm_s": 23.561611103519624,
+      "angular_speed_mean_deg_s": 0.11185534290615866,
+      "angular_speed_max_deg_s": 0.2936523767968554,
+      "bin_start_s": 7.5,
+      "bin_end_s": 8.0,
+      "z_min_mm": 9.876563213765621,
+      "below_offset_mm": 0.12343678623437902
+    },
+    {
+      "n_frames": 4,
+      "particle_speed_mean_mm_s": 29.240092214710106,
+      "particle_speed_p95_mm_s": 78.51264113966003,
+      "particle_speed_max_mm_s": 88.92084278534307,
+      "centroid_speed_mean_mm_s": 22.96709218299452,
+      "centroid_speed_max_mm_s": 23.144446713164957,
+      "angular_speed_mean_deg_s": 0.08572374098718005,
+      "angular_speed_max_deg_s": 0.18817995112469066,
+      "bin_start_s": 8.0,
+      "bin_end_s": 8.5,
+      "z_min_mm": 9.877561591565609,
+      "below_offset_mm": 0.12243840843439123
+    }
+  ],
+  "formal": {
+    "rc2_trace": {
+      "centroid_mm": 2.0428842149812536,
+      "p95_mm": 4.414118956489676,
+      "max_mm": 4.837910601351933,
+      "rotation_deg": -0.7203596837293251,
+      "rigid_rms_mm": 0.0011056375337146708,
+      "z_min_m": 0.009875881485641003,
+      "z_max_m": 0.06996951997280121,
+      "centroid_speed_mm_s": 1.0214420542182723,
+      "n_intervals": 120,
+      "particle_mean_speed_mean_mm_s": 1.278676960650136,
+      "particle_mean_speed_max_mm_s": 1.4577098305921723,
+      "centroid_speed_mean_mm_s": 1.02265177087929,
+      "centroid_speed_max_mm_s": 1.2413280393604091,
+      "angular_speed_mean_deg_s": 0.360179863314208,
+      "angular_speed_max_deg_s": 0.5001587996811728
+    },
+    "pfs1_trace": {
+      "centroid_mm": 0.25715302469333,
+      "p95_mm": 0.36676279110106386,
+      "max_mm": 0.39431414160574635,
+      "rotation_deg": -0.03343954595194907,
+      "rigid_rms_mm": 0.01853506782029556,
+      "z_min_m": 0.009878230281174183,
+      "z_max_m": 0.07021508365869522,
+      "centroid_speed_mm_s": 0.1285765056408777,
+      "n_intervals": 120,
+      "particle_mean_speed_mean_mm_s": 1.2925838290732734,
+      "particle_mean_speed_max_mm_s": 1.9849907140544303,
+      "centroid_speed_mean_mm_s": 0.5497230023261737,
+      "centroid_speed_max_mm_s": 1.1489025355736768,
+      "angular_speed_mean_deg_s": 0.10267378309039804,
+      "angular_speed_max_deg_s": 0.3332997430592912
+    },
+    "pfs1_actual": {
+      "n_frames": 121,
+      "particle_speed_mean_mm_s": 28.76212004085192,
+      "particle_speed_p95_mm_s": 77.36926764507642,
+      "particle_speed_max_mm_s": 94.72079810851645,
+      "centroid_speed_mean_mm_s": 22.684965478887417,
+      "centroid_speed_max_mm_s": 23.561611103519624,
+      "angular_speed_mean_deg_s": 0.10267378309039804,
+      "angular_speed_max_deg_s": 0.3332997430592912
+    }
+  },
+  "quality": {
+    "rc2": "rejected",
+    "pfs1": "accepted"
+  },
+  "fold": {
+    "rc2": {
+      "moving_count": 210,
+      "crossed_fraction": 1.0,
+      "extent": [
+        0.2051808387041092,
+        0.40963202714920044,
+        0.060093638487160206
+      ],
+      "z_p95": 0.06814106553792953,
+      "pick_index": 230
+    },
+    "pfs1": {
+      "moving_count": 210,
+      "crossed_fraction": 1.0,
+      "extent": [
+        0.22829103469848633,
+        0.41989922523498535,
+        0.06033685337752104
+      ],
+      "z_p95": 0.06894540786743164,
+      "pick_index": 230
+    },
+    "rc2_held": {
+      "position_error_m": 0.014793219325422111,
+      "arm_speed_rad_s": 0.0011032301699742675,
+      "anchor_gap_max_m": 0.0021413731579228265,
+      "orientation_reached": true,
+      "accepted": true
+    },
+    "pfs1_held": {
+      "position_error_m": 0.014764099669891985,
+      "arm_speed_rad_s": 0.0011137510882690549,
+      "anchor_gap_max_m": 0.0021619567707449818,
+      "orientation_reached": true,
+      "accepted": true
+    }
+  },
+  "recovery_metrics": {
+    "rc2": {
+      "rigid_residual_vs_flat_max_m": 8.955390881126108e-06,
+      "rigid_residual_vs_flat_p95_m": 6.912193207597627e-06,
+      "extent": [
+        0.44077062606811523,
+        0.4407724142074585,
+        6.239861249923706e-08
+      ],
+      "z_p95": 0.009900016710162163
+    },
+    "pfs1": {
+      "rigid_residual_vs_flat_max_m": 9.266708499036038e-06,
+      "rigid_residual_vs_flat_p95_m": 6.8752544495152725e-06,
+      "extent": [
+        0.44074463844299316,
+        0.4407496452331543,
+        6.146728992462158e-08
+      ],
+      "z_p95": 0.009900016710162163
+    }
+  },
+  "errors": {
+    "rc2": [],
+    "pfs1": []
+  },
+  "contact_note": "RC2 and pfs1 contact report is robot-rigid only; 0 events are not evidence of no cloth-ground contact."
+}

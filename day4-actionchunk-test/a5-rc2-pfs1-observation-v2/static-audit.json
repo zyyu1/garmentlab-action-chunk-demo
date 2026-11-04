@@ -1,0 +1,52 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "audit": "static comparison against a5-rc2-pfs1 parent",
+  "checks": {
+    "parent_manifest_sha256": "bad4b59a0baecd08bd814bc98cfc28e7a0197fb9fed2effd21282ef40563c51b",
+    "parent_manifest_entries": 63,
+    "candidate_manifest_sha256": "d97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f",
+    "deployment_manifest_sha256": "d97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f",
+    "candidate_manifest_entries": 63,
+    "deployment_manifest_entries": 63,
+    "candidate_manifest_all_match": true,
+    "parent_base_unchanged_count": 58,
+    "parent_base_58_unchanged": true,
+    "changed_base_files": [
+      "a5_capture.py",
+      "a5_recovery.py"
+    ],
+    "new_files": [
+      "pfs1_observation_v2.py",
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "action_and_horizon_lines_identical": true,
+    "start_ee_expression_identical": true,
+    "retreat_target_expression_identical": true,
+    "release_call_identical": true,
+    "particle_scale_1": true,
+    "no_d1_wait_markers": true,
+    "no_d2c_order_markers": true,
+    "l1_unchanged": true,
+    "evaluator_unchanged": true,
+    "initial_hashes_unchanged": true,
+    "thresholds_1_3": true,
+    "observation_v2_fd_policy": true,
+    "raw_readback_marked_unvalidated": true,
+    "material_readback_hooks": true,
+    "material_expected_values": true,
+    "semantic_separation": true,
+    "contact_capability_not_gate": true,
+    "runner_scope_4202_single": true,
+    "runner_one_shot_new_lock": true,
+    "runner_semantic_ledger": true
+  },
+  "method": [
+    "Compared the 63-entry pfs1 parent manifest with v2; 58 entries unchanged, only recovery/capture changed for observation hooks, and 3 observation/identity files are new.",
+    "Verified action/horizon, start_ee/retreat/release expressions and particle scale are unchanged from pfs1.",
+    "Verified no D1-120 or D2-C markers.",
+    "Verified finite-difference velocity policy, raw-readback invalid marking, material readback hooks, semantic separation and contact capability.",
+    "Verified new one-shot lock/ledger names and 4202 single scope."
+  ],
+  "note": "Static only; runtime material readback and semantic ledger are evaluated after the one-shot run."
+}

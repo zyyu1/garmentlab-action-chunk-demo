@@ -1,0 +1,26 @@
+[
+  {
+    "label": "initial_loaded",
+    "file": "pfs1_stages/initial_loaded.npz",
+    "sha256": "5c988aa470c8a003c1acc8815c1267dc4b9dde7e7435f4a3e35b2c5561d342ae",
+    "sim_time_s": 0.7000000365078449,
+    "absolute_step": 42,
+    "velocity_present": false,
+    "velocity_error": "AttributeError(\"'ClothPrimView' object has no attribute 'get_world_velocities'\")",
+    "ee_m": [
+      0.00553022392022721,
+      -0.4608154731629588,
+      0.3883201813095618
+    ],
+    "gripper_state": 0,
+    "gripper_aperture_m": 0.07999999821186066,
+    "holding": false,
+    "enabled_slots": [
+      false,
+      false,
+      false
+    ],
+    "logical_attached": false,
+    "command_holding": false
+  }
+]

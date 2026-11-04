@@ -403,7 +403,7 @@ right 开发覆盖扩展 `b-right-dev-v2` 已登记并完成 A1 预检（48/48�
 
 **干预：** 附着仍启用时先完成 10 步夹爪张开，再解除附件；原 `ungrasp` 内第二次 `open()` 抑制。120 步等待、12 个公开动作/目标/命令/horizon、退让目标和阈值不变；总物理步数与 D1 相同。不提高摩擦、不清零速度。
 
-**预期与比较：** 释放步/前 5 步速度应低于 D1；若释放冲量为主因，等待/退让/正式窗口漂移下降；若不变，则释放顺序不是主因。按释放后 elapsed time 对齐。
+**预期与比较：** 释放步/前 5 步速度应低于 D1；若首个释放后速度为主因，等待/退让/正式窗口漂移下降；若不变，则释放顺序不是主因。按释放后 elapsed time 对齐。
 
 **离线验证：** manifest 66/66；release-order fixture 8/8、delay fixture 5/5、release fixture 1/1；`py_compile`、`bash -n`；21/21 action/horizon 行与 D1 相同，recovery diff 仅版本字符串和 `release_order` 元数据。**预运行补查：** preopen 10 步每步检查 holding/attachment 一致并调用 `control.assert_exclusive()`；全局 evidence 检查与 D1 字节相同、未关闭。释放 t=0 用 `released` sample，记录 boundary step/delta，delta 非零报告采样误差；不用首个全关 state。**该版本随后已按 D2-D 上传、远端预检并单次运行 4202 single；见 D2-D 对照。** 正式成功仍为 0。
 
@@ -415,4 +415,38 @@ right 开发覆盖扩展 `b-right-dev-v2` 已登记并完成 A1 预检（48/48�
 
 **结果：** 干预前 action target 最大差 0.0、anchor 顶点/EE/关节 0.0；release t=0 质心差 0.0113 mm、P95 0.0293 mm、最大 0.0375 mm；释放一步粒子速度 17.4197 vs 17.4223 mm/s；free 0–30 质心 1.9092 vs 1.9119 mm、P95 12.2286 vs 12.2044 mm；free 30–120 −3.02%/−2.65%；退让 −2.83%/−1.27%；正式窗口 2.0409→1.9823 mm（−2.87%）、P95 4.4134→4.3426 mm（−1.60%），仍拒绝。
 
-**结论：** 释放顺序没有降低释放瞬态/前 0.5 s 速度，**不是该例漂移的主要因素**；正式窗口小幅下降不能归因于释放冲量减少，单例不足外推；cloth-ground 接触力/冲量不可用。详见 [D2-D 对照](day4-actionchunk-test/results/D2_D_COMPARE_20261104/review.md)。正式成功 0。
+**结论：** 释放顺序没有降低释放瞬态/前 0.5 s 速度，**不是该例漂移的主要因素**；正式窗口小幅下降不能归因于释放后速度下降，单例不足外推；cloth-ground 接触力/冲量不可用。详见 [D2-D 对照](day4-actionchunk-test/results/D2_D_COMPARE_20261104/review.md)。正式成功 0。
+
+## 2026-11-04 D2-E 步骤2：支撑面与摩擦配置核查（仅离线）
+
+离线读取 D2-A 场景读回、D2-C 几何/轨迹和源码；未启动新 episode、未改物理参数。审查表：[review](day4-actionchunk-test/results/D2_E_SUPPORT_MATERIAL_AUDIT_20261104/review.md)、[JSON](day4-actionchunk-test/results/D2_E_SUPPORT_MATERIAL_AUDIT_20261104/support_material_audit.json)、[CSV](day4-actionchunk-test/results/D2_E_SUPPORT_MATERIAL_AUDIT_20261104/support_material_table.csv)。
+
+**结果：** 唯一与布料存在有效碰撞候选的表面是默认地面（z=0、水平、50 m 代码值、enabled）；室内地面禁用；三个附件块和机器人手/指均与布料碰撞组过滤，附件块另有 ground FilteredPairs，释放后仍保留但不能承托。布料材质绑定在粒子系统 `particleMaterial`（friction 0.3、particleFrictionScale 0）；地面 CollisionPlane 无直接 material binding，代码中的 0.5/0.5/0.8 未确认生效；附件块 0.2/1.0/0 是刚体默认且与布料无关。布料 z_min≈9.876 mm，比 10 mm particleContactOffset 低约 0.123–0.124 mm；几何证据，不是接触力。
+
+**决定：** 当前不选择修正。支撑/过滤拓扑已足够明确；有效摩擦不能由读回确定。步骤3纯读回不是选择修正的前置条件（若需精确块/地面 transform、祖先材质绑定和完整 filter 列表，可登记一次只读 4202 single）；有效摩擦需步骤5单变量敏感性；步骤4可先离线复用 D1/D2-C 轨迹检查持续滑移。
+
+## 2026-11-04 D2-E 步骤4 + 步骤5决定
+
+步骤4 复用 D1/D2-C 轨迹，未启动仿真。[报告](day4-actionchunk-test/results/D2_E_STEP4_SLIP_20261104/review.md)、[JSON](day4-actionchunk-test/results/D2_E_STEP4_SLIP_20261104/slip_summary.json)、[CSV](day4-actionchunk-test/results/D2_E_STEP4_SLIP_20261104/slip_bins.csv)、[速度/转速/方向](day4-actionchunk-test/results/D2_E_STEP4_SLIP_20261104/slip_speed_rotation.png)、[高度](day4-actionchunk-test/results/D2_E_STEP4_SLIP_20261104/slip_height.png)、[支撑几何](day4-actionchunk-test/results/D2_E_STEP4_SLIP_20261104/support_geometry.png)。
+
+**事实：** 首个释放后速度约 11.0 mm/s 质心、17.4 mm/s 粒子（速度测量，不是冲量）；前 1 s 快速衰减；**1.5–10 s 近恒定 ~1.0 mm/s、~0.36°/s**（D1 1.024 mm/s、D2-C 0.993 mm/s），没有继续衰减或增大。持续方向约 **26–27°**，比释放方向（~0.7–1.1°）转约 25°，约 1–1.5 s 后稳定。z_min≈9.871–9.876 mm，无地面穿透，低于 10 mm contact offset 约 0.124–0.129 mm；几何证据，不是接触力。两版稳态差约 3%。
+
+**步骤5决定：** **`particleFrictionScale: 0.0 → 1.0`**，候选拟名 `a5-rc2-pfs1`，从 RC2 原流程派生，不保留 120 步等待或 D2-C 释放顺序；`friction=0.3`、地面/碰撞、12 个动作/目标/horizon/退让目标不变。不选地面材质绑定作为本轮干预：地面材质未绑定是独立发现，但它是刚体材质，不能直接当作粒子摩擦。该参数从 episode 开始全局生效，影响 recovery/fold/release，不是“仅释放后接触对照”；4202 初态文件不重生，但新动力学从第一步开始。只跑 4202 single 一次；通过条件为原几何 + 质心 ≤1 mm + P95 ≤3 mm + 证据完整。[预登记草案](day4-actionchunk-test/results/D2_E_STEP4_SLIP_20261104/step5_decision.md)。**候选随后已创建、离线验证并单次运行；见下。**
+
+## 2026-11-04 a5-rc2-pfs1：粒子间摩擦缩放单次 4202 single
+
+候选 [a5-rc2-pfs1](day4-actionchunk-test/a5-rc2-pfs1/README.md) 从 RC2 原流程派生，只把 `particleFrictionScale` 0.0→1.0；`friction=0.3`、地面/碰撞、12 个动作/命令/horizon、退让目标和 evaluator 不变；manifest `bad4b59a…`（63 项）、config `2d72a405…`；初态复用未重生。
+
+运行 `day4-a5-rc2-pfs1-20261104-102101-983000` 一次：runner/entry 退出 0，episode `passed=True`，质量 **accepted**；正式 210–330 evaluator 质心 **0.2642 mm**、P95 **0.3792 mm**（RC2 2.0429 / 4.4141 mm），几何全程通过。首个 0.5 s 位置差分质心 **11.555 mm/s**、粒子 **15.000 mm/s**；1.5–8.0 s 持续质心 **0.595 mm/s**、粒子 **1.375 mm/s**、角速度 **0.104°/s**；z_min≈9.867–9.879 mm，无穿透。证据 manifest 73/73；ledger 15/16，缺 `contact_report.json`（非必需）。动作 target 与 RC2 不同：fold 约 +2.0 mm、退让约 +2.0 mm。
+
+**Caveat：** `ClothPrimView.get_velocities()` formal 读回粒子 28.76 mm/s，而位置差分 1.29 mm/s；读回场 2 s 内几乎不变、与位置差分向量相关约 −0.006。EE 静止、attachment/holding=false。该读回不能当作实际速度/冲量；所有速度报告改用世界顶点有限差分，原始读回保留为 unvalidated。另无运行时材料读回；D2-A 的 `.3/0` 是未修改基线。`contact_report.json` 缺失，0 事件不等于无接触。
+
+**判定：** 几何/评价器通过，属于候选改善证据；但速度读回与材料读回 caveat 使观测完整性不足，**不扩展 4302 single**，不重跑、不扫描参数。正式 Stage 4 成功仍为 0；不宣称地面摩擦已修复。详见 [pfs1 对照](day4-actionchunk-test/results/D2_E_PFS1_COMPARE_20261104/review.md) 与 [evidence_verification](day4-actionchunk-test/results/D2_E_PFS1_COMPARE_20261104/evidence_verification.json)。
+
+## 2026-11-04 a5-rc2-pfs1-observation-v2：观测修订复验
+
+[a5-rc2-pfs1-observation-v2](day4-actionchunk-test/a5-rc2-pfs1-observation-v2/README.md) 只修订观测，不动 pfs1 物理/控制：FD 速度、raw readback unvalidated、五阶段材料读回、文件/语义/质量分离、contact 能力边界。新 manifest `d97bf349…`（63 项）、新锁；旧 pfs1 结果保留。
+
+单次 4202 复验 `day4-a5-rc2-pfs1-observation-v2-20261104-111514-134428`：`file_complete=true`、`observation_semantics_valid=true`、质量 **accepted**、`overall_valid=true`。formal 质心 **0.2642 mm**、P95 **0.3792 mm**；动作 target、recovery/pre-release 状态、formal 指标与 pfs1 **0 差**。材料五阶段 friction .3 / particleFrictionScale 1.0 / binding `/World/Garment/particleMaterial` / self/non-particle true；solver-effective 仍 unverified。FD 484 个有效区间、1 个首帧无效；raw readback 标 unvalidated。
+
+**判定：** 观测修订通过，但只是观测-only 复验，不增加新的物理改善，也不是正式 Stage 4 成功。**尚未运行 4302 single**；先审查 v2；正式成功仍为 0；不宣称地面摩擦已修复；cloth-ground 力/冲量不是新增门槛。详见 [v2 对照](day4-actionchunk-test/results/D2_E_PFS1_V2_COMPARE_20261104/review.md)。

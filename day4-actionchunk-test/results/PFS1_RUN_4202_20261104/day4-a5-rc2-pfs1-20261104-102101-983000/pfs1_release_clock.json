@@ -1,0 +1,60 @@
+{
+  "t0_definition": "pre-release last-attached state; first detached physics step is the boundary sample; no zero-step post-disable sample in the RC2 original flow",
+  "pre_release": {
+    "label": "pre_release",
+    "file": "pfs1_stages/pre_release.npz",
+    "sha256": "ca123a2faa1e76d55add9cdadfe8e2d58207c5d6a254f6c0724ffb4c0bc469c9",
+    "sim_time_s": 32.45000169239938,
+    "absolute_step": 1947,
+    "velocity_present": true,
+    "velocity_error": null,
+    "ee_m": [
+      -0.16838649054730379,
+      -0.46906303427370644,
+      0.04675056599679581
+    ],
+    "gripper_state": 2,
+    "gripper_aperture_m": 1.1401983357473e-08,
+    "holding": true,
+    "enabled_slots": [
+      true,
+      false,
+      false
+    ],
+    "logical_attached": true,
+    "command_holding": true
+  },
+  "release_boundary": {
+    "label": "release_step_000",
+    "sim_time_s": 32.466668359935284,
+    "absolute_step": 1948,
+    "holding": false,
+    "attachment_enabled_any": false
+  },
+  "released_sample": {
+    "kind": "sample",
+    "utc": "2026-11-04T02:35:01.337426+00:00",
+    "monotonic_ns": 21859407125852917,
+    "sim_time_s": 32.61666836775839,
+    "observed_step": 1955,
+    "call_id": 12,
+    "label": "released",
+    "holding": false,
+    "attached": false,
+    "enabled_slots": [
+      false,
+      false,
+      false
+    ],
+    "logical_attached": false,
+    "command_holding": false,
+    "ee_m": [
+      -0.16838710733395726,
+      -0.4690641789859815,
+      0.046751038212245015
+    ],
+    "backend_step": 1955
+  },
+  "sampling_error_steps": 1,
+  "definition_note": "The actual attachment disable is between the pre-release state and the first detached step; report the step/time interval, not an exact instant."
+}

@@ -1,0 +1,107 @@
+{
+  "checked_utc": "2026-11-04T03:34:13.777266+00:00",
+  "result_dir": "results\\PFS1_V2_RUN_4202_20261104\\day4-a5-rc2-pfs1-observation-v2-20261104-111514-134428",
+  "remote_run_id": "day4-a5-rc2-pfs1-observation-v2-20261104-111514-134428",
+  "ledger_sha256": "082b917083da412edfcdbc0a25ec15d8654032465c446841c11e7134e22ad36e",
+  "ledger_state": "finished",
+  "ledger_manifest_sha256": "d97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f",
+  "ledger_config_sha256": "bce2d51dd16b50f97653e8436e444a9fd3da927e80d7e56ea053b1ed6c63e9b9",
+  "entry_assess_exit": 0,
+  "file_complete": true,
+  "observation_semantics_valid": true,
+  "quality_status": "accepted",
+  "quality_accepted": true,
+  "episode_passed": true,
+  "overall_valid": true,
+  "ledger_files": 19,
+  "ledger_files_bad": [],
+  "ledger_files_missing": [],
+  "evidence_manifest_entries": 73,
+  "evidence_manifest_bad": [],
+  "source_identity": {
+    "a5_recovery.py": {
+      "runtime_sha256": "b9993097980379fb72cf0feadb4c42d5ea254c758e19488bc518898adb4d3eda",
+      "candidate_sha256": "b9993097980379fb72cf0feadb4c42d5ea254c758e19488bc518898adb4d3eda",
+      "match": true
+    },
+    "a5_capture.py": {
+      "runtime_sha256": "c5651dc80a137115730a1ae6d6f9c1d8e48e3c4b76c70ef3e14c164f03f23f28",
+      "candidate_sha256": "c5651dc80a137115730a1ae6d6f9c1d8e48e3c4b76c70ef3e14c164f03f23f28",
+      "match": true
+    },
+    "pfs1_observation_v2.py": {
+      "runtime_sha256": "abd459feb7adcddf4f1adf45d925e710ca65fb0ef0e7af41437222b4adef6d35",
+      "candidate_sha256": "abd459feb7adcddf4f1adf45d925e710ca65fb0ef0e7af41437222b4adef6d35",
+      "match": true
+    },
+    "a5-rc2-pfs1-observation-v2.json": {
+      "runtime_sha256": "bce2d51dd16b50f97653e8436e444a9fd3da927e80d7e56ea053b1ed6c63e9b9",
+      "candidate_sha256": "bce2d51dd16b50f97653e8436e444a9fd3da927e80d7e56ea053b1ed6c63e9b9",
+      "match": true
+    },
+    "run-a5-rc2-pfs1-observation-v2.sh": {
+      "runtime_sha256": "25c57699c8eef22d8bfe2ba02c1b99e8f51e51891b8fc3dfb2c73d831128a69e",
+      "candidate_sha256": "25c57699c8eef22d8bfe2ba02c1b99e8f51e51891b8fc3dfb2c73d831128a69e",
+      "match": true
+    }
+  },
+  "semantic_checks": {
+    "fd_policy_recorded": true,
+    "fd_velocity_valid_present": true,
+    "raw_readback_marked_unvalidated": true,
+    "material_stages_present": true,
+    "material_values_match": true,
+    "material_binding_match": true,
+    "self_collision_true": true,
+    "non_particle_collision_true": true,
+    "solver_effective_boundary_recorded": true,
+    "contact_capability_recorded": true,
+    "release_clock_boundary_recorded": true,
+    "quality_status_recorded": true
+  },
+  "file_completeness": true,
+  "material_stages": [
+    "after_construction",
+    "after_reset",
+    "after_initial_settle",
+    "after_recovery",
+    "pre_release"
+  ],
+  "material_solver_effective": "unverified; values below are scene/USD readbacks",
+  "material_expected": {
+    "friction": 0.3,
+    "particle_friction_scale": 1.0
+  },
+  "formal_stability": {
+    "centroid_drift_max_m": 0.0002641712213003893,
+    "vertex_drift_p95_max_m": 0.00037916792198646745,
+    "vertex_drift_max_m": 0.000480815370812574,
+    "vertex_speed_p95_max_m_s": 0.006867203603306689,
+    "vertex_speed_max_m_s": 0.02233213246054752
+  },
+  "formal_day4_success": false,
+  "contact_capability": {
+    "schema_version": 2,
+    "supported_scope": "robot-rigid contacts only (existing ContactRecorder/report channel)",
+    "cloth_ground_force_impulse": false,
+    "reason": "D2-B showed the existing ContactRecorder captured 0 events for a particle cloth falling to the 10 mm particle contact offset; the current channel does not expose cloth-particle contacts.",
+    "zero_events_interpretation": "0 events is not evidence of no contact",
+    "required_for_acceptance": false,
+    "physical_evidence_used": [
+      "world vertex positions",
+      "z_min",
+      "world-position finite-difference velocities"
+    ],
+    "note": "Cloth-ground force/impulse remains a mechanism-interpretation limit, not a new acceptance gate for this observation revision."
+  },
+  "candidate_manifest_sha256": "d97bf349dc8a7813ab274da52c4a16c69a11b9135717a6851abbd6192cf3b73f",
+  "candidate_manifest_entries": 63,
+  "candidate_manifest_bad": [],
+  "notes": [
+    "All required evidence files matched the runner ledger and evidence manifest.",
+    "Material scene readback matched expected friction 0.3 / particleFrictionScale 1.0 and binding at all stages; solver-effective value remains unverified.",
+    "Raw velocity readback is marked unvalidated and excluded from physical speeds.",
+    "Cloth-ground force/impulse is unavailable and not an acceptance gate.",
+    "Old pfs1 result remains separately preserved."
+  ]
+}

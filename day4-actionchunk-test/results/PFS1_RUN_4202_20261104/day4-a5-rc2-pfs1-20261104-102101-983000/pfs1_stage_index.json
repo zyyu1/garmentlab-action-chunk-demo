@@ -1,0 +1,98 @@
+[
+  {
+    "label": "initial_loaded",
+    "file": "pfs1_stages/initial_loaded.npz",
+    "sha256": "3f8755fb51dc416b190890ec0fb6cac311367d44c23d0568a9be77442f6d5612",
+    "sim_time_s": 0.7000000365078449,
+    "absolute_step": 42,
+    "velocity_present": true,
+    "velocity_error": null,
+    "ee_m": [
+      0.00553022392022721,
+      -0.4608154731629588,
+      0.3883201813095618
+    ],
+    "gripper_state": 0,
+    "gripper_aperture_m": 0.07999999821186066,
+    "holding": false,
+    "enabled_slots": [
+      false,
+      false,
+      false
+    ],
+    "logical_attached": false,
+    "command_holding": false
+  },
+  {
+    "label": "after_recovery",
+    "file": "pfs1_stages/after_recovery.npz",
+    "sha256": "c8d88fc723f81a6037a09c94518b065f5ed92ba49d954df38f51f4dad34d27e3",
+    "sim_time_s": 17.083334224298596,
+    "absolute_step": 1025,
+    "velocity_present": true,
+    "velocity_error": null,
+    "ee_m": [
+      0.046992678684935646,
+      -0.6376682408422716,
+      0.04411640310262318
+    ],
+    "gripper_state": 0,
+    "gripper_aperture_m": 0.07999997958540916,
+    "holding": false,
+    "enabled_slots": [
+      false,
+      false,
+      false
+    ],
+    "logical_attached": false,
+    "command_holding": false
+  },
+  {
+    "label": "pre_release",
+    "file": "pfs1_stages/pre_release.npz",
+    "sha256": "ca123a2faa1e76d55add9cdadfe8e2d58207c5d6a254f6c0724ffb4c0bc469c9",
+    "sim_time_s": 32.45000169239938,
+    "absolute_step": 1947,
+    "velocity_present": true,
+    "velocity_error": null,
+    "ee_m": [
+      -0.16838649054730379,
+      -0.46906303427370644,
+      0.04675056599679581
+    ],
+    "gripper_state": 2,
+    "gripper_aperture_m": 1.1401983357473e-08,
+    "holding": true,
+    "enabled_slots": [
+      true,
+      false,
+      false
+    ],
+    "logical_attached": true,
+    "command_holding": true
+  },
+  {
+    "label": "release_boundary",
+    "file": "pfs1_stages/release_boundary.npz",
+    "sha256": "0467d072db661fb0daa6ce3c919548a65efc7ec65f64690e1a450dd45ac161ac",
+    "sim_time_s": 32.466668359935284,
+    "absolute_step": 1948,
+    "velocity_present": true,
+    "velocity_error": null,
+    "ee_m": [
+      -0.1683869153807409,
+      -0.4690638851094442,
+      0.04675088032799519
+    ],
+    "gripper_state": 2,
+    "gripper_aperture_m": 0.015316031873226166,
+    "holding": false,
+    "enabled_slots": [
+      false,
+      false,
+      false
+    ],
+    "logical_attached": false,
+    "command_holding": true
+  }
+]

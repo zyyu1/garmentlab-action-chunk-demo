@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "supported_scope": "robot-rigid contacts only (existing ContactRecorder/report channel)",
+  "cloth_ground_force_impulse": false,
+  "reason": "D2-B showed the existing ContactRecorder captured 0 events for a particle cloth falling to the 10 mm particle contact offset; the current channel does not expose cloth-particle contacts.",
+  "zero_events_interpretation": "0 events is not evidence of no contact",
+  "required_for_acceptance": false,
+  "physical_evidence_used": [
+    "world vertex positions",
+    "z_min",
+    "world-position finite-difference velocities"
+  ],
+  "note": "Cloth-ground force/impulse remains a mechanism-interpretation limit, not a new acceptance gate for this observation revision."
+}

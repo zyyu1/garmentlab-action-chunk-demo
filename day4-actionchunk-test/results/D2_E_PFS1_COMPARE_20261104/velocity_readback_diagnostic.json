@@ -1,0 +1,45 @@
+{
+  "status": "unvalidated",
+  "validated": false,
+  "api": "ClothPrimView.get_velocities(clone=True) -> PhysicsView.get_velocities()",
+  "position_api": "ClothPrimView.get_world_positions(clone=True)",
+  "formal": {
+    "readback_particle_mean_mm_s": 28.76212004085192,
+    "readback_particle_median_mm_s": 10.548747214785374,
+    "readback_particle_p95_mm_s": 77.36926764507642,
+    "readback_particle_max_mm_s": 94.72079810851645,
+    "readback_centroid_speed_mean_mm_s": 22.684965478887417,
+    "readback_mean_vector_mm_s": [
+      -2.6765944019695858,
+      -1.589004941245983,
+      22.46626605117079
+    ],
+    "position_derivative_particle_mean_mm_s": 1.2925838290732734,
+    "position_derivative_centroid_mean_mm_s": 0.5497230023261737,
+    "readback_to_position_ratio_particle": 22.251647741464563,
+    "readback_to_position_ratio_centroid": 41.26617475145687,
+    "readback_norm_vs_position_delta_corr": 0.4271179699625187,
+    "readback_vector_vs_position_delta_corr": -0.006043613302647144,
+    "readback_field_corr_first_last": 0.9980386621369798,
+    "readback_per_particle_change_over_window_mm_s": 1.8956719160115216,
+    "position_per_particle_change_over_window_mm": 0.26182074361169977,
+    "ee_speed_mm_s": 0.00023741452763342128,
+    "holding_any": false,
+    "attachment_enabled_any": false,
+    "z_min_m": 0.009876563213765621
+  },
+  "release_first_interval": {
+    "readback_particle_mean_mm_s": 38.947515282478186,
+    "position_derivative_particle_mean_mm_s": 17.42028726206917,
+    "readback_to_position_ratio_particle": 2.2357562017523254,
+    "position_derivative_centroid_mm_s": 9.771217975922053
+  },
+  "pre_release": {
+    "readback_particle_mean_mm_s": 32.98041305583126,
+    "hold_finite_diff_particle_mean_mm_s": 1.9768521059291355,
+    "hold_finite_diff_centroid_mm_s": 1.172114196308788,
+    "readback_to_position_ratio_particle": 16.683298136928766
+  },
+  "interpretation": "The readback is nearly static over the formal window and is not the frame-to-frame displacement of the cloth. The EE is static and attachment/holding are false, so robot motion does not explain it. It may be an internal solver velocity or another quantity, but its semantics are not established by the available API or evidence. It is therefore not used as realized cloth velocity or as impulse evidence.",
+  "action": "Use world-position finite differences for kinematics; retain raw readback in NPZ as unvalidated data; do not rerun for this analysis."
+}

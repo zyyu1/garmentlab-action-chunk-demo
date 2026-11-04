@@ -1,0 +1,229 @@
+{
+  "version": "a5-rc2-pfs1",
+  "stage": "candidate_run_completed_quality_accepted_observation_caveat",
+  "created_utc": "2026-11-04T01:55:19Z",
+  "status": "4202 single valid run: episode passed, quality accepted; velocity readback unvalidated and runtime material readback absent; no 4302, seven-case, freeze or held-out",
+  "parent": "stage4-a5-rc2",
+  "parent_manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+  "parent_candidate_sha256": "10a6cb452b9fafd5907f245b68fd02d49c7af1e12fa6cb0f755f1791a5af27a5",
+  "parent_manifest_entries": 60,
+  "initial": {
+    "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560",
+    "regenerated": false,
+    "hashes": {
+      "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+      "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+    }
+  },
+  "subject": {
+    "seed": 4202,
+    "level": "perturbed",
+    "mode": "single",
+    "split": "dev",
+    "fold_edge": "right"
+  },
+  "change": {
+    "parameter": "particleFrictionScale",
+    "semantic": "particle inter-friction scaling in the PBD particle material",
+    "old_value": 0.0,
+    "new_value": 1.0,
+    "scope": "episode start through initial dynamics, recovery, fold, release and retreat; not a release-only contact change",
+    "hypothesis": "particle inter-friction may affect later global slip through layer contact, fold shape or the release state",
+    "if_unchanged": "no sensitivity observed at this setting; this does not exclude other friction or contact mechanisms",
+    "explicitly_not_ground_friction": true
+  },
+  "scope": {
+    "task": "B_nominal recovery/fold, seed 4202 single",
+    "derived_from": "RC2 original flow; no D1-120 wait, no D2-C preopen/release-order",
+    "parameter_active": "from episode start; affects initial dynamics, recovery, fold, release and retreat",
+    "not_release_only": true,
+    "initial_file_regenerated": false,
+    "l1": "a5_l1.py unchanged RC2; not run"
+  },
+  "identity": {
+    "candidate_manifest_sha256": "bad4b59a0baecd08bd814bc98cfc28e7a0197fb9fed2effd21282ef40563c51b",
+    "deployment_manifest_sha256": "bad4b59a0baecd08bd814bc98cfc28e7a0197fb9fed2effd21282ef40563c51b",
+    "candidate_manifest_entries": 63,
+    "deployment_manifest_entries": 63,
+    "config_sha256": "2d72a40565b3f63269fff861231255a45318618ed969bc7cf132bd041c34d32c",
+    "runner_sha256": "3f9e38e3dde535d754ab01f3319d1914872bd669d1ebf3d62e6cef6c625dfa80",
+    "source_sha256": {
+      "a5_recovery.py": "632a7e3f49d918f876c96b1818bfcb85b620f5564854047479983c47470f4b53",
+      "a5_capture.py": "c67ea7bd8486892c56bacbd9bcb5e84f99d8f8c38c9a4d4625eb7720c8ec0e5a",
+      "pfs1_observation.py": "9482847357eade07b27799134379fdf611b5e9db3dbd5fa3dea8df0acb40ed04",
+      "a5_l1.py": "3d3d2994035d2cdfc78b23ac7abb8b1a8784539d5b2ac2add84f472ca9866b00",
+      "a5_entry.py": "b8f87af35d0eb45ec1997f7c0d3147c0bf13053e048568447b3aa387425256e2",
+      "stage4_success_v1.py": "8354b61286fa8bd37bc60444f1a237d9c8a5504a30e71df26352bb94496aa76d"
+    },
+    "parent_changed_files": [
+      "a5_capture.py",
+      "a5_recovery.py"
+    ],
+    "new_files": [
+      "pfs1_observation.py",
+      "a5-rc2-pfs1.json",
+      "run-a5-rc2-pfs1.sh"
+    ],
+    "static_audit_sha256": "be489c2f2d694f7ed0736bfc889fe794362f4723660b11378ef44a613090dafe",
+    "source_diff_sha256": "68f1bbffa0300cd353f2cf24813143ff78842299629264870b6357049287a2ec"
+  },
+  "observation": {
+    "stages": [
+      "initial_loaded",
+      "after_recovery",
+      "pre_release",
+      "release_boundary",
+      "pfs1_first_0_5s",
+      "pfs1_formal_210_330"
+    ],
+    "per_stage": "vertices, particle velocities (actual view readback when available), EE, joints, gripper, attachment",
+    "per_step": "pfs1_release_steps: release action and 331-step trace",
+    "release_t0": "pre-release last attached state; first detached physics step is the boundary sample; no zero-step post-disable sample in the RC2 original flow",
+    "sampling_error": "report pre-release -> first detached step/time interval; do not claim an exact instant"
+  },
+  "expected_phenomenon": [
+    "if particle inter-friction is effective, release-transient decay and/or steady slip speed may decrease",
+    "if unchanged, no sensitivity is observed at this setting; other friction/contact mechanisms remain possible",
+    "recovery/fold geometry or stickiness may change because the parameter is active from episode start",
+    "release first-step centroid speed in the D1/D2-C diagnostics is ~11 mm/s; this is a speed measurement, not an impulse measurement"
+  ],
+  "comparison": {
+    "against": "RC2 4202 single",
+    "windows": [
+      "after recovery",
+      "pre-release",
+      "release t=0",
+      "first 0.5 s",
+      "0.5 s bins to 10 s",
+      "formal 210-330"
+    ],
+    "metrics": [
+      "actual action targets",
+      "centroid drift",
+      "vertex P95",
+      "rotation",
+      "particle/centroid speed",
+      "angular speed",
+      "z_min",
+      "penetration geometry",
+      "recovery/fold success"
+    ],
+    "pass": "original geometry + centroid <=1 mm + vertex P95 <=3 mm + complete release/evidence",
+    "no_scan": "one value, no parameter sweep; no seven-case rerun; no held-out; formal success count unchanged"
+  },
+  "verification": {
+    "candidate_manifest": "63/63 paths and SHA256 match",
+    "deployment_manifest": "63/63 paths and SHA256 match",
+    "parent_base_58_unchanged": true,
+    "action_and_horizon_lines": "20/20 identical to RC2 a5_recovery.py",
+    "start_ee_retreat_release": "identical to RC2 a5_capture.py",
+    "particle_scale": "old 0.0 -> new 1.0; no active 0.0 in a5_recovery.py",
+    "d1_d2c_residue": "none",
+    "l1_unchanged": true,
+    "evaluator_identity_unchanged": true,
+    "initial_hashes_unchanged": true,
+    "thresholds": "1 mm / 3 mm",
+    "static_audit": "static-audit.json all boolean checks true",
+    "py_compile": true,
+    "bash_syntax": true,
+    "no_run": "pre-run offline verification only; one registered 4202 single executed; see run"
+  },
+  "run_status": "valid_single_run_completed_quality_accepted_observation_caveat",
+  "formal_stage4_success": 0,
+  "notes": [
+    "particleFrictionScale controls particle inter-friction scaling; this is not a ground-friction repair.",
+    "The initial 4202 state file is reused and not regenerated; the parameter is active from the first episode step.",
+    "No D1-120 wait or D2-C release-order change is retained.",
+    "One 4202 single run only; no parameter sweep, no seven-case rerun, no held-out, formal success count unchanged.",
+    "The release first-step centroid speed in prior diagnostics is ~11 mm/s; this is a speed measurement, not an impulse measurement.",
+    "Valid 4202 single completed and downloaded; quality accepted on geometry, but speed-readback and runtime-material-readback caveats block extension without review.",
+    "a5-rc2-pfs1.json still records run_status=not_run and is intentionally not edited after the run, so the 63-item candidate manifest identity is preserved; runtime status is recorded in this registration and README."
+  ],
+  "run": {
+    "result_dir": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\PFS1_RUN_4202_20261104\\day4-a5-rc2-pfs1-20261104-102101-983000",
+    "remote_run_id": "day4-a5-rc2-pfs1-20261104-102101-983000",
+    "manifest_sha256": "bad4b59a0baecd08bd814bc98cfc28e7a0197fb9fed2effd21282ef40563c51b",
+    "config_sha256": "2d72a40565b3f63269fff861231255a45318618ed969bc7cf132bd041c34d32c",
+    "runner_sha256": "3f9e38e3dde535d754ab01f3319d1914872bd669d1ebf3d62e6cef6c625dfa80",
+    "runner_exit": 0,
+    "entry_assess_exit": 0,
+    "episode_passed": true,
+    "quality_status": "accepted",
+    "action_count": 12,
+    "call_horizons": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "release_boundary": {
+      "absolute_step": 1948,
+      "sim_time_s": 32.466668359935284,
+      "sampling_error_steps": 1
+    },
+    "formal_stability": {
+      "centroid_drift_max_m": 0.0002641712213003893,
+      "vertex_drift_p95_max_m": 0.00037916792198646745,
+      "vertex_drift_max_m": 0.000480815370812574,
+      "vertex_speed_p95_max_m_s": 0.006867203603306689,
+      "vertex_speed_max_m_s": 0.02233213246054752
+    },
+    "formal_endpoint": {
+      "centroid_mm": 0.25715302469333,
+      "p95_mm": 0.36676279110106386,
+      "rotation_deg": -0.03343954595194907,
+      "rigid_rms_mm": 0.01853506782029556
+    },
+    "first_0_5s": {
+      "particle_mean_speed_mm_s": 15.000403599450644,
+      "centroid_speed_mm_s": 11.555040367550463,
+      "angular_speed_deg_s": 2.2521312386233836,
+      "first_interval_centroid_mm_s": 9.771217975922053
+    },
+    "steady_1_5_to_8_0s": {
+      "particle_mean_speed_mm_s": 1.375233157711355,
+      "centroid_speed_mm_s": 0.5945273674644351,
+      "angular_speed_deg_s": 0.10419549804747696,
+      "centroid_direction_deg": 26.78796859992788
+    },
+    "evidence_manifest_entries": 73,
+    "evidence_manifest_mismatches": [],
+    "ledger_evidence_entries": 16,
+    "ledger_evidence_matched": 15,
+    "ledger_missing": [
+      "contact_report.json"
+    ],
+    "ledger_sha256": "02cecbe8e0fc434e912e700f91e57b5e03fe4593d9c43238446b81c80448db33",
+    "evidence_verification_sha256": "0397f92d315fb4109017b261d140e09c440a34179ba2b399bcd0ce6345a4710e",
+    "comparison_sha256": "cb54826d37c3eab64a841b8bd1dc45b605358b545c503324a88d44e0e86a1513",
+    "review_sha256": "e5f8c1d456ddafdcf2da8e7afa216e1c5f51bd2543f641ea90d8f8df734aec64",
+    "caveats": [
+      "ClothPrimView.get_velocities readback is inconsistent with world-position finite differences and is not used as physical velocity.",
+      "No runtime particleFrictionScale/friction/self-collision readback is stored in the pfs1 result; solver-effective parameter value is not proven by readback.",
+      "Action targets differ from RC2 by up to ~2.0 mm after recovery recomputation; not a same-target comparison.",
+      "contact_report.json is absent; no cloth-ground contact force/impulse evidence."
+    ],
+    "compliance_notes": [
+      "Velocity-readback consistency check and runtime material readbacks should have been done before the run; they were not.",
+      "The first attempt was stopped for missing get_world_velocities; the second used get_velocities without pre-validating it against positions.",
+      "The physical run and geometry result are retained; extension requires fixing the observation design and re-registering."
+    ]
+  },
+  "next_gate": "Review the observation caveats before any 4302 single extension; do not run 4302, seven-case RC, freeze, held-out or formal batch now.",
+  "observation_followup": {
+    "version": "a5-rc2-pfs1-observation-v2",
+    "result_dir": "results/PFS1_V2_RUN_4202_20261104/day4-a5-rc2-pfs1-observation-v2-20261104-111514-134428",
+    "overall_valid": true,
+    "quality_status": "accepted",
+    "physical_result_identical_to_pfs1": true,
+    "note": "Observation-only revision validated; this pfs1 result remains preserved as the original quality-accepted / observation-gap evidence."
+  }
+}

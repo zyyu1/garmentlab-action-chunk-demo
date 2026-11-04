@@ -1,0 +1,150 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "candidate-registered-observation-v2",
+  "created_utc": "2026-11-04T04:20:00Z",
+  "status": "candidate_registered_not_run",
+  "parent": "a5-rc2-pfs1",
+  "parent_manifest_sha256": "bad4b59a0baecd08bd814bc98cfc28e7a0197fb9fed2effd21282ef40563c51b",
+  "parent_candidate_sha256": "bad4b59a0baecd08bd814bc98cfc28e7a0197fb9fed2effd21282ef40563c51b",
+  "base": "a5-rc2-pfs1 physics and control flow; observation-only revision. The old pfs1 result remains quality-accepted / observation-gap evidence.",
+  "initial": {
+    "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560",
+    "regenerated": false,
+    "hashes": {
+      "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+      "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+    }
+  },
+  "subject": {
+    "seed": 4202,
+    "level": "perturbed",
+    "mode": "single",
+    "split": "dev",
+    "fold_edge": "right"
+  },
+  "physical_invariance": {
+    "unchanged_from_pfs1": true,
+    "particle_friction_scale": 1.0,
+    "friction": 0.3,
+    "ground": "unchanged",
+    "collision": "unchanged",
+    "material_binding": "unchanged",
+    "public_actions": 12,
+    "action_logic": "unchanged",
+    "action_targets": "expert logic unchanged; may be recomputed only as in pfs1 when recovery state changes",
+    "call_horizons": "unchanged",
+    "retreat_target": "unchanged",
+    "evaluator": "stage4_success_v1 unchanged",
+    "thresholds": {
+      "centroid_limit_mm": 1.0,
+      "vertex_p95_limit_mm": 3.0
+    },
+    "initial_regenerated": false
+  },
+  "observation_revision": {
+    "only_change": "observation semantics, material readback and reporting; no physics/control change",
+    "velocity_policy": {
+      "physical_source": "world-position backward finite difference",
+      "time_source": "world.current_time at each passive post-step snapshot",
+      "interval": "dt = sim_time_s[k] - sim_time_s[previous distinct frame]",
+      "raw_api": "ClothPrimView.get_velocities(clone=True)",
+      "raw_api_validated": false,
+      "raw_api_usage": "retained only as unvalidated data; not used for physical conclusions",
+      "single_frame_stage_velocity": "not computed; raw readback retained with invalid flag"
+    },
+    "material_readback": {
+      "stages": [
+        "after_construction",
+        "after_reset",
+        "after_initial_settle",
+        "after_recovery",
+        "pre_release"
+      ],
+      "fields": [
+        "particle material prim path and attrs",
+        "particleFrictionScale",
+        "friction",
+        "particle system binding targets",
+        "global self-collision",
+        "non-particle collision",
+        "particle contact offset",
+        "particle group and raw filter attrs",
+        "support collider material bindings"
+      ],
+      "expected": {
+        "friction": 0.3,
+        "particle_friction_scale": 1.0,
+        "global_self_collision_enabled": true,
+        "non_particle_collision_enabled": true
+      },
+      "solver_effective_boundary": "unverified; scene/USD readback only",
+      "mismatch_action": "stop before release and retain the partial evidence"
+    },
+    "semantic_validity": {
+      "file_completeness": "required result/evidence/stage files exist and their hashes match",
+      "observation_semantics": [
+        "finite-difference velocity policy is recorded",
+        "release-step records contain valid finite-difference velocities",
+        "raw velocity readback is marked unvalidated and is not required to be physically correct",
+        "material readback stages are present and match registered values",
+        "contact capability is recorded separately"
+      ],
+      "quality_acceptance": "evaluator quality accepted/rejected is recorded separately",
+      "raw_readback_is_not_semantic_pass": true,
+      "overall_pass": "file completeness AND observation semantics AND quality accepted"
+    },
+    "contact_capability": {
+      "supported_scope": "robot-rigid contacts only",
+      "cloth_ground_force_impulse": false,
+      "zero_events_interpretation": "not evidence of no contact",
+      "required_for_acceptance": false,
+      "reason": "existing ContactRecorder/report channel does not expose cloth-particle contacts (D2-B)"
+    }
+  },
+  "run": {
+    "seed": 4202,
+    "mode": "single",
+    "split": "dev",
+    "fold_edge": "right",
+    "one_shot": true,
+    "new_lock": "a5-rc2-pfs1-observation-v2-runs",
+    "does_not_reuse_pfs1_completed_marker": true,
+    "output_prefix": "day4-a5-rc2-pfs1-observation-v2-",
+    "allow_arc4": false,
+    "retry": false
+  },
+  "comparison": {
+    "against": "a5-rc2-pfs1 4202 single and RC2 4202 single",
+    "primary_purpose": "revalidate the same physics/control with valid observation semantics",
+    "windows": [
+      "after recovery",
+      "pre-release",
+      "release boundary",
+      "first 0.5 s",
+      "0.5 s bins through available trace",
+      "formal 210-330"
+    ],
+    "metrics": [
+      "file completeness",
+      "observation semantic validity",
+      "material scene readback",
+      "evaluator quality",
+      "centroid drift",
+      "vertex P95",
+      "rotation",
+      "finite-difference speed",
+      "z_min and penetration geometry"
+    ],
+    "no_contact_force_requirement": true,
+    "no_parameter_scan": true
+  },
+  "run_status": "not_run",
+  "formal_stage4_success": 0,
+  "notes": [
+    "Observation-only revision of a5-rc2-pfs1; physics parameter particleFrictionScale remains 1.0 and friction remains 0.3.",
+    "Finite-difference world-vertex velocity is the physical speed for this revision; the raw API readback is unvalidated.",
+    "Cloth-ground force/impulse remains unavailable and is not a new acceptance gate.",
+    "One 4202 single only, under a new manifest and a new one-shot lock; old pfs1 result and completed marker are preserved.",
+    "No 4302, seven-case RC, freeze, held-out or formal batch in this round."
+  ]
+}

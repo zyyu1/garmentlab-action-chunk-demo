@@ -1,0 +1,109 @@
+{
+  "version": "a5-rc2-pfs1",
+  "revision": "candidate-registered",
+  "created_utc": "2026-11-04T01:55:19Z",
+  "status": "candidate_registered_not_run",
+  "parent": "stage4-a5-rc2",
+  "parent_manifest_sha256": "39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d",
+  "parent_candidate_sha256": "10a6cb452b9fafd5907f245b68fd02d49c7af1e12fa6cb0f755f1791a5af27a5",
+  "base": "RC2 original recovery/fold flow; no D1-120 wait, no D2-C preopen or release-order change",
+  "initial": {
+    "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560",
+    "regenerated": false,
+    "hashes": {
+      "result.json": "4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb",
+      "initial_geometry.npz": "a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106"
+    }
+  },
+  "subject": {
+    "seed": 4202,
+    "level": "perturbed",
+    "mode": "single",
+    "split": "dev",
+    "fold_edge": "right"
+  },
+  "change": {
+    "parameter": "particleFrictionScale",
+    "semantic": "particle inter-friction scaling in the PBD particle material",
+    "old_value": 0.0,
+    "new_value": 1.0,
+    "scope": "episode start through initial dynamics, recovery, fold, release and retreat; not a release-only contact change",
+    "hypothesis": "particle inter-friction may affect later global slip through layer contact, fold shape or the release state",
+    "if_unchanged": "no sensitivity observed at this setting; this does not exclude other friction or contact mechanisms",
+    "explicitly_not_ground_friction": true
+  },
+  "preserved": {
+    "friction": 0.3,
+    "ground": "unchanged",
+    "collision": "unchanged",
+    "material_binding": "unchanged except particleFrictionScale",
+    "public_actions": 12,
+    "action_targets": "expert logic unchanged; may be recomputed if recovery observation changes",
+    "call_horizons": "unchanged",
+    "retreat_target": "unchanged",
+    "centroid_limit_mm": 1.0,
+    "vertex_p95_limit_mm": 3.0,
+    "evaluator": "stage4_success_v1 unchanged"
+  },
+  "observation": {
+    "stages": [
+      "initial_loaded",
+      "after_recovery",
+      "pre_release",
+      "release_boundary",
+      "pfs1_first_0_5s",
+      "pfs1_formal_210_330"
+    ],
+    "per_stage": "vertices, particle velocities (actual view readback when available), EE, joints, gripper, attachment",
+    "per_step": "pfs1_release_steps: release action and 331-step trace",
+    "release_t0": "pre-release last attached state; first detached physics step is the boundary sample; no zero-step post-disable sample in the RC2 original flow",
+    "sampling_error": "report pre-release -> first detached step/time interval; do not claim an exact instant"
+  },
+  "run": {
+    "seed": 4202,
+    "mode": "single",
+    "split": "dev",
+    "fold_edge": "right",
+    "one_shot": true,
+    "output_prefix": "day4-a5-rc2-pfs1-",
+    "allow_arc4": false
+  },
+  "expected_phenomenon": [
+    "if particle inter-friction is effective, release-transient decay and/or steady slip speed may decrease",
+    "if unchanged, no sensitivity is observed at this setting; other friction/contact mechanisms remain possible",
+    "recovery/fold geometry or stickiness may change because the parameter is active from episode start",
+    "release first-step centroid speed in the D1/D2-C diagnostics is ~11 mm/s; this is a speed measurement, not an impulse measurement"
+  ],
+  "comparison": {
+    "against": "RC2 4202 single",
+    "windows": [
+      "after recovery",
+      "pre-release",
+      "release t=0",
+      "first 0.5 s",
+      "0.5 s bins to 10 s",
+      "formal 210-330"
+    ],
+    "metrics": [
+      "actual action targets",
+      "centroid drift",
+      "vertex P95",
+      "rotation",
+      "particle/centroid speed",
+      "angular speed",
+      "z_min",
+      "penetration geometry",
+      "recovery/fold success"
+    ],
+    "pass": "original geometry + centroid <=1 mm + vertex P95 <=3 mm + complete release/evidence",
+    "no_scan": "one value, no parameter sweep; no seven-case rerun; no held-out; formal success count unchanged"
+  },
+  "run_status": "not_run",
+  "formal_stage4_success": 0,
+  "notes": [
+    "a5-rc2-pfs1 is derived from the RC2 original flow, not from D1-120 or D2-C.",
+    "Only particleFrictionScale changes from 0.0 to 1.0; friction remains 0.3.",
+    "The initial 4202 state file is reused with its existing hashes and is not regenerated.",
+    "This is a particle inter-friction sensitivity, not a claim that ground friction is fixed."
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "synthetic": false,
+  "frames": 1219,
+  "observed_steps": 2427,
+  "execute_calls": 12,
+  "errors": [],
+  "sources": {
+    "000_episode_evidence.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/episode_evidence.py",
+      "sha256": "67965e8302515062c9288236ba291e183c5d04f97b34970dffee8a3b7dc5eab8"
+    },
+    "001_a5_recovery.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/a5_recovery.py",
+      "sha256": "e06f814fa6079399c0b9c14c626b4126ebcdc27eeed4b1f465d7b96e704ae43c"
+    },
+    "002_STAGE4_SUCCESS_CRITERIA_V1.md": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/STAGE4_SUCCESS_CRITERIA_V1.md",
+      "sha256": "0b831130dd0ee5f72a9408fdceffed16f209e07a7f46b60b6a0d386787d252a3"
+    },
+    "003_a5-candidate.json": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/a5-candidate.json",
+      "sha256": "10a6cb452b9fafd5907f245b68fd02d49c7af1e12fa6cb0f755f1791a5af27a5"
+    },
+    "004_a5_capture.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/a5_capture.py",
+      "sha256": "a6cf0b41510b923f714eb9cddf6531cd1b20614be590645a034f5d1314592ee0"
+    },
+    "005_a5_entry.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/a5_entry.py",
+      "sha256": "b8f87af35d0eb45ec1997f7c0d3147c0bf13053e048568447b3aa387425256e2"
+    },
+    "006_a5_l1.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/a5_l1.py",
+      "sha256": "3d3d2994035d2cdfc78b23ac7abb8b1a8784539d5b2ac2add84f472ca9866b00"
+    },
+    "007_a5_report.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/a5_report.py",
+      "sha256": "f16d4fd2d51a4b24d77f5b181e0dff0bfc924fd5035f76376895b49166af81b7"
+    },
+    "008_audit_episode_evidence.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/audit_episode_evidence.py",
+      "sha256": "b1274e5fe579bc993e4822b9187403179bb8ea9ddeaa32cdaf9bd35d592142e6"
+    },
+    "009_audit_stage4_success_v1.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/audit_stage4_success_v1.py",
+      "sha256": "147c092ab85365fdfd6de182f24a9a7647a545c213513e722603a62e96a246ce"
+    },
+    "010_day4-l1-xfold-yaw-aware.py": {
+      "original": "/root/autodl-tmp/day4-l1-xfold-yaw-aware.py",
+      "sha256": "0aab8e7cd42f441a6dd9bfb547541bf806dc77740fd3f67a325e3e061036c53a"
+    },
+    "011_day4-recovery-fold-episode.py": {
+      "original": "/root/autodl-tmp/day4-recovery-fold-episode.py",
+      "sha256": "ddad4116ad33b38c8be2082de5a9fe43946f509bb7c272e931a8f136c74ab412"
+    },
+    "012_day4-square-initial-stripfold.py": {
+      "original": "/root/autodl-tmp/day4-square-initial-stripfold.py",
+      "sha256": "178ab10c08511b6dbb2ec1fd4581ab5af2493ee6a1ca7577ac49b575b913dcc6"
+    },
+    "013_day4-square-initial.py": {
+      "original": "/root/autodl-tmp/day4-square-initial.py",
+      "sha256": "038dfc6ad11d4eed970743cd4a7c3b4fd0e7ef30ffb93ecab539040be5f62ad4"
+    },
+    "014_early_descent_geometry.py": {
+      "original": "/root/autodl-tmp/early_descent_geometry.py",
+      "sha256": "8911934112870121df8fb5b373da7f67575f6ef138af30bbca51f694777d5d0d"
+    },
+    "015_base.py": {
+      "original": "/root/autodl-tmp/garmentlab-action-chunk-demo/backends/base.py",
+      "sha256": "d1d85718b3748df83743ac5d26693bd1cd35dfaca99f504bdec2f5ea94debc16"
+    },
+    "016_garmentlab_backend.py": {
+      "original": "/root/autodl-tmp/garmentlab-action-chunk-demo/backends/garmentlab_backend.py",
+      "sha256": "def9544ddbd597bddc6a2e65ae4d57165d69a80c4f5b6646cb67929ef4add372"
+    },
+    "017_action.py": {
+      "original": "/root/autodl-tmp/garmentlab-action-chunk-demo/schemas/action.py",
+      "sha256": "3801f47eb4489dee2d66a7c1287434493de8233b6345f246a80cad4985b669b0"
+    },
+    "018_observation.py": {
+      "original": "/root/autodl-tmp/garmentlab-action-chunk-demo/schemas/observation.py",
+      "sha256": "49ca2836985a46a798addeee9a27e72cbbd6eaeb25f4f693f0482a9c0790dd18"
+    },
+    "019_hem_fold_geometry.py": {
+      "original": "/root/autodl-tmp/hem_fold_geometry.py",
+      "sha256": "7d05f381e4e6e931422159ec722000c498e1efd910bf6903a61fa73f54c39156"
+    },
+    "020_hem_prepared_grasp_control.py": {
+      "original": "/root/autodl-tmp/hem_prepared_grasp_control.py",
+      "sha256": "46b6f7ac82a95df98bed3c91541ea7164552948b3e257a97dc303ce2aba38e63"
+    },
+    "021_l1_fold_geometry.py": {
+      "original": "/root/autodl-tmp/l1_fold_geometry.py",
+      "sha256": "15275f27cda85f7b0b761b598394928c40bd0bf716fa6f007ab5b55bd1e421e9"
+    },
+    "022_l1_yaw_fold_geometry.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/l1_yaw_fold_geometry.py",
+      "sha256": "aa1f8a6e3ede7f7b66e91961f2801ec4cd34abd1fd2cd75f5e593391ea50c933"
+    },
+    "023_minimum_fold_geometry.py": {
+      "original": "/root/autodl-tmp/minimum_fold_geometry.py",
+      "sha256": "86ef99d36f2288546dab8bbea290a87d52efd84d47d215ad8d916b04943faa03"
+    },
+    "024_multi_grasp_geometry.py": {
+      "original": "/root/autodl-tmp/multi_grasp_geometry.py",
+      "sha256": "b4acc72886a80cb0ac37eb62d2189a0a28755a79777778077cf34bdbe53d5656"
+    },
+    "025_multi_prepared_grasp_control.py": {
+      "original": "/root/autodl-tmp/multi_prepared_grasp_control.py",
+      "sha256": "579de3d63230c51da7f17693a6995ab411fedfd6c3d00d76a7f0209c545e537c"
+    },
+    "026_rc2_live_backend.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/rc2_live_backend.py",
+      "sha256": "6ce84c4f0aef0452ea7625065d44c475e01dd083a65460687af586850bd40dd2"
+    },
+    "027_room_collision_control.py": {
+      "original": "/root/autodl-tmp/room_collision_control.py",
+      "sha256": "023c3a93dd4fb21db312223056834d5849cf070d7aed157d42f491f20721888e"
+    },
+    "028_run-l1-xfold-yaw-aware.sh": {
+      "original": "/root/autodl-tmp/run-l1-xfold-yaw-aware.sh",
+      "sha256": "560d38bbb08308ad808fd37e119b1059b45d4b625c849e893a879850d309e3db"
+    },
+    "029_run-recovery-fold-episode.sh": {
+      "original": "/root/autodl-tmp/run-recovery-fold-episode.sh",
+      "sha256": "41026c913f128690ad50c6e1446fbab33716927509d182f3d427d70e69493e59"
+    },
+    "030_run-square-initial-stripfold.sh": {
+      "original": "/root/autodl-tmp/run-square-initial-stripfold.sh",
+      "sha256": "1116550f65b9282c2a0e85f321c9ceb863cf8f1fe152c36bc48e387ebc34b631"
+    },
+    "031_run-square-initial.sh": {
+      "original": "/root/autodl-tmp/run-square-initial.sh",
+      "sha256": "b22f848ee995c88b48d550ba83687ee6d804b9a2731fabb054fa143687bc4637"
+    },
+    "032_run-stage4-formal-batch.sh": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/run-stage4-formal-batch.sh",
+      "sha256": "79ee868c146d7cdf012c342e4bc048b5780195e625e750d357e81ade469662d5"
+    },
+    "033_single_anchor_hem_control.py": {
+      "original": "/root/autodl-tmp/single_anchor_hem_control.py",
+      "sha256": "0fba623e7c023499a787fac366d74ca6700017c0804a9fa367bd06e1cee92547"
+    },
+    "034_square-difficulty.yaml": {
+      "original": "/root/autodl-tmp/square-difficulty.yaml",
+      "sha256": "a42fec8a1069ad43525d609bd058d9540bb7d6a1370d580abfc8616f61cd24f4"
+    },
+    "035_square-initial-files.json": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/square-initial-files.json",
+      "sha256": "bccf3e157d96a53c4afba154194ddb652880f7634bedca912b9b5e4127ec5940"
+    },
+    "036_square-initial-plan.json": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/square-initial-plan.json",
+      "sha256": "32e61d575d77eae0943cb2251d10c25b12d7f0d9f8f962ddd96dc1a4d4d2ab85"
+    },
+    "037_square-initial-stripfold-files.json": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/square-initial-stripfold-files.json",
+      "sha256": "70b1793b5a87f69e9a4cbde5f6b40b047120eed798bdd895dee27e33072477f0"
+    },
+    "038_square-l1-xfold-yaw-files.json": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/square-l1-xfold-yaw-files.json",
+      "sha256": "a9d9eddfe0bf6e1d4d6c7e628ac654dce444b2b74389fec2c0ceeee6c50f1adf"
+    },
+    "039_square-recovery-fold-files.json": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/square-recovery-fold-files.json",
+      "sha256": "16cd67135dee249caa81ff4d23fed3ff9819db1b7f2e2119a9ee535849ed8cf1"
+    },
+    "040_square_cloth_40cm.usda": {
+      "original": "/root/autodl-tmp/square_cloth_40cm.usda",
+      "sha256": "fef138f6dd76484f3452455bf98cdc4d166812d290631125a5c375de8308ef7e"
+    },
+    "041_square_contact_recorder.py": {
+      "original": "/root/autodl-tmp/square_contact_recorder.py",
+      "sha256": "c91ba601babd927f335b16b6e2620ad9365d4dce950679ab8af0c31a04428934"
+    },
+    "042_square_contact_reporting.py": {
+      "original": "/root/autodl-tmp/square_contact_reporting.py",
+      "sha256": "178e79ac6de58ff25b42b6a3789123994169c110015848748a96fcce682e58a3"
+    },
+    "043_square_control_trace.py": {
+      "original": "/root/autodl-tmp/square_control_trace.py",
+      "sha256": "2b8fae48be4276fcc2aedb253b54b0a4e5c507aad1495927a83b01f145c9387d"
+    },
+    "044_square_edge_control.py": {
+      "original": "/root/autodl-tmp/square_edge_control.py",
+      "sha256": "6f16c10fddd2bede41f630ab5754fd88c0e8faee0d05153da5918a8859a17ef7"
+    },
+    "045_square_edge_fold_geometry.py": {
+      "original": "/root/autodl-tmp/square_edge_fold_geometry.py",
+      "sha256": "a27d32c730f75a56645616bcf02a6a502e7f4052d10803a9364b0b0cc57be4fd"
+    },
+    "046_square_geometry.py": {
+      "original": "/root/autodl-tmp/square_geometry.py",
+      "sha256": "e4702577f5e405d5b5cca29d00609c3f81edc19ffdd9e5a75aed5c5b67fad64e"
+    },
+    "047_square_pose_backend.py": {
+      "original": "/root/autodl-tmp/square_pose_backend.py",
+      "sha256": "f78261623a4c48ef5de2db2bb951f68d626d437e2504c7b233c883af7f868b24"
+    },
+    "048_square_pose_contract.py": {
+      "original": "/root/autodl-tmp/square_pose_contract.py",
+      "sha256": "31179c3e5f5d185499e13db42a758bc5692de6b01c006fa02c16aa3e70a8d148"
+    },
+    "049_square_probe_control.py": {
+      "original": "/root/autodl-tmp/square_probe_control.py",
+      "sha256": "c8fc57915dbcc5e47752012756a94c7a43e80eac897d4b0e2da2b2a3eb2f7727"
+    },
+    "050_square_proxy_ground_control.py": {
+      "original": "/root/autodl-tmp/square_proxy_ground_control.py",
+      "sha256": "b315a4e5f044ed0de81d11570e05a6c9bd0201e889ba1c1eae28ebd8e91fa05b"
+    },
+    "051_square_stable_hold.py": {
+      "original": "/root/autodl-tmp/square_stable_hold.py",
+      "sha256": "693c397952dc9bc7a5a4cb2abe762e42fea58279cad87c4338971ffc94b85cb2"
+    },
+    "052_square_start.py": {
+      "original": "/root/autodl-tmp/square_start.py",
+      "sha256": "d2b47783c263fc9ecf732402d82cf3a71ea8435db69c6667676fa0cdf633cdae"
+    },
+    "053_stage4-heldout-seeds.json": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/stage4-heldout-seeds.json",
+      "sha256": "15c87eec47412eaaa437a7c4627480ddb1315de3aafdd0f091a73601dfa6feed"
+    },
+    "054_stage4-success-v1-files.json": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/stage4-success-v1-files.json",
+      "sha256": "5aa25774ce0a916c1371762c7f3e55350e62d3e55365f2e54e67b08213a50324"
+    },
+    "055_stage4-success-v1.json": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/stage4-success-v1.json",
+      "sha256": "c51853c585955b399145bd9af211dc38f5b086a8c1fa0a4b391eb432f4bf9c55"
+    },
+    "056_stage4_batch_preflight.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/stage4_batch_preflight.py",
+      "sha256": "1e39daa18d57ce3ac7557e321386fe46bd31e3675e70477ae158786e939d3ba5"
+    },
+    "057_stage4_success_v1.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/stage4_success_v1.py",
+      "sha256": "8354b61286fa8bd37bc60444f1a237d9c8a5504a30e71df26352bb94496aa76d"
+    },
+    "058_strip_prepared_control.py": {
+      "original": "/root/autodl-tmp/strip_prepared_control.py",
+      "sha256": "49075fb4bf90d08e2186ea8c734da38429ebcc53f807949276aac52e404bce90"
+    },
+    "059_test_stage4_success_v1.py": {
+      "original": "/root/autodl-tmp/stage4-a5-rc2/app/test_stage4_success_v1.py",
+      "sha256": "0a6c6de220e1d8fa91565222afdca96b6c9e5bead84e9b809ebbd584d6981db8"
+    },
+    "060_FoldEnv.py": {
+      "original": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/FoldEnv.py",
+      "sha256": "e0aff36e6b25d724cd8c7f2ffd4dd7c53ffd95693f4e502457eaecf63ebcbe24"
+    },
+    "061_MyFranka.py": {
+      "original": "/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py",
+      "sha256": "adc6abc5b8721a0730fe7281d6cc1d89a6b7e1abad0d7b5da167369f0371428a"
+    }
+  },
+  "samples": {
+    "released": {
+      "kind": "sample",
+      "utc": "2026-11-03T18:41:04.468836+00:00",
+      "monotonic_ns": 21830969822186415,
+      "sim_time_s": 32.58333503268659,
+      "observed_step": 1953,
+      "call_id": 12,
+      "label": "released",
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.1683365157140608,
+        -0.47106278389122935,
+        0.046766248577871906
+      ],
+      "backend_step": 1953
+    },
+    "retreated": {
+      "kind": "sample",
+      "utc": "2026-11-03T18:41:46.282333+00:00",
+      "monotonic_ns": 21831011635687067,
+      "sim_time_s": 34.983335157856345,
+      "observed_step": 2097,
+      "call_id": null,
+      "label": "retreated",
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.16653006395782308,
+        -0.47161288312375294,
+        0.19278670926273322
+      ],
+      "backend_step": 2097
+    },
+    "hold_3s": {
+      "kind": "sample",
+      "utc": "2026-11-03T18:42:29.678663+00:00",
+      "monotonic_ns": 21831055032027202,
+      "sim_time_s": 37.98333531431854,
+      "observed_step": 2277,
+      "call_id": null,
+      "label": "hold_3s",
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.16651194052560345,
+        -0.4716181395988741,
+        0.19286317959683263
+      ],
+      "backend_step": 2277
+    },
+    "hold_4s": {
+      "kind": "sample",
+      "utc": "2026-11-03T18:42:44.071892+00:00",
+      "monotonic_ns": 21831069425239438,
+      "sim_time_s": 38.9833353664726,
+      "observed_step": 2337,
+      "call_id": null,
+      "label": "hold_4s",
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.1665119443761685,
+        -0.47161813823087945,
+        0.19286317959678212
+      ],
+      "backend_step": 2337
+    },
+    "terminal": {
+      "kind": "sample",
+      "utc": "2026-11-03T18:43:06.665997+00:00",
+      "monotonic_ns": 21831092019347514,
+      "sim_time_s": 40.4833354447037,
+      "observed_step": 2427,
+      "call_id": null,
+      "label": "terminal",
+      "holding": false,
+      "attached": false,
+      "enabled_slots": [
+        false,
+        false,
+        false
+      ],
+      "logical_attached": false,
+      "command_holding": false,
+      "ee_m": [
+        -0.16651193921767043,
+        -0.471618140049334,
+        0.19286317959676533
+      ],
+      "backend_step": 2427
+    }
+  },
+  "formal_day4_success": false,
+  "playback_fps": 30,
+  "time_authority": "timeline.sim_time_s; video playback is not elapsed simulation time"
+}
