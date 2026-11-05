@@ -1,0 +1,51 @@
+{
+  "slots": 6,
+  "accepted": 5,
+  "rejected_complete": 1,
+  "all_six_positives_accepted": false,
+  "positive_expectation_met": false,
+  "cases": [
+    {
+      "slot": 2,
+      "seed": 4100,
+      "mode": "arc4",
+      "decision": "accepted",
+      "run": "/root/autodl-tmp/day4-a5-rc2-l1-20261105-083859-341524"
+    },
+    {
+      "slot": 3,
+      "seed": 4202,
+      "mode": "single",
+      "decision": "accepted",
+      "run": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-085248-353214"
+    },
+    {
+      "slot": 4,
+      "seed": 4202,
+      "mode": "arc4",
+      "decision": "accepted",
+      "run": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-091038-643466"
+    },
+    {
+      "slot": 5,
+      "seed": 4302,
+      "mode": "single",
+      "decision": "accepted",
+      "run": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-092821-242307"
+    },
+    {
+      "slot": 6,
+      "seed": 4302,
+      "mode": "arc4",
+      "decision": "accepted",
+      "run": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-094700-143205"
+    },
+    {
+      "slot": 7,
+      "seed": 4201,
+      "mode": "single",
+      "decision": "frozen_failure",
+      "run": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-100445-893957"
+    }
+  ]
+}

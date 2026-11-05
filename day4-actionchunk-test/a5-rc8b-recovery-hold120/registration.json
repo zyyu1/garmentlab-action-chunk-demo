@@ -1,0 +1,159 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "diagnostic-recovery-hold120",
+  "stage": "hold120_completed_accepted_audit_recovered",
+  "kind": "diagnostic_single_case_recovery_hold",
+  "parent": "a5-rc2-pfs1-observation-v2-rc8b",
+  "parent_manifest_sha256": "cce573ddd626715b15818467290152a4c68502bafc9595b11780fe1dd601bc8e",
+  "identity": {
+    "manifest_sha256": "b61fd56e962cafa4a2900bc7eda19572e1cd78b0aaf556e99bcc9eeedb08a0ec",
+    "manifest_entries": 63,
+    "changed_vs_parent": [
+      "a5_recovery.py",
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "unchanged_vs_parent": 60,
+    "a5_recovery_sha256": "5055931dc4cecc27e205204ea10cb87fb0236c8f59144c341524283bbf7548ac",
+    "config_sha256": "da4cbe9046f3ca4fcf19967196bebfeb36af685ba90400c0a96624a9ebcc7b69",
+    "runner_sha256": "68693f87e085847cb4e85798db1033bf48da862ad283995bf87dc87e5b2308d4"
+  },
+  "initial": {
+    "dir": "day4-square-initial-stripfold-20261105-015817-115841",
+    "source": "rc8b new 4202 initial; not l2pose, l2patch9 or old pfs=0",
+    "result_sha256": "1eef6c8395fcc720cae4323e7c9aabf8b1e426df49ce814f2d82188844528d89",
+    "geometry_sha256": "13b568082faaa293153487b19cde371608e11ad51429e0ce8dce64397a22151e",
+    "task_protocol": "L2 initial generation and rollout both particleFrictionScale=1.0"
+  },
+  "hold": {
+    "steps": 120,
+    "dt_s": 0.016666666666666666,
+    "duration_s": 2.0,
+    "insertion_point": "after rec_release and the normal 240-step recovery settle, before re-observation and fold pick/yaw",
+    "events": [
+      "recovery_retreat_end",
+      "recovery_hold_begin",
+      "recovery_hold_end",
+      "fold_observation"
+    ],
+    "trace": "121 frames (1 before + 120 after); FD world-vertex velocities, 120 intervals, no zero fill",
+    "state_checks": "holding=false, logical attachment off, command holding false, all attachment-enabled slots off, step +1, dt=1/60 each step",
+    "control": "keep current target; no move/open/close call",
+    "cloth": "no position reset, no velocity clear, no material change",
+    "evaluation": "release_retreat completion remains step 0; original windows/evaluator/thresholds",
+    "excluded": [
+      "D1 post-release wait",
+      "D2-C preopen"
+    ]
+  },
+  "scope_lock": {
+    "seeds": [
+      4202
+    ],
+    "modes": [
+      "single"
+    ]
+  },
+  "run": {
+    "one_attempt": true,
+    "retry": false,
+    "lock": "a5-rc8b-recovery-hold120-runs",
+    "journal": "/root/autodl-tmp/a5-rc8b-recovery-hold120-runs/journal",
+    "result_dir": "results/RC8B_L2_DIAG_20261105/hold120_run/day4-a5-rc2-pfs1-observation-v2-20261105-064625-336724",
+    "quality": "accepted",
+    "centroid_mm": 0.237415,
+    "p95_mm": 0.348438,
+    "stationary_drift_mm": 6.685628,
+    "geometry_failure_frames": 0,
+    "first_failure_step": null,
+    "download_verified": "113/113 files",
+    "entry_exit": 0,
+    "runner_exit": 3,
+    "runner_exit_reason": "audit print KeyError 'recovery_hold' after simulation/evidence write",
+    "postrun_audit_exit": 0,
+    "postrun_audit_overall_valid": true,
+    "simulation_rerun": false
+  },
+  "run_status": "completed_accepted_runner_audit_error_recovered",
+  "formal_stage4_success": 0,
+  "notes": [
+    "Diagnostic only; not part of the seven-case matrix or formal success.",
+    "No patch expansion, no friction scan, no other seeds, no held-out, no freeze."
+  ],
+  "hold_result": {
+    "frames": 121,
+    "intervals": 120,
+    "duration_s": 2.0,
+    "events": {
+      "recovery_retreat_end_step": 1027,
+      "recovery_hold_begin_step": 1028,
+      "recovery_hold_begin_time_s": 17.1666675619781,
+      "recovery_hold_end_step": 1148,
+      "recovery_hold_end_time_s": 19.16666766628623,
+      "fold_observation_step": 1148
+    },
+    "centroid_speed_mm_s_by_window": [
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001
+    ],
+    "particle_p95_mm_s_by_window": [
+      0.0074,
+      0.0072,
+      0.0054,
+      0.0054
+    ],
+    "rotation_deg_by_window": [
+      1e-05,
+      1e-05,
+      0.0,
+      1e-05
+    ],
+    "ee_drift_mm": 0.0,
+    "all_holding_false": true,
+    "all_attachments_off": true,
+    "control_target_constant": true
+  },
+  "comparison_vs_rc8b": {
+    "new_quality": "rejected",
+    "hold_quality": "accepted",
+    "new_centroid_p95_mm": [
+      7.480913,
+      11.538153
+    ],
+    "hold_centroid_p95_mm": [
+      0.237415,
+      0.348438
+    ],
+    "old_centroid_p95_mm": [
+      0.264171,
+      0.379168
+    ],
+    "new_stationary_mm": 29.914403,
+    "hold_stationary_mm": 6.685628,
+    "old_stationary_mm": 7.244619,
+    "new_first_fail": 249,
+    "hold_first_fail": null,
+    "target_max_mm": 0.0014,
+    "fold_yaw_diff_deg": 4e-05,
+    "pre_release_max_mm": 0.9775,
+    "release_boundary_max_mm": 0.9995,
+    "fold_extent_hold": [
+      0.225236,
+      0.418996,
+      0.06032
+    ],
+    "note": "hold motion was already ~0; extra static steps changed the downstream fold outcome; mechanism not isolated"
+  },
+  "review": "results/RC8B_L2_DIAG_20261105/hold120_review.md",
+  "next": "Review the accepted single run as a candidate interface improvement before any expansion; do not extend hold, scan friction, add seeds, rerun seven cases, freeze or run held-out.",
+  "audit_fix": {
+    "original_runner_exit": 3,
+    "original_error": "KeyError: 'recovery_hold' in audit print",
+    "full_audit_on_saved_result_exit": 0,
+    "history_preserved": true,
+    "superseded_by": "a5-rc8b-recovery-hold120-r2",
+    "note": "r1 accepted evidence kept as development evidence; not a clean runner completion"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "version": "stage4-a5-rc2",
+  "status": "candidate",
+  "tasks": {
+    "flat": {
+      "runner": "l1",
+      "edge": "left",
+      "actions": 7,
+      "task": "A_l1_overfold"
+    },
+    "perturbed": {
+      "runner": "recovery",
+      "edge": "right",
+      "actions": 12,
+      "task": "B_nominal"
+    },
+    "crumpled": {
+      "runner": "recovery",
+      "edge": "right",
+      "actions": 12,
+      "task": "B_nominal"
+    }
+  },
+  "development": {
+    "4100": {
+      "initial": "day4-square-initial-20261105-014501-526555",
+      "files": {
+        "result.json": "df9ed58289bb1a7a1e9077190d8c32c99f08ca6a6dbd186b342c128593e8ee29",
+        "initial_geometry.npz": "dd5783038cd7ae95c17525574ca9c76d0df2399261a6df6a0c8f09a5b351bcb3"
+      },
+      "modes": [
+        "single",
+        "arc4"
+      ],
+      "positive": true
+    },
+    "4202": {
+      "initial": "day4-square-initial-stripfold-20261105-015817-115841",
+      "files": {
+        "result.json": "1eef6c8395fcc720cae4323e7c9aabf8b1e426df49ce814f2d82188844528d89",
+        "initial_geometry.npz": "13b568082faaa293153487b19cde371608e11ad51429e0ce8dce64397a22151e"
+      },
+      "modes": [
+        "single",
+        "arc4"
+      ],
+      "positive": true
+    },
+    "4302": {
+      "initial": "day4-square-initial-stripfold-20261105-020706-026048",
+      "files": {
+        "result.json": "6a06021d61a8a051e40f148eee8006c84b372dbf4a6d3f8fe8c6c14b083f5075",
+        "initial_geometry.npz": "bc0853599bc0328baf62cf57c7c6573cdfbb482c97cbf1c032efd9e5b5a83f13"
+      },
+      "modes": [
+        "single",
+        "arc4"
+      ],
+      "positive": true
+    },
+    "4201": {
+      "initial": "day4-square-initial-stripfold-20261105-014825-318974",
+      "files": {
+        "result.json": "156765f607925736493e38ff8f14a2a609e12fbc1353a2909257d154de0bbabf",
+        "initial_geometry.npz": "219ac39bdcb2799e8290d2ece1df1d4a6d2bb2b2f3eb60712beec511275660e7"
+      },
+      "modes": [
+        "single"
+      ],
+      "positive": false
+    }
+  },
+  "release_action": "public OPEN target = measured EE + [0,0,0.15] m; existing ungrasp before move",
+  "sampling": "after release_retreat returns, sample [0,330] at 60 Hz; geometry and stability [210,330]",
+  "freeze_rule": "seven pre-registered real runs, six positives, complete control evidence, comparable mode targets; explicit freeze only",
+  "parent": "stage4-a5-rc1",
+  "camera_start": "Prime camera using render-only probes, require valid startup RGB at unchanged physics tick",
+  "holding_state": "backend live slot holding; independent USD enable readback and command latch in timeline",
+  "place_hold_steps": {
+    "flat": 60,
+    "perturbed": 180,
+    "crumpled": 180
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "final-candidate-hold120-rc7-r2",
+  "created_utc": "2026-11-05T18:40:00Z",
+  "status": "resume_registered_not_run",
+  "final_candidate": true,
+  "parent": "a5-rc8b-recovery-hold120-rc7",
+  "parent_manifest_sha256": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df",
+  "base_manifest_sha256": "cce573ddd626715b15818467290152a4c68502bafc9595b11780fe1dd601bc8e",
+  "base": "a5-rc2-pfs1-observation-v2-rc8b",
+  "physics_scope": {
+    "decision": "task_scoped",
+    "routing_key": "task identity: flat -> 0.0, perturbed/crumpled -> 1.0",
+    "tasks": {
+      "flat": {
+        "particle_friction_scale": 0.0,
+        "friction": 0.3,
+        "applies_to": "L1 independent overfold"
+      },
+      "perturbed": {
+        "particle_friction_scale": 1.0,
+        "friction": 0.3,
+        "applies_to": "L2 nominal right"
+      },
+      "crumpled": {
+        "particle_friction_scale": 1.0,
+        "friction": 0.3,
+        "applies_to": "L3 nominal right"
+      }
+    },
+    "set_at": "material construction, before reset and before any physics step",
+    "applies_to": [
+      "initial generation",
+      "reset",
+      "rollout"
+    ],
+    "routing_inputs_excluded": [
+      "seed",
+      "execution mode",
+      "run result"
+    ],
+    "same_task_single_arc4_identical": true,
+    "uniform_physics_claim": false,
+    "reporting_requirement": "All results are reported per task; the matrix is not a uniform-physics initial-state difficulty comparison.",
+    "changed_simulation_sources": [
+      "a5_l1.py: L1 rollout 0.0 (unchanged from rc8)",
+      "pfs1_observation_v2.py: per-task expected scale (unchanged from rc8)",
+      "day4-square-initial.py: flat initial generation 0.0 + protocol identity fields",
+      "day4-square-initial-stripfold.py: L2/L3 initial generation 1.0 + protocol identity fields",
+      "run-square-initial.sh / run-square-initial-stripfold.sh: app-relative execution",
+      "run-stage4-formal-batch.sh: app-relative execution; uses candidate scripts",
+      "stage4_batch_preflight.py: initial protocol/binding/scale/generator checks"
+    ],
+    "unchanged_simulation_sources": [
+      "a5_recovery.py",
+      "a5_capture.py",
+      "a5_entry.py",
+      "stage4_success_v1.py"
+    ],
+    "public_actions": "L1 7, L2/L3 12; command and horizon semantics unchanged",
+    "thresholds": {
+      "centroid_limit_mm": 1.0,
+      "vertex_p95_limit_mm": 3.0
+    },
+    "evaluator": "stage4_success_v1 unchanged"
+  },
+  "initial_protocol": {
+    "version": "stage4-initial-v2-task-scoped",
+    "recorded_fields": [
+      "task",
+      "level",
+      "seed",
+      "particle_friction_scale_expected",
+      "particle_friction_scale_readback",
+      "material_binding.particle_material",
+      "material_binding.particle_system",
+      "generator.script",
+      "generator.script_sha256",
+      "generator.files_manifest",
+      "generator.files_manifest_sha256",
+      "generated_utc"
+    ],
+    "formal_preflight": "stage4_batch_preflight.initial() rejects missing, wrong-scale, missing-binding, generator-mismatch and old (pre-protocol) initials",
+    "old_initial_fallback": "forbidden",
+    "generated_this_round": {
+      "4100": "day4-square-initial-20261105-014501-526555",
+      "4201": "day4-square-initial-stripfold-20261105-014825-318974",
+      "4202": "day4-square-initial-stripfold-20261105-015817-115841",
+      "4302": "day4-square-initial-stripfold-20261105-020706-026048"
+    },
+    "regenerated": true
+  },
+  "observation_scope": {
+    "same_as_v2": true,
+    "material_readback": {
+      "stages": [
+        "after_construction",
+        "after_reset",
+        "after_initial_settle",
+        "after_recovery",
+        "pre_release"
+      ],
+      "task_expected": {
+        "flat": 0.0,
+        "perturbed": 1.0,
+        "crumpled": 1.0
+      },
+      "l1_stages": [
+        "after_construction",
+        "after_reset",
+        "after_initial_settle",
+        "pre_release"
+      ],
+      "enforced": "record_material_stage stops on mismatch before release"
+    },
+    "velocity": "world-position backward finite difference; raw readback unvalidated",
+    "contact_capability": {
+      "supported_scope": "robot-rigid only",
+      "cloth_ground_force_impulse": false,
+      "required_for_acceptance": false
+    },
+    "solver_effective": "unverified; scene/USD readback only"
+  },
+  "matrix": [
+    {
+      "slot": 1,
+      "seed": 4100,
+      "level": "flat",
+      "task": "A_l1_overfold",
+      "mode": "single",
+      "actions": 7,
+      "positive": true
+    },
+    {
+      "slot": 2,
+      "seed": 4100,
+      "level": "flat",
+      "task": "A_l1_overfold",
+      "mode": "arc4",
+      "actions": 7,
+      "positive": true
+    },
+    {
+      "slot": 3,
+      "seed": 4202,
+      "level": "perturbed",
+      "task": "B_nominal",
+      "mode": "single",
+      "actions": 12,
+      "positive": true
+    },
+    {
+      "slot": 4,
+      "seed": 4202,
+      "level": "perturbed",
+      "task": "B_nominal",
+      "mode": "arc4",
+      "actions": 12,
+      "positive": true
+    },
+    {
+      "slot": 5,
+      "seed": 4302,
+      "level": "crumpled",
+      "task": "B_nominal",
+      "mode": "single",
+      "actions": 12,
+      "positive": true
+    },
+    {
+      "slot": 6,
+      "seed": 4302,
+      "level": "crumpled",
+      "task": "B_nominal",
+      "mode": "arc4",
+      "actions": 12,
+      "positive": true
+    },
+    {
+      "slot": 7,
+      "seed": 4201,
+      "level": "perturbed",
+      "task": "B_nominal_history_failure",
+      "mode": "single",
+      "actions": 12,
+      "positive": false
+    }
+  ],
+  "initial": {
+    "regenerated": true,
+    "4100": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-20261105-014501-526555",
+      "result.json": "df9ed58289bb1a7a1e9077190d8c32c99f08ca6a6dbd186b342c128593e8ee29",
+      "initial_geometry.npz": "dd5783038cd7ae95c17525574ca9c76d0df2399261a6df6a0c8f09a5b351bcb3"
+    },
+    "4201": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261105-014825-318974",
+      "result.json": "156765f607925736493e38ff8f14a2a609e12fbc1353a2909257d154de0bbabf",
+      "initial_geometry.npz": "219ac39bdcb2799e8290d2ece1df1d4a6d2bb2b2f3eb60712beec511275660e7"
+    },
+    "4202": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261105-015817-115841",
+      "result.json": "1eef6c8395fcc720cae4323e7c9aabf8b1e426df49ce814f2d82188844528d89",
+      "initial_geometry.npz": "13b568082faaa293153487b19cde371608e11ad51429e0ce8dce64397a22151e"
+    },
+    "4302": {
+      "dir_remote": "/root/autodl-tmp/day4-square-initial-stripfold-20261105-020706-026048",
+      "result.json": "6a06021d61a8a051e40f148eee8006c84b372dbf4a6d3f8fe8c6c14b083f5075",
+      "initial_geometry.npz": "bc0853599bc0328baf62cf57c7c6573cdfbb482c97cbf1c032efd9e5b5a83f13"
+    }
+  },
+  "run": {
+    "one_attempt_per_slot": true,
+    "retry": false,
+    "pair_target_atol": 1e-06,
+    "lock": "a5-rc8b-recovery-hold120-rc7-r2-resume",
+    "journal": "/root/autodl-tmp/a5-rc8b-recovery-hold120-rc7-r2-resume/journal",
+    "output_prefix": "day4-a5-rc2-pfs1-observation-v2-"
+  },
+  "stop_rules": {
+    "preflight_mismatch": "stop before any episode",
+    "missing_result_or_execution_error_or_incomplete_capture_or_semantics_invalid": "pause queue, retain scene",
+    "positive_quality_rejected_with_complete_evidence": "record frozen failure, continue remaining registered cases",
+    "pair_target_drift_above_atol": "pause queue",
+    "code_parameter_or_threshold_change_required": "end this candidate batch; register a new version"
+  },
+  "release_gates": [
+    "all six positive cases accepted",
+    "4201 has a valid accepted or rejected evaluation",
+    "all seven evidence sets complete; three single/arc4 pairs pass",
+    "video visual check of release/retreat/no sustained support",
+    "local recomputation matches remote",
+    "original verify-dev passes for this candidate identity",
+    "formal preflight accepts the regenerated task-scoped initials and rejects old ones"
+  ],
+  "reporting_notes": [
+    "Results are per task; this is not a uniform-physics difficulty curve.",
+    "New L2/L3 initials were generated at 1.0 and may differ from the old 0.0-settled states; task identity (strip edge/width) is checked, not assumed identical.",
+    "rc7 uniform failure and rc8 freeze block remain in the history; rc8 results are not reused here."
+  ],
+  "run_status": "not_run",
+  "formal_stage4_success": 0,
+  "notes": [
+    "Task protocol applies to initial generation, reset and rollout; routing is by task identity only.",
+    "Initial results record protocol version, task, material binding, scale readback and generator hashes.",
+    "Formal preflight rejects old or mismatched initials; no fallback to pre-protocol states.",
+    "4100 was regenerated under the same flat protocol and its geometry is byte-identical to the old state.",
+    "No freeze, no held-out, no formal batch in this round."
+  ],
+  "kind": "final_candidate_seven_case_rc_auditfix",
+  "diagnostic_of": "a5-rc2-pfs1-observation-v2-rc8b",
+  "scope_lock": {
+    "seeds": [
+      4202
+    ],
+    "modes": [
+      "single"
+    ]
+  },
+  "recovery_hold": {
+    "steps": 120,
+    "dt_s": 0.016666666666666666,
+    "duration_s": 2.0,
+    "insertion_point": "after recovery rec_release + normal 240-step settle, before re-observation and fold pick/yaw",
+    "events": [
+      "recovery_retreat_end",
+      "recovery_hold_begin",
+      "recovery_hold_end",
+      "fold_observation"
+    ],
+    "control": "keep current target; no move/open/close call",
+    "cloth": "no position reset, no velocity clear, no material change",
+    "observation": "121 frames (1 before + 120 after); FD velocities from world vertices; no zero fill",
+    "evaluation": "release_retreat completion remains step 0; original windows/evaluator/thresholds",
+    "excluded": [
+      "D1 post-release wait",
+      "D2-C preopen"
+    ],
+    "audit_fix": true
+  },
+  "audit_fix": {
+    "only_change": "audit output contract; no physics/control/hold/sampling change",
+    "original_runner_exit": 3,
+    "original_error": "KeyError: 'recovery_hold' in audit print projection",
+    "full_audit_on_saved_result_exit": 0,
+    "simulation_rerun": false
+  },
+  "hold_total_timing": "rec_release return -> original 240-step settle -> 120-step hold; total 360 physics steps from rec_release return; do not describe as only 120",
+  "hold_scope": {
+    "flat": "not_applicable (L1 has no recovery stage)",
+    "perturbed": "applicable: 120 steps after the original 240-step recovery settle",
+    "crumpled": "applicable: 120 steps after the original 240-step recovery settle",
+    "modes": [
+      "single",
+      "arc4"
+    ],
+    "same_position_and_duration": true
+  },
+  "resume": {
+    "slots": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "slot1_reused": true,
+    "slot1_rerun": false,
+    "original_runs": "a5-rc8b-recovery-hold120-rc7-runs",
+    "slot1_result": "/root/autodl-tmp/day4-a5-rc2-l1-20261105-081311-735952",
+    "same_seed_shared_initial": true,
+    "note": "separate resume ledger; original attempts.jsonl is not modified"
+  }
+}

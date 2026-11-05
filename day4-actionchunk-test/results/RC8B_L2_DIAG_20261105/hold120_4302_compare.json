@@ -1,0 +1,109 @@
+{
+  "hold": {
+    "frames": 121,
+    "intervals": 120,
+    "duration_s": 2.0000001043081284,
+    "bins": [
+      {
+        "window_s": [
+          0.0,
+          0.5
+        ],
+        "centroid_mm_s": 9.706240866070341e-05,
+        "particle_p95_mm_s": 0.006210406094000828,
+        "rotation_deg": -8.359281374653089e-06,
+        "ee_drift_mm": 0.00016064088063404963,
+        "centroid_disp_mm": 9.880209557182105e-06
+      },
+      {
+        "window_s": [
+          0.5,
+          1.0
+        ],
+        "centroid_mm_s": 0.00010200079964807748,
+        "particle_p95_mm_s": 0.005654592803554694,
+        "rotation_deg": 2.5946710602225786e-06,
+        "ee_drift_mm": 0.00016064088063404963,
+        "centroid_disp_mm": 1.20822059255211e-05
+      },
+      {
+        "window_s": [
+          1.0,
+          1.5
+        ],
+        "centroid_mm_s": 0.00012025442809366764,
+        "particle_p95_mm_s": 0.005364417750008969,
+        "rotation_deg": 6.4449307158041016e-06,
+        "ee_drift_mm": 0.00014781800126903943,
+        "centroid_disp_mm": 2.146103815034081e-05
+      },
+      {
+        "window_s": [
+          1.5,
+          2.0
+        ],
+        "centroid_mm_s": 8.754758684948556e-05,
+        "particle_p95_mm_s": 0.004470348125007474,
+        "rotation_deg": -1.0914351106492596e-06,
+        "ee_drift_mm": 0.00016064088063404963,
+        "centroid_disp_mm": 2.673567763363034e-05
+      }
+    ],
+    "all_states_ok": true
+  },
+  "quality": {
+    "reference": "accepted",
+    "hold": "accepted"
+  },
+  "stability_mm": {
+    "reference": [
+      0.2756295694941649,
+      0.41247385341989035
+    ],
+    "hold": [
+      0.23858263379520725,
+      0.34681751280653017
+    ]
+  },
+  "stationary_mm": {
+    "reference": 7.54791690934325,
+    "hold": 7.158609812187668
+  },
+  "first_fail": {
+    "reference": 0,
+    "hold": 0
+  },
+  "target_max_mm": 0.0025262217875354764,
+  "target_max_yaw_deg": 7.806415001625462e-07,
+  "fold_yaw_diff_deg": -7.806415001625462e-07,
+  "stages": {
+    "initial_loaded": {
+      "max_mm": 0.0,
+      "mean_mm": 0.0
+    },
+    "after_recovery": {
+      "max_mm": 0.004308085224628076,
+      "mean_mm": 0.0017595460234351666
+    },
+    "pre_release": {
+      "max_mm": 1.7405686531137703,
+      "mean_mm": 0.5993848980865903
+    },
+    "release_boundary": {
+      "max_mm": 1.6511709194598991,
+      "mean_mm": 0.6179984483699976
+    }
+  },
+  "fold_extent": {
+    "reference": [
+      0.26205772906541824,
+      0.4313320964574814,
+      0.06031107250601053
+    ],
+    "hold": [
+      0.26421841979026794,
+      0.4319326877593994,
+      0.06031520385295153
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "case": "valid_l1_na",
+    "ok": true,
+    "applicable": false,
+    "error": null
+  },
+  {
+    "case": "l1_unexpected_hold_rejected",
+    "ok": false,
+    "applicable": false,
+    "error": "L1 must not have recovery_hold or hold trace"
+  },
+  {
+    "case": "valid_l2_hold",
+    "ok": true,
+    "applicable": true,
+    "error": null
+  },
+  {
+    "case": "l2_wrong_steps_rejected",
+    "ok": false,
+    "applicable": true,
+    "error": "bad completed_steps"
+  },
+  {
+    "case": "l2_missing_hold_rejected",
+    "ok": false,
+    "applicable": true,
+    "error": "L2/L3 missing recovery_hold metadata"
+  },
+  {
+    "case": "l2_missing_trace_rejected",
+    "ok": false,
+    "applicable": true,
+    "error": "hold trace missing"
+  }
+]

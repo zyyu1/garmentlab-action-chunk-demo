@@ -1,0 +1,100 @@
+{
+  "seed": 4100,
+  "mode": "single",
+  "level": "flat",
+  "task_protocol_expected_scale": 0.0,
+  "initial_protocol": true,
+  "recovery_hold": true,
+  "hold_applicable": false,
+  "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-014501-526555",
+  "expected_actions": 7,
+  "expected_horizons": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "file_complete": true,
+  "presence": {
+    "result.json": true,
+    "a5-verdict.json": true,
+    "success_trace.npz": true,
+    "success_meta.json": true,
+    "final.png": true,
+    "final.npz": true,
+    "pfs1_stage_index.json": true,
+    "pfs1_release_steps.npz": true,
+    "pfs1_release_steps.json": true,
+    "pfs1_first_0_5s.npz": true,
+    "pfs1_first_0_5s.json": true,
+    "pfs1_formal_210_330.npz": true,
+    "pfs1_formal_210_330.json": true,
+    "pfs1_release_clock.json": true,
+    "material_readbacks.json": true,
+    "contact_capability.json": true,
+    "evidence/summary.json": true,
+    "evidence/timeline.jsonl": true,
+    "evidence/manifest.json": true
+  },
+  "required_stages": [
+    "initial_loaded",
+    "pre_release",
+    "release_boundary"
+  ],
+  "stage_labels": [
+    "initial_loaded",
+    "pre_release",
+    "release_boundary"
+  ],
+  "evidence_manifest_entries": 73,
+  "evidence_bad": [],
+  "quality_status": "accepted",
+  "evaluator_checks": {
+    "definition": true,
+    "budget": true,
+    "no_runtime_error": true,
+    "held": true,
+    "released_continuously": true,
+    "geometry_entire_window": true,
+    "stable": true
+  },
+  "stability": {
+    "centroid_drift_max_m": 0.00014353134692869643,
+    "vertex_drift_p95_max_m": 0.00020719995120599787,
+    "vertex_drift_max_m": 0.00028557355593814763,
+    "vertex_speed_p95_max_m_s": 0.0021000383535357625,
+    "vertex_speed_max_m_s": 0.0165301362397056
+  },
+  "stability_mm": {
+    "centroid_mm": 0.14353134692869643,
+    "vertex_p95_mm": 0.20719995120599788
+  },
+  "stability_within_limits": true,
+  "semantic_checks": {
+    "fd_policy_recorded": true,
+    "fd_velocity_valid_present": true,
+    "raw_readback_marked_unvalidated": true,
+    "material_stages_present": true,
+    "material_values_match": true,
+    "material_expected_block": true,
+    "material_binding_match": true,
+    "self_collision_true": true,
+    "non_particle_collision_true": true,
+    "solver_effective_boundary_recorded": true,
+    "contact_capability_recorded": true,
+    "release_clock_boundary_recorded": true,
+    "quality_status_recorded": true,
+    "action_budget_and_horizons": true,
+    "case_identity": true,
+    "original_rc_evidence_checks": true,
+    "initial_protocol": true,
+    "recovery_hold": true
+  },
+  "observation_semantics_valid": true,
+  "pair": null,
+  "pair_pass": true,
+  "overall_valid": true
+}

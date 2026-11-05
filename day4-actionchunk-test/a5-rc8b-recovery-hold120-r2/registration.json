@@ -1,0 +1,92 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "diagnostic-recovery-hold120-r2",
+  "stage": "r2_clean_4202_accepted",
+  "kind": "diagnostic_single_case_recovery_hold_auditfix",
+  "parent": "a5-rc8b-recovery-hold120",
+  "parent_manifest_sha256": "b61fd56e962cafa4a2900bc7eda19572e1cd78b0aaf556e99bcc9eeedb08a0ec",
+  "identity": {
+    "manifest_sha256": "60733a6b4d93b7b76cbea9b22f2db9849562a420f7cf412e50e1ecd8aecb2bbc",
+    "manifest_entries": 63,
+    "changed_vs_parent": [
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "unchanged_vs_parent": 61,
+    "a5_recovery_sha256": "5055931dc4cecc27e205204ea10cb87fb0236c8f59144c341524283bbf7548ac",
+    "config_sha256": "97f186de0a6b9ec995225f97e6c8cb16dc45642a15d9e2b03a809a8dfb4743ca",
+    "runner_sha256": "96bceca058ba010fde207e662fb6ab754c0a4689cdecae66ec91407941a10753",
+    "audit_sha256": "196e74f1a1958c051bd6a555ed7440dd4dc9a52fa8bd8b4ee8b978147843bcba"
+  },
+  "initial": {
+    "dir": "day4-square-initial-stripfold-20261105-015817-115841",
+    "source": "rc8b new 4202 initial; same as r1",
+    "result_sha256": "1eef6c8395fcc720cae4323e7c9aabf8b1e426df49ce814f2d82188844528d89",
+    "geometry_sha256": "13b568082faaa293153487b19cde371608e11ad51429e0ce8dce64397a22151e",
+    "task_protocol": "L2 initial generation and rollout both pfs=1.0"
+  },
+  "audit_fix": {
+    "only_change": "audit output contract and print projection; no physics/control/hold/sampling change",
+    "original_runner_exit": 3,
+    "original_error": "KeyError: 'recovery_hold' in audit print projection",
+    "full_audit_on_saved_result_exit": 0,
+    "offline_output_contract_test": "accepts complete output; rejects missing/non-bool recovery_hold",
+    "simulation_rerun_for_audit": false
+  },
+  "hold": {
+    "steps": 120,
+    "dt_s": 0.016666666666666666,
+    "hold_duration_s": 2.0,
+    "total_timing": "rec_release return -> original 240-step settle -> 120-step hold; total 360 physics steps from rec_release return; not only 120",
+    "events": [
+      "recovery_retreat_end",
+      "recovery_hold_begin",
+      "recovery_hold_end",
+      "fold_observation"
+    ],
+    "trace": "121 frames, 120 FD intervals, no zero fill",
+    "control": "keep current target; no move/open/close",
+    "cloth": "no position reset, no velocity clear, no material change",
+    "evaluation": "release_retreat completion remains step 0; original windows/evaluator/thresholds"
+  },
+  "scope_lock": {
+    "seeds": [
+      4202
+    ],
+    "modes": [
+      "single"
+    ]
+  },
+  "run": {
+    "one_attempt": true,
+    "retry": false,
+    "lock": "a5-rc8b-recovery-hold120-r2-runs",
+    "journal": "/root/autodl-tmp/a5-rc8b-recovery-hold120-r2-runs/journal",
+    "result_dir": "results/RC8B_L2_DIAG_20261105/hold120_r2_4202/day4-a5-rc2-pfs1-observation-v2-20261105-071812-338703",
+    "entry_exit": 0,
+    "runner_exit": 0,
+    "audit_exit": 0,
+    "quality": "accepted",
+    "centroid_mm": 0.237415,
+    "p95_mm": 0.348438,
+    "stationary_drift_mm": 6.685628,
+    "geometry_failure_frames": 0,
+    "download_verified": "113/113 files"
+  },
+  "run_status": "completed_clean_accepted",
+  "formal_stage4_success": 0,
+  "notes": [
+    "Revised candidate for a clean 4202 rerun; audit only changed.",
+    "4302 extension only after a clean 4202 pass.",
+    "No expansion, no freeze, no held-out, no seven-case rerun in this step."
+  ],
+  "comparison_vs_r1": {
+    "stage_max_diff_mm": 0.0,
+    "target_max_diff_mm": 0.0,
+    "hold_trace_max_diff_mm": 0.0,
+    "fold_yaw_diff_deg": 0.0,
+    "note": "bit-identical to r1; clean exits come from the audit fix only"
+  },
+  "review": "results/RC8B_L2_DIAG_20261105/hold120_r2_review.md",
+  "next": "Both 4202 r2 and 4302 passed; prepare the seven-case RC without running it."
+}

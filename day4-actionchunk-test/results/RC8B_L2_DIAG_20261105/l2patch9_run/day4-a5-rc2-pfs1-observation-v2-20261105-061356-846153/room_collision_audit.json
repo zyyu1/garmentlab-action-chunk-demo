@@ -1,0 +1,19 @@
+{
+  "scope": "Disable imported room colliders; retain default ground",
+  "room_colliders": [
+    {
+      "path": "/World/Room/room/FlatGrid/GroundPlane/CollisionPlane",
+      "type": "Plane",
+      "enabled_before": true,
+      "disabled_by_test": true,
+      "enabled_after": false
+    }
+  ],
+  "outside_room_colliders": [
+    {
+      "path": "/World/defaultGroundPlane/GroundPlane/CollisionPlane",
+      "type": "Plane",
+      "enabled": true
+    }
+  ]
+}

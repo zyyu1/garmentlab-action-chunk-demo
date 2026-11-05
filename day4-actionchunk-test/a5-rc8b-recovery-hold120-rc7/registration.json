@@ -1,0 +1,132 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "final-candidate-hold120-rc7",
+  "stage": "rc7_paused_slot1_audit_contract",
+  "kind": "final_candidate_seven_case_rc",
+  "final_candidate": true,
+  "parent": "a5-rc8b-recovery-hold120-r2",
+  "parent_manifest_sha256": "60733a6b4d93b7b76cbea9b22f2db9849562a420f7cf412e50e1ecd8aecb2bbc",
+  "base": "a5-rc2-pfs1-observation-v2-rc8b",
+  "base_manifest_sha256": "cce573ddd626715b15818467290152a4c68502bafc9595b11780fe1dd601bc8e",
+  "identity": {
+    "manifest_sha256": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df",
+    "manifest_entries": 63,
+    "changed_vs_r2": [
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "unchanged_vs_r2": 61,
+    "changed_vs_rc8b": [
+      "a5_recovery.py",
+      "a5-rc2-pfs1-observation-v2.json",
+      "run-a5-rc2-pfs1-observation-v2.sh"
+    ],
+    "a5_recovery_sha256": "5055931dc4cecc27e205204ea10cb87fb0236c8f59144c341524283bbf7548ac",
+    "config_sha256": "b067e804524f6fd282f7edc9101ffadea2aa2924b82e3eae2f82b2d1d54e047f",
+    "runner_sha256": "a89977ec355c2fdc8010b7e18625ab1b429ce6be3f93ee1aad4b8fa026b2b41e",
+    "audit_sha256": "3fd9ae98bcbe6550ab6fbc3a023efbb16e8a8e33207cf2445f4269d51e591e5b"
+  },
+  "physics": {
+    "flat": 0.0,
+    "perturbed": 1.0,
+    "crumpled": 1.0,
+    "applies_to": [
+      "initial generation",
+      "reset",
+      "rollout"
+    ],
+    "routing_key": "task identity; seed/mode/result excluded"
+  },
+  "initial": {
+    "source": "rc8b native dev initials; no regeneration",
+    "4100": "day4-square-initial-20261105-014501-526555",
+    "4202": "day4-square-initial-stripfold-20261105-015817-115841",
+    "4302": "day4-square-initial-stripfold-20261105-020706-026048",
+    "4201": "day4-square-initial-stripfold-20261105-014825-318974",
+    "hashes": "from a5-candidate.json / initial result files"
+  },
+  "hold": {
+    "steps": 120,
+    "dt_s": 0.016666666666666666,
+    "hold_duration_s": 2.0,
+    "applies_to": {
+      "flat": "not_applicable",
+      "perturbed": true,
+      "crumpled": true
+    },
+    "modes": [
+      "single",
+      "arc4"
+    ],
+    "position": "after original 240-step recovery settle, before re-observation and fold pick/yaw",
+    "total_timing": "rec_release return -> 240 settle -> 120 hold; total 360 steps from rec_release return; not only 120",
+    "events": [
+      "recovery_retreat_end",
+      "recovery_hold_begin",
+      "recovery_hold_end",
+      "fold_observation"
+    ],
+    "trace": "121 frames, 120 FD intervals, no zero fill",
+    "control": "keep current target; no move/open/close",
+    "cloth": "no position reset, no velocity clear, no material change"
+  },
+  "matrix": "7 slots, same as rc8b; one attempt per slot, sequential, no retry",
+  "run": {
+    "one_attempt_per_slot": true,
+    "retry": false,
+    "pair_target_atol": 1e-06,
+    "lock": "a5-rc8b-recovery-hold120-rc7-runs",
+    "journal": "/root/autodl-tmp/a5-rc8b-recovery-hold120-rc7-runs/journal"
+  },
+  "evaluation": {
+    "evaluator": "stage4_success_v1 unchanged",
+    "thresholds": {
+      "centroid_limit_mm": 1.0,
+      "vertex_p95_limit_mm": 3.0
+    },
+    "window_start": "release_retreat completion = step 0"
+  },
+  "run_status": "paused_after_slot1_l1_audit_contract",
+  "formal_stage4_success": 0,
+  "notes": [
+    "Development regression only; not formal and not held-out.",
+    "No D1 post-release wait, no D2-C preopen, no geometry patch.",
+    "Single/arc4 use the same hold position and 120-step duration."
+  ],
+  "slot1": {
+    "slot": 1,
+    "seed": 4100,
+    "mode": "single",
+    "result_dir": "results/RC8B_L2_DIAG_20261105/hold120_rc7/day4-a5-rc2-l1-20261105-081311-735952",
+    "quality": "accepted",
+    "centroid_mm": 0.143531,
+    "p95_mm": 0.2072,
+    "initial_audit_exit": 5,
+    "initial_audit_failure": "L1 hold_applicable=false was incorrectly included in observation_semantics",
+    "postaudit_exit": 0,
+    "postaudit_overall_valid": true,
+    "download_verified": "118/118 files",
+    "simulation_rerun": false
+  },
+  "queue": {
+    "slots_total": 7,
+    "slots_completed": 1,
+    "slots_not_run": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "batch_log_last": "HOLD120RC7_QUEUE_PAUSED slot=1 reason=audit_failed",
+    "attempts": "1 started + 1 paused",
+    "completed_marker": false
+  },
+  "audit_l1_fix": {
+    "change": "hold_applicable moved out of required semantics; kept as output; L1 requires no recovery_hold/trace",
+    "rerun_on_same_slot1_result": true,
+    "simulation_rerun": false
+  },
+  "next": "Queue paused by stop rule. Resume from slot 2 with the saved slot1 result, or rerun slot1 only on explicit instruction; do not overwrite retained records."
+}

@@ -1,0 +1,118 @@
+{
+  "version": "a5-rc2-pfs1-observation-v2",
+  "revision": "final-candidate-hold120-rc7-r2",
+  "stage": "seven_case_passed_no_freeze",
+  "kind": "final_candidate_seven_case_rc_auditfix",
+  "final_candidate": true,
+  "parent": "a5-rc8b-recovery-hold120-rc7",
+  "parent_manifest_sha256": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df",
+  "identity": {
+    "manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+    "manifest_entries": 63,
+    "changed_vs_parent": [
+      "a5-rc2-pfs1-observation-v2.json"
+    ],
+    "unchanged_vs_parent": 62,
+    "a5_recovery_sha256": "5055931dc4cecc27e205204ea10cb87fb0236c8f59144c341524283bbf7548ac",
+    "config_sha256": "849d39bc44e4d28981cf157528c7196672bb0c8a2f6efa4b672b6851c0dfda78",
+    "runner_sha256": "a89977ec355c2fdc8010b7e18625ab1b429ce6be3f93ee1aad4b8fa026b2b41e",
+    "audit_sha256": "0d4a9d74b595a166bc34b3b7ffdd164e7085be7d1ae19130e85f2bdb17c1a1e8",
+    "hold_contract_sha256": "6eab1ff528c332e250d7e7b14f3b1529b51095dda9b5f9743d33861266062d6a",
+    "inheritance_sha256": "a9a106c202178d859b3d4b4bf9e9e4102f091aeebaef3328709e75b0c0bb9210",
+    "resume_runner_sha256": "bd101f76d2e22e95a76f3b86a611a301a2ec39509b95bc4beccf3be9b9f20476"
+  },
+  "audit_fix": {
+    "hold_applicable": "applicability field, not required to be true",
+    "L1": "hold_applicable=false; no recovery_hold/trace allowed",
+    "L2_L3": "hold_applicable=true; 120 steps, 121 frames, 2.0 s, attachments off required",
+    "missing_or_wrong": "rejected",
+    "tests": [
+      "valid L1 N/A",
+      "L1 unexpected hold rejected",
+      "valid L2/L3 hold",
+      "L2/L3 missing/wrong hold rejected",
+      "output contract missing/type rejected"
+    ],
+    "original_failure_preserved": true,
+    "original_runner_exit": 5,
+    "postaudit_on_same_slot1_exit": 0
+  },
+  "inheritance": {
+    "scope": "slot1_only",
+    "record_sha256": "a9a106c202178d859b3d4b4bf9e9e4102f091aeebaef3328709e75b0c0bb9210",
+    "slot1_result": "results/RC8B_L2_DIAG_20261105/hold120_rc7/day4-a5-rc2-l1-20261105-081311-735952",
+    "slot1_rerun": false,
+    "slot1_manifest_rewritten": false,
+    "initial_audit_exit_rewritten": false
+  },
+  "resume": {
+    "slots": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ledger": "a5-rc8b-recovery-hold120-rc7-r2-resume",
+    "lock": "a5-rc8b-recovery-hold120-rc7-r2-resume",
+    "original_attempts_unchanged": true,
+    "same_seed_shared_initial": true
+  },
+  "physics": {
+    "flat": 0.0,
+    "perturbed": 1.0,
+    "crumpled": 1.0,
+    "applies_to": [
+      "initial generation",
+      "reset",
+      "rollout"
+    ]
+  },
+  "hold": {
+    "steps": 120,
+    "dt_s": 0.016666666666666666,
+    "hold_duration_s": 2.0,
+    "applies_to": {
+      "flat": "not_applicable",
+      "perturbed": true,
+      "crumpled": true
+    },
+    "total_timing": "240 settle + 120 hold; 360 from rec_release return; not only 120"
+  },
+  "run_status": "seven_case_complete_passed_no_freeze",
+  "formal_stage4_success": 0,
+  "notes": [
+    "slot1 inherited; slots2-7 only; no rerun of slot1",
+    "original attempts/log/verdict preserved",
+    "no freeze, no release receipt, no held-out/formal batch"
+  ],
+  "results": {
+    "slots": 7,
+    "accepted": 6,
+    "rejected_complete": 1,
+    "all_six_positives_accepted": true,
+    "slot7_quality": "rejected_valid",
+    "checks": {
+      "pairs_target_max_abs_m": {
+        "4100": 0.0,
+        "4202": 0.0,
+        "4302": 0.0
+      },
+      "hold_single_arc4_same": true,
+      "downloads": "slot1 118/118; slots2-7 664/664",
+      "local_recompute": "7/7 status and stability match",
+      "video_review": "positives retreat and leave cloth; 4201 final follows arm, consistent with rejection",
+      "source_compatible_verification": "RC7_SOURCE_VERIFIED exit 0, six positives true",
+      "original_verify_dev": "not used (single-manifest); source-compatible entry used"
+    }
+  },
+  "review": "results/RC8B_L2_DIAG_20261105/hold120_rc7_review.md",
+  "freeze_draft": "results/RC8B_L2_DIAG_20261105/hold120_rc7_r2_resume/FREEZE_DRAFT.md",
+  "freeze": {
+    "executed": false,
+    "receipts_written": false,
+    "reason": "seven-case pass recorded; freeze decision left to explicit instruction"
+  },
+  "next": "Seven-case development RC passed. Review the freeze draft; no freeze, no release receipt, no held-out or formal batch without explicit instruction."
+}

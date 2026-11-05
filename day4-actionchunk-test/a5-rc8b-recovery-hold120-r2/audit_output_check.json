@@ -1,0 +1,15 @@
+{
+  "required_keys": [
+    "seed",
+    "mode",
+    "level",
+    "recovery_hold",
+    "file_complete",
+    "observation_semantics_valid",
+    "quality_status",
+    "overall_valid"
+  ],
+  "accepts_complete_output": true,
+  "rejects_missing_key": true,
+  "rejects_non_bool": true
+}

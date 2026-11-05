@@ -1,0 +1,2 @@
+{"initial": "/root/autodl-tmp/day4-square-initial-20261105-014501-526555", "manifest_sha256": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df", "mode": "single", "seed": 4100, "slot": 1, "state": "started", "utc": "2026-11-05T00:13:10.676207+00:00"}
+{"manifest_sha256": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df", "mode": "single", "reason": "audit_failed", "run": "/root/autodl-tmp/day4-a5-rc2-l1-20261105-081311-735952", "seed": 4100, "slot": 1, "state": "paused", "utc": "2026-11-05T00:26:33.297757+00:00"}

@@ -4,18 +4,21 @@
 
 ## 当前状态（2026-11-05，暂停）
 
-**Stage 4 暂停在 L2 初态敏感性诊断完成、单变量对照尚未运行之处；未冻结。**
+**Stage 4 暂停在 hold120 七例开发回归完成、冻结材料草稿已整理但未执行 freeze 之处；未冻结。**
 
 - **rc8b**（task-scoped：L1 0.0、L2/L3 1.0，含初态生成；manifest `cce573dd…`）七例 **4/6 阳性**：4100 s/a、4302 s/a accepted（0.1435/0.2072、0.2756/0.4125 mm）；**4202 s/a rejected**（7.4809/11.5382 mm，`stationary_half` 29.9 mm > 25 mm，速度 P95 25.7 > 10 mm/s）；4201 也拒绝。三组配对 0 差、7/7 证据完整、765/765 下载哈希一致、本地复算 7/7 一致；原版 verify-dev **失败于 4202**。
 - **初态协议检查通过**：4100/4201/4202/4302 各生成一次，记录 task/材料绑定/scale/生成器身份；正式 preflight 接受新初态并拒绝旧/错初态。4202 失败不是身份或协议失败，而是新初态（1.0 下 settle）改变了 L2 折后保持行为（具体机制未隔离）。
 - **未执行 freeze**，未写 `verified-dev.json`/`E_RELEASE.json`；未回退旧初态、未用 rc8 结果补 4202/4201、未改阈值。正式 Stage 4 成功仍为 **0**；held-out 与正式批次未运行。
 - **L2 离线定位（无新增仿真）：** 新旧 4202 在载入时是 2.80 mm / −0.26° 的**整体位姿差**；recovery 后内部形状差仅 1 µm（纯平移 2.02 mm），pre-release 折形差 <0.8 mm；放大发生在**释放后**（新初态持续 ~4 mm/s 滑移，首个几何失败在 release 后 4.15 s）。9.2 µm 只是几何指标，recovery 残余速度/接触/应力仍未知；“3 mm→30 mm”是相关观察，不是因果。
 - **l2pose 位姿匹配诊断（单次，已完成）：** 旧折叠几何 + 新位姿 → **accepted，中间行为**（质心 0.7396 / P95 1.5397 mm、stationary 7.63 mm、稳态 0.418 mm/s、无失败；old 0.2642/0.3792，new 7.4809/11.5382）。专家目标跟随新位姿（与 new 差 0.209 mm），但不是失败原因。2.8 mm 位姿变化**不足以**单独重现失败；l2pose 与 new 只剩亚毫米 `final` 几何差（P95 0.067 / max 0.302 mm），与该例失败相关但不能归因隐藏应力。
-- **两例重复性（已完成）：** `l2pose-repeat1` 与 `rc8b-4202-repeat1` 各一次、原候选/原初态/完整哈希；**两例逐位重现原行为**（所有阶段、目标、success_trace 最大差 0.0 mm；l2pose accepted 0.7396/1.5397，rc8b rejected 7.4809/11.5382，首次失败 step 249 相同）。固定初态差异可重复；仿真重复性不是来源。
+- **两例重复性（已完成）：** `l2pose-repeat1` 与 `rc8b-4202-repeat1` 各一次、原候选/原初态/完整哈希；**两例逐位重现原行为**（所有阶段、目标、success_trace 最大差 0.0 mm；l2pose accepted 0.7396/1.5397，rc8b rejected 7.4809/11.5382，首次失败 step 249 相同）。这两个固定配置下的结果可重复；不能全面排除所有初始化或状态恢复问题。
 - **局部几何：** #91（0.302 mm）位于多层折叠区，距折线代理约 55 mm；25 mm 内 4 层 z≈9.9/40.6/53.75（含 #91）/66.4 mm，层间距约 13 mm；xy 最近点 99.3% <0.1 mm。层间距/投影仅为代理，不认定真实接触/穿透。
-- **下一步（待指令）：** 单变量局部层高对照（new 初态仅改 #91 的 3×3 邻域 z 为 derived 值，4202 single 一次），未运行；不改生成/rollout 协议、不扫摩擦、不冻结。
+- **九点 z patch（已完成）：** new 初态仅改 #91 3×3 邻域九点 z 为 derived 值（索引 69/70/71/90/91/92/111/112/113，运行前固定）；派生初态 `initial_diagnostic=true`，审计恰好九点改变、其余逐位不变。结果仍 **rejected 7.2532/11.4799 mm**（new 7.4809/11.5382；first 251 vs 249），pre-release 0.50 mm、trace max 2.14 mm；响应很小、轨迹基本不变，不能认定层序/接触机制，也不能手工修补正式初态。
+- **recovery 后固定保持 120 步（r1 诊断 + r2 干净复验 + 4302 扩展，均已完成）：** 4202 r1 accepted 0.2374/0.3484 mm；审计入口修复后 **4202 r2 干净复验**（entry/runner/audit 均 0）**accepted 0.2374/0.3484**、stationary 6.69、无失败，且与 r1 逐阶段 0.0 差；**4302 扩展**（均 0）**accepted 0.2386/0.3468**、stationary 7.16、无失败（rc8b 参照 0.2756/0.4125）。保持 2 s 内运动已接近零（质心 ~0.0001 mm/s、P95 ~0.005–0.007 mm/s、EE 漂移 ~0、附件全关），不是“运动衰减”；额外静态步改变下游 fold，机制未隔离。
+- **七例 RC（已完成，六阳性 accepted）：** `a5-rc8b-recovery-hold120-rc7`（manifest `41db790f…`）slot1 4100 single **accepted 0.1435/0.2072**；初次 audit exit 5 为 L1 `hold_applicable` 契约缺陷，同结果修订审计 exit 0。修订候选 `…-r2`（manifest `40858efc…`，仅 config 差异；继承记录仅 slot1）续跑 slots2–7：4100 arc4/4202 s,a/4302 s,a **全部 accepted**，4201 **有效 rejected 7.2583/11.0030**。三组配对目标差 0.0；L2/L3 hold 均 120 步/121 帧/2.0 s；下载 118+664 哈希一致；本地复算 7/7；来源兼容验证 `RC7_SOURCE_VERIFIED` exit 0。原版 verify-dev 未使用（单一 manifest 限制），不称原版通过。
+- **下一步：** 七例开发回归通过，冻结材料草稿已整理；**未 freeze、未写回执、未跑 held-out/正式批次**，正式成功仍为 0。是否进入 freeze 需明确指令。
 
-[交接日报（L2 诊断与暂停）](2026-11-05-GarmentLab日报%20Stage4%20rc8b初态协议与七例失败交接.md) · [L2 定位](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/review.md) · [l2pose 审查](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/l2pose_review.md) · [重复性与几何](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/repeat_review.md) · [rc8b 审查](day4-actionchunk-test/results/RC8B_SEVEN_CASE_20261105/review.md) · [rc8b 版本](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc8b/README.md)
+[交接日报（L2 诊断与暂停）](2026-11-05-GarmentLab日报%20Stage4%20rc8b初态协议与七例失败交接.md) · [L2 定位](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/review.md) · [l2pose 审查](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/l2pose_review.md) · [重复性与几何](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/repeat_review.md) · [九点 z patch](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/l2patch9_review.md) · [hold120 r2/4302](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_r2_review.md) · [七例 rc7](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_rc7_review.md) · [冻结草稿](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_rc7_r2_resume/FREEZE_DRAFT.md) · [rc8b 审查](day4-actionchunk-test/results/RC8B_SEVEN_CASE_20261105/review.md)
 
 **前序：rc7 uniform 七例 RC 未通过（4/6）。** 固定候选 rc7（manifest `bcba8c11…`，60/63 与 v2 相同），uniform `particleFrictionScale=1.0`（含 L1）：4100 s/a **rejected**（自由边 15.4 < 20 mm、高度 24.4 > 15 mm、速度 64.6 > 50 mm/s），4202/4302 s/a accepted，4201 有效拒绝；配对 0.0、证据完整，但六阳性未全过、verify-dev 失败于 4100。结论：uniform 1.0 在 4100 这个开发例上造成 L1 回归失败（自由边未落桌/自重锁未发生的解释为视频支持，尚未独立确认因果）；rc7 保留为失败候选。[rc7 审查](day4-actionchunk-test/results/RC7_SEVEN_CASE_20261104/review.md) · [rc7 版本](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc7/README.md)
 

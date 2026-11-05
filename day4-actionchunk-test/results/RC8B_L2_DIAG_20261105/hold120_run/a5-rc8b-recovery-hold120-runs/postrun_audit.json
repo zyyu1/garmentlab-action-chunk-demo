@@ -1,0 +1,17 @@
+{
+  "run": "day4-a5-rc2-pfs1-observation-v2-20261105-064625-336724",
+  "runner_exit": 3,
+  "entry_exit": 0,
+  "audit_initial_exit": 3,
+  "audit_initial_error": "KeyError: 'recovery_hold' in HOLD120_CASE_AUDIT print; the audit out JSON had been written, but the top-level key was absent in the print projection",
+  "audit_initial_phase": "after simulation and evidence write; simulation was not affected",
+  "postrun_audit_exit": 0,
+  "postrun_audit_overall_valid": true,
+  "postrun_audit_quality": "accepted",
+  "postrun_audit_recovery_hold": true,
+  "postrun_audit_initial_protocol": true,
+  "simulation_rerun": false,
+  "completed_marker_written": false,
+  "download_verified": "112/112 before the postrun audit artifact; postrun semantics verified separately",
+  "note": "Fixed audit rerun on the same result only; no new simulation. The run is reported with runner exit 3 and is not labeled a clean completion."
+}

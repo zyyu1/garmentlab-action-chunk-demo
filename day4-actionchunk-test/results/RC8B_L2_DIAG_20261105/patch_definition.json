@@ -1,0 +1,65 @@
+{
+  "name": "l2patch9",
+  "source_initial": "day4-square-initial-stripfold-20261105-015817-115841",
+  "source_geometry_sha256": "13b568082faaa293153487b19cde371608e11ad51429e0ce8dce64397a22151e",
+  "source_result_sha256": "1eef6c8395fcc720cae4323e7c9aabf8b1e426df49ce814f2d82188844528d89",
+  "reference_initial": "day4-square-initial-stripfold-20261104-202215-l2posecontrol",
+  "reference_geometry_sha256": "32e7686823d48c3de01a6bb602339b73a6e5e84e44044dfa712e34269b75f0ab",
+  "mesh": {
+    "rows": 21,
+    "cols": 21,
+    "ordering": "row-major",
+    "basis": "3x3 vertex patch around #91; offsets (+/-1 col, +/-1 row); verified by index offsets and Euclidean edge lengths"
+  },
+  "center_index": 91,
+  "center_row_col_zero_based": [
+    4,
+    7
+  ],
+  "indices": [
+    69,
+    70,
+    71,
+    90,
+    91,
+    92,
+    111,
+    112,
+    113
+  ],
+  "z_new_m": {
+    "69": 0.04030899703502655,
+    "70": 0.04076828062534332,
+    "71": 0.040718309581279755,
+    "90": 0.053657881915569305,
+    "91": 0.05419919267296791,
+    "92": 0.05384187772870064,
+    "111": 0.0660019963979721,
+    "112": 0.06638944149017334,
+    "113": 0.0657145082950592
+  },
+  "z_derived_m": {
+    "69": 0.04030033200979233,
+    "70": 0.04052193462848663,
+    "71": 0.04061462730169296,
+    "90": 0.05365487188100815,
+    "91": 0.05393563210964203,
+    "92": 0.053703732788562775,
+    "111": 0.06599001586437225,
+    "112": 0.0663069486618042,
+    "113": 0.06564284861087799
+  },
+  "dz_m": {
+    "69": -8.665025234222412e-06,
+    "70": -0.00024634599685668945,
+    "71": -0.00010368227958679199,
+    "90": -3.0100345611572266e-06,
+    "91": -0.00026356056332588196,
+    "92": -0.00013814494013786316,
+    "111": -1.1980533599853516e-05,
+    "112": -8.249282836914062e-05,
+    "113": -7.165968418121338e-05
+  },
+  "rule": "only z of the nine indices is replaced by the reference z; xy, all other vertices, flat_settled, before/applied and metadata are unchanged",
+  "no_smoothing_or_extra_motion": true
+}

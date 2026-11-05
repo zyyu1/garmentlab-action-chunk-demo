@@ -1,0 +1,63 @@
+{
+  "schema": "hold120-source-inheritance-v1",
+  "scope": "slot1_only",
+  "parent": {
+    "candidate": "a5-rc8b-recovery-hold120-rc7",
+    "manifest_sha256": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df",
+    "snapshot": "original candidate directory and manifest kept; not rewritten"
+  },
+  "revised": {
+    "candidate": "a5-rc8b-recovery-hold120-rc7-r2",
+    "manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+    "app_diff_vs_parent": [
+      "a5-rc2-pfs1-observation-v2.json"
+    ],
+    "note": "config/registration differs; a5_recovery and all physics/control/eval files identical; audit entry differs outside the app manifest"
+  },
+  "audit": {
+    "original_sha256": "813da5ce1eb8cc2bd3ef87329a362709545854c3dfb2037bbfc54775f86d67e0",
+    "revised_sha256": "0d4a9d74b595a166bc34b3b7ffdd164e7085be7d1ae19130e85f2bdb17c1a1e8",
+    "original_failure": "L1 hold_applicable=false was incorrectly required in observation_semantics; exit 5",
+    "revised_rule": "L1 hold_applicable=false and no hold/trace; L2/L3 true with 120 steps/121 frames/2.0 s evidence; missing/type errors rejected"
+  },
+  "slot1": {
+    "slot": 1,
+    "seed": 4100,
+    "mode": "single",
+    "result_dir": "results/RC8B_L2_DIAG_20261105/hold120_rc7/day4-a5-rc2-l1-20261105-081311-735952",
+    "quality": "accepted",
+    "hashes": {
+      "result.json": "d307b939d8534cd9203d7eb4642e31d1fb1181f739124fd313282614b15bf2a9",
+      "a5-verdict.json": "87801db052524e5d9047acc3a611cb0435467f1a253e7f5d38690d668024d814",
+      "success_trace.npz": "14b50fab8ec3bbb81c124526bc273057fa00bf95639a63e56c4995f9b877a434",
+      "initial_audit_output": "72e62de88ba9fad69f1df5e25ecef2647fb16ed75058da4df041f6f2c1955e57",
+      "initial_audit_exit": 5,
+      "postaudit_output": "012027162a67dcae5ce123ffcd195705beb31e81742bdd79ec380da4e6a443af",
+      "postaudit_log": "d240a80af74ae0a71b969bae8ebea21cdef3e80fdbece8e9d6069f29dad16858",
+      "postaudit_exit": 0
+    },
+    "run_manifest_sha256": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df",
+    "original_attempts_sha256": "9ef6e25deba95a306c555a909c0bf91cd0fd780631884834f77d8aec539af9b1",
+    "original_batch_log_sha256": "c8bf73928b2328a510c73e63043caf4a595cddc706d18c3879bd9b9b3eaf2ab9"
+  },
+  "resume": {
+    "slots": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ledger": "a5-rc8b-recovery-hold120-rc7-r2-resume",
+    "slot1_reused": true,
+    "slot1_rerun": false,
+    "note": "original attempts.jsonl is not modified; a separate resume ledger references this record"
+  },
+  "explicit_non_rewrites": [
+    "slot1 result and verdict kept as written",
+    "initial audit exit 5 kept; not changed to 0",
+    "postaudit output kept separately",
+    "slot1 manifest not rewritten to the revised candidate"
+  ]
+}
