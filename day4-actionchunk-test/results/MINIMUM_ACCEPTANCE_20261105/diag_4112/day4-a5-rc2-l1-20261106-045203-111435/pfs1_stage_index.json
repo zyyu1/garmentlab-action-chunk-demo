@@ -1,0 +1,80 @@
+[
+  {
+    "label": "initial_loaded",
+    "file": "pfs1_stages/initial_loaded.npz",
+    "sha256": "0598bfe4f8c02df148a04428fe6053dfc0d26af6499e0d4c8f00c427a62471fe",
+    "sim_time_s": 0.7000000365078449,
+    "absolute_step": 42,
+    "readback_velocity_present": true,
+    "readback_velocity_validated": false,
+    "physical_velocity_method": "not_computed_single_frame",
+    "fd_method": "backward_difference_world_vertices",
+    "ee_m": [
+      0.00553022392022721,
+      -0.4608154731629588,
+      0.3883201813095618
+    ],
+    "gripper_state": 0,
+    "gripper_aperture_m": 0.07999999821186066,
+    "holding": false,
+    "enabled_slots": [
+      false,
+      false,
+      false
+    ],
+    "logical_attached": false,
+    "command_holding": false
+  },
+  {
+    "label": "pre_release",
+    "file": "pfs1_stages/pre_release.npz",
+    "sha256": "22a928b954fe7af74d1c30413f617da3d835bfce364ec873c8c82d085edc43cb",
+    "sim_time_s": 30.56666826084256,
+    "absolute_step": 1834,
+    "readback_velocity_present": true,
+    "readback_velocity_validated": false,
+    "physical_velocity_method": "not_computed_single_frame",
+    "fd_method": "backward_difference_world_vertices",
+    "ee_m": [
+      0.23182557706213797,
+      -0.42823137586171656,
+      0.035674677498792155
+    ],
+    "gripper_state": 2,
+    "gripper_aperture_m": 2.5584068197304077e-08,
+    "holding": true,
+    "enabled_slots": [
+      false,
+      true,
+      false
+    ],
+    "logical_attached": true,
+    "command_holding": true
+  },
+  {
+    "label": "release_boundary",
+    "file": "pfs1_stages/release_boundary.npz",
+    "sha256": "c1eaaf1131b2a83b6618b5f1e17a81adcfb64fe62351177fcfc75d041b45c870",
+    "sim_time_s": 30.583334928378463,
+    "absolute_step": 1835,
+    "readback_velocity_present": true,
+    "readback_velocity_validated": false,
+    "physical_velocity_method": "not_computed_single_frame",
+    "fd_method": "backward_difference_world_vertices",
+    "ee_m": [
+      0.2318259122542149,
+      -0.4282325966454152,
+      0.03567512463532093
+    ],
+    "gripper_state": 2,
+    "gripper_aperture_m": 0.015316081698983908,
+    "holding": false,
+    "enabled_slots": [
+      false,
+      false,
+      false
+    ],
+    "logical_attached": false,
+    "command_holding": true
+  }
+]

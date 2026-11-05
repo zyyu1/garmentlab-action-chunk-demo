@@ -1,0 +1,13 @@
+{
+  "diagnostic": "4112_arc135_deep_v1",
+  "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-232137-703257",
+  "initial_sha256": {
+    "result.json": "8a092d8aa010c9300433f2c8b7a4e349baba19add196382009e6ec74250b6af9",
+    "initial_geometry.npz": "a90de233d174153dac9c185ff8b9c5a5af3ffbd1b14f50c0a9d802225bbc478e"
+  },
+  "candidate_manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "parent_receipt_sha256": "9042e88ed8b4d082917151023705276230c1a4ba5c8e65b3c602337fa68ab66a",
+  "child_receipt_sha256": "9042e88ed8b4d082917151023705276230c1a4ba5c8e65b3c602337fa68ab66a",
+  "wrapper_sha256": "32a55a17a282e8ea9987b420ada86bb2388d3748aca22c43e6f410cb5f440daf",
+  "command": "python diagnose_arc135_deep.py"
+}

@@ -1,0 +1,8 @@
+segment,judgement_ticks,pos_fail,vel_fail,block_fail,longest_consecutive,all_ok,note
+0,0,0,0,0,0,0,move only; no per-segment judgement in original code
+1,0,0,0,0,0,0,move only; no per-segment judgement in original code
+2,0,0,0,0,0,0,move only; no per-segment judgement in original code
+3,0,0,0,0,0,0,move only; no per-segment judgement in original code
+4,0,0,0,0,0,0,move only; no per-segment judgement in original code
+5,0,0,0,0,0,0,move only; no per-segment judgement in original code
+6,120,110,118,0,0,0,final 120-tick judgement after all linear segments

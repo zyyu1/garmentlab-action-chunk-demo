@@ -1,0 +1,16 @@
+{
+  "diagnostic": "4112_arc135_readonly_v1",
+  "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-232137-703257",
+  "initial_sha256": {
+    "result.json": "8a092d8aa010c9300433f2c8b7a4e349baba19add196382009e6ec74250b6af9",
+    "initial_geometry.npz": "a90de233d174153dac9c185ff8b9c5a5af3ffbd1b14f50c0a9d802225bbc478e",
+    "initial.png": "746d27bef0b413b660a1fadcbabcbd04a973af7cdb5e0edbbf3c01d7ffd13d1c"
+  },
+  "candidate_manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "parent_receipt_sha256": "9042e88ed8b4d082917151023705276230c1a4ba5c8e65b3c602337fa68ab66a",
+  "child_receipt_sha256": "9042e88ed8b4d082917151023705276230c1a4ba5c8e65b3c602337fa68ab66a",
+  "verified_dev_sha256": "67c64a55b74db10ac85818cb0ed6ca1d00600e8b4ba326e5af4d6f01109cbbad",
+  "diagnostic_wrapper_sha256": "93e81ee750cd407030a3e485f765fcc9f5f61b12c419d79d84e082cee6042566",
+  "original_4112_result": "/root/autodl-tmp/day4-a5-rc2-l1-20261106-033055-623326",
+  "command": "python diagnose_arc135.py"
+}

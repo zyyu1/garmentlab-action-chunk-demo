@@ -1,0 +1,40 @@
+{
+  "ticks": 120,
+  "window": {
+    "first": 0,
+    "last": 119
+  },
+  "tick0_9": {
+    "cmd_j0_max": 0.10228518396615982,
+    "act_j0_max": 0.29036960005760193,
+    "act_j2_max": 0.1471244990825653,
+    "cmd_j2_max": 0.09841529279947281
+  },
+  "counts": {
+    "act_j0_gt_0.1_ticks0_9": 10,
+    "act_j2_gt_0.1_ticks0_9": 5,
+    "cmd_j0_gt_0.1_ticks0_9": 2,
+    "cmd_j2_gt_0.1_ticks0_9": 0
+  },
+  "tick10_error_mm": 10.551551169356388,
+  "final_error_mm": 57.21063484709398,
+  "rmp_fields": [
+    "joint_efforts",
+    "joint_indices",
+    "joint_positions",
+    "joint_velocities",
+    "type"
+  ],
+  "joint_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "joint_efforts": null,
+  "deep_sha256": "41d71ede3c96f20ae48f093acdf84be64e7c1a027c0119d3af88b06c9e8ef8d0",
+  "run_log_sha256": "6f49ccd61e8ba0c15b7de11e4974dc21e05f6e401d4d5dac345987d90265a982"
+}

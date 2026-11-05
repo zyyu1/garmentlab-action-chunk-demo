@@ -186,4 +186,6 @@ L2 条宽仍在冻结范围；L3 为 width 0.20 的 left 条，z_p95≈0.069 m�
   - 4110/4111：冻结 `a5_entry.py` 的 receipt 路径问题，入口在 episode 前失败；保留错误。
   - 4112：实际开始，9.3 min 后 **`RuntimeError('Square waypoint velocity/position did not converge')`**，`status=incomplete`，无完整 success_trace。
 - 按执行异常规则**暂停**：未自动重试、未换 seed、未继续 4113；最低验收**未通过**。
+- **4112 单次只读诊断（已复现）：** arc135 最后 120 tick 中速度 118 tick 超 0.1 rad/s（首 tick 0.2529），位置仅前 10 tick 在 10 mm 内、tick10 后越界，block ≤1.655 mm 合格；结论为速度未衰减/过冲优先，不是位置不可达。详见 [诊断](day4-actionchunk-test/results/MINIMUM_ACCEPTANCE_20261105/diag_4112_final/4112_DIAGNOSIS_FINAL.md)。
+- **深诊断（RMP/关节指令）：** 目标交接一致（末段与判定 target 差 2.8e-17 m）；关节0 的 RMP 位置目标步进等效 0.204–0.236 rad/s，速度字段仅 0.018–0.102，实际 0.253–0.290；关节2 实际 0.109–0.147 而目标 <0.1。证据同时指向 RMP 位置轨迹过快与底层跟踪过冲；缺 `apply_action` 消费字段/增益证据。详见 [深诊断](day4-actionchunk-test/results/MINIMUM_ACCEPTANCE_20261105/diag_4112_deep/4112_DEEP_DIAGNOSIS.md)。
 - 正式 Stage 4 成功仍为 0；原 120 槽批次未启动。

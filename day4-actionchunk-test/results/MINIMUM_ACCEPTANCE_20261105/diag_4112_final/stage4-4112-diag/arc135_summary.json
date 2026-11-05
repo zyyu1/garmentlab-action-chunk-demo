@@ -1,0 +1,48 @@
+{
+  "ticks": 120,
+  "segment": 6,
+  "action": "arc135",
+  "target": [
+    0.15437224507331848,
+    -0.4311170279979706,
+    0.17036335170269012
+  ],
+  "pos_fail": 110,
+  "vel_fail": 118,
+  "block_fail": 0,
+  "all_ok_ticks": 0,
+  "longest_consecutive": 0,
+  "first_tick": {
+    "sim_step": 932,
+    "sim_time_s": 15.533334143459797,
+    "error_m": 0.0035410519789333644,
+    "joint_vel_max": 0.2528652846813202,
+    "block_error_m": 0.0011455744715788518,
+    "pos_ok": true,
+    "vel_ok": false,
+    "block_ok": true,
+    "all_ok": false
+  },
+  "first_pos_break_tick": 10,
+  "first_pos_break_error_mm": 10.551551169356388,
+  "min_error_mm": 3.2845787005176796,
+  "max_joint_vel": 0.3517327606678009,
+  "max_block_error_mm": 1.6552012134990501,
+  "final": {
+    "sim_step": 1051,
+    "sim_time_s": 17.516667580232024,
+    "error_m": 0.057210634847093975,
+    "joint_vel_max": 0.1577758938074112,
+    "block_error_m": 0.00165520121349905,
+    "pos_ok": false,
+    "vel_ok": false,
+    "block_ok": true,
+    "consecutive": 0
+  },
+  "failure_combos": {
+    "vel": 10,
+    "posvel": 108,
+    "pos": 2
+  },
+  "timeout_tick": 1051
+}

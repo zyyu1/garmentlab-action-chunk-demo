@@ -1,0 +1,66 @@
+{
+  "schema": "arc135_diagnostic_v1",
+  "action": "arc135",
+  "target": [
+    0.15437224507331848,
+    -0.4311170279979706,
+    0.17036335170269012
+  ],
+  "summary": {
+    "ticks": 120,
+    "segment": 6,
+    "action": "arc135",
+    "target": [
+      0.15437224507331848,
+      -0.4311170279979706,
+      0.17036335170269012
+    ],
+    "pos_fail": 110,
+    "vel_fail": 118,
+    "block_fail": 0,
+    "all_ok_ticks": 0,
+    "longest_consecutive": 0,
+    "first_tick": {
+      "sim_step": 932,
+      "sim_time_s": 15.533334143459797,
+      "error_m": 0.0035410519789333644,
+      "joint_vel_max": 0.2528652846813202,
+      "block_error_m": 0.0011455744715788518,
+      "pos_ok": true,
+      "vel_ok": false,
+      "block_ok": true,
+      "all_ok": false
+    },
+    "first_pos_break_tick": 10,
+    "first_pos_break_error_mm": 10.551551169356388,
+    "min_error_mm": 3.2845787005176796,
+    "max_joint_vel": 0.3517327606678009,
+    "max_block_error_mm": 1.6552012134990501,
+    "final": {
+      "sim_step": 1051,
+      "sim_time_s": 17.516667580232024,
+      "error_m": 0.057210634847093975,
+      "joint_vel_max": 0.1577758938074112,
+      "block_error_m": 0.00165520121349905,
+      "pos_ok": false,
+      "vel_ok": false,
+      "block_ok": true,
+      "consecutive": 0
+    },
+    "failure_combos": {
+      "vel": 10,
+      "posvel": 108,
+      "pos": 2
+    },
+    "timeout_tick": 1051
+  },
+  "ticks_jsonl_sha256": "a30ace6aefa9e26ac88f839005aea3873cefea02befe9a6d2a3c47f47da188ae",
+  "ticks_csv_sha256": "46b8f91d8d8abc8593834cb106998812585b5a2f2b00343525fffa179f37b9eb",
+  "summary_sha256": "41e11a19a4a051c63920ec2859133400ee1e86e965eb23b78ce85a21cf16975b",
+  "segment_summary_sha256": "25a04d2092181d6fca087f2f0cc4704a6a21c562f1929399c1b9e8b80e2147a3",
+  "result_dir": "/root/autodl-tmp/day4-a5-rc2-l1-20261106-051736-726076",
+  "run_log_sha256": "ef57f9d98eecbf723670deabae390f0e9829f87fae7b747447c25db2105443a2",
+  "command": "python diagnose_arc135.py",
+  "exit_code": 0,
+  "reproduced": true
+}
