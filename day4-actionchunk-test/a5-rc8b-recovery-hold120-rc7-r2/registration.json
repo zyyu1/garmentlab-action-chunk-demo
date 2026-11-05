@@ -18,8 +18,9 @@
     "runner_sha256": "a89977ec355c2fdc8010b7e18625ab1b429ce6be3f93ee1aad4b8fa026b2b41e",
     "audit_sha256": "0d4a9d74b595a166bc34b3b7ffdd164e7085be7d1ae19130e85f2bdb17c1a1e8",
     "hold_contract_sha256": "6eab1ff528c332e250d7e7b14f3b1529b51095dda9b5f9743d33861266062d6a",
-    "inheritance_sha256": "a9a106c202178d859b3d4b4bf9e9e4102f091aeebaef3328709e75b0c0bb9210",
-    "resume_runner_sha256": "bd101f76d2e22e95a76f3b86a611a301a2ec39509b95bc4beccf3be9b9f20476"
+    "inheritance_sha256": "597531871b10c2b91829a49111e7bab369e47beab6b07808d3dde68e5937622e",
+    "resume_runner_sha256": "bd101f76d2e22e95a76f3b86a611a301a2ec39509b95bc4beccf3be9b9f20476",
+    "verifier_sha256": "de97cf5241b972ab3d5c8f1f2b92f65b6465c87be603560956d4def1d0d58b45"
   },
   "audit_fix": {
     "hold_applicable": "applicability field, not required to be true",

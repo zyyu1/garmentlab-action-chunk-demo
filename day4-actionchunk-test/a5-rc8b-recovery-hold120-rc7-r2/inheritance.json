@@ -59,5 +59,10 @@
     "initial audit exit 5 kept; not changed to 0",
     "postaudit output kept separately",
     "slot1 manifest not rewritten to the revised candidate"
-  ]
+  ],
+  "verification": {
+    "verify_rc7_sources_sha256": "de97cf5241b972ab3d5c8f1f2b92f65b6465c87be603560956d4def1d0d58b45",
+    "hold_contract_sha256": "6eab1ff528c332e250d7e7b14f3b1529b51095dda9b5f9743d33861266062d6a",
+    "audit_sha256": "0d4a9d74b595a166bc34b3b7ffdd164e7085be7d1ae19130e85f2bdb17c1a1e8"
+  }
 }

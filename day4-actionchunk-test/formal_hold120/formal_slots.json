@@ -1,0 +1,1154 @@
+{
+  "schema": "formal-hold120-slots-v1",
+  "batch": "stage4-formal-v1",
+  "initials": [
+    {
+      "seed": 4110,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4111,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4112,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4113,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4114,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4115,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4116,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4117,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4118,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4119,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4120,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4121,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4122,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4123,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4124,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4125,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4126,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4127,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4128,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4129,
+      "level": "flat",
+      "runner": "run-square-initial.sh"
+    },
+    {
+      "seed": 4210,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4211,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4212,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4213,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4214,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4215,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4216,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4217,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4218,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4219,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4220,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4221,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4222,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4223,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4224,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4225,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4226,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4227,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4228,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4229,
+      "level": "perturbed",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4310,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4311,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4312,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4313,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4314,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4315,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4316,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4317,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4318,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4319,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4320,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4321,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4322,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4323,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4324,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4325,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4326,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4327,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4328,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    },
+    {
+      "seed": 4329,
+      "level": "crumpled",
+      "runner": "run-square-initial-stripfold.sh"
+    }
+  ],
+  "slots": [
+    {
+      "slot": 1,
+      "seed": 4110,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 1
+    },
+    {
+      "slot": 2,
+      "seed": 4110,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 1
+    },
+    {
+      "slot": 3,
+      "seed": 4111,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 2
+    },
+    {
+      "slot": 4,
+      "seed": 4111,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 2
+    },
+    {
+      "slot": 5,
+      "seed": 4112,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 3
+    },
+    {
+      "slot": 6,
+      "seed": 4112,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 3
+    },
+    {
+      "slot": 7,
+      "seed": 4113,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 4
+    },
+    {
+      "slot": 8,
+      "seed": 4113,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 4
+    },
+    {
+      "slot": 9,
+      "seed": 4114,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 5
+    },
+    {
+      "slot": 10,
+      "seed": 4114,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 5
+    },
+    {
+      "slot": 11,
+      "seed": 4115,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 6
+    },
+    {
+      "slot": 12,
+      "seed": 4115,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 6
+    },
+    {
+      "slot": 13,
+      "seed": 4116,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 7
+    },
+    {
+      "slot": 14,
+      "seed": 4116,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 7
+    },
+    {
+      "slot": 15,
+      "seed": 4117,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 8
+    },
+    {
+      "slot": 16,
+      "seed": 4117,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 8
+    },
+    {
+      "slot": 17,
+      "seed": 4118,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 9
+    },
+    {
+      "slot": 18,
+      "seed": 4118,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 9
+    },
+    {
+      "slot": 19,
+      "seed": 4119,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 10
+    },
+    {
+      "slot": 20,
+      "seed": 4119,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 10
+    },
+    {
+      "slot": 21,
+      "seed": 4120,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 11
+    },
+    {
+      "slot": 22,
+      "seed": 4120,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 11
+    },
+    {
+      "slot": 23,
+      "seed": 4121,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 12
+    },
+    {
+      "slot": 24,
+      "seed": 4121,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 12
+    },
+    {
+      "slot": 25,
+      "seed": 4122,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 13
+    },
+    {
+      "slot": 26,
+      "seed": 4122,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 13
+    },
+    {
+      "slot": 27,
+      "seed": 4123,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 14
+    },
+    {
+      "slot": 28,
+      "seed": 4123,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 14
+    },
+    {
+      "slot": 29,
+      "seed": 4124,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 15
+    },
+    {
+      "slot": 30,
+      "seed": 4124,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 15
+    },
+    {
+      "slot": 31,
+      "seed": 4125,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 16
+    },
+    {
+      "slot": 32,
+      "seed": 4125,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 16
+    },
+    {
+      "slot": 33,
+      "seed": 4126,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 17
+    },
+    {
+      "slot": 34,
+      "seed": 4126,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 17
+    },
+    {
+      "slot": 35,
+      "seed": 4127,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 18
+    },
+    {
+      "slot": 36,
+      "seed": 4127,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 18
+    },
+    {
+      "slot": 37,
+      "seed": 4128,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 19
+    },
+    {
+      "slot": 38,
+      "seed": 4128,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 19
+    },
+    {
+      "slot": 39,
+      "seed": 4129,
+      "level": "flat",
+      "mode": "single",
+      "initial_index": 20
+    },
+    {
+      "slot": 40,
+      "seed": 4129,
+      "level": "flat",
+      "mode": "arc4",
+      "initial_index": 20
+    },
+    {
+      "slot": 41,
+      "seed": 4210,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 21
+    },
+    {
+      "slot": 42,
+      "seed": 4210,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 21
+    },
+    {
+      "slot": 43,
+      "seed": 4211,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 22
+    },
+    {
+      "slot": 44,
+      "seed": 4211,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 22
+    },
+    {
+      "slot": 45,
+      "seed": 4212,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 23
+    },
+    {
+      "slot": 46,
+      "seed": 4212,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 23
+    },
+    {
+      "slot": 47,
+      "seed": 4213,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 24
+    },
+    {
+      "slot": 48,
+      "seed": 4213,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 24
+    },
+    {
+      "slot": 49,
+      "seed": 4214,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 25
+    },
+    {
+      "slot": 50,
+      "seed": 4214,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 25
+    },
+    {
+      "slot": 51,
+      "seed": 4215,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 26
+    },
+    {
+      "slot": 52,
+      "seed": 4215,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 26
+    },
+    {
+      "slot": 53,
+      "seed": 4216,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 27
+    },
+    {
+      "slot": 54,
+      "seed": 4216,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 27
+    },
+    {
+      "slot": 55,
+      "seed": 4217,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 28
+    },
+    {
+      "slot": 56,
+      "seed": 4217,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 28
+    },
+    {
+      "slot": 57,
+      "seed": 4218,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 29
+    },
+    {
+      "slot": 58,
+      "seed": 4218,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 29
+    },
+    {
+      "slot": 59,
+      "seed": 4219,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 30
+    },
+    {
+      "slot": 60,
+      "seed": 4219,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 30
+    },
+    {
+      "slot": 61,
+      "seed": 4220,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 31
+    },
+    {
+      "slot": 62,
+      "seed": 4220,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 31
+    },
+    {
+      "slot": 63,
+      "seed": 4221,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 32
+    },
+    {
+      "slot": 64,
+      "seed": 4221,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 32
+    },
+    {
+      "slot": 65,
+      "seed": 4222,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 33
+    },
+    {
+      "slot": 66,
+      "seed": 4222,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 33
+    },
+    {
+      "slot": 67,
+      "seed": 4223,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 34
+    },
+    {
+      "slot": 68,
+      "seed": 4223,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 34
+    },
+    {
+      "slot": 69,
+      "seed": 4224,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 35
+    },
+    {
+      "slot": 70,
+      "seed": 4224,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 35
+    },
+    {
+      "slot": 71,
+      "seed": 4225,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 36
+    },
+    {
+      "slot": 72,
+      "seed": 4225,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 36
+    },
+    {
+      "slot": 73,
+      "seed": 4226,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 37
+    },
+    {
+      "slot": 74,
+      "seed": 4226,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 37
+    },
+    {
+      "slot": 75,
+      "seed": 4227,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 38
+    },
+    {
+      "slot": 76,
+      "seed": 4227,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 38
+    },
+    {
+      "slot": 77,
+      "seed": 4228,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 39
+    },
+    {
+      "slot": 78,
+      "seed": 4228,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 39
+    },
+    {
+      "slot": 79,
+      "seed": 4229,
+      "level": "perturbed",
+      "mode": "single",
+      "initial_index": 40
+    },
+    {
+      "slot": 80,
+      "seed": 4229,
+      "level": "perturbed",
+      "mode": "arc4",
+      "initial_index": 40
+    },
+    {
+      "slot": 81,
+      "seed": 4310,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 41
+    },
+    {
+      "slot": 82,
+      "seed": 4310,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 41
+    },
+    {
+      "slot": 83,
+      "seed": 4311,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 42
+    },
+    {
+      "slot": 84,
+      "seed": 4311,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 42
+    },
+    {
+      "slot": 85,
+      "seed": 4312,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 43
+    },
+    {
+      "slot": 86,
+      "seed": 4312,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 43
+    },
+    {
+      "slot": 87,
+      "seed": 4313,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 44
+    },
+    {
+      "slot": 88,
+      "seed": 4313,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 44
+    },
+    {
+      "slot": 89,
+      "seed": 4314,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 45
+    },
+    {
+      "slot": 90,
+      "seed": 4314,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 45
+    },
+    {
+      "slot": 91,
+      "seed": 4315,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 46
+    },
+    {
+      "slot": 92,
+      "seed": 4315,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 46
+    },
+    {
+      "slot": 93,
+      "seed": 4316,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 47
+    },
+    {
+      "slot": 94,
+      "seed": 4316,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 47
+    },
+    {
+      "slot": 95,
+      "seed": 4317,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 48
+    },
+    {
+      "slot": 96,
+      "seed": 4317,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 48
+    },
+    {
+      "slot": 97,
+      "seed": 4318,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 49
+    },
+    {
+      "slot": 98,
+      "seed": 4318,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 49
+    },
+    {
+      "slot": 99,
+      "seed": 4319,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 50
+    },
+    {
+      "slot": 100,
+      "seed": 4319,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 50
+    },
+    {
+      "slot": 101,
+      "seed": 4320,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 51
+    },
+    {
+      "slot": 102,
+      "seed": 4320,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 51
+    },
+    {
+      "slot": 103,
+      "seed": 4321,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 52
+    },
+    {
+      "slot": 104,
+      "seed": 4321,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 52
+    },
+    {
+      "slot": 105,
+      "seed": 4322,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 53
+    },
+    {
+      "slot": 106,
+      "seed": 4322,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 53
+    },
+    {
+      "slot": 107,
+      "seed": 4323,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 54
+    },
+    {
+      "slot": 108,
+      "seed": 4323,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 54
+    },
+    {
+      "slot": 109,
+      "seed": 4324,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 55
+    },
+    {
+      "slot": 110,
+      "seed": 4324,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 55
+    },
+    {
+      "slot": 111,
+      "seed": 4325,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 56
+    },
+    {
+      "slot": 112,
+      "seed": 4325,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 56
+    },
+    {
+      "slot": 113,
+      "seed": 4326,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 57
+    },
+    {
+      "slot": 114,
+      "seed": 4326,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 57
+    },
+    {
+      "slot": 115,
+      "seed": 4327,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 58
+    },
+    {
+      "slot": 116,
+      "seed": 4327,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 58
+    },
+    {
+      "slot": 117,
+      "seed": 4328,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 59
+    },
+    {
+      "slot": 118,
+      "seed": 4328,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 59
+    },
+    {
+      "slot": 119,
+      "seed": 4329,
+      "level": "crumpled",
+      "mode": "single",
+      "initial_index": 60
+    },
+    {
+      "slot": 120,
+      "seed": 4329,
+      "level": "crumpled",
+      "mode": "arc4",
+      "initial_index": 60
+    }
+  ],
+  "counts": {
+    "initials": 60,
+    "slots": 120
+  },
+  "seed_list_sha256": "15c87eec47412eaaa437a7c4627480ddb1315de3aafdd0f091a73601dfa6feed",
+  "plan_sha256": "32e61d575d77eae0943cb2251d10c25b12d7f0d9f8f962ddd96dc1a4d4d2ab85"
+}

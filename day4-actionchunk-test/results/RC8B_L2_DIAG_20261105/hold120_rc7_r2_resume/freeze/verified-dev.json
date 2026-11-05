@@ -1,0 +1,116 @@
+{
+  "schema": "a5-verified-dev-source-inherited-v1",
+  "manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "parent_manifest_sha256": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df",
+  "source_mode": "slot1_parent + slots2-7_revised",
+  "verification_manifest": "/root/autodl-tmp/a5-rc8b-recovery-hold120-rc7-r2/verification-manifest.json",
+  "verification_manifest_sha256": "7d328159b72a2bd55be0254fd6844cb94408e1efa67e973148b67e8ffa3dcdae",
+  "cases": [
+    {
+      "slot": 1,
+      "seed": 4100,
+      "mode": "single",
+      "status": "accepted",
+      "success": true,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-l1-20261105-081311-735952",
+      "trace_sha256": "14b50fab8ec3bbb81c124526bc273057fa00bf95639a63e56c4995f9b877a434",
+      "hold": null,
+      "source_manifest": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df"
+    },
+    {
+      "slot": 2,
+      "seed": 4100,
+      "mode": "arc4",
+      "status": "accepted",
+      "success": true,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-l1-20261105-083859-341524",
+      "trace_sha256": "14b50fab8ec3bbb81c124526bc273057fa00bf95639a63e56c4995f9b877a434",
+      "hold": null,
+      "source_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+    },
+    {
+      "slot": 3,
+      "seed": 4202,
+      "mode": "single",
+      "status": "accepted",
+      "success": true,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-085248-353214",
+      "trace_sha256": "a191640a625d4897f41c595b0c435c5fefee584f3ac0b843e7665bcb1bb5d26a",
+      "hold": {
+        "steps": 120,
+        "frames": 121,
+        "duration_s": 2.0000001043081284
+      },
+      "source_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+    },
+    {
+      "slot": 4,
+      "seed": 4202,
+      "mode": "arc4",
+      "status": "accepted",
+      "success": true,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-091038-643466",
+      "trace_sha256": "a191640a625d4897f41c595b0c435c5fefee584f3ac0b843e7665bcb1bb5d26a",
+      "hold": {
+        "steps": 120,
+        "frames": 121,
+        "duration_s": 2.0000001043081284
+      },
+      "source_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+    },
+    {
+      "slot": 5,
+      "seed": 4302,
+      "mode": "single",
+      "status": "accepted",
+      "success": true,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-092821-242307",
+      "trace_sha256": "456f76bafd990aba749aa9dc5b424f6105a9c0d02105c4cf9e4909f59096d8ad",
+      "hold": {
+        "steps": 120,
+        "frames": 121,
+        "duration_s": 2.0000001043081284
+      },
+      "source_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+    },
+    {
+      "slot": 6,
+      "seed": 4302,
+      "mode": "arc4",
+      "status": "accepted",
+      "success": true,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-094700-143205",
+      "trace_sha256": "456f76bafd990aba749aa9dc5b424f6105a9c0d02105c4cf9e4909f59096d8ad",
+      "hold": {
+        "steps": 120,
+        "frames": 121,
+        "duration_s": 2.0000001043081284
+      },
+      "source_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+    },
+    {
+      "slot": 7,
+      "seed": 4201,
+      "mode": "single",
+      "status": "rejected",
+      "success": false,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-100445-893957",
+      "trace_sha256": "c8331ca197083c8110c06410744b53994f0ad964621fa8ee0d62db8037fa7eee",
+      "hold": {
+        "steps": 120,
+        "frames": 121,
+        "duration_s": 2.0000001043081284
+      },
+      "source_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+    }
+  ],
+  "all_six_positives_accepted": true,
+  "slot7_quality": "rejected",
+  "audit_history": {
+    "slot1_initial_exit": 5,
+    "slot1_postaudit_exit": 0,
+    "original_manifest": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df",
+    "revised_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+  },
+  "created_utc": "2026-11-05T02:44:32.144707+00:00"
+}

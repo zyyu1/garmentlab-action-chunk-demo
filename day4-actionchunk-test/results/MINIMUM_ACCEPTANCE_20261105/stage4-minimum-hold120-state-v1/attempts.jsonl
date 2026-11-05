@@ -1,0 +1,6 @@
+{"initial": "/root/autodl-tmp/day4-square-initial-20261105-231449-197286", "level": "flat", "mode": "single", "seed": 4110, "slot": 1, "state": "started", "utc": "2026-11-05T19:18:36.905608+00:00"}
+{"entry_exit": 1, "error": "episode_or_missing_result", "level": "flat", "mode": "single", "seed": 4110, "slot": 1, "state": "error", "utc": "2026-11-05T19:18:37.469242+00:00"}
+{"initial": "/root/autodl-tmp/day4-square-initial-20261105-231810-103925", "level": "flat", "mode": "single", "seed": 4111, "slot": 2, "state": "started", "utc": "2026-11-05T19:27:05.749421+00:00"}
+{"entry_exit": 1, "error": "episode_or_missing_result", "level": "flat", "mode": "single", "seed": 4111, "slot": 2, "state": "error", "utc": "2026-11-05T19:27:06.873286+00:00"}
+{"initial": "/root/autodl-tmp/day4-square-initial-20261105-232137-703257", "level": "flat", "mode": "single", "seed": 4112, "slot": 3, "state": "started", "utc": "2026-11-05T19:30:54.512806+00:00"}
+{"entry_exit": 3, "error": "execution_error", "level": "flat", "mode": "single", "result_dir": "/root/autodl-tmp/day4-a5-rc2-l1-20261106-033055-623326", "seed": 4112, "slot": 3, "state": "error", "utc": "2026-11-05T19:40:11.491915+00:00"}

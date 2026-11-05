@@ -1,0 +1,9 @@
+{
+  "app": "/root/autodl-tmp/a5-rc8b-recovery-hold120-rc7-r2/app",
+  "candidate": "/root/autodl-tmp/a5-rc8b-recovery-hold120-rc7-r2",
+  "python": "/root/autodl-tmp/envs/isaac40/bin/python",
+  "slots": "/root/autodl-tmp/stage4-formal-hold120/formal_slots.json",
+  "state": "/root/autodl-tmp/stage4-formal-hold120-formal-v1",
+  "seed_list": "/root/autodl-tmp/a5-rc8b-recovery-hold120-rc7-r2/app/stage4-heldout-seeds.json",
+  "plan": "/root/autodl-tmp/a5-rc8b-recovery-hold120-rc7-r2/app/square-initial-plan.json"
+}

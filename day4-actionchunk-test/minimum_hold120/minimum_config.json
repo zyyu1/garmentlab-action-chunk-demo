@@ -1,0 +1,7 @@
+{
+  "app": "/root/autodl-tmp/stage4-minimum-hold120/app_overlay",
+  "candidate": "/root/autodl-tmp/a5-rc8b-recovery-hold120-rc7-r2",
+  "python": "/root/autodl-tmp/envs/isaac40/bin/python",
+  "slots": "/root/autodl-tmp/stage4-minimum-hold120/minimum_slots.json",
+  "state": "/root/autodl-tmp/stage4-minimum-hold120-state-v1"
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "minimum-hold120-deployment-v1",
+  "candidate": "a5-rc8b-recovery-hold120-rc7-r2",
+  "candidate_manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "verification_manifest_sha256": "7d328159b72a2bd55be0254fd6844cb94408e1efa67e973148b67e8ffa3dcdae",
+  "app_overlay_manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "stop_rule": "per level 5 valid successes, max 20 attempts",
+  "entries": {
+    "minimum_driver.py": "5aec9d869bb5d425f71c11a3caa5ea7a6bb5c5357218d6d995fb453b357ced26",
+    "adapter_run.py": "e0367feada322195a705d8a7523bb486fc3ac1f36e05b79c63d5b0d6be520843",
+    "formal_driver.py": "b3f2d7078bbb7de697295909612c4d4f77cb905a18ee097b7a838035a69e9298",
+    "minimum_config.json": "f29522ab621e3231670f0370a7561a8ed504708f9c354db9406224646e1ae398",
+    "minimum_slots.json": "2ab2a9513e1bcf20a34c8f30454cc27bd48aaa1d178378775a9daedbd612b31b",
+    "MINIMUM_ACCEPTANCE_PLAN.md": "2f801c2dbb3505cb32dcbf88cff63b94059407bfec5a13cd6dd17541668f32fa",
+    "test_minimum_driver.py": "b079f9485dbebcf6c4ecde0b5bef7dd5b6eb4f9540b5a266b41a315f51d8f66a",
+    "test_minimum_driver.log": "3096ab67ccd6091f43959faf84c457ac60f464539b0d938ce947b492f0bb011c",
+    "launch_minimum.sh": "0ddcc26bd21738767772d1915958a89e6ea23897dd0be39fd3923e30dec4d88d",
+    "candidate_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+    "gate_rc7_sources.py": "3da31d853330681137068cebc8861e9313673928bfe888bbcca5e9dbef95d99c",
+    "audit_hold120_case.py": "0d4a9d74b595a166bc34b3b7ffdd164e7085be7d1ae19130e85f2bdb17c1a1e8",
+    "hold_contract.py": "6eab1ff528c332e250d7e7b14f3b1529b51095dda9b5f9743d33861266062d6a",
+    "verification_manifest": "7d328159b72a2bd55be0254fd6844cb94408e1efa67e973148b67e8ffa3dcdae",
+    "verified_dev": "67c64a55b74db10ac85818cb0ed6ca1d00600e8b4ba326e5af4d6f01109cbbad",
+    "e_release": "9042e88ed8b4d082917151023705276230c1a4ba5c8e65b3c602337fa68ab66a",
+    "seed_list": "15c87eec47412eaaa437a7c4627480ddb1315de3aafdd0f091a73601dfa6feed",
+    "initial_plan": "32e61d575d77eae0943cb2251d10c25b12d7f0d9f8f962ddd96dc1a4d4d2ab85"
+  }
+}

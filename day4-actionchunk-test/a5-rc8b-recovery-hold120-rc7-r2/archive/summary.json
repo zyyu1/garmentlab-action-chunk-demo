@@ -1,0 +1,213 @@
+{
+  "cases": [
+    {
+      "slot": 1,
+      "seed": 4100,
+      "mode": "single",
+      "quality": "accepted",
+      "centroid_mm": 0.14353134692869643,
+      "p95_mm": 0.20719995120599788,
+      "stable": true,
+      "geometry": true,
+      "stationary_mm": 14.937804407428436,
+      "fold_extent": null,
+      "hold_steps": null,
+      "hold_frames": null,
+      "hold_duration_s": null,
+      "hold_begin": null,
+      "hold_end": null,
+      "run": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\RC8B_L2_DIAG_20261105\\hold120_rc7\\day4-a5-rc2-l1-20261105-081311-735952"
+    },
+    {
+      "slot": 2,
+      "seed": 4100,
+      "mode": "arc4",
+      "quality": "accepted",
+      "centroid_mm": 0.14353134692869643,
+      "p95_mm": 0.20719995120599788,
+      "stable": true,
+      "geometry": true,
+      "stationary_mm": 14.937804407428436,
+      "fold_extent": null,
+      "hold_steps": null,
+      "hold_frames": null,
+      "hold_duration_s": null,
+      "hold_begin": null,
+      "hold_end": null,
+      "run": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\RC8B_L2_DIAG_20261105\\hold120_rc7_r2_resume\\day4-a5-rc2-l1-20261105-083859-341524"
+    },
+    {
+      "slot": 3,
+      "seed": 4202,
+      "mode": "single",
+      "quality": "accepted",
+      "centroid_mm": 0.23741513496841268,
+      "p95_mm": 0.3484380737502879,
+      "stable": true,
+      "geometry": true,
+      "stationary_mm": 6.685628261790165,
+      "fold_extent": [
+        0.2252357341349125,
+        0.41899557411670685,
+        0.06031982321292162
+      ],
+      "hold_steps": 120,
+      "hold_frames": 121,
+      "hold_duration_s": 2.0000001043081284,
+      "hold_begin": {
+        "step": 1028,
+        "sim_time_s": 17.1666675619781
+      },
+      "hold_end": {
+        "step": 1148,
+        "sim_time_s": 19.16666766628623
+      },
+      "run": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\RC8B_L2_DIAG_20261105\\hold120_rc7_r2_resume\\day4-a5-rc2-pfs1-observation-v2-20261105-085248-353214"
+    },
+    {
+      "slot": 4,
+      "seed": 4202,
+      "mode": "arc4",
+      "quality": "accepted",
+      "centroid_mm": 0.23741513496841268,
+      "p95_mm": 0.3484380737502879,
+      "stable": true,
+      "geometry": true,
+      "stationary_mm": 6.685628261790165,
+      "fold_extent": [
+        0.2252357341349125,
+        0.41899557411670685,
+        0.06031982321292162
+      ],
+      "hold_steps": 120,
+      "hold_frames": 121,
+      "hold_duration_s": 2.0000001043081284,
+      "hold_begin": {
+        "step": 1028,
+        "sim_time_s": 17.1666675619781
+      },
+      "hold_end": {
+        "step": 1148,
+        "sim_time_s": 19.16666766628623
+      },
+      "run": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\RC8B_L2_DIAG_20261105\\hold120_rc7_r2_resume\\day4-a5-rc2-pfs1-observation-v2-20261105-091038-643466"
+    },
+    {
+      "slot": 5,
+      "seed": 4302,
+      "mode": "single",
+      "quality": "accepted",
+      "centroid_mm": 0.23858263379520725,
+      "p95_mm": 0.34681751280653017,
+      "stable": true,
+      "geometry": true,
+      "stationary_mm": 7.158609812187668,
+      "fold_extent": [
+        0.26421841979026794,
+        0.4319326877593994,
+        0.06031520385295153
+      ],
+      "hold_steps": 120,
+      "hold_frames": 121,
+      "hold_duration_s": 2.0000001043081284,
+      "hold_begin": {
+        "step": 1105,
+        "sim_time_s": 18.450000962242484
+      },
+      "hold_end": {
+        "step": 1225,
+        "sim_time_s": 20.450001066550612
+      },
+      "run": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\RC8B_L2_DIAG_20261105\\hold120_rc7_r2_resume\\day4-a5-rc2-pfs1-observation-v2-20261105-092821-242307"
+    },
+    {
+      "slot": 6,
+      "seed": 4302,
+      "mode": "arc4",
+      "quality": "accepted",
+      "centroid_mm": 0.23858263379520725,
+      "p95_mm": 0.34681751280653017,
+      "stable": true,
+      "geometry": true,
+      "stationary_mm": 7.158609812187668,
+      "fold_extent": [
+        0.26421841979026794,
+        0.4319326877593994,
+        0.06031520385295153
+      ],
+      "hold_steps": 120,
+      "hold_frames": 121,
+      "hold_duration_s": 2.0000001043081284,
+      "hold_begin": {
+        "step": 1105,
+        "sim_time_s": 18.450000962242484
+      },
+      "hold_end": {
+        "step": 1225,
+        "sim_time_s": 20.450001066550612
+      },
+      "run": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\RC8B_L2_DIAG_20261105\\hold120_rc7_r2_resume\\day4-a5-rc2-pfs1-observation-v2-20261105-094700-143205"
+    },
+    {
+      "slot": 7,
+      "seed": 4201,
+      "mode": "single",
+      "quality": "rejected",
+      "centroid_mm": 7.258312248364385,
+      "p95_mm": 11.00297504064005,
+      "stable": false,
+      "geometry": false,
+      "stationary_mm": 30.566831687369923,
+      "fold_extent": [
+        0.21529258228838444,
+        0.4154052436351776,
+        0.05954356957226992
+      ],
+      "hold_steps": 120,
+      "hold_frames": 121,
+      "hold_duration_s": 2.0000001043081284,
+      "hold_begin": {
+        "step": 1396,
+        "sim_time_s": 23.300001215189695
+      },
+      "hold_end": {
+        "step": 1516,
+        "sim_time_s": 25.300001319497824
+      },
+      "run": "E:\\learning\\project\\garmentlab-action-chunk-demo\\day4-actionchunk-test\\results\\RC8B_L2_DIAG_20261105\\hold120_rc7_r2_resume\\day4-a5-rc2-pfs1-observation-v2-20261105-100445-893957"
+    }
+  ],
+  "all_six_positives_accepted": true,
+  "slot7_quality": "rejected",
+  "pairs": {
+    "4100": {
+      "target_max_abs_m": 0.0,
+      "pass": true,
+      "hold_timing": null
+    },
+    "4202": {
+      "target_max_abs_m": 0.0,
+      "pass": true,
+      "hold_timing": {
+        "single_steps": 120,
+        "arc_steps": 120,
+        "single_duration": 2.0000001043081284,
+        "arc_duration": 2.0000001043081284,
+        "same_steps": true,
+        "same_duration": true
+      }
+    },
+    "4302": {
+      "target_max_abs_m": 0.0,
+      "pass": true,
+      "hold_timing": {
+        "single_steps": 120,
+        "arc_steps": 120,
+        "single_duration": 2.0000001043081284,
+        "arc_duration": 2.0000001043081284,
+        "same_steps": true,
+        "same_duration": true
+      }
+    }
+  }
+}

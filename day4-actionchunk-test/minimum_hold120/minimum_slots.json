@@ -1,0 +1,649 @@
+{
+  "schema": "minimum-hold120-single-v1",
+  "initials": 60,
+  "slots": [
+    {
+      "slot": 1,
+      "seed": 4110,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 1
+    },
+    {
+      "slot": 2,
+      "seed": 4111,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 2
+    },
+    {
+      "slot": 3,
+      "seed": 4112,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 3
+    },
+    {
+      "slot": 4,
+      "seed": 4113,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 4
+    },
+    {
+      "slot": 5,
+      "seed": 4114,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 5
+    },
+    {
+      "slot": 6,
+      "seed": 4115,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 6
+    },
+    {
+      "slot": 7,
+      "seed": 4116,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 7
+    },
+    {
+      "slot": 8,
+      "seed": 4117,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 8
+    },
+    {
+      "slot": 9,
+      "seed": 4118,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 9
+    },
+    {
+      "slot": 10,
+      "seed": 4119,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 10
+    },
+    {
+      "slot": 11,
+      "seed": 4120,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 11
+    },
+    {
+      "slot": 12,
+      "seed": 4121,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 12
+    },
+    {
+      "slot": 13,
+      "seed": 4122,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 13
+    },
+    {
+      "slot": 14,
+      "seed": 4123,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 14
+    },
+    {
+      "slot": 15,
+      "seed": 4124,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 15
+    },
+    {
+      "slot": 16,
+      "seed": 4125,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 16
+    },
+    {
+      "slot": 17,
+      "seed": 4126,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 17
+    },
+    {
+      "slot": 18,
+      "seed": 4127,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 18
+    },
+    {
+      "slot": 19,
+      "seed": 4128,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 19
+    },
+    {
+      "slot": 20,
+      "seed": 4129,
+      "level": "flat",
+      "mode": "single",
+      "level_index": 20
+    },
+    {
+      "slot": 21,
+      "seed": 4210,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 1
+    },
+    {
+      "slot": 22,
+      "seed": 4211,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 2
+    },
+    {
+      "slot": 23,
+      "seed": 4212,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 3
+    },
+    {
+      "slot": 24,
+      "seed": 4213,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 4
+    },
+    {
+      "slot": 25,
+      "seed": 4214,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 5
+    },
+    {
+      "slot": 26,
+      "seed": 4215,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 6
+    },
+    {
+      "slot": 27,
+      "seed": 4216,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 7
+    },
+    {
+      "slot": 28,
+      "seed": 4217,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 8
+    },
+    {
+      "slot": 29,
+      "seed": 4218,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 9
+    },
+    {
+      "slot": 30,
+      "seed": 4219,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 10
+    },
+    {
+      "slot": 31,
+      "seed": 4220,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 11
+    },
+    {
+      "slot": 32,
+      "seed": 4221,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 12
+    },
+    {
+      "slot": 33,
+      "seed": 4222,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 13
+    },
+    {
+      "slot": 34,
+      "seed": 4223,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 14
+    },
+    {
+      "slot": 35,
+      "seed": 4224,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 15
+    },
+    {
+      "slot": 36,
+      "seed": 4225,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 16
+    },
+    {
+      "slot": 37,
+      "seed": 4226,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 17
+    },
+    {
+      "slot": 38,
+      "seed": 4227,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 18
+    },
+    {
+      "slot": 39,
+      "seed": 4228,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 19
+    },
+    {
+      "slot": 40,
+      "seed": 4229,
+      "level": "perturbed",
+      "mode": "single",
+      "level_index": 20
+    },
+    {
+      "slot": 41,
+      "seed": 4310,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 1
+    },
+    {
+      "slot": 42,
+      "seed": 4311,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 2
+    },
+    {
+      "slot": 43,
+      "seed": 4312,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 3
+    },
+    {
+      "slot": 44,
+      "seed": 4313,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 4
+    },
+    {
+      "slot": 45,
+      "seed": 4314,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 5
+    },
+    {
+      "slot": 46,
+      "seed": 4315,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 6
+    },
+    {
+      "slot": 47,
+      "seed": 4316,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 7
+    },
+    {
+      "slot": 48,
+      "seed": 4317,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 8
+    },
+    {
+      "slot": 49,
+      "seed": 4318,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 9
+    },
+    {
+      "slot": 50,
+      "seed": 4319,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 10
+    },
+    {
+      "slot": 51,
+      "seed": 4320,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 11
+    },
+    {
+      "slot": 52,
+      "seed": 4321,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 12
+    },
+    {
+      "slot": 53,
+      "seed": 4322,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 13
+    },
+    {
+      "slot": 54,
+      "seed": 4323,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 14
+    },
+    {
+      "slot": 55,
+      "seed": 4324,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 15
+    },
+    {
+      "slot": 56,
+      "seed": 4325,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 16
+    },
+    {
+      "slot": 57,
+      "seed": 4326,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 17
+    },
+    {
+      "slot": 58,
+      "seed": 4327,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 18
+    },
+    {
+      "slot": 59,
+      "seed": 4328,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 19
+    },
+    {
+      "slot": 60,
+      "seed": 4329,
+      "level": "crumpled",
+      "mode": "single",
+      "level_index": 20
+    }
+  ],
+  "screenshot_seeds": [
+    {
+      "level": "flat",
+      "seed": 4110,
+      "level_index": 1
+    },
+    {
+      "level": "flat",
+      "seed": 4111,
+      "level_index": 2
+    },
+    {
+      "level": "flat",
+      "seed": 4112,
+      "level_index": 3
+    },
+    {
+      "level": "flat",
+      "seed": 4113,
+      "level_index": 4
+    },
+    {
+      "level": "flat",
+      "seed": 4114,
+      "level_index": 5
+    },
+    {
+      "level": "flat",
+      "seed": 4115,
+      "level_index": 6
+    },
+    {
+      "level": "flat",
+      "seed": 4116,
+      "level_index": 7
+    },
+    {
+      "level": "flat",
+      "seed": 4117,
+      "level_index": 8
+    },
+    {
+      "level": "flat",
+      "seed": 4118,
+      "level_index": 9
+    },
+    {
+      "level": "flat",
+      "seed": 4119,
+      "level_index": 10
+    },
+    {
+      "level": "perturbed",
+      "seed": 4210,
+      "level_index": 1
+    },
+    {
+      "level": "perturbed",
+      "seed": 4211,
+      "level_index": 2
+    },
+    {
+      "level": "perturbed",
+      "seed": 4212,
+      "level_index": 3
+    },
+    {
+      "level": "perturbed",
+      "seed": 4213,
+      "level_index": 4
+    },
+    {
+      "level": "perturbed",
+      "seed": 4214,
+      "level_index": 5
+    },
+    {
+      "level": "perturbed",
+      "seed": 4215,
+      "level_index": 6
+    },
+    {
+      "level": "perturbed",
+      "seed": 4216,
+      "level_index": 7
+    },
+    {
+      "level": "perturbed",
+      "seed": 4217,
+      "level_index": 8
+    },
+    {
+      "level": "perturbed",
+      "seed": 4218,
+      "level_index": 9
+    },
+    {
+      "level": "perturbed",
+      "seed": 4219,
+      "level_index": 10
+    },
+    {
+      "level": "crumpled",
+      "seed": 4310,
+      "level_index": 1
+    },
+    {
+      "level": "crumpled",
+      "seed": 4311,
+      "level_index": 2
+    },
+    {
+      "level": "crumpled",
+      "seed": 4312,
+      "level_index": 3
+    },
+    {
+      "level": "crumpled",
+      "seed": 4313,
+      "level_index": 4
+    },
+    {
+      "level": "crumpled",
+      "seed": 4314,
+      "level_index": 5
+    },
+    {
+      "level": "crumpled",
+      "seed": 4315,
+      "level_index": 6
+    },
+    {
+      "level": "crumpled",
+      "seed": 4316,
+      "level_index": 7
+    },
+    {
+      "level": "crumpled",
+      "seed": 4317,
+      "level_index": 8
+    },
+    {
+      "level": "crumpled",
+      "seed": 4318,
+      "level_index": 9
+    },
+    {
+      "level": "crumpled",
+      "seed": 4319,
+      "level_index": 10
+    }
+  ],
+  "level_order": {
+    "flat": [
+      4110,
+      4111,
+      4112,
+      4113,
+      4114,
+      4115,
+      4116,
+      4117,
+      4118,
+      4119,
+      4120,
+      4121,
+      4122,
+      4123,
+      4124,
+      4125,
+      4126,
+      4127,
+      4128,
+      4129
+    ],
+    "perturbed": [
+      4210,
+      4211,
+      4212,
+      4213,
+      4214,
+      4215,
+      4216,
+      4217,
+      4218,
+      4219,
+      4220,
+      4221,
+      4222,
+      4223,
+      4224,
+      4225,
+      4226,
+      4227,
+      4228,
+      4229
+    ],
+    "crumpled": [
+      4310,
+      4311,
+      4312,
+      4313,
+      4314,
+      4315,
+      4316,
+      4317,
+      4318,
+      4319,
+      4320,
+      4321,
+      4322,
+      4323,
+      4324,
+      4325,
+      4326,
+      4327,
+      4328,
+      4329
+    ]
+  },
+  "seed_list_sha256": "15c87eec47412eaaa437a7c4627480ddb1315de3aafdd0f091a73601dfa6feed",
+  "plan_sha256": "32e61d575d77eae0943cb2251d10c25b12d7f0d9f8f962ddd96dc1a4d4d2ab85",
+  "stop_rule": "per level: stop after 5 distinct-seed valid successes; max 20 attempts; no seed replacement/retry/threshold change"
+}

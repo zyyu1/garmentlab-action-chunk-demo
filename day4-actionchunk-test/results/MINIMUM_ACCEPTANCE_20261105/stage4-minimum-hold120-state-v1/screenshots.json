@@ -1,0 +1,242 @@
+{
+  "flat-4110": {
+    "level": "flat",
+    "seed": 4110,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-231449-197286",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/flat-4110.png",
+    "screenshot_sha256": "cd4af837f9e9a845177f96b6222d22d07bf111ca5d652c81ed0b8393f1e33484",
+    "initial_geometry_sha256": "ffb078ec933a26f986cfc95ce2489a839ed8abbe32fa4ee182714e68989f59cc"
+  },
+  "flat-4111": {
+    "level": "flat",
+    "seed": 4111,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-231810-103925",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/flat-4111.png",
+    "screenshot_sha256": "efa9e76cb120faf797cc2441c549eb6906a8f450a97410fc0339601597574808",
+    "initial_geometry_sha256": "2e3606b9b41b0a4ab56aa48eb6efe6cc21e6d8d27f04df67704a9111f292c1a1"
+  },
+  "flat-4112": {
+    "level": "flat",
+    "seed": 4112,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-232137-703257",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/flat-4112.png",
+    "screenshot_sha256": "746d27bef0b413b660a1fadcbabcbd04a973af7cdb5e0edbbf3c01d7ffd13d1c",
+    "initial_geometry_sha256": "a90de233d174153dac9c185ff8b9c5a5af3ffbd1b14f50c0a9d802225bbc478e"
+  },
+  "flat-4113": {
+    "level": "flat",
+    "seed": 4113,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-232453-404004",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/flat-4113.png",
+    "screenshot_sha256": "66ded08dccb227abff3f0006814183351ede3251c755e86adfc268204a56ad62",
+    "initial_geometry_sha256": "1b179d7ea5f8d048abf9174ff65cf0918944e772fd9665b679e1bfedce442ae8"
+  },
+  "flat-4114": {
+    "level": "flat",
+    "seed": 4114,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-232818-196572",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/flat-4114.png",
+    "screenshot_sha256": "c4c147108fb0891a58b316430549e3e61a1c4cb69ef5661c78cf8860130e5d54",
+    "initial_geometry_sha256": "28b888165ab21e134907f9deea226eba1eaf4c86782a37f1428a97daa40abd1b"
+  },
+  "flat-4115": {
+    "level": "flat",
+    "seed": 4115,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-233133-203301",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/flat-4115.png",
+    "screenshot_sha256": "25a521667057309db6ef55e4fb2688b4a2a2847391cb5eedff1bdb2cd9166b17",
+    "initial_geometry_sha256": "d27d3bcabafc00d0c257b256dcbbf9b5293916dd11334632cb2634ef077ec648"
+  },
+  "flat-4116": {
+    "level": "flat",
+    "seed": 4116,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-233456-002451",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/flat-4116.png",
+    "screenshot_sha256": "2197225c226b7451a51949cf6aa1e65debe48947b1ce24d31eb48ec0cb14f8f9",
+    "initial_geometry_sha256": "b110454c611b844391f28f65d83fde1920cf4249ea2a5ac5249b02ecf697dc7b"
+  },
+  "flat-4117": {
+    "level": "flat",
+    "seed": 4117,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-233822-603824",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/flat-4117.png",
+    "screenshot_sha256": "95e03fed2d362d567f9bb77732ff41f330d4a52c39aec634b2a2b7fe3c5b1d20",
+    "initial_geometry_sha256": "62c62e6f83e2010d0228462a6f2809e163915a213050cc332bb17f631bd0f569"
+  },
+  "flat-4118": {
+    "level": "flat",
+    "seed": 4118,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-234143-000936",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/flat-4118.png",
+    "screenshot_sha256": "43c0fcd51fb19443ee5df293fff58f9976217d49f1c4d9c9701ad93c53c5ca99",
+    "initial_geometry_sha256": "ca3e87f2ca120874f460c71351723e9cb34dd4b1ee323e80cfd7148f0b1eb4f7"
+  },
+  "flat-4119": {
+    "level": "flat",
+    "seed": 4119,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-234500-797476",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/flat-4119.png",
+    "screenshot_sha256": "b9d97c468bee217181c6f7a248329a68350266069df16abaf7f90f28827cb302",
+    "initial_geometry_sha256": "217188c38f61ec6b8bdd2df399ad0c6f6bf3ed34fe7ccdb9ec1fe72d79a451f5"
+  },
+  "perturbed-4210": {
+    "level": "perturbed",
+    "seed": 4210,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261105-234817-163398",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/perturbed-4210.png",
+    "screenshot_sha256": "5378d2b210c113072e2e9a8ec5196c163660883c5f2a14df21aff917103f4be6",
+    "initial_geometry_sha256": "c6191ffa0444c9ea52b5f29b3c355243d01db7b210c00497f11bf9407c0494b3"
+  },
+  "perturbed-4211": {
+    "level": "perturbed",
+    "seed": 4211,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261105-235820-496122",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/perturbed-4211.png",
+    "screenshot_sha256": "877585caf095a2ec34de161f8fba8505d7f58daefe62bacc04afb2da9fdbfc6d",
+    "initial_geometry_sha256": "999bac6a51d739428581c080657005a28ba7efa46f3b597206aa290999dfa16c"
+  },
+  "perturbed-4212": {
+    "level": "perturbed",
+    "seed": 4212,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-000823-290425",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/perturbed-4212.png",
+    "screenshot_sha256": "bb3668311bf366f2d70c93cf59d07dc874ebafc0e8b65d48336fc40b8201debf",
+    "initial_geometry_sha256": "18071f6063b0faa0cbcb8944f48c4e7a2231c271eaf149d99ddbac23a28ee927"
+  },
+  "perturbed-4213": {
+    "level": "perturbed",
+    "seed": 4213,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-001834-589781",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/perturbed-4213.png",
+    "screenshot_sha256": "e4d85cf3866aff260945f43cbb8cbad225acb98b344e527ae880ab15ce3ad643",
+    "initial_geometry_sha256": "2869bafd24977999d68d77bdcb1bb65bddc1bbc2343a7b20ef6f58eefd610624"
+  },
+  "perturbed-4214": {
+    "level": "perturbed",
+    "seed": 4214,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-002833-401772",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/perturbed-4214.png",
+    "screenshot_sha256": "9cb1742b63c2f8c25192d477df133187241d50d1adf6fa249ff49820b2c90267",
+    "initial_geometry_sha256": "c410983168e21a2e1e3c9e87e11f74c197aa1d06978e0adde2e6cb7a8815a7b0"
+  },
+  "perturbed-4215": {
+    "level": "perturbed",
+    "seed": 4215,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-003839-589444",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/perturbed-4215.png",
+    "screenshot_sha256": "e9ef6dba09698976582679bfb57e1499a47b4eea9c634472b928d3d2b3f92b5e",
+    "initial_geometry_sha256": "9e1e810ba859eae978e334abfd43233755f2dff5fae018c95c8028f4f24bc775"
+  },
+  "perturbed-4216": {
+    "level": "perturbed",
+    "seed": 4216,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-004840-096130",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/perturbed-4216.png",
+    "screenshot_sha256": "200d81727642a28175565068a652a40b99ce524dd61cde3fde44265e8f7949ac",
+    "initial_geometry_sha256": "6cd67105473c943344609f87a026a30f7f1fd64a170ee2286d9cc4b2c89d89e6"
+  },
+  "perturbed-4217": {
+    "level": "perturbed",
+    "seed": 4217,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-005909-291726",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/perturbed-4217.png",
+    "screenshot_sha256": "c21a2cd4f5ae0b3dd203afb57efeb0ac1f44ccc835b1baa80d832b73f085afe4",
+    "initial_geometry_sha256": "a5bec13d991a98cf7624c2ae95bd46623a32b376eb7730670c446ed3480aee1c"
+  },
+  "perturbed-4218": {
+    "level": "perturbed",
+    "seed": 4218,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-010842-989694",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/perturbed-4218.png",
+    "screenshot_sha256": "779efe0a29c8fdce25e507fd98dff2a253d8275ebb1a3695275efe8a0ac43d9c",
+    "initial_geometry_sha256": "e2c68d72b5abfac9b7a9a05995e6b8ef7c04f5c8fde22e3479a307689fe9644b"
+  },
+  "perturbed-4219": {
+    "level": "perturbed",
+    "seed": 4219,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-011855-796373",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/perturbed-4219.png",
+    "screenshot_sha256": "649d2a38bf57969894dff153f78ef9c39d89e50d226dc76a390d131d1437a45a",
+    "initial_geometry_sha256": "e44ba5b81009266357f3514f72da44ceea3d918bfbfaf11bc846e69b5a945c9c"
+  },
+  "crumpled-4310": {
+    "level": "crumpled",
+    "seed": 4310,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-012851-089364",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/crumpled-4310.png",
+    "screenshot_sha256": "dfc824d943fd89f124060e5608b9b96aa3fb33ad3d3f90856335b5b22970cbdd",
+    "initial_geometry_sha256": "9ebb8126d042f64fc515bfc13338f34168ab3b0d28fe6e63fa8c6d285af2aa38"
+  },
+  "crumpled-4311": {
+    "level": "crumpled",
+    "seed": 4311,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-013935-792487",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/crumpled-4311.png",
+    "screenshot_sha256": "7cce0800abb43f41bfc2deb9dbd46372e1de4945f83d9314e6a9e69721501598",
+    "initial_geometry_sha256": "d26020ab0e5afeb865c36636b5191bd540567bae096918dccda5f98f397b3c24"
+  },
+  "crumpled-4312": {
+    "level": "crumpled",
+    "seed": 4312,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-015028-989706",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/crumpled-4312.png",
+    "screenshot_sha256": "b78dc7ade79b1f21426480db23d7c63f7e7713e5fbfdee5f06c876e98424498d",
+    "initial_geometry_sha256": "5f9507e5b71e177642ca54c2bcb43e5c727f8f0be2353a9d2a1270a38d7afc5f"
+  },
+  "crumpled-4313": {
+    "level": "crumpled",
+    "seed": 4313,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-020101-494614",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/crumpled-4313.png",
+    "screenshot_sha256": "06f663c8296e4ed6fb4131b70cae4e049ee9604147de03c51191a06461ff14f6",
+    "initial_geometry_sha256": "7e3c61fb67d59ca58872e8bfa458199b36fd648d1cfce689bd453357dd0e8f5c"
+  },
+  "crumpled-4314": {
+    "level": "crumpled",
+    "seed": 4314,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-021221-790718",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/crumpled-4314.png",
+    "screenshot_sha256": "ac43ef7fc7624228331b34248bd31e7807d1454355bae1682c67cf9d86a23c14",
+    "initial_geometry_sha256": "d2e520a58f2fbd7244f356af5cc1b18bde9bb37a2e9a39d132b49c0d0d36d861"
+  },
+  "crumpled-4315": {
+    "level": "crumpled",
+    "seed": 4315,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-022321-900837",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/crumpled-4315.png",
+    "screenshot_sha256": "4f62d0169addeeab6d0086e18ff3310dd8d39923e7566fb25a35ead7950ea703",
+    "initial_geometry_sha256": "a0a70ef066a1f23c1291fe035e602ef0571c1403f0c3c5c8d8dea6e3ee52d8dd"
+  },
+  "crumpled-4316": {
+    "level": "crumpled",
+    "seed": 4316,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-023341-788882",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/crumpled-4316.png",
+    "screenshot_sha256": "b9daf2224d6d8fbf157562e6037b68331675c1b6a666cb06fae2cb626d211212",
+    "initial_geometry_sha256": "4db1db3a5e22e7d98ff04557b692a3869cd0e8b27b21bdc1ac99a72dca699cde"
+  },
+  "crumpled-4317": {
+    "level": "crumpled",
+    "seed": 4317,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-024436-496333",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/crumpled-4317.png",
+    "screenshot_sha256": "548f696026f699c12e30f9b343177e49232fc40439ad741bf0d942a981026263",
+    "initial_geometry_sha256": "31a4c5e67fb18cf01bea2d2587f9d5aac7124e8a9d61777b488443e91193b381"
+  },
+  "crumpled-4318": {
+    "level": "crumpled",
+    "seed": 4318,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-025611-486554",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/crumpled-4318.png",
+    "screenshot_sha256": "731c2b203d7125190fbea91d6ed8c75de5f15aef2cd21eda6a2e7ed837023f18",
+    "initial_geometry_sha256": "954f7c2f254b041c60d44e8fa001dd5f749e1867cbeafc5612e8285d04854937"
+  },
+  "crumpled-4319": {
+    "level": "crumpled",
+    "seed": 4319,
+    "initial_dir": "/root/autodl-tmp/day4-square-initial-stripfold-20261106-030757-800040",
+    "screenshot": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/initial_screenshots/crumpled-4319.png",
+    "screenshot_sha256": "051df902bd7a339dcd50eebb4d92ad96f9592a6e5c5528cd7310c24c8f9bccbd",
+    "initial_geometry_sha256": "2e59b1b2d991669f15d11b8fd1e301bba97ec4b5c14ece4718424e195015438f"
+  }
+}

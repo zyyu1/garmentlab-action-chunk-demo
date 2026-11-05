@@ -1,0 +1,17 @@
+{
+  "protocol": "stage4-a5-rc2",
+  "seed": 4112,
+  "level": "flat",
+  "mode": "single",
+  "development_pass": false,
+  "errors": [
+    "RuntimeError('Square waypoint velocity/position did not converge')"
+  ],
+  "manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "status": "incomplete",
+  "success": null,
+  "split": "formal",
+  "runner_exit": 0,
+  "result_dir": "/root/autodl-tmp/day4-a5-rc2-l1-20261106-033055-623326",
+  "attempt_dir": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/episodes/4112-single-f83ea17f0ff744ecbdf6f750d8ed9f0f"
+}

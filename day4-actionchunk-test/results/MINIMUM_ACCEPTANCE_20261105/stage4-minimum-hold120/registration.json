@@ -1,0 +1,13 @@
+{
+  "schema": "minimum-hold120-registration-v1",
+  "status": "running_minimum_acceptance",
+  "candidate": "a5-rc8b-recovery-hold120-rc7-r2",
+  "candidate_manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "verification_manifest_sha256": "7d328159b72a2bd55be0254fd6844cb94408e1efa67e973148b67e8ffa3dcdae",
+  "minimum_slots_sha256": "2ab2a9513e1bcf20a34c8f30454cc27bd48aaa1d178378775a9daedbd612b31b",
+  "minimum_plan_sha256": "2f801c2dbb3505cb32dcbf88cff63b94059407bfec5a13cd6dd17541668f32fa",
+  "deployment_manifest_sha256": "14540aa14a5a48a214a4e56291c08eee8fbac7a875fc68b2090acde32d92279e",
+  "stop_rule": "per level: stop at 5 distinct-seed valid successes; max 20 attempts; no seed replacement/retry/threshold change",
+  "original_formal_plan": "not started; superseded; history preserved",
+  "started_utc": "2026-11-05T23:14:43+08:00"
+}

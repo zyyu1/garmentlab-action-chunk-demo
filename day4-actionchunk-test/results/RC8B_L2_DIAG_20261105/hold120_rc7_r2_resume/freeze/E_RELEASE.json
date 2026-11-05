@@ -1,0 +1,8 @@
+{
+  "manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "parent_manifest_sha256": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df",
+  "verification_file": "/root/autodl-tmp/a5-rc8b-recovery-hold120-rc7-r2/verified-dev.json",
+  "verification_sha256": "67c64a55b74db10ac85818cb0ed6ca1d00600e8b4ba326e5af4d6f01109cbbad",
+  "verification_manifest_sha256": "7d328159b72a2bd55be0254fd6844cb94408e1efa67e973148b67e8ffa3dcdae",
+  "source_mode": "slot1_parent + slots2-7_revised"
+}

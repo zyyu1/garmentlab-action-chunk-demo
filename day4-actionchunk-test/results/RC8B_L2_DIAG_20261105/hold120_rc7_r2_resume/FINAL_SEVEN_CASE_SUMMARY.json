@@ -1,0 +1,190 @@
+{
+  "schema": "a5-final-seven-case-summary-source-inherited-v1",
+  "candidate": "a5-rc8b-recovery-hold120-rc7-r2",
+  "candidate_manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "parent_manifest_sha256": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df",
+  "source_mode": "slot1_parent_41db790f + slots2-7_revised_40858efc",
+  "receipts": {
+    "verified_dev": {
+      "path": "results\\RC8B_L2_DIAG_20261105\\hold120_rc7_r2_resume\\freeze\\verified-dev.json",
+      "sha256": "67c64a55b74db10ac85818cb0ed6ca1d00600e8b4ba326e5af4d6f01109cbbad"
+    },
+    "e_release": {
+      "path": "results\\RC8B_L2_DIAG_20261105\\hold120_rc7_r2_resume\\freeze\\E_RELEASE.json",
+      "sha256": "9042e88ed8b4d082917151023705276230c1a4ba5c8e65b3c602337fa68ab66a"
+    },
+    "verification_manifest": {
+      "path": "results\\RC8B_L2_DIAG_20261105\\hold120_rc7_r2_resume\\freeze\\verification-manifest.json",
+      "sha256": "7d328159b72a2bd55be0254fd6844cb94408e1efa67e973148b67e8ffa3dcdae"
+    }
+  },
+  "audit_history": {
+    "slot1_initial_exit": 5,
+    "slot1_postaudit_exit": 0,
+    "original_manifest": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df",
+    "revised_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+  },
+  "all_six_positives_accepted": true,
+  "slot7_quality": "rejected",
+  "cases": [
+    {
+      "slot": 1,
+      "seed": 4100,
+      "mode": "single",
+      "status": "accepted",
+      "success": true,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-l1-20261105-081311-735952",
+      "trace_sha256": "14b50fab8ec3bbb81c124526bc273057fa00bf95639a63e56c4995f9b877a434",
+      "hold": null,
+      "source_manifest": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df"
+    },
+    {
+      "slot": 2,
+      "seed": 4100,
+      "mode": "arc4",
+      "status": "accepted",
+      "success": true,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-l1-20261105-083859-341524",
+      "trace_sha256": "14b50fab8ec3bbb81c124526bc273057fa00bf95639a63e56c4995f9b877a434",
+      "hold": null,
+      "source_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+    },
+    {
+      "slot": 3,
+      "seed": 4202,
+      "mode": "single",
+      "status": "accepted",
+      "success": true,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-085248-353214",
+      "trace_sha256": "a191640a625d4897f41c595b0c435c5fefee584f3ac0b843e7665bcb1bb5d26a",
+      "hold": {
+        "steps": 120,
+        "frames": 121,
+        "duration_s": 2.0000001043081284
+      },
+      "source_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+    },
+    {
+      "slot": 4,
+      "seed": 4202,
+      "mode": "arc4",
+      "status": "accepted",
+      "success": true,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-091038-643466",
+      "trace_sha256": "a191640a625d4897f41c595b0c435c5fefee584f3ac0b843e7665bcb1bb5d26a",
+      "hold": {
+        "steps": 120,
+        "frames": 121,
+        "duration_s": 2.0000001043081284
+      },
+      "source_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+    },
+    {
+      "slot": 5,
+      "seed": 4302,
+      "mode": "single",
+      "status": "accepted",
+      "success": true,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-092821-242307",
+      "trace_sha256": "456f76bafd990aba749aa9dc5b424f6105a9c0d02105c4cf9e4909f59096d8ad",
+      "hold": {
+        "steps": 120,
+        "frames": 121,
+        "duration_s": 2.0000001043081284
+      },
+      "source_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+    },
+    {
+      "slot": 6,
+      "seed": 4302,
+      "mode": "arc4",
+      "status": "accepted",
+      "success": true,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-094700-143205",
+      "trace_sha256": "456f76bafd990aba749aa9dc5b424f6105a9c0d02105c4cf9e4909f59096d8ad",
+      "hold": {
+        "steps": 120,
+        "frames": 121,
+        "duration_s": 2.0000001043081284
+      },
+      "source_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+    },
+    {
+      "slot": 7,
+      "seed": 4201,
+      "mode": "single",
+      "status": "rejected",
+      "success": false,
+      "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261105-100445-893957",
+      "trace_sha256": "c8331ca197083c8110c06410744b53994f0ad964621fa8ee0d62db8037fa7eee",
+      "hold": {
+        "steps": 120,
+        "frames": 121,
+        "duration_s": 2.0000001043081284
+      },
+      "source_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a"
+    }
+  ],
+  "pairs": {
+    "4100": {
+      "target_max_abs_m": 0.0,
+      "pass": true,
+      "hold_timing": null
+    },
+    "4202": {
+      "target_max_abs_m": 0.0,
+      "pass": true,
+      "hold_timing": {
+        "single_steps": 120,
+        "arc_steps": 120,
+        "single_duration": 2.0000001043081284,
+        "arc_duration": 2.0000001043081284,
+        "same_steps": true,
+        "same_duration": true
+      }
+    },
+    "4302": {
+      "target_max_abs_m": 0.0,
+      "pass": true,
+      "hold_timing": {
+        "single_steps": 120,
+        "arc_steps": 120,
+        "single_duration": 2.0000001043081284,
+        "arc_duration": 2.0000001043081284,
+        "same_steps": true,
+        "same_duration": true
+      }
+    }
+  },
+  "verification": {
+    "local_recompute": "7/7 status and stability match",
+    "downloads": "slot1 118/118; slots2-7 664/664",
+    "source_compatible_verifier": "RC7_SOURCE_VERIFIED exit 0",
+    "original_verify_dev_used": false,
+    "freeze_tests": "10/10 negative/positive checks passed (temp copies only)",
+    "gate": "A5_GATE_OK_SOURCE exit 0"
+  },
+  "formal_stage4_success": 0,
+  "status": "development_candidate_frozen_formal_batch_not_run",
+  "verification_manifest_check": {
+    "path": "results\\RC8B_L2_DIAG_20261105\\hold120_rc7_r2_resume\\freeze\\verification-manifest-check.json",
+    "sha256": "9debc341d27a0355130f222b338af29d9f2b02b367f971168e01f94c54c16d56",
+    "entries": 83,
+    "ok": true
+  },
+  "freeze_commands": {
+    "freeze": {
+      "command": "python freeze_rc7_sources.py --execute",
+      "exit": 0
+    },
+    "gate": {
+      "command": "python gate_rc7_sources.py",
+      "exit": 0
+    }
+  },
+  "freeze_tests": {
+    "path": "results\\RC8B_L2_DIAG_20261105\\hold120_rc7_r2_resume\\freeze\\freeze_tests.log",
+    "sha256": "2da41cf12e8d55253908151edd3d935a39f3cbada6c377f93bd32090b0b034c4",
+    "result": "10/10"
+  }
+}

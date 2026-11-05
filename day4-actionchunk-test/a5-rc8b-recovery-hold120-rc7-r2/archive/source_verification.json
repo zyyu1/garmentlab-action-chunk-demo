@@ -1,0 +1,14 @@
+{
+  "stage": "full",
+  "ok": true,
+  "slots": 7,
+  "slot1_manifest": "41db790f256396e07df079e511090d14a9852c1f55197afa36ea847a9403c2df",
+  "revised_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "all_six_positives_accepted": true,
+  "slot7_quality": "rejected",
+  "pair_target_max_abs_m": {
+    "4100": 0.0,
+    "4202": 0.0,
+    "4302": 0.0
+  }
+}

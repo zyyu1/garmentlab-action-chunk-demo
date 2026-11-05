@@ -1,0 +1,68 @@
+{
+  "all_match": true,
+  "cases": [
+    {
+      "slot": 1,
+      "seed": 4100,
+      "mode": "single",
+      "local_status": "accepted",
+      "remote_status": "accepted",
+      "status_match": true,
+      "stability_match": true
+    },
+    {
+      "slot": 2,
+      "seed": 4100,
+      "mode": "arc4",
+      "local_status": "accepted",
+      "remote_status": "accepted",
+      "status_match": true,
+      "stability_match": true
+    },
+    {
+      "slot": 3,
+      "seed": 4202,
+      "mode": "single",
+      "local_status": "accepted",
+      "remote_status": "accepted",
+      "status_match": true,
+      "stability_match": true
+    },
+    {
+      "slot": 4,
+      "seed": 4202,
+      "mode": "arc4",
+      "local_status": "accepted",
+      "remote_status": "accepted",
+      "status_match": true,
+      "stability_match": true
+    },
+    {
+      "slot": 5,
+      "seed": 4302,
+      "mode": "single",
+      "local_status": "accepted",
+      "remote_status": "accepted",
+      "status_match": true,
+      "stability_match": true
+    },
+    {
+      "slot": 6,
+      "seed": 4302,
+      "mode": "arc4",
+      "local_status": "accepted",
+      "remote_status": "accepted",
+      "status_match": true,
+      "stability_match": true
+    },
+    {
+      "slot": 7,
+      "seed": 4201,
+      "mode": "single",
+      "local_status": "rejected",
+      "remote_status": "rejected",
+      "status_match": true,
+      "stability_match": true
+    }
+  ]
+}

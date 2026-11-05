@@ -1,0 +1,36 @@
+{
+  "schema": "formal-hold120-deployment-manifest-v1",
+  "candidate": "a5-rc8b-recovery-hold120-rc7-r2",
+  "candidate_manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "verification_manifest_sha256": "7d328159b72a2bd55be0254fd6844cb94408e1efa67e973148b67e8ffa3dcdae",
+  "source_gate": "gate_rc7_sources.py",
+  "entries": {
+    "formal_driver.py": "b3f2d7078bbb7de697295909612c4d4f77cb905a18ee097b7a838035a69e9298",
+    "formal_config.json": "1bb4f6066cde3e47fcb7d3b94f44315159af434c4487c4c55c0a338dbc3fc789",
+    "formal_slots.json": "628a9242a5d32dc6b9432cd797da9145bd055b8d901d90e1da7f3e9d04885315",
+    "test_formal_driver.py": "2193d0db54e5789243debef79ea6298714d6bdbfde7bea319496ef8dd8155f67",
+    "test_formal_driver.log": "9064ff6b6e1d87a3605188e66556704fdcf77674835312cac476102c86edb869",
+    "launch_formal.sh": "437a3d989bdd9bde6764b451209a1b92d79c5f3b7cece59dee6425de8381455b",
+    "download_formal.py": "5d60a70e837f62c4f300d149fff4b2963be49c833d7fbfb8d467fd63753cff63",
+    "check_deployment.py": "80ecf38946efd7ab94b9b19c9a3bd5458e33876eec6907dfa670645f226c227f",
+    "candidate_manifest": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+    "gate_rc7_sources.py": "3da31d853330681137068cebc8861e9313673928bfe888bbcca5e9dbef95d99c",
+    "freeze_rc7_sources.py": "b7ceb81df8c78b234a63264e25e7c22608e773d0253aaa1b7b7a01cb5c8e9054",
+    "audit_hold120_case.py": "0d4a9d74b595a166bc34b3b7ffdd164e7085be7d1ae19130e85f2bdb17c1a1e8",
+    "hold_contract.py": "6eab1ff528c332e250d7e7b14f3b1529b51095dda9b5f9743d33861266062d6a",
+    "verification_manifest": "7d328159b72a2bd55be0254fd6844cb94408e1efa67e973148b67e8ffa3dcdae",
+    "verified_dev": "67c64a55b74db10ac85818cb0ed6ca1d00600e8b4ba326e5af4d6f01109cbbad",
+    "e_release": "9042e88ed8b4d082917151023705276230c1a4ba5c8e65b3c602337fa68ab66a",
+    "seed_list": "15c87eec47412eaaa437a7c4627480ddb1315de3aafdd0f091a73601dfa6feed",
+    "initial_plan": "32e61d575d77eae0943cb2251d10c25b12d7f0d9f8f962ddd96dc1a4d4d2ab85"
+  },
+  "roles": {
+    "formal_driver.py": "batch controller",
+    "test_formal_driver.py": "offline stub tests",
+    "formal_slots.json": "60 initials / 120 slots fixed order",
+    "gate_rc7_sources.py": "source gate",
+    "launch_formal.sh": "tmux launcher",
+    "download_formal.py": "archive helper",
+    "check_deployment.py": "deployment identity check"
+  }
+}

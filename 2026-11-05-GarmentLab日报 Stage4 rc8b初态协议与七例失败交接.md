@@ -2,7 +2,7 @@
 
 > 时间说明：rc8b 与后续 L2 诊断运行在远端（UTC+8）2026-11-05 凌晨至上午；本地 Europe/Berlin 仍是 2026-11-04 晚间。按远端运行日命名。
 
-**暂停位置**　Stage 4 暂停在 **hold120 七例开发回归完成：六阳性 accepted、4201 有效 rejected；冻结材料草稿已整理但未执行 freeze**，**未冻结**。rc8b 七例为 **4/6 阳性**（4202 s/a rejected 7.4809/11.5382，stationary 29.9 mm）；随后 l2pose **accepted 0.7396/1.5397（中间行为）**、两例重复**逐位重现**、九点 z patch **rejected 7.2532/11.4799（响应很小）**、hold120 r1 accepted 0.2374/0.3484、4202 r2 干净复验 accepted 0.2374/0.3484（均 0）、4302 accepted 0.2386/0.3468（均 0）。七例 rc7：slot1 4100 single **accepted 0.1435/0.2072**，初次 audit exit 5 为 L1 `hold_applicable` 契约缺陷，同结果修订审计 exit 0；修订版续跑 slots2–7，**4100 arc4 / 4202 s,a / 4302 s,a 全部 accepted**，4201 **有效 rejected 7.2583/11.0030**。三组配对 0.0；hold 均 120 步/121 帧/2.0 s；下载 118+664 哈希一致；本地复算 7/7；来源兼容验证 exit 0。正式 Stage 4 成功仍为 **0**；无回执、无扩批。
+**暂停位置**　Stage 4 暂停在 **开发候选已冻结、正式批次离线预检完成但未运行** 之处；正式 Stage 4 成功计数仍为 **0**。hold120 七例开发回归：六阳性 accepted、4201 有效 rejected；来源兼容 freeze/gate 已完成。正式矩阵固定 60 初态 / 120 槽，部署层 source gate、固定清单、离线桩测试 10/10、容量/机时估算与运行命令已整理；本轮未启动仿真、未生成 held-out 初态、未执行正式 episode。
 
 ## 1. 本轮做了什么
 
@@ -42,12 +42,12 @@ L2 条宽仍在冻结范围；L3 为 width 0.20 的 left 条，z_p95≈0.069 m�
 
 **结论的边界：** 协议实现与初态身份检查通过；失败是新初态（1.0 下 settle）改变 L2 折后保持行为，具体机制未隔离，不能写成“摩擦导致”的因果结论。
 
-## 5. 下一步（七例通过；冻结待决定）
+## 5. 下一步（已冻结；正式批次未运行）
 
 1. **hold120 r2/4302 通过**：4202 r2 accepted 0.2374/0.3484（与 r1 逐阶段 0.0）；4302 accepted 0.2386/0.3468；均 exit 0。
-2. **七例 rc7 完成**：slot1 4100 single accepted 0.1435/0.2072（初次 audit 5，同结果修订审计 0）；slots2–7 续跑后 4100 arc4 / 4202 s,a / 4302 s,a 全部 accepted，4201 有效 rejected 7.2583/11.0030。六阳性、配对 0.0、证据/复算/视频/来源验证通过。
-3. 冻结材料草稿已整理；**未 freeze、未写回执**，是否进入 freeze 需明确指令。
-4. 不延长保持、不扩大 patch、不扫摩擦、不扩批、不跑 held-out/正式批次；正式成功保持 0。
+2. **七例 rc7 完成**：slot1 4100 single accepted 0.1435/0.2072（初次 audit 5，同结果修订审计 0）；slots2–7 续跑后 4100 arc4 / 4202 s,a / 4302 s,a 全部 accepted，4201 有效 rejected 7.2583/11.0030。
+3. **freeze/gate 已完成**：来源兼容 freeze exit 0、gate exit 0；回执已独占创建；archive 已整理。
+4. **未做：** held-out、正式批次、成功计数增加。不延长保持、不扩大 patch、不扫摩擦。
 
 ## 6. 产物
 
@@ -56,7 +56,7 @@ L2 条宽仍在冻结范围；L3 为 width 0.20 的 left 条，z_p95≈0.069 m�
 - [cases.csv](day4-actionchunk-test/results/RC8B_SEVEN_CASE_20261105/cases.csv) · [local_recompute.json](day4-actionchunk-test/results/RC8B_SEVEN_CASE_20261105/local_recompute.json) · [verify-dev 日志](day4-actionchunk-test/results/RC8B_SEVEN_CASE_20261105/rc8b-verify-dev.log)
 - [视频帧接触表](day4-actionchunk-test/results/RC8B_SEVEN_CASE_20261105/rc8b_contact_sheet.png)
 - [rc8b 版本登记](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc8b/README.md) · [registration.json](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc8b/registration.json)
-- **L2 诊断：** [离线定位](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/review.md) · [l2pose 审查](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/l2pose_review.md) · [重复性与几何](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/repeat_review.md) · [九点 z patch](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/l2patch9_review.md) · [hold120 r2/4302](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_r2_review.md) · [七例 rc7](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_rc7_review.md) · [冻结草稿](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_rc7_r2_resume/FREEZE_DRAFT.md) · [七例准备](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/SEVEN_CASE_PLAN.md)
+- **L2 诊断：** [离线定位](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/review.md) · [l2pose 审查](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/l2pose_review.md) · [重复性与几何](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/repeat_review.md) · [九点 z patch](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/l2patch9_review.md) · [hold120 r2/4302](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_r2_review.md) · [七例 rc7](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_rc7_review.md) · [冻结归档](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_rc7_r2_resume/freeze/FREEZE_ARCHIVE.md) · [七例准备](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/SEVEN_CASE_PLAN.md)
 - **数据：** [repeat_compare.json](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/repeat_compare.json) · [geometry_check.json](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/geometry_check.json) · [geometry_check.png](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/geometry_check.png) · [patch_definition.json](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/patch_definition.json) · [l2patch9_compare.json](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/l2patch9_compare.json) · [hold120_compare.json](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_compare.json) · [hold120_4302_compare.json](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_4302_compare.json)
 - **诊断登记：** [l2pose](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-l2pose/registration.json) · [l2pose-repeat1](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-l2pose-repeat1/registration.json) · [rc8b-repeat1](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-rc8b-repeat1/registration.json) · [l2patch9](day4-actionchunk-test/a5-rc2-pfs1-observation-v2-l2patch9/registration.json) · [hold120 r1](day4-actionchunk-test/a5-rc8b-recovery-hold120/registration.json) · [hold120 r2](day4-actionchunk-test/a5-rc8b-recovery-hold120-r2/registration.json) · [4302](day4-actionchunk-test/a5-rc8b-recovery-hold120-r2-4302/registration.json)
 - 前序：[2026-11-05 rc8 冻结暂停交接](2026-11-05-GarmentLab日报%20Stage4%20rc8七例RC与冻结暂停交接.md)
@@ -98,10 +98,10 @@ L2 条宽仍在冻结范围；L3 为 width 0.20 的 left 条，z_p95≈0.069 m�
 
 ## 10. 暂停点
 
-- **已完成并保留：** rc8b 七例（4/6）、L2 离线定位、l2pose（0.7396/1.5397）、两例重复、九点 z patch（7.2532/11.4799）、hold120 r1、4202 r2、4302、**七例 rc7 最终六阳性 accepted + 4201 有效 rejected**。
-- **未做：** freeze/gate、释放回执、held-out、正式批次、任何成功计数增加。
-- **状态：** 正式 Stage 4 成功仍为 **0**；slot1 audit exit 5、暂停账本、复审计、续跑账本全部保留；无重试、无扩批。
-- **恢复入口：** 七例通过；是否进入 freeze 需明确指令。不延长保持、不扩大 patch、不扫摩擦。
+- **已完成并保留：** rc8b 七例（4/6）、L2 离线定位、l2pose、两例重复、九点 z patch、hold120 r1、4202 r2、4302、七例 rc7（六阳性 + 4201 有效 rejected）、**来源继承 freeze 与 gate（均 exit 0）**。
+- **未做：** held-out、正式批次、成功计数增加。
+- **状态：** **开发候选已冻结，正式批次未运行**；正式 Stage 4 成功仍为 **0**；slot1 audit exit 5、暂停账本、复审计、续跑账本全部保留。
+- **恢复入口：** 冻结已完成；正式/held-out 仍需单独授权。不延长保持、不扩大 patch、不扫摩擦。
 
 ## 11. 九点 z patch 诊断（已完成，拒绝，响应很小）
 
@@ -146,12 +146,44 @@ L2 条宽仍在冻结范围；L3 为 width 0.20 的 left 条，z_p95≈0.069 m�
 - **门禁：** 六阳性 accepted；配对目标差 0.0；L2/L3 hold 均 120 步/121 帧/2.0 s；下载 118+664 哈希一致；本地复算 7/7；视频检查通过；来源兼容验证 `RC7_SOURCE_VERIFIED` exit 0。
 - **原版 verify-dev 未使用**（单一 manifest 限制）；不称原版直接通过。
 - **续跑 runner 汇总只统计 slots2–7（accepted=5），不含继承 slot1；最终来源验证器明确六阳性为真。**
-- **未 freeze、未写回执、未跑 held-out/正式批次**；正式成功仍为 0。冻结材料草稿见 [FREEZE_DRAFT](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_rc7_r2_resume/FREEZE_DRAFT.md)。详见 [七例审查](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_rc7_review.md)。
+- **未 freeze、未写回执、未跑 held-out/正式批次**；正式成功仍为 0。冻结归档见 [FREEZE_ARCHIVE](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_rc7_r2_resume/freeze/FREEZE_ARCHIVE.md)。详见 [七例审查](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_rc7_review.md)。
 
 ## 16. 本次暂停交接
 
-- **当前状态：** hold120 rc7 七例开发回归通过；六阳性 accepted、4201 有效 rejected；冻结材料草稿已整理，**未执行 freeze**，正式 Stage 4 成功仍为 **0**。
+- **当前状态：** 开发候选已冻结，正式批次未运行；六阳性 accepted、4201 有效 rejected；正式 Stage 4 成功仍为 **0**。
 - **审计口径：** slot1 首次审计退出 5（L1 `hold_applicable` 契约缺陷），同结果经修订审计通过；slots2–7 在修订版下续跑。**不称整批所有入口首次均干净退出。**
 - **验证状态：** 配对 0.0；hold 120 步/121 帧/2.0 s；下载 118+664 哈希一致；本地复算 7/7；视频检查通过；来源兼容验证 `RC7_SOURCE_VERIFIED` exit 0；原版 verify-dev 未使用。
-- **未做：** freeze/gate、释放回执、held-out、正式批次、成功计数增加。
-- **恢复入口：** 审查 [FREEZE_DRAFT](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_rc7_r2_resume/FREEZE_DRAFT.md)，由明确指令决定是否进入 freeze；不延长保持、不扩大 patch、不扫摩擦。
+- **冻结：** `verified-dev.json` `67c64a55…`、`E_RELEASE.json` `9042e88e…`、verification manifest `7d328159…`；freeze/gate exit 0；83/83 条目核验；临时副本 10/10 负测。
+- **未做：** held-out、正式批次、成功计数增加。
+- **恢复入口：** 冻结已完成；正式/held-out 需单独授权。归档见 [FREEZE_ARCHIVE](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/hold120_rc7_r2_resume/freeze/FREEZE_ARCHIVE.md)。
+
+## 17. 冻结与门禁记录
+
+- **命令：** `python freeze_rc7_sources.py --execute` → exit **0**；`python gate_rc7_sources.py` → exit **0**（`A5_GATE_OK_SOURCE 7 manifest 40858efc…`）。
+- **回执：** `verified-dev.json` `67c64a55b74db10ac85818cb0ed6ca1d00600e8b4ba326e5af4d6f01109cbbad`；`E_RELEASE.json` `9042e88ed8b4d082917151023705276230c1a4ba5c8e65b3c602337fa68ab66a`；`verification-manifest.json` `7d328159b72a2bd55be0254fd6844cb94408e1efa67e973148b67e8ffa3dcdae`。
+- **核验：** verification manifest 83/83 条目哈希匹配；临时副本 10/10 负测（候选/审计/继承/验证代码/证据篡改、缺槽/重复槽/未完成、回执不可覆盖）全部按预期拒绝/通过。
+- **来源：** slot1 父 manifest `41db790f…`；slots2–7 修订 manifest `40858efc…`；未使用旧 single-manifest freeze 入口。
+- **状态：** 开发候选已冻结，正式批次未运行；正式成功计数 0。
+
+## 18. 正式批次离线预检与运行清单
+
+- **冻结身份：** 候选 `40858efc…`、验证 manifest `7d328159…`、`verified-dev` `67c64a55…`、`E_RELEASE` `9042e88e…`；gate exit 0；83/83 条目；无当前正式锁/活跃 tmux。
+- **固定矩阵：** L1 4110–4129、L2 4210–4229、L3 4310–4329；60 初态/120 槽；seed/plan 逐项一致、无 dev 重叠；同 seed 两模式共享初态。
+- **部署层：** `formal_hold120/formal_driver.py` 在任何初态生成前调用 `gate_rc7_sources.py`；使用冻结初态/rollout/audit 入口；deployment manifest `1a36b8c4…`（18/18 条目）。
+- **离线测试：** 10/10 桩测试（gate 失败不生成、身份/缺结果暂停、复用初态、rejected 继续、未完成/锁/配对暂停、跳过已完成、空分母 null）。
+- **容量/机时：** 120 episodes 均值 2.21 GB、最坏 2.41 GB；初态 28 MB；预留 2.9 GB；远端可用 14 GB；约 35 h。
+- **状态：** 未启动仿真、未生成 held-out、未执行正式 episode；正式 Stage 4 成功仍为 **0**。
+- 清单与命令见 [FORMAL_PREFLIGHT](day4-actionchunk-test/formal_hold120/FORMAL_PREFLIGHT.md)；预检结果 [JSON](day4-actionchunk-test/results/RC8B_L2_DIAG_20261105/formal_preflight/FORMAL_PREFLIGHT_RESULTS.json)。
+
+## 19. 正式验收改为最低完成方案
+
+- 原 60 初态/120 槽计划**未启动**，保留并标记为被取代；不删除历史。
+- 新计划：每档 single，固定 seed 顺序；每档 5 个不同 seed 有效成功即停，最多 20 seed；不换 seed/不重试/不调阈值。
+- 每档先生成并保存 10 份最终协议初态截图（共 30）；折叠只跑达到 5 成功所需 seed。
+- 独立 plan/deployment/ledger；已登记停止规则后再运行。
+- 机时估算：30 初态实测约 2.5 h（stripfold 较慢）；episode 约 14–19 min/个。
+- **执行结果：** 30/30 初态截图完成（每档 10）；flat 档尝试 4110、4111、4112，**0 有效成功**。
+  - 4110/4111：冻结 `a5_entry.py` 的 receipt 路径问题，入口在 episode 前失败；保留错误。
+  - 4112：实际开始，9.3 min 后 **`RuntimeError('Square waypoint velocity/position did not converge')`**，`status=incomplete`，无完整 success_trace。
+- 按执行异常规则**暂停**：未自动重试、未换 seed、未继续 4113；最低验收**未通过**。
+- 正式 Stage 4 成功仍为 0；原 120 槽批次未启动。

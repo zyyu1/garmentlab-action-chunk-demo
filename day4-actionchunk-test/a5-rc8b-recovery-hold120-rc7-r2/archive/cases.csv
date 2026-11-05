@@ -1,0 +1,8 @@
+slot,seed,mode,quality,centroid_mm,p95_mm,geometry,stable,stationary_mm,hold_steps,hold_frames,hold_duration_s
+1,4100,single,accepted,0.143531,0.2072,True,True,14.937804,,,
+2,4100,arc4,accepted,0.143531,0.2072,True,True,14.937804,,,
+3,4202,single,accepted,0.237415,0.348438,True,True,6.685628,120,121,2.0000001043081284
+4,4202,arc4,accepted,0.237415,0.348438,True,True,6.685628,120,121,2.0000001043081284
+5,4302,single,accepted,0.238583,0.346818,True,True,7.15861,120,121,2.0000001043081284
+6,4302,arc4,accepted,0.238583,0.346818,True,True,7.15861,120,121,2.0000001043081284
+7,4201,single,rejected,7.258312,11.002975,False,False,30.566832,120,121,2.0000001043081284

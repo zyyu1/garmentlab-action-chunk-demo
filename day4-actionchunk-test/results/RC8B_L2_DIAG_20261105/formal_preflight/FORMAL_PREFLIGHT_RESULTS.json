@@ -1,0 +1,37 @@
+{
+  "schema": "formal-hold120-preflight-results-v1",
+  "status": "ready_for_formal_run_not_run",
+  "candidate_manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "verification_manifest_sha256": "7d328159b72a2bd55be0254fd6844cb94408e1efa67e973148b67e8ffa3dcdae",
+  "verified_dev_sha256": "67c64a55b74db10ac85818cb0ed6ca1d00600e8b4ba326e5af4d6f01109cbbad",
+  "e_release_sha256": "9042e88ed8b4d082917151023705276230c1a4ba5c8e65b3c602337fa68ab66a",
+  "formal_slots_sha256": "628a9242a5d32dc6b9432cd797da9145bd055b8d901d90e1da7f3e9d04885315",
+  "slots": {
+    "initials": 60,
+    "episodes": 120
+  },
+  "deployment_manifest_sha256": "1a36b8c44811352b9bfdfb4a20fbdb54161b6e1415043ace7cd11777d20c7eb9",
+  "deployment_entries": "18/18 match",
+  "gate_exit": 0,
+  "verification_entries": "83/83 match",
+  "offline_tests": "10/10 pass",
+  "preflight_exit": 0,
+  "capacity": {
+    "episode_mean_mb": 18.44,
+    "episode_max_mb": 20.1,
+    "episodes_120_gb": 2.21,
+    "episodes_120_worst_gb": 2.41,
+    "initials_mb": 28,
+    "reserve_gb": 2.9,
+    "remote_avail_gb": 14,
+    "wall_hours": 35
+  },
+  "formal_run": "not_started",
+  "formal_stage4_success": 0,
+  "blockers": [
+    "formal batch not run",
+    "production driver not GPU-tested yet"
+  ],
+  "preflight_log_sha256": "6ec259237856ba235905217aa158bcf7e881a5bd68b12b9c31d0986fb11b8883",
+  "deployment_check_log_sha256": "2821694747e09a4446141ac4ea46237a758f2f20c9a1080735734f5fe02de660"
+}
