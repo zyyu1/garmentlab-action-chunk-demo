@@ -1,0 +1,36 @@
+{
+  "levels": [
+    {
+      "level": "flat",
+      "successes": 5,
+      "attempts": 8,
+      "rejected": 3,
+      "not_attempted": 12,
+      "rejection_rate": 0.375,
+      "stop_reason": "five_valid_successes",
+      "passed": true
+    },
+    {
+      "level": "perturbed",
+      "successes": 5,
+      "attempts": 6,
+      "rejected": 1,
+      "not_attempted": 14,
+      "rejection_rate": 0.16666666666666666,
+      "stop_reason": "five_valid_successes",
+      "passed": true
+    },
+    {
+      "level": "crumpled",
+      "successes": 5,
+      "attempts": 7,
+      "rejected": 2,
+      "not_attempted": 13,
+      "rejection_rate": 0.2857142857142857,
+      "stop_reason": "five_valid_successes",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "rule": "per level stop at 5 valid successes; max 20 attempts"
+}

@@ -1,0 +1,139 @@
+{
+  "protocol": "stage4-a5-rc2",
+  "seed": 4315,
+  "level": "crumpled",
+  "mode": "single",
+  "development_pass": true,
+  "errors": [],
+  "manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "status": "accepted",
+  "success": true,
+  "evidence_checks": {
+    "video_and_samples": true,
+    "actual_sim": true,
+    "source": true,
+    "input_hashes": true,
+    "identity": true,
+    "actual_budget": true,
+    "horizons": true,
+    "final_open": true,
+    "upward_public_target": true,
+    "clock_origin": true,
+    "absolute_clock": true,
+    "double_hold": true,
+    "terminal_matches": true
+  },
+  "criteria": {
+    "status": "accepted",
+    "success": true,
+    "checks": {
+      "definition": true,
+      "budget": true,
+      "no_runtime_error": true,
+      "held": true,
+      "released_continuously": true,
+      "geometry_entire_window": true,
+      "stable": true
+    },
+    "stability": {
+      "centroid_drift_max_m": 0.0006388798929658272,
+      "vertex_drift_p95_max_m": 0.0012172909264923175,
+      "vertex_drift_max_m": 0.0014230382890249365,
+      "vertex_speed_p95_max_m_s": 0.006904036846636231,
+      "vertex_speed_max_m_s": 0.019447333768020533
+    },
+    "first_window_geometry": {
+      "metrics": {
+        "symmetric_xy_alignment_mean_m": 0.004963790783304461,
+        "particle_occupancy_iou": 0.6900878293601004,
+        "occupancy_cell_m": 0.01,
+        "occupancy_dilation_cells": 1,
+        "moving_half_crossed_fraction": 1.0,
+        "moving_material_reflected_target_mean_error_m": 0.01950082665820211,
+        "cloth_z_p95_m": 0.06957759708166122,
+        "fold_yaw_rad": 0.18373382862358686,
+        "fold_width_m": 0.2,
+        "fold_lateral_local": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "fold_line_local_x": 2.980232227667301e-09,
+        "pick_index": 230,
+        "moving_count": 210,
+        "fold_frame": "cloth-local",
+        "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality.",
+        "crossed_fraction_tolerant": 1.0,
+        "stationary_drift_mean_m": 0.008299333539078784,
+        "free_edge_overrun_m": -0.018914169168228467,
+        "free_edge_height_p90_m": 0.029577797278761864,
+        "fold_extent_m": 0.19186766904139343,
+        "tangent_extent_m": 0.40379877636400086,
+        "height_p95_m": 0.06957759708166122,
+        "height_min_m": 0.009870512410998344,
+        "height_max_m": 0.0711030438542366
+      },
+      "checks": {
+        "crossed": true,
+        "overlap": true,
+        "alignment": true,
+        "material_target": true,
+        "stationary_half": true,
+        "free_edge": true,
+        "fold_extent": true,
+        "tangent_extent": true,
+        "height": true
+      },
+      "geometry_pass": true
+    },
+    "final_geometry": {
+      "metrics": {
+        "symmetric_xy_alignment_mean_m": 0.004946583784125819,
+        "particle_occupancy_iou": 0.6944444444444444,
+        "occupancy_cell_m": 0.01,
+        "occupancy_dilation_cells": 1,
+        "moving_half_crossed_fraction": 1.0,
+        "moving_material_reflected_target_mean_error_m": 0.020086485126606178,
+        "cloth_z_p95_m": 0.06958550959825516,
+        "fold_yaw_rad": 0.18373382862358686,
+        "fold_width_m": 0.2,
+        "fold_lateral_local": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "fold_line_local_x": 2.980232227667301e-09,
+        "pick_index": 230,
+        "moving_count": 210,
+        "fold_frame": "cloth-local",
+        "metric_scope": "Particle projection proxies; not certified triangle overlap, self-intersection or material quality.",
+        "crossed_fraction_tolerant": 1.0,
+        "stationary_drift_mean_m": 0.008762524994413178,
+        "free_edge_overrun_m": -0.018919643653077856,
+        "free_edge_height_p90_m": 0.029583919793367386,
+        "fold_extent_m": 0.1906454060137355,
+        "tangent_extent_m": 0.403265010698717,
+        "height_p95_m": 0.06958550959825516,
+        "height_min_m": 0.009871359914541245,
+        "height_max_m": 0.07110951095819473
+      },
+      "checks": {
+        "crossed": true,
+        "overlap": true,
+        "alignment": true,
+        "material_target": true,
+        "stationary_half": true,
+        "free_edge": true,
+        "fold_extent": true,
+        "tangent_extent": true,
+        "height": true
+      },
+      "geometry_pass": true
+    },
+    "failed_geometry_frames": []
+  },
+  "split": "formal",
+  "runner_exit": 0,
+  "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261106-115307-436594",
+  "attempt_dir": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/episodes/4315-single-abc7f229f8b1406c856d652c8c1b5f10"
+}

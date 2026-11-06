@@ -1,0 +1,36 @@
+{
+  "attempt": "zerovel-4112-3",
+  "created_utc": "2026-11-05T23:25:23.209054+00:00",
+  "supersedes": "zerovel-4112-2 (valid intervention, but drive target readback raised cuda-tensor TypeError)",
+  "purpose": "arc135 final 120-tick window: zero arm joint velocity targets (DOF 0-6) + drive readback",
+  "scope": {
+    "window_only": true,
+    "arm_dof": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "positions": "unchanged from same RMP output",
+    "joint_indices": "unchanged",
+    "other_fields": "unchanged",
+    "change_vs_v2": "readback tensors copied to host before numpy"
+  },
+  "app": {
+    "path": "/root/autodl-tmp/stage4-4112-zerovel/app",
+    "files": 65,
+    "digest": "de90021f296b921ceee53fcbfed48d5c9135410e87f0c979d06a8c17e1946088"
+  },
+  "app_identity_manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "script": "/root/autodl-tmp/stage4-4112-zerovel/diagnose_arc135_zerovel_v3.py",
+  "script_sha256": "8e28d5e04fb28da5238dfa870aeefed6eb648e07804461dc3803033a5d0744fb",
+  "initial_dir": "/root/autodl-tmp/day4-square-initial-20261105-232137-703257",
+  "initial_result_sha256": "8a092d8aa010c9300433f2c8b7a4e349baba19add196382009e6ec74250b6af9",
+  "initial_geometry_sha256": "a90de233d174153dac9c185ff8b9c5a5af3ffbd1b14f50c0a9d802225bbc478e",
+  "runs": 1,
+  "retry": false,
+  "queue": "minimum acceptance paused; this run is diagnostic only"
+}

@@ -2,6 +2,25 @@
 
 研究 single-step behavior cloning 与 H=4 action-chunk BC 在三档衣物初态下的折叠成功率、恢复能力和推理开销。当前工作集中在 GarmentLab / Isaac Sim 中建立可靠的 expert 和动作接口，尚未进入策略训练或正式对比实验。
 
+## 当前状态（2026-11-06）：最低验收通过；接口隔离结项；reset 待闭合（已暂停）
+
+**冻结候选 `a5-rc8b-recovery-hold120-rc7-r2`（manifest `40858efc…`）在 L1/L2/L3 各取得 5 个不同 seed 的有效成功，共 15 个正式 accepted episode。** 批次按登记规则自动停止，`summary.json.passed = true`。
+
+| 档 | 尝试 | 有效成功 | 成功 seed | 拒绝率 | 停止原因 |
+|---|---:|---:|---|---:|---|
+| L1 flat | 8 | 5 | 4113–4117 | 0.375 | five_valid_successes |
+| L2 perturbed | 6 | 5 | 4210, 4212–4215 | 0.167 | five_valid_successes |
+| L3 crumpled | 7 | 5 | 4310, 4311, 4313, 4315, 4316 | 0.286 | five_valid_successes |
+
+- 失败/异常全部保留、未重跑：4110/4111（旧 receipt 入口）、4112（execution_error）、4211（rejected）、4312/4314（`waypoint_non_convergence`，按 2026-11-06 登记的续跑规则计为失败并继续）。
+- 续跑规则：[CONTINUATION_RULE_20261106.md](day4-actionchunk-test/minimum_hold120/CONTINUATION_RULE_20261106.md)；驱动 `minimum_driver_v2.py`，部署 manifest v2 20 项 `bad 0`。
+- 证据：[最低验收完成报告](day4-actionchunk-test/results/MINIMUM_ACCEPTANCE_20261106/review.md)（15 个结果目录、`attempts.jsonl`、`summary.json`、30 张初态截图、证据包）；[交接日报](2026-11-06-GarmentLab日报%20Stage4%20最低验收通过交接.md)。
+- **接口隔离：结项**（按原条款做代码审查：公共 5 维 `[x,y,z,yaw]+gripper` 动作 schema、观测 schema 禁止 joint command/USD 路径/粒子索引、Backend 仅 `get_observation/execute/stop`、expert 的仿真真值使用属登记的 state-oracle；路径与行号见完成报告 §5）。
+- **reset 兼容：待闭合**（2026-11-01 的 10 次 reset/rollout 证据无代码身份，且用 `PreparedSquareBackend`；冻结候选用 `SquarePoseBackend/FoldPoseBackend`，其 `reset()` 只做 robot home/settle，不调用场景 reset 钩子；继承不成立，见完成报告 §6）。
+- 正式 Stage 4 成功计数：**15**（此前为 0）。边界：single-only；拒绝率只描述本次预登记 seed，不是固定样本量成功率或策略性能。
+- **Stage 4 状态：暂不标记完成**（最低验收通过 + 接口结项，reset 缺口未闭合）。下一步需二选一：在冻结候选实现并验证 in-process reset 后补跑 10 次；或正式登记该条款由题前 Backend 满足、被逐进程协议取代。`DAY4_ACCEPTANCE_TRACKER.md` 已同步本轮状态。
+- **当前已暂停**：批次驱动已退出、无在途仿真；本轮未启动新实验，等待 reset 条款决定后再进入 Stage 5。
+
 ## 当前状态（2026-11-05，暂停）
 
 **开发候选已冻结，正式批次未运行；正式 Stage 4 成功仍为 0。**
