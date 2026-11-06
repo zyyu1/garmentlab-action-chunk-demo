@@ -76,26 +76,27 @@
 
 **判定：条款满足，结项**；不另写脚本。边界：这是代码级审查，不是运行时审计；若 Stage 5 引入真实 policy，需重新核对。
 
-## 6. reset 兼容（原条款：待闭合）
+## 6. reset 兼容（按修订闭合，2026-11-06 批准）
 
 原条款：[README](../../../README.md) Stage 4 验收计划第 2 条“验证 `reset(seed, difficulty)`、episode 内重抓取及连续 10 次 reset/rollout”；[DAY4_MINIMUM_PLAN](../../../DAY4_MINIMUM_PLAN.md) 第 5 条“将连续 10 次 reset/rollout 检查并入批次，检查状态残留、资源和保存错误”。
 
-**继承核对（不成立）：**
+**批准修订：** [stage4-reset-clause-rev-20261106](../../minimum_hold120/STAGE4_RESET_CLAUSE_REVISION_20261106.md)（用户批准 2026-11-06）——冻结候选及 Stage 5 采用**每个 episode 独立进程**，替代进程内连续 10 次场景 reset/rollout；若以后改为同进程复用场景，恢复原 reset 验证要求。
 
-1. 2026-11-01 的 [10 循环审查](../day4-prepared-square-backend-reset-20261101-080713-870146/review.md)：`passed=true`、`cycle_count=10`、`ERRORS=[]`；但该目录 `result.json` **没有 `code_files`/manifest**，无法确认它跑了哪一版代码。
-2. 该证据使用 `PreparedSquareBackend`（`backends/prepared_square_backend.py`）；冻结候选用 `SquarePoseBackend/FoldPoseBackend`（`app/square_pose_backend.py`、`app/a5_l1.py:40`），**后端不同**。
-3. reset 控制文件 `multi_prepared_grasp_control.py` 最后修改为 **2026-11-02**（commit `bd61389`），晚于 11-01 证据。
-4. 冻结候选的 `reset()` 走 `GarmentLabBackend.reset`（`garmentlab-action-chunk-demo/backends/garmentlab_backend.py:190-218`：robot home + settle + difficulty），**不调用**场景 reset 钩子；`prepare_episode_reset`/`after_scene_reset` 定义在 `app/multi_prepared_grasp_control.py:132/142/268/273`，在冻结 app 中**无调用点**。a5 协议每个 episode 独立进程，无 in-process 场景 reset。
+**进程依据（现有入口）：**
 
-**结论：** 继承不成立；冻结候选当前无法执行“连续 10 次 reset/rollout（场景 reset + 状态残留检查）”，除非新增 reset 路径（代码变更，不在冻结范围）。**保留为待闭合。**
+1. `a5_entry.py:130-154`：每个 episode 校验初态、建 attempt/journal、用 `subprocess.run` 启动独立 runner（`:137-141`），评估后写 verdict、打印 `DOWNLOAD_DIR`、进程退出。
+2. `minimum_driver_v2.py:45-52`（`:49`）用 `subprocess.run` 调 `adapter_run.py`（`:15-16` 只改 `E_RELEASE` 路径）。
+3. 正式批次 21 个 episode 各对应独立 attempt 目录、21 个唯一 seed、无重复；驱动退出后写 `completed`、移锁。
 
-**缺口：** 需二选一——(a) 在冻结候选上实现并验证 in-process reset 后补跑 10 次；(b) 正式登记该条款由 2026-11-01 的题前 Backend 候选满足、并被逐进程 episode 协议取代（口径变更）。
+**保留：** 2026-11-01 的 [10 循环审查](../day4-prepared-square-backend-reset-20261101-080713-870146/review.md)（`passed=true`、10 循环）及其“题前 `PreparedSquareBackend`”适用范围；不删除、不改写、不作为冻结候选证据。
+
+**结论：按修订闭合。** 若恢复同进程复用，需实现场景 reset（冻结候选当前 `reset()` 只做 robot home/settle/difficulty）并完成 10 次验证。
 
 ## 7. 结论与边界
 
 - **最低验收批次：通过**。三档各 5 个不同 seed 的有效成功，共 15 个正式 accepted episode；成功计数由 0 更新为 **15**。
 - **接口隔离：结项**（代码审查满足原条款，见 §5）。
-- **reset 兼容：待闭合**（继承不成立；冻结候选无 in-process 场景 reset，见 §6）。
-- **Stage 4 状态：暂不标记完成**——按“两项均满足原条款后完成”的规则，reset 缺口未闭合。
+- **reset 兼容：按修订闭合**（逐进程 episode；见 §6）。
+- **Stage 4 状态：完成（2026-11-06）**，可正式进入 Stage 5。
 - 边界：single-only；每档“5 成功即停”不是固定样本量成功率，拒绝率（L1 0.375 / L2 0.167 / L3 0.286）只描述本次预登记 seed 的尝试结果，不得当作策略性能或难度曲线；expert 为 state-oracle；判据仍是仿真几何代理，不认证真实夹持/平整质量。
 - 未启动：原 60 初态/120 槽批次；未重跑 4110–4112；未补跑 4100。

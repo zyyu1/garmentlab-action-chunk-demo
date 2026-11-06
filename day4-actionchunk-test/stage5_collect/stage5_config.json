@@ -1,0 +1,18 @@
+{
+  "app": "/root/autodl-tmp/stage4-minimum-hold120/app_overlay",
+  "candidate": "/root/autodl-tmp/a5-rc8b-recovery-hold120-rc7-r2",
+  "python": "/root/autodl-tmp/envs/isaac40/bin/python",
+  "state": "/root/autodl-tmp/stage5-demos-state-v1",
+  "journal": "/root/autodl-tmp/stage5-demos-state-v1/episodes",
+  "initials_file": "/root/autodl-tmp/stage4-minimum-hold120-state-v1/init_dirs.json",
+  "target_per_level": 50,
+  "max_attempts_per_level": 120,
+  "seeds": {
+    "flat": [4110, 4111, 4112, 4113, 4114, 4115, 4116, 4117, 4118, 4119,
+             4120, 4121, 4122, 4123, 4124, 4125, 4126, 4127, 4128, 4129],
+    "perturbed": [4210, 4211, 4212, 4213, 4214, 4215, 4216, 4217, 4218, 4219,
+                  4220, 4221, 4222, 4223, 4224, 4225, 4226, 4227, 4228, 4229],
+    "crumpled": [4310, 4311, 4312, 4313, 4314, 4315, 4316, 4317, 4318, 4319,
+                 4320, 4321, 4322, 4323, 4324, 4325, 4326, 4327, 4328, 4329]
+  }
+}

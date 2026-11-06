@@ -1,4 +1,4 @@
-# 当前验收状态（最新：2026-11-06 **最低验收批次通过：L1 5/5、L2 5/5、L3 5/5，共 15 个正式成功；接口隔离按代码审查结项；reset 兼容条款待闭合（冻结候选无 in-process scene reset）；前序 2026-11-05 **rc8b 初态协议补齐后七例 4/6 阳性：4100/4302 s/a accepted，4202 s/a 与 4201 rejected（stationary half ~30 mm，fold 后整体滑移）；配对 0 差、证据完整、verify-dev 失败于 4202；l2pose 位姿匹配单次 accepted 0.7396/1.5397 mm（中间行为，未重现失败）；l2pose/rc8b 两例重复逐位重现原行为（阶段/目标/trace 最大差 0.0）；这两个固定配置下结果可重复，但不能全面排除所有初始化/状态恢复问题；九点 z patch 仍 rejected 7.2532/11.4799（响应很小）；hold120 r1 accepted 0.2374/0.3484（runner 3 为 audit 打印异常，同结果复审计 0）；审计修复后 4202 r2 干净复验 accepted 0.2374/0.3484（entry/runner/audit 均 0，与 r1 逐阶段 0.0 差）；4302 扩展 accepted 0.2386/0.3468（均 0）；七例 rc7 完成：slot1 4100 single accepted 0.1435/0.2072（初次 audit 5，同结果修订审计 0）；修订版续跑 slots2–7，六阳性 accepted、4201 有效 rejected 7.2583/11.0030；配对 0.0、hold 120/121/2.0、本地复算 7/7、来源验证 exit 0；开发候选已冻结（来源继承），freeze/gate exit 0，回执 67c64a55/9042e88e/7d328159；正式批次未运行，正式成功仍为 0；正式批次离线预检完成：60初态/120槽、deployment 18/18、桩测试10/10、preflight exit 0、容量约2.9GB/35h**；前序：2026-11-05 **rc8 task-scoped 七例 RC 通过：6/6 阳性 accepted、4201 有效拒绝、配对 0 差、verify-dev 通过；冻结前检查发现正式 L2/L3 初态生成仍为 0.0（应为 1.0），freeze 暂停、未写回执，正式成功仍为 0**；2026-11-04 **rc7 七例 RC 完成，4/6 阳性通过（4202/4302 s/a accepted；4100 s/a 质量拒绝），4201 有效拒绝，三组配对 0 差，verify-dev 失败，未放行**；2026-11-04 **4302 single 扩展通过**（`overall_valid=true`、质量 accepted、质心 0.2390 mm / P95 0.3524 mm）；2026-11-04 pfs1-observation-v2 4202 single 观测修订复验通过（0.2642/0.3792 mm）；2026-11-04 D2-E 步骤4 持续滑移核查完成（仅离线），步骤5 决定 particleFrictionScale 0→1.0 敏感性对照（已创建并单次运行）；D2-E 步骤2 支撑/摩擦配置核查完成（仅离线）；D2-D 释放顺序对照完成（4202 single 单次；质量仍 rejected）；D2-C 版本已登记并运行一次；D2-A/B 场景与接触核查完成；2026-11-03 D0 4202/4302 基线复现 + A5 RC2 漂移诊断第 1–3 项；2026-11-02 折形口径定稿 + 任务定义冻结 + 表示层配对 + 分任务报告 + A1 预检）
+# 当前验收状态（最新：2026-11-06 **最低验收批次通过：L1 5/5、L2 5/5、L3 5/5，共 15 个正式成功；接口隔离按代码审查结项；reset 兼容按修订（逐进程 episode）闭合；**Stage 4 完成**；前序 2026-11-05 **rc8b 初态协议补齐后七例 4/6 阳性：4100/4302 s/a accepted，4202 s/a 与 4201 rejected（stationary half ~30 mm，fold 后整体滑移）；配对 0 差、证据完整、verify-dev 失败于 4202；l2pose 位姿匹配单次 accepted 0.7396/1.5397 mm（中间行为，未重现失败）；l2pose/rc8b 两例重复逐位重现原行为（阶段/目标/trace 最大差 0.0）；这两个固定配置下结果可重复，但不能全面排除所有初始化/状态恢复问题；九点 z patch 仍 rejected 7.2532/11.4799（响应很小）；hold120 r1 accepted 0.2374/0.3484（runner 3 为 audit 打印异常，同结果复审计 0）；审计修复后 4202 r2 干净复验 accepted 0.2374/0.3484（entry/runner/audit 均 0，与 r1 逐阶段 0.0 差）；4302 扩展 accepted 0.2386/0.3468（均 0）；七例 rc7 完成：slot1 4100 single accepted 0.1435/0.2072（初次 audit 5，同结果修订审计 0）；修订版续跑 slots2–7，六阳性 accepted、4201 有效 rejected 7.2583/11.0030；配对 0.0、hold 120/121/2.0、本地复算 7/7、来源验证 exit 0；开发候选已冻结（来源继承），freeze/gate exit 0，回执 67c64a55/9042e88e/7d328159；正式批次未运行，正式成功仍为 0；正式批次离线预检完成：60初态/120槽、deployment 18/18、桩测试10/10、preflight exit 0、容量约2.9GB/35h**；前序：2026-11-05 **rc8 task-scoped 七例 RC 通过：6/6 阳性 accepted、4201 有效拒绝、配对 0 差、verify-dev 通过；冻结前检查发现正式 L2/L3 初态生成仍为 0.0（应为 1.0），freeze 暂停、未写回执，正式成功仍为 0**；2026-11-04 **rc7 七例 RC 完成，4/6 阳性通过（4202/4302 s/a accepted；4100 s/a 质量拒绝），4201 有效拒绝，三组配对 0 差，verify-dev 失败，未放行**；2026-11-04 **4302 single 扩展通过**（`overall_valid=true`、质量 accepted、质心 0.2390 mm / P95 0.3524 mm）；2026-11-04 pfs1-observation-v2 4202 single 观测修订复验通过（0.2642/0.3792 mm）；2026-11-04 D2-E 步骤4 持续滑移核查完成（仅离线），步骤5 决定 particleFrictionScale 0→1.0 敏感性对照（已创建并单次运行）；D2-E 步骤2 支撑/摩擦配置核查完成（仅离线）；D2-D 释放顺序对照完成（4202 single 单次；质量仍 rejected）；D2-C 版本已登记并运行一次；D2-A/B 场景与接触核查完成；2026-11-03 D0 4202/4302 基线复现 + A5 RC2 漂移诊断第 1–3 项；2026-11-02 折形口径定稿 + 任务定义冻结 + 表示层配对 + 分任务报告 + A1 预检）
 
 ## 2026-11-06 最低验收批次通过（15 成功）；接口隔离结项；reset 兼容待闭合
 
@@ -27,19 +27,19 @@
 
 **判定：接口隔离条款满足，结项**；不另写脚本。依赖：该检查是代码级审查，不是运行时审计；如后续引入真实 policy，需在 Stage 5 重新核对。
 
-**3. reset 兼容（待闭合）**
+**3. reset 兼容（按修订闭合，2026-11-06 批准）**
 
 原条款：[README.md](README.md) Stage 4 验收计划第 2 条（“验证 `reset(seed, difficulty)`、episode 内重抓取及连续 10 次 reset/rollout”）、[DAY4_MINIMUM_PLAN.md](DAY4_MINIMUM_PLAN.md) 第 5 条（“将连续 10 次 reset/rollout 检查并入批次，检查状态残留、资源和保存错误”）。
 
-- 2026-11-01 证据（[10 循环审查](day4-actionchunk-test/results/day4-prepared-square-backend-reset-20261101-080713-870146/review.md)）：`passed=true`、`cycle_count=10`、`ERRORS=[]`；但 `result.json` **没有 `code_files`/manifest**，无代码身份。
-- 该证据针对 `PreparedSquareBackend`（`backends/prepared_square_backend.py`）；冻结候选用 `SquarePoseBackend/FoldPoseBackend`（`app/square_pose_backend.py`、`app/a5_l1.py:40`），**不是同一后端**。
-- reset 控制文件 `multi_prepared_grasp_control.py` 最后修改为 **2026-11-02**（commit `bd61389`），晚于 11-01 证据。
-- 冻结候选的 `reset()` 走 `GarmentLabBackend.reset`（`garmentlab-backend.py:190-218`：robot home + settle + difficulty），**不调用** `prepare_episode_reset`/`after_scene_reset`（`app/multi_prepared_grasp_control.py:132/142/268/273`，冻结 app 内无调用点）；a5 协议每 episode 独立进程，无 in-process 场景 reset。
-- **结论：继承不成立；冻结候选当前无法执行 10 次 reset/rollout 检查，除非新增 reset 路径（属代码变更，不在冻结范围内）。保留为待闭合。** 缺口：需要（a）在冻结候选上实现并验证 in-process reset，或（b）正式决定该条款由 2026-11-01 的题前 Backend 候选满足、并被逐进程协议取代（需登记为口径变更）。
+**批准修订：** [stage4-reset-clause-rev-20261106](day4-actionchunk-test/minimum_hold120/STAGE4_RESET_CLAUSE_REVISION_20261106.md)（用户批准，2026-11-06）——冻结候选及 Stage 5 采用**每个 episode 独立进程**，替代进程内连续 10 次场景 reset/rollout；若以后改为同进程复用场景，恢复原 reset 验证要求。
+
+- 进程依据：`a5_entry.py:130-154` 每个 episode 启动独立 runner 子进程；驱动 `minimum_driver_v2.py:45-52` 用 `subprocess.run` 调 `adapter_run.py`（`:15-16`）；21 个 episode 各对应独立 attempt/journal，无重复 seed，驱动退出后写 `completed`、移锁。
+- 保留：2026-11-01 的 [10 循环 reset 记录](day4-actionchunk-test/results/day4-prepared-square-backend-reset-20261101-080713-870146/review.md) 及其“题前 `PreparedSquareBackend`”适用范围；不删除、不改写、不作为冻结候选证据。
+- 若恢复同进程复用：需实现场景 reset（冻结候选当前 `reset()` 只做 robot home/settle/difficulty）并完成 10 次验证。
 
 **4. Stage 4 状态**
 
-最低验收批次通过（15 个正式成功）；接口隔离结项；reset 兼容待闭合。按“两项均满足后标记完成”的规则，**Stage 4 暂不标记完成**。
+最低验收批次通过（15 个正式成功，21 次尝试、30 张初态截图）；接口隔离结项；reset 兼容按修订闭合。**Stage 4 标记完成（2026-11-06）**，可正式进入 Stage 5。
 
 ## 2026-11-05 rc8b 初态协议补齐：七例 4/6 阳性，未冻结
 
