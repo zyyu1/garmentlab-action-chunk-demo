@@ -1,0 +1,106 @@
+[
+  {
+    "label": "initial_loaded",
+    "file": "pfs1_stages/initial_loaded.npz",
+    "sha256": "dfc2c51efa148ab3570b26a6676ad64a1b2ffbab2f9c98fe687edec8519a9e03",
+    "sim_time_s": 0.7000000365078449,
+    "absolute_step": 42,
+    "readback_velocity_present": true,
+    "readback_velocity_validated": false,
+    "physical_velocity_method": "not_computed_single_frame",
+    "fd_method": "backward_difference_world_vertices",
+    "ee_m": [
+      0.00553022392022721,
+      -0.4608154731629588,
+      0.3883201813095618
+    ],
+    "gripper_state": 0,
+    "gripper_aperture_m": 0.07999999821186066,
+    "holding": false,
+    "enabled_slots": [
+      false,
+      false,
+      false
+    ],
+    "logical_attached": false,
+    "command_holding": false
+  },
+  {
+    "label": "after_recovery",
+    "file": "pfs1_stages/after_recovery.npz",
+    "sha256": "09228c0243d37e1d718b672b24144e694fb5c65b105dfb07e5146b6354c5213d",
+    "sim_time_s": 19.16666766628623,
+    "absolute_step": 1150,
+    "readback_velocity_present": true,
+    "readback_velocity_validated": false,
+    "physical_velocity_method": "not_computed_single_frame",
+    "fd_method": "backward_difference_world_vertices",
+    "ee_m": [
+      0.04701228408098554,
+      -0.6378190264373419,
+      0.04409079487497735
+    ],
+    "gripper_state": 0,
+    "gripper_aperture_m": 0.07999997958540916,
+    "holding": false,
+    "enabled_slots": [
+      false,
+      false,
+      false
+    ],
+    "logical_attached": false,
+    "command_holding": false
+  },
+  {
+    "label": "pre_release",
+    "file": "pfs1_stages/pre_release.npz",
+    "sha256": "b777bb6108bbcdcbf42a54d379d02df97691f3b5ba7503b21dbf532eb273e56a",
+    "sim_time_s": 34.60000180453062,
+    "absolute_step": 2076,
+    "readback_velocity_present": true,
+    "readback_velocity_validated": false,
+    "physical_velocity_method": "not_computed_single_frame",
+    "fd_method": "backward_difference_world_vertices",
+    "ee_m": [
+      -0.16859771389700975,
+      -0.4671846869277191,
+      0.04673640871305176
+    ],
+    "gripper_state": 2,
+    "gripper_aperture_m": 1.1510734587716343e-08,
+    "holding": true,
+    "enabled_slots": [
+      true,
+      false,
+      false
+    ],
+    "logical_attached": true,
+    "command_holding": true
+  },
+  {
+    "label": "release_boundary",
+    "file": "pfs1_stages/release_boundary.npz",
+    "sha256": "a6ae3e48bda335597fc8c3b31799fb1a1c37a08e9c1dbc4fef82ec863ee834e9",
+    "sim_time_s": 34.61666847206652,
+    "absolute_step": 2077,
+    "readback_velocity_present": true,
+    "readback_velocity_validated": false,
+    "physical_velocity_method": "not_computed_single_frame",
+    "fd_method": "backward_difference_world_vertices",
+    "ee_m": [
+      -0.16859807598595625,
+      -0.46718565796917416,
+      0.04673672896453491
+    ],
+    "gripper_state": 2,
+    "gripper_aperture_m": 0.015316043980419636,
+    "holding": false,
+    "enabled_slots": [
+      false,
+      false,
+      false
+    ],
+    "logical_attached": false,
+    "command_holding": true
+  }
+]

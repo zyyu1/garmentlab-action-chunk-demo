@@ -1,0 +1,7 @@
+{
+  "level": "crumpled",
+  "attempts": 1,
+  "accepted": 1,
+  "stop": "target",
+  "rule": "one process per episode; accepted only; keep all attempts"
+}

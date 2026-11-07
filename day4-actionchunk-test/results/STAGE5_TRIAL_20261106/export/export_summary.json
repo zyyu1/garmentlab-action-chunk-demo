@@ -1,0 +1,70 @@
+{
+  "seed": 4100,
+  "level": "flat",
+  "task": "A_l1_overfold",
+  "result_passed": true,
+  "action_labels": [
+    "approach",
+    "close",
+    "arc45",
+    "arc90",
+    "arc135",
+    "place",
+    "release_retreat"
+  ],
+  "checks": {
+    "obs_count": 7,
+    "action_count": 7,
+    "count_match": true,
+    "call_ids_1_to_n": true,
+    "vertices_shape_ok": true,
+    "ee_shape_ok": true,
+    "joints_len": [
+      9
+    ],
+    "steps_monotonic": true,
+    "time_monotonic": true,
+    "target_max_abs_diff": 7.505919663586269e-09,
+    "command_max_abs_diff": 0,
+    "pairing_ok": true
+  },
+  "single_step": {
+    "count": 7,
+    "obs_vertices": [
+      7,
+      441,
+      3
+    ],
+    "obs_ee": [
+      7,
+      3
+    ],
+    "obs_joints": [
+      7,
+      9
+    ],
+    "action": [
+      7,
+      5
+    ]
+  },
+  "h4": {
+    "chunk_size": 4,
+    "full_chunks": 1,
+    "tail_actions": 3,
+    "tail_policy": "drop (full chunks only) or pad+mask (h4_tail_padded.npz)",
+    "full_shape": [
+      1,
+      4,
+      441,
+      3
+    ],
+    "action_shape": [
+      1,
+      4,
+      5
+    ],
+    "no_cross_episode": true,
+    "episodes_in_file": 1
+  }
+}

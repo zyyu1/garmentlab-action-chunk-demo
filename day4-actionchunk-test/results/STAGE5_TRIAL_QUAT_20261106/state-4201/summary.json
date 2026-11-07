@@ -1,0 +1,7 @@
+{
+  "level": "crumpled",
+  "attempts": 0,
+  "accepted": 0,
+  "stop": "seeds_exhausted",
+  "rule": "one process per episode; accepted only; keep all attempts"
+}

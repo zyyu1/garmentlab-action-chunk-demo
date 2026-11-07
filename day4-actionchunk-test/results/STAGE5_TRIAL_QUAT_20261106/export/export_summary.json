@@ -1,0 +1,88 @@
+{
+  "seed": 4201,
+  "level": "perturbed",
+  "task": "B_nominal",
+  "split": "val",
+  "verdict_status": "rejected",
+  "result_passed": true,
+  "action_labels": [
+    "rec_approach",
+    "rec_pick",
+    "rec_lift",
+    "rec_spread",
+    "rec_release",
+    "fold_approach",
+    "fold_close",
+    "fold_arc45",
+    "fold_arc90",
+    "fold_arc135",
+    "fold_place",
+    "release_retreat"
+  ],
+  "checks": {
+    "obs_count": 12,
+    "action_count": 12,
+    "count_match": true,
+    "call_ids_1_to_n": true,
+    "vertices_shape_ok": true,
+    "ee_shape_ok": true,
+    "quat_shape_ok": true,
+    "quat_unit_norm": true,
+    "joints_len": [
+      9
+    ],
+    "steps_monotonic": true,
+    "time_monotonic": true,
+    "unknown_phase_labels": [],
+    "target_max_abs_diff": 1.0424826335508897e-08,
+    "command_max_abs_diff": 0,
+    "pairing_ok": true
+  },
+  "single_step": {
+    "count": 12,
+    "obs_vertices": [
+      12,
+      441,
+      3
+    ],
+    "obs_ee": [
+      12,
+      3
+    ],
+    "obs_quat": [
+      12,
+      4
+    ],
+    "obs_joints": [
+      12,
+      9
+    ],
+    "action": [
+      12,
+      5
+    ]
+  },
+  "h4": {
+    "chunk_size": 4,
+    "full_chunks": 3,
+    "tail_actions": 0,
+    "total_chunks": 3,
+    "input_policy": "observation at chunk start only",
+    "mask_rule": "full=[1,1,1,1]; tail=[1,...,0]; padding excluded from loss",
+    "shape": [
+      3,
+      4,
+      5
+    ],
+    "no_cross_episode": true
+  },
+  "phase_counts": {
+    "APPROACH": 1,
+    "GRASP": 1,
+    "LIFT": 1,
+    "PLACE": 1,
+    "RECOVERY": 5,
+    "RELEASE": 1,
+    "TRANSFER": 2
+  }
+}

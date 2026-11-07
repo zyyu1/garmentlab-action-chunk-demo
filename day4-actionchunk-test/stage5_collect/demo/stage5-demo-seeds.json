@@ -1,0 +1,18 @@
+{
+  "schema": "stage5-demo-seeds-v1",
+  "ranges": {
+    "flat": [6100, 6219],
+    "perturbed": [6300, 6419],
+    "crumpled": [6500, 6619]
+  },
+  "target_per_level": 50,
+  "max_attempts_per_level": 120,
+  "one_attempt_per_seed": true,
+  "split": {
+    "rule": "sha256('stage5-split-v1-<seed>')[:8] % 100; <70 train, <85 val, else test",
+    "shared_by": ["single_step", "h4"]
+  },
+  "h4_tail": "pad to 4 with mask [1,..,0]; padding excluded from loss; no cross-episode",
+  "initial_protocol": "stage4-initial-v2-task-scoped (task-scoped pfs 0.0/1.0/1.0)",
+  "generator": "stage5_collect/demo/run-demo-initial.sh"
+}

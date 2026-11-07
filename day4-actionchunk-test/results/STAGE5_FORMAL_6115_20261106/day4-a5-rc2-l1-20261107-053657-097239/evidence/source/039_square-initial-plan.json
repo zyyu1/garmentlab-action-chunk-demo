@@ -1,0 +1,1394 @@
+{
+  "version": "square-initial-v3",
+  "config_sha256": "a42fec8a1069ad43525d609bd058d9540bb7d6a1370d580abfc8616f61cd24f4",
+  "asset_sha256": "fef138f6dd76484f3452455bf98cdc4d166812d290631125a5c375de8308ef7e",
+  "corner_labels": [
+    "local(-x,-y)",
+    "local(+x,-y)",
+    "local(+x,+y)",
+    "local(-x,+y)"
+  ],
+  "sampling": "NumPy default_rng; exact values persisted here",
+  "episodes": [
+    {
+      "level": "flat",
+      "seed": 4100,
+      "translation_xy_m": [
+        0.00385909927936512,
+        0.02681397324895149
+      ],
+      "yaw_rad": 0.03280146619631816,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4101,
+      "translation_xy_m": [
+        0.01498582960605534,
+        0.01783269589870703
+      ],
+      "yaw_rad": -0.1309625593436558,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4102,
+      "translation_xy_m": [
+        0.011672438593540209,
+        0.016478848282689623
+      ],
+      "yaw_rad": -0.06080896820903929,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4103,
+      "translation_xy_m": [
+        0.025541287784536643,
+        0.008883868197686768
+      ],
+      "yaw_rad": -0.07512365618078788,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4104,
+      "translation_xy_m": [
+        0.02387148084002474,
+        0.0017753656325589372
+      ],
+      "yaw_rad": -0.0730364481903002,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4105,
+      "translation_xy_m": [
+        0.005274487690073377,
+        0.00914147801368554
+      ],
+      "yaw_rad": 0.006861560892466062,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4106,
+      "translation_xy_m": [
+        0.023683784416422445,
+        0.027006491652189983
+      ],
+      "yaw_rad": 0.10287975492043139,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4107,
+      "translation_xy_m": [
+        0.01211277719742286,
+        0.013083401307232446
+      ],
+      "yaw_rad": -0.1488146393791384,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4108,
+      "translation_xy_m": [
+        0.008001330077323877,
+        0.02499443745381175
+      ],
+      "yaw_rad": 0.1381264374156722,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4109,
+      "translation_xy_m": [
+        0.026343189649365967,
+        0.01163826863045452
+      ],
+      "yaw_rad": 0.008845313363414403,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "ready_for_initial_state_pilot"
+    },
+    {
+      "level": "flat",
+      "seed": 4110,
+      "translation_xy_m": [
+        0.0238135836340053,
+        0.011002024270988116
+      ],
+      "yaw_rad": 0.06677279033821676,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4111,
+      "translation_xy_m": [
+        0.013741671674588743,
+        0.02424315349679154
+      ],
+      "yaw_rad": 0.12920549802174713,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4112,
+      "translation_xy_m": [
+        0.013018394211849985,
+        0.013718075111355319
+      ],
+      "yaw_rad": 0.03721899815753982,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4113,
+      "translation_xy_m": [
+        0.0005013696757749996,
+        0.013190924865464736
+      ],
+      "yaw_rad": -0.14945718902997118,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4114,
+      "translation_xy_m": [
+        0.027277937214329657,
+        0.002488837529611283
+      ],
+      "yaw_rad": -0.1720774111858508,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4115,
+      "translation_xy_m": [
+        0.02369182144012161,
+        0.0080739161400582
+      ],
+      "yaw_rad": -0.0058006821140274,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4116,
+      "translation_xy_m": [
+        0.016170584329065443,
+        0.016551719230159023
+      ],
+      "yaw_rad": -0.01379545267646709,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4117,
+      "translation_xy_m": [
+        0.013358892721261494,
+        0.024097151348554977
+      ],
+      "yaw_rad": 0.06694307524702836,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4118,
+      "translation_xy_m": [
+        0.00019750892333910252,
+        0.01963801425437541
+      ],
+      "yaw_rad": -0.09812469781159387,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4119,
+      "translation_xy_m": [
+        0.025464903111767252,
+        0.023625974704958672
+      ],
+      "yaw_rad": -0.1726824678655032,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4120,
+      "translation_xy_m": [
+        0.006806057713915223,
+        0.015384234107146183
+      ],
+      "yaw_rad": 0.08372281448518815,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4121,
+      "translation_xy_m": [
+        0.004042325545018287,
+        0.005022247329272149
+      ],
+      "yaw_rad": 0.011893829548206114,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4122,
+      "translation_xy_m": [
+        0.0013842061968351903,
+        0.028231822048051126
+      ],
+      "yaw_rad": 0.15701200754318062,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4123,
+      "translation_xy_m": [
+        0.00788455884365368,
+        0.005781126230949479
+      ],
+      "yaw_rad": -0.03808967430921753,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4124,
+      "translation_xy_m": [
+        0.010299819194452307,
+        0.009326976799432278
+      ],
+      "yaw_rad": 0.09910465445704864,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4125,
+      "translation_xy_m": [
+        0.005641412278915135,
+        0.024882810965516547
+      ],
+      "yaw_rad": -0.048365777174931096,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4126,
+      "translation_xy_m": [
+        0.022762868946042382,
+        0.009518846997953571
+      ],
+      "yaw_rad": -0.16651051961102997,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4127,
+      "translation_xy_m": [
+        0.0003810691745038397,
+        0.014343773719799441
+      ],
+      "yaw_rad": 0.08459959544846596,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4128,
+      "translation_xy_m": [
+        0.005032666874002351,
+        0.008702758799186312
+      ],
+      "yaw_rad": 0.15554121019470513,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "flat",
+      "seed": 4129,
+      "translation_xy_m": [
+        0.014665195064010391,
+        0.005286110222599761
+      ],
+      "yaw_rad": 0.14448475605111755,
+      "lift_drop_cycles": [],
+      "settle_steps": 120,
+      "status": "heldout_registered_stage4_formal_v1"
+    },
+    {
+      "level": "perturbed",
+      "seed": 4200,
+      "translation_xy_m": [
+        0.016812008040814945,
+        0.003964959026106275
+      ],
+      "yaw_rad": -0.1154881356954241,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.174179
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4201,
+      "translation_xy_m": [
+        0.0026708191265400125,
+        0.02748634418386058
+      ],
+      "yaw_rad": 0.16205999298044266,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.179284
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4202,
+      "translation_xy_m": [
+        0.024471162663252336,
+        0.0069321790495343915
+      ],
+      "yaw_rad": 0.1157488843229747,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.171397
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4203,
+      "translation_xy_m": [
+        0.0091555449896575,
+        0.021029534466375586
+      ],
+      "yaw_rad": 0.13094538328626049,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.177043
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4204,
+      "translation_xy_m": [
+        0.002829251753489883,
+        0.019232622910444988
+      ],
+      "yaw_rad": 0.04128354429623271,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.174309
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4205,
+      "translation_xy_m": [
+        0.01912170121237165,
+        0.011912924684114114
+      ],
+      "yaw_rad": -0.017537726229255035,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.161505
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4206,
+      "translation_xy_m": [
+        0.019688758559314602,
+        0.01670679078340298
+      ],
+      "yaw_rad": 0.16074555186198408,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.166082
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4207,
+      "translation_xy_m": [
+        0.029997918215315056,
+        0.013603403260385255
+      ],
+      "yaw_rad": -0.011933988357613862,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.17589
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4208,
+      "translation_xy_m": [
+        0.004178342932478177,
+        0.009979353353076568
+      ],
+      "yaw_rad": 0.03597578731633752,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.174321
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4209,
+      "translation_xy_m": [
+        0.00045356570687733906,
+        0.023835787796662365
+      ],
+      "yaw_rad": -0.09998697853744408,
+      "settle_steps": 180,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.17517
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4210,
+      "translation_xy_m": [
+        0.02400323857410991,
+        0.010516450807228971
+      ],
+      "yaw_rad": -0.11596850898225086,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.166864
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4211,
+      "translation_xy_m": [
+        0.009951230751379693,
+        0.009058959476531663
+      ],
+      "yaw_rad": 0.16237998634997253,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.161844
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4212,
+      "translation_xy_m": [
+        0.01682218238579376,
+        0.013297519002493517
+      ],
+      "yaw_rad": -0.1413496160493237,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.178255
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4213,
+      "translation_xy_m": [
+        0.02815601093918016,
+        0.016188743633600424
+      ],
+      "yaw_rad": 0.12184733269087067,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.174665
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4214,
+      "translation_xy_m": [
+        0.002605726220410617,
+        0.0019177723607524133
+      ],
+      "yaw_rad": 0.06323144281799473,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.163444
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4215,
+      "translation_xy_m": [
+        0.0010322421594671516,
+        0.007495909163855531
+      ],
+      "yaw_rad": -0.10266309118265646,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.162768
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4216,
+      "translation_xy_m": [
+        0.006916472287586327,
+        0.013820713988802098
+      ],
+      "yaw_rad": 0.01775851256855343,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.167155
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4217,
+      "translation_xy_m": [
+        0.028086250363792274,
+        0.02579317832218732
+      ],
+      "yaw_rad": 0.09834481098068887,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.160412
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4218,
+      "translation_xy_m": [
+        0.020515515749098087,
+        0.01699300611333181
+      ],
+      "yaw_rad": -0.057308581030528064,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.171013
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4219,
+      "translation_xy_m": [
+        0.002392899762810874,
+        0.011683098382481306
+      ],
+      "yaw_rad": -0.1418605984708965,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.171856
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4220,
+      "translation_xy_m": [
+        0.01974913961389578,
+        0.015636449628673776
+      ],
+      "yaw_rad": 0.16164977136143005,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.166738
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4221,
+      "translation_xy_m": [
+        0.005101983497268403,
+        0.003636824127509005
+      ],
+      "yaw_rad": 0.15464107896190543,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.175724
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4222,
+      "translation_xy_m": [
+        0.029211068494265607,
+        0.01797833878131128
+      ],
+      "yaw_rad": 0.00029664641203358544,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.171317
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4223,
+      "translation_xy_m": [
+        0.024007564037979615,
+        0.01663838101840199
+      ],
+      "yaw_rad": -0.009169299014183147,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.160387
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4224,
+      "translation_xy_m": [
+        0.011645278241563802,
+        0.009076936961175019
+      ],
+      "yaw_rad": -0.011333037190926487,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.162565
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4225,
+      "translation_xy_m": [
+        0.01234906093609782,
+        0.023446497327937185
+      ],
+      "yaw_rad": 0.10476145932615971,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.167382
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4226,
+      "translation_xy_m": [
+        0.011578999796898404,
+        0.026728742000288037
+      ],
+      "yaw_rad": -0.11476904092212001,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.161509
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4227,
+      "translation_xy_m": [
+        0.018836159034946773,
+        0.015673605254262653
+      ],
+      "yaw_rad": 0.0035062146947938133,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.171219
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4228,
+      "translation_xy_m": [
+        0.0033755232837911495,
+        0.02259316917669977
+      ],
+      "yaw_rad": 0.023266180568657785,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.160085
+        }
+      ]
+    },
+    {
+      "level": "perturbed",
+      "seed": 4229,
+      "translation_xy_m": [
+        0.01784931127069324,
+        0.007085425663598714
+      ],
+      "yaw_rad": 0.09647478467894877,
+      "settle_steps": 180,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "bottom",
+          "width_m": 0.177265
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4300,
+      "translation_xy_m": [
+        0.017776032468595538,
+        0.005222137169594488
+      ],
+      "yaw_rad": -0.12400478081752844,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4301,
+      "translation_xy_m": [
+        0.046856387967661395,
+        0.04422311714532419
+      ],
+      "yaw_rad": 0.2692456525470284,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4302,
+      "translation_xy_m": [
+        0.005411810700933057,
+        0.016770457404895668
+      ],
+      "yaw_rad": -0.18560065242622373,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4303,
+      "translation_xy_m": [
+        0.009092440503317301,
+        0.003834281353379515
+      ],
+      "yaw_rad": -0.26659416620433596,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4304,
+      "translation_xy_m": [
+        0.008407668791280331,
+        0.006849645313597014
+      ],
+      "yaw_rad": -0.32308453077721117,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4305,
+      "translation_xy_m": [
+        0.04442473922197005,
+        0.03077148184213503
+      ],
+      "yaw_rad": -0.1435913415803779,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4306,
+      "translation_xy_m": [
+        0.002350992107512695,
+        0.02399838387670122
+      ],
+      "yaw_rad": 0.10861759703201768,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4307,
+      "translation_xy_m": [
+        0.006951297875911245,
+        0.017335464796176158
+      ],
+      "yaw_rad": -0.16833222648186896,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4308,
+      "translation_xy_m": [
+        0.00593128678265405,
+        0.020121700955046104
+      ],
+      "yaw_rad": 0.0908082242514554,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4309,
+      "translation_xy_m": [
+        0.04756682837162049,
+        0.027853960759431987
+      ],
+      "yaw_rad": 0.34691299690603,
+      "settle_steps": 240,
+      "status": "blocked_unvalidated_corner_lift_drop",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4310,
+      "translation_xy_m": [
+        0.015733665887554645,
+        0.04359447248348038
+      ],
+      "yaw_rad": 0.04369890543777688,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4311,
+      "translation_xy_m": [
+        0.008140297493062516,
+        0.026346357195561904
+      ],
+      "yaw_rad": 0.32586421945615124,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4312,
+      "translation_xy_m": [
+        0.018335232847856875,
+        0.023559486756896893
+      ],
+      "yaw_rad": -0.32569899010783526,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4313,
+      "translation_xy_m": [
+        0.037278260843446175,
+        0.004442985420702633
+      ],
+      "yaw_rad": -0.1740138922339931,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4314,
+      "translation_xy_m": [
+        0.030020589965063543,
+        0.037100068845981146
+      ],
+      "yaw_rad": 0.17243844449562612,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4315,
+      "translation_xy_m": [
+        0.025059139500597793,
+        0.023943030090782205
+      ],
+      "yaw_rad": 0.20068555488096834,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4316,
+      "translation_xy_m": [
+        0.004392017199293225,
+        0.0410242405938647
+      ],
+      "yaw_rad": 0.03020290595798425,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4317,
+      "translation_xy_m": [
+        0.03622507243664901,
+        0.04817173335272006
+      ],
+      "yaw_rad": 0.32959334356774433,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4318,
+      "translation_xy_m": [
+        0.017046692336469573,
+        0.03089498879140224
+      ],
+      "yaw_rad": -0.23043577495197726,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4319,
+      "translation_xy_m": [
+        0.03388403910037984,
+        0.039767202465510465
+      ],
+      "yaw_rad": 0.2614732612886301,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4320,
+      "translation_xy_m": [
+        0.023495971467033486,
+        0.008207158214155592
+      ],
+      "yaw_rad": -0.21275613477871283,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4321,
+      "translation_xy_m": [
+        0.00015341560330153217,
+        0.040420964621953465
+      ],
+      "yaw_rad": 0.023048889407317585,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4322,
+      "translation_xy_m": [
+        0.02557408105094948,
+        0.006059010752599525
+      ],
+      "yaw_rad": 0.2598769561025745,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4323,
+      "translation_xy_m": [
+        0.010072259143353635,
+        0.03977801996311532
+      ],
+      "yaw_rad": 0.12490656344754497,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4324,
+      "translation_xy_m": [
+        0.01230370019351642,
+        0.023542590753685835
+      ],
+      "yaw_rad": -0.2122525505457751,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4325,
+      "translation_xy_m": [
+        0.011684271155794885,
+        0.047108744111025065
+      ],
+      "yaw_rad": 0.056641373032846665,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4326,
+      "translation_xy_m": [
+        0.004694357647323655,
+        0.0179903619790209
+      ],
+      "yaw_rad": 0.12076527656294067,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4327,
+      "translation_xy_m": [
+        0.01656427847459067,
+        0.03695954902908274
+      ],
+      "yaw_rad": -0.2779486266942513,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4328,
+      "translation_xy_m": [
+        0.03331647637554788,
+        0.04103689319130154
+      ],
+      "yaw_rad": -0.24511979529494476,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    },
+    {
+      "level": "crumpled",
+      "seed": 4329,
+      "translation_xy_m": [
+        0.01464704657354838,
+        0.007233504079431863
+      ],
+      "yaw_rad": -0.13351115733148342,
+      "settle_steps": 240,
+      "status": "heldout_registered_stage4_formal_v1",
+      "strips": [
+        {
+          "edge": "left",
+          "width_m": 0.2
+        }
+      ]
+    }
+  ]
+}

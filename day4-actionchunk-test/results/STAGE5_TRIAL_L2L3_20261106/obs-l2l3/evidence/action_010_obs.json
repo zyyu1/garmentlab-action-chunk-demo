@@ -1,0 +1,1 @@
+{"call_id": 10, "backend_step": -1, "sim_time_s": 28.750001499429345, "holding": false, "targets": [[-0.11629194766283035, -0.46210312843322754, 0.169721320271492, 0.10861669480800629]], "commands": [2], "horizon": 1, "vertices_shape": [441, 3], "joints_shape": [9], "episode_dir": "evidence"}

@@ -1,0 +1,82 @@
+{
+  "seed": 4202,
+  "level": "perturbed",
+  "task": "B_nominal",
+  "result_passed": true,
+  "action_labels": [
+    "rec_approach",
+    "rec_pick",
+    "rec_lift",
+    "rec_spread",
+    "rec_release",
+    "fold_approach",
+    "fold_close",
+    "fold_arc45",
+    "fold_arc90",
+    "fold_arc135",
+    "fold_place",
+    "release_retreat"
+  ],
+  "checks": {
+    "obs_count": 12,
+    "action_count": 12,
+    "count_match": true,
+    "call_ids_1_to_n": true,
+    "vertices_shape_ok": true,
+    "ee_shape_ok": true,
+    "joints_len": [
+      9
+    ],
+    "steps_monotonic": true,
+    "time_monotonic": true,
+    "unknown_phase_labels": [],
+    "target_max_abs_diff": 1.4425970307208047e-08,
+    "command_max_abs_diff": 0,
+    "pairing_ok": true
+  },
+  "single_step": {
+    "count": 12,
+    "obs_vertices": [
+      12,
+      441,
+      3
+    ],
+    "obs_ee": [
+      12,
+      3
+    ],
+    "obs_joints": [
+      12,
+      9
+    ],
+    "action": [
+      12,
+      5
+    ],
+    "phase": [
+      12
+    ]
+  },
+  "h4": {
+    "chunk_size": 4,
+    "full_chunks": 3,
+    "tail_actions": 0,
+    "input_policy": "observation at chunk start only; later obs in h4_audit.npz (audit only)",
+    "full_shape": [
+      3,
+      4,
+      5
+    ],
+    "tail_padded": false,
+    "no_cross_episode": true
+  },
+  "phase_counts": {
+    "APPROACH": 1,
+    "GRASP": 1,
+    "LIFT": 1,
+    "PLACE": 1,
+    "RECOVERY": 5,
+    "RELEASE": 1,
+    "TRANSFER": 2
+  }
+}

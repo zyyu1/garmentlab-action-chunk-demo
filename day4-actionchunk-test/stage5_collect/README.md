@@ -32,12 +32,19 @@ python collect_demos.py --run
 - 按 seed 切分（70/15/15，按档内 accepted seed 顺序），切分在写出 demonstration 时记录。
 - 不重跑已有尝试（按 seed 去重）。
 
-## 启动前的待确认（见字段核对 §4）
+## 当前状态（2026-11-06）
 
-1. 是否启用**被动逐帧观测 overlay**（当前 episode 产物只有动作边界快照 + 释放后 331 帧，BC 需要每步观测）。
-2. 演示 seed 池：现有 20/档 < 目标 50/档；是否新增演示 seed（不进入 Stage 4 验收统计）。
-3. RGB-D：仅 mp4 抽帧 / 加低分辨率帧 / 不要。
-4. phase 映射表（action label → TaskPhase）。
-5. 单卡串行（建议）。
+- 试跑：4100（L1）、4202（L2）、4302（L3）均 accepted；4201 用于 EE 姿态字段验证（rejected，仅字段）。
+- 观测：动作前只读快照，已补 `ee_quat_wxyz (4)`；字段命名 `ee_position` / `ee_quat_wxyz`；动作 yaw 不代替观测朝向。
+- H=4：只用块起始观测；L1 尾部补位 `[1,1,1,0]`；L2/L3 无尾部；禁止跨 episode。
+- 切分：按 seed 稳定哈希（70/15/15），single/H4 共用。
+- 正式 seed 池：6100–6219 / 6300–6419 / 6500–6619（120/档，target 50，cap 120）。
+- **独立 demo 注册层已实现、预检通过**（2026-11-06）：360 条 demo plan、demo 初态生成入口、`split=demo` 授权、独立部署 manifest；预检 `blocked=false`、每档 120/50/120。正式采集**未启动**。详见 [demo 层登记](STAGE5_DEMO_LAYER_20261106.md) 与 [正式池登记](STAGE5_FORMAL_POOL_REGISTRATION.md)。
 
-确认后再执行 `--run`；本轮不启动。
+## 启动前的待确认
+
+1. Stage 5 demo 注册层（demo seed 注册 + demo 初态生成 + `split=demo` 授权）是否批准。
+2. RGB-D：仅 mp4 抽帧 / 加低分辨率帧 / 不要。
+3. 并发：单卡串行（建议）。
+
+确认后再执行 `--run`；本轮未启动正式采集。

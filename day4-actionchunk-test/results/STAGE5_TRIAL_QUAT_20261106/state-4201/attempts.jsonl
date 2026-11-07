@@ -1,0 +1,2 @@
+{"initial": "/root/autodl-tmp/day4-square-initial-stripfold-20261105-014825-318974", "level": "perturbed", "seed": 4201, "state": "started", "utc": "2026-11-06T17:07:52.469839+00:00"}
+{"entry_exit": 1, "initial": "/root/autodl-tmp/day4-square-initial-stripfold-20261105-014825-318974", "level": "perturbed", "manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a", "result_dir": "/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261107-010753-512313", "seed": 4201, "state": "rejected", "utc": "2026-11-06T17:21:02.598463+00:00"}

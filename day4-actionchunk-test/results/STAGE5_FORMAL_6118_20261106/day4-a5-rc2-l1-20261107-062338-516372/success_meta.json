@@ -1,0 +1,32 @@
+{
+  "protocol": "stage4-a5-rc2",
+  "task": "A_l1_overfold",
+  "seed": 6118,
+  "level": "flat",
+  "edge": "left",
+  "execution_mode": "single",
+  "width_m": 0.2,
+  "overhang_m": 0.02,
+  "floor_z_m": 0.0,
+  "action_count": 7,
+  "recovery_count": 0,
+  "held_check": {
+    "position_error_m": 0.00027564186055225605,
+    "arm_speed_rad_s": 0.0008374254102818668,
+    "anchor_gap_max_m": 0.0019837287245367662,
+    "orientation_reached": true,
+    "accepted": true
+  },
+  "errors": [],
+  "initial_hashes": {
+    "result.json": "dc09c538d971bb7beae99c8febc3283c6636d81ec59ebf009fff7b410cb646d5",
+    "initial_geometry.npz": "297b2173618fc5c25515527161dea1b3aa2143ef16280dd60056264e5ad73fa8"
+  },
+  "manifest_sha256": "40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a",
+  "absolute_step": 1442,
+  "sim_time_s": 24.033334586769342,
+  "dt_s": 0.016666666666666666,
+  "pick_index": 210,
+  "yaw_rad": 0.05865728584548358,
+  "upward_displacement_m": 0.14808861483145871
+}

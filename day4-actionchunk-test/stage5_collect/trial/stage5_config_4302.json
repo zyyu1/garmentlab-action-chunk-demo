@@ -1,0 +1,18 @@
+{
+  "app": "/root/autodl-tmp/stage5-trial/app",
+  "candidate": "/root/autodl-tmp/a5-rc8b-recovery-hold120-rc7-r2",
+  "python": "/root/autodl-tmp/envs/isaac40/bin/python",
+  "state": "/root/autodl-tmp/stage5-trial/state-4302",
+  "journal": "/root/autodl-tmp/stage5-trial/state-4302/episodes",
+  "split": "dev",
+  "initials": {
+    "4302": "/root/autodl-tmp/day4-square-initial-stripfold-20261105-020706-026048"
+  },
+  "target_per_level": 1,
+  "max_attempts_per_level": 1,
+  "seeds": {
+    "flat": [],
+    "perturbed": [],
+    "crumpled": [4302]
+  }
+}
