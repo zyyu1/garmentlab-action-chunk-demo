@@ -286,7 +286,7 @@ class Collector:
     def run(self, plan_only):
         info = self.preflight()
         seeds = self.cfg['seeds']
-        target = int(self.cfg['target_per_level'])
+        default_target = int(self.cfg['target_per_level'])
         cap = int(self.cfg['max_attempts_per_level'])
         if plan_only:
             print(json.dumps({'mode': 'plan_only', **info,
@@ -300,6 +300,7 @@ class Collector:
             accepted = [r['seed'] for r in done
                         if r.get('state') == 'accepted' and self._verify_export(r)[0]]
             attempts = sum(1 for s in seeds[level] if _episode_started(s, done))
+            target = int((self.cfg.get('targets') or {}).get(level, default_target))
             for seed in seeds[level]:
                 if len(accepted) >= target or attempts >= cap:
                     break
@@ -362,6 +363,7 @@ class Collector:
             self.summary.write_text(json.dumps({
                 'level': level, 'attempts': attempts, 'accepted': len(accepted),
                 'stop': 'target' if len(accepted) >= target else ('cap' if attempts >= cap else 'seeds_exhausted'),
+                'target': target,
                 'rule': 'one process per episode; accepted only; keep all attempts',
             }, indent=2) + '\n', encoding='utf-8')
         print('STAGE5_COLLECT_DONE')

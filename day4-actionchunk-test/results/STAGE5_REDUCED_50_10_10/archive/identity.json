@@ -1,0 +1,16 @@
+{
+  "episodes": 70,
+  "by_level": {
+    "flat": 50,
+    "perturbed": 10,
+    "crumpled": 10
+  },
+  "by_split": {
+    "train": 45,
+    "val": 12,
+    "test": 13
+  },
+  "dataset_sha256": "b756bc8d4bbbe5a4aa1c010e0b152ab347312b9c348bfe9910521a1a793650cb",
+  "attempts_sha256": "6e45e5b4d3cd04587a1ab0452c53a4a5553efd3e391e8c32cf5f683153f38ca6",
+  "demonstrations_sha256": "59e66fbb1a57beeb3e547731ceaf71a8f177207f225400038721999b7585d4cd"
+}

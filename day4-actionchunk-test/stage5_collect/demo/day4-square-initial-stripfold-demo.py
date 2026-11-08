@@ -30,6 +30,10 @@ from square_pose_backend import SquarePoseBackend
 from square_pose_contract import grasp_to_ee, orientation_euler
 from square_start import start_with_square
 
+APP = Path(os.environ.get('STAGE5_APP', '/root/autodl-tmp/stage5-trial/app'))
+if not (APP / 'a5_l1.py').is_file():
+    raise SystemExit('STAGE5_APP_INVALID ' + str(APP))
+
 EDGE_AXIS = {'left': (0, 1.), 'bottom': (1, 1.), 'right': (0, -1.), 'top': (1, -1.)}
 
 

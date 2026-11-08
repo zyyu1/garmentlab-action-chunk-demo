@@ -1,0 +1,22 @@
+{
+  "label": "Stage 5 \u7f29\u51cf\u7248 50/10/10",
+  "input_dim": 1340,
+  "backbone": "MLP 512 -> 512 (GELU + LayerNorm)",
+  "heads": {
+    "single": "cont (4) + gripper logits (3)",
+    "h4": "cont (4,4) + gripper logits (4,3), padding excluded"
+  },
+  "loss": "normalized MSE (dims 0-3) + CE (3 classes)",
+  "optimizer": "AdamW lr=1e-3 wd=1e-4",
+  "batch": 128,
+  "max_epochs": 100,
+  "early_stop": 15,
+  "seed": 0,
+  "selection": "best val total loss",
+  "splits": "episode-level from export files",
+  "h4": {
+    "chunk": 4,
+    "mask": "tail [1,...,0], padding excluded",
+    "no_cross_episode": true
+  }
+}

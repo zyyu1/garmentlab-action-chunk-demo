@@ -573,3 +573,11 @@ right 开发覆盖扩展 `b-right-dev-v2` 已登记并完成 A1 预检（48/48�
 `a5-rc2-pfs1` 4202 single 一次：`passed=True`、质量 accepted，正式窗口质心 0.2642 mm、P95 0.3792 mm（RC2 2.0429/4.4141 mm）。但速度读回与位置差分不一致、无运行时材料读回；只作为候选改善证据，**不扩展 4302、不计入正式 Stage 4 成功**，正式成功仍为 0。见 [pfs1 对照](day4-actionchunk-test/results/D2_E_PFS1_COMPARE_20261104/review.md)。
 
 `a5-rc2-pfs1-observation-v2` 随后完成观测-only 修订并单次复验 4202：`file_complete=true`、`observation_semantics_valid=true`、质量 accepted、`overall_valid=true`；动作/状态/formal 与 pfs1 0 差。仍只作为观测修订通过，**不计入正式 Stage 4 成功**；尚未运行 4302。见 [v2 对照](day4-actionchunk-test/results/D2_E_PFS1_V2_COMPARE_20261104/review.md)。
+## 2026-11-08 Stage 5 缩减版 50/10/10 完成（仅离线训练，无闭环 rollout）
+
+- 有效演示：flat 50 / perturbed 10 / crumpled 10 = **70**；attempts **117 started = 79 accepted + 29 incomplete + 7 rejected + 2 interrupted**（6117、6131）。
+- 9 条 accepted 缺观测不收录；6101、6300 初态错误另列；原始账本未改写。
+- single-step **590**、H4 **160** 块（test 120 位置：111 有效 + 9 padding）；数据集 sha256 `b756bc8d…`。
+- 离线 BC 训练完成（MLP 512→512，固定超参，未扫参）：single test xyz 0.0301 m / yaw 0.0247 rad / 夹爪 0.964；H4 有效动作加权 0.0078 m / 0.0093 rad / 0.982。
+- **闭环 rollout 未执行；L2/L3 为探索性结果；perturbed val=0 限制保留。**
+- 报告：[Stage 5 缩减版结果](day4-actionchunk-test/results/STAGE5_REDUCED_50_10_10/README.md)。

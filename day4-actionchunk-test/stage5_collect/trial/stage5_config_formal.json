@@ -378,5 +378,10 @@
       6618,
       6619
     ]
+  },
+  "targets": {
+    "flat": 50,
+    "perturbed": 10,
+    "crumpled": 10
   }
 }

@@ -1,0 +1,31 @@
+{
+  "coverage": {
+    "single_test_rows": 111,
+    "h4_test_chunks": 30,
+    "h4_positions": 120,
+    "h4_valid_positions": 111,
+    "h4_padding_positions": 9,
+    "same_actions": true,
+    "single_only": [],
+    "h4_only": []
+  },
+  "xyz_mae_definition": "per-coordinate mean |dx|,|dy|,|dz|; Euclidean MAE reported separately",
+  "yaw_definition": "wrapped periodic absolute difference",
+  "gripper": "accuracy, padding excluded for H4",
+  "single_xyz_mae_m": 0.030099607970413434,
+  "single_xyz_euclid_mae_m": 0.06602541959111886,
+  "single_yaw_mae_rad": 0.0247035058457109,
+  "single_grip_acc": 0.963963963963964,
+  "single_valid_positions": 111,
+  "h4_weighted_xyz_mae_m": 0.00777181712432396,
+  "h4_weighted_xyz_euclid_mae_m": 0.015903420089421298,
+  "h4_weighted_yaw_mae_rad": 0.009326880582156714,
+  "h4_weighted_grip_acc": 0.9819819819819819,
+  "h4_weighted_valid_positions": 111,
+  "h4_chunkavg": {
+    "xyz_mae_m": 0.007292189297130154,
+    "yaw_mae_rad": 0.008736365063758618,
+    "grip_acc": 0.9833333333333333,
+    "chunks": 30
+  }
+}
