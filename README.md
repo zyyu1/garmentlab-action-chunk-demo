@@ -1,6 +1,36 @@
 # Garment Folding with Action Chunking
 
-研究 single-step behavior cloning 与 H=4 action-chunk BC 在三档衣物初态下的折叠成功率、恢复能力和推理开销。当前工作集中在 GarmentLab / Isaac Sim 中建立可靠的 expert 和动作接口，尚未进入策略训练或正式对比实验。
+研究 single-step behavior cloning 与 H=4 action-chunk BC 在三档衣物初态下的折叠成功率、恢复能力和推理开销。Stage 4/5 已完成；Stage 6 最低开发验收完成；Stage 7 H4 离线数据与训练完成。
+
+## 当前状态（2026-11-08）：Stage 6 最低开发验收完成；Stage 7 H4 离线完成
+
+**Stage 6 最低开发验收完成**（开发评估执行完成；不是 Stage 6 成功验收通过）。
+固定 budget500 `best_val`（`ade60131…`）与 holdingfix stats（`cbc4d711…`）：
+
+| 档 | learned | random |
+|---|---:|---:|
+| L1 flat | 2/5 | 0/5 |
+| L2 perturbed | 0/5 | 未运行 |
+| L3 crumpled | 0/5 | 未运行 |
+| 合计 | 2/15 | 0/5 |
+
+- L1 成功 6122、6151；6120 prepared-region、6121 waypoint timeout、6148 geometry rejected。
+- L2/L3 均 0/5，无完整 331 帧；几何/稳定性指标不可用。
+- 这是固定初态的开发评估，缩减数据、小样本；不宣称统计显著或 Stage 6 自动通过。
+- L2 4210–4214、L3 4310–4312 曾用于 Stage 4，未用于 Stage 5 模型训练，不称全新 held-out；
+  L3 6504/6507 是已有 final val；test `6300,6301,6516,6517` 保留。
+- 专家 recovery 后 `_settle(240)` + 120-step hold 与 runner 仅 initial `_settle(30)` 的差异保留；
+  L2/L3 失败不单独归因数据量。
+
+Stage 7 离线：修正版 H4 `dataset_h4.npz` `e1736499…`，160 chunks / 590 valid / 50 padding，
+小样本拟合通过；全量 H4 500 epochs best_val epoch 389（val total `0.004146`，
+`ff8c6945…`），未启动 H4 rollout。旧 H4 数据/checkpoint 与 single checkpoint 保留。
+
+归档：[Stage 6 README](day4-actionchunk-test/stage6/README.md) ·
+[Stage 6 tracker](day4-actionchunk-test/stage6/STAGE6_TRACKER.md) ·
+[L1/L2/L3 结果](day4-actionchunk-test/stage6/STAGE6_L2L3_DEV_RESULT.md) ·
+[Stage 7 H4 离线](day4-actionchunk-test/stage6/STAGE7_H4_OFFLINE.md) ·
+[交接日报](day4-actionchunk-test/stage6/STAGE6_HANDOFF.md)。
 
 ## 当前状态（2026-11-06）：Stage 4 完成；Stage 5 采集入口准备中
 

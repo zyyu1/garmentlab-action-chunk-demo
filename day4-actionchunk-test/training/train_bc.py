@@ -11,6 +11,7 @@ only, no H4 duplication, padding excluded). Gripper = cross-entropy over the
 three command classes (labels not normalized).
 """
 import argparse
+import hashlib
 import json
 from pathlib import Path
 
@@ -83,6 +84,12 @@ def main():
 
     df = 'dataset_single.npz' if a.mode == 'single' else 'dataset_h4.npz'
     stats = json.loads((a.dataset / 'stats.json').read_text())
+    if stats.get('holding_normalization') == 'identity':
+        holding_index = int(stats.get('holding_index', 1339))
+        if (holding_index != 1339
+                or abs(float(stats['obs_mean'][holding_index])) > 1e-12
+                or abs(float(stats['obs_std'][holding_index]) - 1.0) > 1e-12):
+            raise SystemExit('identity holding normalization stats are invalid')
     z = np.load(a.dataset / df, allow_pickle=True)
     X = obs_matrix(z)
     assert X.shape[1] == stats['obs_dim'] == 1340, (X.shape, stats['obs_dim'])
@@ -154,7 +161,12 @@ def main():
     model.eval()
     res = {'mode': a.mode, 'best_val': best, 'epochs_run': len(curves), 'device': dev,
            'splits': {'train': int(len(tr)), 'val': int(len(va)), 'test': int(len(te))},
-           'gripper_classes': stats['gripper_classes']}
+           'gripper_classes': stats['gripper_classes'],
+           'holding_normalization': stats.get('holding_normalization', 'legacy'),
+           'holding_index': stats.get('holding_index'),
+           'dataset': str(a.dataset),
+           'stats_sha256': hashlib.sha256(
+               (a.dataset / 'stats.json').read_bytes()).hexdigest()}
     with torch.no_grad():
         cstd = torch.tensor(stats['cont_std'], device=dev)
         cmean = torch.tensor(stats['cont_mean'], device=dev)

@@ -36,7 +36,11 @@ def holding_for(obs_dir, n):
         d = json.loads(p.read_text())
         if int(d.get('call_id', -1)) != i:
             raise SystemExit('call_id mismatch in %s' % p)
-        vals.append(float(bool(d['holding'])))
+        if 'holding' not in d:
+            raise SystemExit('missing holding field in %s' % p)
+        if not isinstance(d['holding'], bool):
+            raise SystemExit('non-boolean holding field in %s' % p)
+        vals.append(float(d['holding']))
     return np.asarray(vals, dtype=np.float32)
 
 

@@ -1,0 +1,157 @@
+{
+  "version": "holdingfix-20261108",
+  "status": "offline_data_recovery_and_single_retrain_complete",
+  "original_preserved": {
+    "dataset": "/root/autodl-tmp/stage5-trial/training/final/dataset_single.npz",
+    "dataset_sha256": "ae263a6a400a2300951c80473782cb6962c18d3526cd777f801f8272c210cdf6",
+    "stats": "/root/autodl-tmp/stage5-trial/training/final/stats.json",
+    "stats_sha256": "8f1788d11803be7e22729758cf071f68d49ec5bae80aa387a3327112fcae746a",
+    "checkpoint": "/root/autodl-tmp/stage5-trial/training/runs/single/best.pt",
+    "checkpoint_sha256": "5bff9e671c54b5240b93fefb5c67507987553153bad4b5ca0a5bb92d20e48ad6",
+    "overwritten": false
+  },
+  "episodes": {
+    "path": "/root/autodl-tmp/stage5-trial/final/episodes.jsonl",
+    "sha256": "33eb52dfd52292e558eeef516ea218053c6e4a2702b66a9cde27c6dcbcce9a00",
+    "count": 70
+  },
+  "holding_recovery": {
+    "path": "/root/autodl-tmp/stage5-trial/holdingfix-20261108/recovery/holding_recovery.jsonl",
+    "sha256": "e976fcb9714a22d9d8a1f3cc6edd03d1ae28f6d667508fe82a40f89ac3f5e374",
+    "summary": "/root/autodl-tmp/stage5-trial/holdingfix-20261108/recovery/holding_recovery_summary.json",
+    "validation": "/root/autodl-tmp/stage5-trial/holdingfix-20261108/recovery/holding_validation.json",
+    "episodes_ok": 70,
+    "actions_ok": 590,
+    "actions_missing": 0,
+    "actions_ambiguous": 0,
+    "primary_source_state": 160,
+    "primary_source_action_end": 430,
+    "saved_json_holding_used": 0,
+    "holding_true_total": 410,
+    "holding_false_total": 180,
+    "command1_holding_true": 0,
+    "command2_holding_true": 320,
+    "previous_close_implies_next_true": 90,
+    "previous_close_count": 90
+  },
+  "new_dataset": {
+    "path": "/root/autodl-tmp/stage5-trial/holdingfix-20261108/data/dataset_single.npz",
+    "sha256": "1ed533e81c547b8d718950e08c3fb66cc50f0b36261cc77c91090f112d3f8c15",
+    "stats": "/root/autodl-tmp/stage5-trial/holdingfix-20261108/data/stats.json",
+    "stats_sha256": "cbc4d711b2341b7ab786ca345ccb490bb32de1ebf93fb1eacc59de22d61a9ae9",
+    "splits": {
+      "train": 385,
+      "val": 94,
+      "test": 111
+    },
+    "holding_normalization": "identity",
+    "holding_index": 1339,
+    "holding_mean": 0.0,
+    "holding_std": 1.0
+  },
+  "new_single_checkpoint": {
+    "path": "/root/autodl-tmp/stage5-trial/holdingfix-20261108/runs/single/best.pt",
+    "sha256": "ce7ee2aa716006d2e697e8d810248474dc365ad3771918bf4083da2b9796e938",
+    "metrics": "/root/autodl-tmp/stage5-trial/holdingfix-20261108/runs/single/metrics.json",
+    "curves": "/root/autodl-tmp/stage5-trial/holdingfix-20261108/runs/single/curves.json",
+    "best_val": 0.31198276579380035,
+    "epochs_run": 93,
+    "seed": 0,
+    "selection": "best validation total loss; test not used for selection"
+  },
+  "offline_metrics": {
+    "report": "STAGE6_HOLDINGFIX_REPORT.md",
+    "json": "/root/autodl-tmp/stage5-trial/holdingfix-20261108/report/offline_metrics.json",
+    "all_actions": {
+      "n": 590,
+      "xyz_coord_mae_m": 0.025639521377925335,
+      "xyz_euclidean_mae_m": 0.05831700609228866,
+      "yaw_mae_rad": 0.022047887820621774,
+      "gripper_accuracy": 0.9745762711864406,
+      "cont_mse_normalized": 0.1366746528876739,
+      "grip_ce": 0.11889832462345873
+    },
+    "close_by_split": {
+      "train": {
+        "n": 59,
+        "xyz_euclidean_mean_m": 0.08843875420127399,
+        "xyz_euclidean_median_m": 0.0730229460148134,
+        "xyz_euclidean_p95_m": 0.20950224125344186,
+        "xyz_coord_mae_m": 0.03664790473051877
+      },
+      "val": {
+        "n": 14,
+        "xyz_euclidean_mean_m": 0.12600705556847874,
+        "xyz_euclidean_median_m": 0.12347952844954355,
+        "xyz_euclidean_p95_m": 0.257072132206769,
+        "xyz_coord_mae_m": 0.049121909036489365
+      },
+      "test": {
+        "n": 17,
+        "xyz_euclidean_mean_m": 0.09826796298954964,
+        "xyz_euclidean_median_m": 0.06130425244412623,
+        "xyz_euclidean_p95_m": 0.25252697748038677,
+        "xyz_coord_mae_m": 0.04279025232080497
+      }
+    },
+    "input_consistency": {
+      "n": 590,
+      "raw_max_abs_diff": 2.975888202527699e-08,
+      "normalized_max_abs_diff": 5.377099334680224e-07,
+      "raw_allclose_1e6": true,
+      "normalized_allclose_1e6": true,
+      "holding_normalized_unique": [
+        0.0,
+        1.0
+      ]
+    },
+    "6120_action_002": {
+      "split": "val",
+      "prediction_xyz": [
+        -0.1513461898967313,
+        -0.4478187518019579,
+        0.02425203891405585
+      ],
+      "prediction_yaw": 0.11610264164025318,
+      "gripper": 1,
+      "expert_target": [
+        -0.19001977145671844,
+        -0.44883161783218384,
+        0.01330002024769783,
+        0.0859541967511177
+      ],
+      "xyz_l2_m": 0.040207194892710664,
+      "nearest_region": "left_210",
+      "nearest_distance_m": 0.04126320688800541,
+      "max_distance_m": 0.03,
+      "within_max_distance": false,
+      "note": "val debug record only; no rollout"
+    }
+  },
+  "future_collection_fix": {
+    "sitecustomize": {
+      "path": "/root/autodl-tmp/stage5-trial/collect/trial/sitecustomize.py",
+      "sha256": "52982998538c81fe4a802e9c9788dcd80c9ae4f0f552ce63c1570cac3a08a35f",
+      "change": "holding read from evidence.state(); missing/non-bool raises"
+    },
+    "app_sitecustomize": {
+      "path": "/root/autodl-tmp/stage5-trial/app/sitecustomize.py",
+      "sha256": "2aa9754c4ec4897feb3cadff486fd148e1703281cdae2e6e9ed26ebbab06a460",
+      "original_backup": "/root/autodl-tmp/stage5-trial/app/sitecustomize.py.original-20261108",
+      "original_backup_sha256": "b9af07536d7fc54f8e95a7edc6289e5b6a3ead0cd33070c8265539dcf74d4946"
+    },
+    "build_dataset": {
+      "path": "/root/autodl-tmp/stage5-trial/training/build_dataset.py",
+      "change": "holding_for requires present boolean holding; no silent false"
+    }
+  },
+  "scope": {
+    "simulation_started": false,
+    "6120_rerun": false,
+    "remaining_19_run": false,
+    "new_collection": false,
+    "hyperparameter_scan": false,
+    "h4_retrained": false,
+    "old_checkpoint_paired_with_new_stats": false
+  }
+}

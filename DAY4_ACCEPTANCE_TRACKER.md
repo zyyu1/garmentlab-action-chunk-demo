@@ -1,3 +1,26 @@
+# Stage 6 / Stage 7 状态（2026-11-08）
+
+**Stage 6 最低开发验收完成**（开发评估执行完成；不是 Stage 6 成功验收通过）。
+固定 budget500 best_val（`ade60131…`）+ holdingfix stats（`cbc4d711…`）：
+
+- L1 learned 2/5、random 0/5；L2 0/5；L3 0/5；learned 合计 2/15。
+- L1 成功 6122、6151；6120 prepared-region、6121 waypoint timeout、6148 geometry rejected。
+- L2/L3 无完整 331 帧，几何/稳定性指标不可用；失败不单独归因数据量。
+- L2 4210–4214、L3 4310–4312 曾用于 Stage 4，未用于 Stage 5 模型训练，不称全新 held-out；
+  L3 6504/6507 是已有 final val；test `6300,6301,6516,6517` 保留。
+- 专家 `_settle(240)` + 120-step hold 与 runner initial `_settle(30)` 的差异保留。
+- 开发评估、缩减数据、小样本；不作统计显著性声明，不宣称 Stage 6 自动通过。
+
+**Stage 7 离线 H4 完成**：修正版 `dataset_h4.npz` `e1736499…`，160 chunks / 590 valid /
+50 padding；小样本通过；全量 500 epochs best_val epoch 389（val total `0.004146`，
+`ff8c6945…`）；H4 rollout 未启动。旧 H4/single checkpoint 保留。
+
+归档：[Stage 6 README](day4-actionchunk-test/stage6/README.md) ·
+[Stage 6 tracker](day4-actionchunk-test/stage6/STAGE6_TRACKER.md) ·
+[Stage 6 L2/L3 结果](day4-actionchunk-test/stage6/STAGE6_L2L3_DEV_RESULT.md) ·
+[Stage 7 H4](day4-actionchunk-test/stage6/STAGE7_H4_OFFLINE.md) ·
+[交接日报](day4-actionchunk-test/stage6/STAGE6_HANDOFF.md)。
+
 # 当前验收状态（最新：2026-11-06 **最低验收批次通过：L1 5/5、L2 5/5、L3 5/5，共 15 个正式成功；接口隔离按代码审查结项；reset 兼容按修订（逐进程 episode）闭合；**Stage 4 完成**；前序 2026-11-05 **rc8b 初态协议补齐后七例 4/6 阳性：4100/4302 s/a accepted，4202 s/a 与 4201 rejected（stationary half ~30 mm，fold 后整体滑移）；配对 0 差、证据完整、verify-dev 失败于 4202；l2pose 位姿匹配单次 accepted 0.7396/1.5397 mm（中间行为，未重现失败）；l2pose/rc8b 两例重复逐位重现原行为（阶段/目标/trace 最大差 0.0）；这两个固定配置下结果可重复，但不能全面排除所有初始化/状态恢复问题；九点 z patch 仍 rejected 7.2532/11.4799（响应很小）；hold120 r1 accepted 0.2374/0.3484（runner 3 为 audit 打印异常，同结果复审计 0）；审计修复后 4202 r2 干净复验 accepted 0.2374/0.3484（entry/runner/audit 均 0，与 r1 逐阶段 0.0 差）；4302 扩展 accepted 0.2386/0.3468（均 0）；七例 rc7 完成：slot1 4100 single accepted 0.1435/0.2072（初次 audit 5，同结果修订审计 0）；修订版续跑 slots2–7，六阳性 accepted、4201 有效 rejected 7.2583/11.0030；配对 0.0、hold 120/121/2.0、本地复算 7/7、来源验证 exit 0；开发候选已冻结（来源继承），freeze/gate exit 0，回执 67c64a55/9042e88e/7d328159；正式批次未运行，正式成功仍为 0；正式批次离线预检完成：60初态/120槽、deployment 18/18、桩测试10/10、preflight exit 0、容量约2.9GB/35h**；前序：2026-11-05 **rc8 task-scoped 七例 RC 通过：6/6 阳性 accepted、4201 有效拒绝、配对 0 差、verify-dev 通过；冻结前检查发现正式 L2/L3 初态生成仍为 0.0（应为 1.0），freeze 暂停、未写回执，正式成功仍为 0**；2026-11-04 **rc7 七例 RC 完成，4/6 阳性通过（4202/4302 s/a accepted；4100 s/a 质量拒绝），4201 有效拒绝，三组配对 0 差，verify-dev 失败，未放行**；2026-11-04 **4302 single 扩展通过**（`overall_valid=true`、质量 accepted、质心 0.2390 mm / P95 0.3524 mm）；2026-11-04 pfs1-observation-v2 4202 single 观测修订复验通过（0.2642/0.3792 mm）；2026-11-04 D2-E 步骤4 持续滑移核查完成（仅离线），步骤5 决定 particleFrictionScale 0→1.0 敏感性对照（已创建并单次运行）；D2-E 步骤2 支撑/摩擦配置核查完成（仅离线）；D2-D 释放顺序对照完成（4202 single 单次；质量仍 rejected）；D2-C 版本已登记并运行一次；D2-A/B 场景与接触核查完成；2026-11-03 D0 4202/4302 基线复现 + A5 RC2 漂移诊断第 1–3 项；2026-11-02 折形口径定稿 + 任务定义冻结 + 表示层配对 + 分任务报告 + A1 预检）
 
 ## 2026-11-06 最低验收批次通过（15 成功）；接口隔离结项；reset 兼容待闭合

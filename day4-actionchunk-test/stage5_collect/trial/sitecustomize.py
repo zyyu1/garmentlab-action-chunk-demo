@@ -89,6 +89,12 @@ if os.environ.get('STAGE5_OBS_DIR'):
     def _snap(evidence, row):
         import numpy as np
         b = evidence.b
+        # Same-moment real holding/attachment state.  Missing holding is an
+        # explicit error; never silently write false.
+        state = evidence.state()
+        if 'holding' not in state or not isinstance(state['holding'], bool):
+            raise RuntimeError('Stage5 snapshot missing boolean holding state')
+        holding = bool(state['holding'])
         # namespace per episode by the result directory name: evidence.out is
         # <result_dir>/evidence, so its parent is unique per episode.
         ep_dir = OBS / Path(str(getattr(evidence, 'out', 'unknown'))).parent.name
@@ -105,9 +111,15 @@ if os.environ.get('STAGE5_OBS_DIR'):
         np.savez_compressed(ep_dir / ('action_%03d_obs.npz' % cid),
                             vertices=vertices, ee=ee, quat=quat, joints=joints)
         meta = {'call_id': cid,
-                'backend_step': int(row.get('backend_step') or -1),
+                'backend_step': int(state.get('backend_step',
+                                              row.get('backend_step') or -1)),
                 'sim_time_s': float(row.get('sim_time_s') or 0.0),
-                'holding': bool(row.get('holding')),
+                'holding': holding,
+                'attached': bool(state.get('attached')),
+                'enabled_slots': state.get('enabled_slots'),
+                'logical_attached': bool(state.get('logical_attached')),
+                'command_holding': bool(state.get('command_holding')),
+                'state_source': 'evidence.state() immediately before action',
                 'targets': row.get('targets'),
                 'commands': row.get('commands'),
                 'horizon': row.get('horizon'),
