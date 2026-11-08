@@ -1,4 +1,4 @@
-# Stage 6 / Stage 7 状态（2026-11-08）
+# Stage 6 / Stage 7 / Stage 8 状态（2026-11-08）
 
 **Stage 6 最低开发验收完成**（开发评估执行完成；不是 Stage 6 成功验收通过）。
 固定 budget500 best_val（`ade60131…`）+ holdingfix stats（`cbc4d711…`）：
@@ -11,11 +11,14 @@
 - 专家 `_settle(240)` + 120-step hold 与 runner initial `_settle(30)` 的差异保留。
 - 开发评估、缩减数据、小样本；不作统计显著性声明，不宣称 Stage 6 自动通过。
 
-**Stage 7 离线 H4 完成**：修正版 `dataset_h4.npz` `e1736499…`，160 chunks / 590 valid /
-50 padding；小样本通过；全量 500 epochs best_val epoch 389（val total `0.004146`，
-`ff8c6945…`）；H4 rollout 未启动。旧 H4/single checkpoint 保留。
+**Stage 7 最低开发验收完成**：H4 6120 单例 accepted（7 actions、2 policy calls、331 帧）；
+单个开发例，不证明泛化/统计/稳定延迟。Stage 8 仅完成离线清单，未启动：
+保留 2×3×20=120，没有批准的缩减；候选初态 50/60，perturbed 少 10 个合规初态。
+Stage 5 的 50/10/10 不自动适用于 Stage 8。
 
-归档：[Stage 6 README](day4-actionchunk-test/stage6/README.md) ·
+归档：[Stage 7](day4-actionchunk-test/stage7/README.md) ·
+[Stage 8 计划](day4-actionchunk-test/stage8/STAGE8_OFFLINE_EXECUTION_PLAN.md) ·
+[Stage 6 README](day4-actionchunk-test/stage6/README.md) ·
 [Stage 6 tracker](day4-actionchunk-test/stage6/STAGE6_TRACKER.md) ·
 [Stage 6 L2/L3 结果](day4-actionchunk-test/stage6/STAGE6_L2L3_DEV_RESULT.md) ·
 [Stage 7 H4](day4-actionchunk-test/stage6/STAGE7_H4_OFFLINE.md) ·

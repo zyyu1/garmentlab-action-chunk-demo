@@ -34,7 +34,11 @@ L1 成功为 6122、6151；其余失败分类见 L1/L2/L3 报告。L2/L3 无完�
 | 全量 H4 500 epochs | 完成 | best val epoch 389，val total `0.004146` |
 | best_val 重载 | 通过 | `ff8c6945…`，shape `[26,4,4]`，finite |
 | 旧 H4 / single | 保留 | old H4 `75e6831c…`，single `ce7ee2aa…` |
-| H4 rollout | 未启动 | 等后续授权 |
+| H4 rollout | **L1 6120 dev accepted；未扩批** | [H4 L1 结果](STAGE7_H4_L1DEV_RESULT.md) |
+
+**Stage 8**：仅完成离线执行清单，未启动。原计划 2×3×20=120 保留；候选初态
+50/60，perturbed 少 10 个合规初态；Stage 5 的 50/10/10 不自动适用。见
+[Stage 8 计划](../stage8/STAGE8_OFFLINE_EXECUTION_PLAN.md)。
 
 ## 归档限制
 

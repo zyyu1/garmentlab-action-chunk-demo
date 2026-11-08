@@ -12,8 +12,13 @@ L2/L3 缩减数据属探索性结果，不是独立 test。4210–4214、4310–
 [STAGE6_L2L3_DEV_RESULT.md](STAGE6_L2L3_DEV_RESULT.md)。
 
 Stage 7 离线 H4 已完成：160/590/50 数据核对、10 条小样本拟合通过、500 epochs
-best_val epoch 389（val total `0.004146`，`ff8c6945…`）；H4 rollout 未启动。
-详见 [STAGE7_H4_OFFLINE.md](STAGE7_H4_OFFLINE.md)。
+best_val epoch 389（val total `0.004146`，`ff8c6945…`）；随后 L1 6120 H4 dev
+一次 accepted（7 actions、331 帧），**Stage 7 最低开发验收完成**。未扩批 rollout。
+Stage 8 仅准备离线执行清单，未启动；保留 2×3×20=120，候选初态 50/60，
+perturbed 少 10 个合规初态，待补齐/批准。
+详见 [STAGE7_H4_OFFLINE.md](STAGE7_H4_OFFLINE.md)、
+[STAGE7_H4_L1DEV_RESULT.md](STAGE7_H4_L1DEV_RESULT.md)、
+[Stage 8 计划](../stage8/STAGE8_OFFLINE_EXECUTION_PLAN.md)。
 
 ## 1. 当前文件
 
@@ -241,8 +246,12 @@ check_stage6_offline.py check_6120_real.py` → `REMOTE_PY_COMPILE_OK`。
 - 小样本 20 chunks/70 valid/10 padding：final total `4.07e-5`、XYZ mean
   `0.000214 m`、grip 1.0。
 - 全量 H4 500 epochs，best_val epoch 389，val total `0.004146`，`ff8c6945…`；
-  reload shape `[26,4,4]`、finite；test 未评估；H4 rollout 未启动。
-- 报告：[STAGE7_H4_OFFLINE.md](STAGE7_H4_OFFLINE.md)。
+  reload shape `[26,4,4]`、finite；test 未评估。
+- H4 L1 6120 dev：一次 accepted，7 actions/2 policy calls/331 帧；第二块第 4 个
+  CLOSE 因 terminal 停止 discarded；raw inference 6.776/3.497 ms（样本少，不作稳定结论）。
+  未启动扩批 rollout。
+- 报告：[STAGE7_H4_OFFLINE.md](STAGE7_H4_OFFLINE.md)、
+  [STAGE7_H4_L1DEV_RESULT.md](STAGE7_H4_L1DEV_RESULT.md)。
 
 ## 9. 尚存缺口 / 下一轮
 
@@ -257,9 +266,11 @@ check_stage6_offline.py check_6120_real.py` → `REMOTE_PY_COMPILE_OK`。
    不要与 L1 成功数混判；settle/hold 差异仍是具体剩余项。
 5. `a5_entry.assess` 仍不使用；`bc-verdict.json` 是 Stage 6 权威判定。
 6. 数据盘：50G 总，剩余 12G；单例 1.9M，20 例约 1G，当前不需要扩容。
-7. **Stage 7 H4 离线已完成，rollout 未启动**：新 H4 `e1736499…`、
-   best_val `ff8c6945…`；后续 H4 必须沿用 single Backend、预算和终端规则，
-   再比较 action chunk 影响。
+7. **Stage 7 H4**：离线已完成，L1 6120 dev 一次 accepted；未启动扩批 rollout。
+   新 H4 `e1736499…`、best_val `ff8c6945…`；后续 H4 必须沿用 single Backend、
+   预算和终端规则，再比较 action chunk 影响。
 
-**下一步**：Stage 6 最低开发验收归档完成，Stage 7 只完成离线；不自动启动 H4 rollout。
-若后续需要闭环比较，应作为新的显式登记运行；当前不追加采集、不扫参、不重训。
+**下一步**：Stage 6 最低开发验收归档完成；Stage 7 最低开发验收完成；
+Stage 8 只完成离线清单，**未启动正式批次**。当前候选初态 50/60（perturbed 少 10），
+保留 2×3×20=120；没有批准的缩减方案。启动前需补齐初态、冻结 seed、
+完成批次/CSV/视频与同口径计时，再跑 2-seed dry run。

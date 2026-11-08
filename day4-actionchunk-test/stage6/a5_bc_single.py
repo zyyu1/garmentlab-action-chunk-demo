@@ -241,6 +241,7 @@ def load_runtime(args):
     from audit_episode_evidence import audit
     from bc_eval_adapter import physical_verdict, LEVEL_BUDGET
     from bc_policy import BCPolicy
+    from h4_policy import H4Policy
     from step_hook import StepHook
 
     return SimpleNamespace(
@@ -259,6 +260,7 @@ def load_runtime(args):
         physical_verdict=physical_verdict,
         LEVEL_BUDGET=LEVEL_BUDGET,
         BCPolicy=BCPolicy,
+        H4Policy=H4Policy,
         StepHook=StepHook,
         np=np,
     )
@@ -1674,17 +1676,18 @@ def _parse_args():
                         help='output directory prefix')
     parser.add_argument('--skip-identity-check', action='store_true',
                         help='allow a different checkpoint/stats byte identity')
-    parser.add_argument('--policy', choices=('bc', 'random'), default='bc',
-                        help='learned BC or ordered random baseline')
-    parser.add_argument('--random-base-seed', type=int, default=0,
-                        help='base seed for numpy.random.default_rng([base, seed])')
+    parser.add_argument('--policy', choices=('bc', 'h4'), default='bc',
+                        help='single-step BC or H=4 chunk policy')
+    parser.add_argument('--execute-k', type=int, choices=(1, 2, 4), default=4,
+                        help='H4 chunk actions executed before re-observing')
     return parser.parse_args()
 
 
 def _collect_code_files(rt):
     paths = [
         HERE / 'a5_bc_single.py',
-        HERE / 'random_policy.py',
+        HERE / 'h4_policy.py',
+        HERE / 'h4_runner.py',
         HERE / 'step_hook.py',
         HERE / 'bc_eval_adapter.py',
         rt.training / 'bc_policy.py',
@@ -1844,23 +1847,31 @@ def main():
         hook = rt.StepHook(backend).install()
         initial = _load_initial(rt, backend, init_dir, level, out)
         local_points = _load_local_points(out)
-        if args.policy == 'random':
-            from random_policy import RandomPolicy
-            policy = RandomPolicy(backend, int(case['seed']),
-                                  int(args.random_base_seed))
-            result['policy'].update(policy.identity())
-            result['policy']['checkpoint_used'] = False
-            result['policy']['checkpoint'] = str(checkpoint)
-            result['policy']['checkpoint_sha256'] = checkpoint_sha
-            result['policy']['stats'] = str(stats)
-            result['policy']['stats_sha256'] = stats_sha
+        if args.policy == 'h4':
+            from h4_runner import run_policy_h4
+            policy = rt.H4Policy(checkpoint, stats)
+            result['policy'].update({
+                'kind': 'h4_chunk',
+                'checkpoint_used': True,
+                'checkpoint': str(checkpoint),
+                'checkpoint_sha256': checkpoint_sha,
+                'stats': str(stats),
+                'stats_sha256': stats_sha,
+                'horizon': 4,
+                'execute_k': int(args.execute_k),
+                'device': 'cpu',
+                'epoch': int(policy.epoch),
+            })
+            obs_rows, budget = run_policy_h4(
+                rt, backend, out, result, evidence, case, level, args,
+                local_points, policy, initial, obs_rows=obs_rows)
         else:
             policy = rt.BCPolicy(Path(checkpoint).parent, Path(stats).parent)
             result['policy']['kind'] = 'learned_bc'
             result['policy']['checkpoint_used'] = True
-        obs_rows, budget = _run_policy(
-            rt, backend, out, result, evidence, case, level, args,
-            local_points, policy, initial, obs_rows=obs_rows)
+            obs_rows, budget = _run_policy(
+                rt, backend, out, result, evidence, case, level, args,
+                local_points, policy, initial, obs_rows=obs_rows)
     except BaseException as exc:
         result['errors'].append(repr(exc))
         traceback.print_exc()

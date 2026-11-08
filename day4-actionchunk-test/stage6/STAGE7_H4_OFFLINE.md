@@ -1,6 +1,8 @@
 # Stage 7 离线部分：修正版 H=4 数据与训练
 
-日期：2026-11-08。**只做离线数据重建、拟合检查和训练；未启动 Isaac、未追加采集、未修改 single checkpoint、未启动 H4 rollout。**
+日期：2026-11-08。**Stage 7 最低开发验收完成**；本报告覆盖离线数据重建、拟合检查和训练；未追加采集、未修改 single checkpoint。
+随后执行了一次 **H4 L1 seed 6120 开发试跑**（accepted，见
+[STAGE7_H4_L1DEV_RESULT.md](STAGE7_H4_L1DEV_RESULT.md)）；未扩批 rollout。
 
 ## 1. H4 数据身份
 
@@ -132,9 +134,16 @@
 - `stage6_h4fix_20261108/h4fix-20261108/`
 - [STAGE7_H4_OFFLINE.md](STAGE7_H4_OFFLINE.md)
 
-## 6. 边界
+## 6. H4 L1 开发试跑（后续）
 
-- 只做离线数据/训练；**未启动 H4 rollout**。
-- 未使用 test 选择模型；不宣称 H4 闭环成功。
+seed 6120、execute_k=4、L1 budget7，一次运行：**accepted**，7 actions、2 policy calls、
+331 帧完成；第二块预测的第 4 个 CLOSE 因 terminal 停止记为 discarded。
+raw inference 6.776/3.497 ms，不构成稳定性能结论。详见
+[STAGE7_H4_L1DEV_RESULT.md](STAGE7_H4_L1DEV_RESULT.md)。
+
+## 7. 边界
+
+- 离线数据/训练部分已完成；**仅执行一次 H4 L1 6120 开发试跑，未扩批 rollout**。
+- 未使用 test 选择模型；6120 单例 accepted 不能宣称 H4 泛化或闭环通过。
 - 旧 H4 数据/checkpoint、single checkpoint 均保留。
 - 后续 H4 rollout 必须沿用 single 的 Backend、预算和终端规则，再比较动作分块影响。
