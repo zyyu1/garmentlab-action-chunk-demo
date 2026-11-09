@@ -4,7 +4,7 @@
 
 **Demo:** [60-second simulation showcase](https://github.com/zyyu1/garmentlab-action-chunk-demo/releases/download/v9.1.3/stage9_showcase_english.mp4) · [Release page](https://github.com/zyyu1/garmentlab-action-chunk-demo/releases/tag/v9.1.3)
 
-720p · English-only captions · paired single-step BC / H4 simulation. Same 30 fps playback; not synchronized to simulation time or intended as a speed comparison.
+720p · paired single-step BC / H4 simulation. Same 30 fps playback; not synchronized to simulation time or intended as a speed comparison.
 
 ## English
 
