@@ -43,3 +43,5 @@ assets/*
 !assets/fig2_failure_types.png
 !assets/demo_preview.gif
 /figures_reproduced/
+
+!assets/architecture_en.png
