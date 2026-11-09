@@ -2,6 +2,10 @@
 
 [English](#english) | [中文](#中文)
 
+**Demo:** [60-second simulation showcase](https://github.com/zyyu1/garmentlab-action-chunk-demo/releases/download/v9.1.0/stage9_showcase.mp4) · [Release page](https://github.com/zyyu1/garmentlab-action-chunk-demo/releases/tag/v9.1.0)
+
+720p · bilingual English/Chinese subtitles · paired single-step BC / H4 simulation. Same 30 fps playback; not synchronized to simulation time or intended as a speed comparison.
+
 ## English
 
 A reproducible, reduced-scale study of square-cloth folding in GarmentLab / Isaac Sim: **single-step MLP behavior cloning versus H4 action chunking**. This release packages the Stage 9 report and Stage 10 offline wrap-up with portable figure reproduction.
@@ -82,9 +86,11 @@ garmentlab-action-chunk-demo/
     └── MIGRATION.md
 ```
 
-This is the showcase layout; existing source code and historical evidence remain in place. `summary.json` is included to make failure-type reproduction self-contained. The optional GIF is omitted. Source entry points: [backends](backends/), [schemas](schemas/) and [experiment code](day4-actionchunk-test/).
+This is the showcase layout; existing source code and historical evidence remain in place. `summary.json` is included to make failure-type reproduction self-contained. The full 60-second MP4 is hosted as a GitHub Release asset; the optional GIF is omitted. Source entry points: [backends](backends/), [schemas](schemas/) and [experiment code](day4-actionchunk-test/).
 
 ## 中文
+
+**演示视频：** [60 秒仿真展示](https://github.com/zyyu1/garmentlab-action-chunk-demo/releases/download/v9.1.0/stage9_showcase.mp4)（720p、中英双语字幕、single/H4 并排）。视频以相同 30 fps 播放，未按仿真时间同步，不用于比较执行速度。
 
 本项目在 GarmentLab / Isaac Sim 中，以方形布料折叠为任务，比较 **single-step MLP 行为克隆与 H4 动作分块**。v9.1.0 整理 Stage 9 报告、Stage 10 离线收尾材料，并提供可独立运行的图表复现入口。
 
@@ -143,4 +149,4 @@ python scripts/reproduce_figures.py
 
 ### 目录说明
 
-展示目录见上方完整目录树。保留既有源码及历史证据；额外收录 `results/summary.json`，使失败分类可独立复现。可选 GIF 本次未收录。源码入口：[Backend](backends/)、[schema](schemas/)、[实验代码](day4-actionchunk-test/)。
+展示目录见上方完整目录树。保留既有源码及历史证据；额外收录 `results/summary.json`，使失败分类可独立复现。完整 60 秒 MP4 托管于 GitHub Release；可选 GIF 本次未收录。源码入口：[Backend](backends/)、[schema](schemas/)、[实验代码](day4-actionchunk-test/)。
