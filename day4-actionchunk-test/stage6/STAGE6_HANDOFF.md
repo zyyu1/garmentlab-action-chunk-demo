@@ -272,7 +272,8 @@ check_stage6_offline.py check_6120_real.py` → `REMOTE_PY_COMPILE_OK`。
    新 H4 `e1736499…`、best_val `ff8c6945…`；后续 H4 必须沿用 single Backend、
    预算和终端规则，再比较 action chunk 影响。
 
-**下一步**：Stage 6/7 最低开发验收归档完成；Stage 8 已补齐 60/60 初态、
-冻结 120 例 manifest，并完成 4 例配对 dry run（接口检查通过）。
-正式 120 例**未启动**；没有批准的缩减方案。下一步只能按冻结命令执行，
-不自动扩批。
+**下一步**：Stage 6/7 最低开发验收归档完成；Stage 8 缩减版 30 例评估完成
+（single 0/15、H4 2/15），原 120 例计划保留、剩余 90 例未执行。
+本批已暂停并归档，见
+[STAGE8_REDUCED30_HANDOFF.md](../stage8/STAGE8_REDUCED30_HANDOFF.md)。
+不自动扩批、不重训、不追加采集。

@@ -1,7 +1,11 @@
-# Stage 8 正式实验（未启动）
+# Stage 8 实验（缩减版 30 例完成；原 120 例保留）
 
-状态：**60 个初态已冻结、120 例 manifest 已冻结、4 例配对 dry run 已完成；
-正式 120 例未启动。**
+状态：**Stage 8 缩减版 30 例评估完成；原 120 例计划保留，剩余 90 例未执行。**
+60 个初态和 120 例父 manifest 已冻结；4 例 dry run 完成。
+
+缩减版结果：single 0/15、H4 2/15（H4 成功 4111、4113）；L2/L3 均为 0/5。
+见 [缩减版交接日报](STAGE8_REDUCED30_HANDOFF.md) 与
+[缩减版 seed map](STAGE8_REDUCED30_SEED_MAP.md)。
 
 dry run：H4 6120/6121 各 accepted（7 actions、2 calls、331 帧）；
 single 6120/6121 各 execution_error（1 action，无 331）；接口检查通过。
@@ -25,11 +29,14 @@ single 6120/6121 各 execution_error（1 action，无 331）；接口检查通�
 
 文件：
 
+- [Stage 8 缩减版交接日报](STAGE8_REDUCED30_HANDOFF.md)
+- [缩减版 seed map](STAGE8_REDUCED30_SEED_MAP.md)
 - [Stage 8 离线执行清单](STAGE8_OFFLINE_EXECUTION_PLAN.md)
 - [配对 dry run 结果](STAGE8_DRYRUN_RESULT.md)
 - [Seed 审计](STAGE8_SEED_AUDIT.md)
 - [Seed 摘要](SEED_INVENTORY.json)
-- [冻结 manifest](../../../stage8_frozen/STAGE8_FROZEN_MANIFEST.json)
+- [冻结父 manifest](../../../stage8_frozen/STAGE8_FROZEN_MANIFEST.json)
+- [缩减 manifest](../../../stage8_frozen/STAGE8_REDUCED30_MANIFEST.json)
 - [Stage 7 归档](../stage7/README.md)
 
-**未启动正式批次**。
+**原 120 例保留，剩余 90 例未执行；本轮暂停。**

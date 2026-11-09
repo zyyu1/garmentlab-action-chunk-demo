@@ -36,11 +36,10 @@ L1 成功为 6122、6151；其余失败分类见 L1/L2/L3 报告。L2/L3 无完�
 | 旧 H4 / single | 保留 | old H4 `75e6831c…`，single `ce7ee2aa…` |
 | H4 rollout | **L1 6120 dev accepted；未扩批** | [H4 L1 结果](STAGE7_H4_L1DEV_RESULT.md) |
 
-**Stage 8**：60/60 初态已补齐并冻结 120 例 manifest；4 例配对 dry run 完成
-（H4 2/2 accepted、single 2/2 execution_error），正式 120 例未启动。
-Stage 5 的 50/10/10 不自动适用。见
-[Stage 8 计划](../stage8/STAGE8_OFFLINE_EXECUTION_PLAN.md)、
-[dry run 结果](../stage8/STAGE8_DRYRUN_RESULT.md)。
+**Stage 8**：缩减版 30 例评估完成（single 0/15、H4 2/15；H4 成功 4111、4113）；
+原 120 例计划保留，剩余 90 例未执行。Stage 5 的 50/10/10 不自动适用。见
+[缩减版交接](../stage8/STAGE8_REDUCED30_HANDOFF.md)、
+[缩减版 seed map](../stage8/STAGE8_REDUCED30_SEED_MAP.md)。
 
 ## 归档限制
 
