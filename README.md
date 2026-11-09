@@ -10,6 +10,8 @@
 
 A reproducible, reduced-scale study of square-cloth folding in GarmentLab / Isaac Sim: **single-step MLP behavior cloning versus H4 action chunking**. This release packages the Stage 9 report and Stage 10 offline wrap-up with portable figure reproduction.
 
+**Why this matters for the thesis:** The longer-term motivation is to understand how learned local manipulation policies could be integrated with task and motion planning for more complex robotic material-handling problems.
+
 **Status:** 30 evaluation episodes completed; the full 120-episode evaluation and clean-environment simulation reproduction remain unfinished. Version 9.1.0 organizes existing evidence; it adds no simulation runs or training results.
 
 ### Results
@@ -93,6 +95,8 @@ This is the showcase layout; existing source code and historical evidence remain
 **演示视频：** [60 秒仿真展示](https://github.com/zyyu1/garmentlab-action-chunk-demo/releases/download/v9.1.0/stage9_showcase.mp4)（720p、中英双语字幕、single/H4 并排）。视频以相同 30 fps 播放，未按仿真时间同步，不用于比较执行速度。
 
 本项目在 GarmentLab / Isaac Sim 中，以方形布料折叠为任务，比较 **single-step MLP 行为克隆与 H4 动作分块**。v9.1.0 整理 Stage 9 报告、Stage 10 离线收尾材料，并提供可独立运行的图表复现入口。
+
+**与学位论文研究的关联：** 长期研究动机是探索如何将学习得到的局部操作策略与任务与运动规划相结合，以应对更复杂的机器人物料搬运与处理问题。
 
 **状态：** 已完成缩减版 30 例评估；完整 120 例评估和干净环境仿真复现尚未完成。本版本整理已有证据，没有新增仿真或训练结果。
 
