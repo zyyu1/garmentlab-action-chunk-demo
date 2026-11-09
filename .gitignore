@@ -34,3 +34,12 @@ datasets/
 
 # OS
 .DS_Store
+
+# Versioned showcase images only
+!assets/
+assets/*
+!assets/architecture.png
+!assets/fig1_success_rate.png
+!assets/fig2_failure_types.png
+!assets/demo_preview.gif
+/figures_reproduced/

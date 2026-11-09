@@ -1,0 +1,56 @@
+{
+  "version": "9.1.0",
+  "source_csv": "raw_results.csv",
+  "source_summary": "summary.json",
+  "rows": 30,
+  "pairs": 15,
+  "single_success": 0,
+  "h4_success": 2,
+  "failures": 28,
+  "levels": {
+    "flat": {
+      "single": 0,
+      "h4": 2,
+      "n": 5
+    },
+    "perturbed": {
+      "single": 0,
+      "h4": 0,
+      "n": 5
+    },
+    "crumpled": {
+      "single": 0,
+      "h4": 0,
+      "n": 5
+    }
+  },
+  "failure_categories": {
+    "Grasp / region outside": {
+      "single": 3,
+      "h4": 1
+    },
+    "CLOSE outside prepared": {
+      "single": 7,
+      "h4": 2
+    },
+    "Waypoint non-convergence": {
+      "single": 1,
+      "h4": 5
+    },
+    "Release before CLOSE": {
+      "single": 1,
+      "h4": 0
+    },
+    "Complete rejected": {
+      "single": 1,
+      "h4": 0
+    },
+    "Incomplete / no 331": {
+      "single": 2,
+      "h4": 5
+    }
+  },
+  "matches_archived_summary": true,
+  "new_output_does_not_overwrite_archive": true,
+  "simulation_started": false
+}

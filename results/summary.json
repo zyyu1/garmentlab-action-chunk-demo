@@ -1,0 +1,1023 @@
+{
+  "levels": {
+    "flat": {
+      "single_success": 0,
+      "h4_success": 2,
+      "single_n": 5,
+      "h4_n": 5
+    },
+    "perturbed": {
+      "single_success": 0,
+      "h4_success": 0,
+      "single_n": 5,
+      "h4_n": 5
+    },
+    "crumpled": {
+      "single_success": 0,
+      "h4_success": 0,
+      "single_n": 5,
+      "h4_n": 5
+    }
+  },
+  "pairs": [
+    {
+      "level": "flat",
+      "seed": 4110,
+      "single": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 1,
+        "policy_calls": 2,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4110-single-20261109-104926-714119"
+      },
+      "h4": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 4,
+        "policy_calls": 2,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4110-h4-20261109-105514-551192"
+      }
+    },
+    {
+      "level": "flat",
+      "seed": 4111,
+      "single": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 1,
+        "policy_calls": 2,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4111-single-20261109-110303-196744"
+      },
+      "h4": {
+        "status": "accepted",
+        "success": "True",
+        "action_count": 7,
+        "policy_calls": 2,
+        "stop_reason": "terminal_release",
+        "geometry_available": true,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4111-h4-20261109-110741-570835"
+      }
+    },
+    {
+      "level": "flat",
+      "seed": 4112,
+      "single": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 1,
+        "policy_calls": 2,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4112-single-20261109-111816-076837"
+      },
+      "h4": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 4,
+        "policy_calls": 2,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4112-h4-20261109-112254-838752"
+      }
+    },
+    {
+      "level": "flat",
+      "seed": 4113,
+      "single": {
+        "status": "rejected",
+        "success": "False",
+        "action_count": 7,
+        "policy_calls": 7,
+        "stop_reason": "terminal_release",
+        "geometry_available": true,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4113-single-20261109-113050-136905"
+      },
+      "h4": {
+        "status": "accepted",
+        "success": "True",
+        "action_count": 7,
+        "policy_calls": 2,
+        "stop_reason": "terminal_release",
+        "geometry_available": true,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4113-h4-20261109-114054-711969"
+      }
+    },
+    {
+      "level": "flat",
+      "seed": 4114,
+      "single": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 2,
+        "policy_calls": 3,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4114-single-20261109-115044-861944"
+      },
+      "h4": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 2,
+        "policy_calls": 1,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4114-h4-20261109-115851-299094"
+      }
+    },
+    {
+      "level": "perturbed",
+      "seed": 4215,
+      "single": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 1,
+        "policy_calls": 2,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-perturbed-4215-single-20261109-120533-085732"
+      },
+      "h4": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 1,
+        "policy_calls": 1,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-perturbed-4215-h4-20261109-121045-847028"
+      }
+    },
+    {
+      "level": "perturbed",
+      "seed": 4216,
+      "single": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 6,
+        "policy_calls": 7,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-perturbed-4216-single-20261109-121603-812195"
+      },
+      "h4": {
+        "status": "incomplete",
+        "success": "False",
+        "action_count": 12,
+        "policy_calls": 3,
+        "stop_reason": "incomplete",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-perturbed-4216-h4-20261109-122419-854250"
+      }
+    },
+    {
+      "level": "perturbed",
+      "seed": 4217,
+      "single": {
+        "status": "incomplete",
+        "success": "False",
+        "action_count": 12,
+        "policy_calls": 12,
+        "stop_reason": "incomplete",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-perturbed-4217-single-20261109-123529-353054"
+      },
+      "h4": {
+        "status": "incomplete",
+        "success": "False",
+        "action_count": 12,
+        "policy_calls": 3,
+        "stop_reason": "incomplete",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-perturbed-4217-h4-20261109-124330-193626"
+      }
+    },
+    {
+      "level": "perturbed",
+      "seed": 4218,
+      "single": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 1,
+        "policy_calls": 2,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-perturbed-4218-single-20261109-125429-625968"
+      },
+      "h4": {
+        "status": "incomplete",
+        "success": "False",
+        "action_count": 12,
+        "policy_calls": 3,
+        "stop_reason": "incomplete",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-perturbed-4218-h4-20261109-125856-616396"
+      }
+    },
+    {
+      "level": "perturbed",
+      "seed": 4219,
+      "single": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 6,
+        "policy_calls": 7,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-perturbed-4219-single-20261109-131026-582588"
+      },
+      "h4": {
+        "status": "incomplete",
+        "success": "False",
+        "action_count": 12,
+        "policy_calls": 3,
+        "stop_reason": "incomplete",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-perturbed-4219-h4-20261109-131856-136207"
+      }
+    },
+    {
+      "level": "crumpled",
+      "seed": 4313,
+      "single": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 1,
+        "policy_calls": 2,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-crumpled-4313-single-20261109-132942-315058"
+      },
+      "h4": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 1,
+        "policy_calls": 1,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-crumpled-4313-h4-20261109-133447-755387"
+      }
+    },
+    {
+      "level": "crumpled",
+      "seed": 4314,
+      "single": {
+        "status": "incomplete",
+        "success": "False",
+        "action_count": 12,
+        "policy_calls": 12,
+        "stop_reason": "incomplete",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-crumpled-4314-single-20261109-133944-023320"
+      },
+      "h4": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 0,
+        "policy_calls": 1,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-crumpled-4314-h4-20261109-134944-900130"
+      }
+    },
+    {
+      "level": "crumpled",
+      "seed": 4315,
+      "single": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 6,
+        "policy_calls": 7,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-crumpled-4315-single-20261109-135433-509126"
+      },
+      "h4": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 0,
+        "policy_calls": 1,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-crumpled-4315-h4-20261109-140247-204044"
+      }
+    },
+    {
+      "level": "crumpled",
+      "seed": 4316,
+      "single": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 0,
+        "policy_calls": 1,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-crumpled-4316-single-20261109-140731-744205"
+      },
+      "h4": {
+        "status": "incomplete",
+        "success": "False",
+        "action_count": 12,
+        "policy_calls": 3,
+        "stop_reason": "incomplete",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-crumpled-4316-h4-20261109-141221-666543"
+      }
+    },
+    {
+      "level": "crumpled",
+      "seed": 4317,
+      "single": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 1,
+        "policy_calls": 2,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-crumpled-4317-single-20261109-142234-155974"
+      },
+      "h4": {
+        "status": "execution_error",
+        "success": "False",
+        "action_count": 1,
+        "policy_calls": 1,
+        "stop_reason": "execution_error",
+        "geometry_available": false,
+        "result_dir": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-crumpled-4317-h4-20261109-142651-548573"
+      }
+    }
+  ],
+  "failures": [
+    {
+      "run_id": "stage8-flat-4110-single",
+      "level": "flat",
+      "seed": 4110,
+      "policy": "single",
+      "status": "execution_error",
+      "action_count": 1,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('Grasp is outside the preselected cloth region')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-flat-4110-h4",
+      "level": "flat",
+      "seed": 4110,
+      "policy": "h4",
+      "status": "execution_error",
+      "action_count": 4,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('Square waypoint velocity/position did not converge')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-flat-4111-single",
+      "level": "flat",
+      "seed": 4111,
+      "policy": "single",
+      "status": "execution_error",
+      "action_count": 1,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('CLOSE target is outside unused prepared regions')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-flat-4112-single",
+      "level": "flat",
+      "seed": 4112,
+      "policy": "single",
+      "status": "execution_error",
+      "action_count": 1,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('Grasp is outside the preselected cloth region')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-flat-4112-h4",
+      "level": "flat",
+      "seed": 4112,
+      "policy": "h4",
+      "status": "execution_error",
+      "action_count": 4,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('Square waypoint velocity/position did not converge')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-flat-4113-single",
+      "level": "flat",
+      "seed": 4113,
+      "policy": "single",
+      "status": "rejected",
+      "action_count": 7,
+      "stop_reason": "terminal_release",
+      "errors": [],
+      "reasons": [],
+      "geometry_available": true
+    },
+    {
+      "run_id": "stage8-flat-4114-single",
+      "level": "flat",
+      "seed": 4114,
+      "policy": "single",
+      "status": "execution_error",
+      "action_count": 2,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('Release before another CLOSE')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-flat-4114-h4",
+      "level": "flat",
+      "seed": 4114,
+      "policy": "h4",
+      "status": "execution_error",
+      "action_count": 2,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('Square waypoint velocity/position did not converge')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-perturbed-4215-single",
+      "level": "perturbed",
+      "seed": 4215,
+      "policy": "single",
+      "status": "execution_error",
+      "action_count": 1,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('Grasp is outside the preselected cloth region')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-perturbed-4215-h4",
+      "level": "perturbed",
+      "seed": 4215,
+      "policy": "h4",
+      "status": "execution_error",
+      "action_count": 1,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('Grasp is outside the preselected cloth region')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-perturbed-4216-single",
+      "level": "perturbed",
+      "seed": 4216,
+      "policy": "single",
+      "status": "execution_error",
+      "action_count": 6,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('CLOSE target is outside unused prepared regions')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-perturbed-4216-h4",
+      "level": "perturbed",
+      "seed": 4216,
+      "policy": "h4",
+      "status": "incomplete",
+      "action_count": 12,
+      "stop_reason": "incomplete",
+      "errors": [],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "pre-release held check failed",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-perturbed-4217-single",
+      "level": "perturbed",
+      "seed": 4217,
+      "policy": "single",
+      "status": "incomplete",
+      "action_count": 12,
+      "stop_reason": "incomplete",
+      "errors": [],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-perturbed-4217-h4",
+      "level": "perturbed",
+      "seed": 4217,
+      "policy": "h4",
+      "status": "incomplete",
+      "action_count": 12,
+      "stop_reason": "incomplete",
+      "errors": [],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "pre-release held check failed",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-perturbed-4218-single",
+      "level": "perturbed",
+      "seed": 4218,
+      "policy": "single",
+      "status": "execution_error",
+      "action_count": 1,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('CLOSE target is outside unused prepared regions')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-perturbed-4218-h4",
+      "level": "perturbed",
+      "seed": 4218,
+      "policy": "h4",
+      "status": "incomplete",
+      "action_count": 12,
+      "stop_reason": "incomplete",
+      "errors": [],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "pre-release held check failed",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-perturbed-4219-single",
+      "level": "perturbed",
+      "seed": 4219,
+      "policy": "single",
+      "status": "execution_error",
+      "action_count": 6,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('CLOSE target is outside unused prepared regions')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-perturbed-4219-h4",
+      "level": "perturbed",
+      "seed": 4219,
+      "policy": "h4",
+      "status": "incomplete",
+      "action_count": 12,
+      "stop_reason": "incomplete",
+      "errors": [],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "pre-release held check failed",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-crumpled-4313-single",
+      "level": "crumpled",
+      "seed": 4313,
+      "policy": "single",
+      "status": "execution_error",
+      "action_count": 1,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('CLOSE target is outside unused prepared regions')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-crumpled-4313-h4",
+      "level": "crumpled",
+      "seed": 4313,
+      "policy": "h4",
+      "status": "execution_error",
+      "action_count": 1,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('CLOSE target is outside unused prepared regions')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-crumpled-4314-single",
+      "level": "crumpled",
+      "seed": 4314,
+      "policy": "single",
+      "status": "incomplete",
+      "action_count": 12,
+      "stop_reason": "incomplete",
+      "errors": [],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-crumpled-4314-h4",
+      "level": "crumpled",
+      "seed": 4314,
+      "policy": "h4",
+      "status": "execution_error",
+      "action_count": 0,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('Square waypoint velocity/position did not converge')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "non-BC action label found (expert action injection?)",
+        "action count outside BC budget",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-crumpled-4315-single",
+      "level": "crumpled",
+      "seed": 4315,
+      "policy": "single",
+      "status": "execution_error",
+      "action_count": 6,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('CLOSE target is outside unused prepared regions')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-crumpled-4315-h4",
+      "level": "crumpled",
+      "seed": 4315,
+      "policy": "h4",
+      "status": "execution_error",
+      "action_count": 0,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('Square waypoint velocity/position did not converge')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "non-BC action label found (expert action injection?)",
+        "action count outside BC budget",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-crumpled-4316-single",
+      "level": "crumpled",
+      "seed": 4316,
+      "policy": "single",
+      "status": "execution_error",
+      "action_count": 0,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('Square waypoint velocity/position did not converge')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "non-BC action label found (expert action injection?)",
+        "action count outside BC budget",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-crumpled-4316-h4",
+      "level": "crumpled",
+      "seed": 4316,
+      "policy": "h4",
+      "status": "incomplete",
+      "action_count": 12,
+      "stop_reason": "incomplete",
+      "errors": [],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "pre-release held check failed",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-crumpled-4317-single",
+      "level": "crumpled",
+      "seed": 4317,
+      "policy": "single",
+      "status": "execution_error",
+      "action_count": 1,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('CLOSE target is outside unused prepared regions')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    },
+    {
+      "run_id": "stage8-crumpled-4317-h4",
+      "level": "crumpled",
+      "seed": 4317,
+      "policy": "h4",
+      "status": "execution_error",
+      "action_count": 1,
+      "stop_reason": "execution_error",
+      "errors": [
+        "RuntimeError('CLOSE target is outside unused prepared regions')"
+      ],
+      "reasons": [
+        "missing success_meta.json or success_trace.npz",
+        "terminal release/retreat condition missing",
+        "missing success_trace.npz",
+        "evidence audit incomplete: retention_samples, retention_timing, retention_detached, retreat_moved, retreat_public_action",
+        "evidence attempted_public_actions != action count",
+        "evidence execute_calls != action count",
+        "runtime errors recorded"
+      ],
+      "geometry_available": false
+    }
+  ],
+  "timing": {
+    "single": {
+      "cases": 15,
+      "forward_calls": 70,
+      "first_call_mean_ms": 26.369427392880123,
+      "subsequent_median_ms": 1.1676400899887085,
+      "subsequent_p95_ms": 1.848805695772171
+    },
+    "h4": {
+      "cases": 15,
+      "forward_calls": 29,
+      "first_call_mean_ms": 27.49251400430997,
+      "subsequent_median_ms": 1.302625983953476,
+      "subsequent_p95_ms": 1.5093162655830383
+    }
+  },
+  "geometry": {
+    "single": {
+      "available": 1,
+      "unavailable": 14
+    },
+    "h4": {
+      "available": 2,
+      "unavailable": 13
+    }
+  },
+  "representative_videos": [
+    {
+      "level": "flat",
+      "policy": "single",
+      "success": "False",
+      "seed": 4110,
+      "video": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4110-single-20261109-104926-714119/evidence/episode.mp4",
+      "exists": true
+    },
+    {
+      "level": "flat",
+      "policy": "h4",
+      "success": "True",
+      "seed": 4111,
+      "video": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4111-h4-20261109-110741-570835/evidence/episode.mp4",
+      "exists": true
+    },
+    {
+      "level": "flat",
+      "policy": "h4",
+      "success": "False",
+      "seed": 4110,
+      "video": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-flat-4110-h4-20261109-105514-551192/evidence/episode.mp4",
+      "exists": true
+    },
+    {
+      "level": "perturbed",
+      "policy": "single",
+      "success": "False",
+      "seed": 4215,
+      "video": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-perturbed-4215-single-20261109-120533-085732/evidence/episode.mp4",
+      "exists": true
+    },
+    {
+      "level": "perturbed",
+      "policy": "h4",
+      "success": "False",
+      "seed": 4215,
+      "video": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-perturbed-4215-h4-20261109-121045-847028/evidence/episode.mp4",
+      "exists": true
+    },
+    {
+      "level": "crumpled",
+      "policy": "single",
+      "success": "False",
+      "seed": 4313,
+      "video": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-crumpled-4313-single-20261109-132942-315058/evidence/episode.mp4",
+      "exists": true
+    },
+    {
+      "level": "crumpled",
+      "policy": "h4",
+      "success": "False",
+      "seed": 4313,
+      "video": "/root/autodl-tmp/stage8_reduced30/results/day4-a5-stage8r30-stage8-crumpled-4313-h4-20261109-133447-755387/evidence/episode.mp4",
+      "exists": true
+    }
+  ],
+  "formal_120_started": false
+}

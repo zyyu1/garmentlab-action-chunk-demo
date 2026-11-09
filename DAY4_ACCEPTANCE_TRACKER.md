@@ -15,9 +15,13 @@
 单个开发例，不证明泛化/统计/稳定延迟。**Stage 8 缩减版 30 例评估完成**：
 single 0/15、H4 2/15（4111、4113）；原 120 例计划保留，剩余 90 例未执行。
 60/60 初态与 120 例父 manifest 已冻结；4 例 dry run 完成。
+**Stage 9 展示成果已整理**：2 页报告、两张图、60 秒视频。
+**Stage 10 最小离线收尾完成**：README 入口、图表复现、环境/身份、联系材料。
+**状态：缩减版 demo 成果与离线复现材料已完成；完整 120 例评估及干净环境仿真复现仍待后续。**
 Stage 5 的 50/10/10 不自动适用于 Stage 8。
 
-归档：[Stage 7](day4-actionchunk-test/stage7/README.md) ·
+归档：[Stage 10 收尾](../stage10_showcase_20261109/STAGE10_WRAPUP.md) ·
+[Stage 9 展示](day4-actionchunk-test/stage9/README.md) ·
 [Stage 8 缩减版交接](day4-actionchunk-test/stage8/STAGE8_REDUCED30_HANDOFF.md) ·
 [Stage 8 计划](day4-actionchunk-test/stage8/STAGE8_OFFLINE_EXECUTION_PLAN.md) ·
 [Stage 8 dry run](day4-actionchunk-test/stage8/STAGE8_DRYRUN_RESULT.md) ·
