@@ -12,7 +12,7 @@ from train_bc import BCNet
 
 
 class H4Policy:
-    def __init__(self, checkpoint, stats_path):
+    def __init__(self, checkpoint, stats_path, device='cpu'):
         self.checkpoint = Path(checkpoint)
         self.stats = json.loads(Path(stats_path).read_text(encoding='utf-8'))
         ck = torch.load(self.checkpoint, map_location='cpu')
@@ -20,9 +20,11 @@ class H4Policy:
             raise ValueError('checkpoint is not h4 mode')
         if int(ck.get('in_dim', -1)) != 1340 or int(ck.get('hidden', -1)) != 512:
             raise ValueError('unexpected H4 checkpoint dimensions')
+        self.device = torch.device(device)
         self.model = BCNet(1340, 512, 'h4')
         self.model.load_state_dict(ck['state'])
         self.model.eval()
+        self.model.to(self.device)
         self.obs_mean = np.asarray(self.stats['obs_mean'], np.float32)
         self.obs_std = np.asarray(self.stats['obs_std'], np.float32)
         self.c_mean = np.asarray(self.stats['cont_mean'], np.float64)
@@ -50,15 +52,20 @@ class H4Policy:
 
     def predict_chunk(self, obs):
         x = (np.asarray(obs, np.float32) - self.obs_mean) / self.obs_std
+        tx = torch.tensor(x[None], dtype=torch.float32, device=self.device)
+        if self.device.type == 'cuda':
+            torch.cuda.synchronize(self.device)
         t0 = time.perf_counter()
         with torch.no_grad():
-            pc, pg = self.model(torch.tensor(x[None], dtype=torch.float32))
+            pc, pg = self.model(tx)
+        if self.device.type == 'cuda':
+            torch.cuda.synchronize(self.device)
         inference_ms = (time.perf_counter() - t0) * 1000.0
         if tuple(pc.shape) != (1, 4, 4) or tuple(pg.shape) != (1, 4, 3):
             raise ValueError('unexpected H4 output shape: %r %r'
                              % (tuple(pc.shape), tuple(pg.shape)))
-        cont = pc[0].numpy().astype(np.float64) * self.c_std + self.c_mean
-        grip = pg[0].argmax(-1).numpy().astype(np.int64)
+        cont = pc[0].cpu().numpy().astype(np.float64) * self.c_std + self.c_mean
+        grip = pg[0].argmax(-1).cpu().numpy().astype(np.int64)
         actions = [
             {
                 'xyz': cont[k, :3].tolist(),

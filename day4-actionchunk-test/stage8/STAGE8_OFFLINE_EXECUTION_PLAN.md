@@ -42,16 +42,16 @@ Stage 5 的 `50/10/10` 是数据集划分，不自动适用于 Stage 8；本轮�
 
 | 正式必需项 | 当前状态 | 尚缺 |
 |---|---|---|
-| 冻结 configs/checkpoint selection | 两个候选已固定 | 需 Stage 8 config 冻结记录 |
-| 冻结 test seeds（每档 20） | 候选清单 50/60 | **perturbed 少 10 个合规初态**；未正式冻结 |
-| 2 seeds dry run | 未运行 | 2 个 debug-only seed 的 dry-run 记录 |
-| 2×3×20 正式矩阵 | **0/120** | 全部 120 episodes |
-| 每 difficulty 增量 CSV | 无 | runner 的增量 CSV 输出 |
-| `raw_results.csv` | 无 | 汇总器与 120 行数据 |
-| representative successes/failures | 无 Stage 8 视频 | 选取/保存规则与视频 |
-| policy calls / latency（同 GPU、同计时边界） | 无统一记录 | single/H4 同口径计时 instrumentation |
-| 统一 Backend/预算/终端/失败/证据 | 已有 single/H4 单例 runner | Stage 8 批次驱动与统一 manifest |
-| 独立 test 集声明 | 未冻结 | 不能把 6120 等 debug seed 称为全新独立测试 |
+| 冻结 configs/checkpoint selection | 两候选固定；manifest 已写 | 无（正式启动前复核） |
+| 冻结 test seeds（每档 20） | **60/60 已冻结** | 无 |
+| 2 seeds dry run | **4/4 完成** | 见 [dry-run 结果](STAGE8_DRYRUN_RESULT.md) |
+| 2×3×20 正式矩阵 | **0/120** | 全部 120 episodes（未启动） |
+| 每 difficulty 增量 CSV | batch driver 已实现 | 正式数据尚未产生 |
+| `raw_results.csv` | dry-run CSV 已产生 | 正式 120 行 |
+| representative successes/failures | 规则已定 | 正式视频 |
+| policy calls / latency（同 GPU、同计时边界） | CUDA 同步 instrumentation 已接入 | 正式 120 行记录 |
+| 统一 Backend/预算/终端/失败/证据 | batch driver + manifest | 正式执行 |
+| 独立 test 集声明 | 60 seed 冻结；6120/6121 仅 dry run | 不得称 6120 等为独立 test |
 
 ## 4. 评估初态候选择
 
@@ -61,28 +61,25 @@ Stage 6/7 已调试 seed。Stage 4 使用仅作历史标记，因为 Stage 4 不
 
 | 档 | 候选 seed（按预定顺序） | 可用 | 历史 |
 |---|---|---:|---|
-| flat | 4110–4119, 6100–6109 | **20/20** | 4110–4117 Stage 4 使用；4118–4119 未用；6100–6109 Stage 5 formal 未入最终 70；无 Stage 6/7 debug |
-| perturbed | 4215–4219, 6300, 6301, 6305, 6310, 6311 | **10/20** | 4215 Stage 4 使用；6300/6301 Stage 5 test；6305/6310/6311 Stage 5 formal 未入最终 70；无 Stage 6/7 debug |
-| crumpled | 4313–4319, 6500, 6501, 6503, 6506, 6509, 6510, 6511, 6512, 6513, 6514, 6515, 6518, 6519 | **20/20** | 4313–4316 Stage 4 使用；其余未用；无 Stage 6/7 debug |
+| flat | 4110–4119, 6100–6109 | **20/20** | 4110–4117 Stage 4 使用；4118–4119 未用；6100–6109 **均有 Stage 5 专家尝试**，未入最终 70；无 Stage 6/7 debug |
+| perturbed | 4215–4229, 6300, 6301, 6305, 6310, 6311 | **20/20** | 4215 Stage 4 使用；4220–4229 本轮新生成、无专家运行；6300/6301 Stage 5 test；6305/6310/6311 Stage 5 专家尝试但未入最终 70；无 Stage 6/7 debug |
+| crumpled | 4313–4319, 6500, 6501, 6503, 6506, 6509, 6510, 6511, 6512, 6513, 6514, 6515, 6518, 6519 | **20/20** | 4313–4316 Stage 4 使用；其余未用；6500 等有 Stage 5 专家尝试但未入最终 70；无 Stage 6/7 debug |
 
-**Perturbed 缺口（具体）**：
-
-- 现有 policy-fresh 候选只有 **10** 个；正式需要 **20**，**少 10**。
-- `4220–4229` 在初始计划中但**没有生成/passed 的 initial dir**。
-- `4200–4209` 是 Stage 4 blocked/dev，按现规则不计入合规候选。
-- 若复用 Stage 6 debug 的 `4210–4214`，最多 15 个，仍少 5 个，且不是 policy-fresh；
-  本轮不这么做，也不把 20 改成 10。
+**Perturbed 补齐**：`4220–4229` 已按既定 task-scoped 协议各生成一次，
+全部通过生成有效性、B_nominal、friction readback 1.0、strips、身份哈希检查；
+**没有运行专家折叠**，也没有按折叠成功筛选。没有失败/替换 seed。
 
 已调试 seed（不作为 Stage 8 全新 test）：6120、6121、6122、6148、6151（flat）；
 4210–4214（perturbed）；6504、6507、4310–4312（crumpled）。
 
-完整 seed 路径与 `result.json`/`initial_geometry.npz` 哈希见
-[完整 inventory](../../../stage8_offline_20261108/SEED_INVENTORY.json)；
-本目录的 [SEED_INVENTORY.json](SEED_INVENTORY.json) 是候选范围/历史摘要。
+完整逐 seed 路径、初态哈希、Stage 4/5 历史见
+[STAGE8_FROZEN_MANIFEST.json](../../../stage8_frozen/STAGE8_FROZEN_MANIFEST.json)；
+摘要见 [SEED_INVENTORY.json](SEED_INVENTORY.json) 与
+[STAGE8_SEED_AUDIT.md](STAGE8_SEED_AUDIT.md)。
 两策略必须使用清单中**同一初态目录和同一哈希**；不得为某一策略换 seed 或换初态。
 
-2 个 dry run 暂定 `6120`、`6121`，**仅用于批次/证据/计时管线检查**，
-明确不计入正式 20，也不称独立测试；尚未运行。
+2 个 dry run seed `6120`、`6121`，**仅用于批次/证据/计时管线检查**，
+不计入正式 20，也不称独立测试。
 
 ## 5. 统一执行口径
 
@@ -103,7 +100,7 @@ Stage 6/7 已调试 seed。Stage 4 使用仅作历史标记，因为 Stage 4 不
 
 - GPU：RTX 3090，24576 MiB，当前 0 MiB used；
 - 磁盘：50G 总，**12G 可用**；`stage6_runs/results` 130M，H4 目录 37M；
-- 已有 50/60 个候选初态文件（perturbed 缺 10）。
+- 已有 **60/60** 个候选初态文件（含新生成 4220–4229）。
 
 实测单例（Stage 6/7，非 Stage 8）：
 
@@ -121,14 +118,56 @@ Stage 8 估算：
 
 ## 7. 启动前必须闭合
 
-1. 补齐 perturbed 10 个合规初态，或取得明确批准（否则不能凑满 2×3×20）。
-2. 正式冻结 60 seed 与两策略 manifest；确认每例同一 initial hash。
-3. 完成 Stage 8 批次驱动、增量 CSV、`raw_results.csv`、代表性视频选择器。
-4. 完成 same-GPU、same-boundary 的 single/H4 计时 instrumentation。
-5. 用 6120/6121 debug-only 做 2-seed dry run；dry run 不计入正式矩阵。
-6. 以上完成前不启动正式批次。
+1. **已完成**：60 个 seed 冻结；`STAGE8_FROZEN_MANIFEST.json` 120 例配对；
+   每例 initial hash 已写入；两策略同一 initial。
+2. **已完成**：batch driver、增量 CSV、`raw_results.csv`、forward timing CSV。
+3. **已完成**：CUDA 同步 forward 计时；single/H4 同一 device/boundary。
+4. **已完成**：2-seed（4 例）debug-only dry run；结果见
+   [STAGE8_DRYRUN_RESULT.md](STAGE8_DRYRUN_RESULT.md)，不计入正式矩阵。
+5. **未完成（按指示）**：正式 120 例未启动。
 
-## 8. 本轮停止点
+## 8. 正式批次命令（未执行）
 
-本轮只完成 Stage 7 归档和 Stage 8 离线清单；**未运行仿真、未训练、未采集、
-未冻结新 seed、未启动 120 例批次**。
+正式 manifest：
+
+`/root/autodl-tmp/stage8_frozen/STAGE8_FROZEN_MANIFEST.json`
+
+启动：
+
+```bash
+cd /root/autodl-tmp/stage5-trial
+/root/autodl-tmp/envs/isaac40/bin/python -u stage8/batch_run.py \
+  --manifest /root/autodl-tmp/stage8_frozen/STAGE8_FROZEN_MANIFEST.json \
+  --out-root /root/autodl-tmp/stage8_runs/results \
+  --attempt-root /root/autodl-tmp/stage8_runs/attempts \
+  --csv /root/autodl-tmp/stage8_runs/formal/raw_results.csv \
+  --forward-csv /root/autodl-tmp/stage8_runs/formal/forward_timings.csv \
+  --label-prefix day4-a5-stage8 \
+  --policy-device cuda
+```
+
+进度：
+
+```bash
+wc -l /root/autodl-tmp/stage8_runs/formal/raw_results.csv
+tail -n 3 /root/autodl-tmp/stage8_runs/formal/raw_results.csv
+tail -n 20 /root/autodl-tmp/stage8_runs/attempts/day4-a5-stage8-<run_id>/runner.log
+```
+
+续跑（跳过 CSV 已有 `run_id`）：
+
+```bash
+/root/autodl-tmp/envs/isaac40/bin/python -u stage8/batch_run.py \
+  --manifest /root/autodl-tmp/stage8_frozen/STAGE8_FROZEN_MANIFEST.json \
+  --out-root /root/autodl-tmp/stage8_runs/results \
+  --attempt-root /root/autodl-tmp/stage8_runs/attempts \
+  --csv /root/autodl-tmp/stage8_runs/formal/raw_results.csv \
+  --forward-csv /root/autodl-tmp/stage8_runs/formal/forward_timings.csv \
+  --label-prefix day4-a5-stage8 \
+  --policy-device cuda --resume
+```
+
+## 9. 本轮停止点
+
+本轮完成 Stage 7 归档、60 初态冻结、batch/timing、4 例 dry run；
+**未启动正式 120 例批次**，未训练、未追加演示采集、未删除历史证据。

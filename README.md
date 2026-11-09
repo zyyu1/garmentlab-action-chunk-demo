@@ -1,6 +1,6 @@
 # Garment Folding with Action Chunking
 
-研究 single-step behavior cloning 与 H=4 action-chunk BC 在三档衣物初态下的折叠成功率、恢复能力和推理开销。Stage 4/5 已完成；Stage 6 最低开发验收完成；Stage 7 最低开发验收完成；Stage 8 仅完成离线执行清单，未启动。
+研究 single-step behavior cloning 与 H=4 action-chunk BC 在三档衣物初态下的折叠成功率、恢复能力和推理开销。Stage 4/5 已完成；Stage 6/7 最低开发验收完成；Stage 8 已补齐 60 初态、冻结 120 例 manifest，dry run 进行中，正式批次未启动。
 
 ## 当前状态（2026-11-08）：Stage 6 最低开发验收完成；Stage 7 H4 离线完成
 
@@ -28,12 +28,14 @@ Stage 7 离线：修正版 H4 `dataset_h4.npz` `e1736499…`，160 chunks / 590 
 旧 H4 数据/checkpoint 与 single checkpoint 保留。
 
 **Stage 7 最低开发验收完成**（单个 6120 开发例，不证明泛化/统计/稳定延迟）。
-Stage 8 仅准备了离线执行清单，**未启动**；按原计划保留 2×3×20=120，
-没有批准的缩减方案；候选初态 50/60，perturbed 少 10 个合规初态。
-Stage 5 的 50/10/10 不自动适用于 Stage 8。
+Stage 8 已补齐 **60/60** 初态并冻结 120 例 manifest；`4220–4229` 已按
+task-scoped 协议生成并校验；4 例配对 dry run 完成（H4 2/2 accepted，
+single 2/2 execution_error），正式 120 例未启动。
+Stage 5 的 50/10/10 不自动适用于 Stage 8；没有批准的缩减方案。
 
 归档：[Stage 7](day4-actionchunk-test/stage7/README.md) ·
 [Stage 8 计划](day4-actionchunk-test/stage8/STAGE8_OFFLINE_EXECUTION_PLAN.md) ·
+[Stage 8 dry run](day4-actionchunk-test/stage8/STAGE8_DRYRUN_RESULT.md) ·
 [Stage 6 README](day4-actionchunk-test/stage6/README.md) ·
 [Stage 6 tracker](day4-actionchunk-test/stage6/STAGE6_TRACKER.md) ·
 [L1/L2/L3 结果](day4-actionchunk-test/stage6/STAGE6_L2L3_DEV_RESULT.md) ·

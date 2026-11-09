@@ -419,7 +419,10 @@ def _predict(rt, policy, observation):
         raise ValueError('Non-finite policy yaw')
     if gripper not in (0, 1, 2):
         raise ValueError('Invalid policy gripper command: %r' % (gripper,))
-    return {'xyz': xyz, 'yaw': yaw, 'gripper': gripper}
+    out = {'xyz': xyz, 'yaw': yaw, 'gripper': gripper}
+    if 'inference_ms' in prediction:
+        out['inference_ms'] = prediction['inference_ms']
+    return out
 
 
 def _execute_action(rt, backend, result, target, yaw, command, label,
@@ -1054,6 +1057,22 @@ def _run_policy(rt, backend, out, result, evidence, case, level, args,
         obs_row['action_command'] = int(prediction['gripper'])
         obs_row['action_label'] = 'pending'
         obs_rows.append(obs_row)
+        result.setdefault('policy_calls', []).append({
+            'call_index': len(result['policy_calls']),
+            'start_action_index': action_index,
+            'observation': {
+                'sim_time_s': observation['sim_time_s'],
+                'absolute_step': observation['absolute_step'],
+                'backend_step': observation['backend_step'],
+                'holding': observation['holding'],
+                'engaged_before': before['engaged'],
+            },
+            'predicted_actions': [dict(prediction)],
+            'inference_ms': prediction.get('inference_ms'),
+            'execute_k': 1,
+            'remaining_budget': int(budget - action_index),
+            'stop_reason': None,
+        })
 
         print('BC_OBS', action_index,
               json.dumps({
@@ -1680,6 +1699,8 @@ def _parse_args():
                         help='single-step BC or H=4 chunk policy')
     parser.add_argument('--execute-k', type=int, choices=(1, 2, 4), default=4,
                         help='H4 chunk actions executed before re-observing')
+    parser.add_argument('--policy-device', choices=('cpu', 'cuda'), default='cpu',
+                        help='policy forward device; Stage 8 timing uses cuda')
     return parser.parse_args()
 
 
@@ -1823,7 +1844,7 @@ def main():
             'stats_sha256': stats_sha,
             'mode': 'single',
             'obs_dim': 1340,
-            'device': 'cpu',
+            'device': args.policy_device,
             'source': ('Stage 5 reduced 50/10/10 single best.pt + '
                        'train-only stats.json'),
         },
@@ -1849,7 +1870,8 @@ def main():
         local_points = _load_local_points(out)
         if args.policy == 'h4':
             from h4_runner import run_policy_h4
-            policy = rt.H4Policy(checkpoint, stats)
+            policy = rt.H4Policy(checkpoint, stats,
+                                 device=args.policy_device)
             result['policy'].update({
                 'kind': 'h4_chunk',
                 'checkpoint_used': True,
@@ -1859,14 +1881,15 @@ def main():
                 'stats_sha256': stats_sha,
                 'horizon': 4,
                 'execute_k': int(args.execute_k),
-                'device': 'cpu',
+                'device': args.policy_device,
                 'epoch': int(policy.epoch),
             })
             obs_rows, budget = run_policy_h4(
                 rt, backend, out, result, evidence, case, level, args,
                 local_points, policy, initial, obs_rows=obs_rows)
         else:
-            policy = rt.BCPolicy(Path(checkpoint).parent, Path(stats).parent)
+            policy = rt.BCPolicy(Path(checkpoint).parent, Path(stats).parent,
+                                 device=args.policy_device)
             result['policy']['kind'] = 'learned_bc'
             result['policy']['checkpoint_used'] = True
             obs_rows, budget = _run_policy(

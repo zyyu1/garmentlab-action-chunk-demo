@@ -4,8 +4,11 @@ Loads a trained checkpoint plus its train-only stats, builds the 1340-dim
 observation in the training order (vertices, ee, quat, joints, holding),
 denormalizes the continuous dims back to metres/radians and maps the gripper
 class back to the original command integer (0/1/2).
+
+The optional device and forward timer are for the Stage 8 batch timing path.
 """
 import json
+import time
 from pathlib import Path
 
 import numpy as np
@@ -15,13 +18,15 @@ from train_bc import BCNet
 
 
 class BCPolicy:
-    def __init__(self, run_dir, dataset_dir):
+    def __init__(self, run_dir, dataset_dir, device='cpu'):
         run_dir = Path(run_dir)
         ck = torch.load(run_dir / 'best.pt', map_location='cpu')
         self.stats = json.loads((Path(dataset_dir) / 'stats.json').read_text())
+        self.device = torch.device(device)
         self.model = BCNet(int(ck['in_dim']), int(ck['hidden']), ck['mode'])
         self.model.load_state_dict(ck['state'])
         self.model.eval()
+        self.model.to(self.device)
         self.obs_mean = np.asarray(self.stats['obs_mean'], np.float32)
         self.obs_std = np.asarray(self.stats['obs_std'], np.float32)
         self.c_mean = np.asarray(self.stats['cont_mean'], np.float64)
@@ -50,8 +55,16 @@ class BCPolicy:
 
     def predict(self, obs):
         x = (np.asarray(obs, np.float32) - self.obs_mean) / self.obs_std
+        tx = torch.tensor(x[None], dtype=torch.float32, device=self.device)
+        if self.device.type == 'cuda':
+            torch.cuda.synchronize(self.device)
+        t0 = time.perf_counter()
         with torch.no_grad():
-            pc, pg = self.model(torch.tensor(x[None], dtype=torch.float32))
-        cont = pc[0].numpy().astype(np.float64) * self.c_std + self.c_mean
+            pc, pg = self.model(tx)
+        if self.device.type == 'cuda':
+            torch.cuda.synchronize(self.device)
+        inference_ms = (time.perf_counter() - t0) * 1000.0
+        cont = pc[0].cpu().numpy().astype(np.float64) * self.c_std + self.c_mean
         grip = int(pg[0].argmax().item())
-        return {'xyz': cont[:3].tolist(), 'yaw': float(cont[3]), 'gripper': grip}
+        return {'xyz': cont[:3].tolist(), 'yaw': float(cont[3]),
+                'gripper': grip, 'inference_ms': float(inference_ms)}

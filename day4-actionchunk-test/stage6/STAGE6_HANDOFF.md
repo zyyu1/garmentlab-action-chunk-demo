@@ -14,11 +14,13 @@ L2/L3 缩减数据属探索性结果，不是独立 test。4210–4214、4310–
 Stage 7 离线 H4 已完成：160/590/50 数据核对、10 条小样本拟合通过、500 epochs
 best_val epoch 389（val total `0.004146`，`ff8c6945…`）；随后 L1 6120 H4 dev
 一次 accepted（7 actions、331 帧），**Stage 7 最低开发验收完成**。未扩批 rollout。
-Stage 8 仅准备离线执行清单，未启动；保留 2×3×20=120，候选初态 50/60，
-perturbed 少 10 个合规初态，待补齐/批准。
+Stage 8 已补齐 60/60 初态并冻结 120 例 manifest；4 例配对 dry run 完成
+（H4 2/2 accepted、single 2/2 execution_error）；正式 120 例未启动。
+Stage 5 的 50/10/10 不自动适用；没有批准的缩减方案。
 详见 [STAGE7_H4_OFFLINE.md](STAGE7_H4_OFFLINE.md)、
 [STAGE7_H4_L1DEV_RESULT.md](STAGE7_H4_L1DEV_RESULT.md)、
-[Stage 8 计划](../stage8/STAGE8_OFFLINE_EXECUTION_PLAN.md)。
+[Stage 8 计划](../stage8/STAGE8_OFFLINE_EXECUTION_PLAN.md)、
+[Stage 8 dry run](../stage8/STAGE8_DRYRUN_RESULT.md)。
 
 ## 1. 当前文件
 
@@ -270,7 +272,7 @@ check_stage6_offline.py check_6120_real.py` → `REMOTE_PY_COMPILE_OK`。
    新 H4 `e1736499…`、best_val `ff8c6945…`；后续 H4 必须沿用 single Backend、
    预算和终端规则，再比较 action chunk 影响。
 
-**下一步**：Stage 6 最低开发验收归档完成；Stage 7 最低开发验收完成；
-Stage 8 只完成离线清单，**未启动正式批次**。当前候选初态 50/60（perturbed 少 10），
-保留 2×3×20=120；没有批准的缩减方案。启动前需补齐初态、冻结 seed、
-完成批次/CSV/视频与同口径计时，再跑 2-seed dry run。
+**下一步**：Stage 6/7 最低开发验收归档完成；Stage 8 已补齐 60/60 初态、
+冻结 120 例 manifest，并完成 4 例配对 dry run（接口检查通过）。
+正式 120 例**未启动**；没有批准的缩减方案。下一步只能按冻结命令执行，
+不自动扩批。
