@@ -1,5 +1,5 @@
 {
-  "version": "9.1.0",
+  "version": "9.1.3",
   "source_csv": "raw_results.csv",
   "source_summary": "summary.json",
   "rows": 30,

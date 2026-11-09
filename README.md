@@ -1,10 +1,10 @@
-# GarmentLab Action Chunk Demo · v9.1.0
+# GarmentLab Action Chunk Demo · v9.1.3
 
 [English](#english) | [中文](#中文)
 
-**Demo:** [60-second simulation showcase](https://github.com/zyyu1/garmentlab-action-chunk-demo/releases/download/v9.1.0/stage9_showcase.mp4) · [Release page](https://github.com/zyyu1/garmentlab-action-chunk-demo/releases/tag/v9.1.0)
+**Demo:** [60-second simulation showcase](https://github.com/zyyu1/garmentlab-action-chunk-demo/releases/download/v9.1.3/stage9_showcase_english.mp4) · [Release page](https://github.com/zyyu1/garmentlab-action-chunk-demo/releases/tag/v9.1.3)
 
-720p · bilingual English/Chinese subtitles · paired single-step BC / H4 simulation. Same 30 fps playback; not synchronized to simulation time or intended as a speed comparison.
+720p · English-only captions · paired single-step BC / H4 simulation. Same 30 fps playback; not synchronized to simulation time or intended as a speed comparison.
 
 ## English
 
@@ -12,7 +12,7 @@ A reproducible, reduced-scale study of square-cloth folding in GarmentLab / Isaa
 
 **Why this matters for the thesis:** The longer-term motivation is to understand how learned local manipulation policies could be integrated with task and motion planning for more complex robotic material-handling problems.
 
-**Status:** 30 evaluation episodes completed; the full 120-episode evaluation and clean-environment simulation reproduction remain unfinished. Version 9.1.0 organizes existing evidence; it adds no simulation runs or training results.
+**Status:** 30 evaluation episodes completed; the full 120-episode evaluation and clean-environment simulation reproduction remain unfinished. Version 9.1.3 organizes existing evidence; it adds no simulation runs or training results.
 
 ### Results
 
@@ -54,7 +54,19 @@ python scripts/reproduce_figures.py
 
 The script reads the packaged CSV and summary, validates 30 rows / 15 pairs, paired initial-state hashes, per-level denominators, success counts and failure classifications, then writes two PNGs, a figure-data CSV and `checks.json` into a new `figures_reproduced/` directory. Use `--out another_new_directory` for a repeat run. An existing output directory is deliberately rejected.
 
-No GPU, Isaac Sim, model checkpoints or external project directories are needed for figure reproduction. Failure categories are derived from the archived summary because the CSV contains statuses but not error text. Figures use bundled Matplotlib fonts; v9.1.0 uses English chart labels, so historical PNGs need not be byte-identical. Original CSV and PDF are preserved.
+No GPU, Isaac Sim, model checkpoints or external project directories are needed for figure reproduction. Failure categories are derived from the archived summary because the CSV contains statuses but not error text. Figures use bundled Matplotlib fonts; v9.1.3 uses English chart labels, so historical PNGs need not be byte-identical. Original CSV and PDF are preserved.
+
+### Rebuild the English demo video
+
+The release video reuses the original simulation recordings and retains the 60-second sequence. All title cards and captions are English. The historical bilingual video remains available in the v9.1.0 Release.
+
+With Pillow and FFmpeg installed, provide the original video directory and a TrueType font:
+
+```bash
+python scripts/build_demo_video.py --videos /path/to/original/videos --out /path/to/new/output --font /path/to/font.ttf
+```
+
+The five input filenames are listed in the script. Original recordings are external inputs, not bundled in this repository. Use `--ffmpeg /path/to/ffmpeg` if needed. No simulation is started.
 
 ### Scope and limitations
 
@@ -82,7 +94,8 @@ garmentlab-action-chunk-demo/
 │   ├── summary.json
 │   └── checks.json
 ├── scripts/
-│   └── reproduce_figures.py
+│   ├── reproduce_figures.py
+│   └── build_demo_video.py
 └── docs/
     ├── ENVIRONMENT_IDENTITY.md
     └── MIGRATION.md
@@ -92,9 +105,9 @@ This is the showcase layout; existing source code and historical evidence remain
 
 ## 中文
 
-**演示视频：** [60 秒仿真展示](https://github.com/zyyu1/garmentlab-action-chunk-demo/releases/download/v9.1.0/stage9_showcase.mp4)（720p、中英双语字幕、single/H4 并排）。视频以相同 30 fps 播放，未按仿真时间同步，不用于比较执行速度。
+**演示视频：** [60 秒仿真展示](https://github.com/zyyu1/garmentlab-action-chunk-demo/releases/download/v9.1.3/stage9_showcase_english.mp4)（720p、纯英文字幕、single/H4 并排）。视频以相同 30 fps 播放，未按仿真时间同步，不用于比较执行速度。
 
-本项目在 GarmentLab / Isaac Sim 中，以方形布料折叠为任务，比较 **single-step MLP 行为克隆与 H4 动作分块**。v9.1.0 整理 Stage 9 报告、Stage 10 离线收尾材料，并提供可独立运行的图表复现入口。
+本项目在 GarmentLab / Isaac Sim 中，以方形布料折叠为任务，比较 **single-step MLP 行为克隆与 H4 动作分块**。v9.1.3 整理 Stage 9 报告、Stage 10 离线收尾材料，并提供可独立运行的图表复现入口。
 
 **与学位论文研究的关联：** 长期研究动机是探索如何将学习得到的局部操作策略与任务与运动规划相结合，以应对更复杂的机器人物料搬运与处理问题。
 
@@ -140,7 +153,13 @@ python scripts/reproduce_figures.py
 
 脚本从仓库内的 CSV 和 summary 读取证据，校验 30 行、15 对初态、配对初态哈希、各档分母、成功数及失败分类，将两张 PNG、图表数据 CSV 和 `checks.json` 写入新目录 `figures_reproduced/`。重复运行请指定 `--out another_new_directory`，已有输出目录会被拒绝以避免覆盖。
 
-复现图表不需要 GPU、Isaac Sim、模型 checkpoint 或仓库外目录。CSV 不含错误详情，因此失败类别从归档 summary 逐例推导。脚本使用 Matplotlib 自带字体；v9.1.0 图中文字采用英文，不要求与历史 PNG 逐字节相同。原始 CSV 和 PDF 保持不变。
+复现图表不需要 GPU、Isaac Sim、模型 checkpoint 或仓库外目录。CSV 不含错误详情，因此失败类别从归档 summary 逐例推导。脚本使用 Matplotlib 自带字体；v9.1.3 图中文字采用英文，不要求与历史 PNG 逐字节相同。原始 CSV 和 PDF 保持不变。
+
+### 重建纯英文视频
+
+v9.1.3 沿用原始仿真录像及 60 秒片段顺序，片头、片尾和全部字幕均改为英文。历史双语视频仍保留在 v9.1.0 Release。
+
+安装 Pillow 和 FFmpeg 后，按英文部分命令运行 `scripts/build_demo_video.py`，提供原始录像目录、全新输出目录及 TrueType 字体路径。脚本列明五个输入文件名；原始录像属于外部输入，未打包进仓库。此过程不启动仿真。
 
 ### 范围与限制
 

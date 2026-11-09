@@ -176,7 +176,7 @@ def main():
         for l, a, b, n in zip(levels, single, h4, ns):
             w.writerow([l, a, n, b, n])
     checks = {
-        'version': '9.1.0',
+        'version': '9.1.3',
         'source_csv': Path(args.csv).name,
         'source_summary': Path(args.summary).name,
         'rows': len(rows), 'pairs': len(pairs),
