@@ -255,7 +255,7 @@ L2/L3 的 recovery 是“把已成折条的初态展平，再折一次”。因�
 - 第 3 步配对实验报告：[STAGE4_REPRESENTATION_PAIRS_20261102](../thesis/day4-actionchunk-test/results/STAGE4_REPRESENTATION_PAIRS_20261102/review.md)（四例结果、审计输出、逐文件哈希清单）
 - 第 4 步分任务报告：[STAGE4_PER_TASK_20261102](day4-actionchunk-test/results/STAGE4_PER_TASK_20261102/review.md)（两任务各自的冻结版/开发历史成功率、失败形态、多任务平均口径与版本边界）
 - 第一步机制核实与判据：[results/L1_OVERHANG_MECHANISM_20261102/review.md](day4-actionchunk-test/results/L1_OVERHANG_MECHANISM_20261102/review.md)
-- 决策与三档口径：[2026-11-02 日报](2026-11-02-GarmentLab日报%20Stage4%20L2L3初态与6b交接.md)、[验收状态](DAY4_ACCEPTANCE_TRACKER.md)
+- 决策与三档口径：[2026-11-02 日报](2026-11-02-GarmentLab日报-Stage4-L2L3初态与6b交接.md)、[验收状态](DAY4_ACCEPTANCE_TRACKER.md)
 - 后续步骤与正式批次要求：[DAY4_NEXT_STEPS.md](DAY4_NEXT_STEPS.md)
 - 计划中的冻结原则：[执行计划 §5.4](Marian_Frei_GarmentLab_2024_10_stage_execution_plan.md)
 - 接口与动作预算规范：[DAY4_INTERFACE_RECOVERY_CONTRACT.md](day4-actionchunk-test/DAY4_INTERFACE_RECOVERY_CONTRACT.md)

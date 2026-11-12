@@ -108,7 +108,7 @@ bash /root/autodl-tmp/run-wrist-ik-execution-v5.sh
 
 ## 7. 更早的折叠背景与文件入口
 
-释放异常研究及候选配置详见前一日报 `2026-10-25-GarmentLab日报 Stage4折叠与释放异常交接.md` 和 `DAY4_ACCEPTANCE_TRACKER.md`。候选配置包括粒子质量0.0001、材料摩擦0.3、particle_friction_scale=0、关闭导入room重复碰撞并保留默认地面；这是实验配置，不是现实材料标定。
+释放异常研究及候选配置详见前一日报 `2026-10-25-GarmentLab日报-Stage4-折叠与释放异常交接.md` 和 `DAY4_ACCEPTANCE_TRACKER.md`。候选配置包括粒子质量0.0001、材料摩擦0.3、particle_friction_scale=0、关闭导入room重复碰撞并保留默认地面；这是实验配置，不是现实材料标定。
 
 hem-v11低圆弧放下越线约0.975，但释放后回弹为0；高圆弧可能整件翻转，均未完成正式对折。翻腕侧通道的目的在于检验多点锚定局部翻转假设，并未证明该假设。
 
