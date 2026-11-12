@@ -38,7 +38,7 @@
 
 ## 3. 本轮关键实验与证据
 
-下表结果目录均在 `day4-actionchunk-test/results/`，远端对应 `/root/autodl-tmp/`。完整文件夹名的日期和本地日志时间存在差异，检索以文件夹名为准，不自行改名。
+下表结果目录均在 `day4-actionchunk-test/results/`，远端对应 `<remote-root>/`。完整文件夹名的日期和本地日志时间存在差异，检索以文件夹名为准，不自行改名。
 
 | 实验目录 | 结果及解释 |
 | --- | --- |
@@ -88,13 +88,13 @@ v5对 `/World/Franka/` 下RigidBodyAPI prim添加PhysxContactReportAPI，阈值0
 
 ```powershell
 cd E:\learning\project\thesis\day4-actionchunk-test
-scp -P 23636 day4-wrist-ik-execution-v5.py run-wrist-ik-execution-v5.sh wrist-ik-execution-v5-files.json root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
+scp -P 23636 day4-wrist-ik-execution-v5.py run-wrist-ik-execution-v5.sh wrist-ik-execution-v5-files.json <server>:<remote-root>/
 ```
 
 远端Bash运行：
 
 ```bash
-bash /root/autodl-tmp/run-wrist-ik-execution-v5.sh
+bash <remote-root>/run-wrist-ik-execution-v5.sh
 ```
 
 按实际输出DOWNLOAD_DIR下载整个结果目录到本地results，不预猜时间戳。下载后优先检查：
@@ -104,7 +104,7 @@ bash /root/autodl-tmp/run-wrist-ik-execution-v5.sh
 3. 若有明确接触证据，针对该接触修正路径或几何，再验证；若没有，保留不确定性，审查控制与动力学配置，避免继续无依据调参。
 4. 空载路径通过后再接回带布料折叠；必须单独验证释放后的形状和稳定性，再回到Day4正式验收。
 
-环境：远端Python `/root/autodl-tmp/envs/isaac40/bin/python`，Isaac Sim4.0、Torch CUDA。依赖已有远端参考结果 `day4-l1-hem-fold-20261026-061530-144501` 的 `01_grasp.npz` 与 `fold_definition.npz`，保留它们。
+环境：远端Python `<remote-root>/envs/isaac40/bin/python`，Isaac Sim4.0、Torch CUDA。依赖已有远端参考结果 `day4-l1-hem-fold-20261026-061530-144501` 的 `01_grasp.npz` 与 `fold_definition.npz`，保留它们。
 
 ## 7. 更早的折叠背景与文件入口
 

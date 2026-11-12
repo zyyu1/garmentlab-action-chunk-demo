@@ -131,7 +131,7 @@ Day 2 发现原始 garment 顶点有 9945 个，但 policy 输入不能是 9945 
 
 **4. 为什么删除 `.gitignore` 里的 `envs/`**
 
-merge 时从 GitHub 那版继承了 `envs/`，原意是忽略虚拟环境目录。但我们项目的 `envs/` 是源码（`difficulty.py`），而虚拟环境在 `/root/autodl-tmp/envs/isaac40`，不冲突。所以删掉这个忽略规则。
+merge 时从 GitHub 那版继承了 `envs/`，原意是忽略虚拟环境目录。但我们项目的 `envs/` 是源码（`difficulty.py`），而虚拟环境在 `<remote-root>/envs/isaac40`，不冲突。所以删掉这个忽略规则。
 
 ------
 

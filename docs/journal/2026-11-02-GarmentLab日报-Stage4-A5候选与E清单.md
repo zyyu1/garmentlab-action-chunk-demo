@@ -12,16 +12,16 @@
 
 **采集与评价。** 末个公开 OPEN 完成、机械臂已退让时定义 step 0，立即读数。以实测 dt=1/60 s 逐物理步采集至 step 330。记录绝对物理步、仿真时间、441 点顶点、实际 backend holding、三槽 attachment_enabled 及 gripper_open。C 的 3 s / 4 s 保持快照与帧 180 / 240 对应。final.npz 对应第 330 帧。有时钟跳步或读取错误时保留 partial_trace.npz、视频、状态与错误日志。冻结的 B v1.0.0 几何和稳定阈值原样使用，几何检查覆盖 210–330 共 121 帧；释放状态覆盖全部 331 帧。B 的 held 姿态读数来自释放前 robot.reach。被拒的有效评价与采集不完整/执行错误分别记账。
 
-**身份。** 候选总 manifest 为 `e9757d20a527b3cd8dbdd119640740e039a8a3f5ba3cb4b7462bdacf230795b8`，59 项。包括初态与折叠依赖、任务路由、B 评价配置及代码、两档候选 runner、C 视频采集和离线审计、D 批次与汇总入口。开发与正式使用同一候选入口，由 split、初态身份和冻结回执控制运行范围。远端目录为 /root/autodl-tmp/stage4-a5-rc1/app；顶层 /root/autodl-tmp/run-stage4-formal-batch.sh 已接入候选入口。更改被绑定的代码、配置、初态或任务定义后须重新登记并复验。
+**身份。** 候选总 manifest 为 `e9757d20a527b3cd8dbdd119640740e039a8a3f5ba3cb4b7462bdacf230795b8`，59 项。包括初态与折叠依赖、任务路由、B 评价配置及代码、两档候选 runner、C 视频采集和离线审计、D 批次与汇总入口。开发与正式使用同一候选入口，由 split、初态身份和冻结回执控制运行范围。远端目录为 <remote-root>/stage4-a5-rc1/app；顶层 <remote-root>/run-stage4-formal-batch.sh 已接入候选入口。更改被绑定的代码、配置、初态或任务定义后须重新登记并复验。
 
 ## 1. 有卡开发复验
 
 当前已远端核对 59/59 项和全部 7 个开发输入。无卡实例未检测到 GPU 设备。以下开发命令应在有卡模式运行。使用新的开发账本目录，并保留所有已开始、失败及部分结果。
 
 ```bash
-cd /root/autodl-tmp/stage4-a5-rc1/app
-PY=/root/autodl-tmp/envs/isaac40/bin/python
-J=/root/autodl-tmp/stage4-a5-rc1-dev-ledger
+cd <remote-root>/stage4-a5-rc1/app
+PY=<remote-root>/envs/isaac40/bin/python
+J=<remote-root>/stage4-a5-rc1-dev-ledger
 "$PY" a5_entry.py preflight
 "$PY" a5_entry.py dev-batch --journal "$J"
 "$PY" a5_entry.py verify-dev --journal "$J"
@@ -47,9 +47,9 @@ J=/root/autodl-tmp/stage4-a5-rc1-dev-ledger
 - 下载并保留全部初态、完整结果、尝试日志（含未结束记录）、失败视频、manifest 和两个 release 文件。检查 120 个唯一 seed×模式槽位、逐档不少于 5 条正式成功和最终接口隔离；空档用 null，缺失结果按 error，拒绝率=(rejected+error)/attempts。
 
 ```bash
-cd /root/autodl-tmp
+cd <remote-root>
 STAGE4_FORMAL_RELEASE=A_B_C_FROZEN bash run-stage4-formal-batch.sh stage4-heldout-seeds.json formal-a5
-"$PY" /root/autodl-tmp/stage4-a5-rc1/app/a5_report.py /root/autodl-tmp/stage4-formal-batch-formal-a5 /root/autodl-tmp /root/autodl-tmp/stage4-a5-rc1/app/E_RELEASE.json
+"$PY" <remote-root>/stage4-a5-rc1/app/a5_report.py <remote-root>/stage4-formal-batch-formal-a5 <remote-root> <remote-root>/stage4-a5-rc1/app/E_RELEASE.json
 ```
 
 本地合成联测覆盖 L1/L2/L3 × single/arc4 六种组合，从公开 OPEN 目标、实际采样、视频解码、双保持样本，到冻结评价器的 121 帧检查；合成样例不能取得真实运行资格。跳步注入只留下部分轨迹。原 B 的 13 项评价器测试通过。尚待真实 Isaac 验证的关键风险为释放后退让路径、视频观测效果、真实控制期间状态一致性及稳定窗口保持。

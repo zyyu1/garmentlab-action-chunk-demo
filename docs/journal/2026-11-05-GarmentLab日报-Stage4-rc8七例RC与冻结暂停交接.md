@@ -88,9 +88,9 @@ RC8 绑定的部分是好的：`a5_entry.py` 的 `preflight/gate/freeze/run` 读
 
 - 冻结/门禁（RC8，**当前不应执行**，因正式入口未修）：
   ```bash
-  cd /root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc8/app
-  /root/autodl-tmp/envs/isaac40/bin/python a5_entry.py freeze --journal /root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc8-runs/journal
-  /root/autodl-tmp/envs/isaac40/bin/python a5_entry.py gate
+  cd <remote-root>/a5-rc2-pfs1-observation-v2-rc8/app
+  <remote-root>/envs/isaac40/bin/python a5_entry.py freeze --journal <remote-root>/a5-rc2-pfs1-observation-v2-rc8-runs/journal
+  <remote-root>/envs/isaac40/bin/python a5_entry.py gate
   ```
 - 正式批次（**未启动**，需先冻结）：
   ```bash

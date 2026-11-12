@@ -2,17 +2,17 @@
 
 最新审查：v7（20261031-063759-844425）已自动下载并核验12份源码、133步网格、314帧视频和457条持布tick日志；arc25材料附件误差10.451mm超界停止，未OPEN。降低块线速度到1/3未解决超界，停止速度系数扫描，不提高界限、不原样重跑。侧边单点分支未取得可执行完整候选，正式成功0；回到最小L1要求重新评估抓取模型与expert可行性，暂无新实验。详见day4-actionchunk-test/results/day4-minimum-half-fold-20261031-063759-844425/pilot_review.md。
 
-最新待运行：v6误差拆分为末端6.792mm、块0.570mm、材料附件10.119mm。已准备v7：仅将持布辅助块线速度指令乘1/3（含有效cap降至0.1m/s），路径、抓点、物理和10mm界限不变；新增逐tick误差时序。本地验证及远端12份哈希通过，未启动实验。运行bash /root/autodl-tmp/run-minimum-half-fold-v7.sh。见day4-actionchunk-test/SLOW_BLOCK_V7.md。
+最新待运行：v6误差拆分为末端6.792mm、块0.570mm、材料附件10.119mm。已准备v7：仅将持布辅助块线速度指令乘1/3（含有效cap降至0.1m/s），路径、抓点、物理和10mm界限不变；新增逐tick误差时序。本地验证及远端12份哈希通过，未启动实验。运行bash <remote-root>/run-minimum-half-fold-v7.sh。见day4-actionchunk-test/SLOW_BLOCK_V7.md。
 
 最新审查：v6（20261031-062447-146263）已自动下载，12份源码哈希、130步连续记录、313帧视频通过。侧边单点1547生效，但hem_low_arc_24时锚点残差10.119mm超过10mm诊断界限；未OPEN，不能评价折叠保持，也不能仅凭略超界认定数值发散。完成30动作，正式成功0。先离线区分目标/末端/块/材料误差，不放宽界限或原样重跑。详见day4-actionchunk-test/results/day4-minimum-half-fold-20261031-062447-146263/pilot_review.md。
 
-最新待运行：依据实际网格上下高度区域连接，已准备v6侧边下摆单点抓取（1547，仿真适配层内部固定资产oracle）；仅改抓取位置，保留v5路径公式/物理/释放。12份源码哈希已远端核验，未启动实验。运行bash /root/autodl-tmp/run-minimum-half-fold-v6.sh，结束后自动下载。详见day4-actionchunk-test/SIDE_HEM_V6.md。
+最新待运行：依据实际网格上下高度区域连接，已准备v6侧边下摆单点抓取（1547，仿真适配层内部固定资产oracle）；仅改抓取位置，保留v5路径公式/物理/释放。12份源码哈希已远端核验，未启动实验。运行bash <remote-root>/run-minimum-half-fold-v6.sh，结束后自动下载。详见day4-actionchunk-test/SIDE_HEM_V6.md。
 
 最新材料审查：v5释放前左/中/右越线约80.1%/71.1%/80.0%，并非仅中心移动；初始上/下层越线88.8%/61.7%，下层高度中位数83.6mm。抓点仅锚定上层；空间相邻下层点相距19.7mm且网格路径34条边。下一步离线定位实际下摆/侧缝连通边，评估能带动两层的抓取语义；不直接刚性绑两点，不扫描锚点数量或高度，不启动新实验。报告：day4-actionchunk-test/results/day4-minimum-half-fold-20261031-060323-618705/material_coverage_review.md。
 
 最新审查：v5结果20261031-060323-618705已自动下载。11份源码哈希、340步记录和642帧视频通过，实际单锚点6174，最大跟随误差9.196mm。折线带抬升减小，但释放前源材料z中位数68.67mm、近层比例18.28%、速度P95 0.375m/s；原地释放回移501.76mm，越线比例0。单点抓取未解决折叠，停止锚点数量对照分支，正式成功0；下一步先离线核对材料任务几何和单点搬运覆盖，暂无新实验。详见day4-actionchunk-test/results/day4-minimum-half-fold-20261031-060323-618705/pilot_review.md。
 
-最新状态：用户已明确授权后续自动上传本任务所需实验文件；此前自动下载授权继续有效。v5四份新文件已上传至nmb2:23636的/root/autodl-tmp，服务器11份依赖哈希全部通过（V5_REMOTE_MANIFEST_OK 11）。尚未启动实验。下一步运行bash /root/autodl-tmp/run-minimum-half-fold-v5.sh；结束后由助手下载结果。
+最新状态：用户已明确授权后续自动上传本任务所需实验文件；此前自动下载授权继续有效。v5四份新文件已上传至nmb2:23636的<remote-root>，服务器11份依赖哈希全部通过（V5_REMOTE_MANIFEST_OK 11）。尚未启动实验。下一步运行bash <remote-root>/run-minimum-half-fold-v5.sh；结束后由助手下载结果。
 
 最新准备：v5仅将下摆42点片区改为一个附件点，沿用v4路径和物理。依据为片区铺下仍保持原纵向朝向（斜率+0.984），不是根因定论。一次对照，不扫描锚点数量；本地检查通过，上传被自动审批拒绝，未运行。见day4-actionchunk-test/SINGLE_HEM_ANCHOR_V5.md。
 
@@ -25,10 +25,6 @@
 以下保留此前记录，状态以本段为准。
 
 最新进度（2026-10-30）：有界终段v2也失败。一次20mm调整后支撑簇累计漂移92.35mm，触发边界；释放前仍未收敛。停止扩大追踪范围或次数，暂不改bend。下一步离线复查更早搬运阶段固定半片拖动与实际材料折线；无新实验待运行。完整审查见day4-actionchunk-test/results/day4-minimum-half-fold-20261031-045719-273006/pilot_review.md。
-
-## 当前实例（2026-10-30 更新）
-
-用户指定新实例：`ssh -p 23636 root@connect.nmb2.seetacloud.com`，替代此前nmb1:22895。助手只读连接到SSH服务，但非交互认证失败（publickey,password），环境及磁盘尚未核实。后续上传/下载命令使用新地址，由用户已认证的终端执行；不在聊天发送密码。当前未启动新实验，先核实新实例的Python、Backend及GarmentLab目录。
 
 2026-10-26。用户明确恢复并指定本计划，覆盖旧暂停及扩展要求。旧计划已归档2026-10-26-GarmentLab日报-Stage4-最低验收前下一步.md。
 
@@ -79,8 +75,3 @@
 - [ ] 最后检查公共action/Backend隔离，更新日报/验收表，结束Day4。
 
 当前正式成功0。多槽位生命周期通过；单次真实折叠是当前最大不确定性，后续工作围绕它收敛。
-
-
-## 结果下载授权（2026-10-30）
-
-用户明确授权后续自动下载所需实验结果。当前ssh -o BatchMode=yes -p 23636 root@connect.nmb2.seetacloud.com已实际认证通过。后续由助手通过scp下载相关完整结果目录到day4-actionchunk-test/results，不再重复要求用户手动下载或确认；下载后核验产物。此授权不等于在后台持续轮询，也不单独授权启动新实验。

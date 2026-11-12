@@ -33,17 +33,17 @@ Day 2 判定：**Go，不切 NVIDIA Warp fallback**。
 | 驱动                 | 580.105.08                                                   |
 | nvidia-smi 显示 CUDA | 13.0（驱动支持版本）                                         |
 | Isaac Sim            | 4.0.0.0                                                      |
-| Python venv          | `/root/autodl-tmp/envs/isaac40`                              |
+| Python venv          | `<remote-root>/envs/isaac40`                              |
 | venv 里 `bin/python` | 符号链接 → `/root/miniconda3/bin/python`（正常 venv 行为，非污染） |
-| GarmentLab           | `/root/autodl-tmp/garmentlab_workspace/GarmentLab`           |
-| 项目收口目录         | `/root/autodl-tmp/garmentlab-action-chunk-demo`              |
+| GarmentLab           | `<remote-root>/garmentlab_workspace/GarmentLab`           |
+| 项目收口目录         | `<remote-root>/garmentlab-action-chunk-demo`              |
 | GitHub 仓库          | https://github.com/zyyu1/garmentlab-action-chunk-demo （Private） |
 | 模式                 | `headless=True`，需要 GPU 开机                               |
 
 环境验证输出：
 
 ```text
-which python → /root/autodl-tmp/envs/isaac40/bin/python
+which python → <remote-root>/envs/isaac40/bin/python
 isaacsim 4.0.0.0
 torch 2.2.2+cu121
 numpy 1.26.4
@@ -64,11 +64,11 @@ No broken requirements found.
 
 - 确认 `envs/isaac40` 和 `isaacsim_env` 里的 `bin/python` 都是指向 miniconda 的符号链接，是正常 venv 行为，不是环境污染。
 - 移出 GarmentLab 仓库外的多余目录（未删除，先 relocation）：
-  - `isaacsim_env/` 7.2 G → `/root/autodl-tmp/relocated/isaacsim_env_from_garmentlab`
-  - `pip_cache/` 3.7 G → `/root/autodl-tmp/relocated/pip_cache_from_garmentlab`
-  - `isaacsim_install.log` → `/root/autodl-tmp/relocated/isaacsim_install.log`
+  - `isaacsim_env/` 7.2 G → `<remote-root>/relocated/isaacsim_env_from_garmentlab`
+  - `pip_cache/` 3.7 G → `<remote-root>/relocated/pip_cache_from_garmentlab`
+  - `isaacsim_install.log` → `<remote-root>/relocated/isaacsim_install.log`
 - `Control.py.before-loop-fix` 移出 GarmentLab，归档到：
-  - `/root/autodl-tmp/garmentlab-action-chunk-demo/third_party/backups/Control.py.before-loop-fix`
+  - `<remote-root>/garmentlab-action-chunk-demo/third_party/backups/Control.py.before-loop-fix`
 
 ### GarmentLab 三处适配改动（确认与提交）
 
@@ -77,7 +77,7 @@ No broken requirements found.
 ```diff
 # Env/Config/SceneConfig.py
 - room_usd_path="/home/user/GarmentLab/Assets/Scene/FlatGrid.usd"
-+ room_usd_path="/root/autodl-tmp/garmentlab_workspace/GarmentLab/Assets/Scene/FlatGrid.usd"
++ room_usd_path="<remote-root>/garmentlab_workspace/GarmentLab/Assets/Scene/FlatGrid.usd"
 
 # Env/env/Control.py  move() 循环
   cur_step=0
@@ -90,7 +90,7 @@ No broken requirements found.
 - simulation_app = SimulationApp({"headless": False,"muti_gpu":False})
 + simulation_app = SimulationApp({"headless": True,"multi_gpu":False})
 - sys.path.append("/home/user/GarmentLab/")
-+ sys.path.append("/root/autodl-tmp/garmentlab_workspace/GarmentLab/")
++ sys.path.append("<remote-root>/garmentlab_workspace/GarmentLab/")
 ```
 
 补丁已保存：`third_party/autodl_adaptations.patch`（47 行）。
@@ -150,7 +150,7 @@ files    : 36 (含 runs/2026-10-13-third-grasp/ 全部 PNG + npy + log)
 ### 项目仓库
 
 ```text
-/root/autodl-tmp/garmentlab-action-chunk-demo/
+<remote-root>/garmentlab-action-chunk-demo/
 ├── .gitignore
 ├── README.md
 ├── environment_log.md
@@ -186,13 +186,13 @@ files    : 36 (含 runs/2026-10-13-third-grasp/ 全部 PNG + npy + log)
 原始输出目录仍保留在：
 
 ```text
-/root/autodl-tmp/fold-third-grasp-20261013-214507-737595/
+<remote-root>/fold-third-grasp-20261013-214507-737595/
 ```
 
 ### 移出暂存
 
 ```text
-/root/autodl-tmp/relocated/
+<remote-root>/relocated/
 ├── isaacsim_env_from_garmentlab/      7.2 G（早期误建 venv，未被引用）
 ├── pip_cache_from_garmentlab/         3.7 G（pip 缓存）
 └── isaacsim_install.log
@@ -211,7 +211,7 @@ files    : 36 (含 runs/2026-10-13-third-grasp/ 全部 PNG + npy + log)
 5. **旧 4090 实例状态未知**：9/30 的 `fold-action-output/` 未找回；先不追，除非确认要作对照。
 6. **FlatGrid 部分纹理引用 `omniverse://localhost`**：日志报告缺失；当前测试通过，先不动。
 7. **GLFW / USD 引用计数 / NGX 警告**：headless 下正常噪声，忽略。
-8. **硬编码路径**：`FoldEnv.py`、`SceneConfig.py` 里仍是 `/root/autodl-tmp/...`，Day 3 写 `GarmentLabBackend` 时统一配置化。
+8. **硬编码路径**：`FoldEnv.py`、`SceneConfig.py` 里仍是 `<remote-root>/...`，Day 3 写 `GarmentLabBackend` 时统一配置化。
 9. **`runs/` 里的 npy 已进 Git**：当前规模可接受，Day 5 生成大量 demonstrations 时需重新评估是否切换为 Git LFS 或排除。
 10. **GitHub 仓库为 Private**：Day 9 做视频和 mini report 时再决定是否公开给 Marian。
 
@@ -245,11 +245,11 @@ envs/difficulty.py               三档初态占位（Day 4 实现）
 ### Day 3 开工时先做的事
 
 ```bash
-cd /root/autodl-tmp/garmentlab-action-chunk-demo
+cd <remote-root>/garmentlab-action-chunk-demo
 git log --oneline -5
 git status --short
 
-cd /root/autodl-tmp/garmentlab_workspace/GarmentLab
+cd <remote-root>/garmentlab_workspace/GarmentLab
 git log --oneline -3
 git tag
 ```

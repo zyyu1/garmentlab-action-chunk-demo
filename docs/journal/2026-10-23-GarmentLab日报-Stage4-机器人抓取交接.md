@@ -16,7 +16,7 @@
 - `GARMENTLAB_ATTACHMENT_OVERLAP=0.005`。
 - `GARMENTLAB_DISABLED_ATTACHMENT_PROBE=0`。
 
-用户已确认执行了最后的成功版本保存命令。实际保存目录名为 `/root/autodl-tmp/day4-passed-grasp-<时间戳>`，未回传完整名称，下次需要列目录核对。
+用户已确认执行了最后的成功版本保存命令。实际保存目录名为 `<remote-root>/day4-passed-grasp-<时间戳>`，未回传完整名称，下次需要列目录核对。
 
 **这不是完整折叠成功，也不是通用或重复抓取通过。** 尚未验证换点抓取、完整 ActionChunk 接口、独立 episode reset、难度协议和折叠效果。附着开启时仍有约 24.20 mm 的最大单步顶点位移，只是低于当前 30 mm 诊断阈值，不能据此认定物理效果足够平滑。
 
@@ -27,7 +27,7 @@
 | 项目 | 当前值 |
 |---|---|
 | SSH 别名 | `autodl-garmentlab-264` |
-| SSH 命令 | `ssh -p 22895 root@connect.nmb1.seetacloud.com` |
+| SSH 命令 | `ssh -p 22895 <server>` |
 | 容器 | `autodl-container-7dde4b87a0-ea1fac3d` |
 | GPU | NVIDIA GeForce RTX 4090，24564 MiB |
 | 驱动 | 580.76.05 |
@@ -35,10 +35,10 @@
 | Python | 3.10.8 |
 | Isaac Sim | 4.0.0.0 |
 | NumPy | 1.26.4 |
-| Python 路径 | `/root/autodl-tmp/envs/isaac40/bin/python` |
+| Python 路径 | `<remote-root>/envs/isaac40/bin/python` |
 | 数据盘最近检查 | 50G，已用 34G，可用约 17G；后续产生了更多日志，需复查 |
 
-过期实例：17195 / connect.nmb2.seetacloud.com 是前一天的 RTX 3090；16629、18117 也都是更早实例。恢复时不要混用。
+过期实例：17195 / <server> 是前一天的 RTX 3090；16629、18117 也都是更早实例。恢复时不要混用。
 
 时间注意：这次工作按 10 月 23 日日报归档，但 AutoDL 终端本地时间跨入了 10 月 24 日。最后结果目录仍带 `20261023-235941`，对应的附着快照带 `20261024-000327`。Kit 日志时间与目录时间也存在时区差异，不代表数据错配。
 
@@ -47,14 +47,14 @@
 ### 3.1 两个代码目录都需要保留
 
 1. GarmentLab 上游适配仓库：
-   `/root/autodl-tmp/garmentlab_workspace/GarmentLab`
+   `<remote-root>/garmentlab_workspace/GarmentLab`
 2. 正式 backend 仓库：
-   `/root/autodl-tmp/garmentlab-action-chunk-demo`
+   `<remote-root>/garmentlab-action-chunk-demo`
 
 今天开始时正式项目 HEAD 为 `233771e`（main，Day4 WIP）；origin/main 为 `2307770`，更早为 `de104ba`。今天没有确认新 commit 或 push，不能只靠 Git 提交恢复所有改动。
 
 衣物资源：
-`/root/autodl-tmp/garmentlab_workspace/GarmentLab/Assets/Garments/Tops/NoCollar_LSleeve_FrontClose/TNLC_Dress057/TNLC_Dress057_obj.usd`
+`<remote-root>/garmentlab_workspace/GarmentLab/Assets/Garments/Tops/NoCollar_LSleeve_FrontClose/TNLC_Dress057/TNLC_Dress057_obj.usd`
 
 ### 3.2 本地交付材料
 
@@ -81,13 +81,13 @@
 
 ### 4.1 BaseEnv.py：启用 Torch/CUDA
 
-路径：`/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/BaseEnv.py`
+路径：`<remote-root>/garmentlab_workspace/GarmentLab/Env/env/BaseEnv.py`
 
 World 初始化为 `World(backend="torch", device="cuda:0")`。已验证 GPU pipeline 开启。此前 NumPy frontend + GPU pipeline 会直接报错，因此不要退回 NumPy 来绕过夹爪兼容问题。
 
 ### 4.2 MyFranka.py：CPU 控制接口与 CUDA 物理状态适配
 
-路径：`/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py`
+路径：`<remote-root>/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py`
 
 主要改动：
 
@@ -104,7 +104,7 @@ World 初始化为 `World(backend="torch", device="cuda:0")`。已验证 GPU pip
 
 ### 4.3 Control.py：方块的 GPU 读写基础适配
 
-路径：`/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/Control.py`
+路径：`<remote-root>/garmentlab_workspace/GarmentLab/Env/env/Control.py`
 
 - 创建时通过 PhysxRigidBodyAPI 显式设置禁用重力。
 - `initialize_physics()` 要求 playing timeline，初始化 rigid view 并检查 count。
@@ -114,7 +114,7 @@ World 初始化为 `World(backend="torch", device="cuda:0")`。已验证 GPU pip
 
 ### 4.4 garmentlab_backend.py：严格世界坐标与可选接入
 
-路径：`/root/autodl-tmp/garmentlab-action-chunk-demo/backends/garmentlab_backend.py`
+路径：`<remote-root>/garmentlab-action-chunk-demo/backends/garmentlab_backend.py`
 
 - 首次 env.reset 后初始化 ClothPrimView，检查 GPU pipeline、timeline 和衣物数量。
 - `_garment_world_positions()` 严格从物理 view 读 `(1,N,3)`，转换为 NumPy `(N,3)`；不再静默回退到局部 USD 顶点。
@@ -129,7 +129,7 @@ World 初始化为 `World(backend="torch", device="cuda:0")`。已验证 GPU pip
 
 ### 4.5 prepared_grasp_control.py：本次成功的实验控制器
 
-路径：`/root/autodl-tmp/garmentlab-action-chunk-demo/backends/prepared_grasp_control.py`
+路径：`<remote-root>/garmentlab-action-chunk-demo/backends/prepared_grasp_control.py`
 
 - 独立约束路径 `/World/AttachmentConstraints/prepared_grasp`；方块留在 `/World/Attachment/attach/block`。
 - reset 前预创建方块及关闭的约束。
@@ -242,23 +242,23 @@ NPZ 离线比较确认开启前所有顶点位置差异为 0、方块位置差�
 
 ### 6.1 最终通过脚本与结果
 
-- 脚本：`/root/autodl-tmp/day4-prepared-robot-staged-test.py`
-- 输出：`/root/autodl-tmp/day4-prepared-robot-staged-20261023-235941-421084/`
+- 脚本：`<remote-root>/day4-prepared-robot-staged-test.py`
+- 输出：`<remote-root>/day4-prepared-robot-staged-20261023-235941-421084/`
 - 结果：上述目录内 `result.json`
 - 快照：`00_settled.npz`、`01_approach.npz`、`01b_before_close.npz`、`02_grasp.npz`、`03_lift.npz`、`04_release.npz`
-- 最终附着快照：`/root/autodl-tmp/attachment-enable-jump-20261024-000327-135229.npz`
-- 最终日志：`/root/autodl-tmp/day4-overlap5mm-*.log`，完整时间戳需查目录。
+- 最终附着快照：`<remote-root>/attachment-enable-jump-20261024-000327-135229.npz`
+- 最终日志：`<remote-root>/day4-overlap5mm-*.log`，完整时间戳需查目录。
 
 快照包含顶点、tracked_indices、方块位置、末端位置与四元数。当前测试没有输出新的 RGB 图或视频。用户所确认保存的成功目录名称待下次核对。
 
 ON/OFF 对照：
 
-- ON：`/root/autodl-tmp/attachment-enable-jump-20261023-235053-159190.npz`
-- OFF：`/root/autodl-tmp/attachment-enable-jump-20261023-235602-926792.npz`
+- ON：`<remote-root>/attachment-enable-jump-20261023-235053-159190.npz`
+- OFF：`<remote-root>/attachment-enable-jump-20261023-235602-926792.npz`
 
 ### 6.2 主要辅助测试脚本
 
-均位于 `/root/autodl-tmp/`：
+均位于 `<remote-root>/`：
 
 - `day4-cloth-view-probe.py`
 - `day4-backend-world-io-test.py`
@@ -279,12 +279,12 @@ ON/OFF 对照：
 今天已通过，不需为了日报再次运行。下次在核对文件和 GPU 后按需使用：
 
 ```bash
-run_log="/root/autodl-tmp/day4-overlap5mm-$(date +%Y%m%d-%H%M%S).log"
+run_log="<remote-root>/day4-overlap5mm-$(date +%Y%m%d-%H%M%S).log"
 GARMENTLAB_ATTACHMENT_OVERLAP=0.005 \
 GARMENTLAB_DISABLED_ATTACHMENT_PROBE=0 \
-/root/autodl-tmp/envs/isaac40/bin/python \
+<remote-root>/envs/isaac40/bin/python \
   -X faulthandler -u \
-  /root/autodl-tmp/day4-prepared-robot-staged-test.py \
+  <remote-root>/day4-prepared-robot-staged-test.py \
   --allow-root 2>&1 | tee "$run_log"
 run_status=("${PIPESTATUS[@]}")
 printf 'PYTHON_EXIT=%s TEE_EXIT=%s\n' \
@@ -325,11 +325,11 @@ printf 'PYTHON_EXIT=%s TEE_EXIT=%s\n' \
 ```bash
 hostname
 nvidia-smi
-df -h /root/autodl-tmp
-git -C /root/autodl-tmp/garmentlab-action-chunk-demo status --short
-git -C /root/autodl-tmp/garmentlab_workspace/GarmentLab status --short
-ls -dt /root/autodl-tmp/day4-passed-grasp-*
-cat /root/autodl-tmp/day4-prepared-robot-staged-20261023-235941-421084/result.json
+df -h <remote-root>
+git -C <remote-root>/garmentlab-action-chunk-demo status --short
+git -C <remote-root>/garmentlab_workspace/GarmentLab status --short
+ls -dt <remote-root>/day4-passed-grasp-*
+cat <remote-root>/day4-prepared-robot-staged-20261023-235941-421084/result.json
 ```
 
 确认成功备份存在并补存 GarmentLab 的三个适配文件；如克隆了实例，不要只核对 commit，因为关键内容可能尚未提交。

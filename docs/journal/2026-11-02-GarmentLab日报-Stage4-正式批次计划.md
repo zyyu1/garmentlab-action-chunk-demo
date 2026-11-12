@@ -53,11 +53,11 @@
 ```powershell
 cd E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test
 python -c "import pathlib; src=pathlib.Path('.'); dst=pathlib.Path('../upload-20261102'); dst.mkdir(exist_ok=True); [ (dst/f).write_bytes((src/f).read_bytes().replace(b'\r\n', b'\n')) for f in ['square-initial-files.json','square-initial-stripfold-files.json'] ]"
-scp -P 23636 ..\upload-20261102\square-initial-files.json ..\upload-20261102\square-initial-stripfold-files.json root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
+scp -P 23636 ..\upload-20261102\square-initial-files.json ..\upload-20261102\square-initial-stripfold-files.json <server>:<remote-root>/
 ```
 
 ```bash
-cd /root/autodl-tmp && /root/autodl-tmp/envs/isaac40/bin/python - <<'PY'
+cd <remote-root> && <remote-root>/envs/isaac40/bin/python - <<'PY'
 import json,hashlib
 from pathlib import Path
 for mf in ('square-initial-files.json','square-initial-stripfold-files.json'):
@@ -95,11 +95,11 @@ PY
 合计 60 个初态、120 次折叠尝试。驱动脚本按 seed 生成/复用初态，再依次跑 single、arc4；折叠失败不中断批次、不覆盖旧结果，**没有结果目录则视为基础设施错误并停止**（其余数据不可比）。
 
 ```bash
-cd /root/autodl-tmp
+cd <remote-root>
 bash run-stage4-formal-batch.sh stage4-heldout-seeds.json formal-v1
 ```
 
-`stage4-heldout-seeds.json` 已在第 2 节的上传列表中；批次状态写 `/root/autodl-tmp/stage4-formal-batch-formal-v1/`：`attempts.jsonl`（每次尝试一行）、`init_dirs.txt`、逐例日志。
+`stage4-heldout-seeds.json` 已在第 2 节的上传列表中；批次状态写 `<remote-root>/stage4-formal-batch-formal-v1/`：`attempts.jsonl`（每次尝试一行）、`init_dirs.txt`、逐例日志。
 
 ## 4. 拒绝率与汇总口径
 

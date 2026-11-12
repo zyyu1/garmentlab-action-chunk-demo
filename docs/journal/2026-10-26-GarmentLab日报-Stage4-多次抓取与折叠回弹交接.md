@@ -16,19 +16,19 @@
 
 ## 2. 当前环境与操作方式
 
-- 当前SSH：`ssh -p 22895 root@connect.nmb1.seetacloud.com`。
+- 当前SSH：`ssh -p 22895 <server>`。
 - 最近截图容器：`autodl-container-7dde4b87a0-ea1fac3d`，VS Code别名`autodl-garmentlab-264`。
-- 原430实例地址`connect.nmb2.seetacloud.com:23636`不再用于后续命令。旧日报中nmb1/22895曾是失效地址，但用户本轮明确重新提供，现以本轮为准。
+- 原430实例地址`<server>`不再用于后续命令。旧日报中nmb1/22895曾是失效地址，但用户本轮明确重新提供，现以本轮为准。
 - 助手对新实例只读SSH可达，但认证失败（publickey,password）；远端由用户在PowerShell上传/下载、VS Code远程Bash运行。不要声称助手直接登录运行了GPU实验，也不要求用户在聊天发送密码。
-- 远端Python：`/root/autodl-tmp/envs/isaac40/bin/python`，Isaac Sim4.0/Torch CUDA。GPU型号及当前磁盘余量未重新核查，不沿用旧截图当成新实例实测。
-- 项目：`/root/autodl-tmp/garmentlab-action-chunk-demo`；GarmentLab：`/root/autodl-tmp/garmentlab_workspace/GarmentLab`。
+- 远端Python：`<remote-root>/envs/isaac40/bin/python`，Isaac Sim4.0/Torch CUDA。GPU型号及当前磁盘余量未重新核查，不沿用旧截图当成新实例实测。
+- 项目：`<remote-root>/garmentlab-action-chunk-demo`；GarmentLab：`<remote-root>/garmentlab_workspace/GarmentLab`。
 - 本地开发目录：`E:/learning/project/thesis/day4-actionchunk-test`，结果在其`results/`。
 
 本次仅暂停工作。没有执行远程关机、停止实例计费、Git提交/推送或安排自动继续；云实例当前运行/计费状态未核查。
 
 ## 3. 本轮远端结果索引
 
-下表短名均位于远端`/root/autodl-tmp/`，已下载项本地为`day4-actionchunk-test/results/<目录名>/`。
+下表短名均位于远端`<remote-root>/`，已下载项本地为`day4-actionchunk-test/results/<目录名>/`。
 
 |目录名|阶段与最终解释|
 |---|---|

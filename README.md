@@ -157,3 +157,12 @@ python scripts/reproduce_figures.py
 ### 目录说明
 
 展示目录见上方完整目录树。保留既有源码及历史证据；额外收录 `results/summary.json`，使失败分类可独立复现。完整 60 秒 MP4 托管于 GitHub Release；可选 GIF 本次未收录。源码入口：[Backend](backends/)、[schema](schemas/)、[实验代码](day4-actionchunk-test/)。
+
+### 开发日志 / Project log
+
+完整日报与交接日志已按日期归档到 [docs/journal/INDEX.md](docs/journal/INDEX.md)；公开版本已对服务器地址与远端路径做脱敏。开发日志记录失败、回滚与冻结决策，里程碑报告如下：
+
+- [Stage 4 最低验收通过（2026-11-06）](docs/journal/2026-11-06-GarmentLab日报-Stage4-最低验收通过交接.md)
+- [Stage 5 缩减版 50/10/10 与离线训练、Stage 6/7（2026-11-08）](docs/journal/2026-11-08-GarmentLab日报-Stage5缩减版与Stage6-7.md)
+- [Stage 8 缩减 30 例与 Stage 9/10 展示（2026-11-09）](docs/journal/2026-11-09-GarmentLab日报-Stage8缩减30与Stage9-10展示.md)
+- [文档规范化与日报补全（2026-11-12）](docs/journal/2026-11-12-GarmentLab日报-文档规范化与日报补全.md)

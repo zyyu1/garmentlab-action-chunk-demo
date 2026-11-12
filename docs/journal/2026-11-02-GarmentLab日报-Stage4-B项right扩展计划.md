@@ -46,7 +46,7 @@ v1 把两个初态目录名写死在配置里；扩展批的目录要等生成�
 
 1. 批次为每个 seed 运行一次 `run-square-initial-stripfold.sh`，从输出取得结果目录；
 2. 校验该目录的 `result.json`：`passed=true`、seed 与 level 等于登记值；
-3. 计算 `result.json` 与 `initial_geometry.npz` 的 SHA256，追加写入 `/root/autodl-tmp/stage4-b-right-dev-v2-initials.json`（只追加，不改旧条目，原子替换写入）；
+3. 计算 `result.json` 与 `initial_geometry.npz` 的 SHA256，追加写入 `<remote-root>/stage4-b-right-dev-v2-initials.json`（只追加，不改旧条目，原子替换写入）；
 4. 折叠入口只接受 registry 中出现的目录，并在每次运行前重新核对这两个哈希；内容一变即拒绝运行。
 
 因此初态身份在折叠发生之前就已固定并可复核，批次不能事后替换初态或挑选结果。已登记的 helper 行为已用合成目录离线验证：重复登记幂等、seed 不符拒绝、内容变化拒绝、lookup 与"已完成"判定正确。
@@ -56,13 +56,13 @@ v1 把两个初态目录名写死在配置里；扩展批的目录要等生成�
 **第一步：上传 4 个文件，原样（不做行尾转换）**。A1 修正后 config 为 LF、manifest 为 CRLF；四个文件均按原字节上传，任何行尾转换都会改变登记哈希：
 
 ```powershell
-scp -P 23636 E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-recovery-fold-right-v2.sh E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\stage4-b-right-dev-v2.json E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\square-recovery-fold-right-v2-files.json E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-stage4-b-right-dev-v2-batch.sh root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
+scp -P 23636 E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-recovery-fold-right-v2.sh E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\stage4-b-right-dev-v2.json E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\square-recovery-fold-right-v2-files.json E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-stage4-b-right-dev-v2-batch.sh <server>:<remote-root>/
 ```
 
 **第二步：核对身份**：
 
 ```bash
-cd /root/autodl-tmp && /root/autodl-tmp/envs/isaac40/bin/python - <<'PY'
+cd <remote-root> && <remote-root>/envs/isaac40/bin/python - <<'PY'
 import json,hashlib
 from pathlib import Path
 m=json.loads(Path('square-recovery-fold-right-v2-files.json').read_text())
@@ -86,11 +86,11 @@ PY
 **第三步：跑批次**：
 
 ```bash
-cd /root/autodl-tmp && bash run-stage4-b-right-dev-v2-batch.sh dev-v2
+cd <remote-root> && bash run-stage4-b-right-dev-v2-batch.sh dev-v2
 ```
 
-- 状态与日志：`/root/autodl-tmp/stage4-b-right-dev-v2-dev-v2/`（`batch.log`、`attempts.jsonl`、`init-*.log`、`fold-*.log`）。
-- 初态登记：`/root/autodl-tmp/stage4-b-right-dev-v2-initials.json`。
+- 状态与日志：`<remote-root>/stage4-b-right-dev-v2-dev-v2/`（`batch.log`、`attempts.jsonl`、`init-*.log`、`fold-*.log`）。
+- 初态登记：`<remote-root>/stage4-b-right-dev-v2-initials.json`。
 - 每个 seed 先确认/生成初态，再跑一次 single 折叠。
 - 折叠失败（`passed=false`）只记一行 rejected，继续下一个 seed；**不会自动重试、不会覆盖旧结果**。
 - 初态生成失败或缺结果目录视为基础设施错误，整批停止——此时剩余尝试不可比。
@@ -99,7 +99,7 @@ cd /root/autodl-tmp && bash run-stage4-b-right-dev-v2-batch.sh dev-v2
 **第四步：下载并汇总**（全部跑完后）：
 
 ```powershell
-scp -P 23636 -r root@connect.nmb2.seetacloud.com:/root/autodl-tmp/stage4-b-right-dev-v2-dev-v2 root@connect.nmb2.seetacloud.com:/root/autodl-tmp/stage4-b-right-dev-v2-initials.json E:\learning\project\thesis\day4-actionchunk-test\results\
+scp -P 23636 -r <server>:<remote-root>/stage4-b-right-dev-v2-dev-v2 <server>:<remote-root>/stage4-b-right-dev-v2-initials.json E:\learning\project\thesis\day4-actionchunk-test\results\
 ```
 
 ```powershell

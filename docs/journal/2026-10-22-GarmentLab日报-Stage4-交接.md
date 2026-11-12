@@ -10,26 +10,26 @@
 
 ## 2. 本次实例和连接
 
-- SSH：ssh -p 17195 root@connect.nmb2.seetacloud.com
+- SSH：ssh -p 17195 <server>
 - 建议本地 SSH 别名：autodl-garmentlab-new（是否已采用需核对本机 config）。
 - 容器：autodl-container-c62840940c-f610839c
 - GPU：RTX 3090，24576 MiB。
 - 驱动：580.105.08；nvidia-smi 的 CUDA 13.0 是驱动支持信息。
 - 系统盘：30G，使用 4.1G，可用 26G。
-- 数据盘 /root/autodl-tmp：50G，使用 34G，可用约 17G。
+- 数据盘 <remote-root>：50G，使用 34G，可用约 17G。
 - Python 3.10.8，Isaac Sim 4.0.0.0，NumPy 1.26.4。
 
 旧实例连接仅供辨认，不要误操作：
-- 16629 / connect.nmb1.seetacloud.com：上一台 vGPU 克隆实例。
-- 18117 / connect.nmb1.seetacloud.com：更早的 4090 实例。
+- 16629 / <server>：上一台 vGPU 克隆实例。
+- 18117 / <server>：更早的 4090 实例。
 
 ## 3. 目录和代码基线
 
 远程：
-- GarmentLab：/root/autodl-tmp/garmentlab_workspace/GarmentLab
-- 正式项目：/root/autodl-tmp/garmentlab-action-chunk-demo
-- Python：/root/autodl-tmp/envs/isaac40/bin/python
-- 验证脚本：/root/autodl-tmp/day4-cloth-view-probe.py
+- GarmentLab：<remote-root>/garmentlab_workspace/GarmentLab
+- 正式项目：<remote-root>/garmentlab-action-chunk-demo
+- Python：<remote-root>/envs/isaac40/bin/python
+- 验证脚本：<remote-root>/day4-cloth-view-probe.py
 
 新实例首次检查时正式项目工作区干净：
 - HEAD main：233771e — Day4 WIP: backend world-frame reading + difficulty protocol; ClothPrimView init bug to fix
@@ -80,7 +80,7 @@ TypeError: can't convert cuda:0 device type tensor to numpy.
 
 ### BaseEnv.py
 
-路径：/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/BaseEnv.py
+路径：<remote-root>/garmentlab_workspace/GarmentLab/Env/env/BaseEnv.py
 
 当前预期：
 ```python
@@ -89,7 +89,7 @@ self.world=World(backend="torch", device="cuda:0")
 
 ### MyFranka.py
 
-路径：/root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py
+路径：<remote-root>/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py
 
 已下发的修改：
 - 新增 _cpu_numpy(value)：None 保持 None，Torch 经 detach().cpu().numpy().copy() 转换，其余 np.asarray(...).copy()。
@@ -134,7 +134,7 @@ def __init__(self, *args, **kwargs):
 上段应作为类方法缩进写入，不是独立模块函数。下一位接手者应先检查：
 
 ```bash
-grep -n -A 55 'class CpuPoseFranka' /root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py
+grep -n -A 55 'class CpuPoseFranka' <remote-root>/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py
 ```
 
 若已有 initialize_gripper_cpu，不要重复添加；若没有，先备份，再应用补丁。不要修改 Isaac Sim 的 site-packages。
@@ -152,11 +152,11 @@ grep -n -A 55 'class CpuPoseFranka' /root/autodl-tmp/garmentlab_workspace/Garmen
 退出码 0 单独不足以证明通过。即使通过，这仍只是静态读写测试，不能证明动态仿真、抓取或折叠质量正确。
 
 今天的远程日志：
-- /root/autodl-tmp/day4-cloth-view-probe-new-instance.log
-- /root/autodl-tmp/day4-cloth-view-probe-gpu.log
-- /root/autodl-tmp/day4-cloth-view-probe-numpy-cuda.log
-- /root/autodl-tmp/day4-cloth-view-probe-cuda-compat.log
-- /root/autodl-tmp/day4-cloth-view-probe-gripper-compat.log：仅建议了此路径，是否存在未知。
+- <remote-root>/day4-cloth-view-probe-new-instance.log
+- <remote-root>/day4-cloth-view-probe-gpu.log
+- <remote-root>/day4-cloth-view-probe-numpy-cuda.log
+- <remote-root>/day4-cloth-view-probe-cuda-compat.log
+- <remote-root>/day4-cloth-view-probe-gripper-compat.log：仅建议了此路径，是否存在未知。
 
 补丁脚本生成的备份位于被改文件旁，后缀可能包括：
 - .before-gpu-pipeline-时间戳
@@ -174,14 +174,14 @@ pgrep -af '[d]ay4-cloth-view-probe.py'
 
 建议保存当前两个仓库的差异：
 ```bash
-git -C /root/autodl-tmp/garmentlab_workspace/GarmentLab diff > /root/autodl-tmp/day4-garmentlab-20261022.patch
-git -C /root/autodl-tmp/garmentlab-action-chunk-demo diff > /root/autodl-tmp/day4-backend-20261022.patch
+git -C <remote-root>/garmentlab_workspace/GarmentLab diff > <remote-root>/day4-garmentlab-20261022.patch
+git -C <remote-root>/garmentlab-action-chunk-demo diff > <remote-root>/day4-backend-20261022.patch
 ```
 注意 git diff 不包含未跟踪文件，也不包含已提交但未推送的 233771e；完整备份还应保留两个仓库目录及其 .git、验证脚本、日志。将重要文件下载到本机后，在 AutoDL 控制台选择关机，不要释放或删除实例。
 
 ## 9. 下次无空闲 GPU 时的克隆与恢复
 
-1. 保留现有实例作为源，使用平台克隆/迁移功能，并核对是否同时复制系统盘和数据盘。不要假定仅保存镜像就包含 /root/autodl-tmp。
+1. 保留现有实例作为源，使用平台克隆/迁移功能，并核对是否同时复制系统盘和数据盘。不要假定仅保存镜像就包含 <remote-root>。
 2. 当前数据盘使用约 34G，目标容量需容纳实际数据，并满足平台对源盘容量的要求；不能只依据显存大小判断。
 3. 之前曾在 RTX4090/560.35.03、vGPU32G/580.105.08 运行成功。本次 RTX3090/580.105.08 已能创建场景，尚未通过新的布料验证。驱动版本相同不等于完整兼容保证。
 4. 取得新 SSH 命令；在本机 C:\Users\yexun\.ssh\config 新增别名，保留旧入口。不要沿用本日报端口猜测新实例。
@@ -190,14 +190,14 @@ git -C /root/autodl-tmp/garmentlab-action-chunk-demo diff > /root/autodl-tmp/day
 ```bash
 hostname
 nvidia-smi
-df -h / /root/autodl-tmp
-/root/autodl-tmp/envs/isaac40/bin/python -c 'import sys; from importlib.metadata import version; print(sys.version); print(version("isaacsim")); print(version("numpy"))'
-git -C /root/autodl-tmp/garmentlab-action-chunk-demo status --short
-git -C /root/autodl-tmp/garmentlab-action-chunk-demo log -3 --oneline
-git -C /root/autodl-tmp/garmentlab_workspace/GarmentLab status --short
-grep -n 'self.world=World' /root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/env/BaseEnv.py
-grep -n -A 55 'class CpuPoseFranka' /root/autodl-tmp/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py
-ls -lh /root/autodl-tmp/day4-cloth-view-probe.py
+df -h / <remote-root>
+<remote-root>/envs/isaac40/bin/python -c 'import sys; from importlib.metadata import version; print(sys.version); print(version("isaacsim")); print(version("numpy"))'
+git -C <remote-root>/garmentlab-action-chunk-demo status --short
+git -C <remote-root>/garmentlab-action-chunk-demo log -3 --oneline
+git -C <remote-root>/garmentlab_workspace/GarmentLab status --short
+grep -n 'self.world=World' <remote-root>/garmentlab_workspace/GarmentLab/Env/env/BaseEnv.py
+grep -n -A 55 'class CpuPoseFranka' <remote-root>/garmentlab_workspace/GarmentLab/Env/Robot/Franka/MyFranka.py
+ls -lh <remote-root>/day4-cloth-view-probe.py
 ```
 
 6. 确认文件和未提交补丁都已复制后，继续夹爪兼容验证。不要重新安装环境或重做已完成实验。
@@ -208,7 +208,7 @@ ls -lh /root/autodl-tmp/day4-cloth-view-probe.py
 2. 应用缺失补丁，运行：
 
 ```bash
-/root/autodl-tmp/envs/isaac40/bin/python -u /root/autodl-tmp/day4-cloth-view-probe.py --allow-root 2>&1 | tee /root/autodl-tmp/day4-cloth-view-probe-resume.log
+<remote-root>/envs/isaac40/bin/python -u <remote-root>/day4-cloth-view-probe.py --allow-root 2>&1 | tee <remote-root>/day4-cloth-view-probe-resume.log
 echo "Python exit code: ${PIPESTATUS[0]}"
 ```
 

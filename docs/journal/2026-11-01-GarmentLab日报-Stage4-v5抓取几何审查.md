@@ -4,9 +4,9 @@
 
 ## 补充完成：实际 USD 与运行时偏移
 
-新实例 `connect.nmb1.seetacloud.com:22895` 上执行了独立的**仅初始化**读取。沿用哈希核验通过的 v5 源码启动段，停止于 robot.open 和所有公共动作之前。初始化后 step=2，读取结束仍为 step=2；初始化本身会进行必要的 reset/物理设置，不能称为完全未启动仿真。没有接近、下降、抓取、保持、释放或折叠 rollout。
+新实例 `<server>` 上执行了独立的**仅初始化**读取。沿用哈希核验通过的 v5 源码启动段，停止于 robot.open 和所有公共动作之前。初始化后 step=2，读取结束仍为 step=2；初始化本身会进行必要的 reset/物理设置，不能称为完全未启动仿真。没有接近、下降、抓取、保持、释放或折叠 rollout。
 
-首次读取因 NumPy tensor frontend 不支持 GPU 管线失败，但保留了 USD 网格。改用 Torch 读取后的主结果：`/root/autodl-tmp/day4-v5-usd-initialized-20261101-050622-590321`。初次目录为 `day4-v5-usd-initialized-20261101-045734-413822`。目录时间采用服务器时间，与本地日期可能不同。
+首次读取因 NumPy tensor frontend 不支持 GPU 管线失败，但保留了 USD 网格。改用 Torch 读取后的主结果：`<remote-root>/day4-v5-usd-initialized-20261101-050622-590321`。初次目录为 `day4-v5-usd-initialized-20261101-045734-413822`。目录时间采用服务器时间，与本地日期可能不同。
 
 | 对象 | 实际配置/读数 |
 | --- | --- |

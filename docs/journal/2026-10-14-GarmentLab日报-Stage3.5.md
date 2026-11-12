@@ -37,9 +37,9 @@ Day 4 判定：**WIP，不通过也不失败**。明天第一件事是修 `Cloth
 | 驱动          | 580.105.08                                                   |
 | CUDA 支持版本 | 13.0                                                         |
 | Isaac Sim     | 4.0.0.0                                                      |
-| Python venv   | `/root/autodl-tmp/envs/isaac40`                              |
-| GarmentLab    | `/root/autodl-tmp/garmentlab_workspace/GarmentLab`           |
-| 项目仓库      | `/root/autodl-tmp/garmentlab-action-chunk-demo`              |
+| Python venv   | `<remote-root>/envs/isaac40`                              |
+| GarmentLab    | `<remote-root>/garmentlab_workspace/GarmentLab`           |
+| 项目仓库      | `<remote-root>/garmentlab-action-chunk-demo`              |
 | GitHub        | https://github.com/zyyu1/garmentlab-action-chunk-demo（Private） |
 
 ------
@@ -79,7 +79,7 @@ f2988b1  (tag: autodl-adapt-2026-10-13)
 
 ## 4. 首次启动验证结果
 
-日志：`/root/autodl-tmp/day4-backend-smoke.log`
+日志：`<remote-root>/day4-backend-smoke.log`
 
 关键行：
 
@@ -203,7 +203,7 @@ for i in range(config.num_lift_drops):
 3. `camera.get_rgb_graph()` 截图
 4. 打印世界坐标 center 和 kp_extent
 
-输出目录：`/root/autodl-tmp/difficulty-<timestamp>/`。
+输出目录：`<remote-root>/difficulty-<timestamp>/`。
 
 ------
 
@@ -287,13 +287,13 @@ D. 用 Garment.set_pose() 让 prim 世界变换平移，粒子不动
 text
 
 ```
-/root/autodl-tmp/day4-backend-smoke.py          首次 backend 启动测试脚本
-/root/autodl-tmp/day4-backend-smoke.log         首次启动日志（通过）
-/root/autodl-tmp/day4-difficulty.log            三档截图失败日志
+<remote-root>/day4-backend-smoke.py          首次 backend 启动测试脚本
+<remote-root>/day4-backend-smoke.log         首次启动日志（通过）
+<remote-root>/day4-difficulty.log            三档截图失败日志
 
-/root/autodl-tmp/difficulty-20261014-000250/    空目录（截图未生成）
+<remote-root>/difficulty-20261014-000250/    空目录（截图未生成）
 
-/root/autodl-tmp/garmentlab-action-chunk-demo/
+<remote-root>/garmentlab-action-chunk-demo/
 ├── backends/garmentlab_backend.py              已 patch（450 行）
 ├── envs/difficulty.py                          已 patch（225 行）
 └── scripts/day4_difficulty_smoke.py            新增

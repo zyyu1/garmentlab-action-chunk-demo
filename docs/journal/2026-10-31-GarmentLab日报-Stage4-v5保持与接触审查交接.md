@@ -15,7 +15,7 @@
 | day4-square-grasp-hold-v5-20261031-112822-203913 | passed=False，KeyError('attachment_bodies')，未形成有效保持/接触结论；保留为脚本失败尝试 |
 | day4-square-grasp-hold-v5-20261031-113930-047613 | passed=True，errors=[]，短程测试完成；作为本次主要审查对象 |
 
-远端对应目录前缀为 `/root/autodl-tmp/`。主要证据：`result.json`、`runner.log`、`hold_trace.jsonl`、`block_contacts.jsonl`、`contact_force_trace.jsonl`、阶段快照以及 `source/`。最新目录保存的 20 份源文件与其本地 manifest 哈希相符；本轮未重新核验服务器与本地传输哈希，也未独立解码整个视频。
+远端对应目录前缀为 `<remote-root>/`。主要证据：`result.json`、`runner.log`、`hold_trace.jsonl`、`block_contacts.jsonl`、`contact_force_trace.jsonl`、阶段快照以及 `source/`。最新目录保存的 20 份源文件与其本地 manifest 哈希相符；本轮未重新核验服务器与本地传输哈希，也未独立解码整个视频。
 
 ### 保持与释放
 

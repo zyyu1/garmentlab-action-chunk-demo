@@ -34,15 +34,15 @@
 
 执行前先核对新实例中：
 
-1. `/root/autodl-tmp/envs/isaac40/bin/python`、GarmentLab资产及 `/root/autodl-tmp/garmentlab-action-chunk-demo/backends/garmentlab_backend.py` 是否存在。
+1. `<remote-root>/envs/isaac40/bin/python`、GarmentLab资产及 `<remote-root>/garmentlab-action-chunk-demo/backends/garmentlab_backend.py` 是否存在。
 2. 实际 Isaac Sim 版本为4.0系列；不要把升级Isaac Sim当成本轮修复。
-3. `/root/autodl-tmp/day4-minimum-half-fold-*` 是否已有完整结果，有则先取回审查。
-4. 将 `minimum-half-fold-files.json` 指定的9个文件、manifest自身及 `run-minimum-half-fold.sh` 一并传到 `/root/autodl-tmp`。不要只传主脚本。
+3. `<remote-root>/day4-minimum-half-fold-*` 是否已有完整结果，有则先取回审查。
+4. 将 `minimum-half-fold-files.json` 指定的9个文件、manifest自身及 `run-minimum-half-fold.sh` 一并传到 `<remote-root>`。不要只传主脚本。
 
 远端前置条件满足且不存在待审结果后运行：
 
 ```bash
-bash /root/autodl-tmp/run-minimum-half-fold.sh
+bash <remote-root>/run-minimum-half-fold.sh
 ```
 
 候选维持质量、摩擦、机器人、低弧线前缀，只修改释放前的材料目标：

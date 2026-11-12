@@ -10,7 +10,7 @@
 
 **下次第一步是下载和比较 hem-v5 结果，不要直接再跑实验。**
 
-- 最新远端目录：`/root/autodl-tmp/day4-l1-hem-fold-20261025-081458-011222`
+- 最新远端目录：`<remote-root>/day4-l1-hem-fold-20261025-081458-011222`
 - 本日报写入时，该目录尚未出现在本地 results 中。
 - 检查 `source/manifest.json`、`runner.log` 中的 `RELEASE_ATTACHMENT_REMOVED`、`result.json` 和 `release_trace.json`，确认版本及约束移除实际执行情况。
 - 与 hem-v4 的逐帧轨迹比较，判断移除约束是否改变释放后的加速。之后才决定下一项修正；目前根因未确定。
@@ -124,9 +124,9 @@ hem-v4 的 `release_trace.json` 共 85 条，dt=1/60 s：
 - `run-l1-hem-fold.sh`、`l1-hem-files.json`：入口及依赖哈希；修改任一依赖后必须刷新 manifest。
 - `mass_experiment.py`、`anchor_observer.py`：已有依赖。
 
-远端工作目录 `/root/autodl-tmp`；Python `/root/autodl-tmp/envs/isaac40/bin/python`；Isaac Sim 4.0，Torch/CUDA。两个工程位于 `/root/autodl-tmp/garmentlab-action-chunk-demo` 和 `/root/autodl-tmp/garmentlab_workspace/GarmentLab`。
+远端工作目录 `<remote-root>`；Python `<remote-root>/envs/isaac40/bin/python`；Isaac Sim 4.0，Torch/CUDA。两个工程位于 `<remote-root>/garmentlab-action-chunk-demo` 和 `<remote-root>/garmentlab_workspace/GarmentLab`。
 
-连接：`root@connect.nmb2.seetacloud.com`，端口 `23636`。助手此前 SSH 非交互登录未成功；当前工作方式为助手改本地文件，用户 PowerShell 上传/下载，VS Code 远程 Bash 执行。不要把助手本地检查说成远端运行。
+连接：`<server>`，端口 `23636`。助手此前 SSH 非交互登录未成功；当前工作方式为助手改本地文件，用户 PowerShell 上传/下载，VS Code 远程 Bash 执行。不要把助手本地检查说成远端运行。
 
 本地 `D:\Users\yexun\anaconda3\python.exe` 可用于 numpy/scipy 离线分析。此次主要查看 PNG 与 NPZ，未完整解码视频。截图上的 Kit 时间与结果目录时间可能不同，以目录名和 manifest 为准。
 
@@ -142,13 +142,13 @@ hem-v4 的 `release_trace.json` 共 85 条，dt=1/60 s：
 本机 PowerShell 下载命令：
 
 ```powershell
-scp -P 23636 -r root@connect.nmb2.seetacloud.com:/root/autodl-tmp/day4-l1-hem-fold-20261025-081458-011222 "E:\learning\project\thesis\day4-actionchunk-test\results\"
+scp -P 23636 -r <server>:<remote-root>/day4-l1-hem-fold-20261025-081458-011222 "E:\learning\project\thesis\day4-actionchunk-test\results\"
 ```
 
 现有远端运行入口（仅供交接，未要求现在重跑）：
 
 ```bash
-bash /root/autodl-tmp/run-l1-hem-fold.sh
+bash <remote-root>/run-l1-hem-fold.sh
 ```
 
 恢复时优先阅读本日报及 `DAY4_ACCEPTANCE_TRACKER.md` 最新状态，避免沿用旧日报中“下一步尚未执行”的过期安排。

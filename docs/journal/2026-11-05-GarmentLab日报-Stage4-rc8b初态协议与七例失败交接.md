@@ -7,7 +7,7 @@
 ## 1. 本轮做了什么
 
 1. **协议实现（rc8b）**：`day4-square-initial.py`（L1）保持 pfs=0；`day4-square-initial-stripfold.py`（L2/L3）0→1；两者新增 `protocol` 块（task/level/seed、expected+readback scale、material binding、generator script/files manifest 哈希、generated_utc）。
-2. **正式入口绑定**：`stage4_batch_preflight.initial()` 逐项核对上述字段，拒绝旧初态/错 scale/缺失绑定/生成器不符；`run-square-initial*.sh` 与 `run-stage4-formal-batch.sh` 改为 app-relative，不再读 `/root/autodl-tmp` 共享根的旧副本。
+2. **正式入口绑定**：`stage4_batch_preflight.initial()` 逐项核对上述字段，拒绝旧初态/错 scale/缺失绑定/生成器不符；`run-square-initial*.sh` 与 `run-stage4-formal-batch.sh` 改为 app-relative，不再读 `<remote-root>` 共享根的旧副本。
 3. **离线验证**：manifest 63/63（52 项与 rc8 相同）；协议测试接受新 4100/4202/4302，拒绝旧 4100、错误 scale、缺失绑定、生成器不符、缺失 protocol；`py_compile` 通过。
 4. **开发初态生成**：4100、4201、4202、4302 各一次、无重试；哈希写入 `a5-candidate.json` 与登记。
 5. **七例 RC**：顺序 7 槽、每槽一次、无重试；新账本、14 行 attempts。

@@ -16,14 +16,14 @@
 | 项目 | 值 |
 | --- | --- |
 | VS Code SSH 别名 | autodl-4090-clone |
-| SSH | ssh -p 18117 root@connect.nmb1.seetacloud.com |
+| SSH | ssh -p 18117 <server> |
 | 实例 | autodl-container-d7c2499bc5-fdbdeb71 |
 | GPU | RTX 4090，24 GB |
 | 驱动 | 560.35.03 |
 | nvidia-smi 显示 CUDA | 12.6，表示驱动支持版本 |
 | Isaac Sim | 4.0.0 |
-| Python | /root/autodl-tmp/envs/isaac40/bin/python |
-| 项目 | /root/autodl-tmp/garmentlab_workspace/GarmentLab |
+| Python | <remote-root>/envs/isaac40/bin/python |
+| 项目 | <remote-root>/garmentlab_workspace/GarmentLab |
 | 模式 | headless=True，仿真需要 GPU 开机 |
 
 此前驱动 595.71.05 的机器启动出现段错误，退出码 139，调用栈位于 RTX/Hydra 相关库。克隆到当前机器后测试通过，支持主机/驱动环境相关的判断，但不是单变量驱动对照实验。
@@ -46,7 +46,7 @@
 - 测试显式使用真实衣服路径，注意 Garments 为复数、LSleeve 的大小写：
 
 ```text
-/root/autodl-tmp/garmentlab_workspace/GarmentLab/Assets/Garments/Tops/NoCollar_LSleeve_FrontClose/TNLC_Dress057/TNLC_Dress057_obj.usd
+<remote-root>/garmentlab_workspace/GarmentLab/Assets/Garments/Tops/NoCollar_LSleeve_FrontClose/TNLC_Dress057/TNLC_Dress057_obj.usd
 ```
 
 - 原默认材质 /home/user/GarmentLab/Assets/Material/linen_Pumpkin.usd 不存在，Assets 下未找到名称包含 linen 的文件。
@@ -73,7 +73,7 @@
 
 ## 5. 远程文件交接
 
-以下均在当前克隆实例的 /root/autodl-tmp/ 下：
+以下均在当前克隆实例的 <remote-root>/ 下：
 
 | 文件或目录 | 用途 |
 | --- | --- |
@@ -120,8 +120,8 @@ Control.py 旁有 Control.py.before-loop-fix 备份；场景脚本有 .before-ma
 连接当前实例，在远程终端执行：
 
 ```bash
-ls -lh /root/autodl-tmp/fold-action-output/
-grep -E 'ACTION_DONE|FOLD_ACTION_SEQUENCE_OK|Traceback' /root/autodl-tmp/fold-action-test.log | tail -n 20
+ls -lh <remote-root>/fold-action-output/
+grep -E 'ACTION_DONE|FOLD_ACTION_SEQUENCE_OK|Traceback' <remote-root>/fold-action-test.log | tail -n 20
 ```
 
 查看和下载已有结果不必启动新的 GPU 仿真。若要重跑仿真，需 GPU 开机。

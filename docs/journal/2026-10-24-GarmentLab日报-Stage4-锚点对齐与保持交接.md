@@ -23,15 +23,15 @@
 | 实例 | 内蒙 B 区 / 430 机 |
 | 容器 | `autodl-container-ac0a41b2f7-bc28942d` |
 | VS Code SSH 别名 | `autodl-garmentlab-430` |
-| SSH 命令 | `ssh -p 23636 root@connect.nmb2.seetacloud.com` |
+| SSH 命令 | `ssh -p 23636 <server>` |
 | GPU | NVIDIA GeForce RTX 3090，24576 MiB |
 | 驱动 | 580.105.08 |
 | nvidia-smi CUDA 显示 | 13.0，指驱动支持信息；没有因此重装 CUDA |
-| Python | `/root/autodl-tmp/envs/isaac40/bin/python`，3.10.8 |
+| Python | `<remote-root>/envs/isaac40/bin/python`，3.10.8 |
 | 仿真 | 沿用迁移的 Isaac Sim 4.0 环境，今天多次测试通过，没有重装 |
 | 数据盘 | 今天开始时 50G，总使用约 34G、可用约 17G；之后新增结果，需按需复查 |
 
-旧实例 264 机为 RTX 4090：`7dde4b87a0-ea1fac3d`，旧地址 `connect.nmb1.seetacloud.com:22895`，不是今天的连接地址。用户通过 AutoDL 的跨实例拷贝数据盘功能把 `/root/autodl-tmp/` 内容迁到新实例，随后确认关键环境、源码和成功备份均存在。
+旧实例 264 机为 RTX 4090：`7dde4b87a0-ea1fac3d`，旧地址 `<server>`，不是今天的连接地址。用户通过 AutoDL 的跨实例拷贝数据盘功能把 `<remote-root>/` 内容迁到新实例，随后确认关键环境、源码和成功备份均存在。
 
 本助手未成功 SSH 登录：对新地址的非交互认证失败。远程命令均由用户在 VS Code 远程 Bash 执行，随后提供日志/截图；上传下载由用户在本地 PowerShell 执行。本助手创建本地脚本、读取已下载文件并做离线审计与绘图。不要把本地脚本语法/适配器检查称为新的 GPU 物理验证。
 
@@ -41,15 +41,15 @@
 
 远程两个仓库：
 
-- `/root/autodl-tmp/garmentlab-action-chunk-demo`
-- `/root/autodl-tmp/garmentlab_workspace/GarmentLab`
+- `<remote-root>/garmentlab-action-chunk-demo`
+- `<remote-root>/garmentlab_workspace/GarmentLab`
 
 今天恢复时，正式项目的 `backends/garmentlab_backend.py` 有未提交修改，`prepared_grasp_control.py` 及若干备份文件为未跟踪；GarmentLab 仓库中的 `MyFranka.py`、`BaseEnv.py`、`Control.py` 有未提交修改。没有确认今天产生新的 commit/push，当前 HEAD 未重新核实。
 
 昨天成功备份的完整名称今天已确认：
-`/root/autodl-tmp/day4-passed-grasp-20261024-000433`。
+`<remote-root>/day4-passed-grasp-20261024-000433`。
 
-今天没有持久修改这两个仓库的控制源码。实验在 `/root/autodl-tmp/` 的独立脚本中使用实例方法包装和运行时 `points1` 写入；新测试每次按已通过运行的 manifest 核对相关源码，另外保存本次脚本及依赖。
+今天没有持久修改这两个仓库的控制源码。实验在 `<remote-root>/` 的独立脚本中使用实例方法包装和运行时 `points1` 写入；新测试每次按已通过运行的 manifest 核对相关源码，另外保存本次脚本及依赖。
 
 正式方案的基础仍为：Torch/CUDA、reset 前预创建刚体与约束、独立约束路径、分层下降、`prepared_grasp=True`、5 mm overlap、每进程一次抓取。原有 30 mm 开启跳变检查没有放宽；它是诊断阈值，不是物理质量标准。
 
@@ -59,7 +59,7 @@
 
 ## 4. 本地与远程结果索引
 
-以下运行目录均在远程 `/root/autodl-tmp/`，且已完整下载到：
+以下运行目录均在远程 `<remote-root>/`，且已完整下载到：
 `E:\learning\project\thesis\day4-actionchunk-test\results\`。
 
 | 目录 | 内容与结论 |
@@ -218,7 +218,7 @@ aligned 绝对抬升高度更低，主要对应开启时额外抬高衣物的现
 ## 7. 晚上恢复的具体顺序
 
 1. 先读本日报第 1、5.6、6 节，不从昨天的 GPU/夹爪适配或已完成下载重新开始。
-2. 如果实例仍是原实例且用户已连入，按需只读检查 `hostname`、`nvidia-smi`、`df -h /root/autodl-tmp`；若 SSH 地址变更，以用户提供的新命令为准，不混用旧 264 机配置。不重装现有可用环境。
+2. 如果实例仍是原实例且用户已连入，按需只读检查 `hostname`、`nvidia-smi`、`df -h <remote-root>`；若 SSH 地址变更，以用户提供的新命令为准，不混用旧 264 机配置。不重装现有可用环境。
 3. 下一项实验是 **实测末端位姿目标保持**：保持原 50 帧抬升前缀不变，在 step 557 后以该时刻的实测 EE xyz 为新的保持目标，仍用相同控制器、姿态策略和 180 步保持，继续逐步保存。新目标会产生制动/微调，必须记录实测运动，不假定立即静止。
 4. 与本次“原更高目标保持”的 230 帧运行比较。重点看额外上移是否减少、近停稳后的边界边长是否仍高、逐对间距是否稳定，以及抬升和释放是否保留。保留源码/参考哈希、原 50 帧一致性及状态检查；所有新干预使用新文件、新输出目录和新进程。
 5. 取得这一对照后再决定是否有必要做速度、时间步或材料/求解参数单变量实验，不同时改多个参数，不直接提高阈值。

@@ -51,11 +51,11 @@ L2 新旧对照：旧成功例 103502-594762 与新失败例的 recovered.npz �
 
 | 项 | 值 |
 |---|---|
-| 远端实例 | `ssh -p 23636 root@connect.nmb2.seetacloud.com`（2026-11-02 新克隆实例；旧 nmb1:22895 不要再用） |
+| 远端实例 | `ssh -p 23636 <server>`（2026-11-02 新克隆实例；旧 nmb1:22895 不要再用） |
 | 容器 | `autodl-container-ac0a41b2f7-bc28942d` |
-| 工作目录 | `/root/autodl-tmp` |
-| Python | `/root/autodl-tmp/envs/isaac40/bin/python` |
-| 项目仓库 | `/root/autodl-tmp/garmentlab-action-chunk-demo` |
+| 工作目录 | `<remote-root>` |
+| Python | `<remote-root>/envs/isaac40/bin/python` |
+| 项目仓库 | `<remote-root>/garmentlab-action-chunk-demo` |
 | 本地仓库 | `E:\learning\project\garmentlab-action-chunk-demo` |
 
 工作方式：助手改本地文件 → 用户用 PowerShell `scp -P 23636 ...` 上传 → 用户在远端 VS Code bash 运行 → 用户下载结果 → 助手离线审查。助手不直接在远端执行 GPU 实验。所有清单哈希按 **LF** 字节计算；上传后用预检核对。
@@ -129,8 +129,8 @@ L3 的 yaml 已改为 `num_lift_drops: 1`、`max_recovery_moves: 1`；L3 的平�
 **L2 4200 recovery 也通过**（`day4-strip-recovery-20261102-095917-466741`）：5 个动作、块 ≤1.05 mm、锚点 ≤1.96 mm、相对 flat 的刚性残差 **8.6e-6 m**、pick 位移 4.2 mm、extent `0.4426×0.4425`、`recovered.png` 为平铺方巾。**L2/L3 的 5 动作 recovery 均验证通过。** 两个冒烟命令：
 
 ```bash
-bash /root/autodl-tmp/run-strip-recovery-smoke.sh /root/autodl-tmp/day4-square-initial-stripfold-20261102-023311-548690   # L2 4200
-bash /root/autodl-tmp/run-strip-recovery-smoke.sh /root/autodl-tmp/day4-square-initial-stripfold-20261102-074349-406408   # L3 4300
+bash <remote-root>/run-strip-recovery-smoke.sh <remote-root>/day4-square-initial-stripfold-20261102-023311-548690   # L2 4200
+bash <remote-root>/run-strip-recovery-smoke.sh <remote-root>/day4-square-initial-stripfold-20261102-074349-406408   # L3 4300
 ```
 
 未上传文件：`day4-strip-recovery-smoke.py`、`run-strip-recovery-smoke.sh`、`square-strip-recovery-files.json`。
@@ -200,22 +200,22 @@ bash /root/autodl-tmp/run-strip-recovery-smoke.sh /root/autodl-tmp/day4-square-i
 
 ```powershell
 # recovery 冒烟（3 个文件）
-scp -P 23636 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\day4-strip-recovery-smoke.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-strip-recovery-smoke.sh" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\square-strip-recovery-files.json" root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
+scp -P 23636 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\day4-strip-recovery-smoke.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-strip-recovery-smoke.sh" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\square-strip-recovery-files.json" <server>:<remote-root>/
 
 # recovery+fold 组合（3 个文件：recovered-yaw + right fallback）
-scp -P 23636 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\day4-recovery-fold-episode.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-recovery-fold-episode.sh" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\square-recovery-fold-files.json" root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
+scp -P 23636 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\day4-recovery-fold-episode.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-recovery-fold-episode.sh" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\square-recovery-fold-files.json" <server>:<remote-root>/
 
 # 下载某个结果目录
-scp -P 23636 -r root@connect.nmb2.seetacloud.com:/root/autodl-tmp/day4-recovery-fold-<时间戳> "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\results\"
+scp -P 23636 -r <server>:<remote-root>/day4-recovery-fold-<时间戳> "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\results\"
 ```
 
 ```bash
 # 1) recovered-yaw 重跑（默认 left；预检会打印 fold_edge）
-bash /root/autodl-tmp/run-recovery-fold-episode.sh /root/autodl-tmp/day4-square-initial-stripfold-20261102-023311-548690 left
-bash /root/autodl-tmp/run-recovery-fold-episode.sh /root/autodl-tmp/day4-square-initial-stripfold-20261102-074349-406408 left
+bash <remote-root>/run-recovery-fold-episode.sh <remote-root>/day4-square-initial-stripfold-20261102-023311-548690 left
+bash <remote-root>/run-recovery-fold-episode.sh <remote-root>/day4-square-initial-stripfold-20261102-074349-406408 left
 # 2) right 槽位镜像半折（L3/L2 均已通过）
-bash /root/autodl-tmp/run-recovery-fold-episode.sh /root/autodl-tmp/day4-square-initial-stripfold-20261102-074349-406408 right
-bash /root/autodl-tmp/run-recovery-fold-episode.sh /root/autodl-tmp/day4-square-initial-stripfold-20261102-023311-548690 right
+bash <remote-root>/run-recovery-fold-episode.sh <remote-root>/day4-square-initial-stripfold-20261102-074349-406408 right
+bash <remote-root>/run-recovery-fold-episode.sh <remote-root>/day4-square-initial-stripfold-20261102-023311-548690 right
 ```
 
 ## L1 yaw-aware 7 动作复验（新增，先于下一批正式）
@@ -241,19 +241,19 @@ bash /root/autodl-tmp/run-recovery-fold-episode.sh /root/autodl-tmp/day4-square-
 上传（4 个文件，geometry/script/runner/manifest 均有改动）：
 
 ```powershell
-scp -P 23636 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\l1_yaw_fold_geometry.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\day4-l1-xfold-yaw-aware.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-l1-xfold-yaw-aware.sh" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\square-l1-xfold-yaw-files.json" root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
+scp -P 23636 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\l1_yaw_fold_geometry.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\day4-l1-xfold-yaw-aware.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-l1-xfold-yaw-aware.sh" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\square-l1-xfold-yaw-files.json" <server>:<remote-root>/
 ```
 
 下载 4105 结果（此前未下载）：
 
 ```powershell
-scp -P 23636 -r root@connect.nmb2.seetacloud.com:/root/autodl-tmp/day4-l1-xfold-yaw-aware-20261102-180153-252676 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\results\"
+scp -P 23636 -r <server>:<remote-root>/day4-l1-xfold-yaw-aware-20261102-180153-252676 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\results\"
 ```
 
 运行（4100 过折试验；`L1_XFOLD_OVERHANG` 缺省 0，默认路径与旧行为逐字节一致）：
 
 ```bash
-L1_XFOLD_OVERHANG=0.02 bash /root/autodl-tmp/run-l1-xfold-yaw-aware.sh /root/autodl-tmp/day4-square-initial-20261031-094446-203825   # 4100 过折
+L1_XFOLD_OVERHANG=0.02 bash <remote-root>/run-l1-xfold-yaw-aware.sh <remote-root>/day4-square-initial-20261031-094446-203825   # 4100 过折
 ```
 
 过折的含义：`--overhang 0.02` 只把 place 的末目标沿折向多伸 2 cm（45/90/135 三个弧目标不变），flap 自由边越过静止半远端边缘约 2 cm，折缝右移约 1 cm（约 21/19 的轻微不对称，需在折形定义里如实记录）；目的是把自由拱形从“尖端浮在边缘上方”改成“尖端落在边缘外桌面”，用自重锁住展开。runner 会把 `L1_XFOLD_OVERHANG` 传给脚本并断言 result 的 `fold_definition.fold_overhang_m` 与之一致，不允许静默加过折。若远端初始目录已清理，runner 会在预检前报 `missing L1 initial files`，需先用 L1 初始 runner 重新生成。
@@ -366,7 +366,7 @@ right 开发覆盖扩展 `b-right-dev-v2` 已登记、未运行：L2 4201–4209
 `b-right-dev-v2`：L2 4201–4209、L3 4301–4309，共 18 个剩余开发 seed，每个先登记初态哈希再跑一次 right single。已登记、未运行，完整命令见 [扩展计划](2026-11-02-GarmentLab日报-Stage4-B项right扩展计划.md)。要点：
 - 上传 4 个文件**原样**（manifest 的登记哈希是含 CRLF 的原始字节，不能转行尾）：`run-recovery-fold-right-v2.sh`、`stage4-b-right-dev-v2.json`、`square-recovery-fold-right-v2-files.json`、`run-stage4-b-right-dev-v2-batch.sh`。
 - 远端核对期望 `V2_MANIFEST_BAD [] 23`，四个自哈希 `MATCH True`（`2fff0bf9…`、`adf4c9a8…`、`3822bd98…`、`cb947b85…`）。
-- 运行：`cd /root/autodl-tmp && bash run-stage4-b-right-dev-v2-batch.sh dev-v2`。
+- 运行：`cd <remote-root> && bash run-stage4-b-right-dev-v2-batch.sh dev-v2`。
 - 状态：`stage4-b-right-dev-v2-dev-v2/`（`batch.log`、`attempts.jsonl`、逐 seed 日志）；初态登记：`stage4-b-right-dev-v2-initials.json`。
 - rejected 继续、不重试不覆盖；初态失败或缺结果目录停止整批；中断重跑跳过已有结果目录的 seed，强制重跑换新 tag。
 

@@ -59,7 +59,7 @@
 - 本地证据包：`day4-actionchunk-test/results/MINIMUM_ACCEPTANCE_20261106/`（15 个结果目录 + `stage4-minimum-hold120-state-v1/` + tgz）
 - 登记：[CONTINUATION_RULE_20261106.md](day4-actionchunk-test/minimum_hold120/CONTINUATION_RULE_20261106.md)、`minimum_driver_v2.py`、`minimum_deployment_manifest_v2.json`
 - 前序诊断：[零速度目标诊断](day4-actionchunk-test/results/DIAG_4112_ZEROVEL_20261105/review.md)
-- 服务器原件：`/root/autodl-tmp/day4-a5-rc2-*`、`/root/autodl-tmp/stage4-minimum-hold120-state-v1/`
+- 服务器原件：`<remote-root>/day4-a5-rc2-*`、`<remote-root>/stage4-minimum-hold120-state-v1/`
 
 ## 8. 边界
 

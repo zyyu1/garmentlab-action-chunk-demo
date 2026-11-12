@@ -44,4 +44,4 @@
 - [观测事件报告](day4-actionchunk-test/stage5_collect/STAGE5_OBS_INCIDENT_20261106.md)
 - [正式运行状态](day4-actionchunk-test/stage5_collect/FORMAL_RUN_STATUS_20261106.md)
 - [缩减版登记](day4-actionchunk-test/stage5_collect/STAGE5_REDUCED_PLAN_20261107.md)
-- 账本与导出：远端 `/root/autodl-tmp/stage5-formal-state-v1/`
+- 账本与导出：远端 `<remote-root>/stage5-formal-state-v1/`

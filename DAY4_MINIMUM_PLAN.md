@@ -4,7 +4,7 @@
 
 ## 最新交接：2026-10-31 v5 已审查，今日暂停
 
-以 [2026-10-31 交接日报](2026-10-31-GarmentLab日报-Stage4-v5保持与接触审查交接.md) 为最新状态，下方冲突段落仅作历史记录。
+以 [2026-10-31 交接日报](docs/journal/2026-10-31-GarmentLab日报-Stage4-v5保持与接触审查交接.md) 为最新状态，下方冲突段落仅作历史记录。
 
 v5 两次结果已下载读取：112822-203913 因 KeyError('attachment_bodies') 失败；113930-047613 短程保持/释放和接触正控通过。位置误差 0.4733 mm、末臂速 0.00860 rad/s、锚点间隙 1.361 mm。发现双指持续触地共 356 条事件；接触明细位置、法向、冲量全零，不能据此认定接触力为零。robot_block=0 受已有碰撞过滤限制。正式折叠成功仍为 0。
 
@@ -101,7 +101,7 @@ bash /root/autodl-tmp/run-square-grasp-pose.sh
 
 只验证 approach → descend → CLOSE → OPEN，不执行折叠。完成后助手自动下载完整结果，核对脚本版本、日志和视频，并审查位置误差、姿态误差、关节速度收敛、附件保持及释放状态。保持既定判据，不因结果失败放宽门槛；接触零事件不能直接解释为无碰撞。
 
-当前使用独立 SquarePoseBackend 候选：XYZ 为世界坐标中的 right_gripper，yaw 映射为 Rz(yaw)Rx(pi)，固定局部 Z 向下。抓取参考为 URDF 指尖中点（局部 +3.4 mm），尚非实测夹持点。离线 IK/FK 和网格检查不等于动态或接触验证，详见 [坐标与姿态审查](2026-10-31-GarmentLab日报-Stage4-方巾末端接口审查.md)。
+当前使用独立 SquarePoseBackend 候选：XYZ 为世界坐标中的 right_gripper，yaw 映射为 Rz(yaw)Rx(pi)，固定局部 Z 向下。抓取参考为 URDF 指尖中点（局部 +3.4 mm），尚非实测夹持点。离线 IK/FK 和网格检查不等于动态或接触验证，详见 [坐标与姿态审查](docs/journal/2026-10-31-GarmentLab日报-Stage4-方巾末端接口审查.md)。
 
 ## 五步收尾顺序
 
