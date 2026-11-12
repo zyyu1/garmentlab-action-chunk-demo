@@ -33,7 +33,7 @@
 
 ## 3. 步骤 1：独立身份
 
-1. 完整复制 v1.1 的 `app/`（含嵌套 backend/schema）和 `STAGE4_SUCCESS_CRITERIA_V1.md`。
+1. 完整复制 v1.1 的 `app/`（含嵌套 backend/schema）和 `2026-11-02-GarmentLab日报-Stage4-成功判据v1.md`。
 2. 删除旧 config/manifest/runner，创建 D1-120 自己的 `a5-rc2-d1-120.json`、`a5-rc2-d1-120-files.json`、`run-a5-rc2-d1-120.sh`。
 3. 重定向 probe version、protocol、manifest 路径和输出前缀为 `a5-rc2-d1-120` / `stage4-a5-rc2-d1-120` / `day4-a5-rc2-d1-120-`。
 4. 生成 66 项 manifest；基础 60 项 hash 与 RC2 一致；[registration.json](registration.json) 记录父版本、初态、源码和配置哈希。

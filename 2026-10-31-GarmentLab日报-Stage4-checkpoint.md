@@ -4,7 +4,7 @@ Current state: formal Stage 4 successes = 0. Do not interpret pipeline completio
 
 Updated through v5: short grasp/hold/release and contact positive controls passed. Finger-ground events remain under geometry review; detailed contact vectors are all zero. Formal fold successes remain 0. Work is paused; read the latest 2026-10-31 handoff before resuming. No automatic experiment is scheduled.
 
-Start with DAY4_NEXT_STEPS.md and DAY4_SQUARE_FRAME_AUDIT.md. Existing failures and compact review/result files are preserved under day4-actionchunk-test/results. Experimental scripts include historical versions; use only the current plan for next actions.
+Start with DAY4_NEXT_STEPS.md and 2026-10-31-GarmentLab日报-Stage4-方巾末端接口审查.md. Existing failures and compact review/result files are preserved under day4-actionchunk-test/results. Experimental scripts include historical versions; use only the current plan for next actions.
 
 ## Provenance and coverage
 

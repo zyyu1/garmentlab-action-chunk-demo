@@ -6,7 +6,7 @@
 
 ## 1. 本轮做了什么
 
-1. **规则核对与续跑登记**：确认 `waypoint 不收敛` 属于“有结果目录的专家折叠失败”，按 [STAGE4_FORMAL_BATCH_PLAN](STAGE4_FORMAL_BATCH_PLAN.md) §3（折叠失败不中断批次、只有缺结果目录才停）、§4（`rejected+error` 进分母）与 [STAGE4_SUCCESS_CRITERIA_V1](STAGE4_SUCCESS_CRITERIA_V1.md) §5（incomplete/error 不得移出分母、不得转成功）处理；登记 [CONTINUATION_RULE_20261106.md](day4-actionchunk-test/minimum_hold120/CONTINUATION_RULE_20261106.md)。
+1. **规则核对与续跑登记**：确认 `waypoint 不收敛` 属于“有结果目录的专家折叠失败”，按 [STAGE4_FORMAL_BATCH_PLAN](2026-11-02-GarmentLab日报-Stage4-正式批次计划.md) §3（折叠失败不中断批次、只有缺结果目录才停）、§4（`rejected+error` 进分母）与 [STAGE4_SUCCESS_CRITERIA_V1](2026-11-02-GarmentLab日报-Stage4-成功判据v1.md) §5（incomplete/error 不得移出分母、不得转成功）处理；登记 [CONTINUATION_RULE_20261106.md](day4-actionchunk-test/minimum_hold120/CONTINUATION_RULE_20261106.md)。
 2. **驱动与部署身份**：新增 `minimum_driver_v2.py`（唯一改动：该类失败写 `error=waypoint_non_convergence`、`attempts+1`、`continue`），其余分支不变；`minimum_deployment_manifest_v2.json` 20 项、`bad 0`；gate `A5_GATE_OK_SOURCE 7 manifest 40858efc…`；preflight 通过。离线谓词测试：4112 → True，缺目录/错状态 → False。
 3. **从 4113 续跑**：沿 `minimum_slots.json` 固定顺序，每档 5 成功即停；21 个 seed 各只尝试一次（无重复、无重试），所有 verdict 的 `manifest_sha256` 均为 `40858efc…`。
 4. **证据下载与核验**：15 个 accepted 目录 + state + 30 张初态截图打包下载（`minimum_20261106_evidence.tgz`，5.9 MB），逐项核验。

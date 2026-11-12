@@ -101,7 +101,7 @@ bash /root/autodl-tmp/run-square-grasp-pose.sh
 
 只验证 approach → descend → CLOSE → OPEN，不执行折叠。完成后助手自动下载完整结果，核对脚本版本、日志和视频，并审查位置误差、姿态误差、关节速度收敛、附件保持及释放状态。保持既定判据，不因结果失败放宽门槛；接触零事件不能直接解释为无碰撞。
 
-当前使用独立 SquarePoseBackend 候选：XYZ 为世界坐标中的 right_gripper，yaw 映射为 Rz(yaw)Rx(pi)，固定局部 Z 向下。抓取参考为 URDF 指尖中点（局部 +3.4 mm），尚非实测夹持点。离线 IK/FK 和网格检查不等于动态或接触验证，详见 [坐标与姿态审查](DAY4_SQUARE_FRAME_AUDIT.md)。
+当前使用独立 SquarePoseBackend 候选：XYZ 为世界坐标中的 right_gripper，yaw 映射为 Rz(yaw)Rx(pi)，固定局部 Z 向下。抓取参考为 URDF 指尖中点（局部 +3.4 mm），尚非实测夹持点。离线 IK/FK 和网格检查不等于动态或接触验证，详见 [坐标与姿态审查](2026-10-31-GarmentLab日报-Stage4-方巾末端接口审查.md)。
 
 ## 五步收尾顺序
 

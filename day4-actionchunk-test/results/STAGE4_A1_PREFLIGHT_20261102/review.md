@@ -99,7 +99,7 @@ A2 必须按以下顺序开始，不得跳过远端核对：
 
 1. **上传修正后的 4 个 v2 文件**（按原字节，不做行尾转换；config 为 LF、manifest 为 CRLF）：
    `run-recovery-fold-right-v2.sh`、`stage4-b-right-dev-v2.json`、`square-recovery-fold-right-v2-files.json`、`run-stage4-b-right-dev-v2-batch.sh`。
-2. **远端核对**：使用 `STAGE4_B_RIGHT_DEV_V2_PLAN.md` §4 的 heredoc；期望：
+2. **远端核对**：使用 `2026-11-02-GarmentLab日报-Stage4-B项right扩展计划.md` §4 的 heredoc；期望：
    - `V2_MANIFEST_BAD [] 23`
    - `square-recovery-fold-right-v2-files.json` 自哈希 `c3e34c91…`
    - `stage4-b-right-dev-v2.json` `91c0fe7f…`

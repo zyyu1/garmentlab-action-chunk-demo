@@ -96,11 +96,11 @@ v1.1 分段（与 v1 逐位相同）：开爪/释放局部非刚体（质心 0.8
 
 `stage4_a1_right_v2_preflight.py` 48/48 通过；未启动仿真、未生成 held-out、正式成功仍为 0。发现并修正一处登记描述与实际采样不一致：配置原写 `settle(180 for perturbed, 240 for crumpled)`，实际 runner 对两档都在 fold OPEN 后执行 30 release ticks + `settle(180)`；`settle(240)` 只在 recovery 展开后，180/240 是初态生成 settle。配置修正为 v2.1（仅描述字段，无行为改动），config 新哈希 `91c0fe7f…`、variant manifest `c3e34c91…`；入口 `3822bd98…`、批次驱动 `d4c00162…`、21 项底层 `cb947b85…`、初态 manifest `70b1793b…` 未变。B/C 新增文件不在 21/23 项身份中，登记 runner 未导入它们。初态 registry 本地不存在，A2 首次生成时在远端创建。
 
-下一步 A2：上传修正后的 4 个 v2 文件（原字节、不转换行尾），远端复核 `V2_MANIFEST_BAD [] 23` 与四个新哈希，再按 4201→4209、4301→4309 运行 right single。证据：[A1 预检报告](day4-actionchunk-test/results/STAGE4_A1_PREFLIGHT_20261102/review.md)、[扩展计划](STAGE4_B_RIGHT_DEV_V2_PLAN.md)。
+下一步 A2：上传修正后的 4 个 v2 文件（原字节、不转换行尾），远端复核 `V2_MANIFEST_BAD [] 23` 与四个新哈希，再按 4201→4209、4301→4309 运行 right single。证据：[A1 预检报告](day4-actionchunk-test/results/STAGE4_A1_PREFLIGHT_20261102/review.md)、[扩展计划](2026-11-02-GarmentLab日报-Stage4-B项right扩展计划.md)。
 
 ## 2026-11-02 B项：正式成功判据 v1.0.0 已交付（仅离线）
 
-以 [STAGE4_SUCCESS_CRITERIA_V1.md](STAGE4_SUCCESS_CRITERIA_V1.md) 与 `day4-actionchunk-test/stage4-success-v1.json` 为当前成功判据。A/L1过折和B/nominal分任务评价；新增OPEN完成后逐物理步0..330采集、3.5–5.5秒连续几何及稳定窗口。原目标、held门槛和7/12动作预算不变。独立评价manifest登记新成功层，旧折叠manifest/runner未修改。
+以 [2026-11-02-GarmentLab日报-Stage4-成功判据v1.md](2026-11-02-GarmentLab日报-Stage4-成功判据v1.md) 与 `day4-actionchunk-test/stage4-success-v1.json` 为当前成功判据。A/L1过折和B/nominal分任务评价；新增OPEN完成后逐物理步0..330采集、3.5–5.5秒连续几何及稳定窗口。原目标、held门槛和7/12动作预算不变。独立评价manifest登记新成功层，旧折叠manifest/runner未修改。
 
 13项离线测试通过；31个历史目录复算20个满足对应终态几何、11个不满足，但全部缺新协议完整时序证据，不能追认正式成功。稳定阈值为预登记工程容差，尚待开发复验。评价配置与分类器已完成，不等于runner采样接入或正式批次已解锁。下一步需单独接入记录并用开发seed复验；held-out保持暂停，正式成功0。right是否正式采用仍需独立登记。下方“数值阈值未冻结”等段落保留为本次之前的历史状态。
 
@@ -205,7 +205,7 @@ L1_XFOLD_OVERHANG=0.02 bash /root/autodl-tmp/run-l1-xfold-yaw-aware.sh /root/aut
 
 几何代价：十例最终 qx 剖面几乎逐点相同（0.438/0.361/0.292/0.243/0.317/0.397，4108 整体内移约 5 mm），与初始 yaw/平移无关；折脊 qx≈0.29（控制组 0.25），flap 自由边落在桌面、越过静止半远端边缘约 4.1 cm（place 时 2.2 cm）；折形是约 21/19 的偏置拱形，不是 20/20 对折，最终仍为站立拱形（z_p95 6.75 cm，控制组 6.87 cm），俯视 `final.png` 为规整折叠矩形。
 
-**折形口径已定稿（修正版 b，2026-11-02）**：L1 保留独立“过折”定义（`L1_XFOLD_OVERHANG=0.02`，只延长 place 末目标 2 cm，折形约 21/19 偏置拱形），L2/L3 组合脚本本轮不改（仍为 nominal 20/20 左半折：width 0.20、无 overhang、place 横向 0.40；L2/L3 的差别在初态——L2 为 bottom 折条 0.1615–0.1793 m，L3 为 left 折条 0.20 m）。因此 **L1 与 L2/L3 是两个不同折形任务**：L1 vs L2/L3 的成功率差异不能解释为“初态难度”；L2 与 L3 是同一折形目标下的两种初态族，可比但不是受控难度梯度。每档只按自己的冻结折形定义单独验收与报告；三档汇总只能称多任务平均，不做跨档难度归因或成功率梯度比较。该差异记为已知任务差异，不在本轮移植 overhang 到组合脚本重验。**第一步机制核实已完成（离线）**：overhang 属最终目标偏移而非轨迹补偿——place 到位误差 ≤2.3 mm、折形拟合残差与基础例一致（仅平移从 +4 mm 变 +22…+24 mm）、差异来自释放后 flap 自由边落到边缘外桌面（基础例悬空 16–20 mm 后摊平）。限制：零扰动控制例用名义目标也能保持，不得写成修复了机器人缺陷。**第二步任务定义已冻结（2026-11-02）**：目标、held gate、评价器身份、seed 规则与代码 manifest 见 [STAGE4_TASK_DEFINITION_FREEZE.md](STAGE4_TASK_DEFINITION_FREEZE.md)；冻结时修正两点——L2 的 “0.16–0.18” 是初态折条宽度而非折形目标；当前两个折叠脚本（L1 与 L2/L3 组合）在第二步入库时均为单 waypoint chunk（`executed_steps==1`），H=4 当时尚未实现；第 3 步已补齐 `--execution arc4`（见下节），但仍未在远端跑过配对。机制核实见 [review](day4-actionchunk-test/results/L1_OVERHANG_MECHANISM_20261102/review.md)；决策见 [2026-11-02 日报](2026-11-02-GarmentLab日报-Stage4-L2L3初态与6b交接.md) 与 [验收状态](DAY4_ACCEPTANCE_TRACKER.md)。
+**折形口径已定稿（修正版 b，2026-11-02）**：L1 保留独立“过折”定义（`L1_XFOLD_OVERHANG=0.02`，只延长 place 末目标 2 cm，折形约 21/19 偏置拱形），L2/L3 组合脚本本轮不改（仍为 nominal 20/20 左半折：width 0.20、无 overhang、place 横向 0.40；L2/L3 的差别在初态——L2 为 bottom 折条 0.1615–0.1793 m，L3 为 left 折条 0.20 m）。因此 **L1 与 L2/L3 是两个不同折形任务**：L1 vs L2/L3 的成功率差异不能解释为“初态难度”；L2 与 L3 是同一折形目标下的两种初态族，可比但不是受控难度梯度。每档只按自己的冻结折形定义单独验收与报告；三档汇总只能称多任务平均，不做跨档难度归因或成功率梯度比较。该差异记为已知任务差异，不在本轮移植 overhang 到组合脚本重验。**第一步机制核实已完成（离线）**：overhang 属最终目标偏移而非轨迹补偿——place 到位误差 ≤2.3 mm、折形拟合残差与基础例一致（仅平移从 +4 mm 变 +22…+24 mm）、差异来自释放后 flap 自由边落到边缘外桌面（基础例悬空 16–20 mm 后摊平）。限制：零扰动控制例用名义目标也能保持，不得写成修复了机器人缺陷。**第二步任务定义已冻结（2026-11-02）**：目标、held gate、评价器身份、seed 规则与代码 manifest 见 [2026-11-02-GarmentLab日报-Stage4-任务定义冻结.md](2026-11-02-GarmentLab日报-Stage4-任务定义冻结.md)；冻结时修正两点——L2 的 “0.16–0.18” 是初态折条宽度而非折形目标；当前两个折叠脚本（L1 与 L2/L3 组合）在第二步入库时均为单 waypoint chunk（`executed_steps==1`），H=4 当时尚未实现；第 3 步已补齐 `--execution arc4`（见下节），但仍未在远端跑过配对。机制核实见 [review](day4-actionchunk-test/results/L1_OVERHANG_MECHANISM_20261102/review.md)；决策见 [2026-11-02 日报](2026-11-02-GarmentLab日报-Stage4-L2L3初态与6b交接.md) 与 [验收状态](DAY4_ACCEPTANCE_TRACKER.md)。
 
 下载 4105 结果：
 
@@ -231,7 +231,7 @@ scp -P 23636 -r root@connect.nmb2.seetacloud.com:/root/autodl-tmp/day4-l1-xfold-
 
 ## 第 7 步：正式批次准备（已登记，未运行）
 
-按冻结文档 §0 登记，完整运行手册见 [STAGE4_FORMAL_BATCH_PLAN.md](STAGE4_FORMAL_BATCH_PLAN.md)。
+按冻结文档 §0 登记，完整运行手册见 [2026-11-02-GarmentLab日报-Stage4-正式批次计划.md](2026-11-02-GarmentLab日报-Stage4-正式批次计划.md)。
 
 - **seed**：L1 `4110–4129`、L2 `4210–4229`、L3 `4310–4329`，每档 20 个，与开发集不重叠，批次前固定、single/arc4 共用；已写入 `square-initial-plan.json`（30→90 条）与 `stage4-heldout-seeds.json`。
 - **初态参数**：dx/dy/yaw 沿用 `default_rng(seed)` 前三次抽样（对 30 个开发条目逐位复验）；L2 条宽改为同流第 4 次抽样 `U(0.16,0.18)`（开发条宽为人工值，已声明差异）。
@@ -245,7 +245,7 @@ scp -P 23636 -r root@connect.nmb2.seetacloud.com:/root/autodl-tmp/day4-l1-xfold-
 
 ## 第 3 步：表示层对齐（已完成：实现 + 两任务各一对开发配对）
 
-**目标**：同一任务内，single-step 与 H=4 用完全相同的目标、评价器与测试 seeds。定义、实现与结果见 [冻结文档 §7/§7.1](STAGE4_TASK_DEFINITION_FREEZE.md)，配对报告见 [STAGE4_REPRESENTATION_PAIRS_20261102](../thesis/day4-actionchunk-test/results/STAGE4_REPRESENTATION_PAIRS_20261102/review.md)。
+**目标**：同一任务内，single-step 与 H=4 用完全相同的目标、评价器与测试 seeds。定义、实现与结果见 [冻结文档 §7/§7.1](2026-11-02-GarmentLab日报-Stage4-任务定义冻结.md)，配对报告见 [STAGE4_REPRESENTATION_PAIRS_20261102](../thesis/day4-actionchunk-test/results/STAGE4_REPRESENTATION_PAIRS_20261102/review.md)。
 
 **冻结映射**：只把四个 arc 目标合成一个 H=4 chunk，抓取/释放仍 H=1。
 - L1：single `[1,1,1,1,1,1,1]`；arc4 `[1,1,4,1]`（`arc45/arc90/arc135/place`）。
@@ -279,7 +279,7 @@ python stage4_representation_audit.py --pair results\<single目录> results\<arc
 
 ## 第 1 步几何核对完成（历史记录）
 
-详见 [实际 USD 几何与偏移审查](DAY4_STEP1_GRASP_GEOMETRY.md)。手指有效 contactOffset=5.45 mm、restOffset=0；保存姿态下实际 USD 碰撞源网格仍有约 1.2–1.4 mm 间隙，接触事件可由余量解释，暂不改手指或轨迹高度。辅助块实体半高15 mm而中心目标约10.207 mm，已确认与默认地面不相容。下一步只修正该代理块—地面关系并短程复验，尚未执行。
+详见 [实际 USD 几何与偏移审查](2026-11-01-GarmentLab日报-Stage4-v5抓取几何审查.md)。手指有效 contactOffset=5.45 mm、restOffset=0；保存姿态下实际 USD 碰撞源网格仍有约 1.2–1.4 mm 间隙，接触事件可由余量解释，暂不改手指或轨迹高度。辅助块实体半高15 mm而中心目标约10.207 mm，已确认与默认地面不相容。下一步只修正该代理块—地面关系并短程复验，尚未执行。
 
 完成了一次失败读取和一次修正后的仅初始化诊断（无公共动作，读取前后 step=2）。静态地面有效 offset 未被 rigid-body view 读取到，报告保留此限制；不声称所有形状读数或整条轨迹无碰撞认证通过。正式折叠成功仍为0，不进入第3步。完整结果下载由用户手动执行。
 
@@ -400,7 +400,7 @@ bash /root/autodl-tmp/run-square-grasp-pose.sh
 
 只验证 approach → descend → CLOSE → OPEN，不执行折叠。完成后助手自动下载完整结果，核对脚本版本、日志和视频，并审查位置误差、姿态误差、关节速度收敛、附件保持及释放状态。保持既定判据，不因结果失败放宽门槛；接触零事件不能直接解释为无碰撞。
 
-当前使用独立 SquarePoseBackend 候选：XYZ 为世界坐标中的 right_gripper，yaw 映射为 Rz(yaw)Rx(pi)，固定局部 Z 向下。抓取参考为 URDF 指尖中点（局部 +3.4 mm），尚非实测夹持点。离线 IK/FK 和网格检查不等于动态或接触验证，详见 [坐标与姿态审查](DAY4_SQUARE_FRAME_AUDIT.md)。
+当前使用独立 SquarePoseBackend 候选：XYZ 为世界坐标中的 right_gripper，yaw 映射为 Rz(yaw)Rx(pi)，固定局部 Z 向下。抓取参考为 URDF 指尖中点（局部 +3.4 mm），尚非实测夹持点。离线 IK/FK 和网格检查不等于动态或接触验证，详见 [坐标与姿态审查](2026-10-31-GarmentLab日报-Stage4-方巾末端接口审查.md)。
 
 ## 五步收尾顺序
 
@@ -449,7 +449,7 @@ L2 4200的right single/arc4由本聊天在移交前完成；L3 4300采用另一�
 
 补充交叉核对（2026-11-02）：把主审计未采用的 4200 arc4 尝试 `025355-106410` 与 4300 single 重复尝试 `031535-711404` 一并核对，5 个目录 77 项检查全部通过；同 seed 全部 7 次已下载尝试（4200 三例、4300 四例）的 `final.npz` 441 个顶点逐位相同（max|Δ|=0），包括并发在途的 4200 arc4 两例。该核对不新增 seed、不改任何阈值、不改变上述结论。[补充审计](../thesis/day4-actionchunk-test/results/B_RIGHT_DEV_AUDIT_SUPPLEMENT_20261102/review.md)。
 
-right 开发覆盖扩展 `b-right-dev-v2` 已登记并完成 A1 预检（48/48，仅离线；v2.1 修正 sampling 描述，config `91c0fe7f…`、manifest `c3e34c91…`），尚未运行任何 seed：L2 4201–4209、L3 4301–4309 共 18 个剩余开发 seed，先登记初态哈希再跑 right single；不跑 arc4、不冻结阈值、held-out 不动。见 [扩展计划](STAGE4_B_RIGHT_DEV_V2_PLAN.md) 与 [A1 预检](day4-actionchunk-test/results/STAGE4_A1_PREFLIGHT_20261102/review.md)。
+right 开发覆盖扩展 `b-right-dev-v2` 已登记并完成 A1 预检（48/48，仅离线；v2.1 修正 sampling 描述，config `91c0fe7f…`、manifest `c3e34c91…`），尚未运行任何 seed：L2 4201–4209、L3 4301–4309 共 18 个剩余开发 seed，先登记初态哈希再跑 right single；不跑 arc4、不冻结阈值、held-out 不动。见 [扩展计划](2026-11-02-GarmentLab日报-Stage4-B项right扩展计划.md) 与 [A1 预检](day4-actionchunk-test/results/STAGE4_A1_PREFLIGHT_20261102/review.md)。
 
 ## 2026-11-04 D2-C：释放顺序单变量干预已登记（未运行）
 

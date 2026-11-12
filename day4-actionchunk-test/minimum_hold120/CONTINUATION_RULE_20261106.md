@@ -6,9 +6,9 @@
 
 | 条款 | 原文要点 | 含义 |
 |---|---|---|
-| [STAGE4_FORMAL_BATCH_PLAN.md](../../STAGE4_FORMAL_BATCH_PLAN.md) §3 | “折叠失败不中断批次、不覆盖旧结果，**没有结果目录则视为基础设施错误并停止**（其余数据不可比）” | 有结果目录的折叠失败**不**停止批次；只有“没有结果目录”才停 |
+| [2026-11-02-GarmentLab日报-Stage4-正式批次计划.md](../../2026-11-02-GarmentLab日报-Stage4-正式批次计划.md) §3 | “折叠失败不中断批次、不覆盖旧结果，**没有结果目录则视为基础设施错误并停止**（其余数据不可比）” | 有结果目录的折叠失败**不**停止批次；只有“没有结果目录”才停 |
 | 同上 §4 | 拒绝率 `= (rejected + error) / 总尝试`；`rejected` = 有完整 `result.json` 但 `passed=false`；`error` = 尝试了却没有结果目录 | 有 `result.json` 的失败计为 rejected；错误保留在分母 |
-| [STAGE4_SUCCESS_CRITERIA_V1.md](../../STAGE4_SUCCESS_CRITERIA_V1.md) §5 | `rejected` = 完整证据未过门槛；`incomplete` = 缺失时序证据；`error` = 非法输入/评价器身份错误；“后两类均不得从尝试分母删除，也不得转成成功” | 不完整尝试留在分母，且不能算成功 |
+| [2026-11-02-GarmentLab日报-Stage4-成功判据v1.md](../../2026-11-02-GarmentLab日报-Stage4-成功判据v1.md) §5 | `rejected` = 完整证据未过门槛；`incomplete` = 缺失时序证据；`error` = 非法输入/评价器身份错误；“后两类均不得从尝试分母删除，也不得转成成功” | 不完整尝试留在分母，且不能算成功 |
 | [MINIMUM_ACCEPTANCE_PLAN.md](MINIMUM_ACCEPTANCE_PLAN.md) §3 | “全部失败/错误保留；拒绝率按 (rejected+error)/attempts”；“执行/证据/观测异常按原规则暂停，不重试” | 失败/错误是批次内的正常记录；“暂停”针对异常，不是针对专家折叠失败 |
 
 **判定：** waypoint 不收敛是一次**已启动并结束的专家折叠尝试**，产生了结果目录、`result.json`、`a5-verdict.json`（`status=incomplete`）和明确的 `RuntimeError`。它不是基础设施/证据/观测异常，因此按 §3 的“折叠失败不中断批次”处理：计为失败并继续。

@@ -2,11 +2,11 @@
 
 ## A5 候选变更登记 · stage4-a5-rc1（2026-11-03）
 
-任务 B（L2/L3 nominal 20/20）拟采用 right，两种表示共用；L1 沿用 left 过折。登记将最后一个公开 OPEN 的目标设为实测 EE 上方 0.15 m，解除抓取后显式移向该目标，L1/B 仍为 7/12 个公开动作。新 step 0 定义为这次 OPEN 完成的物理步；固定采集 0–330 并以冻结 B 数值判据评价 210–330。旧开发终态不补记本版本成功。状态为候选，须经真实开发复验后另行冻结。详见 [A5 决策与 E 清单](STAGE4_A5_E_HANDOFF.md)。
+任务 B（L2/L3 nominal 20/20）拟采用 right，两种表示共用；L1 沿用 left 过折。登记将最后一个公开 OPEN 的目标设为实测 EE 上方 0.15 m，解除抓取后显式移向该目标，L1/B 仍为 7/12 个公开动作。新 step 0 定义为这次 OPEN 完成的物理步；固定采集 0–330 并以冻结 B 数值判据评价 210–330。旧开发终态不补记本版本成功。状态为候选，须经真实开发复验后另行冻结。详见 [A5 决策与 E 清单](2026-11-02-GarmentLab日报-Stage4-A5候选与E清单.md)。
 
 ## 2026-11-02 B项：正式成功判据 v1.0.0 已交付（仅离线）
 
-以 [STAGE4_SUCCESS_CRITERIA_V1.md](STAGE4_SUCCESS_CRITERIA_V1.md) 与 `day4-actionchunk-test/stage4-success-v1.json` 为当前成功判据。A/L1过折和B/nominal分任务评价；新增OPEN完成后逐物理步0..330采集、3.5–5.5秒连续几何及稳定窗口。原目标、held门槛和7/12动作预算不变。独立评价manifest登记新成功层，旧折叠manifest/runner未修改。
+以 [2026-11-02-GarmentLab日报-Stage4-成功判据v1.md](2026-11-02-GarmentLab日报-Stage4-成功判据v1.md) 与 `day4-actionchunk-test/stage4-success-v1.json` 为当前成功判据。A/L1过折和B/nominal分任务评价；新增OPEN完成后逐物理步0..330采集、3.5–5.5秒连续几何及稳定窗口。原目标、held门槛和7/12动作预算不变。独立评价manifest登记新成功层，旧折叠manifest/runner未修改。
 
 13项离线测试通过；31个历史目录复算20个满足对应终态几何、11个不满足，但全部缺新协议完整时序证据，不能追认正式成功。稳定阈值为预登记工程容差，尚待开发复验。评价配置与分类器已完成，不等于runner采样接入或正式批次已解锁。下一步需单独接入记录并用开发seed复验；held-out保持暂停，正式成功0。right是否正式采用仍需独立登记。下方“数值阈值未冻结”等段落保留为本次之前的历史状态。
 
@@ -172,7 +172,7 @@ L2/L3 的 recovery 是“把已成折条的初态展平，再折一次”。因�
 
 1. **seed 集合**：L1 `4110–4129`、L2 `4210–4229`、L3 `4310–4329`，每档 20 个，与开发集不重叠。取各档紧邻的连续区间，在任何结果出现前固定，批次中途不得替换、跳过或重抽。
 2. **初态参数**：dx、dy、yaw 仍为 `default_rng(seed)` 的前三次抽样（该规则对全部 30 个开发条目逐位复现，容差 1e-15）；L2 条宽为该 seed 流第 4 次抽样 `U(0.16, 0.18)` 取 6 位小数（开发条宽是人工值，无法由 seed 流复现，此处改用按范围抽样并逐条写入）；L3 条宽固定 0.20。
-3. **生成前置**：`square-initial-plan.json` 由 30 条扩展为 90 条（新增 60 条，开发条目不变），两个初态 runner 的 seed 区间断言相应放宽。旧/新 LF 归一化哈希与远端更新顺序见 [STAGE4_FORMAL_BATCH_PLAN.md](STAGE4_FORMAL_BATCH_PLAN.md)。
+3. **生成前置**：`square-initial-plan.json` 由 30 条扩展为 90 条（新增 60 条，开发条目不变），两个初态 runner 的 seed 区间断言相应放宽。旧/新 LF 归一化哈希与远端更新顺序见 [2026-11-02-GarmentLab日报-Stage4-正式批次计划.md](2026-11-02-GarmentLab日报-Stage4-正式批次计划.md)。
 4. **影响面**：两份折叠 manifest 与折叠脚本不变；变的是初态生成侧（plan 与两个初态 runner），因此新 manifest 只用于初态生成，折叠代码身份保持原值。
 5. **未完成**：成功判据阈值仍未冻结，因此本集合跑完只产出开发门槛 `passed` 与拒绝率，不直接产生正式成功。
 
@@ -317,7 +317,7 @@ L2 4200的right single/arc4由本聊天在移交前完成；L3 4300采用另一�
 
 - 失败策略：`passed=false` 记一行 rejected 并继续；初态生成失败或缺结果目录视为基础设施错误并停止整批；不自动重试、不覆盖旧结果；中断后重跑按 attempts 跳过已有结果目录的 seed，强制重跑须换新 tag。
 
-- 文件与哈希：变体配置 `91c0fe7f…`（A1 v2.1 修正 sampling 描述）、入口 `3822bd98…`、独立 23 项 manifest `c3e34c91…`（A1 刷新 config 条目）、批次驱动 `d4c00162…`；21 项底层身份 `cb947b85…` 不变。旧值 `adf4c9a8…` / `2fff0bf9…` 保留在 A1 报告中。详见 [扩展计划](STAGE4_B_RIGHT_DEV_V2_PLAN.md) 与 [A1 预检](day4-actionchunk-test/results/STAGE4_A1_PREFLIGHT_20261102/review.md)。
+- 文件与哈希：变体配置 `91c0fe7f…`（A1 v2.1 修正 sampling 描述）、入口 `3822bd98…`、独立 23 项 manifest `c3e34c91…`（A1 刷新 config 条目）、批次驱动 `d4c00162…`；21 项底层身份 `cb947b85…` 不变。旧值 `adf4c9a8…` / `2fff0bf9…` 保留在 A1 报告中。详见 [扩展计划](2026-11-02-GarmentLab日报-Stage4-B项right扩展计划.md) 与 [A1 预检](day4-actionchunk-test/results/STAGE4_A1_PREFLIGHT_20261102/review.md)。
 
 - 禁止：held-out 4110–4129 / 4210–4229 / 4310–4329 不生成、不运行；不把本批 `passed` 当正式成功；不据此自动采用 right 或替换 left。
 

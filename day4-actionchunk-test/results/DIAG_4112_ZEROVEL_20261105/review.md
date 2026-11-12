@@ -13,7 +13,7 @@
 
 | 尝试 | 结果 | 原因 |
 |---|---|---|
-| 0 | exit 1，未启动仿真 | 打包缺 `STAGE4_SUCCESS_CRITERIA_V1.md`（a5_entry 哈希预检） |
+| 0 | exit 1，未启动仿真 | 打包缺 `2026-11-02-GarmentLab日报-Stage4-成功判据v1.md`（a5_entry 哈希预检） |
 | 1 | 启动后在 grasp/close 中止，无窗口 tick | 包装器只接受位置参数；`Articulation.apply_action` 以 `control_actions=` 关键字调用 → TypeError |
 | 2 | 有效干预，120/120 零速度下发；读回失败 | `get_applied_actions()` 返回 CUDA tensor，未 `.cpu()` → TypeError |
 | 3 | **有效单次，读回成功** | 仅修读回转换；干预与 v2 相同，窗口逐位相同 |

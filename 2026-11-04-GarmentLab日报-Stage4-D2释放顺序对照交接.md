@@ -94,7 +94,7 @@ D1-120 在末次 OPEN 内插入 120 个物理步等待，保持 12 个公开动�
 - 正式 Stage 4 成功仍为 **0**；RC2 未冻结；held-out 未运行；正式批次暂停。
 - 原阈值 **1 mm / 3 mm** 不变；开发集证据不能替代正式验收。
 - D2-C 仅 4202 single 一次；`completed` 已写入，不自动重试。
-- 恢复入口：[DAY4_NEXT_STEPS](DAY4_NEXT_STEPS.md)、[DAY4_ACCEPTANCE_TRACKER](DAY4_ACCEPTANCE_TRACKER.md)、[STAGE4_A5_RC2](STAGE4_A5_RC2.md)。
+- 恢复入口：[DAY4_NEXT_STEPS](DAY4_NEXT_STEPS.md)、[DAY4_ACCEPTANCE_TRACKER](DAY4_ACCEPTANCE_TRACKER.md)、[STAGE4_A5_RC2](2026-11-03-GarmentLab日报-Stage4-A5-RC2登记.md)。
 - 关键产物：[D2-D 对照](day4-actionchunk-test/results/D2_D_COMPARE_20261104/review.md)、[comparison.json](day4-actionchunk-test/results/D2_D_COMPARE_20261104/comparison.json)、[windows.csv](day4-actionchunk-test/results/D2_D_COMPARE_20261104/windows.csv)、[对比曲线](day4-actionchunk-test/results/D2_D_COMPARE_20261104/d2c_release_compare.png)、[D2-C 版本](day4-actionchunk-test/a5-rc2-d2c-release-order/README.md)。
 
 ## 8. D2-E 步骤2：支撑面与摩擦配置核查（仅离线）
