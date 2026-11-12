@@ -42,13 +42,13 @@ PREFLIGHT_EXIT 0; PLAN_EXIT 0
 ## 4. 正式启动命令（待执行）
 
 ```bash
-cd /root/autodl-tmp/stage5-trial/collect
-export STAGE5_APP=/root/autodl-tmp/stage5-trial/app
-export PYTHONPATH=/root/autodl-tmp/stage5-trial/app
-export STAGE5_OBS_DIR=/root/autodl-tmp/stage5-trial/obs-formal
-nohup /root/autodl-tmp/envs/isaac40/bin/python collect_demos.py \
+cd <remote-root>/stage5-trial/collect
+export STAGE5_APP=<remote-root>/stage5-trial/app
+export PYTHONPATH=<remote-root>/stage5-trial/app
+export STAGE5_OBS_DIR=<remote-root>/stage5-trial/obs-formal
+nohup <remote-root>/envs/isaac40/bin/python collect_demos.py \
   --config trial/stage5_config_formal.json --run \
-  > /root/autodl-tmp/stage5-formal-run.log 2>&1 &
+  > <remote-root>/stage5-formal-run.log 2>&1 &
 ```
 
 行为：逐档、逐 seed；轮到某 seed 时先用 `run-demo-initial.sh` 生成并校验初态，再绑定该次运行；每 episode 独立进程；只收录 `a5-verdict.status=accepted` 且证据/观测对齐的轨迹；拒绝/异常按规则记账。

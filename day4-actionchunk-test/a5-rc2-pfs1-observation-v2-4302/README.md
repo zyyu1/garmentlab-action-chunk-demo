@@ -15,7 +15,7 @@
 | config | `577931aaacde3177b01080c2c04b27a5378a6fbfdc6cd8a06d83ab803b2dfbd5` |
 | runner | `550efa6576d82d45786d2c1179da2ae8ad548b01f1da6c99dff39c7624fa453e` |
 | 4302 初态 | `day4-square-initial-stripfold-20261103-094143-137994`；`result.json` `1bed437f…`、`initial_geometry.npz` `1c27514f…`；**不重生** |
-| 新锁/账本 | `/root/autodl-tmp/a5-rc2-pfs1-observation-v2-4302-runs`（`completed`、`attempts.jsonl`、`journal/`） |
+| 新锁/账本 | `<remote-root>/a5-rc2-pfs1-observation-v2-4302-runs`（`completed`、`attempts.jsonl`、`journal/`） |
 | 登记/审计 | [registration.json](registration.json)、[static-audit.json](static-audit.json)、[source-diff.md](source-diff.md)、[runner-v2-to-4302.diff](runner-v2-to-4302.diff) |
 
 ## 2. 唯一变化：登记范围与编排
@@ -50,7 +50,7 @@
 | 新账本无未完成尝试；旧 v2 完成标记不复用 | 通过 |
 | `bash -n`、`py_compile`（44 个 py） | 通过 |
 
-日志：`PFS1_V2_EXT_PREFLIGHT_OK 63 d97bf349… /root/autodl-tmp/day4-square-initial-stripfold-20261103-094143-137994`。
+日志：`PFS1_V2_EXT_PREFLIGHT_OK 63 d97bf349… <remote-root>/day4-square-initial-stripfold-20261103-094143-137994`。
 
 ## 5. 运行结果（单次 4302 single）
 

@@ -7,7 +7,7 @@
 | 项目 | 值 |
 |---|---|
 | 冻结候选 manifest | `40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a`（63 项） |
-| 诊断 overlay | `/root/autodl-tmp/stage4-4112-diag/app`（冻结 app 的逐文件同哈希副本） |
+| 诊断 overlay | `<remote-root>/stage4-4112-diag/app`（冻结 app 的逐文件同哈希副本） |
 | 诊断启动 | `nohup python diagnose_arc135.py`（runpy 加载 `app/a5_l1.py`，未走父 `a5_entry.py run`） |
 | 父回执 SHA256 | `9042e88ed8b4d082917151023705276230c1a4ba5c8e65b3c602337fa68ab66a` |
 | 子回执 SHA256 | `9042e88e…`（overlay 内副本，内容同父回执） |

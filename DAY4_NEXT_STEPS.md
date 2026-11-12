@@ -194,11 +194,11 @@ recovered-yaw 重跑结果：L3 4300 `left` 仍回弹（`113247-548209`，crosse
 下一步：在 4100 上试过折 `L1_XFOLD_OVERHANG=0.02` —— 只把 place 末目标沿折向多伸 2 cm（弧的 45/90/135 目标不变），flap 自由边越过静止半远端边缘约 2 cm、折缝右移约 1 cm（约 21/19 轻微不对称，如实记录），用“尖端落在边缘外桌面”的自重锁住展开。默认 `overhang=0` 与旧行为逐字节一致；runner 断言 `fold_overhang_m` 与 `L1_XFOLD_OVERHANG` 一致。暂不改阈值、不加动作。
 
 ```powershell
-scp -P 23636 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\l1_yaw_fold_geometry.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\day4-l1-xfold-yaw-aware.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-l1-xfold-yaw-aware.sh" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\square-l1-xfold-yaw-files.json" root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
+scp -P 23636 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\l1_yaw_fold_geometry.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\day4-l1-xfold-yaw-aware.py" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\run-l1-xfold-yaw-aware.sh" "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\square-l1-xfold-yaw-files.json" <server>:<remote-root>/
 ```
 
 ```bash
-L1_XFOLD_OVERHANG=0.02 bash /root/autodl-tmp/run-l1-xfold-yaw-aware.sh /root/autodl-tmp/day4-square-initial-20261031-094446-203825   # 4100 过折
+L1_XFOLD_OVERHANG=0.02 bash <remote-root>/run-l1-xfold-yaw-aware.sh <remote-root>/day4-square-initial-20261031-094446-203825   # 4100 过折
 ```
 
 **过折复验结果：10/10 通过**（4100–4109）。全部 7 动作、yaw 差 <1e-7、`fold_overhang_m=0.02`、crossed 全 1.000、final.png 640×480；最终 IoU 0.365–0.423、对齐均为 13.8 mm、z_p95 67.5–67.7 mm、held 误差 ≤4.1 mm。基础版（overhang 0）里 4100/4105/4107 的 04/05/06 crossed 为 1.000→0.852→0.000、1.000→0.948→0.000、0.995→0.662→0.000；过折版在 ungrasp 后的 04 定型，05/06 与 04 只差 ≤0.013 IoU。逐例目录与数值见日报 L1 段。
@@ -210,7 +210,7 @@ L1_XFOLD_OVERHANG=0.02 bash /root/autodl-tmp/run-l1-xfold-yaw-aware.sh /root/aut
 下载 4105 结果：
 
 ```powershell
-scp -P 23636 -r root@connect.nmb2.seetacloud.com:/root/autodl-tmp/day4-l1-xfold-yaw-aware-20261102-180153-252676 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\results\"
+scp -P 23636 -r <server>:<remote-root>/day4-l1-xfold-yaw-aware-20261102-180153-252676 "E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\results\"
 ```
 
 当前脚本 hash `0aab8e7c…`（geometry `aa1f8a6e…`、runner `560d38bb…`），4 个文件都需覆盖上传。零扰动对照已通过；4100/4105/4107 基础版均失败，过折 0.02 在全部 10 例（4100–4109）通过（04→06 稳定，折形为约 21/19 偏置拱形）。下一步：折形口径与任务定义均已冻结（L1 独立“过折”、L2/L3 保留 nominal 20/20、两档单独验收），第 3 步的表示层已实现并完成两任务各一对开发配对（见下节；两对内部逐字节相同，只证明表示等价，不证明 H=4 收益），第 4 步分任务报告也已完成并补齐任务 B 的冻结版证据（见上节：L1 冻结版 1/1、L2/L3 冻结版 0/2，多任务平均 0.50 不是难度曲线），最后进入第 7 步正式批次（held-out seed 集合、初态 plan 与批次工具已登记，见下节“第 7 步”；尚未运行，且成功判据阈值未冻结）；本批 10 例只算开发复验，正式批次仍需失败/拒绝率、10 次 reset、接口/视频/30 图与验收表。命令见日报与下节。完整交接见 [2026-11-02 日报](docs/journal/2026-11-02-GarmentLab日报-Stage4-L2L3初态与6b交接.md)。正式成功仍为 0。下方第 1/2 步及旧交接均为历史状态。
@@ -298,7 +298,7 @@ v4 正控为 0 的根因按代码时序定位为：`PhysxContactReportAPI` 在 `
 本地上传清单 21 个文件；远端 SHA256 全部一致，Python/Bash 语法通过。尚未运行，正式成功 0。预登记判读见 [SQUARE_GRASP_HOLD_V5.md](day4-actionchunk-test/SQUARE_GRASP_HOLD_V5.md)。运行命令：
 
 ```bash
-bash /root/autodl-tmp/run-square-grasp-hold-v5.sh
+bash <remote-root>/run-square-grasp-hold-v5.sh
 ```
 
 ## v4 结果：关节锁定保持通过 held gate，接触正控失败，第 1 步未解锁
@@ -360,7 +360,7 @@ seed4100（day4-square-initial-20261031-094446-203825）生成及保存通过：
 
 已有 _lift_drop_once 实现选中心而非角点，且依赖未验证的抓取；L2/L3生成因此阻塞。计划中的corner/lift/drop参数已登记，未用人工变形替代物理生成，也未宣称30张截图完成。
 
-当前唯一运行入口：bash /root/autodl-tmp/run-square-initial.sh 4100。仅L1平移、yaw、清零初态速度、静置120步和截图；无抓取动作。新进程隔离不是重复reset可靠性验收。先审查首例后再生成剩余9例；L2/L3显式拒绝运行。运行后保存参数、变换前/读回/静置后几何、初态PNG、源码、质量及日志。渲染不额外推进物理步。
+当前唯一运行入口：bash <remote-root>/run-square-initial.sh 4100。仅L1平移、yaw、清零初态速度、静置120步和截图；无抓取动作。新进程隔离不是重复reset可靠性验收。先审查首例后再生成剩余9例；L2/L3显式拒绝运行。运行后保存参数、变换前/读回/静置后几何、初态PNG、源码、质量及日志。渲染不额外推进物理步。
 
 本地30例唯一性、刚性变换距离保持、无执行抓取动作及AST检查通过；21份远端哈希和Python/Bash语法通过。本次未启动实验。下方抓取诊断“待运行”均为历史入口，暂不执行。
 
@@ -369,7 +369,7 @@ seed4100（day4-square-initial-20261031-094446-203825）生成及保存通过：
 
 保留 v2 路径、四个公共动作、物理配置、60步保持/30步释放及原门槛，仅增加 control_trace.jsonl。记录 controller.forward 输出、apply_action 输入、get_applied_action 读回，以及每步前后的关节位置/速度和末端位姿，均带物理步、逻辑步、阶段和序号。Python 位姿/关节设置入口记录调用栈；不声称覆盖原生 PhysX 调用。
 
-本地桩验证原样转发参数/返回值、无额外控制调用和恢复钩子；19份远端依赖哈希及Python/Bash语法通过。当前可执行 bash /root/autodl-tmp/run-square-grasp-pose.sh，一次诊断后审查目标突变与实际响应的先后；不凭零接触事件判定无碰撞，不调整阈值或路径。未启动实验，仍为第1步，正式成功0。此节覆盖下方“尚无新入口/暂停复跑”的历史状态。
+本地桩验证原样转发参数/返回值、无额外控制调用和恢复钩子；19份远端依赖哈希及Python/Bash语法通过。当前可执行 bash <remote-root>/run-square-grasp-pose.sh，一次诊断后审查目标突变与实际响应的先后；不凭零接触事件判定无碰撞，不调整阈值或路径。未启动实验，仍为第1步，正式成功0。此节覆盖下方“尚无新入口/暂停复跑”的历史状态。
 
 
 ## 最新状态：v2 四动作完成，保持失稳，暂停复跑
@@ -395,7 +395,7 @@ v1 已执行接近、下降和 CLOSE，但保持阶段姿态 list 类型错误�
 18 份短程测试文件已上传并完成哈希及语法核验，尚无本候选运行通过的证据。本次仅更新计划，未启动实验。由用户在服务器执行：
 
 ```bash
-bash /root/autodl-tmp/run-square-grasp-pose.sh
+bash <remote-root>/run-square-grasp-pose.sh
 ```
 
 只验证 approach → descend → CLOSE → OPEN，不执行折叠。完成后助手自动下载完整结果，核对脚本版本、日志和视频，并审查位置误差、姿态误差、关节速度收敛、附件保持及释放状态。保持既定判据，不因结果失败放宽门槛；接触零事件不能直接解释为无碰撞。
@@ -418,7 +418,7 @@ GitHub README 已于上一轮更新至 Stage 4（提交 d25cea29c3bb376d5504a39d
 
 ## 实例和权限
 
-当前服务器：root@connect.nmb2.seetacloud.com:23636。用户已授权自动上传必要实验文件、下载完整结果；当前由用户运行仿真，助手准备、上传、检查和下载审查。本次没有启动 GPU 实验。
+当前服务器：<server>。用户已授权自动上传必要实验文件、下载完整结果；当前由用户运行仿真，助手准备、上传、检查和下载审查。本次没有启动 GPU 实验。
 
 
 ## 2026-11-02 汇总器修复与 right 开发验证登记（尚未运行）

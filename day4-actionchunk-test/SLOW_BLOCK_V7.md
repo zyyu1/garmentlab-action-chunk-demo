@@ -6,7 +6,7 @@ v6失败瞬间误差分解：指令→末端6.792mm；按测量末端和旋转�
 
 增加attachment_follow_trace.json：每次持布tick记录step、phase、末端目标误差、块目标误差、材料附件误差，异常tick也在finally记录。新增记录不改变world.step数量。观测用于区分持续滞后与孤立超界；不能把运行完成当折叠成功。
 
-本地检查：持布时仅线速度缩放、未持布指令及输入数组不变、角速度不变；公开action调用表达式与v6一致；Python语法及12份依赖哈希通过。上传3份文件完成，服务器V7_REMOTE_MANIFEST_OK 12。未启动仿真，运行bash /root/autodl-tmp/run-minimum-half-fold-v7.sh。
+本地检查：持布时仅线速度缩放、未持布指令及输入数组不变、角速度不变；公开action调用表达式与v6一致；Python语法及12份依赖哈希通过。上传3份文件完成，服务器V7_REMOTE_MANIFEST_OK 12。未启动仿真，运行bash <remote-root>/run-minimum-half-fold-v7.sh。
 
 通过本次执行后仍须看完整OPEN/退让/静置后的几何；若再次超界，不继续扫缩放系数或提高界限。依据完整误差时序决定控制模型是否适合当前侧边抓取。此候选仅开发适配器，尚未正式Backend整合或12动作预算验收。
 

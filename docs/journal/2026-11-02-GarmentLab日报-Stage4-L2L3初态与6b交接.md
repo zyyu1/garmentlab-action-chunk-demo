@@ -51,7 +51,7 @@ L2 新旧对照：旧成功例 103502-594762 与新失败例的 recovered.npz �
 
 | 项 | 值 |
 |---|---|
-| 远端实例 | `ssh -p 23636 <server>`（2026-11-02 新克隆实例；旧 nmb1:22895 不要再用） |
+| 远端实例 | `ssh -p <port> <server>`（2026-11-02 新克隆实例；旧 nmb1:22895 不要再用） |
 | 容器 | `autodl-container-ac0a41b2f7-bc28942d` |
 | 工作目录 | `<remote-root>` |
 | Python | `<remote-root>/envs/isaac40/bin/python` |

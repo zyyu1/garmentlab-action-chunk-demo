@@ -16,7 +16,7 @@
 
 ## 2. 当前环境与操作方式
 
-- 当前SSH：`ssh -p 22895 <server>`。
+- 当前SSH：`ssh -p <port> <server>`。
 - 最近截图容器：`autodl-container-7dde4b87a0-ea1fac3d`，VS Code别名`autodl-garmentlab-264`。
 - 原430实例地址`<server>`不再用于后续命令。旧日报中nmb1/22895曾是失效地址，但用户本轮明确重新提供，现以本轮为准。
 - 助手对新实例只读SSH可达，但认证失败（publickey,password）；远端由用户在PowerShell上传/下载、VS Code远程Bash运行。不要声称助手直接登录运行了GPU实验，也不要求用户在聊天发送密码。

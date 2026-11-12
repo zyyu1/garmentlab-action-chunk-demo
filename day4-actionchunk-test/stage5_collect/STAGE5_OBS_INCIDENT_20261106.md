@@ -45,7 +45,7 @@
 
 ## 6. 路径
 
-- 账本：`/root/autodl-tmp/stage5-formal-state-v1/attempts.jsonl`（36 条 + 1 note）
-- 观测：`/root/autodl-tmp/stage5-trial/obs-formal/evidence/`（仅 6114 的 7 条）
-- 日志：`/root/autodl-tmp/stage5-formal-run-r4.log`（0 字节，collector 正常无输出）；r1/r2/r3 保留
+- 账本：`<remote-root>/stage5-formal-state-v1/attempts.jsonl`（36 条 + 1 note）
+- 观测：`<remote-root>/stage5-trial/obs-formal/evidence/`（仅 6114 的 7 条）
+- 日志：`<remote-root>/stage5-formal-run-r4.log`（0 字节，collector 正常无输出）；r1/r2/r3 保留
 - 6114 导出：`results/STAGE5_FORMAL_AUDIT_20261106/export_6114/`

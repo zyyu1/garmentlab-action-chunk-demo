@@ -58,5 +58,5 @@
 运行命令：
 
 ```bash
-bash /root/autodl-tmp/run-square-grasp-hold.sh
+bash <remote-root>/run-square-grasp-hold.sh
 ```

@@ -249,7 +249,7 @@ v5 两次结果已下载读取：112822-203913 因 KeyError('attachment_bodies')
 
 v4 正控为 0 的根因按代码时序定位为：`PhysxContactReportAPI` 在 `env.reset()` 之后才应用，PhysX 已创建刚体；辅助块还可能进入 sleeping，而 sleeping body 不产生接触报告。v5 只改接触诊断：reset 前对 3 个辅助块和 12 个机器人刚体写入 API；reset 后校验；新增 3 块 `RigidPrimView` 净接触力采样作为独立正控（块 sleep threshold 设为 0，`disable_stablization=False`）。公共四动作、路径、物理、保持/释放时长和 held gate 阈值不变。
 
-远端 21 文件 SHA256 全部一致，Python/Bash 语法通过；尚未运行，正式成功 0。预登记判读见 [SQUARE_GRASP_HOLD_V5.md](day4-actionchunk-test/SQUARE_GRASP_HOLD_V5.md)。运行入口：`bash /root/autodl-tmp/run-square-grasp-hold-v5.sh`。
+远端 21 文件 SHA256 全部一致，Python/Bash 语法通过；尚未运行，正式成功 0。预登记判读见 [SQUARE_GRASP_HOLD_V5.md](day4-actionchunk-test/SQUARE_GRASP_HOLD_V5.md)。运行入口：`bash <remote-root>/run-square-grasp-hold-v5.sh`。
 
 ## v4 结果：关节锁定保持通过 held gate，接触正控失败，第 1 步未解锁
 
@@ -308,7 +308,7 @@ seed4100（day4-square-initial-20261031-094446-203825）生成及保存通过：
 
 已有 _lift_drop_once 实现选中心而非角点，且依赖未验证的抓取；L2/L3生成因此阻塞。计划中的corner/lift/drop参数已登记，未用人工变形替代物理生成，也未宣称30张截图完成。
 
-当前唯一运行入口：bash /root/autodl-tmp/run-square-initial.sh 4100。仅L1平移、yaw、清零初态速度、静置120步和截图；无抓取动作。新进程隔离不是重复reset可靠性验收。先审查首例后再生成剩余9例；L2/L3显式拒绝运行。运行后保存参数、变换前/读回/静置后几何、初态PNG、源码、质量及日志。渲染不额外推进物理步。
+当前唯一运行入口：bash <remote-root>/run-square-initial.sh 4100。仅L1平移、yaw、清零初态速度、静置120步和截图；无抓取动作。新进程隔离不是重复reset可靠性验收。先审查首例后再生成剩余9例；L2/L3显式拒绝运行。运行后保存参数、变换前/读回/静置后几何、初态PNG、源码、质量及日志。渲染不额外推进物理步。
 
 本地30例唯一性、刚性变换距离保持、无执行抓取动作及AST检查通过；21份远端哈希和Python/Bash语法通过。本次未启动实验。下方抓取诊断“待运行”均为历史入口，暂不执行。
 
@@ -317,7 +317,7 @@ seed4100（day4-square-initial-20261031-094446-203825）生成及保存通过：
 
 保留 v2 路径、四个公共动作、物理配置、60步保持/30步释放及原门槛，仅增加 control_trace.jsonl。记录 controller.forward 输出、apply_action 输入、get_applied_action 读回，以及每步前后的关节位置/速度和末端位姿，均带物理步、逻辑步、阶段和序号。Python 位姿/关节设置入口记录调用栈；不声称覆盖原生 PhysX 调用。
 
-本地桩验证原样转发参数/返回值、无额外控制调用和恢复钩子；19份远端依赖哈希及Python/Bash语法通过。当前可执行 bash /root/autodl-tmp/run-square-grasp-pose.sh，一次诊断后审查目标突变与实际响应的先后；不凭零接触事件判定无碰撞，不调整阈值或路径。未启动实验，仍为第1步，正式成功0。此节覆盖下方“尚无新入口/暂停复跑”的历史状态。
+本地桩验证原样转发参数/返回值、无额外控制调用和恢复钩子；19份远端依赖哈希及Python/Bash语法通过。当前可执行 bash <remote-root>/run-square-grasp-pose.sh，一次诊断后审查目标突变与实际响应的先后；不凭零接触事件判定无碰撞，不调整阈值或路径。未启动实验，仍为第1步，正式成功0。此节覆盖下方“尚无新入口/暂停复跑”的历史状态。
 
 
 ## 最新状态：v2 四动作完成，保持失稳，暂停复跑
@@ -364,7 +364,7 @@ URDF指尖中点局部+3.4mm；SquarePoseBackend统一实现XYZ+yaw+gripper，�
 
 ## 2026-10-31：方巾 L1 v1 已就绪，待用户运行
 
-- 入口：`day4-actionchunk-test/run-square-l1.sh`；服务器同名文件位于 `/root/autodl-tmp/`。
+- 入口：`day4-actionchunk-test/run-square-l1.sh`；服务器同名文件位于 `<remote-root>/`。
 - 15个上传文件哈希一致，远端Python AST及Bash语法通过；离线几何检查通过。
 - 单层40cm方巾，441顶点，9个公开动作。没有启动GPU；未证明保持折叠，正式成功0。
 - 下一步：单次开发试跑，自动下载结果并核验完整释放、退让及3秒/4秒保持；不可凭pipeline标志进入正式验收。
@@ -385,7 +385,7 @@ v2结果已下载审查：21个粒子各约1g，总21g，起止一致；三组�
 
 v2质量测量修订已准备上传，远端Python/Shell语法及3文件哈希核验通过。cloth_prim_view.py:408–424确认get_particle_masses底层为cloth tensor view.get_masses()。本地确认场景构造和仿真循环与v1完全一致；阳性、响应未达阈值和质量不匹配判读用例通过。
 
-唯一下一步由用户执行 `bash /root/autodl-tmp/run-attachment-canary-v2.sh`。只补充逐粒子质量（0/120/180步）、质量加权质心和绕枢轴重力矩，不修改物理配置、模拟时长或0.05rad能力门槛。质量总和对USD0.021kg容差0.2%，起止数组须一致。重力矩不是附件实际传递力矩。旧版数据/脚本保留；本轮未启动GPU，正式成功0。
+唯一下一步由用户执行 `bash <remote-root>/run-attachment-canary-v2.sh`。只补充逐粒子质量（0/120/180步）、质量加权质心和绕枢轴重力矩，不修改物理配置、模拟时长或0.05rad能力门槛。质量总和对USD0.021kg容差0.2%，起止数组须一致。重力矩不是附件实际传递力矩。旧版数据/脚本保留；本轮未启动GPU，正式成功0。
 
 # 短场景审查：小幅响应未达门槛
 
@@ -397,7 +397,7 @@ v2质量测量修订已准备上传，远端Python/Shell语法及3文件哈希�
 
 短场景约束能力测试已准备、上传并完成远端Python/Shell语法及3文件SHA256核验。判读程序的合成阳性、有效阴性、无效附件记录测试通过；不能将这些静态检查称为物理验证。
 
-下一步由用户执行 `bash /root/autodl-tmp/run-attachment-canary.sh`。依次独立进程运行rigid、disabled、enabled；每组180个1/120秒物理步，应用启动耗时另计。任一失败立即停止，保留完整日志/场景/轨迹/读回。助手收到完成后自动下载审查。当前未启动GPU，正式成功0。
+下一步由用户执行 `bash <remote-root>/run-attachment-canary.sh`。依次独立进程运行rigid、disabled、enabled；每组180个1/120秒物理步，应用启动耗时另计。任一失败立即停止，保留完整日志/场景/轨迹/读回。助手收到完成后自动下载审查。当前未启动GPU，正式成功0。
 
 # 2026-10-31 约束API审查
 
@@ -425,17 +425,17 @@ bend100/10已完成审查：构造/USD及运行时数组证实B生效（22726项
 
 最新审查：v7（20261031-063759-844425）已自动下载并核验12份源码、133步网格、314帧视频和457条持布tick日志；arc25材料附件误差10.451mm超界停止，未OPEN。降低块线速度到1/3未解决超界，停止速度系数扫描，不提高界限、不原样重跑。侧边单点分支未取得可执行完整候选，正式成功0；回到最小L1要求重新评估抓取模型与expert可行性，暂无新实验。详见day4-actionchunk-test/results/day4-minimum-half-fold-20261031-063759-844425/pilot_review.md。
 
-最新待运行：v6误差拆分为末端6.792mm、块0.570mm、材料附件10.119mm。已准备v7：仅将持布辅助块线速度指令乘1/3（含有效cap降至0.1m/s），路径、抓点、物理和10mm界限不变；新增逐tick误差时序。本地验证及远端12份哈希通过，未启动实验。运行bash /root/autodl-tmp/run-minimum-half-fold-v7.sh。见day4-actionchunk-test/SLOW_BLOCK_V7.md。
+最新待运行：v6误差拆分为末端6.792mm、块0.570mm、材料附件10.119mm。已准备v7：仅将持布辅助块线速度指令乘1/3（含有效cap降至0.1m/s），路径、抓点、物理和10mm界限不变；新增逐tick误差时序。本地验证及远端12份哈希通过，未启动实验。运行bash <remote-root>/run-minimum-half-fold-v7.sh。见day4-actionchunk-test/SLOW_BLOCK_V7.md。
 
 最新审查：v6（20261031-062447-146263）已自动下载，12份源码哈希、130步连续记录、313帧视频通过。侧边单点1547生效，但hem_low_arc_24时锚点残差10.119mm超过10mm诊断界限；未OPEN，不能评价折叠保持，也不能仅凭略超界认定数值发散。完成30动作，正式成功0。先离线区分目标/末端/块/材料误差，不放宽界限或原样重跑。详见day4-actionchunk-test/results/day4-minimum-half-fold-20261031-062447-146263/pilot_review.md。
 
-最新待运行：依据实际网格上下高度区域连接，已准备v6侧边下摆单点抓取（1547，仿真适配层内部固定资产oracle）；仅改抓取位置，保留v5路径公式/物理/释放。12份源码哈希已远端核验，未启动实验。运行bash /root/autodl-tmp/run-minimum-half-fold-v6.sh，结束后自动下载。详见day4-actionchunk-test/SIDE_HEM_V6.md。
+最新待运行：依据实际网格上下高度区域连接，已准备v6侧边下摆单点抓取（1547，仿真适配层内部固定资产oracle）；仅改抓取位置，保留v5路径公式/物理/释放。12份源码哈希已远端核验，未启动实验。运行bash <remote-root>/run-minimum-half-fold-v6.sh，结束后自动下载。详见day4-actionchunk-test/SIDE_HEM_V6.md。
 
 最新材料审查：v5释放前左/中/右越线约80.1%/71.1%/80.0%，并非仅中心移动；初始上/下层越线88.8%/61.7%，下层高度中位数83.6mm。抓点仅锚定上层；空间相邻下层点相距19.7mm且网格路径34条边。下一步离线定位实际下摆/侧缝连通边，评估能带动两层的抓取语义；不直接刚性绑两点，不扫描锚点数量或高度，不启动新实验。报告：day4-actionchunk-test/results/day4-minimum-half-fold-20261031-060323-618705/material_coverage_review.md。
 
 最新审查：v5结果20261031-060323-618705已自动下载。11份源码哈希、340步记录和642帧视频通过，实际单锚点6174，最大跟随误差9.196mm。折线带抬升减小，但释放前源材料z中位数68.67mm、近层比例18.28%、速度P95 0.375m/s；原地释放回移501.76mm，越线比例0。单点抓取未解决折叠，停止锚点数量对照分支，正式成功0；下一步先离线核对材料任务几何和单点搬运覆盖，暂无新实验。详见day4-actionchunk-test/results/day4-minimum-half-fold-20261031-060323-618705/pilot_review.md。
 
-最新状态：用户已明确授权后续自动上传本任务所需实验文件；此前自动下载授权继续有效。v5四份新文件已上传至nmb2:23636的/root/autodl-tmp，服务器11份依赖哈希全部通过（V5_REMOTE_MANIFEST_OK 11）。尚未启动实验。下一步运行bash /root/autodl-tmp/run-minimum-half-fold-v5.sh；结束后由助手下载结果。
+最新状态：用户已明确授权后续自动上传本任务所需实验文件；此前自动下载授权继续有效。v5四份新文件已上传至nmb2:23636的<remote-root>，服务器11份依赖哈希全部通过（V5_REMOTE_MANIFEST_OK 11）。尚未启动实验。下一步运行bash <remote-root>/run-minimum-half-fold-v5.sh；结束后由助手下载结果。
 
 最新准备：v5仅将下摆42点片区改为一个附件点，沿用v4路径和物理。依据为片区铺下仍保持原纵向朝向（斜率+0.984），不是根因定论。一次对照，不扫描锚点数量；本地检查通过，上传被自动审批拒绝，未运行。见day4-actionchunk-test/SINGLE_HEM_ANCHOR_V5.md。
 
@@ -527,7 +527,7 @@ Stage 4 尚未完成，没有新增正式验收成功 episode。下文“准备�
 
 左袖 pilot 折叠失败；下摆 hem-v2 在撤离时超时；hem-v3 修改撤离后动作完成，但布料释放后飞离几十米；hem-v4 逐帧记录确认夹爪原地不动时布料已持续加速。hem-v5 尝试松开时移除约束，最新截图仍出现 2 m 越界停止，根因未确定。
 
-下一步先下载 `/root/autodl-tmp/day4-l1-hem-fold-20261025-081458-011222`，核实移除日志并比较 hem-v4/v5 轨迹，不直接重跑或放宽指标。当前本地脚本版本 hem-v5，完整结果尚未下载。用户要求今日暂停，未启动后续实验。
+下一步先下载 `<remote-root>/day4-l1-hem-fold-20261025-081458-011222`，核实移除日志并比较 hem-v4/v5 轨迹，不直接重跑或放宽指标。当前本地脚本版本 hem-v5，完整结果尚未下载。用户要求今日暂停，未启动后续实验。
 
 ## 最终完成标准
 

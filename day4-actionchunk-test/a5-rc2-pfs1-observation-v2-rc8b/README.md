@@ -12,7 +12,7 @@ rc8b 在 rc8 的基础上把任务协议**补到初态生成**：L1 flat `partic
 | 父版本 | `rc8`（manifest `68930010…`，保留） |
 | 新 manifest | `cce573dd…`（63 项；**52 项与 rc8 逐字节相同**） |
 | 变化项 | 2 个初态生成器、2 个初态 files manifest、`stage4_batch_preflight.py`、正式/初态 runner、`a5-candidate.json`、登记 JSON、批次 runner |
-| 新账本 | `/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc8b-runs` |
+| 新账本 | `<remote-root>/a5-rc2-pfs1-observation-v2-rc8b-runs` |
 
 ## 2. 任务协议（初态 / reset / rollout）
 
@@ -25,7 +25,7 @@ rc8b 在 rc8 的基础上把任务协议**补到初态生成**：L1 flat `partic
 - 路由只按任务身份；不读取 seed、模式或结果。
 - 初态结果新增 `protocol` 块：version、task、level、seed、expected/readback scale、材料绑定（`/World/Garment/particleMaterial` + particle system）、生成器脚本/文件清单哈希、生成时间。
 - `stage4_batch_preflight.initial()` 逐项核对；旧初态（无 protocol）、错误 scale、缺失绑定、生成器不符一律拒绝。
-- 正式批次与初态 runner 改为 **app-relative** 执行，不再从 `/root/autodl-tmp` 共享根目录取旧副本。
+- 正式批次与初态 runner 改为 **app-relative** 执行，不再从 `<remote-root>` 共享根目录取旧副本。
 
 ## 3. 本次生成的开发初态（各一次，不挑选、无重试）
 

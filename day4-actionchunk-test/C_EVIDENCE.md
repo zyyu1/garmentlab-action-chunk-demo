@@ -12,9 +12,9 @@
 上传对应 C 清单列出的文件及清单本身到原远端布局，再运行：
 
 ```bash
-bash run-c-evidence.sh l1 /root/autodl-tmp/<initial-dir> --overhang 0.02
-bash run-c-evidence.sh recovery /root/autodl-tmp/<initial-dir> --fold-edge right
-python audit_episode_evidence.py /root/autodl-tmp/<run>/evidence
+bash run-c-evidence.sh l1 <remote-root>/<initial-dir> --overhang 0.02
+bash run-c-evidence.sh recovery <remote-root>/<initial-dir> --fold-edge right
+python audit_episode_evidence.py <remote-root>/<run>/evidence
 ```
 
 `run-c-evidence.sh` 默认加 `--retention-evidence`。直接运行 Python 而不加此参数仍采集原轨迹，但缺少退让/双保持时完整验收必须失败。`--execution arc4` 可用；时间线仅将 H=4 中间物理步关联到 call_id，不冒充每个子动作完成时的独立状态。public actions 计 horizon 总和，不能以 execute 调用数代替。

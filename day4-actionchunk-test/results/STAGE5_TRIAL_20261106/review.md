@@ -7,7 +7,7 @@
 | 项 | 值 |
 |---|---|
 | seed / 档 | **4100 / flat**（dev seed，不属于验收 seed 集 4110–4129 / 4210–4229 / 4310–4329） |
-| 初态 | `/root/autodl-tmp/day4-square-initial-20261105-014501-526555`；协议 `stage4-initial-v2-task-scoped`；`result.json` `df9ed582…`、`initial_geometry.npz` `dd578303…` |
+| 初态 | `<remote-root>/day4-square-initial-20261105-014501-526555`；协议 `stage4-initial-v2-task-scoped`；`result.json` `df9ed582…`、`initial_geometry.npz` `dd578303…` |
 | 授权路径 | `split=dev`（`a5_entry.authorize_initial` 校验 dev 注册与文件哈希） |
 | 冻结候选 | manifest `40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a`；gate `A5_GATE_OK_SOURCE 7` |
 | 采集入口 | `stage5_collect/collect_demos.py` + `trial_adapter.py`（`adapter_run.py` 的 `STAGE5_APP` 覆盖）+ 只读 pre-action overlay |
@@ -20,7 +20,7 @@
 | plan-only | 只安排 **1** 个 seed（flat 4100；其余档 0） |
 | 运行 | `python collect_demos.py --config trial/stage5_config_trial.json --run` |
 | 退出码 | **0** |
-| 结果目录 | `/root/autodl-tmp/day4-a5-rc2-l1-20261106-235108-211843` |
+| 结果目录 | `<remote-root>/day4-a5-rc2-l1-20261106-235108-211843` |
 | 评价器 | `a5-verdict.status=accepted`、`success=true`、`runner_exit=0`、`criteria=accepted` |
 | 重试 | 无 |
 
@@ -59,7 +59,7 @@
 ## 5. 证据路径
 
 - 本地：`day4-actionchunk-test/results/STAGE5_TRIAL_20261106/`（`obs/`、`state/`、结果目录、`export/`）
-- 服务器：`/root/autodl-tmp/stage5-trial/`（obs、state、app overlay）、结果目录同上
+- 服务器：`<remote-root>/stage5-trial/`（obs、state、app overlay）、结果目录同上
 - 采集账本：`state/attempts.jsonl`（started + accepted）、`state/demonstrations.jsonl`（1 条 accepted）
 
 ## 6. 结论与边界

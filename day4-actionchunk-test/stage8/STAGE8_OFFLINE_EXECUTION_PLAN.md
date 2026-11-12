@@ -131,18 +131,18 @@ Stage 8 估算：
 
 正式 manifest：
 
-`/root/autodl-tmp/stage8_frozen/STAGE8_FROZEN_MANIFEST.json`
+`<remote-root>/stage8_frozen/STAGE8_FROZEN_MANIFEST.json`
 
 启动：
 
 ```bash
-cd /root/autodl-tmp/stage5-trial
-/root/autodl-tmp/envs/isaac40/bin/python -u stage8/batch_run.py \
-  --manifest /root/autodl-tmp/stage8_frozen/STAGE8_FROZEN_MANIFEST.json \
-  --out-root /root/autodl-tmp/stage8_runs/results \
-  --attempt-root /root/autodl-tmp/stage8_runs/attempts \
-  --csv /root/autodl-tmp/stage8_runs/formal/raw_results.csv \
-  --forward-csv /root/autodl-tmp/stage8_runs/formal/forward_timings.csv \
+cd <remote-root>/stage5-trial
+<remote-root>/envs/isaac40/bin/python -u stage8/batch_run.py \
+  --manifest <remote-root>/stage8_frozen/STAGE8_FROZEN_MANIFEST.json \
+  --out-root <remote-root>/stage8_runs/results \
+  --attempt-root <remote-root>/stage8_runs/attempts \
+  --csv <remote-root>/stage8_runs/formal/raw_results.csv \
+  --forward-csv <remote-root>/stage8_runs/formal/forward_timings.csv \
   --label-prefix day4-a5-stage8 \
   --policy-device cuda
 ```
@@ -150,20 +150,20 @@ cd /root/autodl-tmp/stage5-trial
 进度：
 
 ```bash
-wc -l /root/autodl-tmp/stage8_runs/formal/raw_results.csv
-tail -n 3 /root/autodl-tmp/stage8_runs/formal/raw_results.csv
-tail -n 20 /root/autodl-tmp/stage8_runs/attempts/day4-a5-stage8-<run_id>/runner.log
+wc -l <remote-root>/stage8_runs/formal/raw_results.csv
+tail -n 3 <remote-root>/stage8_runs/formal/raw_results.csv
+tail -n 20 <remote-root>/stage8_runs/attempts/day4-a5-stage8-<run_id>/runner.log
 ```
 
 续跑（跳过 CSV 已有 `run_id`）：
 
 ```bash
-/root/autodl-tmp/envs/isaac40/bin/python -u stage8/batch_run.py \
-  --manifest /root/autodl-tmp/stage8_frozen/STAGE8_FROZEN_MANIFEST.json \
-  --out-root /root/autodl-tmp/stage8_runs/results \
-  --attempt-root /root/autodl-tmp/stage8_runs/attempts \
-  --csv /root/autodl-tmp/stage8_runs/formal/raw_results.csv \
-  --forward-csv /root/autodl-tmp/stage8_runs/formal/forward_timings.csv \
+<remote-root>/envs/isaac40/bin/python -u stage8/batch_run.py \
+  --manifest <remote-root>/stage8_frozen/STAGE8_FROZEN_MANIFEST.json \
+  --out-root <remote-root>/stage8_runs/results \
+  --attempt-root <remote-root>/stage8_runs/attempts \
+  --csv <remote-root>/stage8_runs/formal/raw_results.csv \
+  --forward-csv <remote-root>/stage8_runs/formal/forward_timings.csv \
   --label-prefix day4-a5-stage8 \
   --policy-device cuda --resume
 ```

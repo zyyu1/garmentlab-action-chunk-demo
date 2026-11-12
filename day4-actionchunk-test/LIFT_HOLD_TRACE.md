@@ -12,7 +12,7 @@
 
 源码哈希、原始轨迹前缀、保持前阶段快照、前五次 execute 的动作矩阵及步数均检查。保持和释放后的状态本来就会受新增阶段影响，不与旧的立即释放运行要求逐元素相同。
 
-输出目录：/root/autodl-tmp/day4-aligned-lift-hold-<时间戳>/。
+输出目录：<remote-root>/day4-aligned-lift-hold-<时间戳>/。
 主要轨迹文件：lift_hold_trace/frames.npz、steps.csv、summary.json。summary 另存最后 30 个保持样本的速度与边长范围，作为诊断而非平衡或物理质量验收。
 
 成功标记：ALIGNED_LIFT_HOLD_TRACE_OK，并检查 result.json 中 passed=true、original_lift_trace_exact_checks 全部 true、reference_replay_exact_checks 全部 true 和 lift_hold_trace.capture_complete=true。

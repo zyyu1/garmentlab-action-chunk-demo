@@ -61,7 +61,7 @@
 - L2/L3 的 `hold_applicable=true`、`recovery_hold=true`（hold120 语义通过）。
 - 30/30 初态截图：`stage4-minimum-hold120-state-v1/initial_screenshots/*.png`，哈希见 `screenshots.json`。
 - 账本与收尾：`attempts.jsonl`（21 次尝试全量）、`summary.json`、`completed`、`init_dirs.json`。
-- 本地证据包：本目录（15 个结果目录 + state + `minimum_20261106_evidence.tgz`）；服务器原件在 `/root/autodl-tmp/` 对应目录。
+- 本地证据包：本目录（15 个结果目录 + state + `minimum_20261106_evidence.tgz`）；服务器原件在 `<remote-root>/` 对应目录。
 
 ## 5. 接口隔离（按原条款结项：代码审查）
 

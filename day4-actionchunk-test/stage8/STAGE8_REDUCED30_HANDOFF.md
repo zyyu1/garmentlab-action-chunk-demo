@@ -8,10 +8,10 @@
 
 | 项 | 值 |
 |---|---|
-| 父 manifest | `/root/autodl-tmp/stage8_frozen/STAGE8_FROZEN_MANIFEST.json` |
+| 父 manifest | `<remote-root>/stage8_frozen/STAGE8_FROZEN_MANIFEST.json` |
 | 父 file sha256 | `ae1b165376e1b6adc88288fdc3e2e9388ba23c1df74f7377d694f4a2c4dfc030` |
 | 父 core sha256 | `364c9b7e1bdfc7c1a107508dae0ee1192eaff021d8de4e7dd5d71116527d7dce` |
-| 缩减 manifest | `/root/autodl-tmp/stage8_frozen/STAGE8_REDUCED30_MANIFEST.json` |
+| 缩减 manifest | `<remote-root>/stage8_frozen/STAGE8_REDUCED30_MANIFEST.json` |
 | 缩减 file sha256 | `14532f7a5a7f77ef4f1f1396216bf30aeb04b0e126f5e6c80563eb146cad396f` |
 | 缩减 core sha256 | `2c70026aa5ed0340ada5e07659f5c849dfc7d84341fe0783812c0f2428a1789e` |
 | 规模 | **15 seeds / 30 cases** |
@@ -25,9 +25,9 @@
 
 ## 2. 执行
 
-- 实际命令：`/root/autodl-tmp/stage8_reduced30/run_reduced30.sh`
+- 实际命令：`<remote-root>/stage8_reduced30/run_reduced30.sh`
 - 启动 UTC：`2026-11-09T02:49:22Z`
-- 输出 root：`/root/autodl-tmp/stage8_reduced30`
+- 输出 root：`<remote-root>/stage8_reduced30`
 - 结果/attempt/CSV 均独立，未混入 dry run 或原 120 例目录。
 - 串行执行；每个 policy/seed 一次；无自动重试、无换 seed。
 - 正常策略失败继续；没有身份/基础设施/观测/导出异常导致批次暂停。
@@ -125,7 +125,7 @@ H4 call 数少主要来自失败/截断，不能单独解释为效率优势。
 | `attempts/` | 30 个 batch attempt 日志 |
 
 本地副本：`stage8_reduced30_20261109/`（CSV、summary、脚本、5 个代表视频）。  
-远端：`/root/autodl-tmp/stage8_reduced30/`。
+远端：`<remote-root>/stage8_reduced30/`。
 
 本地：[raw_results.csv](../../../stage8_reduced30_20261109/raw_results.csv) ·
 [forward_timings.csv](../../../stage8_reduced30_20261109/forward_timings.csv) ·
@@ -137,7 +137,7 @@ H4 call 数少主要来自失败/截断，不能单独解释为效率优势。
 沿用同一协议，**不要重跑本 30 例**。
 
 ```bash
-bash /root/autodl-tmp/stage8_reduced30/run_reduced30.sh
+bash <remote-root>/stage8_reduced30/run_reduced30.sh
 # 只应在明确要求复现/续跑时使用；不得覆盖已有 reduced30 目录
 ```
 

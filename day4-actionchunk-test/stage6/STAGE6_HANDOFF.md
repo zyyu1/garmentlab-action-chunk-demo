@@ -92,9 +92,9 @@ new dataset `1ed533e8…`、new stats `cbc4d711…`、new single checkpoint
 - 分类：入口正常 + **BC 策略输出不可执行**；首例另有 obs_rows/partial_trace/
   DOWNLOAD_DIR 证据缺口，已在当前代码修复但按“仅运行一次”未重跑。
 - 首例结果目录：
-  `/root/autodl-tmp/stage6_runs/results/day4-a5-bc-single-20261109-015433-798440`
+  `<remote-root>/stage6_runs/results/day4-a5-bc-single-20261109-015433-798440`
   attempt：
-  `/root/autodl-tmp/stage6_runs/attempts/6120-single-20261108-175431`
+  `<remote-root>/stage6_runs/attempts/6120-single-20261108-175431`
   本地下载：`E:\learning\project\stage6_6120_single_20261108\`。
 
 ## 4. 真实 torch 检查
@@ -169,7 +169,7 @@ check_stage6_offline.py check_6120_real.py` → `REMOTE_PY_COMPILE_OK`。
 
 - 历史 holding 恢复：**590/590 actions，70/70 episodes**；primary source
   `state` 160、`action_end` 430；旧 saved JSON holding 全部只记录、未使用。
-- 新数据版本：`/root/autodl-tmp/stage5-trial/holdingfix-20261108/`。
+- 新数据版本：`<remote-root>/stage5-trial/holdingfix-20261108/`。
   - new dataset `1ed533e8…`；new stats `cbc4d711…`；
   - new single checkpoint `ce7ee2aa…`；
   - 原 dataset `ae263a6a…`、原 stats `8f1788d1…`、原 checkpoint `5bff9e67…`

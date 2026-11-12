@@ -113,18 +113,18 @@ L3 fold 的 1 个样本被预测为 OPEN，与 B 中该组夹爪 acc 0.8333 对�
 
 ```bash
 # 三张 train 表
-/root/autodl-tmp/envs/isaac40/bin/python -u stage6/train_group_metrics.py
+<remote-root>/envs/isaac40/bin/python -u stage6/train_group_metrics.py
 
 # 10 条 flat train 轨迹，500 epochs
-/root/autodl-tmp/envs/isaac40/bin/python -u stage6/fit_flat10.py \
+<remote-root>/envs/isaac40/bin/python -u stage6/fit_flat10.py \
   --epochs 500 --batch 128 --lr 1e-3 --weight-decay 1e-4 --seed 0
 ```
 
 远端：
 
-- `/root/autodl-tmp/stage5-trial/holdingfix-20261108/diagnostics/train_tables.{json,md}`
-- `/root/autodl-tmp/stage5-trial/holdingfix-20261108/diagnostics/fit_flat10/{config,curves,metrics,predictions}.json`
-- `/root/autodl-tmp/stage5-trial/holdingfix-20261108/diagnostics/fit_flat10/final.pt`
+- `<remote-root>/stage5-trial/holdingfix-20261108/diagnostics/train_tables.{json,md}`
+- `<remote-root>/stage5-trial/holdingfix-20261108/diagnostics/fit_flat10/{config,curves,metrics,predictions}.json`
+- `<remote-root>/stage5-trial/holdingfix-20261108/diagnostics/fit_flat10/final.pt`
 
 本地：
 

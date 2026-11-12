@@ -6,8 +6,8 @@
 
 ## 实例证据
 
-从当前实例root@connect.nmb2.seetacloud.com:23636下载环境内文件：
-`/root/autodl-tmp/envs/isaac40/lib/python3.10/site-packages/isaacsim/extsPhysics/`
+从当前实例<server>下载环境内文件：
+`<remote-root>/envs/isaac40/lib/python3.10/site-packages/isaacsim/extsPhysics/`
 
 - omni.usd.schema.physx/plugins/PhysxSchema/resources/generatedSchema.usda:4410–4468：PhysxPhysicsAttachment的actor0/actor1、points0/points1及attachmentEnabled。点对在各actor局部坐标定义；没有独立的“允许附件旋转”或柔顺刚度字段。不能编造一个freeRotation属性。
 - omni.physx.demos/omni/physxdemos/scenes/SphericalJointDemo.py：UsdPhysics.SphericalJoint关联两个刚体/静态体；示例设置45度锥角限制。不能原样复制并声称无限制翻转，也不能将球关节直接连接到粒子布料mesh。
@@ -39,7 +39,7 @@
 
 短场景约束能力测试已准备、上传并完成远端Python/Shell语法及3文件SHA256核验。判读程序的合成阳性、有效阴性、无效附件记录测试通过；不能将这些静态检查称为物理验证。
 
-下一步由用户执行 `bash /root/autodl-tmp/run-attachment-canary.sh`。依次独立进程运行rigid、disabled、enabled；每组180个1/120秒物理步，应用启动耗时另计。任一失败立即停止，保留完整日志/场景/轨迹/读回。助手收到完成后自动下载审查。当前未启动GPU，正式成功0。
+下一步由用户执行 `bash <remote-root>/run-attachment-canary.sh`。依次独立进程运行rigid、disabled、enabled；每组180个1/120秒物理步，应用启动耗时另计。任一失败立即停止，保留完整日志/场景/轨迹/读回。助手收到完成后自动下载审查。当前未启动GPU，正式成功0。
 
 ## 预注册判读（脚本为准）
 

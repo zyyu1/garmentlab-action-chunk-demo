@@ -7,12 +7,12 @@
 | 项目 | 值 |
 |---|---|
 | 候选 manifest | `40858efc1a5840ab2bf51e025f823382e8586bc037fbe41bf1d1de5b21dee86a` |
-| overlay | `/root/autodl-tmp/stage4-4112-deep/app`（冻结 app 同哈希副本） |
+| overlay | `<remote-root>/stage4-4112-deep/app`（冻结 app 同哈希副本） |
 | 父/子回执 | `9042e88e…` / `9042e88e…`（内容相同） |
 | 初态 | `day4-square-initial-20261105-232137-703257`；`result.json` `8a092d8a…` |
-| 实际命令 | `bash /root/autodl-tmp/stage4-4112-deep/run_deep.sh`（内部 `python diagnose_arc135_deep.py`） |
+| 实际命令 | `bash <remote-root>/stage4-4112-deep/run_deep.sh`（内部 `python diagnose_arc135_deep.py`） |
 | 退出码 | **0**（`a5_l1.py` 捕获异常并写 result） |
-| 结果目录 | `/root/autodl-tmp/day4-a5-rc2-l1-20261106-055543-016145` |
+| 结果目录 | `<remote-root>/day4-a5-rc2-l1-20261106-055543-016145` |
 | 复现 | **是**；`RuntimeError('Square waypoint velocity/position did not converge')` |
 
 ## 2. RMP 接口与实际下发

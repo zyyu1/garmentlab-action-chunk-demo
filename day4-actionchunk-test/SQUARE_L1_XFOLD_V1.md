@@ -27,13 +27,13 @@
 ## 运行
 
 ```bash
-bash /root/autodl-tmp/run-square-l1-xfold-v1.sh
+bash <remote-root>/run-square-l1-xfold-v1.sh
 ```
 
 运行结束后用日志末尾的 `DOWNLOAD_DIR` 手动下载，例如：
 
 ```powershell
-scp -P 22895 -r root@connect.nmb1.seetacloud.com:/root/autodl-tmp/day4-square-l1-xfold-v1-<时间戳> "E:\learning\project\thesis\day4-actionchunk-test\results"
+scp -P 22895 -r <server>:<remote-root>/day4-square-l1-xfold-v1-<时间戳> "E:\learning\project\thesis\day4-actionchunk-test\results"
 ```
 
 完整结果由用户手动下载。正式成功仍为 0。
@@ -75,4 +75,4 @@ scp -P 22895 -r root@connect.nmb1.seetacloud.com:/root/autodl-tmp/day4-square-l1
 
 ## 上传状态
 
-远端 `/root/autodl-tmp/` 已上传 4 个新文件及 `square-l1-xfold-v1-files.json`（24 项清单）。远端 SHA256 与本地一致：runner `51b6086e…`、run script `03617c0c…`、edge geometry `a27d32c7…`、edge control `6f16c10f…`。清单 24/24 预检通过。首次运行失败已由上述修正覆盖，尚未取得有效折叠运行。
+远端 `<remote-root>/` 已上传 4 个新文件及 `square-l1-xfold-v1-files.json`（24 项清单）。远端 SHA256 与本地一致：runner `51b6086e…`、run script `03617c0c…`、edge geometry `a27d32c7…`、edge control `6f16c10f…`。清单 24/24 预检通过。首次运行失败已由上述修正覆盖，尚未取得有效折叠运行。

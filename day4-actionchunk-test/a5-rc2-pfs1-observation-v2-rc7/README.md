@@ -14,7 +14,7 @@
 | 新 manifest | `bcba8c11b5c65b179227a01feef343b3d90be415776f216d8aefb1424ed18a2a`（63 项） |
 | 变化项 | `a5_l1.py`、`a5-rc2-pfs1-observation-v2.json`、`run-a5-rc2-pfs1-observation-v2.sh`（3 项） |
 | 未变项 | **60/63** 与 v2 逐字节相同（含 `a5_recovery.py`、`a5_capture.py`、`pfs1_observation_v2.py`、`stage4_success_v1.py`） |
-| 新锁/账本 | `/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7-runs`（`batch.lock`、`attempts.jsonl`、`journal/`、`batch.jsonl`、`completed`） |
+| 新锁/账本 | `<remote-root>/a5-rc2-pfs1-observation-v2-rc7-runs`（`batch.lock`、`attempts.jsonl`、`journal/`、`batch.jsonl`、`completed`） |
 | 登记/审计 | [registration.json](registration.json)、[static-audit.json](static-audit.json)、[source-diff.md](source-diff.md)、[audit_rc7_case.py](audit_rc7_case.py) |
 
 ## 2. 物理配置范围（运行前固定）

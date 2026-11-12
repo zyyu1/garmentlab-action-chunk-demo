@@ -53,20 +53,20 @@ v1 诊断 `day4-square-initial-liftdrop-20261101-110942-527451`（4300，prepare
 先跑最差近角、两角翻折的 L3 4300：
 
 ```bash
-SQUARE_LIFTDROP_DIAG=1 bash /root/autodl-tmp/run-square-initial-liftdrop.sh 4300
+SQUARE_LIFTDROP_DIAG=1 bash <remote-root>/run-square-initial-liftdrop.sh 4300
 ```
 
 通过后跑 L2 4200：
 
 ```bash
-SQUARE_LIFTDROP_DIAG=1 bash /root/autodl-tmp/run-square-initial-liftdrop.sh 4200
+SQUARE_LIFTDROP_DIAG=1 bash <remote-root>/run-square-initial-liftdrop.sh 4200
 ```
 
 两者通过后再跑剩余 18 例（每例独立进程）：
 
 ```bash
 for s in 4201 4202 4203 4204 4205 4206 4207 4208 4209 4301 4302 4303 4304 4305 4306 4307 4308 4309; do
-  bash /root/autodl-tmp/run-square-initial-liftdrop.sh "$s" || break
+  bash <remote-root>/run-square-initial-liftdrop.sh "$s" || break
 done
 ```
 

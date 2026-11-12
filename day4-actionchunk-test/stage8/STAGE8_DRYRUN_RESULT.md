@@ -6,9 +6,9 @@
 
 | 项 | 值 |
 |---|---|
-| 正式 manifest | `/root/autodl-tmp/stage8_frozen/STAGE8_FROZEN_MANIFEST.json` |
+| 正式 manifest | `<remote-root>/stage8_frozen/STAGE8_FROZEN_MANIFEST.json` |
 | formal core sha256 | `364c9b7e1bdfc7c1a107508dae0ee1192eaff021d8de4e7dd5d71116527d7dce` |
-| dry manifest | `/root/autodl-tmp/stage8_frozen/STAGE8_DRYRUN_MANIFEST.json` |
+| dry manifest | `<remote-root>/stage8_frozen/STAGE8_DRYRUN_MANIFEST.json` |
 | dry core sha256 | `1e28b3a4eec4aac12634617be2755486ba57cca12908780e26a029e4f98d0c30` |
 | single | `ade60131…` + stats `cbc4d711…`；2000 updates |
 | H4 | `ff8c6945…` + stats `fe5df5c4…`；500 updates；execute_k=4 |
@@ -20,14 +20,14 @@
 
 1. **第一次启动**：manifest 的策略名 `single` 直接传给 runner，而 runner CLI 只接受
    `bc`/`h4`，argparse exit 2，无 result。
-   - 保留：`/root/autodl-tmp/stage8_dryrun/`（CSV 中 `interface_error` + runner.log）。
+   - 保留：`<remote-root>/stage8_dryrun/`（CSV 中 `interface_error` + runner.log）。
    - 修正：batch driver 将 `single → bc`，其余策略名不变。
 2. **第一次修正运行**：single 6120 完成 `execution_error`，但 runner 的 `_predict`
    重建 prediction 时丢掉了 `inference_ms`，导致 `policy_calls.inference_ms=None`。
-   - 保留：`/root/autodl-tmp/stage8_dryrun_fixed/`。
+   - 保留：`<remote-root>/stage8_dryrun_fixed/`。
    - 修正：`_predict` 保留 `inference_ms`；重新冻结 manifest（runner hash
      `e0d522ba…`），并用新的独立目录重跑 4 例。
-3. **最终有效 dry run**：`/root/autodl-tmp/stage8_dryrun_final/`。未自动重试；
+3. **最终有效 dry run**：`<remote-root>/stage8_dryrun_final/`。未自动重试；
    上述两次是修正后的显式人工重跑，失败记录未删除。
 
 ## 3. 四例结果
@@ -75,10 +75,10 @@
 
 结果文件：
 
-- `/root/autodl-tmp/stage8_dryrun_final/raw_results.csv`
-- `/root/autodl-tmp/stage8_dryrun_final/forward_timings.csv`
-- `/root/autodl-tmp/stage8_dryrun_final/check.json`
-- `/root/autodl-tmp/stage8_dryrun_final/results/...`
+- `<remote-root>/stage8_dryrun_final/raw_results.csv`
+- `<remote-root>/stage8_dryrun_final/forward_timings.csv`
+- `<remote-root>/stage8_dryrun_final/check.json`
+- `<remote-root>/stage8_dryrun_final/results/...`
 
 ## 6. 计时边界与限制
 

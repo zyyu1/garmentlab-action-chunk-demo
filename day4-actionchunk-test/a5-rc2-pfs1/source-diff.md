@@ -30,14 +30,14 @@ New files: `pfs1_observation.py`, `a5-rc2-pfs1.json`, `run-a5-rc2-pfs1.sh`.
 +import pfs1_observation
 +
  
- sys.path.insert(0, '/root/autodl-tmp/garmentlab-action-chunk-demo')
+ sys.path.insert(0, '<remote-root>/garmentlab-action-chunk-demo')
  from backends.garmentlab_backend import GarmentLabBackend, _import_garmentlab
 @@ -94,7 +96,7 @@
      raise ValueError('Unexpected initial geometry')
  fold_edges = ['left'] if args.fold_edge == 'left' else ['right']
  edges = list(dict.fromkeys([s['edge'] for s in strips] + fold_edges))
--out = Path('/root/autodl-tmp') / ('day4-a5-rc2-recovery-' +
-+out = Path('/root/autodl-tmp') / ('day4-a5-rc2-pfs1-' +
+-out = Path('<remote-root>') / ('day4-a5-rc2-recovery-' +
++out = Path('<remote-root>') / ('day4-a5-rc2-pfs1-' +
                                    datetime.now().strftime('%Y%m%d-%H%M%S-%f'))
  out.mkdir()
  result = {'probe_version': 'recovery-fold-episode-v1', 'passed': False,

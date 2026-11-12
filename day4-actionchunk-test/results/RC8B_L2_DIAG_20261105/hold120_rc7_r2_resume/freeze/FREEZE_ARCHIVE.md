@@ -23,7 +23,7 @@
 | `verification-manifest-check.json` | `9debc341d27a0355130f222b338af29d9f2b02b367f971168e01f94c54c16d56`，83/83 条目匹配 |
 | `FINAL_SEVEN_CASE_SUMMARY.json` | `6dae3d9bae07adeac12eeb0be80dfefb90db610644e57cb85e7dc2e0648ccf6d` |
 
-回执路径（远端）：`/root/autodl-tmp/a5-rc8b-recovery-hold120-rc7-r2/{verified-dev.json,E_RELEASE.json,verification-manifest.json}`。
+回执路径（远端）：`<remote-root>/a5-rc8b-recovery-hold120-rc7-r2/{verified-dev.json,E_RELEASE.json,verification-manifest.json}`。
 
 ## 3. 实际命令与退出码
 

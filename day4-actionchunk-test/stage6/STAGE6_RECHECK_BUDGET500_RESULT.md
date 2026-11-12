@@ -8,7 +8,7 @@ purpose：`development_recheck_new_checkpoint`；seed=6120；flat/val；**不计
 
 | 项 | 值 |
 |---|---|
-| source checkpoint | `/root/autodl-tmp/stage5-trial/holdingfix-20261108/diagnostics/budget500/best_val.pt` |
+| source checkpoint | `<remote-root>/stage5-trial/holdingfix-20261108/diagnostics/budget500/best_val.pt` |
 | checkpoint sha256 | `ade6013141cfa3b114fe6583602da4b14486b96d736ffe5bbfd104cc3e517208` |
 | epoch / val total | 498 / `0.024020773073634115` |
 | runtime bind | `.../budget500/runtime_recheck/best.pt`（字节相同，hash `ade60131…`） |
@@ -29,20 +29,20 @@ runner 的旧 checkpoint 身份检查用 `--skip-identity-check` 显式绕过；
 wrapper：
 
 ```bash
-bash /root/autodl-tmp/stage5-trial/stage6/run_6120_recheck_budget500.sh
+bash <remote-root>/stage5-trial/stage6/run_6120_recheck_budget500.sh
 ```
 
 runner 实际命令：
 
 ```bash
-/root/autodl-tmp/envs/isaac40/bin/python -u \
-  /root/autodl-tmp/stage5-trial/stage6/a5_bc_single.py \
-  --initial-dir /root/autodl-tmp/day4-square-initial-20261107-070155-602415 \
-  --checkpoint /root/autodl-tmp/stage5-trial/holdingfix-20261108/diagnostics/budget500/runtime_recheck/best.pt \
-  --stats /root/autodl-tmp/stage5-trial/holdingfix-20261108/diagnostics/budget500/runtime_recheck/stats.json \
-  --app-dir /root/autodl-tmp/stage5-trial/app \
-  --repo-root /root/autodl-tmp/garmentlab-action-chunk-demo \
-  --out-root /root/autodl-tmp/stage6_runs/results \
+<remote-root>/envs/isaac40/bin/python -u \
+  <remote-root>/stage5-trial/stage6/a5_bc_single.py \
+  --initial-dir <remote-root>/day4-square-initial-20261107-070155-602415 \
+  --checkpoint <remote-root>/stage5-trial/holdingfix-20261108/diagnostics/budget500/runtime_recheck/best.pt \
+  --stats <remote-root>/stage5-trial/holdingfix-20261108/diagnostics/budget500/runtime_recheck/stats.json \
+  --app-dir <remote-root>/stage5-trial/app \
+  --repo-root <remote-root>/garmentlab-action-chunk-demo \
+  --out-root <remote-root>/stage6_runs/results \
   --label day4-a5-bc-recheck-budget500 \
   --skip-identity-check
 ```
@@ -52,8 +52,8 @@ runner 实际命令：
 | process_exit_code | **0** |
 | effective_exit_code | **3** |
 | shell exit | **3** |
-| attempt | `/root/autodl-tmp/stage6_runs/attempts/6120-recheck-budget500-20261108-190259` |
-| result | `/root/autodl-tmp/stage6_runs/results/day4-a5-bc-recheck-budget500-20261109-030302-075279` |
+| attempt | `<remote-root>/stage6_runs/attempts/6120-recheck-budget500-20261108-190259` |
+| result | `<remote-root>/stage6_runs/results/day4-a5-bc-recheck-budget500-20261109-030302-075279` |
 | automatic_retry | false |
 
 ## 3. 预测/执行动作与终止原因

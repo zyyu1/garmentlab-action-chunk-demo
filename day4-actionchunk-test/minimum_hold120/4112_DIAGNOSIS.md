@@ -13,9 +13,9 @@
 | 子回执 SHA256 | `9042e88e…`（overlay 副本，内容相同） |
 | `verified-dev.json` | `67c64a55…` |
 | 诊断 wrapper | `93e81ee750cd407030a3e485f765fcc9f5f61b12c419d79d84e082cee6042566` |
-| 命令 | `nohup /root/autodl-tmp/envs/isaac40/bin/python diagnose_arc135.py > run.log 2>&1 &`（cwd `/root/autodl-tmp/stage4-4112-diag`） |
+| 命令 | `nohup <remote-root>/envs/isaac40/bin/python diagnose_arc135.py > run.log 2>&1 &`（cwd `<remote-root>/stage4-4112-diag`） |
 | 退出码 | **0**（`a5_l1.py` 捕获异常并写 result；episode 错误记录在 `result.json`） |
-| 结果目录 | `/root/autodl-tmp/day4-a5-rc2-l1-20261106-051736-726076` |
+| 结果目录 | `<remote-root>/day4-a5-rc2-l1-20261106-051736-726076` |
 
 回执路径：父入口由 adapter 指向候选根 `E_RELEASE.json`；子进程 `a5_l1.py` 在 overlay 内读取 `app_overlay/E_RELEASE.json`。两者内容 SHA256 相同；overlay gate 0，冻结 app 直接 gate 1（无 app 内 receipt）。
 

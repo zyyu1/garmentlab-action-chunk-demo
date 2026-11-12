@@ -4,14 +4,14 @@
 
 ## 文件与运行
 
-将以下四个文件放在服务器 /root/autodl-tmp/：
+将以下四个文件放在服务器 <remote-root>/：
 
 - day4-anchor-alignment-test.py
 - anchor_alignment_observer.py
 - anchor_observer.py
 - run-anchor-alignment-pair.sh
 
-运行：`bash /root/autodl-tmp/run-anchor-alignment-pair.sh`。
+运行：`bash <remote-root>/run-anchor-alignment-pair.sh`。
 
 运行器按 baseline、aligned 顺序各启动一个独立 Python 进程；先检查退出状态、最终标记和 result.json，再继续下一组。基线失败时不会启动对齐组。两个进程没有共享 SimulationApp。
 

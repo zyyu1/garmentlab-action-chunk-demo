@@ -16,4 +16,4 @@
 
 square-grasp-pose-v2-serialization-fix：保持/释放使用公共 orientation_euler(0.) 返回的 NumPy 数组；JSON 支持嵌套 NumPy 数组和标量；保存流程外加 finally，确保保存失败仍调用 b.stop。路径、物理配置和验收阈值不变。
 
-本地 AST、嵌套 NumPy 序列化和两处姿态调用检查通过；18 份远端依赖哈希/Python AST 通过。新脚本与 manifest 已上传，未启动复测。下一步仍为 bash /root/autodl-tmp/run-square-grasp-pose.sh，通过保持和释放后才讨论 L1。
+本地 AST、嵌套 NumPy 序列化和两处姿态调用检查通过；18 份远端依赖哈希/Python AST 通过。新脚本与 manifest 已上传，未启动复测。下一步仍为 bash <remote-root>/run-square-grasp-pose.sh，通过保持和释放后才讨论 L1。

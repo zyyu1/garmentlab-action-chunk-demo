@@ -5,7 +5,7 @@
 ## 1. 结论摘要
 
 - 历史 holding 恢复：**590/590 动作、70/70 episode 全部对齐成功**；无缺失/歧义。
-- 新数据版本：`/root/autodl-tmp/stage5-trial/holdingfix-20261108/`；
+- 新数据版本：`<remote-root>/stage5-trial/holdingfix-20261108/`；
   原数据集/stats/checkpoint 全部保留。
 - holding 归一化：**identity**（mean=0、scale=1），不参与均值方差标准化；其余统计仍只来自 train。
 - single 固定配置重训一次：`best_val=0.3119828`，93 epochs；test 坐标 MAE `0.0279849 m`，
@@ -82,7 +82,7 @@ APPROACH/RELEASE 的 OPEN 分别 false/true；不是仅“整列不全零”。
 ## 4. 固定配置重训（single 一次）
 
 ```bash
-/root/autodl-tmp/envs/isaac40/bin/python -u training/train_bc.py \
+<remote-root>/envs/isaac40/bin/python -u training/train_bc.py \
   --dataset holdingfix-20261108/data --mode single \
   --out holdingfix-20261108/runs/single \
   --epochs 100 --batch 128 --lr 1e-3 --seed 0

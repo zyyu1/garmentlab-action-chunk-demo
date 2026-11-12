@@ -23,7 +23,7 @@
 | 实例 | 内蒙 B 区 / 430 机 |
 | 容器 | `autodl-container-ac0a41b2f7-bc28942d` |
 | VS Code SSH 别名 | `autodl-garmentlab-430` |
-| SSH 命令 | `ssh -p 23636 <server>` |
+| SSH 命令 | `ssh -p <port> <server>` |
 | GPU | NVIDIA GeForce RTX 3090，24576 MiB |
 | 驱动 | 580.105.08 |
 | nvidia-smi CUDA 显示 | 13.0，指驱动支持信息；没有因此重装 CUDA |

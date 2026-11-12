@@ -25,7 +25,7 @@
 
 | 项目 | 值 |
 |---|---|
-| 初态目录 | `/root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560` |
+| 初态目录 | `<remote-root>/day4-square-initial-stripfold-20261103-062710-242560` |
 | `result.json` SHA256 | `4472f4df6332a240da52b8c2ebaf7dd91f5f958e10a09803b64658699aea8adb` |
 | `initial_geometry.npz` SHA256 | `a6646d66bed8d00d046c2195c733f7f3aefc6471ca458995e247c11091e86106` |
 | seed / level / mode | 4202 / perturbed / single |
@@ -104,5 +104,5 @@ runner 只接受 `4202 single`；`completed` 标记存在时拒绝第二次运�
 ## 9. 上传（已执行）
 
 ```powershell
-scp -P 23636 -r E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\a5-rc2-d2c-release-order root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
+scp -P 23636 -r E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\a5-rc2-d2c-release-order <server>:<remote-root>/
 ```

@@ -84,21 +84,21 @@ gate 失败不生成/不 rollout；身份/缺结果暂停；同 seed 两模式�
 
 ```bash
 # 上传部署层（如尚未上传）
-scp -P 23636 formal_hold120.tar.gz root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
-ssh -p 23636 root@connect.nmb2.seetacloud.com \
-  'mkdir -p /root/autodl-tmp/stage4-formal-hold120 && cd /root/autodl-tmp/stage4-formal-hold120 && tar -xzf /root/autodl-tmp/formal_hold120.tar.gz && chmod +x launch_formal.sh'
+scp -P 23636 formal_hold120.tar.gz <server>:<remote-root>/
+ssh -p <port> <server> \
+  'mkdir -p <remote-root>/stage4-formal-hold120 && cd <remote-root>/stage4-formal-hold120 && tar -xzf <remote-root>/formal_hold120.tar.gz && chmod +x launch_formal.sh'
 
 # 预检（不启动仿真）
-ssh -p 23636 root@connect.nmb2.seetacloud.com \
-  'cd /root/autodl-tmp/stage4-formal-hold120 && /root/autodl-tmp/envs/isaac40/bin/python formal_driver.py --preflight'
+ssh -p <port> <server> \
+  'cd <remote-root>/stage4-formal-hold120 && <remote-root>/envs/isaac40/bin/python formal_driver.py --preflight'
 
 # 启动（tmux；仅一次）
-ssh -p 23636 root@connect.nmb2.seetacloud.com \
-  'tmux new-session -d -s formal_hold120 /root/autodl-tmp/stage4-formal-hold120/launch_formal.sh'
+ssh -p <port> <server> \
+  'tmux new-session -d -s formal_hold120 <remote-root>/stage4-formal-hold120/launch_formal.sh'
 
 # 查看进度
-ssh -p 23636 root@connect.nmb2.seetacloud.com \
-  'tail -5 /root/autodl-tmp/stage4-formal-hold120/formal_run.log; wc -l /root/autodl-tmp/stage4-formal-hold120-formal-v1/attempts.jsonl; cat /root/autodl-tmp/stage4-formal-hold120-formal-v1/summary.json 2>/dev/null'
+ssh -p <port> <server> \
+  'tail -5 <remote-root>/stage4-formal-hold120/formal_run.log; wc -l <remote-root>/stage4-formal-hold120-formal-v1/attempts.jsonl; cat <remote-root>/stage4-formal-hold120-formal-v1/summary.json 2>/dev/null'
 
 # 续跑：先确认无活跃 tmux/锁、检查 attempts 中是否有 started；同一条启动命令即可，已完成槽自动跳过
 # 若 started 未完成，驱动会暂停，不自动重试；需人工检查现场后再决定。
@@ -107,9 +107,9 @@ ssh -p 23636 root@connect.nmb2.seetacloud.com \
 ## 9. 下载核验与汇总
 
 ```bash
-ssh -p 23636 root@connect.nmb2.seetacloud.com \
-  'cd /root/autodl-tmp/stage4-formal-hold120 && /root/autodl-tmp/envs/isaac40/bin/python download_formal.py --state /root/autodl-tmp/stage4-formal-hold120-formal-v1 --out /root/autodl-tmp/formal_hold120_archive.tar.gz'
-scp -P 23636 root@connect.nmb2.seetacloud.com:/root/autodl-tmp/formal_hold120_archive.tar.gz ./
+ssh -p <port> <server> \
+  'cd <remote-root>/stage4-formal-hold120 && <remote-root>/envs/isaac40/bin/python download_formal.py --state <remote-root>/stage4-formal-hold120-formal-v1 --out <remote-root>/formal_hold120_archive.tar.gz'
+scp -P 23636 <server>:<remote-root>/formal_hold120_archive.tar.gz ./
 # 远端哈希清单 + 本地 verify_rc7_download.py（generic）逐文件核验
 # summary 以 state/summary.json 为准；不修改原始 ledger。
 ```

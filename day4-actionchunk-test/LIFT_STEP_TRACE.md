@@ -1,6 +1,6 @@
 # 已对齐方案的抬升逐步采样
 
-上传 day4-aligned-lift-step-test.py、lift_step_observer.py 至服务器 /root/autodl-tmp/。此前上传并通过的 anchor_observer.py、anchor_alignment_observer.py 继续使用，脚本会核对它们和 backend 的哈希。
+上传 day4-aligned-lift-step-test.py、lift_step_observer.py 至服务器 <remote-root>/。此前上传并通过的 anchor_observer.py、anchor_alignment_observer.py 继续使用，脚本会核对它们和 backend 的哈希。
 
 运行仍使用 5 mm overlap、关闭 disabled probe、aligned 模式。没有改动下降路线、抬升目标、速度上限、求解参数或验收阈值；保留单进程一次抓取。
 
@@ -12,7 +12,7 @@
 
 流程结束前还比较本次与已通过 aligned 运行的 6 个快照、动作矩阵及每次 execute 物理步数，要求完全一致；如果不一致，会保存结果并拒绝输出成功标记。
 
-输出目录：/root/autodl-tmp/day4-aligned-lift-step-<时间戳>/。
+输出目录：<remote-root>/day4-aligned-lift-step-<时间戳>/。
 
 - lift_trace/steps.csv：每次显式步进的指标。
 - lift_trace/frames.npz：原始轨迹数组，含起始帧。

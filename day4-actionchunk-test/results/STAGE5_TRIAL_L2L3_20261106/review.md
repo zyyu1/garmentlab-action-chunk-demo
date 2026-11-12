@@ -66,7 +66,7 @@
 - 本地：`day4-actionchunk-test/results/STAGE5_TRIAL_L2L3_20261106/`
   - [L2 导出](export_4202/export_summary.json)、[L3 导出](export_4302/export_summary.json)
   - 结果目录（各含 result.json、success_trace.npz、evidence/）、obs 目录、state（attempts/demonstrations）
-- 服务器：`/root/autodl-tmp/stage5-trial/`（`obs-l2l3/`、`obs-4302/`、`state-l2l3/`、`state-4302/`）
+- 服务器：`<remote-root>/stage5-trial/`（`obs-l2l3/`、`obs-4302/`、`state-l2l3/`、`state-4302/`）
 - 试跑账本：`state-l2l3/attempts.jsonl`（4202 started+accepted；4302 首次 missing_initial）、`state-4302/attempts.jsonl`（4302 started+accepted）
 
 ## 7. 结论与边界

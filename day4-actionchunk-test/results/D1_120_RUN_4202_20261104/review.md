@@ -1,6 +1,6 @@
 # D1-120 步骤 6：4202 single 单次运行结果
 
-运行目录：`day4-a5-rc2-d1-120-20261104-071602-499516`（远端 `/root/autodl-tmp/`；本地已下载到 `E:\learning\project\thesis\day4-actionchunk-test\results\`）。
+运行目录：`day4-a5-rc2-d1-120-20261104-071602-499516`（远端 `<remote-root>/`；本地已下载到 `E:\learning\project\thesis\day4-actionchunk-test\results\`）。
 
 **本次是唯一一次有效 episode；没有重试、没有改参数、没有重跑仿真。**
 

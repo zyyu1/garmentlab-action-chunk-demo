@@ -10,9 +10,9 @@ episode 在任何抓取/终端释放之前以 `execution_error` 结束。没有�
 |---|---|
 | seed / level / split | 6120 / flat / val |
 | execution | single，L1 budget 7 |
-| result dir | `/root/autodl-tmp/stage6_runs/results/day4-a5-bc-single-20261109-015433-798440` |
-| attempt dir | `/root/autodl-tmp/stage6_runs/attempts/6120-single-20261108-175431` |
-| runner | `/root/autodl-tmp/envs/isaac40/bin/python -u stage6/a5_bc_single.py ...` |
+| result dir | `<remote-root>/stage6_runs/results/day4-a5-bc-single-20261109-015433-798440` |
+| attempt dir | `<remote-root>/stage6_runs/attempts/6120-single-20261108-175431` |
+| runner | `<remote-root>/envs/isaac40/bin/python -u stage6/a5_bc_single.py ...` |
 | process exit code | 0（`SimulationApp.close()` 先于最终 print；见 §5） |
 | effective exit code | 3（`bc-verdict.status=execution_error`） |
 | 自动重试 | 无 |
@@ -20,13 +20,13 @@ episode 在任何抓取/终端释放之前以 `execution_error` 结束。没有�
 实际命令（started.json 记录）：
 
 ```bash
-/root/autodl-tmp/envs/isaac40/bin/python -u /root/autodl-tmp/stage5-trial/stage6/a5_bc_single.py \
-  --initial-dir /root/autodl-tmp/day4-square-initial-20261107-070155-602415 \
-  --checkpoint /root/autodl-tmp/stage5-trial/training/runs/single/best.pt \
-  --stats /root/autodl-tmp/stage5-trial/training/final/stats.json \
-  --app-dir /root/autodl-tmp/stage5-trial/app \
-  --repo-root /root/autodl-tmp/garmentlab-action-chunk-demo \
-  --out-root /root/autodl-tmp/stage6_runs/results \
+<remote-root>/envs/isaac40/bin/python -u <remote-root>/stage5-trial/stage6/a5_bc_single.py \
+  --initial-dir <remote-root>/day4-square-initial-20261107-070155-602415 \
+  --checkpoint <remote-root>/stage5-trial/training/runs/single/best.pt \
+  --stats <remote-root>/stage5-trial/training/final/stats.json \
+  --app-dir <remote-root>/stage5-trial/app \
+  --repo-root <remote-root>/garmentlab-action-chunk-demo \
+  --out-root <remote-root>/stage6_runs/results \
   --label day4-a5-bc-single
 ```
 
@@ -46,7 +46,7 @@ episode 在任何抓取/终端释放之前以 `execution_error` 结束。没有�
 
 ## 3. 真实 torch 前向（不是假 torch 测试）
 
-- 解释器：`/root/autodl-tmp/envs/isaac40/bin/python`，Python 3.10.8。
+- 解释器：`<remote-root>/envs/isaac40/bin/python`，Python 3.10.8。
 - torch：`2.2.2+cu121`，CUDA available=true；BCPolicy 推理 device=cpu。
 - 输入：6120 的 `action_001_obs.npz`，`obs_shape=(1340,)`，`obs_finite=true`，
   `holding=false`。
@@ -55,7 +55,7 @@ episode 在任何抓取/终端释放之前以 `execution_error` 结束。没有�
 - 对照：专家 action_001 target `[-0.19001977145671844, -0.44883161783218384,
   0.1599000245332718, 0.0859541967511177]`，command 0。
 
-结果文件：`/root/autodl-tmp/stage6_6120_real_check.json`。
+结果文件：`<remote-root>/stage6_6120_real_check.json`。
 
 ## 4. 实际公共动作
 
@@ -144,7 +144,7 @@ retention false 是因为没有 terminal OPEN。
 
 - 数据盘：50G，已用 39G，可用 12G；首例结果 1.9M。单例预计 30–65M，
   20 例约 0.8–1.1G，当前剩余空间不需要扩容；若后续保留大量 step_hook/视频，
-  再按 `df -h /root/autodl-tmp` 和 `du -sh` 判断。
+  再按 `df -h <remote-root>` 和 `du -sh` 判断。
 - 本次未启动剩余 19 例，未修改物理、阈值、采样或原评价窗口。
 
 ## 10. 后续离线定位（2026-11-08，未重跑）

@@ -15,7 +15,7 @@
 | L2/L3 budget | 12 / 12；未加专家动作、等待或补救控制 |
 
 L2/L3 初态清单（运行前冻结，见
-`/root/autodl-tmp/stage6_runs/evals/l2l3_dev_budget500_20261108/manifest.json`）：
+`<remote-root>/stage6_runs/evals/l2l3_dev_budget500_20261108/manifest.json`）：
 
 - **L2 perturbed**：4210, 4211, 4212, 4213, 4214。最终清单**没有 perturbed val**，
   因此从 `passed=true`、`B_nominal`、有 strip records 的初态中按 seed 升序取。

@@ -27,7 +27,7 @@
 | 项目 | 当前值 |
 |---|---|
 | SSH 别名 | `autodl-garmentlab-264` |
-| SSH 命令 | `ssh -p 22895 <server>` |
+| SSH 命令 | `ssh -p <port> <server>` |
 | 容器 | `autodl-container-7dde4b87a0-ea1fac3d` |
 | GPU | NVIDIA GeForce RTX 4090，24564 MiB |
 | 驱动 | 580.76.05 |

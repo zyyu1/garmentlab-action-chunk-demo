@@ -29,13 +29,13 @@
 - 冒烟命令（2 循环 = 1 次完整折叠 + 1 次重抓取）：
 
 ```bash
-bash /root/autodl-tmp/run-prepared-square-backend-reset.sh 2
+bash <remote-root>/run-prepared-square-backend-reset.sh 2
 ```
 
 - 正式 10 循环：
 
 ```bash
-bash /root/autodl-tmp/run-prepared-square-backend-reset.sh 10
+bash <remote-root>/run-prepared-square-backend-reset.sh 10
 ```
 
 ## 预登记判读
@@ -83,4 +83,4 @@ bash /root/autodl-tmp/run-prepared-square-backend-reset.sh 10
 
 ## 上传状态
 
-已上传到 `/root/autodl-tmp/` 及服务器仓库 `garmentlab-action-chunk-demo/backends/`。远端 SHA256 与本地一致：test `16bceae9…`、run `0023ed62…`、prepared backend `15a5b297…`、garmentlab_backend `def9544d…`、multi_prepared `579de3d6…`、manifest `eb73a22e…`。`py_compile`、`bash -n`、20 项清单预检通过。10 循环运行使用了上述版本。
+已上传到 `<remote-root>/` 及服务器仓库 `garmentlab-action-chunk-demo/backends/`。远端 SHA256 与本地一致：test `16bceae9…`、run `0023ed62…`、prepared backend `15a5b297…`、garmentlab_backend `def9544d…`、multi_prepared `579de3d6…`、manifest `eb73a22e…`。`py_compile`、`bash -n`、20 项清单预检通过。10 循环运行使用了上述版本。

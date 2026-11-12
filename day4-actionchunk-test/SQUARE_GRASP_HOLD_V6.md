@@ -16,13 +16,13 @@
 
 ## 运行
 
-`bash /root/autodl-tmp/run-square-grasp-hold-v6.sh`
+`bash <remote-root>/run-square-grasp-hold-v6.sh`
 
 使用独立 v6 文件、输出目录和 SHA256 清单。旧依赖hash沿用v5清单，完整结果由用户手动下载。
 
 ## 本次结果：第2步完成
 
-远端目录 `/root/autodl-tmp/day4-square-grasp-hold-v6-20261101-051527-577538`。只运行一次，`passed=true`、errors为空，PYTHON_EXIT和TEE_EXIT均0，视频首帧可解码；尚未人工观看完整视频，不计正式折叠。
+远端目录 `<remote-root>/day4-square-grasp-hold-v6-20261101-051527-577538`。只运行一次，`passed=true`、errors为空，PYTHON_EXIT和TEE_EXIT均0，视频首帧可解码；尚未人工观看完整视频，不计正式折叠。
 
 | 检查 | 结果 |
 | --- | --- |
@@ -44,5 +44,5 @@
 手动下载（本地PowerShell）：
 
 ```powershell
-scp -P 22895 -r root@connect.nmb1.seetacloud.com:/root/autodl-tmp/day4-square-grasp-hold-v6-20261101-051527-577538 "E:\learning\project\thesis\day4-actionchunk-test\results"
+scp -P 22895 -r <server>:<remote-root>/day4-square-grasp-hold-v6-20261101-051527-577538 "E:\learning\project\thesis\day4-actionchunk-test\results"
 ```

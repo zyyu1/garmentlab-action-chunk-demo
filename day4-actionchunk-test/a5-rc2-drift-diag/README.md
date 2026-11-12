@@ -59,13 +59,13 @@ v1.1 只改观察/审计：锚点改为 `release_anchor`（非 state），action
 上传整个目录（保留字节，不做行尾转换）：
 
 ```powershell
-scp -P 23636 -r E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\a5-rc2-drift-diag root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
+scp -P 23636 -r E:\learning\project\garmentlab-action-chunk-demo\day4-actionchunk-test\a5-rc2-drift-diag <server>:<remote-root>/
 ```
 
 运行 4202 single：
 
 ```bash
-cd /root/autodl-tmp/a5-rc2-drift-diag/app
+cd <remote-root>/a5-rc2-drift-diag/app
 bash run-a5-rc2-drift-diag.sh 4202 single
 ```
 
@@ -79,10 +79,10 @@ DIAG_CONTACT True|False
 DIAG_ASSESS complete=True|False quality=... release_rows=... contact_events=...
 ```
 
-输出目录为 `/root/autodl-tmp/day4-a5-rc2-drift-diag-<timestamp>`。下载：
+输出目录为 `<remote-root>/day4-a5-rc2-drift-diag-<timestamp>`。下载：
 
 ```powershell
-scp -P 23636 -r root@connect.nmb2.seetacloud.com:/root/autodl-tmp/day4-a5-rc2-drift-diag-<timestamp> E:\learning\project\thesis\day4-actionchunk-test\results\
+scp -P 23636 -r <server>:<remote-root>/day4-a5-rc2-drift-diag-<timestamp> E:\learning\project\thesis\day4-actionchunk-test\results\
 ```
 
 4302 single 复验把命令末尾改为 `4302 single`；不要跑 held-out，不要改参数，不要用诊断 run 冒充 RC2 或正式成功。

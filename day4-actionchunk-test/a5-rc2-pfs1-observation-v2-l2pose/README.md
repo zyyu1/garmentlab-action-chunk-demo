@@ -15,7 +15,7 @@
 | 新 manifest | `3a97a500…`（63 项；**60 项与 rc8b 逐字节相同**） |
 | 变化项 | `a5-candidate.json`、登记 JSON、runner |
 | rollout 身份 | `a5_recovery.py` / `a5_capture.py` / `pfs1_observation_v2.py` / `stage4_success_v1.py` / 资产与 rc8b 逐字节相同 |
-| 新账本 | `/root/autodl-tmp/a5-rc2-pfs1-observation-v2-l2pose-runs` |
+| 新账本 | `<remote-root>/a5-rc2-pfs1-observation-v2-l2pose-runs` |
 
 ## 2. 派生初态（旧几何 + 新位姿）
 

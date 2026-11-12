@@ -35,7 +35,7 @@
 
 最新接续（SDK源码已取得）：用户导出的Isaac 4.0源码显示solver getter/setter最终只调用get_prim_property/set_prim_property读写USD，无实时PhysX求解器访问。v8读回0不能证明运行中的引擎更新。已准备v9：新进程中临时包装首次FoldEnv.reset，在timeline停止且step0时把USD速度迭代64→0，然后执行原reset，并检查未被覆盖；位置迭代64及控制函数完全不变，无运行中干预。Python3.10语法、控制AST一致性、钩子顺序/恢复桩测试通过，真实Isaac执行待验证。下一步运行run-wrist-ik-execution-v9.sh；由于从初始化更改物理配置，前缀状态允许变化，应比较相同几何目标与配置并保留全部结果。
 
-最新接续：新实例已改为 `ssh -p 22895 <server>`。v8结果 `day4-wrist-ik-execution-20261026-220541-035682` 已下载核对：脚本哈希通过，干预step846 getter64→0且无步进/状态变化，但全部目标记录及1086步状态文件与v7b完全一致（状态文件逐字节相同）。不能把getter变化当成有效求解器已更新，也不能据此排除TGS迭代假设。下一步使用 `export-solver-api.py` 只读导出当前安装版本getter/setter源码，无需启动Isaac。确认配置生效时机后再决定是否做reset前对照。报告与图见该结果目录pilot_review.md、v8_vs_v7b.png。
+最新接续：新实例已改为 `ssh -p <port> <server>`。v8结果 `day4-wrist-ik-execution-20261026-220541-035682` 已下载核对：脚本哈希通过，干预step846 getter64→0且无步进/状态变化，但全部目标记录及1086步状态文件与v7b完全一致（状态文件逐字节相同）。不能把getter变化当成有效求解器已更新，也不能据此排除TGS迭代假设。下一步使用 `export-solver-api.py` 只读导出当前安装版本getter/setter源码，无需启动Isaac。确认配置生效时机后再决定是否做reset前对照。报告与图见该结果目录pilot_review.md、v8_vs_v7b.png。
 
 最新接续：v7b结果 `day4-wrist-ik-execution-20261026-193733-229449` 已完整下载核对。脚本与导出源码哈希通过，1086步pre/post状态连续、实际dt=1/60s，全部目标记录与v6完全一致。TGS articulation位置/速度迭代数64/64，self-collisions=0，有效臂关节kp=572957824、kd=5729578；高增益与64次TGS速度迭代是配置线索，不是已证实根因。基于NVIDIA Isaac Sim官方TGS速度迭代兼容性说明，准备独立v8：完成27点原插值后仅将articulation速度迭代64→0，位置迭代、gains、dt及控制阈值不变，记录无步进的干预前后状态与读回。v8本地Python3.10语法和单一插入点控制AST检查通过，尚未远端运行。分析见该结果目录pilot_review.md与runtime_velocity_consistency.png。下一步使用run-wrist-ik-execution-v8.sh进行这一有依据的配置对照，不盲扫参数。
 

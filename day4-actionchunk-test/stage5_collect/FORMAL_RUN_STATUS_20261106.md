@@ -6,7 +6,7 @@
 
 | 项 | 结果 |
 |---|---|
-| `df -h /root/autodl-tmp` | 50G 总、37G 已用、**14G 可用**（≥12 GB） |
+| `df -h <remote-root>` | 50G 总、37G 已用、**14G 可用**（≥12 GB） |
 | 既有正式进程 | 无 |
 | `STAGE5_DEMO=1` 传递 | `a5_entry_demo.py:65` 在子进程 env 中设置，无需外部导出 |
 | preflight / plan-only | 均 exit 0；360 条 demo plan；每档 120/50/120；6100 初态已绑定 |
@@ -15,8 +15,8 @@
 
 - 命令：注册命令原样（`collect_demos.py --config trial/stage5_config_formal.json --run`）。
 - 进程：shell PID **25686**、python PID **25688**（现已停止）。
-- 日志：`/root/autodl-tmp/stage5-formal-run.log`（collector 自身无输出）。
-- 状态：`/root/autodl-tmp/stage5-formal-state-v1/attempts.jsonl`。
+- 日志：`<remote-root>/stage5-formal-run.log`（collector 自身无输出）。
+- 状态：`<remote-root>/stage5-formal-state-v1/attempts.jsonl`。
 
 ## 3. 首槽 6100 核验
 

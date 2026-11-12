@@ -8,4 +8,4 @@
 
 启动前核对与通过实验一致的五份关键源码哈希。运行器额外核对成功标记、JSON passed、采集时无步进和约束关闭状态。仅本地 Python 3.10 语法检查已通过，尚未执行远程参数采集。原实验文件和正式 backend 均未修改。
 
-上传 day4-physics-config-audit.py 与 run-physics-config-audit.sh 到 /root/autodl-tmp，然后远程 Bash 执行 `bash /root/autodl-tmp/run-physics-config-audit.sh`。下载末尾 DOWNLOAD_DIR 所示完整目录后，审阅刚度、阻尼、迭代、粒子接触/质量参数及控制配置，再决定单变量实验。
+上传 day4-physics-config-audit.py 与 run-physics-config-audit.sh 到 <remote-root>，然后远程 Bash 执行 `bash <remote-root>/run-physics-config-audit.sh`。下载末尾 DOWNLOAD_DIR 所示完整目录后，审阅刚度、阻尼、迭代、粒子接触/质量参数及控制配置，再决定单变量实验。

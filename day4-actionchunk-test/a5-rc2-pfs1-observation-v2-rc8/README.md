@@ -13,7 +13,7 @@
 | 基准 manifest | v2 `d97bf349…`（63 项） |
 | 新 manifest | `68930010…`（63 项；**59 项与 v2 逐字节相同**） |
 | 变化项 | `a5_l1.py`（L1 0.0）、`pfs1_observation_v2.py`（expected scale 参数化）、登记 JSON、runner |
-| 新账本 | `/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc8-runs` |
+| 新账本 | `<remote-root>/a5-rc2-pfs1-observation-v2-rc8-runs` |
 | 登记/审计 | [registration.json](registration.json)、[static-audit.json](static-audit.json)、[source-diff.md](source-diff.md)、[audit_rc8_case.py](audit_rc8_case.py) |
 
 ## 2. 任务协议（运行前固定）

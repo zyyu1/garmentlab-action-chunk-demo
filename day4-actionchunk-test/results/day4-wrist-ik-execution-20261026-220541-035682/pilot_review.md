@@ -1,6 +1,6 @@
 # v8 单变量对照核对（2026-10-26）
 
-新实例 connect.nmb1.seetacloud.com:22895，容器截图为7dde4b87a0-ea1fac3d。运行脚本SHA256匹配。干预发生于probe_step846，第27点原插值完成后、保持前；无时间步进，前后状态完全相同，gains/dt和位置迭代数保持不变，速度迭代getter由64读回0。
+新实例 <server>，容器截图为7dde4b87a0-ea1fac3d。运行脚本SHA256匹配。干预发生于probe_step846，第27点原插值完成后、保持前；无时间步进，前后状态完全相同，gains/dt和位置迭代数保持不变，速度迭代getter由64读回0。
 
 与v7b全部目标及逐步trace完全相同，1086行step_states.jsonl逐字节相同。保持240步后仍失败，末速度4.7171196937561035 rad/s。配置前后仅发现USD solverVelocityIterationCount和两个getter对应字段从64变0。
 

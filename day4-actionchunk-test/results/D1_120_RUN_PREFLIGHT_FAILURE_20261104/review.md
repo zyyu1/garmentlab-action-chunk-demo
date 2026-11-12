@@ -7,7 +7,7 @@
 命令：
 
 ```bash
-cd /root/autodl-tmp/a5-rc2-d1-120/app
+cd <remote-root>/a5-rc2-d1-120/app
 bash run-a5-rc2-d1-120.sh 4202 single
 ```
 
@@ -28,10 +28,10 @@ NameError: name 'mode' is not defined
 修复 mode 后再次调用；日志：[console-run.log](console-run.log)
 
 ```text
-D1_PREFLIGHT_OK 66 39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d /root/autodl-tmp/day4-square-initial-stripfold-20261103-062710-242560
+D1_PREFLIGHT_OK 66 39dc5055e2c2ce3a9deb406f1f5e73baf55a9aec3c115619fef598f6aef0122d <remote-root>/day4-square-initial-stripfold-20261103-062710-242560
 run-a5-rc2-d1-120.sh: line 123: initial: unbound variable
-D1_ABORT no result directory; retain log /root/autodl-tmp/a5-rc2-d1-120-log-cttxxcWx.log
-D1_LOG_RETAINED /root/autodl-tmp/a5-rc2-d1-120-log-cttxxcWx.log
+D1_ABORT no result directory; retain log <remote-root>/a5-rc2-d1-120-log-cttxxcWx.log
+D1_LOG_RETAINED <remote-root>/a5-rc2-d1-120-log-cttxxcWx.log
 ```
 
 原因：预检 Python 计算了局部 `initial`，但 shell 没有给 `$initial` 赋值；`set -u` 在调用 `a5_recovery_diag.py` 前中止。修复为在预检前从 `a5-candidate.json` 设置 `initial`，并增加 `D1_PREFLIGHT_ONLY=1` 的无仿真预检出口。

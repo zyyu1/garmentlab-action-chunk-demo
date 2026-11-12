@@ -7,7 +7,7 @@
 | 项目 | 值 |
 |---|---|
 | 结果目录 | `day4-a5-rc2-pfs1-observation-v2-20261104-201557-235290` |
-| 远端目录 | `/root/autodl-tmp/day4-a5-rc2-pfs1-observation-v2-20261104-201557-235290` |
+| 远端目录 | `<remote-root>/day4-a5-rc2-pfs1-observation-v2-20261104-201557-235290` |
 | 版本 / 扩展 | `a5-rc2-pfs1-observation-v2` / `4302-single` |
 | manifest | `6d1958f5…`（63 项；61 项与 v2 逐字节相同，2 项为登记/编排） |
 | config / runner | `577931aa…` / `550efa65…` |

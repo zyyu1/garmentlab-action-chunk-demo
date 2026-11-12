@@ -151,7 +151,7 @@ EE 点到最近布料顶点的距离（几何代理，不是指尖表面距离�
 - v1.1 分段（与 v1 物理数组逐位相同）：[release diag 分析](../STAGE4_A5_RC2_RELEASE_DIAG_4202_20261103/review.md)。开爪/释放 1944–1953 为局部非刚体瞬态（质心 0.848 mm、P95 13.831 mm、最大 25.619 mm、RMS 1.894 mm；质心在 1948 峰值约 1.236 mm 后回落）；退让 1955–2097 近刚体（质心 2.277 mm、旋转 −0.804°、P95 4.887 mm、RMS 0.094 mm）；正式窗口延续刚体滑移/转动。
 - 运行入口（v1.1；重跑 4202）：
   ```bash
-  cd /root/autodl-tmp/a5-rc2-drift-diag/app
+  cd <remote-root>/a5-rc2-drift-diag/app
   bash run-a5-rc2-drift-diag.sh 4202 single
   ```
   输出 `day4-a5-rc2-drift-diag-<timestamp>`；v1.1 已得到 `DIAG_ASSESS complete=True`，且与 v1、RC2 4202 single 物理轨迹逐位相同；比较见 [v1.1 比较](../STAGE4_A5_RC2_RELEASE_DIAG_4202_20261103/v1_1_compare.md)。

@@ -51,14 +51,14 @@ best_val 按**总 val loss**选择；last 固定为 epoch 500。两者都在同�
 ## 产物与命令
 
 ```bash
-/root/autodl-tmp/envs/isaac40/bin/python -u stage6/train_budget500.py
+<remote-root>/envs/isaac40/bin/python -u stage6/train_budget500.py
 ```
 
 固定参数：`--epochs 500 --batch 128 --lr 1e-3 --weight-decay 1e-4 --seed 0`。
 
 远端：
 
-- `/root/autodl-tmp/stage5-trial/holdingfix-20261108/diagnostics/budget500/best_val.pt`
+- `<remote-root>/stage5-trial/holdingfix-20261108/diagnostics/budget500/best_val.pt`
   （sha256 `ade60131…`）
 - `.../budget500/last.pt`（sha256 `81e98dd9…`）
 - `.../budget500/curves.json`

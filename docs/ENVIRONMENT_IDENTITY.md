@@ -7,7 +7,7 @@
 | 项 | 值 |
 |---|---|
 | Isaac Sim | **4.0.0.0**（pip `isaacsim==4.0.0.0`、`isaacsim-rl==4.0.0.0`） |
-| Python | 3.10.8（`/root/autodl-tmp/envs/isaac40/bin/python`） |
+| Python | 3.10.8（`<remote-root>/envs/isaac40/bin/python`） |
 | GPU（历史运行环境） | RTX 3090 24 GB；本轮未启动 |
 | GarmentLab 远端 | `https://github.com/GarmentLab/GarmentLab.git` |
 | GarmentLab commit | **`f2988b169ec3f1471b46f963ceba58f56179ef0d`** |

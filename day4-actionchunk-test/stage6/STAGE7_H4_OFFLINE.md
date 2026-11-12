@@ -8,12 +8,12 @@
 
 | 项 | 值 |
 |---|---|
-| 新 H4 数据 | `/root/autodl-tmp/stage5-trial/holdingfix-20261108/h4fix-20261108/dataset_h4.npz` |
+| 新 H4 数据 | `<remote-root>/stage5-trial/holdingfix-20261108/h4fix-20261108/dataset_h4.npz` |
 | 新 H4 sha256 | `e17364992c97010589d513b249c93033d3320c145e17895d097a5cc9fd6e6051` |
 | 新 stats | `.../h4fix-20261108/stats.json` |
 | 新 stats sha256 | `fe5df5c45fb29f0c96d38a7d6cae8b8f19464c51884ae6631bdaa3dc16d553fb` |
 | 来源 single | `.../holdingfix-20261108/data/dataset_single.npz` `1ed533e8…` |
-| 旧 H4 数据 | `/root/autodl-tmp/stage5-trial/training/final/dataset_h4.npz` `75e6831c…`（保留） |
+| 旧 H4 数据 | `<remote-root>/stage5-trial/training/final/dataset_h4.npz` `75e6831c…`（保留） |
 | 旧 H4 checkpoint | `.../training/runs/h4/best.pt` `93d4fca4…`（保留） |
 | single checkpoint | `.../runs/single/best.pt` `ce7ee2aa…`（未修改） |
 
@@ -115,12 +115,12 @@
 ## 5. 产物与命令
 
 ```bash
-/root/autodl-tmp/envs/isaac40/bin/python stage6/rebuild_h4_data.py
+<remote-root>/envs/isaac40/bin/python stage6/rebuild_h4_data.py
 
-/root/autodl-tmp/envs/isaac40/bin/python stage6/fit_h4_flat10.py \
+<remote-root>/envs/isaac40/bin/python stage6/fit_h4_flat10.py \
   --epochs 500 --batch 128 --lr 1e-3 --weight-decay 1e-4 --seed 0
 
-/root/autodl-tmp/envs/isaac40/bin/python stage6/train_h4_budget500.py
+<remote-root>/envs/isaac40/bin/python stage6/train_h4_budget500.py
 ```
 
 远端：

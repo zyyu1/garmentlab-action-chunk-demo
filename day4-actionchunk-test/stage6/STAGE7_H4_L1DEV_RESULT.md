@@ -12,7 +12,7 @@
 | H4 stats | `.../h4fix-20261108/stats.json` |
 | H4 stats sha256 | `fe5df5c45fb29f0c96d38a7d6cae8b8f19464c51884ae6631bdaa3dc16d553fb` |
 | single 对照 | budget500 `ade60131…` 的 6120 recheck；未重跑 |
-| 初态 | `/root/autodl-tmp/day4-square-initial-20261107-070155-602415` |
+| 初态 | `<remote-root>/day4-square-initial-20261107-070155-602415` |
 | 初态 result / geometry | `21f9f754…` / `e2725e24…` |
 | H4 runner | `488711adb25f1258bf9b11df7b9f0db9d4596215391f9429490cfc5e129f6be2` |
 | H4 policy / scheduler | `4c96c29d…` / `27b895f2…` |
@@ -52,13 +52,13 @@ single stats `cbc4d711…` 与 H4 stats `fe5df5c4…` 的哈希不同，但四�
 命令：
 
 ```bash
-/root/autodl-tmp/envs/isaac40/bin/python -u stage6/a5_bc_single.py \
-  --initial-dir /root/autodl-tmp/day4-square-initial-20261107-070155-602415 \
+<remote-root>/envs/isaac40/bin/python -u stage6/a5_bc_single.py \
+  --initial-dir <remote-root>/day4-square-initial-20261107-070155-602415 \
   --checkpoint .../h4fix-20261108/runs/h4_budget500/best_val.pt \
   --stats .../h4fix-20261108/stats.json \
-  --app-dir /root/autodl-tmp/stage5-trial/app \
-  --repo-root /root/autodl-tmp/garmentlab-action-chunk-demo \
-  --out-root /root/autodl-tmp/stage6_runs/results \
+  --app-dir <remote-root>/stage5-trial/app \
+  --repo-root <remote-root>/garmentlab-action-chunk-demo \
+  --out-root <remote-root>/stage6_runs/results \
   --label day4-a5-h4-l1dev-6120 \
   --policy h4 --execute-k 4 --skip-identity-check
 ```
@@ -67,8 +67,8 @@ single stats `cbc4d711…` 与 H4 stats `fe5df5c4…` 的哈希不同，但四�
 |---|---|
 | process_exit_code | 0 |
 | effective_exit_code | 0 |
-| attempt | `/root/autodl-tmp/stage6_runs/attempts/h4-l1dev-6120-20261108-223301` |
-| result | `/root/autodl-tmp/stage6_runs/results/day4-a5-h4-l1dev-6120-20261109-063303-357071` |
+| attempt | `<remote-root>/stage6_runs/attempts/h4-l1dev-6120-20261108-223301` |
+| result | `<remote-root>/stage6_runs/results/day4-a5-h4-l1dev-6120-20261109-063303-357071` |
 | status | **accepted** |
 | action_count | **7 / 7** |
 | policy calls | **2** |

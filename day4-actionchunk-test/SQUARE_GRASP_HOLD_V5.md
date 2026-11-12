@@ -25,11 +25,11 @@ v4（`day4-square-grasp-hold-20261031-104528-426384`）held gate 通过，但接
 运行命令：
 
 ```bash
-bash /root/autodl-tmp/run-square-grasp-hold-v5.sh
+bash <remote-root>/run-square-grasp-hold-v5.sh
 ```
 
 预期新增产物：`contact_report_setup_early.json`、`contact_report_after_reset.json`、`contact_force_trace.jsonl`、`block_contacts.jsonl`、`block_contact_report.json`；结果 JSON 增加 `contact_positive_control` 汇总。正式成功仍为 0。
 
 ## 上传状态
 
-本地清单 `square-grasp-hold-v5-files.json` 共 21 个文件；远端 `/root/autodl-tmp/` SHA256 全部一致，`py_compile` 与 `bash -n` 通过。尚未运行。
+本地清单 `square-grasp-hold-v5-files.json` 共 21 个文件；远端 `<remote-root>/` SHA256 全部一致，`py_compile` 与 `bash -n` 通过。尚未运行。

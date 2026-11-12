@@ -5,10 +5,10 @@
 - GPU: RTX 4080 32GB
 - Driver: 580.105.08
 - Isaac Sim: 4.0.0.0
-- Python venv: /root/autodl-tmp/envs/isaac40
+- Python venv: <remote-root>/envs/isaac40
 
 ## GarmentLab
-- Repo: /root/autodl-tmp/garmentlab_workspace/GarmentLab
+- Repo: <remote-root>/garmentlab_workspace/GarmentLab
 - Base commit: 6ee0620 (grafted)
 - Adaptation commit: f2988b1
 - Tag: autodl-adapt-2026-10-13

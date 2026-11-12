@@ -15,13 +15,13 @@
 本地 PowerShell 上传（使用日报中的现有实例地址）：
 
 ```powershell
-scp -P 23636 "E:\learning\project\thesis\day4-actionchunk-test\day4-aligned-measured-hold-test.py" "E:\learning\project\thesis\day4-actionchunk-test\measured_hold_step_observer.py" "E:\learning\project\thesis\day4-actionchunk-test\compare_measured_hold.py" "E:\learning\project\thesis\day4-actionchunk-test\run-measured-hold.sh" root@connect.nmb2.seetacloud.com:/root/autodl-tmp/
+scp -P 23636 "E:\learning\project\thesis\day4-actionchunk-test\day4-aligned-measured-hold-test.py" "E:\learning\project\thesis\day4-actionchunk-test\measured_hold_step_observer.py" "E:\learning\project\thesis\day4-actionchunk-test\compare_measured_hold.py" "E:\learning\project\thesis\day4-actionchunk-test\run-measured-hold.sh" <server>:<remote-root>/
 ```
 
 远程 Bash 执行：
 
 ```bash
-bash /root/autodl-tmp/run-measured-hold.sh
+bash <remote-root>/run-measured-hold.sh
 ```
 
 结束后查看 ALIGNED_MEASURED_HOLD_TRACE_OK、MEASURED_HOLD_COMPARISON_OK 和 DOWNLOAD_DIR。使用 DOWNLOAD_DIR 的实际路径下载整个结果目录到本地 results，再分析保持末段的边界伸长、锚点间距、刚体与粒子运动。任何失败均保留日志，不提高原诊断阈值。

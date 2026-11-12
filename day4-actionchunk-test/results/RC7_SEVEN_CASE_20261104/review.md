@@ -8,7 +8,7 @@
 |---|---|
 | 版本 / manifest | `a5-rc2-pfs1-observation-v2`（rc7）/ `bcba8c11…`（63 项；60 项与 v2 逐字节相同） |
 | 变化项 | `a5_l1.py`（pfs 0→1 + 观测接入）、登记 JSON、runner |
-| 批次账本 | `/root/autodl-tmp/a5-rc2-pfs1-observation-v2-rc7-runs`（7 槽 × started/finished，共 14 条；`completed` 写入） |
+| 批次账本 | `<remote-root>/a5-rc2-pfs1-observation-v2-rc7-runs`（7 槽 × started/finished，共 14 条；`completed` 写入） |
 | 执行 | 顺序 7 槽，每槽一次 `a5_entry.py run`，无自动重试；`errors=[]` |
 | 下载核验 | **765/765** 文件 remote↔local SHA256 一致 |
 | 预检 | `RC7_PREFLIGHT_OK 63 bcba8c11… cases 7` |

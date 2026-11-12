@@ -2,7 +2,7 @@
 
 两组独立进程：baseline 16 次，refined 32 次。两组每粒子配置质量均为 0.0001 kg，总配置质量约 0.9945 kg。材料、时间步 1/60 s、接触配置、锚点对齐及动作策略沿用此前轻质量实验。
 
-新文件：day4-iteration-sensitivity-test.py、iteration_experiment.py、compare_iteration_pair.py、run-iteration-pair.sh、iteration-pair-files.json。此前质量实验文件不修改。上传五个文件到 /root/autodl-tmp 后执行 `bash /root/autodl-tmp/run-iteration-pair.sh`。
+新文件：day4-iteration-sensitivity-test.py、iteration_experiment.py、compare_iteration_pair.py、run-iteration-pair.sh、iteration-pair-files.json。此前质量实验文件不修改。上传五个文件到 <remote-root> 后执行 `bash <remote-root>/run-iteration-pair.sh`。
 
 启动前检查上传哈希。iteration_experiment.py 在当前进程中包装 GarmentConfig.__init__，仅将 solver_position_iteration_count 设置为 16 或 32；仍以 ClothPrim 构造参数显式指定轻质量。两个包装在 backend.start 返回或异常后恢复，正式项目及 SDK 文件不修改。
 

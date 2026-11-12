@@ -9,7 +9,7 @@
 | seed | **4100**（dev seed） |
 | 档 | flat（L1 过折，7 个公开动作） |
 | 与 Stage 4 验收 seed 的关系 | 验收集为 4110–4129 / 4210–4229 / 4310–4329；4100 **不重叠** |
-| 初态目录 | `/root/autodl-tmp/day4-square-initial-20261105-014501-526555` |
+| 初态目录 | `<remote-root>/day4-square-initial-20261105-014501-526555` |
 | 初态生成协议 | `stage4-initial-v2-task-scoped`（protocol 块：task/level/seed、pfs expected=0/readback=0、材料绑定、生成器身份） |
 | 初态哈希（冻结 dev 注册） | `result.json` `df9ed582…`、`initial_geometry.npz` `dd578303…` |
 | 授权路径 | `a5_entry.authorize_initial(..., split='dev')`：dev 注册 modes 含 `single`、目录与文件哈希必须一致 |

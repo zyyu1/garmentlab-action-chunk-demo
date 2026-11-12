@@ -19,7 +19,7 @@
 
 冻结清单与预检：
 
-- `/root/autodl-tmp/stage6_runs/evals/l1_dev_budget500_20261108/manifest.json`
+- `<remote-root>/stage6_runs/evals/l1_dev_budget500_20261108/manifest.json`
 - `.../precheck.json`
 - `.../summary.json`
 
@@ -91,7 +91,7 @@ stable 均通过。6120/6121/random 没有 `success_meta`/`success_trace` 或完
 
 远程结果根目录：
 
-`/root/autodl-tmp/stage6_runs/results/`
+`<remote-root>/stage6_runs/results/`
 
 | policy | seed | result dir | video |
 |---|---:|---|---|

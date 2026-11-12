@@ -82,20 +82,20 @@
 先跑 L3 4300 冒烟（两条布条）：
 
 ```bash
-bash /root/autodl-tmp/run-square-initial-stripfold.sh 4300
+bash <remote-root>/run-square-initial-stripfold.sh 4300
 ```
 
 通过后跑 L2 4200：
 
 ```bash
-bash /root/autodl-tmp/run-square-initial-stripfold.sh 4200
+bash <remote-root>/run-square-initial-stripfold.sh 4200
 ```
 
 两者通过后再跑剩余 18 例：
 
 ```bash
 for s in 4201 4202 4203 4204 4205 4206 4207 4208 4209 4301 4302 4303 4304 4305 4306 4307 4308 4309; do
-  bash /root/autodl-tmp/run-square-initial-stripfold.sh "$s" || break
+  bash <remote-root>/run-square-initial-stripfold.sh "$s" || break
 done
 ```
 

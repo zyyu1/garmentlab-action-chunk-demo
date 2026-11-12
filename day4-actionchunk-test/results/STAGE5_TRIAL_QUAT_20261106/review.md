@@ -7,7 +7,7 @@
 | 项 | 值 |
 |---|---|
 | seed / 档 | 4201 / perturbed |
-| 初态 | `/root/autodl-tmp/day4-square-initial-stripfold-20261105-014825-318974`（`stage4-initial-v2-task-scoped`，pfs 1.0） |
+| 初态 | `<remote-root>/day4-square-initial-stripfold-20261105-014825-318974`（`stage4-initial-v2-task-scoped`，pfs 1.0） |
 | 结果目录 | `day4-a5-rc2-pfs1-observation-v2-20261107-010753-512313` |
 | 评价器 | `a5-verdict.status=rejected`、`runner_exit=0`、`result.json.passed=true`（runner 门槛通过，质量拒绝） |
 | 重试 | 无 |
@@ -37,4 +37,4 @@
 ## 5. 产物
 
 - 本地：`day4-actionchunk-test/results/STAGE5_TRIAL_QUAT_20261106/`（`obs-4201/`、结果目录、`export/export_summary.json`、`single_step.npz`、`h4.npz`、`h4_audit.npz`）
-- 服务器：`/root/autodl-tmp/stage5-trial/obs-4201/`、`state-4201/`
+- 服务器：`<remote-root>/stage5-trial/obs-4201/`、`state-4201/`
